@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "skipToContent": "Skip to main content",
+    "brand": "Brand",
+    "brandAriaLabel": "Go to homepage",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close menu",
+    "search": "Search",
+    "searchPlaceholder": "Search...",
+    "login": "Login",
+    "signup": "Sign Up",
+    "account": "Account",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "demo": {
+    "title": "Simple Centered Navbar",
+    "description": "A minimalist centered navigation pattern perfect for portfolios, landing pages, and creative websites. Features responsive design with hamburger menu on mobile."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "more": "More",
+    "less": "Less",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit"
+  },
+  "accessibility": {
+    "menuToggle": "Toggle navigation menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "currentPage": "Current page",
+    "externalLink": "Opens in a new tab",
+    "loading": "Content is loading"
+  }
+}

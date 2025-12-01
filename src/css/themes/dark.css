@@ -1,0 +1,44 @@
+/* Dark Theme Variables */
+
+[data-theme="dark"] {
+  /* Override color scheme */
+  color-scheme: dark;
+
+  /* Background colors */
+  --color-bg-primary: oklch(0.15 0.02 250);
+  --color-bg-secondary: oklch(0.20 0.02 250);
+  --color-bg-tertiary: oklch(0.25 0.02 250);
+
+  /* Text colors */
+  --color-text-primary: oklch(0.95 0.00 0);
+  --color-text-secondary: oklch(0.80 0.01 250);
+  --color-text-tertiary: oklch(0.65 0.02 250);
+
+  /* Border colors */
+  --color-border-default: oklch(0.30 0.02 250);
+  --color-border-subtle: oklch(0.25 0.02 250);
+
+  /* Shadows for dark mode */
+  --shadow-nav: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-nav-elevated: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Dark mode navigation */
+[data-theme="dark"] .nav-dark-auto {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border-default);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: var(--color-text-primary);
+}
