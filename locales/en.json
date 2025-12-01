@@ -13,15 +13,25 @@
     "close": "Close menu",
     "search": "Search",
     "searchPlaceholder": "Search...",
-    "login": "Login",
+    "login": "Log in",
     "signup": "Sign Up",
     "account": "Account",
     "settings": "Settings",
-    "logout": "Logout"
+    "logout": "Logout",
+    "products": "Products",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "company": "Company",
+    "getStarted": "Get Started"
   },
   "demo": {
     "title": "Simple Centered Navbar",
-    "description": "A minimalist centered navigation pattern perfect for portfolios, landing pages, and creative websites. Features responsive design with hamburger menu on mobile."
+    "description": "A minimalist centered navigation pattern perfect for portfolios, landing pages, and creative websites. Features responsive design with hamburger menu on mobile.",
+    "nav002": {
+      "title": "Logo Left + Links Right Navbar",
+      "description": "A standard corporate/SaaS navigation pattern with logo on the left, navigation links in the center, and a prominent CTA button on the right. Perfect for business websites."
+    }
   },
   "common": {
     "loading": "Loading...",

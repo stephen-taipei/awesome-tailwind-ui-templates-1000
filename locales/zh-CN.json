@@ -17,11 +17,21 @@
     "signup": "注册",
     "account": "账户",
     "settings": "设置",
-    "logout": "退出登录"
+    "logout": "退出登录",
+    "products": "产品",
+    "solutions": "解决方案",
+    "pricing": "价格方案",
+    "resources": "资源中心",
+    "company": "关于公司",
+    "getStarted": "立即开始"
   },
   "demo": {
     "title": "简约居中导航栏",
-    "description": "极简风格的居中导航栏设计，非常适合作品集、落地页和创意网站。支持响应式设计，移动端采用汉堡菜单。"
+    "description": "极简风格的居中导航栏设计，非常适合作品集、落地页和创意网站。支持响应式设计，移动端采用汉堡菜单。",
+    "nav002": {
+      "title": "左Logo右链接导航栏",
+      "description": "标准的企业/SaaS 导航栏模式，Logo 位于左侧，导航链接居中，右侧配有醒目的行动号召按钮。非常适合商业网站。"
+    }
   },
   "common": {
     "loading": "加载中...",
