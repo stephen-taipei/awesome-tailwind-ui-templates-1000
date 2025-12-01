@@ -449,6 +449,179 @@ We welcome contributions! Please see [CONTRIBUTING.md](docs/contributing.md) for
 
 ---
 
+## 🤖 AI-Assisted Development Workflow (Claude Code Web)
+
+This project is designed for AI-assisted iterative development. Below is the standard workflow and Prompt templates for developing 1~1000 templates using Claude Code Web.
+
+### Development Flow Overview
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    AI-Assisted Iterative Development             │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐    │
+│   │  Start  │───▶│ Develop │───▶│Create PR│───▶│ Summarize│    │
+│   │Template │    │Template │    │   #N    │    │ Prepare  │    │
+│   │   #N    │    │   #N    │    │         │    │   #N+1   │    │
+│   └─────────┘    └─────────┘    └─────────┘    └────┬────┘    │
+│        ▲                                            │          │
+│        └────────────────────────────────────────────┘          │
+│                    Repeat until #1000                           │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Prompt Templates
+
+#### First Development (Starting from #1)
+
+```markdown
+## Project Background
+- Project: Awesome Tailwind UI Templates 1000
+- Goal: Develop 1000 pure frontend UI templates
+- Tech Stack: Tailwind CSS v4 + HTML5 + CSS Variables + Web Components
+- Reference: README.md, plan.md
+
+## Current Progress
+- Completed: #0 (Project initialization)
+- Current Task: #1
+
+## Task
+Please develop template #1: [Template Name]
+
+### Requirements
+- Category: [Navigation/Hero/Features/etc.]
+- Template Type: [Specific variation]
+- Responsive: Mobile-first with 5 breakpoints
+- Dark Mode: CSS variable based theming
+- i18n: Include data-i18n attributes
+
+### Technical Requirements
+- Pure frontend, no backend dependencies
+- Tailwind CSS v4 utility classes
+- CSS variables for customization
+- Semantic HTML5 markup
+- Accessible (WCAG 2.1 AA)
+
+### Completion Criteria
+1. HTML template file created
+2. Responsive across all breakpoints
+3. Dark mode support
+4. i18n attributes added
+5. Commit and create PR
+
+### PR Format
+- Title: `[#1] template-name - Category`
+- Content: Preview image, features, usage notes
+
+### After Completion, Provide
+1. Change summary (3-5 key points)
+2. CSS variables used
+3. Preparation notes for template #2
+4. **Context Summary** (for next conversation, ~200-300 words)
+```
+
+#### Subsequent Development (Continue from #N)
+
+```markdown
+## Context Continuation
+[Paste previous Claude context summary]
+
+## Project Background
+- Project: Awesome Tailwind UI Templates 1000
+- Reference: README.md, plan.md
+
+## Current Progress
+- Completed: #1 ~ #N-1
+- Current Task: #N
+- Current Category: [e.g., 01-Navigation]
+
+## Task
+Please develop template #N: [Template Name]
+
+### Requirements
+[Same format as above]
+
+### After Completion, Provide
+1. Change summary
+2. CSS variables and patterns used
+3. Preparation for next template
+4. **Context Summary** (for next conversation)
+```
+
+### Context Summary Template
+
+```markdown
+## Context Summary (After Template #N)
+
+### Project Status
+- Progress: N/1000 (N%)
+- Latest Template: #N [Template Name]
+- Current Category: [Category Name]
+- Branch Status: feature/template-N merged to dev
+
+### Technical Info
+- Shared Components Used: [List]
+- CSS Variables Defined: [List]
+- Reusable Patterns: [List]
+
+### Design Notes
+- [Important design decisions]
+- [Reusable patterns created]
+- [Optimization opportunities]
+
+### Next Steps
+- Next Template: #N+1 [Template Name]
+- Category: [Category]
+- Key Features: [Features]
+- Notes: [Special requirements]
+```
+
+### Category Batch Development
+
+Templates in the same category can be developed in batches:
+
+```markdown
+## Batch Task: Navigation Templates (001-005)
+
+Please develop the following 5 navigation templates:
+
+| # | Name | Type | Features |
+|---|------|------|----------|
+| nav-001 | Simple Navbar | Top Navigation | Logo, links, CTA |
+| nav-002 | Transparent Nav | Top Navigation | Scroll effect |
+| nav-003 | Mega Menu | Top Navigation | Dropdown panels |
+| nav-004 | Mobile Drawer | Mobile Navigation | Hamburger menu |
+| nav-005 | Sidebar Nav | Sidebar | Collapsible |
+
+### Development Strategy
+1. Create shared navigation base styles
+2. Build mobile-first responsive patterns
+3. Implement each variation
+4. Test across all breakpoints
+
+### After Completion, Provide
+1. Brief description of each template
+2. Shared CSS patterns
+3. Recommended next batch
+4. **Batch Context Summary**
+```
+
+### Development Progress Tracking
+
+| Range | Status | Count | Category |
+|-------|--------|-------|----------|
+| #001-#050 | 🔄 In Progress | 0/50 | Navigation |
+| #051-#100 | 📋 Pending | 0/50 | Hero Sections |
+| #101-#150 | 📋 Pending | 0/50 | Features |
+| #151-#200 | 📋 Pending | 0/50 | Content Sections |
+| #201-#250 | 📋 Pending | 0/50 | CTA |
+| #251-#300 | 📋 Pending | 0/50 | Pricing |
+| ... | ... | ... | ... |
+| #951-#1000 | 📋 Pending | 0/50 | Landing Pages |
+
+---
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
