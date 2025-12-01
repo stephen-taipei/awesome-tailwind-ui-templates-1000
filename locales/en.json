@@ -24,6 +24,7 @@
     "resources": "Resources",
     "company": "Company",
     "features": "Features",
+    "docs": "Docs",
     "getStarted": "Get Started"
   },
   "demo": {
@@ -39,6 +40,10 @@
       "heroTitle": "Transparent Navbar with Scroll Effect",
       "heroSubtitle": "Scroll down to see the navbar transform from transparent to solid with a smooth backdrop blur effect.",
       "scrollHint": "Scroll to see effect"
+    },
+    "nav004": {
+      "title": "Dark Mode Navbar",
+      "description": "A sleek dark-themed navigation designed for tech products, gaming sites, and modern web applications. Features gradient accents and subtle glow effects."
     }
   },
   "common": {
