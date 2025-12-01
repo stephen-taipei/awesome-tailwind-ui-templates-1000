@@ -23,6 +23,7 @@
     "pricing": "Pricing",
     "resources": "Resources",
     "company": "Company",
+    "features": "Features",
     "getStarted": "Get Started"
   },
   "demo": {
@@ -31,6 +32,13 @@
     "nav002": {
       "title": "Logo Left + Links Right Navbar",
       "description": "A standard corporate/SaaS navigation pattern with logo on the left, navigation links in the center, and a prominent CTA button on the right. Perfect for business websites."
+    },
+    "nav003": {
+      "title": "Transparent Navbar with Scroll Effect",
+      "description": "A fixed navigation that starts transparent over the hero section and transitions to a solid background with backdrop blur as you scroll down.",
+      "heroTitle": "Transparent Navbar with Scroll Effect",
+      "heroSubtitle": "Scroll down to see the navbar transform from transparent to solid with a smooth backdrop blur effect.",
+      "scrollHint": "Scroll to see effect"
     }
   },
   "common": {

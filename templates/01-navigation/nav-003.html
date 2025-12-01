@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Transparent Navbar with Scroll Effect - Hero overlay navigation template">
+  <title>nav-003: Transparent Navbar with Scroll Effect | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.40 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Navigation states */
+    .navbar-transparent {
+      background-color: transparent;
+    }
+
+    .navbar-solid {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+
+    /* Text color transitions */
+    .nav-text-light {
+      color: white;
+    }
+
+    .nav-text-light:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-text-dark {
+      color: rgb(71 85 105); /* slate-600 */
+    }
+
+    .nav-text-dark:hover {
+      color: rgb(15 23 42); /* slate-900 */
+    }
+
+    /* Logo color states */
+    .logo-light {
+      color: white;
+    }
+
+    .logo-dark {
+      color: rgb(15 23 42);
+    }
+
+    /* Navigation link underline animation */
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger animation */
+    .hamburger-line {
+      display: block;
+      width: 1.25rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile menu animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 24rem;
+    }
+
+    /* CTA button variants */
+    .btn-outline-light {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: white;
+    }
+
+    .btn-outline-light:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: white;
+    }
+
+    .btn-solid {
+      background-color: oklch(0.55 0.20 250);
+      color: white;
+    }
+
+    .btn-solid:hover {
+      background-color: oklch(0.48 0.22 250);
+    }
+
+    /* Smooth transitions */
+    .transition-navbar {
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .transition-text {
+      transition: color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ============================================
+       nav-003: Transparent Navbar with Scroll Effect
+
+       A hero overlay navigation with scroll-triggered
+       background change, perfect for:
+       - Landing pages with hero images
+       - Portfolio sites
+       - Marketing websites
+       - App landing pages
+
+       Features:
+       - Fixed positioning at top
+       - Transparent → solid background on scroll
+       - backdrop-blur effect when scrolled
+       - Text color changes (light → dark)
+       - Smooth transitions
+       - Mobile responsive with hamburger menu
+       ============================================ -->
+
+  <header
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 transition-navbar navbar-transparent"
+  >
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-md"
+      data-i18n="nav.skipToContent"
+    >
+      Skip to main content
+    </a>
+
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      aria-label="Main navigation"
+    >
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a
+            href="#"
+            id="logo"
+            class="flex items-center gap-2 text-xl font-bold transition-text logo-light"
+            aria-label="Go to homepage"
+            data-i18n-aria="nav.brandAriaLabel"
+          >
+            <!-- Logo Icon -->
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              />
+            </svg>
+            <span data-i18n="nav.brand">Starter</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex lg:items-center lg:gap-8">
+          <!-- Navigation Links -->
+          <ul class="flex items-center gap-6" role="menubar">
+            <li role="none">
+              <a
+                href="#features"
+                id="nav-features"
+                class="nav-link font-medium text-sm transition-text nav-text-light"
+                role="menuitem"
+                data-i18n="nav.features"
+              >
+                Features
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#pricing"
+                id="nav-pricing"
+                class="nav-link font-medium text-sm transition-text nav-text-light"
+                role="menuitem"
+                data-i18n="nav.pricing"
+              >
+                Pricing
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#about"
+                id="nav-about"
+                class="nav-link font-medium text-sm transition-text nav-text-light"
+                role="menuitem"
+                data-i18n="nav.about"
+              >
+                About
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#contact"
+                id="nav-contact"
+                class="nav-link font-medium text-sm transition-text nav-text-light"
+                role="menuitem"
+                data-i18n="nav.contact"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+
+          <!-- Auth & CTA -->
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              id="nav-login"
+              class="font-medium text-sm transition-text nav-text-light"
+              data-i18n="nav.login"
+            >
+              Log in
+            </a>
+            <a
+              href="#"
+              id="nav-cta"
+              class="px-4 py-2 rounded-lg font-medium text-sm transition-all btn-outline-light"
+              data-i18n="nav.getStarted"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="lg:hidden p-2 rounded-md transition-text nav-text-light hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="flex flex-col gap-1">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu lg:hidden bg-white rounded-lg shadow-lg mt-2 mb-4"
+        role="menu"
+        aria-labelledby="mobile-menu-btn"
+      >
+        <ul class="py-4 space-y-1">
+          <li role="none">
+            <a
+              href="#features"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.features"
+            >
+              Features
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#pricing"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.pricing"
+            >
+              Pricing
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#about"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.about"
+            >
+              About
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#contact"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Auth Section -->
+        <div class="py-4 px-4 border-t border-slate-100 space-y-3">
+          <a
+            href="#"
+            class="block w-full text-center px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+            data-i18n="nav.login"
+          >
+            Log in
+          </a>
+          <a
+            href="#"
+            class="block w-full text-center px-4 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium text-sm transition-colors"
+            data-i18n="nav.getStarted"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Demo) -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-primary-900 to-slate-800 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-20">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)"/>
+      </svg>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-i18n="demo.nav003.heroTitle">
+        Transparent Navbar<br/>with Scroll Effect
+      </h1>
+      <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-8" data-i18n="demo.nav003.heroSubtitle">
+        Scroll down to see the navbar transform from transparent to solid with a smooth backdrop blur effect.
+      </p>
+
+      <!-- Scroll Indicator -->
+      <div class="flex flex-col items-center gap-2 text-white/60">
+        <span class="text-sm" data-i18n="demo.nav003.scrollHint">Scroll to see effect</span>
+        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content (Demo) -->
+  <main id="main-content" class="bg-white">
+    <!-- Features Section -->
+    <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="demo.nav003.title">
+          Transparent Navbar with Scroll Effect
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto" data-i18n="demo.nav003.description">
+          A fixed navigation that starts transparent over the hero section and transitions to a solid background with backdrop blur as you scroll down.
+        </p>
+      </div>
+
+      <!-- Feature Tags -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <span class="inline-flex items-center px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
+          fixed top-0
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">
+          backdrop-blur
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-violet-50 text-violet-700 rounded-full text-sm font-medium">
+          scroll listener
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm font-medium">
+          color transition
+        </span>
+      </div>
+
+      <!-- State Comparison -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Transparent State -->
+        <div class="bg-slate-50 rounded-xl p-6">
+          <h3 class="font-semibold text-slate-900 mb-4 flex items-center gap-2">
+            <span class="w-3 h-3 bg-emerald-500 rounded-full"></span>
+            Initial State (Top)
+          </h3>
+          <div class="bg-gradient-to-r from-slate-800 to-slate-700 rounded-lg p-4">
+            <div class="flex justify-between items-center text-xs">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 border border-white/50 rounded"></div>
+                <span class="text-white font-medium">Logo</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-white/80">Link</span>
+                <span class="text-white/80">Link</span>
+                <span class="px-2 py-1 border border-white/50 text-white rounded text-xs">CTA</span>
+              </div>
+            </div>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Transparent background
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              White text for contrast
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Outline CTA button
+            </li>
+          </ul>
+        </div>
+
+        <!-- Solid State -->
+        <div class="bg-slate-50 rounded-xl p-6">
+          <h3 class="font-semibold text-slate-900 mb-4 flex items-center gap-2">
+            <span class="w-3 h-3 bg-primary-500 rounded-full"></span>
+            Scrolled State
+          </h3>
+          <div class="bg-white rounded-lg p-4 shadow-md">
+            <div class="flex justify-between items-center text-xs">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 bg-primary-500 rounded"></div>
+                <span class="text-slate-900 font-medium">Logo</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-slate-600">Link</span>
+                <span class="text-slate-600">Link</span>
+                <span class="px-2 py-1 bg-primary-500 text-white rounded text-xs">CTA</span>
+              </div>
+            </div>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              White background (95% opacity)
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              backdrop-blur(12px)
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Dark text + solid CTA
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Breakpoint Indicator -->
+      <div class="mt-12 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-sm text-slate-600">
+          <span class="font-medium">Current breakpoint:</span>
+          <span class="sm:hidden font-bold text-primary-600">xs (< 640px)</span>
+          <span class="hidden sm:inline md:hidden font-bold text-primary-600">sm (640px+)</span>
+          <span class="hidden md:inline lg:hidden font-bold text-primary-600">md (768px+)</span>
+          <span class="hidden lg:inline xl:hidden font-bold text-primary-600">lg (1024px+)</span>
+          <span class="hidden xl:inline 2xl:hidden font-bold text-primary-600">xl (1280px+)</span>
+          <span class="hidden 2xl:inline font-bold text-primary-600">2xl (1536px+)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacer for scroll demo -->
+    <section class="bg-slate-50 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-slate-500">Continue scrolling to observe the navbar behavior...</p>
+      </div>
+    </section>
+
+    <!-- Back to Templates Link -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <a
+        href="../../index.html"
+        class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      const logo = document.getElementById('logo');
+      const navLinks = document.querySelectorAll('#nav-features, #nav-pricing, #nav-about, #nav-contact, #nav-login');
+      const navCta = document.getElementById('nav-cta');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      const SCROLL_THRESHOLD = 50;
+
+      function updateNavbar() {
+        const scrollY = window.scrollY;
+
+        if (scrollY > SCROLL_THRESHOLD) {
+          // Scrolled state - solid background
+          navbar.classList.remove('navbar-transparent');
+          navbar.classList.add('navbar-solid');
+
+          // Update text colors to dark
+          logo.classList.remove('logo-light');
+          logo.classList.add('logo-dark');
+
+          navLinks.forEach(link => {
+            link.classList.remove('nav-text-light');
+            link.classList.add('nav-text-dark');
+          });
+
+          // Update CTA button
+          navCta.classList.remove('btn-outline-light');
+          navCta.classList.add('btn-solid');
+
+          // Update mobile menu button
+          menuBtn.classList.remove('nav-text-light', 'hover:bg-white/10', 'focus:ring-white/50');
+          menuBtn.classList.add('nav-text-dark', 'hover:bg-slate-100', 'focus:ring-primary-500');
+
+        } else {
+          // Top state - transparent background
+          navbar.classList.remove('navbar-solid');
+          navbar.classList.add('navbar-transparent');
+
+          // Update text colors to light
+          logo.classList.remove('logo-dark');
+          logo.classList.add('logo-light');
+
+          navLinks.forEach(link => {
+            link.classList.remove('nav-text-dark');
+            link.classList.add('nav-text-light');
+          });
+
+          // Update CTA button
+          navCta.classList.remove('btn-solid');
+          navCta.classList.add('btn-outline-light');
+
+          // Update mobile menu button
+          menuBtn.classList.remove('nav-text-dark', 'hover:bg-slate-100', 'focus:ring-primary-500');
+          menuBtn.classList.add('nav-text-light', 'hover:bg-white/10', 'focus:ring-white/50');
+        }
+      }
+
+      // Listen for scroll events with throttling
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            updateNavbar();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Initial check
+      updateNavbar();
+
+      // Mobile menu toggle
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+
+          menuBtn.setAttribute('aria-expanded', !isExpanded);
+          menuBtn.querySelector('span').classList.toggle('hamburger-active');
+          mobileMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+
+        // Close menu on resize to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 1024) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
