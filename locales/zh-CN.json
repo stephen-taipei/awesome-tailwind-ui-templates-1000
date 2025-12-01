@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "skipToContent": "跳至主要内容",
+    "brand": "品牌",
+    "brandAriaLabel": "前往首页",
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务项目",
+    "portfolio": "作品集",
+    "blog": "博客",
+    "contact": "联系我们",
+    "menu": "菜单",
+    "close": "关闭菜单",
+    "search": "搜索",
+    "searchPlaceholder": "搜索...",
+    "login": "登录",
+    "signup": "注册",
+    "account": "账户",
+    "settings": "设置",
+    "logout": "退出登录"
+  },
+  "demo": {
+    "title": "简约居中导航栏",
+    "description": "极简风格的居中导航栏设计，非常适合作品集、落地页和创意网站。支持响应式设计，移动端采用汉堡菜单。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "retry": "重试",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "view": "查看",
+    "more": "更多",
+    "less": "收起",
+    "all": "全部",
+    "none": "无",
+    "yes": "是",
+    "no": "否",
+    "ok": "确定",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交"
+  },
+  "accessibility": {
+    "menuToggle": "切换导航菜单",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "currentPage": "当前页面",
+    "externalLink": "在新标签页打开",
+    "loading": "内容加载中"
+  }
+}
