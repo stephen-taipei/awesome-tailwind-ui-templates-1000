@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+
+        /* Animated underline */
+        .nav-link-underline {
+            position: relative;
+        }
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Slide up underline */
+        .nav-link-slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background: currentColor;
+            opacity: 0.1;
+            transition: height 0.3s ease;
+        }
+        .nav-link-slide:hover::after {
+            height: 100%;
+        }
+
+        /* Bounce animation */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        .nav-link-bounce:hover {
+            animation: bounce-subtle 0.4s ease;
+        }
+
+        /* Glow effect */
+        .nav-link-glow:hover {
+            text-shadow: 0 0 20px currentColor;
+        }
+
+        /* Scale effect */
+        .nav-link-scale {
+            transition: transform 0.2s ease;
+        }
+        .nav-link-scale:hover {
+            transform: scale(1.1);
+        }
+
+        /* Rotate icon */
+        .rotate-icon:hover svg {
+            transform: rotate(180deg);
+        }
+        .rotate-icon svg {
+            transition: transform 0.3s ease;
+        }
+
+        /* Hamburger animation */
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        .hamburger-active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Stagger animation */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .stagger-item {
+            animation: fade-in-up 0.5s ease forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Animated Navigation</h1>
+            <p class="text-gray-600">Navigation with various CSS and JS animations</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Underline Animation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Underline Animation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Animate</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-8">
+                                <a href="#" class="nav-link-underline text-primary-600 font-medium">Home</a>
+                                <a href="#" class="nav-link-underline text-gray-600 hover:text-primary-600 transition-colors">Products</a>
+                                <a href="#" class="nav-link-underline text-gray-600 hover:text-primary-600 transition-colors">Services</a>
+                                <a href="#" class="nav-link-underline text-gray-600 hover:text-primary-600 transition-colors">About</a>
+                                <a href="#" class="nav-link-underline text-gray-600 hover:text-primary-600 transition-colors">Contact</a>
+                            </div>
+                            <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-all hover:shadow-lg hover:-translate-y-0.5">Get Started</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover over nav links to see animation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Scale & Bounce Animation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Scale & Bounce Animation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2 nav-link-scale">
+                                <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Bounce</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="nav-link-bounce px-3 py-2 text-emerald-600 font-medium bg-emerald-50 rounded-lg">Home</a>
+                                <a href="#" class="nav-link-bounce px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors">Features</a>
+                                <a href="#" class="nav-link-bounce px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors">Pricing</a>
+                                <a href="#" class="nav-link-bounce px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors">Blog</a>
+                            </div>
+                            <a href="#" class="nav-link-scale bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors">Sign Up</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover for bounce and scale effects</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Background Slide Animation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Background Slide Animation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Slide</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-1">
+                                <a href="#" class="relative nav-link-slide px-4 py-2 text-violet-600 font-medium rounded-lg overflow-hidden">Dashboard</a>
+                                <a href="#" class="relative nav-link-slide px-4 py-2 text-gray-600 hover:text-violet-600 rounded-lg overflow-hidden transition-colors">Analytics</a>
+                                <a href="#" class="relative nav-link-slide px-4 py-2 text-gray-600 hover:text-violet-600 rounded-lg overflow-hidden transition-colors">Reports</a>
+                                <a href="#" class="relative nav-link-slide px-4 py-2 text-gray-600 hover:text-violet-600 rounded-lg overflow-hidden transition-colors">Settings</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-all hover:rotate-12">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                </button>
+                                <div class="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center hover:ring-4 hover:ring-violet-100 transition-all cursor-pointer">
+                                    <span class="text-violet-700 font-medium text-sm">JD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Background slides up on hover</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Glow Effect Animation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Glow Effect Animation</h2>
+            <div class="rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg"></div>
+                                <span class="font-bold text-xl text-white">Glow</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-8">
+                                <a href="#" class="nav-link-glow text-cyan-400 font-medium transition-all">Home</a>
+                                <a href="#" class="nav-link-glow text-gray-400 hover:text-cyan-400 transition-all">Products</a>
+                                <a href="#" class="nav-link-glow text-gray-400 hover:text-cyan-400 transition-all">Gallery</a>
+                                <a href="#" class="nav-link-glow text-gray-400 hover:text-cyan-400 transition-all">Contact</a>
+                            </div>
+                            <a href="#" class="bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all">Join Now</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gray-800 flex items-center justify-center">
+                    <span class="text-gray-500">Hover for glow effect</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Icon Rotate Animation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Icon Rotate Animation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Rotate</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="rotate-icon flex items-center gap-1 px-3 py-2 text-rose-600 font-medium">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                    </svg>
+                                    Home
+                                </a>
+                                <a href="#" class="rotate-icon flex items-center gap-1 px-3 py-2 text-gray-600 hover:text-rose-600 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                    </svg>
+                                    Products
+                                </a>
+                                <a href="#" class="rotate-icon flex items-center gap-1 px-3 py-2 text-gray-600 hover:text-rose-600 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                    Favorites
+                                </a>
+                                <a href="#" class="rotate-icon flex items-center gap-1 px-3 py-2 text-gray-600 hover:text-rose-600 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                    Settings
+                                </a>
+                            </div>
+                            <a href="#" class="bg-rose-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-rose-700 transition-colors">Account</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Icons rotate on hover</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Animated Hamburger Menu -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Animated Hamburger Menu</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Menu</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-8">
+                                <a href="#" class="text-amber-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">About</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Services</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Contact</a>
+                            </div>
+                            <button id="hamburger-btn" class="md:hidden p-2 hover:bg-amber-50 rounded-lg transition-colors" onclick="this.classList.toggle('hamburger-active')">
+                                <div class="w-6 h-5 flex flex-col justify-between">
+                                    <span class="hamburger-line w-full h-0.5 bg-gray-600 rounded-full"></span>
+                                    <span class="hamburger-line w-full h-0.5 bg-gray-600 rounded-full"></span>
+                                    <span class="hamburger-line w-full h-0.5 bg-gray-600 rounded-full"></span>
+                                </div>
+                            </button>
+                            <a href="#" class="hidden md:block bg-amber-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-amber-600 transition-colors">Get Started</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click hamburger button (mobile) to see animation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Stagger Animation Menu -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Stagger Animation (Click to Toggle)</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Stagger</span>
+                            </a>
+                            <button id="stagger-toggle" class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg font-medium hover:bg-indigo-200 transition-colors">
+                                Toggle Menu
+                            </button>
+                        </div>
+                    </div>
+                    <div id="stagger-menu" class="hidden bg-indigo-50 border-t border-indigo-100">
+                        <div class="max-w-7xl mx-auto px-6 py-4">
+                            <div class="grid grid-cols-4 gap-4" id="stagger-items">
+                                <a href="#" class="stagger-item p-4 bg-white rounded-xl text-center hover:shadow-md transition-shadow" style="animation-delay: 0.1s">
+                                    <div class="w-10 h-10 bg-indigo-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-gray-700 font-medium">Home</span>
+                                </a>
+                                <a href="#" class="stagger-item p-4 bg-white rounded-xl text-center hover:shadow-md transition-shadow" style="animation-delay: 0.2s">
+                                    <div class="w-10 h-10 bg-indigo-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-gray-700 font-medium">Products</span>
+                                </a>
+                                <a href="#" class="stagger-item p-4 bg-white rounded-xl text-center hover:shadow-md transition-shadow" style="animation-delay: 0.3s">
+                                    <div class="w-10 h-10 bg-indigo-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-gray-700 font-medium">Team</span>
+                                </a>
+                                <a href="#" class="stagger-item p-4 bg-white rounded-xl text-center hover:shadow-md transition-shadow" style="animation-delay: 0.4s">
+                                    <div class="w-10 h-10 bg-indigo-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-gray-700 font-medium">Contact</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click toggle to see staggered animation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Morphing Button Navigation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Morphing Pill Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-fuchsia-500 to-pink-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Morph</span>
+                            </a>
+                            <div class="hidden md:flex items-center bg-gray-100 rounded-full p-1">
+                                <a href="#" class="px-4 py-2 bg-white text-fuchsia-600 font-medium rounded-full shadow-sm transition-all duration-300">Dashboard</a>
+                                <a href="#" class="px-4 py-2 text-gray-600 hover:text-fuchsia-600 rounded-full transition-all duration-300 hover:bg-white hover:shadow-sm">Analytics</a>
+                                <a href="#" class="px-4 py-2 text-gray-600 hover:text-fuchsia-600 rounded-full transition-all duration-300 hover:bg-white hover:shadow-sm">Reports</a>
+                                <a href="#" class="px-4 py-2 text-gray-600 hover:text-fuchsia-600 rounded-full transition-all duration-300 hover:bg-white hover:shadow-sm">Settings</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button class="p-2 text-gray-500 hover:text-fuchsia-600 hover:bg-fuchsia-50 rounded-full transition-all duration-300 hover:rotate-180">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </button>
+                                <div class="w-8 h-8 bg-gradient-to-br from-fuchsia-500 to-pink-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                                    <span class="text-white font-medium text-sm">A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover over pill items to see morph effect</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
+            <p>Animated Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+
+    <script>
+        // Stagger menu toggle
+        const staggerToggle = document.getElementById('stagger-toggle');
+        const staggerMenu = document.getElementById('stagger-menu');
+        const staggerItems = document.querySelectorAll('.stagger-item');
+
+        staggerToggle.addEventListener('click', () => {
+            if (staggerMenu.classList.contains('hidden')) {
+                staggerMenu.classList.remove('hidden');
+                // Reset and replay animations
+                staggerItems.forEach(item => {
+                    item.style.animation = 'none';
+                    item.offsetHeight; // Trigger reflow
+                    item.style.animation = null;
+                });
+            } else {
+                staggerMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
