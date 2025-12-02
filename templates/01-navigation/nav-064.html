@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.63 0.20 250);
+      --color-primary-500: oklch(0.53 0.24 250);
+      --color-primary-600: oklch(0.45 0.24 250);
+      --color-primary-700: oklch(0.38 0.20 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-4xl mx-auto space-y-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Pagination Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Simple Pagination -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 1: Simple Pagination</h2>
+      <nav aria-label="Pagination">
+        <ul class="flex items-center justify-center space-x-1">
+          <li>
+            <a href="#" class="px-3 py-2 text-sm text-gray-500 hover:text-primary-600 transition-colors">Previous</a>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-primary-600 transition-colors">1</a>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-primary-600 transition-colors">2</a>
+          </li>
+          <li>
+            <span class="px-3 py-2 text-sm text-primary-600 font-semibold">3</span>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-primary-600 transition-colors">4</a>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-primary-600 transition-colors">5</a>
+          </li>
+          <li>
+            <a href="#" class="px-3 py-2 text-sm text-gray-500 hover:text-primary-600 transition-colors">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Style 2: Rounded Button Pagination -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 2: Rounded Button Pagination</h2>
+      <nav aria-label="Pagination">
+        <ul class="flex items-center justify-center space-x-2">
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-primary-100 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-600 transition-colors text-sm font-medium">1</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-600 transition-colors text-sm font-medium">2</a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-500 text-white text-sm font-medium">3</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-600 transition-colors text-sm font-medium">4</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-600 transition-colors text-sm font-medium">5</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-primary-100 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Style 3: Bordered Pagination -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 3: Bordered Pagination</h2>
+      <nav aria-label="Pagination">
+        <ul class="flex items-center justify-center">
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-l-lg text-gray-600 hover:bg-gray-50 hover:text-primary-600 transition-colors">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              Prev
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 py-2 border-t border-b border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors text-sm">1</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 py-2 border-t border-b border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors text-sm">2</a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center px-4 py-2 border-t border-b border-primary-500 bg-primary-50 text-primary-600 font-semibold text-sm">3</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 py-2 border-t border-b border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors text-sm">4</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 py-2 border-t border-b border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors text-sm">5</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-r-lg text-gray-600 hover:bg-gray-50 hover:text-primary-600 transition-colors">
+              Next
+              <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Style 4: Pagination with Ellipsis -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 4: Pagination with Ellipsis</h2>
+      <nav aria-label="Pagination">
+        <ul class="flex items-center justify-center space-x-1">
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">1</a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center w-10 h-10 text-gray-400">...</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">4</a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500 text-white text-sm font-medium">5</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">6</a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center w-10 h-10 text-gray-400">...</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">20</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Style 5: Pagination with Page Info -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 5: Pagination with Page Info</h2>
+      <nav aria-label="Pagination" class="flex items-center justify-between">
+        <p class="text-sm text-gray-600">
+          Showing <span class="font-medium">21</span> to <span class="font-medium">30</span> of <span class="font-medium">97</span> results
+        </p>
+        <ul class="flex items-center space-x-1">
+          <li>
+            <a href="#" class="flex items-center justify-center px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors text-sm">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              Previous
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">1</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">2</a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-500 text-white text-sm font-medium">3</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">4</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium">5</a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors text-sm">
+              Next
+              <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Style 6: Mini Pagination -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 6: Mini Pagination</h2>
+      <nav aria-label="Pagination" class="flex items-center justify-center space-x-4">
+        <a href="#" class="flex items-center text-sm text-gray-500 hover:text-primary-600 transition-colors">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          Prev
+        </a>
+        <span class="text-sm text-gray-700">
+          Page <span class="font-semibold text-primary-600">3</span> of <span class="font-semibold">10</span>
+        </span>
+        <a href="#" class="flex items-center text-sm text-gray-500 hover:text-primary-600 transition-colors">
+          Next
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </nav>
+    </section>
+
+    <!-- Style 7: Pagination with Jump to Page -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 7: Pagination with Jump to Page</h2>
+      <nav aria-label="Pagination" class="flex items-center justify-center space-x-4">
+        <ul class="flex items-center space-x-1">
+          <li>
+            <a href="#" class="flex items-center justify-center w-9 h-9 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-9 h-9 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-primary-500 text-white text-sm font-medium">3</span>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-9 h-9 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center justify-center w-9 h-9 rounded-lg text-gray-500 hover:bg-gray-100 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="flex items-center space-x-2 text-sm text-gray-600">
+          <span>Go to</span>
+          <input type="number" min="1" max="20" value="3" class="w-16 px-2 py-1 border border-gray-300 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+          <span>of 20</span>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Style 8: Load More Pagination -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 8: Load More Pagination</h2>
+      <div class="text-center space-y-4">
+        <p class="text-sm text-gray-500">Showing 30 of 150 items</p>
+        <div class="w-full bg-gray-200 rounded-full h-1.5">
+          <div class="bg-primary-500 h-1.5 rounded-full" style="width: 20%"></div>
+        </div>
+        <button class="inline-flex items-center px-6 py-3 bg-primary-500 text-white font-medium rounded-lg hover:bg-primary-600 transition-colors">
+          <svg class="w-5 h-5 mr-2 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Load More
+        </button>
+        <p class="text-xs text-gray-400">or <a href="#" class="text-primary-600 hover:underline">View All</a></p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
