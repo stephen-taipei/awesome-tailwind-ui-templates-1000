@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+
+        /* Toggle switch animation */
+        .toggle-switch {
+            transition: background-color 0.3s ease;
+        }
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .toggle-switch.active::after {
+            transform: translateX(20px);
+        }
+
+        /* Sun/Moon animation */
+        @keyframes rotate-sun {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: rotate-sun 10s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Theme Switcher Navigation</h1>
+            <p class="text-gray-600">Navigation with dark/light mode toggle options</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Simple Toggle Switch -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Simple Toggle Switch</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Toggle</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-primary-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Features</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Pricing</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">About</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="relative w-12 h-6 bg-gray-200 rounded-full toggle-switch" onclick="this.classList.toggle('active'); this.classList.toggle('bg-primary-600')">
+                                    <span class="sr-only">Toggle dark mode</span>
+                                </button>
+                                <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click toggle to switch</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Sun/Moon Icon Toggle -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Sun/Moon Icon Toggle</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">SunMoon</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-amber-600 font-medium">Dashboard</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Analytics</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Settings</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button id="theme-toggle-1" class="p-2 hover:bg-gray-100 rounded-lg transition-colors group" onclick="this.querySelector('.sun').classList.toggle('hidden'); this.querySelector('.moon').classList.toggle('hidden');">
+                                    <svg class="w-6 h-6 text-amber-500 sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                    <svg class="w-6 h-6 text-indigo-500 moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                                    </svg>
+                                </button>
+                                <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
+                                    <span class="text-amber-700 font-medium text-sm">JD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click sun/moon icon to toggle</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Theme Toggle with Label -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Toggle with Label</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Label</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-emerald-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Products</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">About</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full">
+                                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                    <span class="text-xs text-gray-600">Light</span>
+                                    <button class="relative w-10 h-5 bg-gray-300 rounded-full transition-colors" onclick="this.classList.toggle('bg-emerald-500')">
+                                        <span class="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform" style="transform: translateX(0)"></span>
+                                    </button>
+                                    <span class="text-xs text-gray-600">Dark</span>
+                                    <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                                    </svg>
+                                </div>
+                                <a href="#" class="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Toggle with light/dark labels</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Three-Way Theme Selector -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Three-Way Theme Selector (Light/Dark/System)</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">System</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-violet-600 font-medium">Docs</a>
+                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">API</a>
+                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Examples</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center bg-gray-100 rounded-lg p-1">
+                                    <button class="p-2 bg-white text-amber-500 rounded-md shadow-sm" title="Light mode">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 text-gray-400 hover:text-indigo-500 rounded-md transition-colors" title="Dark mode">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 text-gray-400 hover:text-violet-500 rounded-md transition-colors" title="System preference">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a href="#" class="bg-violet-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-violet-700 transition-colors">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Light / Dark / System options</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Theme Dropdown Menu -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Theme Dropdown Menu</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Dropdown</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-rose-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Templates</a>
+                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Components</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                                        <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-44 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 bg-rose-50 text-rose-700 rounded-lg">
+                                                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                                </svg>
+                                                <span class="text-sm font-medium">Light</span>
+                                                <svg class="w-4 h-4 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Dark</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">System</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="bg-rose-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-rose-700 transition-colors">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover to see theme dropdown</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Animated Sun/Moon Switch -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Animated Icon Switch</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Animated</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-cyan-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Projects</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Blog</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button id="animated-toggle" class="relative w-16 h-8 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full p-1 transition-all duration-500" onclick="this.classList.toggle('from-indigo-600'); this.classList.toggle('to-purple-600'); this.classList.toggle('from-amber-400'); this.classList.toggle('to-orange-400');">
+                                    <div class="w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center transition-transform duration-500">
+                                        <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center">
+                                    <span class="text-cyan-700 font-medium text-sm">JD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click toggle for color animation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Dark Theme Preview -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Dark Theme with Toggle</h2>
+            <div class="rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg"></div>
+                                <span class="font-bold text-xl text-white">DarkUI</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-white font-medium">Console</a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Settings</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="flex items-center gap-2 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                                    <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                                    </svg>
+                                    <span class="text-sm text-gray-300">Dark</span>
+                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gray-800 flex items-center justify-center">
+                    <span class="text-gray-500">Dark theme enabled</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Color Theme Selector -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Multi-Color Theme Selector</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Colors</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-teal-600 font-medium">Dashboard</a>
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Analytics</a>
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Reports</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                        </svg>
+                                        <span class="text-sm text-gray-700">Theme</span>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-3 border-b border-gray-100">
+                                            <p class="text-xs font-medium text-gray-500 uppercase">Select Theme</p>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <span class="text-sm text-gray-700">Mode</span>
+                                                <div class="flex items-center bg-gray-100 rounded-lg p-0.5">
+                                                    <button class="p-1.5 bg-white rounded-md shadow-sm">
+                                                        <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="p-1.5 rounded-md">
+                                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="text-sm text-gray-700">Accent Color</span>
+                                                <div class="flex items-center gap-2 mt-2">
+                                                    <button class="w-6 h-6 bg-teal-500 rounded-full ring-2 ring-teal-500 ring-offset-2"></button>
+                                                    <button class="w-6 h-6 bg-blue-500 rounded-full hover:ring-2 hover:ring-blue-500 hover:ring-offset-2 transition-all"></button>
+                                                    <button class="w-6 h-6 bg-violet-500 rounded-full hover:ring-2 hover:ring-violet-500 hover:ring-offset-2 transition-all"></button>
+                                                    <button class="w-6 h-6 bg-rose-500 rounded-full hover:ring-2 hover:ring-rose-500 hover:ring-offset-2 transition-all"></button>
+                                                    <button class="w-6 h-6 bg-amber-500 rounded-full hover:ring-2 hover:ring-amber-500 hover:ring-offset-2 transition-all"></button>
+                                                    <button class="w-6 h-6 bg-emerald-500 rounded-full hover:ring-2 hover:ring-emerald-500 hover:ring-offset-2 transition-all"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center">
+                                    <span class="text-teal-700 font-medium text-sm">JD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover to see color theme options</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
+            <p>Theme Switcher Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+</body>
+</html>
