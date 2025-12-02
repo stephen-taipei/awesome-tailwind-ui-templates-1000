@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.63 0.20 250);
+      --color-primary-500: oklch(0.53 0.24 250);
+      --color-primary-600: oklch(0.45 0.24 250);
+      --color-primary-700: oklch(0.38 0.20 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-4xl mx-auto space-y-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Search Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Simple Search Bar -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 1: Simple Search Bar</h2>
+      <div class="relative max-w-md">
+        <input type="text" placeholder="Search..." class="w-full px-4 py-2.5 pl-10 bg-gray-100 border border-transparent rounded-lg text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Style 2: Search with Button -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 2: Search with Button</h2>
+      <div class="flex max-w-lg">
+        <input type="text" placeholder="What are you looking for?" class="flex-1 px-4 py-2.5 bg-white border border-gray-300 rounded-l-lg text-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100">
+        <button class="px-6 py-2.5 bg-primary-500 text-white font-medium rounded-r-lg hover:bg-primary-600 transition-colors">
+          Search
+        </button>
+      </div>
+    </section>
+
+    <!-- Style 3: Search with Category Filter -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 3: Search with Category Filter</h2>
+      <div class="flex max-w-2xl">
+        <div class="relative">
+          <select class="appearance-none h-full px-4 py-2.5 pr-10 bg-gray-100 border border-gray-300 border-r-0 rounded-l-lg text-sm text-gray-700 focus:outline-none focus:bg-white focus:border-primary-500 cursor-pointer">
+            <option>All Categories</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Home & Garden</option>
+            <option>Sports</option>
+          </select>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+        </div>
+        <input type="text" placeholder="Search products..." class="flex-1 px-4 py-2.5 bg-white border border-gray-300 text-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100">
+        <button class="px-6 py-2.5 bg-primary-500 text-white font-medium rounded-r-lg hover:bg-primary-600 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Style 4: Expandable Search Icon -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 4: Expandable Search Icon</h2>
+      <div class="flex items-center space-x-4">
+        <p class="text-sm text-gray-500">Click icon to expand:</p>
+        <div class="relative group">
+          <input type="text" placeholder="Search..." class="w-0 py-2 px-0 bg-transparent border-b-2 border-transparent text-sm focus:w-64 focus:px-2 focus:border-primary-500 transition-all duration-300 group-hover:w-64 group-hover:px-2 group-hover:border-gray-300">
+          <button class="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-primary-600 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Search with Suggestions -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 5: Search with Suggestions</h2>
+      <div class="relative max-w-lg group">
+        <input type="text" value="tailwind" placeholder="Search..." class="w-full px-4 py-3 pl-10 bg-white border border-gray-300 rounded-xl text-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <!-- Suggestions dropdown -->
+        <div class="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all z-10">
+          <div class="px-4 py-2 bg-gray-50 border-b border-gray-100">
+            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Suggestions</p>
+          </div>
+          <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+            <svg class="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="text-sm text-gray-700"><strong class="text-gray-900">tailwind</strong> css</span>
+          </a>
+          <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+            <svg class="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="text-sm text-gray-700"><strong class="text-gray-900">tailwind</strong> ui components</span>
+          </a>
+          <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+            <svg class="w-4 h-4 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="text-sm text-gray-700"><strong class="text-gray-900">tailwind</strong> templates</span>
+          </a>
+          <div class="px-4 py-2 bg-gray-50 border-t border-gray-100">
+            <p class="text-xs text-gray-500">Press <kbd class="px-1.5 py-0.5 bg-white border border-gray-200 rounded text-xs">Enter</kbd> to search</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 6: Command Palette Style -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 6: Command Palette Style</h2>
+      <div class="max-w-xl mx-auto">
+        <div class="relative">
+          <div class="flex items-center px-4 py-3 bg-gray-900 rounded-t-xl border-b border-gray-700">
+            <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Type a command or search..." class="flex-1 bg-transparent text-white placeholder-gray-500 text-sm focus:outline-none">
+            <kbd class="hidden sm:inline-flex items-center px-2 py-1 bg-gray-800 text-gray-400 text-xs rounded">
+              <span class="mr-1">Esc</span>
+            </kbd>
+          </div>
+          <div class="bg-gray-900 rounded-b-xl py-2">
+            <div class="px-3 py-1.5">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Recent</p>
+            </div>
+            <a href="#" class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-800 transition-colors">
+              <svg class="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">Dashboard settings</span>
+            </a>
+            <a href="#" class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-800 transition-colors">
+              <svg class="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-sm">User profile</span>
+            </a>
+            <div class="px-3 py-1.5 mt-2">
+              <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Quick Actions</p>
+            </div>
+            <a href="#" class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-800 transition-colors">
+              <svg class="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+              </svg>
+              <span class="text-sm">Create new project</span>
+              <kbd class="ml-auto text-xs text-gray-600 bg-gray-800 px-1.5 py-0.5 rounded">Ctrl+N</kbd>
+            </a>
+            <a href="#" class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-800 transition-colors">
+              <svg class="w-4 h-4 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span class="text-sm">Open settings</span>
+              <kbd class="ml-auto text-xs text-gray-600 bg-gray-800 px-1.5 py-0.5 rounded">Ctrl+,</kbd>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 7: Voice Search -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 7: Voice Search</h2>
+      <div class="relative max-w-lg">
+        <input type="text" placeholder="Search or speak..." class="w-full px-4 py-3 pl-10 pr-24 bg-white border border-gray-300 rounded-full text-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-1">
+          <button class="p-2 text-gray-400 hover:text-primary-600 transition-colors" title="Voice search">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-400 hover:text-primary-600 transition-colors" title="Camera search">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 8: Full-Screen Search Overlay Trigger -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 8: Full-Screen Search (Preview)</h2>
+      <div class="relative">
+        <!-- Trigger button -->
+        <button class="flex items-center space-x-3 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors group">
+          <svg class="w-5 h-5 text-gray-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <span class="text-sm text-gray-600">Search...</span>
+          <kbd class="hidden sm:inline-flex px-2 py-0.5 bg-white border border-gray-200 rounded text-xs text-gray-500">Ctrl+K</kbd>
+        </button>
+
+        <!-- Preview of full-screen overlay (scaled down) -->
+        <div class="mt-4 p-4 bg-gray-900/95 rounded-xl backdrop-blur-sm max-w-2xl">
+          <div class="flex items-center px-4 py-4 bg-gray-800/50 rounded-xl mb-4">
+            <svg class="w-6 h-6 text-gray-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Search anything..." class="flex-1 bg-transparent text-white text-lg placeholder-gray-500 focus:outline-none">
+            <kbd class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">ESC</kbd>
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2">Quick Links</p>
+            <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 transition-colors">
+              <span class="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-lg mr-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+              </span>
+              <div>
+                <p class="text-sm font-medium">Home</p>
+                <p class="text-xs text-gray-500">Go to homepage</p>
+              </div>
+            </a>
+            <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 transition-colors">
+              <span class="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-lg mr-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </span>
+              <div>
+                <p class="text-sm font-medium">Documentation</p>
+                <p class="text-xs text-gray-500">Read the docs</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
