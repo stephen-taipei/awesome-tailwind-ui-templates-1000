@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation 058 - Dashboard Navigation - 8 Styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.86 0.08 260);
+            --color-primary-300: oklch(0.76 0.12 260);
+            --color-primary-400: oklch(0.64 0.16 260);
+            --color-primary-500: oklch(0.53 0.19 260);
+            --color-primary-600: oklch(0.45 0.18 260);
+            --color-primary-700: oklch(0.37 0.15 260);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Navigation 058 - Dashboard Navigation</h1>
+            <p class="text-gray-600">8 styles of analytics and dashboard navigation</p>
+        </header>
+
+        <!-- Style 1: Analytics Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Analytics Dashboard</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <aside class="w-64 bg-slate-900 flex flex-col">
+                        <div class="p-4 border-b border-slate-700">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white">Analytics</span>
+                            </div>
+                        </div>
+                        <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-white bg-slate-800 rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                                <span class="text-sm font-medium">Overview</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-sm">Real-time</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                                <span class="text-sm">Audience</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                                <span class="text-sm">Acquisition</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                                </svg>
+                                <span class="text-sm">Behavior</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm">Conversions</span>
+                            </a>
+                            <div class="pt-4 mt-4 border-t border-slate-700">
+                                <span class="px-3 text-xs font-semibold text-slate-500 uppercase">Reports</span>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 mt-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    <span class="text-sm">Custom Reports</span>
+                                </a>
+                            </div>
+                        </nav>
+                        <div class="p-4 border-t border-slate-700">
+                            <div class="flex items-center gap-3">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=analyst" alt="Avatar" class="w-8 h-8 rounded-full">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm text-white font-medium truncate">Admin User</p>
+                                    <p class="text-xs text-slate-400 truncate">admin@company.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="flex-1 flex flex-col">
+                        <header class="h-16 border-b border-gray-200 flex items-center justify-between px-6">
+                            <div class="flex items-center gap-4">
+                                <h1 class="text-xl font-semibold text-gray-900">Overview</h1>
+                                <select class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option>Last 7 days</option>
+                                    <option>Last 30 days</option>
+                                    <option>Last 90 days</option>
+                                </select>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button class="px-4 py-2 text-sm text-gray-600 border border-gray-200 rounded-lg hover:bg-gray-50">
+                                    Export
+                                </button>
+                                <button class="px-4 py-2 text-sm text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                                    Create Report
+                                </button>
+                            </div>
+                        </header>
+                        <div class="flex-1 p-6 bg-gray-50">
+                            <p class="text-gray-500">Analytics dashboard content...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: SaaS Metrics Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: SaaS Metrics Dashboard</h2>
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-16 flex items-center justify-between px-6 border-b border-gray-800">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                            <span class="font-bold text-white">Metrics</span>
+                        </a>
+                        <div class="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
+                            <button class="px-4 py-1.5 text-sm text-white bg-gray-700 rounded-md">Overview</button>
+                            <button class="px-4 py-1.5 text-sm text-gray-400 hover:text-white rounded-md">Revenue</button>
+                            <button class="px-4 py-1.5 text-sm text-gray-400 hover:text-white rounded-md">Users</button>
+                            <button class="px-4 py-1.5 text-sm text-gray-400 hover:text-white rounded-md">Churn</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-lg">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-sm text-gray-300">Dec 1 - Dec 31, 2025</span>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                        <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                        </button>
+                        <button class="px-4 py-2 bg-violet-500 text-white text-sm font-medium rounded-lg hover:bg-violet-600">
+                            Share
+                        </button>
+                    </div>
+                </nav>
+                <div class="h-12 flex items-center gap-6 px-6 border-b border-gray-800 bg-gray-800/50">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-gray-500">MRR</span>
+                        <span class="text-sm text-white font-semibold">$124,500</span>
+                        <span class="text-xs text-green-400">+12.5%</span>
+                    </div>
+                    <div class="h-4 w-px bg-gray-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-gray-500">ARR</span>
+                        <span class="text-sm text-white font-semibold">$1.49M</span>
+                        <span class="text-xs text-green-400">+18.2%</span>
+                    </div>
+                    <div class="h-4 w-px bg-gray-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-gray-500">Active Users</span>
+                        <span class="text-sm text-white font-semibold">8,432</span>
+                        <span class="text-xs text-green-400">+5.3%</span>
+                    </div>
+                    <div class="h-4 w-px bg-gray-700"></div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-gray-500">Churn Rate</span>
+                        <span class="text-sm text-white font-semibold">2.1%</span>
+                        <span class="text-xs text-red-400">+0.3%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Financial Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Financial Dashboard</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="border-b border-gray-200">
+                    <div class="h-16 flex items-center justify-between px-6">
+                        <div class="flex items-center gap-6">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-gray-900">FinanceHub</span>
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="text-emerald-600 font-medium text-sm">Dashboard</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Accounts</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Transactions</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Investments</a>
+                                <a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Reports</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="p-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                </svg>
+                            </button>
+                            <button class="p-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </button>
+                            <div class="flex items-center gap-3 pl-4 border-l border-gray-200">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=finance" alt="Avatar" class="w-8 h-8 rounded-full">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-12 flex items-center justify-between px-6 bg-gray-50">
+                        <div class="flex items-center gap-6">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-gray-500">Total Balance</span>
+                                <span class="text-lg text-gray-900 font-bold">$284,392.00</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button class="px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-200 rounded-lg">+ Add Account</button>
+                            <button class="px-3 py-1.5 text-sm text-white bg-emerald-500 rounded-lg hover:bg-emerald-600">Transfer</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 4: Marketing Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Marketing Dashboard</h2>
+            <div class="bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-16 flex items-center justify-between px-6 bg-white/10 backdrop-blur">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-bold text-white">MarketPro</span>
+                        </a>
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="text-white font-medium text-sm">Dashboard</a>
+                            <a href="#" class="text-white/70 hover:text-white text-sm">Campaigns</a>
+                            <a href="#" class="text-white/70 hover:text-white text-sm">Audience</a>
+                            <a href="#" class="text-white/70 hover:text-white text-sm">Content</a>
+                            <a href="#" class="text-white/70 hover:text-white text-sm">Automation</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-lg text-white text-sm hover:bg-white/30">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            New Campaign
+                        </button>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=marketer" alt="Avatar" class="w-9 h-9 rounded-full ring-2 ring-white/30">
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 5: Project Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Project Dashboard</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <aside class="w-56 bg-gray-50 border-r border-gray-200 flex flex-col">
+                        <div class="p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-gray-900">Projects</span>
+                            </div>
+                        </div>
+                        <nav class="flex-1 px-3 space-y-1 overflow-y-auto">
+                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-indigo-600 bg-indigo-50 rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">All Projects</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                </svg>
+                                <span class="text-sm">Starred</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-sm">Recent</span>
+                            </a>
+                            <div class="pt-4 mt-4 border-t border-gray-200">
+                                <span class="px-3 text-xs font-semibold text-gray-400 uppercase">Teams</span>
+                                <div class="mt-2 space-y-1">
+                                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        <span class="text-sm">Design</span>
+                                    </a>
+                                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        <span class="text-sm">Engineering</span>
+                                    </a>
+                                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                        <span class="text-sm">Marketing</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="p-3 border-t border-gray-200">
+                            <button class="w-full flex items-center justify-center gap-2 px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                                New Project
+                            </button>
+                        </div>
+                    </aside>
+                    <div class="flex-1 flex flex-col">
+                        <header class="h-14 border-b border-gray-200 flex items-center justify-between px-6">
+                            <div class="flex items-center gap-4">
+                                <h1 class="font-semibold text-gray-900">All Projects</h1>
+                                <span class="text-sm text-gray-500">24 projects</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center border border-gray-200 rounded-lg">
+                                    <button class="p-2 text-indigo-600 bg-indigo-50">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 text-gray-400 hover:text-gray-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="flex-1 p-6 bg-gray-50 overflow-auto">
+                            <p class="text-gray-500">Project dashboard content...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Social Media Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Social Media Dashboard</h2>
+            <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-16 flex items-center justify-between px-6 border-b border-slate-700">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-bold text-white">SocialHub</span>
+                        </a>
+                        <div class="flex items-center gap-1">
+                            <button class="flex items-center gap-2 px-4 py-2 text-white bg-slate-800 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path>
+                                </svg>
+                                Dashboard
+                            </button>
+                            <button class="flex items-center gap-2 px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                Calendar
+                            </button>
+                            <button class="flex items-center gap-2 px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
+                                </svg>
+                                Inbox
+                            </button>
+                            <button class="flex items-center gap-2 px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                                Analytics
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center ring-2 ring-slate-900">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center ring-2 ring-slate-900">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center ring-2 ring-slate-900">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+                            </div>
+                        </div>
+                        <button class="px-4 py-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white text-sm font-medium rounded-lg hover:opacity-90">
+                            Create Post
+                        </button>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=social" alt="Avatar" class="w-9 h-9 rounded-full ring-2 ring-slate-700">
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 7: CRM Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 7: CRM Dashboard</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-16 flex items-center justify-between px-6 border-b border-gray-200">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-bold text-gray-900">CRM Pro</span>
+                        </a>
+                        <div class="flex items-center gap-1">
+                            <a href="#" class="px-4 py-2 text-blue-600 bg-blue-50 rounded-lg text-sm font-medium">Dashboard</a>
+                            <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">Leads</a>
+                            <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">Contacts</a>
+                            <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">Deals</a>
+                            <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">Tasks</a>
+                            <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">Reports</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <input type="text" placeholder="Search..." class="w-48 pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg relative">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                            </svg>
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                        <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                            + Add Contact
+                        </button>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=crm" alt="Avatar" class="w-9 h-9 rounded-full">
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 8: Monitoring Dashboard -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 8: Monitoring Dashboard</h2>
+            <div class="bg-gray-950 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-14 flex items-center justify-between px-6 border-b border-gray-800">
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-bold text-white">Monitor</span>
+                        </a>
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="text-white text-sm font-medium">Overview</a>
+                            <a href="#" class="text-gray-500 hover:text-white text-sm">Servers</a>
+                            <a href="#" class="text-gray-500 hover:text-white text-sm">Containers</a>
+                            <a href="#" class="text-gray-500 hover:text-white text-sm">Logs</a>
+                            <a href="#" class="text-gray-500 hover:text-white text-sm">Alerts</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/30 rounded-lg">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span class="text-green-400 text-xs font-medium">All Systems Operational</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-400 text-xs">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Updated 30s ago</span>
+                        </div>
+                        <button class="p-2 text-gray-500 hover:text-white hover:bg-gray-800 rounded-lg relative">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                            </svg>
+                            <span class="absolute top-0 right-0 w-4 h-4 bg-red-500 rounded-full text-[10px] text-white flex items-center justify-center">3</span>
+                        </button>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=devops" alt="Avatar" class="w-8 h-8 rounded-full ring-2 ring-gray-800">
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
