@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-500: oklch(0.55 0.2 250);
+            --color-primary-600: oklch(0.48 0.2 250);
+            --color-primary-700: oklch(0.4 0.2 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-gray-900">Breadcrumb Navigation</h1>
+            <p class="text-gray-600 mt-2">Various breadcrumb styles for showing page hierarchy and navigation path</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Style 1: Simple Breadcrumb -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 1: Simple Breadcrumb</h2>
+                <p class="text-gray-600 text-sm mt-1">Basic breadcrumb with slash separators</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2">
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">Home</a>
+                        </li>
+                        <li class="text-gray-400">/</li>
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">Products</a>
+                        </li>
+                        <li class="text-gray-400">/</li>
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">Electronics</a>
+                        </li>
+                        <li class="text-gray-400">/</li>
+                        <li>
+                            <span class="text-gray-900 font-medium">Smartphones</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 2: Chevron Breadcrumb -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 2: Chevron Breadcrumb</h2>
+                <p class="text-gray-600 text-sm mt-1">Breadcrumb with chevron arrow separators</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-1">
+                        <li>
+                            <a href="#" class="flex items-center text-gray-500 hover:text-primary-600 transition-colors">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" class="ml-1 text-gray-500 hover:text-primary-600 transition-colors">Products</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" class="ml-1 text-gray-500 hover:text-primary-600 transition-colors">Electronics</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="ml-1 text-gray-900 font-medium">Smartphones</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 3: Pill Breadcrumb -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 3: Pill Breadcrumb</h2>
+                <p class="text-gray-600 text-sm mt-1">Breadcrumb items as pill-shaped buttons</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2">
+                        <li>
+                            <a href="#" class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors">
+                                Electronics
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <span class="px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
+                                Smartphones
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 4: Arrow Breadcrumb -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 4: Arrow Breadcrumb</h2>
+                <p class="text-gray-600 text-sm mt-1">Connected arrow-shaped breadcrumb items</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center">
+                        <li class="relative">
+                            <a href="#" class="flex items-center px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-300 transition-colors rounded-l-lg">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                </svg>
+                                Home
+                            </a>
+                            <div class="absolute right-0 top-0 h-full w-3 bg-gray-200" style="clip-path: polygon(0 0, 0 100%, 100% 50%);"></div>
+                        </li>
+                        <li class="relative ml-2">
+                            <a href="#" class="flex items-center px-4 py-2 pl-6 bg-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-300 transition-colors">
+                                Products
+                            </a>
+                            <div class="absolute right-0 top-0 h-full w-3 bg-gray-200" style="clip-path: polygon(0 0, 0 100%, 100% 50%);"></div>
+                        </li>
+                        <li class="relative ml-2">
+                            <a href="#" class="flex items-center px-4 py-2 pl-6 bg-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-300 transition-colors">
+                                Electronics
+                            </a>
+                            <div class="absolute right-0 top-0 h-full w-3 bg-gray-200" style="clip-path: polygon(0 0, 0 100%, 100% 50%);"></div>
+                        </li>
+                        <li class="relative ml-2">
+                            <span class="flex items-center px-4 py-2 pl-6 bg-primary-500 text-white text-sm font-medium rounded-r-lg">
+                                Smartphones
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 5: Breadcrumb with Dropdown -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 5: Breadcrumb with Dropdown</h2>
+                <p class="text-gray-600 text-sm mt-1">Breadcrumb with collapsible dropdown for long paths</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-1">
+                        <li>
+                            <a href="#" class="flex items-center text-gray-500 hover:text-primary-600 transition-colors">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li class="relative" id="breadcrumbDropdown">
+                            <button class="flex items-center px-2 py-1 text-gray-500 hover:text-primary-600 hover:bg-gray-100 rounded transition-colors" onclick="toggleBreadcrumbMenu()">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                </svg>
+                            </button>
+                            <div id="breadcrumbMenu" class="absolute left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 hidden z-50">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Products</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Electronics</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mobile Devices</a>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-primary-600 transition-colors">Smartphones</a>
+                        </li>
+                        <li>
+                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <span class="text-gray-900 font-medium">iPhone 15 Pro</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 6: Breadcrumb with Icons -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 6: Breadcrumb with Icons</h2>
+                <p class="text-gray-600 text-sm mt-1">Each breadcrumb item has an associated icon</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2">
+                        <li>
+                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
+                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
+                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                </svg>
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
+                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                                </svg>
+                                Marketing
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <span class="flex items-center px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg font-medium">
+                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                                Campaign Report
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 7: Underline Breadcrumb -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 7: Underline Breadcrumb</h2>
+                <p class="text-gray-600 text-sm mt-1">Minimal breadcrumb with underline hover effect</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-3">
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
+                                Home
+                            </a>
+                        </li>
+                        <li class="text-gray-300">→</li>
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="text-gray-300">→</li>
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
+                                Women
+                            </a>
+                        </li>
+                        <li class="text-gray-300">→</li>
+                        <li>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
+                                Dresses
+                            </a>
+                        </li>
+                        <li class="text-gray-300">→</li>
+                        <li>
+                            <span class="text-gray-900 font-medium border-b-2 border-primary-500 pb-0.5">
+                                Summer Collection
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 8: Dark Breadcrumb -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 8: Dark Breadcrumb</h2>
+                <p class="text-gray-600 text-sm mt-1">Dark themed breadcrumb navigation</p>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg">
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-1">
+                        <li>
+                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
+                                <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
+                                Analytics
+                            </a>
+                        </li>
+                        <li>
+                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <span class="px-3 py-1.5 bg-primary-500/20 text-primary-400 rounded-lg font-medium border border-primary-500/30">
+                                Reports
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <p class="text-center text-gray-600">Breadcrumb Navigation - Part of 1000 Tailwind UI Templates Collection</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleBreadcrumbMenu() {
+            const menu = document.getElementById('breadcrumbMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('breadcrumbDropdown');
+            const menu = document.getElementById('breadcrumbMenu');
+            if (!dropdown.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
