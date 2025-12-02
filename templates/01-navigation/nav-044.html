@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Morphism Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-gradient {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .glass-frosted {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-tinted {
+            background: rgba(99, 102, 241, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen">
+    <header class="bg-gray-800 shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-white">Glass Morphism Navigation</h1>
+            <p class="text-gray-400">Frosted glass effect navigation styles</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Basic Glass on Gradient -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 1: Basic Glass on Gradient</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-64 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400">
+                    <nav class="absolute top-4 left-4 right-4 glass rounded-2xl">
+                        <div class="px-6">
+                            <div class="flex items-center justify-between h-16">
+                                <a href="#" class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center">
+                                        <span class="text-white font-bold">G</span>
+                                    </div>
+                                    <span class="font-bold text-xl text-white">Glass</span>
+                                </a>
+                                <div class="hidden md:flex items-center gap-6">
+                                    <a href="#" class="text-white font-medium">Home</a>
+                                    <a href="#" class="text-white/70 hover:text-white transition-colors">Products</a>
+                                    <a href="#" class="text-white/70 hover:text-white transition-colors">About</a>
+                                    <a href="#" class="text-white/70 hover:text-white transition-colors">Contact</a>
+                                </div>
+                                <a href="#" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl font-medium transition-colors backdrop-blur">Get Started</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="absolute bottom-8 left-8">
+                        <h3 class="text-2xl font-bold text-white">Welcome</h3>
+                        <p class="text-white/70">Beautiful glass effect navigation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Glass with Light Background -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 2: Frosted Glass on Image</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=400&fit=crop')">
+                    <nav class="absolute top-4 left-4 right-4 glass-frosted rounded-2xl">
+                        <div class="px-6">
+                            <div class="flex items-center justify-between h-16">
+                                <a href="#" class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg"></div>
+                                    <span class="font-bold text-xl text-gray-800">Alpine</span>
+                                </a>
+                                <div class="hidden md:flex items-center gap-6">
+                                    <a href="#" class="text-gray-800 font-medium">Explore</a>
+                                    <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Tours</a>
+                                    <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Gallery</a>
+                                    <a href="#" class="text-gray-600 hover:text-gray-800 transition-colors">Book</a>
+                                </div>
+                                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl font-medium transition-colors">Plan Trip</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Dark Glass -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 3: Dark Glass Morphism</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-64 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+                    <!-- Decorative elements -->
+                    <div class="absolute top-10 left-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl opacity-30"></div>
+                    <div class="absolute bottom-10 right-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-30"></div>
+
+                    <nav class="absolute top-4 left-4 right-4 glass-dark rounded-2xl">
+                        <div class="px-6">
+                            <div class="flex items-center justify-between h-16">
+                                <a href="#" class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg"></div>
+                                    <span class="font-bold text-xl text-white">Nebula</span>
+                                </a>
+                                <div class="hidden md:flex items-center gap-6">
+                                    <a href="#" class="text-white font-medium">Dashboard</a>
+                                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Analytics</a>
+                                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Settings</a>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <button class="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                        </svg>
+                                    </button>
+                                    <div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Gradient Glass Border -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 4: Glass with Gradient Border</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-64 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500">
+                    <nav class="absolute top-4 left-4 right-4">
+                        <div class="p-[1px] bg-gradient-to-r from-white/50 via-white/20 to-white/50 rounded-2xl">
+                            <div class="glass rounded-2xl px-6">
+                                <div class="flex items-center justify-between h-16">
+                                    <a href="#" class="flex items-center gap-2">
+                                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                            <span class="text-emerald-600 font-bold">E</span>
+                                        </div>
+                                        <span class="font-bold text-xl text-white">Eco</span>
+                                    </a>
+                                    <div class="hidden md:flex items-center gap-6">
+                                        <a href="#" class="text-white font-medium">Home</a>
+                                        <a href="#" class="text-white/70 hover:text-white transition-colors">Solutions</a>
+                                        <a href="#" class="text-white/70 hover:text-white transition-colors">Impact</a>
+                                        <a href="#" class="text-white/70 hover:text-white transition-colors">About</a>
+                                    </div>
+                                    <a href="#" class="bg-white text-emerald-600 px-4 py-2 rounded-xl font-medium hover:bg-white/90 transition-colors">Join Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Tinted Glass -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 5: Tinted Glass Navigation</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-64 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+                    <!-- Decorative blobs -->
+                    <div class="absolute top-20 left-20 w-40 h-40 bg-indigo-500 rounded-full blur-3xl opacity-40"></div>
+                    <div class="absolute bottom-10 right-20 w-32 h-32 bg-violet-500 rounded-full blur-3xl opacity-40"></div>
+
+                    <nav class="absolute top-4 left-4 right-4 glass-tinted rounded-2xl">
+                        <div class="px-6">
+                            <div class="flex items-center justify-between h-16">
+                                <a href="#" class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="font-bold text-xl text-white">Volt</span>
+                                </a>
+                                <div class="hidden md:flex items-center gap-1">
+                                    <a href="#" class="px-4 py-2 bg-white/10 text-white font-medium rounded-lg">Dashboard</a>
+                                    <a href="#" class="px-4 py-2 text-indigo-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Projects</a>
+                                    <a href="#" class="px-4 py-2 text-indigo-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Reports</a>
+                                    <a href="#" class="px-4 py-2 text-indigo-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors">Team</a>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <button class="p-2 text-indigo-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </button>
+                                    <div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white font-medium text-sm">JD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Floating Glass Cards -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 6: Floating Glass Cards</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-64 bg-gradient-to-br from-rose-500 via-pink-500 to-purple-600">
+                    <nav class="absolute top-4 left-4 right-4">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="glass px-4 py-3 rounded-2xl flex items-center gap-2 hover:bg-white/20 transition-colors">
+                                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                    <span class="text-rose-600 font-bold">R</span>
+                                </div>
+                                <span class="font-bold text-xl text-white">Rose</span>
+                            </a>
+                            <div class="hidden md:flex items-center glass rounded-2xl px-2 py-2 gap-1">
+                                <a href="#" class="px-4 py-2 bg-white/20 text-white font-medium rounded-xl">Home</a>
+                                <a href="#" class="px-4 py-2 text-white/80 hover:bg-white/10 rounded-xl transition-colors">Shop</a>
+                                <a href="#" class="px-4 py-2 text-white/80 hover:bg-white/10 rounded-xl transition-colors">Collections</a>
+                                <a href="#" class="px-4 py-2 text-white/80 hover:bg-white/10 rounded-xl transition-colors">About</a>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button class="glass p-3 rounded-xl text-white hover:bg-white/20 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </button>
+                                <button class="glass p-3 rounded-xl text-white hover:bg-white/20 transition-colors relative">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                    </svg>
+                                    <span class="absolute -top-1 -right-1 w-4 h-4 bg-white text-rose-600 text-xs font-bold rounded-full flex items-center justify-center">3</span>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Glass Sidebar Navigation -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 7: Glass Sidebar Navigation</h2>
+            <div class="rounded-xl overflow-hidden">
+                <div class="relative h-80 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 flex">
+                    <!-- Glass Sidebar -->
+                    <nav class="w-64 glass-light m-4 rounded-2xl p-4">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">F</span>
+                            </div>
+                            <span class="font-bold text-xl text-gray-800">Flame</span>
+                        </div>
+                        <div class="space-y-1">
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 bg-amber-500/20 text-amber-700 font-medium rounded-xl">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-amber-500/10 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                Analytics
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-amber-500/10 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                                </svg>
+                                Team
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-amber-500/10 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                Settings
+                            </a>
+                        </div>
+                    </nav>
+                    <!-- Content Area -->
+                    <div class="flex-1 flex items-center justify-center">
+                        <span class="text-white/60">Main Content</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Glass Bottom Navigation -->
+        <section>
+            <h2 class="text-lg font-semibold text-white mb-4">Style 8: Glass Bottom Navigation (Mobile)</h2>
+            <div class="rounded-xl overflow-hidden max-w-sm mx-auto">
+                <div class="relative h-[500px] bg-gradient-to-b from-cyan-400 via-blue-500 to-purple-600">
+                    <!-- Decorative elements -->
+                    <div class="absolute top-20 left-10 w-20 h-20 bg-white rounded-full blur-2xl opacity-30"></div>
+                    <div class="absolute top-40 right-10 w-16 h-16 bg-yellow-300 rounded-full blur-2xl opacity-30"></div>
+
+                    <!-- Content -->
+                    <div class="p-6 pt-12">
+                        <h3 class="text-2xl font-bold text-white mb-2">Good Morning</h3>
+                        <p class="text-white/70">Welcome back, John</p>
+                    </div>
+
+                    <!-- Glass Bottom Nav -->
+                    <nav class="absolute bottom-4 left-4 right-4 glass rounded-3xl">
+                        <div class="flex items-center justify-around py-4">
+                            <a href="#" class="flex flex-col items-center gap-1 text-white">
+                                <div class="p-2 bg-white/20 rounded-xl">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs font-medium">Home</span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-1 text-white/60 hover:text-white transition-colors">
+                                <div class="p-2 hover:bg-white/10 rounded-xl transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs">Search</span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-1 text-white/60 hover:text-white transition-colors">
+                                <div class="p-2 hover:bg-white/10 rounded-xl transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs">Favorites</span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center gap-1 text-white/60 hover:text-white transition-colors">
+                                <div class="p-2 hover:bg-white/10 rounded-xl transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    </svg>
+                                </div>
+                                <span class="text-xs">Profile</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-400">
+            <p>Glass Morphism Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+</body>
+</html>
