@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Admin Dashboard Navigation</h1>
+            <p class="text-gray-600">Navigation styles for admin panels and dashboards</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Sidebar with Top Header -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Sidebar + Top Header</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-80">
+                    <!-- Sidebar -->
+                    <nav class="w-64 bg-gray-900 text-white flex flex-col">
+                        <div class="p-4 border-b border-gray-800">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                                    <span class="font-bold text-lg">A</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Admin Panel</p>
+                                    <p class="text-xs text-gray-400">v2.0.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 p-4 overflow-y-auto">
+                            <p class="text-xs font-semibold text-gray-500 uppercase mb-3">Main</p>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 bg-primary-600 rounded-lg mb-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg mb-1 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                Users
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg mb-1 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                Analytics
+                            </a>
+                            <p class="text-xs font-semibold text-gray-500 uppercase mb-3 mt-6">Settings</p>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg mb-1 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                Settings
+                            </a>
+                        </div>
+                    </nav>
+                    <!-- Main Content -->
+                    <div class="flex-1 flex flex-col">
+                        <!-- Top Header -->
+                        <header class="h-16 bg-white border-b flex items-center justify-between px-6">
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:hidden">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                    </svg>
+                                </button>
+                                <div class="relative">
+                                    <input type="text" placeholder="Search..." class="w-64 pl-10 pr-4 py-2 bg-gray-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                                </button>
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Admin" alt="Admin" class="w-9 h-9 rounded-full">
+                            </div>
+                        </header>
+                        <!-- Content -->
+                        <div class="flex-1 bg-gray-50 flex items-center justify-center">
+                            <span class="text-gray-400">Dashboard Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Collapsed Icon Sidebar -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Collapsed Icon Sidebar</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-80">
+                    <!-- Icon Sidebar -->
+                    <nav class="w-20 bg-indigo-900 text-white flex flex-col items-center py-4">
+                        <div class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                            <span class="font-bold text-xl">D</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center gap-2">
+                            <a href="#" class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center" title="Dashboard">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 text-indigo-300 hover:bg-indigo-800 rounded-xl flex items-center justify-center transition-colors" title="Users">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 text-indigo-300 hover:bg-indigo-800 rounded-xl flex items-center justify-center transition-colors relative" title="Messages">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-xs font-bold rounded-full flex items-center justify-center">3</span>
+                            </a>
+                            <a href="#" class="w-12 h-12 text-indigo-300 hover:bg-indigo-800 rounded-xl flex items-center justify-center transition-colors" title="Analytics">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#" class="w-12 h-12 text-indigo-300 hover:bg-indigo-800 rounded-xl flex items-center justify-center transition-colors" title="Settings">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </a>
+                    </nav>
+                    <!-- Content -->
+                    <div class="flex-1 bg-gray-100 flex items-center justify-center">
+                        <span class="text-gray-400">Content Area</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Dual Sidebar -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Dual Sidebar Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-80">
+                    <!-- Primary Sidebar -->
+                    <nav class="w-16 bg-gray-900 text-white flex flex-col items-center py-4">
+                        <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center mb-6">
+                            <span class="font-bold">P</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center gap-3">
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 text-gray-500 hover:bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 text-gray-500 hover:bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </nav>
+                    <!-- Secondary Sidebar -->
+                    <nav class="w-56 bg-gray-50 border-r p-4">
+                        <h3 class="font-semibold text-gray-900 mb-4">Dashboard</h3>
+                        <div class="space-y-1">
+                            <a href="#" class="block px-3 py-2 bg-emerald-100 text-emerald-700 font-medium rounded-lg">Overview</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Analytics</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Reports</a>
+                            <a href="#" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Activity</a>
+                        </div>
+                    </nav>
+                    <!-- Content -->
+                    <div class="flex-1 bg-white flex items-center justify-center">
+                        <span class="text-gray-400">Content Area</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Top Navigation Only -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Top Navigation Dashboard</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center gap-8">
+                                <a href="#" class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                                    <span class="font-bold text-xl text-gray-900">Admin</span>
+                                </a>
+                                <div class="hidden md:flex items-center gap-1">
+                                    <a href="#" class="px-4 py-2 bg-violet-100 text-violet-700 font-medium rounded-lg">Dashboard</a>
+                                    <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Users</a>
+                                    <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Products</a>
+                                    <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Orders</a>
+                                    <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">Reports</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative">
+                                    <input type="text" placeholder="Search..." class="w-48 pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=TopAdmin" alt="Admin" class="w-8 h-8 rounded-full">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-48 bg-gray-50 flex items-center justify-center">
+                    <span class="text-gray-400">Dashboard Content</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Floating Sidebar -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Floating Sidebar</h2>
+            <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden p-4">
+                <div class="flex h-72 gap-4">
+                    <!-- Floating Sidebar -->
+                    <nav class="w-64 bg-white rounded-2xl shadow-lg p-4 flex flex-col">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center">
+                                <span class="text-white font-bold">F</span>
+                            </div>
+                            <span class="font-bold text-gray-900">Float Admin</span>
+                        </div>
+                        <div class="flex-1 space-y-1">
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 bg-rose-50 text-rose-600 font-medium rounded-xl">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                </svg>
+                                Overview
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-gray-600 hover:bg-gray-50 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                Statistics
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-gray-600 hover:bg-gray-50 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                                Customers
+                            </a>
+                        </div>
+                        <div class="pt-4 border-t">
+                            <div class="flex items-center gap-3">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Float" alt="User" class="w-10 h-10 rounded-full">
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium text-gray-900">Sarah Admin</p>
+                                    <p class="text-xs text-gray-500">Super Admin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- Content -->
+                    <div class="flex-1 bg-white rounded-2xl shadow-lg flex items-center justify-center">
+                        <span class="text-gray-400">Content Area</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Tabbed Navigation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Tabbed Dashboard Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gray-900">
+                    <div class="px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-white font-bold">T</span>
+                                </div>
+                                <span class="font-bold text-white">TabAdmin</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-400 hover:text-white transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 text-gray-400 hover:text-white transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                    <span class="absolute top-1 right-1 w-2 h-2 bg-cyan-400 rounded-full"></span>
+                                </button>
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tab" alt="Admin" class="w-8 h-8 rounded-full ring-2 ring-gray-700">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 border-t border-gray-800">
+                        <div class="flex items-center gap-1 -mb-px">
+                            <a href="#" class="px-4 py-3 text-white font-medium border-b-2 border-cyan-400">Dashboard</a>
+                            <a href="#" class="px-4 py-3 text-gray-400 hover:text-white border-b-2 border-transparent hover:border-gray-600 transition-colors">Analytics</a>
+                            <a href="#" class="px-4 py-3 text-gray-400 hover:text-white border-b-2 border-transparent hover:border-gray-600 transition-colors">Users</a>
+                            <a href="#" class="px-4 py-3 text-gray-400 hover:text-white border-b-2 border-transparent hover:border-gray-600 transition-colors">Orders</a>
+                            <a href="#" class="px-4 py-3 text-gray-400 hover:text-white border-b-2 border-transparent hover:border-gray-600 transition-colors">Settings</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-48 bg-gray-50 flex items-center justify-center">
+                    <span class="text-gray-400">Dashboard Content</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Breadcrumb Header -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Breadcrumb Header Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-72">
+                    <!-- Sidebar -->
+                    <nav class="w-56 bg-white border-r p-4">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">B</span>
+                            </div>
+                            <span class="font-bold text-gray-900">BreadAdmin</span>
+                        </div>
+                        <div class="space-y-1">
+                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-amber-600 bg-amber-50 font-medium rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                </svg>
+                                Products
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                </svg>
+                                Orders
+                            </a>
+                        </div>
+                    </nav>
+                    <!-- Main -->
+                    <div class="flex-1 flex flex-col">
+                        <!-- Breadcrumb Header -->
+                        <header class="h-16 bg-white border-b px-6 flex items-center justify-between">
+                            <div>
+                                <nav class="flex items-center gap-2 text-sm text-gray-500 mb-1">
+                                    <a href="#" class="hover:text-amber-600">Home</a>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                    <a href="#" class="hover:text-amber-600">Dashboard</a>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                    <span class="text-gray-900">Overview</span>
+                                </nav>
+                                <h1 class="text-xl font-bold text-gray-900">Dashboard Overview</h1>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button class="px-4 py-2 border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">Export</button>
+                                <button class="px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-medium hover:bg-amber-600 transition-colors">Add New</button>
+                            </div>
+                        </header>
+                        <!-- Content -->
+                        <div class="flex-1 bg-gray-50 flex items-center justify-center">
+                            <span class="text-gray-400">Content Area</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Modern Glass Admin -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Modern Glass Admin</h2>
+            <div class="rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-80 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <!-- Glass Sidebar -->
+                    <nav class="w-64 bg-white/10 backdrop-blur-lg border-r border-white/10 p-4 flex flex-col">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                                <span class="text-white font-bold">G</span>
+                            </div>
+                            <span class="font-bold text-white">GlassAdmin</span>
+                        </div>
+                        <div class="flex-1 space-y-1">
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 bg-white/10 text-white rounded-xl">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/5 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                Users
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/5 rounded-xl transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                Analytics
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-3 px-2 py-3 bg-white/5 rounded-xl">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Glass" alt="User" class="w-10 h-10 rounded-full ring-2 ring-purple-500">
+                            <div>
+                                <p class="text-sm font-medium text-white">Admin User</p>
+                                <p class="text-xs text-gray-400">Super Admin</p>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- Content -->
+                    <div class="flex-1 p-6">
+                        <div class="bg-white/10 backdrop-blur-lg rounded-2xl h-full flex items-center justify-center">
+                            <span class="text-gray-400">Glass Admin Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
+            <p>Admin Dashboard Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+</body>
+</html>
