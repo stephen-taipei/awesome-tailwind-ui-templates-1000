@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation 061 - Pricing Navigation - 8 Styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.86 0.08 260);
+            --color-primary-300: oklch(0.76 0.12 260);
+            --color-primary-400: oklch(0.64 0.16 260);
+            --color-primary-500: oklch(0.53 0.19 260);
+            --color-primary-600: oklch(0.45 0.18 260);
+            --color-primary-700: oklch(0.37 0.15 260);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Navigation 061 - Pricing Navigation</h1>
+            <p class="text-gray-600">8 styles of pricing page navigation and toggles</p>
+        </header>
+
+        <!-- Style 1: Billing Toggle -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Billing Toggle</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Simple, transparent pricing</h3>
+                    <p class="text-gray-500">Choose the plan that's right for you</p>
+                </div>
+                <div class="flex items-center justify-center gap-4">
+                    <span class="text-sm font-medium text-gray-900">Monthly</span>
+                    <button class="relative w-14 h-7 bg-primary-500 rounded-full transition-colors">
+                        <span class="absolute right-1 top-1 w-5 h-5 bg-white rounded-full shadow transition-transform"></span>
+                    </button>
+                    <span class="text-sm font-medium text-gray-500">Yearly</span>
+                    <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">Save 20%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Segmented Billing Control -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Segmented Billing Control</h2>
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl shadow-lg overflow-hidden p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-2">Choose your plan</h3>
+                    <p class="text-gray-400">Start free, upgrade when you're ready</p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="inline-flex items-center p-1 bg-gray-800 rounded-xl">
+                        <button class="px-6 py-2.5 text-sm font-medium text-white bg-primary-500 rounded-lg">Monthly</button>
+                        <button class="px-6 py-2.5 text-sm font-medium text-gray-400 hover:text-white rounded-lg">Quarterly</button>
+                        <button class="relative px-6 py-2.5 text-sm font-medium text-gray-400 hover:text-white rounded-lg">
+                            Yearly
+                            <span class="absolute -top-2 -right-2 px-1.5 py-0.5 bg-green-500 text-white text-[10px] font-bold rounded">-20%</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Tab-style Plan Selector -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Tab-style Plan Selector</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="border-b border-gray-200">
+                    <nav class="flex justify-center">
+                        <button class="px-8 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Free</button>
+                        <button class="px-8 py-4 text-sm font-medium text-primary-600 border-b-2 border-primary-500">Pro</button>
+                        <button class="px-8 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Team</button>
+                        <button class="px-8 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Enterprise</button>
+                    </nav>
+                </div>
+                <div class="p-8 text-center">
+                    <div class="inline-flex items-center gap-3 mb-4">
+                        <span class="text-gray-400 text-sm">Billed</span>
+                        <div class="flex items-center p-0.5 bg-gray-100 rounded-lg">
+                            <button class="px-3 py-1 text-xs font-medium text-gray-500 rounded-md">Monthly</button>
+                            <button class="px-3 py-1 text-xs font-medium text-white bg-gray-900 rounded-md">Annually</button>
+                        </div>
+                    </div>
+                    <p class="text-gray-500">Plan content area...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Slider-based Pricing -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Slider-based Pricing</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden p-8">
+                <div class="max-w-xl mx-auto">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pay as you grow</h3>
+                        <p class="text-gray-500">Only pay for what you use</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-medium text-gray-700">Monthly active users</span>
+                            <span class="text-sm font-bold text-primary-600">10,000 users</span>
+                        </div>
+                        <input type="range" min="0" max="100" value="40" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary-500">
+                        <div class="flex justify-between mt-2 text-xs text-gray-400">
+                            <span>1K</span>
+                            <span>5K</span>
+                            <span>10K</span>
+                            <span>50K</span>
+                            <span>100K+</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                        <div>
+                            <p class="text-sm text-gray-500">Estimated monthly cost</p>
+                            <p class="text-3xl font-bold text-gray-900">$99<span class="text-lg font-normal text-gray-500">/mo</span></p>
+                        </div>
+                        <button class="px-6 py-3 bg-primary-500 text-white font-medium rounded-lg hover:bg-primary-600">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Currency Selector -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Currency Selector</h2>
+            <div class="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl shadow-lg overflow-hidden p-8">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-1">Pricing Plans</h3>
+                        <p class="text-violet-200 text-sm">All plans include 14-day free trial</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg">
+                            <span class="text-white/70 text-sm">Currency:</span>
+                            <select class="bg-transparent text-white text-sm font-medium focus:outline-none cursor-pointer">
+                                <option value="usd" class="text-gray-900">USD ($)</option>
+                                <option value="eur" class="text-gray-900">EUR (€)</option>
+                                <option value="gbp" class="text-gray-900">GBP (£)</option>
+                                <option value="jpy" class="text-gray-900">JPY (¥)</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center p-1 bg-white/10 rounded-lg">
+                            <button class="px-4 py-2 text-sm font-medium text-white bg-white/20 rounded-md">Monthly</button>
+                            <button class="px-4 py-2 text-sm font-medium text-white/70 hover:text-white rounded-md">Yearly</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Feature Comparison Toggle -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Feature Comparison Toggle</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Compare Plans</h3>
+                            <p class="text-gray-500 text-sm">Find the perfect plan for your needs</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm text-gray-500">Show:</span>
+                                <button class="px-3 py-1.5 text-sm font-medium text-white bg-gray-900 rounded-lg">All Features</button>
+                                <button class="px-3 py-1.5 text-sm font-medium text-gray-500 hover:bg-gray-100 rounded-lg">Differences Only</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-center gap-2 mb-6">
+                        <span class="text-sm font-medium text-gray-900">Monthly billing</span>
+                        <button class="relative w-12 h-6 bg-gray-200 rounded-full transition-colors">
+                            <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
+                        </button>
+                        <span class="text-sm font-medium text-gray-500">Annual billing</span>
+                    </div>
+                    <p class="text-gray-500 text-center">Feature comparison table...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Team Size Selector -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 7: Team Size Selector</h2>
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-2">Scale with your team</h3>
+                    <p class="text-gray-400">Flexible pricing that grows with you</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center gap-2 mb-8">
+                        <button class="w-12 h-12 flex items-center justify-center text-gray-400 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                            <span class="sr-only">1</span>
+                        </button>
+                        <button class="w-12 h-12 flex items-center justify-center text-gray-400 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+                            <span class="text-sm font-medium">1-5</span>
+                        </button>
+                        <button class="w-12 h-12 flex items-center justify-center text-white bg-primary-500 rounded-lg">
+                            <span class="text-sm font-medium">6-10</span>
+                        </button>
+                        <button class="w-12 h-12 flex items-center justify-center text-gray-400 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+                            <span class="text-sm font-medium">11-25</span>
+                        </button>
+                        <button class="w-12 h-12 flex items-center justify-center text-gray-400 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+                            <span class="text-sm font-medium">26-50</span>
+                        </button>
+                        <button class="w-12 h-12 flex items-center justify-center text-gray-400 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition-colors">
+                            <span class="text-sm font-medium">50+</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-center gap-6">
+                        <div class="text-center">
+                            <p class="text-gray-400 text-sm mb-1">Team size</p>
+                            <p class="text-2xl font-bold text-white">6-10 users</p>
+                        </div>
+                        <div class="w-px h-12 bg-gray-700"></div>
+                        <div class="text-center">
+                            <p class="text-gray-400 text-sm mb-1">Price per user</p>
+                            <p class="text-2xl font-bold text-white">$12<span class="text-base font-normal text-gray-500">/mo</span></p>
+                        </div>
+                        <div class="w-px h-12 bg-gray-700"></div>
+                        <div class="text-center">
+                            <p class="text-gray-400 text-sm mb-1">Total</p>
+                            <p class="text-2xl font-bold text-primary-400">$72<span class="text-base font-normal text-gray-500">/mo</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Enterprise Contact -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 8: Enterprise Contact</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <div class="flex items-center gap-6">
+                        <nav class="flex items-center gap-1 p-1 bg-gray-100 rounded-xl">
+                            <button class="px-5 py-2 text-sm font-medium text-gray-500 rounded-lg hover:bg-white">Starter</button>
+                            <button class="px-5 py-2 text-sm font-medium text-gray-500 rounded-lg hover:bg-white">Pro</button>
+                            <button class="px-5 py-2 text-sm font-medium text-gray-500 rounded-lg hover:bg-white">Business</button>
+                            <button class="px-5 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg">Enterprise</button>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                            <span>SOC 2 Compliant</span>
+                        </div>
+                        <button class="px-5 py-2 bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-600">
+                            Contact Sales
+                        </button>
+                    </div>
+                </div>
+                <div class="p-8 bg-gradient-to-br from-gray-50 to-white">
+                    <div class="flex items-center justify-between max-w-4xl mx-auto">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Enterprise Plan</h4>
+                            <p class="text-gray-500 text-sm">Custom solutions for large organizations</p>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Unlimited users
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Dedicated support
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Custom integrations
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
