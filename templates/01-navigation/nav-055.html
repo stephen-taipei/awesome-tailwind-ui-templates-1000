@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation 055 - Blog Navigation - 8 Styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.86 0.08 260);
+            --color-primary-300: oklch(0.76 0.12 260);
+            --color-primary-400: oklch(0.64 0.16 260);
+            --color-primary-500: oklch(0.53 0.19 260);
+            --color-primary-600: oklch(0.45 0.18 260);
+            --color-primary-700: oklch(0.37 0.15 260);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Navigation 055 - Blog Navigation</h1>
+            <p class="text-gray-600">8 styles of blog/content website navigation</p>
+        </header>
+
+        <!-- Style 1: Personal Blog -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Personal Blog</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-20 flex items-center justify-between px-8">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=blogger" alt="Avatar" class="w-12 h-12 rounded-full">
+                        <div>
+                            <span class="font-semibold text-gray-900 block">Emily's Blog</span>
+                            <span class="text-sm text-gray-500">Life, Tech & Travel</span>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="text-primary-600 font-medium text-sm">Home</a>
+                        <a href="#" class="text-gray-600 hover:text-primary-600 text-sm transition-colors">Articles</a>
+                        <a href="#" class="text-gray-600 hover:text-primary-600 text-sm transition-colors">Categories</a>
+                        <a href="#" class="text-gray-600 hover:text-primary-600 text-sm transition-colors">About</a>
+                        <a href="#" class="text-gray-600 hover:text-primary-600 text-sm transition-colors">Contact</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button class="p-2 text-gray-500 hover:text-gray-700 rounded-lg hover:bg-gray-100">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                        <button class="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-600 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 2: Tech Blog with Categories -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Tech Blog with Categories</h2>
+            <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+                <nav class="border-b border-slate-700">
+                    <div class="h-16 flex items-center justify-between px-8">
+                        <a href="#" class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <span class="font-bold text-white">TechBlog</span>
+                        </a>
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <input type="text" placeholder="Search articles..." class="w-64 pl-10 pr-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm text-slate-300 placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+                                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                            <button class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                </svg>
+                            </button>
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=techwriter" alt="Avatar" class="w-8 h-8 rounded-full">
+                        </div>
+                    </div>
+                    <div class="h-12 flex items-center gap-6 px-8 bg-slate-800/50">
+                        <a href="#" class="text-cyan-400 text-sm font-medium">All</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">JavaScript</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">Python</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">DevOps</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">AI/ML</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">Cloud</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">Security</a>
+                        <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors">Career</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 3: Lifestyle Blog -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Lifestyle Blog</h2>
+            <div class="bg-gradient-to-r from-rose-50 to-amber-50 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-24 flex items-center justify-between px-10">
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="text-gray-600 hover:text-rose-500 text-sm tracking-wide transition-colors">HOME</a>
+                        <a href="#" class="text-gray-600 hover:text-rose-500 text-sm tracking-wide transition-colors">LIFESTYLE</a>
+                        <a href="#" class="text-gray-600 hover:text-rose-500 text-sm tracking-wide transition-colors">FASHION</a>
+                    </div>
+                    <a href="#" class="text-center">
+                        <span class="text-3xl font-serif text-gray-800">Bloom</span>
+                        <span class="block text-xs tracking-[0.3em] text-gray-500 mt-1">LIFESTYLE JOURNAL</span>
+                    </a>
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="text-gray-600 hover:text-rose-500 text-sm tracking-wide transition-colors">TRAVEL</a>
+                        <a href="#" class="text-gray-600 hover:text-rose-500 text-sm tracking-wide transition-colors">WELLNESS</a>
+                        <a href="#" class="text-gray-600 hover:text-rose-500 text-sm tracking-wide transition-colors">ABOUT</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 4: Minimalist Blog -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Minimalist Blog</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-20 flex items-center justify-center px-8 border-b border-gray-100">
+                    <div class="flex items-center gap-12">
+                        <a href="#" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Archive</a>
+                        <a href="#" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Essays</a>
+                        <a href="#" class="text-2xl font-light text-gray-900 tracking-wider mx-8">THOUGHTS</a>
+                        <a href="#" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">About</a>
+                        <a href="#" class="text-gray-400 hover:text-gray-900 text-sm transition-colors">Newsletter</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 5: Food Blog -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Food Blog</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="border-b border-gray-100">
+                    <div class="h-20 flex items-center justify-between px-8">
+                        <a href="#" class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-bold text-gray-900 block text-lg">Savory Bites</span>
+                                <span class="text-xs text-orange-500">Recipes & Stories</span>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-6">
+                            <a href="#" class="text-orange-500 font-medium text-sm">Recipes</a>
+                            <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors">Meal Prep</a>
+                            <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors">Techniques</a>
+                            <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors">Ingredients</a>
+                            <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors">Videos</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button class="p-2 text-gray-500 hover:text-orange-500 rounded-lg hover:bg-orange-50 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                            <button class="px-4 py-2 bg-orange-500 text-white text-sm font-medium rounded-full hover:bg-orange-600 transition-colors">
+                                Recipe Box
+                            </button>
+                        </div>
+                    </div>
+                    <div class="h-12 flex items-center gap-4 px-8 bg-orange-50 overflow-x-auto">
+                        <span class="text-xs text-orange-600 font-medium whitespace-nowrap">Popular:</span>
+                        <a href="#" class="text-xs text-gray-600 hover:text-orange-500 whitespace-nowrap px-3 py-1 bg-white rounded-full">Quick & Easy</a>
+                        <a href="#" class="text-xs text-gray-600 hover:text-orange-500 whitespace-nowrap px-3 py-1 bg-white rounded-full">Vegetarian</a>
+                        <a href="#" class="text-xs text-gray-600 hover:text-orange-500 whitespace-nowrap px-3 py-1 bg-white rounded-full">Desserts</a>
+                        <a href="#" class="text-xs text-gray-600 hover:text-orange-500 whitespace-nowrap px-3 py-1 bg-white rounded-full">Asian</a>
+                        <a href="#" class="text-xs text-gray-600 hover:text-orange-500 whitespace-nowrap px-3 py-1 bg-white rounded-full">Italian</a>
+                        <a href="#" class="text-xs text-gray-600 hover:text-orange-500 whitespace-nowrap px-3 py-1 bg-white rounded-full">Healthy</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 6: Travel Blog -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Travel Blog</h2>
+            <div class="relative rounded-xl shadow-lg overflow-hidden h-[200px] bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <nav class="relative z-10 h-20 flex items-center justify-between px-10">
+                    <a href="#" class="flex items-center gap-3">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <span class="text-white font-bold text-xl">Wanderlust</span>
+                            <span class="block text-white/70 text-xs tracking-wider">TRAVEL STORIES</span>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="text-white font-medium text-sm border-b-2 border-white pb-1">Destinations</a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm transition-colors">Guides</a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm transition-colors">Tips</a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm transition-colors">Photography</a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm transition-colors">Gear</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-white/80 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        </a>
+                        <button class="px-5 py-2 bg-white text-teal-600 text-sm font-medium rounded-full hover:bg-white/90 transition-colors">
+                            Start Here
+                        </button>
+                    </div>
+                </nav>
+                <div class="absolute bottom-6 left-10 right-10 flex items-center gap-4 text-white/80 text-sm">
+                    <span>Explore:</span>
+                    <a href="#" class="hover:text-white">Europe</a>
+                    <span>·</span>
+                    <a href="#" class="hover:text-white">Asia</a>
+                    <span>·</span>
+                    <a href="#" class="hover:text-white">Americas</a>
+                    <span>·</span>
+                    <a href="#" class="hover:text-white">Africa</a>
+                    <span>·</span>
+                    <a href="#" class="hover:text-white">Oceania</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Newsletter/Substack Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 7: Newsletter/Substack Style</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-16 flex items-center justify-between px-8 border-b border-gray-100">
+                    <a href="#" class="font-serif text-xl text-gray-900">The Weekly Insight</a>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">Archive</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">About</a>
+                        <div class="h-4 w-px bg-gray-200"></div>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">Sign in</a>
+                        <button class="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-600 transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </nav>
+                <div class="h-12 flex items-center justify-center gap-8 bg-gray-50 border-b border-gray-100">
+                    <a href="#" class="text-primary-600 font-medium text-sm">Featured</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Technology</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Business</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Culture</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Opinion</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Podcast</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Multi-Author Blog -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 8: Multi-Author Blog</h2>
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+                <nav class="border-b border-gray-800">
+                    <div class="h-16 flex items-center justify-between px-8">
+                        <div class="flex items-center gap-8">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-pink-500 rounded-lg"></div>
+                                <span class="font-bold text-white">Collective</span>
+                            </a>
+                            <div class="flex items-center gap-6">
+                                <a href="#" class="text-white font-medium text-sm">Home</a>
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Articles</a>
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Topics</a>
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Authors</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-gray-800 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                            <button class="px-4 py-2 text-white text-sm font-medium border border-gray-700 rounded-lg hover:bg-gray-800 transition-colors">
+                                Sign In
+                            </button>
+                            <button class="px-4 py-2 bg-gradient-to-r from-violet-500 to-pink-500 text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity">
+                                Start Writing
+                            </button>
+                        </div>
+                    </div>
+                    <div class="h-12 flex items-center gap-4 px-8 bg-gray-800/50">
+                        <span class="text-gray-500 text-xs">Trending:</span>
+                        <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">#javascript</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">#webdev</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">#ai</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">#career</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">#startup</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">#design</a>
+                        <div class="ml-auto flex items-center gap-2">
+                            <span class="text-gray-500 text-xs">Featured authors:</span>
+                            <div class="flex -space-x-2">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=author1" alt="Author" class="w-6 h-6 rounded-full ring-2 ring-gray-900">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=author2" alt="Author" class="w-6 h-6 rounded-full ring-2 ring-gray-900">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=author3" alt="Author" class="w-6 h-6 rounded-full ring-2 ring-gray-900">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=author4" alt="Author" class="w-6 h-6 rounded-full ring-2 ring-gray-900">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
