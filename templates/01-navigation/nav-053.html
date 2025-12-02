@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation 053 - Documentation Navigation - 8 Styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.86 0.08 260);
+            --color-primary-300: oklch(0.76 0.12 260);
+            --color-primary-400: oklch(0.64 0.16 260);
+            --color-primary-500: oklch(0.53 0.19 260);
+            --color-primary-600: oklch(0.45 0.18 260);
+            --color-primary-700: oklch(0.37 0.15 260);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Navigation 053 - Documentation Navigation</h1>
+            <p class="text-gray-600">8 styles of documentation site navigation</p>
+        </header>
+
+        <!-- Style 1: Sidebar + Header (Classic Docs) -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Classic Docs Layout</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <!-- Sidebar -->
+                    <aside class="w-64 bg-gray-50 border-r border-gray-200 flex flex-col">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-gray-900">DevDocs</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <input type="text" placeholder="Search docs..." class="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        </div>
+                        <nav class="flex-1 overflow-y-auto p-4 space-y-6">
+                            <div>
+                                <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Getting Started</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#" class="block px-3 py-2 text-sm bg-primary-50 text-primary-600 rounded-lg font-medium">Introduction</a></li>
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Installation</a></li>
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Quick Start</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Core Concepts</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Architecture</a></li>
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Configuration</a></li>
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Routing</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">API Reference</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Methods</a></li>
+                                    <li><a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Events</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="p-4 border-t border-gray-200">
+                            <span class="text-xs text-gray-500">v2.4.0</span>
+                        </div>
+                    </aside>
+                    <!-- Main Content Area -->
+                    <div class="flex-1 flex flex-col">
+                        <header class="h-16 border-b border-gray-200 flex items-center justify-between px-6">
+                            <nav class="flex items-center gap-6">
+                                <a href="#" class="text-sm font-medium text-primary-600">Docs</a>
+                                <a href="#" class="text-sm text-gray-600 hover:text-gray-900">API</a>
+                                <a href="#" class="text-sm text-gray-600 hover:text-gray-900">Examples</a>
+                                <a href="#" class="text-sm text-gray-600 hover:text-gray-900">Blog</a>
+                            </nav>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <button class="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-600">Get Started</button>
+                            </div>
+                        </header>
+                        <div class="flex-1 p-8 bg-white">
+                            <div class="prose max-w-none">
+                                <p class="text-gray-500">Documentation content area...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Versioned Docs Navigation -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Versioned Docs Navigation</h2>
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <!-- Dark Sidebar -->
+                    <aside class="w-72 bg-gray-900 border-r border-gray-700 flex flex-col">
+                        <div class="p-4 border-b border-gray-700">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg"></div>
+                                    <span class="font-bold text-white">Framework</span>
+                                </div>
+                                <select class="bg-gray-800 border border-gray-700 text-gray-300 text-sm rounded-lg px-2 py-1 focus:outline-none">
+                                    <option>v3.0.0</option>
+                                    <option>v2.9.0</option>
+                                    <option>v2.8.0</option>
+                                    <option>v1.x</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="relative">
+                                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 placeholder-gray-500 focus:outline-none focus:border-primary-500">
+                                <kbd class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-500 bg-gray-700 px-1.5 py-0.5 rounded">⌘K</kbd>
+                            </div>
+                        </div>
+                        <nav class="flex-1 overflow-y-auto p-4">
+                            <div class="space-y-1">
+                                <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-white bg-primary-500/20 border-l-2 border-primary-500 rounded-r-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                    Introduction
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Installation
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    Quick Start
+                                </a>
+                            </div>
+                            <div class="mt-6">
+                                <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Guides</h3>
+                                <div class="space-y-1">
+                                    <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">Components</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">State Management</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">Server-Side Rendering</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">Testing</a>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Migration</h3>
+                                <div class="space-y-1">
+                                    <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">
+                                        v2 to v3
+                                        <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded">New</span>
+                                    </a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">v1 to v2</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </aside>
+                    <!-- Content -->
+                    <div class="flex-1 bg-gray-950 p-8">
+                        <p class="text-gray-500">Dark themed documentation content...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: API Reference Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: API Reference Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <!-- Three-column layout -->
+                    <aside class="w-56 bg-gray-50 border-r border-gray-200 flex flex-col">
+                        <div class="p-4 border-b border-gray-200">
+                            <span class="font-bold text-gray-900">API Reference</span>
+                        </div>
+                        <nav class="flex-1 overflow-y-auto p-3">
+                            <div class="space-y-1">
+                                <button class="w-full flex items-center justify-between px-3 py-2 text-sm text-left text-gray-900 bg-gray-100 rounded-lg">
+                                    <span class="font-medium">Authentication</span>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="pl-4 space-y-1">
+                                    <a href="#" class="block px-3 py-1.5 text-sm text-primary-600 font-medium">OAuth 2.0</a>
+                                    <a href="#" class="block px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900">API Keys</a>
+                                    <a href="#" class="block px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900">JWT Tokens</a>
+                                </div>
+                            </div>
+                            <div class="mt-3 space-y-1">
+                                <button class="w-full flex items-center justify-between px-3 py-2 text-sm text-left text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <span>Users</span>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                            <div class="mt-1 space-y-1">
+                                <button class="w-full flex items-center justify-between px-3 py-2 text-sm text-left text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <span>Products</span>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                            <div class="mt-1 space-y-1">
+                                <button class="w-full flex items-center justify-between px-3 py-2 text-sm text-left text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <span>Orders</span>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                            <div class="mt-1 space-y-1">
+                                <button class="w-full flex items-center justify-between px-3 py-2 text-sm text-left text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <span>Webhooks</span>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
+                        </nav>
+                    </aside>
+                    <!-- Main content -->
+                    <div class="flex-1 flex flex-col">
+                        <header class="h-14 border-b border-gray-200 flex items-center justify-between px-6">
+                            <div class="flex items-center gap-4">
+                                <span class="text-sm font-medium text-gray-900">REST API</span>
+                                <div class="h-4 w-px bg-gray-200"></div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded font-mono">GET</span>
+                                    <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded font-mono">POST</span>
+                                    <span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-700 rounded font-mono">PUT</span>
+                                    <span class="text-xs px-2 py-1 bg-red-100 text-red-700 rounded font-mono">DELETE</span>
+                                </div>
+                            </div>
+                            <select class="text-sm border border-gray-200 rounded-lg px-3 py-1.5">
+                                <option>Node.js</option>
+                                <option>Python</option>
+                                <option>cURL</option>
+                                <option>Go</option>
+                            </select>
+                        </header>
+                        <div class="flex-1 p-6 overflow-auto">
+                            <p class="text-gray-500">API documentation content...</p>
+                        </div>
+                    </div>
+                    <!-- Right sidebar - On this page -->
+                    <aside class="w-48 border-l border-gray-200 p-4">
+                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">On this page</h4>
+                        <nav class="space-y-2">
+                            <a href="#" class="block text-sm text-primary-600 font-medium">Overview</a>
+                            <a href="#" class="block text-sm text-gray-500 hover:text-gray-700">Authorization</a>
+                            <a href="#" class="block text-sm text-gray-500 hover:text-gray-700">Request</a>
+                            <a href="#" class="block text-sm text-gray-500 hover:text-gray-700">Response</a>
+                            <a href="#" class="block text-sm text-gray-500 hover:text-gray-700">Examples</a>
+                            <a href="#" class="block text-sm text-gray-500 hover:text-gray-700">Errors</a>
+                        </nav>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Tab-based Docs -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Tab-based Documentation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <header class="border-b border-gray-200">
+                    <div class="px-6 py-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h1 class="font-bold text-gray-900">Documentation</h1>
+                                <p class="text-xs text-gray-500">Learn how to build amazing things</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <input type="text" placeholder="Search documentation..." class="w-64 pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </div>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="px-6 flex gap-1">
+                        <a href="#" class="px-4 py-3 text-sm font-medium text-primary-600 border-b-2 border-primary-500">Overview</a>
+                        <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Tutorials</a>
+                        <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Guides</a>
+                        <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">API Reference</a>
+                        <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Examples</a>
+                        <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Changelog</a>
+                    </nav>
+                </header>
+                <div class="flex h-[380px]">
+                    <aside class="w-64 border-r border-gray-200 p-4 overflow-y-auto">
+                        <nav class="space-y-1">
+                            <a href="#" class="block px-3 py-2 text-sm bg-primary-50 text-primary-600 rounded-lg font-medium">What is this?</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">Key Features</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">Use Cases</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">Architecture</a>
+                            <a href="#" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">Comparison</a>
+                        </nav>
+                    </aside>
+                    <div class="flex-1 p-8 overflow-auto">
+                        <p class="text-gray-500">Tab-based documentation content...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Command Palette Focused -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Command Palette Focused</h2>
+            <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+                <header class="h-14 border-b border-slate-700 flex items-center justify-between px-6">
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="font-bold text-white">CLI Docs</span>
+                        </div>
+                        <nav class="flex items-center gap-4">
+                            <a href="#" class="text-sm text-white font-medium">Docs</a>
+                            <a href="#" class="text-sm text-slate-400 hover:text-white">Blog</a>
+                            <a href="#" class="text-sm text-slate-400 hover:text-white">Community</a>
+                        </nav>
+                    </div>
+                    <button class="flex items-center gap-3 px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg text-sm text-slate-400 hover:border-slate-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <span>Search docs...</span>
+                        <kbd class="text-xs bg-slate-700 px-1.5 py-0.5 rounded">⌘K</kbd>
+                    </button>
+                </header>
+                <div class="flex h-[450px]">
+                    <aside class="w-64 border-r border-slate-700 p-4 overflow-y-auto">
+                        <nav class="space-y-6">
+                            <div>
+                                <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3">Start</h3>
+                                <div class="space-y-1">
+                                    <a href="#" class="flex items-center gap-2 px-3 py-2 text-sm text-white bg-slate-800 rounded-lg">
+                                        <span class="w-1.5 h-1.5 bg-primary-400 rounded-full"></span>
+                                        Installation
+                                    </a>
+                                    <a href="#" class="flex items-center gap-2 px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg">
+                                        <span class="w-1.5 h-1.5 bg-transparent rounded-full"></span>
+                                        Configuration
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3">Commands</h3>
+                                <div class="space-y-1">
+                                    <a href="#" class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-mono">init</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-mono">build</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-mono">deploy</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-mono">watch</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3">Reference</h3>
+                                <div class="space-y-1">
+                                    <a href="#" class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg">Flags</a>
+                                    <a href="#" class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg">Environment</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="flex-1 p-8 bg-slate-950 overflow-auto">
+                        <p class="text-slate-500">Command documentation content...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Multilingual Docs -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Multilingual Documentation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <header class="border-b border-gray-200">
+                    <div class="h-16 px-6 flex items-center justify-between">
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-white font-bold text-sm">D</span>
+                                </div>
+                                <span class="font-bold text-gray-900">Docs</span>
+                            </div>
+                            <nav class="flex items-center gap-6">
+                                <a href="#" class="text-sm font-medium text-gray-900">Documentation</a>
+                                <a href="#" class="text-sm text-gray-500 hover:text-gray-900">Learn</a>
+                                <a href="#" class="text-sm text-gray-500 hover:text-gray-900">Showcase</a>
+                                <a href="#" class="text-sm text-gray-500 hover:text-gray-900">Blog</a>
+                            </nav>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <button class="flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-lg text-sm hover:bg-gray-50">
+                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                                    </svg>
+                                    <span>English</span>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                            </div>
+                            <button class="p-2 text-gray-500 hover:text-gray-900 rounded-lg hover:bg-gray-100">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                            </button>
+                            <a href="#" class="text-gray-500 hover:text-gray-900">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Language/Translation Banner -->
+                    <div class="px-6 py-2 bg-blue-50 border-t border-blue-100 flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-blue-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>This page is also available in: </span>
+                            <a href="#" class="font-medium underline">中文</a>
+                            <span>·</span>
+                            <a href="#" class="font-medium underline">日本語</a>
+                            <span>·</span>
+                            <a href="#" class="font-medium underline">한국어</a>
+                        </div>
+                        <button class="text-sm text-blue-600 hover:text-blue-800">Help translate</button>
+                    </div>
+                </header>
+                <div class="flex h-[380px]">
+                    <aside class="w-64 border-r border-gray-200 p-4 overflow-y-auto">
+                        <nav class="space-y-4">
+                            <div>
+                                <a href="#" class="flex items-center justify-between px-3 py-2 text-sm bg-primary-50 text-primary-700 rounded-lg font-medium">
+                                    Getting Started
+                                    <span class="text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded">100%</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">
+                                    Basic Concepts
+                                    <span class="text-xs bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded">85%</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">
+                                    Advanced Topics
+                                    <span class="text-xs bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded">60%</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="flex items-center justify-between px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">
+                                    API Reference
+                                    <span class="text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">EN</span>
+                                </a>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="flex-1 p-8 overflow-auto">
+                        <p class="text-gray-500">Multilingual documentation content...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Interactive Tutorial Nav -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 7: Interactive Tutorial Navigation</h2>
+            <div class="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-xl shadow-lg overflow-hidden">
+                <header class="h-16 border-b border-white/10 flex items-center justify-between px-6">
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-bold text-white">Learn</span>
+                        </div>
+                        <nav class="flex items-center gap-1">
+                            <a href="#" class="px-4 py-2 text-sm text-white bg-white/10 rounded-lg font-medium">Tutorials</a>
+                            <a href="#" class="px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg">Courses</a>
+                            <a href="#" class="px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-lg">Playground</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-lg">
+                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                            <span class="text-sm text-white font-medium">2,450 XP</span>
+                        </div>
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=tutorial" alt="Avatar" class="w-8 h-8 rounded-full ring-2 ring-white/20">
+                    </div>
+                </header>
+                <div class="flex h-[450px]">
+                    <!-- Progress sidebar -->
+                    <aside class="w-72 border-r border-white/10 p-4 overflow-y-auto">
+                        <div class="mb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-white/70">Course Progress</span>
+                                <span class="text-sm text-white font-medium">65%</span>
+                            </div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-full w-[65%] bg-gradient-to-r from-green-400 to-emerald-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <nav class="space-y-2">
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-white font-medium">1. Introduction</p>
+                                        <p class="text-xs text-white/50">Completed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-white/5 rounded-lg border border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-white font-medium">2. Setup</p>
+                                        <p class="text-xs text-white/50">Completed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-primary-500/20 rounded-lg border border-primary-500/50">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center animate-pulse">
+                                        <span class="text-white text-sm font-bold">3</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-white font-medium">3. First Steps</p>
+                                        <p class="text-xs text-primary-300">In progress</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-lg opacity-60">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                                        <span class="text-white/50 text-sm">4</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-white/70">4. Building Blocks</p>
+                                        <p class="text-xs text-white/40">Locked</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="flex-1 p-8 bg-white/5 overflow-auto">
+                        <p class="text-white/50">Interactive tutorial content...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: GitBook Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 8: GitBook Style Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <!-- Sidebar -->
+                    <aside class="w-72 bg-gray-50 border-r border-gray-200 flex flex-col">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-white font-bold">PD</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 text-sm">Product Docs</h3>
+                                    <p class="text-xs text-gray-500">Public Space</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border-b border-gray-200">
+                            <button class="w-full flex items-center gap-2 px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-500 hover:border-gray-300">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                </svg>
+                                <span>Search...</span>
+                                <kbd class="ml-auto text-xs bg-gray-100 px-1.5 py-0.5 rounded">⌘K</kbd>
+                            </button>
+                        </div>
+                        <nav class="flex-1 overflow-y-auto p-3">
+                            <div class="space-y-1">
+                                <a href="#" class="flex items-center gap-2 px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    Welcome
+                                </a>
+                                <div>
+                                    <button class="w-full flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                                        </svg>
+                                        Getting Started
+                                    </button>
+                                    <div class="ml-6 mt-1 space-y-1 border-l border-gray-200 pl-3">
+                                        <a href="#" class="block px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900">Quick Start</a>
+                                        <a href="#" class="block px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900">Installation</a>
+                                        <a href="#" class="block px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900">Configuration</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="w-full flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                                        </svg>
+                                        Guides
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="w-full flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                                        </svg>
+                                        Reference
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="p-3 border-t border-gray-200">
+                            <div class="flex items-center justify-between text-xs text-gray-500">
+                                <span>Last updated 2 days ago</span>
+                                <a href="#" class="text-blue-600 hover:underline">Edit on GitHub</a>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- Content -->
+                    <div class="flex-1 flex flex-col">
+                        <header class="h-14 border-b border-gray-200 flex items-center justify-between px-6">
+                            <div class="flex items-center gap-2 text-sm text-gray-500">
+                                <a href="#" class="hover:text-gray-700">Home</a>
+                                <span>/</span>
+                                <span class="text-gray-900">Welcome</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                                    </svg>
+                                </button>
+                                <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </header>
+                        <div class="flex-1 p-8 overflow-auto">
+                            <p class="text-gray-500">GitBook-style documentation content...</p>
+                        </div>
+                        <!-- Bottom navigation -->
+                        <footer class="border-t border-gray-200 p-4 flex items-center justify-between">
+                            <button class="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                                Previous
+                            </button>
+                            <button class="flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700">
+                                Next: Quick Start
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
