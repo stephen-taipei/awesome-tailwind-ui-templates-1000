@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">User Profile Navigation</h1>
+            <p class="text-gray-600">Navigation with user profile menus and dropdowns</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Avatar with Dropdown Menu -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Avatar with Dropdown Menu</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Profile</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-primary-600 font-medium">Dashboard</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Projects</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Team</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-500 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                                </button>
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="John" class="w-9 h-9 rounded-full ring-2 ring-gray-100">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-4 border-b border-gray-100">
+                                            <p class="font-medium text-gray-900">John Doe</p>
+                                            <p class="text-sm text-gray-500">john@example.com</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Your Profile</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Settings</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Help Center</span>
+                                            </a>
+                                        </div>
+                                        <div class="p-2 border-t border-gray-100">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-red-50 text-red-600 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                                                </svg>
+                                                <span class="text-sm">Sign out</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover over avatar to see menu</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Avatar with Name and Role -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Avatar with Name and Role</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Named</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-emerald-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Products</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">About</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-3 px-3 py-1.5 hover:bg-gray-50 rounded-lg transition-colors">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" alt="Sarah" class="w-8 h-8 rounded-full">
+                                        <div class="text-left">
+                                            <p class="text-sm font-medium text-gray-900">Sarah Wilson</p>
+                                            <p class="text-xs text-gray-500">Admin</p>
+                                        </div>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-2">
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-colors">Profile</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-colors">Account Settings</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 rounded-lg transition-colors">Billing</a>
+                                            <hr class="my-2">
+                                            <a href="#" class="block px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Profile with name and role</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Initials Avatar -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Initials Avatar</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Initials</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-violet-600 font-medium">Dashboard</a>
+                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Analytics</a>
+                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Reports</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium hover:ring-4 hover:ring-violet-100 transition-all">
+                                        JD
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-4 flex items-center gap-3 border-b border-gray-100">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-lg">
+                                                JD
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-gray-900">James Davidson</p>
+                                                <p class="text-sm text-gray-500">james@company.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-violet-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">View Profile</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-violet-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Preferences</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-violet-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Security</span>
+                                            </a>
+                                        </div>
+                                        <div class="p-2 border-t border-gray-100">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                                                </svg>
+                                                <span class="text-sm">Sign out</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Initials-based avatar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Status Indicator Avatar -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Avatar with Status Indicator</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Status</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-rose-600 font-medium">Messages</a>
+                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Contacts</a>
+                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Groups</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="relative">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Emma" alt="Emma" class="w-10 h-10 rounded-full ring-2 ring-gray-100">
+                                        <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-4 border-b border-gray-100">
+                                            <div class="flex items-center gap-3">
+                                                <div class="relative">
+                                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Emma" alt="Emma" class="w-12 h-12 rounded-full">
+                                                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-medium text-gray-900">Emma Johnson</p>
+                                                    <p class="text-xs text-emerald-600 flex items-center gap-1">
+                                                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+                                                        Online
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-3">
+                                            <p class="text-xs text-gray-500 mb-2">Set your status</p>
+                                            <div class="space-y-1">
+                                                <button class="w-full flex items-center gap-2 px-3 py-2 bg-emerald-50 text-emerald-700 rounded-lg text-sm">
+                                                    <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                                                    Online
+                                                </button>
+                                                <button class="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded-lg text-sm text-gray-700 transition-colors">
+                                                    <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                                    Away
+                                                </button>
+                                                <button class="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded-lg text-sm text-gray-700 transition-colors">
+                                                    <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+                                                    Do not disturb
+                                                </button>
+                                                <button class="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 rounded-lg text-sm text-gray-700 transition-colors">
+                                                    <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+                                                    Invisible
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Avatar with online status</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Account Switcher -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Account Switcher</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Switch</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-cyan-600 font-medium">Workspace</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Projects</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Settings</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-3 px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" alt="Mike" class="w-7 h-7 rounded-full">
+                                        <span class="text-sm font-medium text-gray-700">Mike's Team</span>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-3 border-b border-gray-100">
+                                            <p class="text-xs font-medium text-gray-500 uppercase">Switch Account</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 p-2 bg-cyan-50 rounded-lg">
+                                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" alt="Mike" class="w-10 h-10 rounded-full">
+                                                <div class="flex-1">
+                                                    <p class="text-sm font-medium text-gray-900">Mike's Team</p>
+                                                    <p class="text-xs text-gray-500">Personal</p>
+                                                </div>
+                                                <svg class="w-5 h-5 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <div class="w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-violet-600 font-medium">AC</span>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <p class="text-sm font-medium text-gray-900">Acme Corp</p>
+                                                    <p class="text-xs text-gray-500">Business</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                                                    <span class="text-emerald-600 font-medium">ST</span>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <p class="text-sm font-medium text-gray-900">Startup Inc</p>
+                                                    <p class="text-xs text-gray-500">Business</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="p-2 border-t border-gray-100">
+                                            <a href="#" class="flex items-center gap-2 px-3 py-2 text-sm text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                                </svg>
+                                                Create new workspace
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Switch between accounts/workspaces</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Profile with Quick Actions -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Profile with Quick Actions</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Quick</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-amber-600 font-medium">Feed</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Explore</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Saved</a>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
+                                </button>
+                                <button class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                    </svg>
+                                </button>
+                                <div class="relative group">
+                                    <button>
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="Alex" class="w-9 h-9 rounded-full ring-2 ring-gray-100 hover:ring-amber-200 transition-all">
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-2">
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 rounded-lg transition-colors">Profile</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 rounded-lg transition-colors">Saved</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 rounded-lg transition-colors">Settings</a>
+                                            <hr class="my-2">
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 rounded-lg transition-colors">Switch Account</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">Log Out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Quick action buttons + profile</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Dark Theme Profile -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Dark Theme Profile</h2>
+            <div class="rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg"></div>
+                                <span class="font-bold text-xl text-white">DarkPro</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-white font-medium">Console</a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Deployments</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                    <span class="absolute top-1 right-1 w-2 h-2 bg-indigo-500 rounded-full"></span>
+                                </button>
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-gray-800 transition-colors">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dev" alt="Dev" class="w-8 h-8 rounded-full ring-2 ring-gray-700">
+                                        <span class="text-sm text-gray-300">Developer</span>
+                                        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-56 bg-gray-800 rounded-xl shadow-xl border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-4 border-b border-gray-700">
+                                            <p class="font-medium text-white">Developer Account</p>
+                                            <p class="text-sm text-gray-400">dev@company.io</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                                </svg>
+                                                <span class="text-sm">Profile</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                                </svg>
+                                                <span class="text-sm">Settings</span>
+                                            </a>
+                                        </div>
+                                        <div class="p-2 border-t border-gray-700">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors">
+                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                                                </svg>
+                                                <span class="text-sm">Sign out</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gray-800 flex items-center justify-center">
+                    <span class="text-gray-500">Dark theme profile</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Compact Profile Badge -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Compact Profile Badge</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Badge</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-teal-600 font-medium">Overview</a>
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Features</a>
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Pricing</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 px-2 py-1 bg-teal-50 rounded-full hover:bg-teal-100 transition-colors">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pro" alt="Pro" class="w-7 h-7 rounded-full">
+                                        <span class="px-2 py-0.5 bg-teal-500 text-white text-xs font-medium rounded-full">PRO</span>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-4 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-t-xl">
+                                            <p class="font-medium text-white">Pro Account</p>
+                                            <p class="text-sm text-teal-100">Unlimited access</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors">My Account</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors">Subscription</a>
+                                            <a href="#" class="block px-3 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 rounded-lg transition-colors">Support</a>
+                                            <hr class="my-2">
+                                            <a href="#" class="block px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Profile with subscription badge</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
+            <p>User Profile Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+</body>
+</html>
