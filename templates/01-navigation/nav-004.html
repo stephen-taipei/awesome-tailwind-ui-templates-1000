@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dark Mode Navbar - Dark-themed navigation template for tech and gaming sites">
+  <title>nav-004: Dark Mode Navbar | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-400: oklch(0.68 0.16 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-accent-400: oklch(0.75 0.15 165);
+      --color-accent-500: oklch(0.65 0.18 165);
+    }
+  </style>
+
+  <style>
+    /* Dark theme custom styles */
+    .dark-nav {
+      background-color: rgb(15 23 42); /* slate-900 */
+      border-bottom: 1px solid rgb(30 41 59); /* slate-800 */
+    }
+
+    /* Navigation link hover effect for dark theme */
+    .nav-link-dark {
+      position: relative;
+      color: rgb(148 163 184); /* slate-400 */
+      transition: color 0.2s ease;
+    }
+
+    .nav-link-dark:hover {
+      color: white;
+    }
+
+    .nav-link-dark::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, oklch(0.55 0.20 250), oklch(0.65 0.18 165));
+      transition: width 0.2s ease;
+    }
+
+    .nav-link-dark:hover::after,
+    .nav-link-dark[aria-current="page"]::after {
+      width: 100%;
+    }
+
+    /* Hamburger animation */
+    .hamburger-line {
+      display: block;
+      width: 1.25rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile menu animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 28rem;
+    }
+
+    /* Gradient CTA button */
+    .btn-gradient {
+      background: linear-gradient(135deg, oklch(0.55 0.20 250), oklch(0.65 0.18 165));
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px oklch(0.55 0.20 250 / 0.4);
+    }
+
+    /* Glow effect for active elements */
+    .glow-effect {
+      box-shadow: 0 0 20px oklch(0.55 0.20 250 / 0.3);
+    }
+
+    /* Dark mobile menu */
+    .dark-mobile-menu {
+      background-color: rgb(30 41 59); /* slate-800 */
+      border: 1px solid rgb(51 65 85); /* slate-700 */
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950">
+
+  <!-- ============================================
+       nav-004: Dark Mode Navbar
+
+       A dark-themed navigation perfect for:
+       - Tech/SaaS products
+       - Gaming websites
+       - Developer tools
+       - Creative agencies
+       - Music/entertainment sites
+
+       Features:
+       - Full dark color scheme (slate-900 base)
+       - Gradient accent CTA button
+       - Subtle glow effects on hover
+       - High contrast for readability
+       - Mobile responsive with dark drawer
+       ============================================ -->
+
+  <header class="dark-nav sticky top-0 z-50">
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-500 focus:text-white focus:rounded-md"
+      data-i18n="nav.skipToContent"
+    >
+      Skip to main content
+    </a>
+
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      aria-label="Main navigation"
+    >
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold text-white hover:text-primary-400 transition-colors"
+            aria-label="Go to homepage"
+            data-i18n-aria="nav.brandAriaLabel"
+          >
+            <!-- Logo Icon with gradient -->
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <span data-i18n="nav.brand">DarkUI</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:gap-8">
+          <!-- Navigation Links -->
+          <ul class="flex items-center gap-6" role="menubar">
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link-dark font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.features"
+              >
+                Features
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link-dark font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.pricing"
+              >
+                Pricing
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link-dark font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.docs"
+              >
+                Docs
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link-dark font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.blog"
+              >
+                Blog
+              </a>
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <div class="h-6 w-px bg-slate-700" aria-hidden="true"></div>
+
+          <!-- Auth & CTA -->
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="text-slate-400 hover:text-white font-medium text-sm transition-colors"
+              data-i18n="nav.login"
+            >
+              Log in
+            </a>
+            <a
+              href="#"
+              class="btn-gradient px-4 py-2 text-white text-sm font-medium rounded-lg"
+              data-i18n="nav.getStarted"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="flex flex-col gap-1">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden"
+        role="menu"
+        aria-labelledby="mobile-menu-btn"
+      >
+        <div class="dark-mobile-menu rounded-lg mt-2 mb-4">
+          <ul class="py-4 space-y-1">
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-lg font-medium text-sm transition-colors mx-2"
+                role="menuitem"
+                data-i18n="nav.features"
+              >
+                Features
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-lg font-medium text-sm transition-colors mx-2"
+                role="menuitem"
+                data-i18n="nav.pricing"
+              >
+                Pricing
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-lg font-medium text-sm transition-colors mx-2"
+                role="menuitem"
+                data-i18n="nav.docs"
+              >
+                Docs
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-2.5 text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-lg font-medium text-sm transition-colors mx-2"
+                role="menuitem"
+                data-i18n="nav.blog"
+              >
+                Blog
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Auth Section -->
+          <div class="py-4 px-4 border-t border-slate-700 space-y-3">
+            <a
+              href="#"
+              class="block w-full text-center px-4 py-2.5 text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-lg font-medium text-sm transition-colors"
+              data-i18n="nav.login"
+            >
+              Log in
+            </a>
+            <a
+              href="#"
+              class="block w-full text-center btn-gradient px-4 py-2.5 text-white rounded-lg font-medium text-sm"
+              data-i18n="nav.getStarted"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content (Demo) -->
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-i18n="demo.nav004.title">
+        Dark Mode Navbar
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-6" data-i18n="demo.nav004.description">
+        A sleek dark-themed navigation designed for tech products, gaming sites, and modern web applications.
+        Features gradient accents and subtle glow effects.
+      </p>
+
+      <!-- Feature Tags -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12">
+        <span class="inline-flex items-center px-3 py-1 bg-slate-800 text-primary-400 border border-slate-700 rounded-full text-sm font-medium">
+          bg-slate-900
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-slate-800 text-accent-400 border border-slate-700 rounded-full text-sm font-medium">
+          gradient CTA
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-sm font-medium">
+          glow effects
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full text-sm font-medium">
+          high contrast
+        </span>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="bg-slate-900 rounded-2xl border border-slate-800 p-8 max-w-3xl mx-auto mb-12">
+        <h3 class="text-lg font-semibold text-white mb-6">Dark Theme Color Palette</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="space-y-2">
+            <div class="w-full h-12 bg-slate-950 rounded-lg border border-slate-800"></div>
+            <p class="text-xs text-slate-500">slate-950</p>
+            <p class="text-xs text-slate-600">Background</p>
+          </div>
+          <div class="space-y-2">
+            <div class="w-full h-12 bg-slate-900 rounded-lg border border-slate-800"></div>
+            <p class="text-xs text-slate-500">slate-900</p>
+            <p class="text-xs text-slate-600">Navbar</p>
+          </div>
+          <div class="space-y-2">
+            <div class="w-full h-12 bg-slate-800 rounded-lg border border-slate-700"></div>
+            <p class="text-xs text-slate-500">slate-800</p>
+            <p class="text-xs text-slate-600">Cards/Borders</p>
+          </div>
+          <div class="space-y-2">
+            <div class="w-full h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg"></div>
+            <p class="text-xs text-slate-500">gradient</p>
+            <p class="text-xs text-slate-600">Accent</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Use Cases -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-slate-900 rounded-xl border border-slate-800 p-6 text-left">
+          <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h4 class="font-semibold text-white mb-2">Developer Tools</h4>
+          <p class="text-sm text-slate-400">Perfect for code editors, IDEs, and developer-focused products.</p>
+        </div>
+
+        <div class="bg-slate-900 rounded-xl border border-slate-800 p-6 text-left">
+          <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h4 class="font-semibold text-white mb-2">Gaming & Entertainment</h4>
+          <p class="text-sm text-slate-400">Ideal for gaming platforms, streaming services, and media sites.</p>
+        </div>
+
+        <div class="bg-slate-900 rounded-xl border border-slate-800 p-6 text-left">
+          <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h4 class="font-semibold text-white mb-2">Tech Products</h4>
+          <p class="text-sm text-slate-400">Great for SaaS dashboards, AI tools, and modern tech startups.</p>
+        </div>
+      </div>
+
+      <!-- Breakpoint Indicator -->
+      <div class="mt-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 rounded-full text-sm text-slate-400">
+          <span class="font-medium">Current breakpoint:</span>
+          <span class="sm:hidden font-bold text-primary-400">xs (< 640px)</span>
+          <span class="hidden sm:inline md:hidden font-bold text-primary-400">sm (640px+)</span>
+          <span class="hidden md:inline lg:hidden font-bold text-primary-400">md (768px+)</span>
+          <span class="hidden lg:inline xl:hidden font-bold text-primary-400">lg (1024px+)</span>
+          <span class="hidden xl:inline 2xl:hidden font-bold text-primary-400">xl (1280px+)</span>
+          <span class="hidden 2xl:inline font-bold text-primary-400">2xl (1536px+)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Templates Link -->
+    <div class="mt-16">
+      <a
+        href="../../index.html"
+        class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary-400 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    (function() {
+      'use strict';
+
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+
+          menuBtn.setAttribute('aria-expanded', !isExpanded);
+          menuBtn.querySelector('span').classList.toggle('hamburger-active');
+          mobileMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+
+        // Close menu on resize to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Logo Left + Links Right Navbar - Standard corporate/SaaS navigation template">
+  <title>nav-002: Logo Left + Links Right Navbar | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.40 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Navigation link hover effect */
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: oklch(0.55 0.20 250);
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after {
+      width: 100%;
+    }
+
+    /* Hamburger animation */
+    .hamburger-line {
+      display: block;
+      width: 1.25rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile menu slide animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 24rem;
+    }
+
+    /* CTA button hover effect */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px oklch(0.55 0.20 250 / 0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-002: Logo Left + Links Right Navbar
+
+       A standard corporate/SaaS navigation pattern:
+       - Logo positioned on the left
+       - Navigation links in the center-right
+       - CTA button on the far right
+       - Responsive hamburger menu on mobile/tablet
+
+       Ideal for:
+       - SaaS websites
+       - Corporate sites
+       - Product landing pages
+       - Startup websites
+
+       Features:
+       - justify-between layout pattern
+       - Prominent CTA button
+       - Responsive at md breakpoint (768px)
+       - Accessible keyboard navigation
+       - i18n support
+       ============================================ -->
+
+  <header class="bg-white shadow-sm">
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-md"
+      data-i18n="nav.skipToContent"
+    >
+      Skip to main content
+    </a>
+
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      aria-label="Main navigation"
+    >
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo (Left) -->
+        <div class="flex-shrink-0">
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold text-slate-900 hover:text-primary-600 transition-colors"
+            aria-label="Go to homepage"
+            data-i18n-aria="nav.brandAriaLabel"
+          >
+            <!-- Logo Icon -->
+            <svg
+              class="w-8 h-8 text-primary-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+            <span data-i18n="nav.brand">Acme Inc</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation (Center-Right) -->
+        <div class="hidden md:flex md:items-center md:gap-8">
+          <!-- Navigation Links -->
+          <ul class="flex items-center gap-6" role="menubar">
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.products"
+              >
+                Products
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.solutions"
+              >
+                Solutions
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.pricing"
+              >
+                Pricing
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.resources"
+              >
+                Resources
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.company"
+              >
+                Company
+              </a>
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <div class="h-6 w-px bg-slate-200" aria-hidden="true"></div>
+
+          <!-- Auth Links & CTA -->
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="text-slate-600 hover:text-slate-900 font-medium text-sm transition-colors"
+              data-i18n="nav.login"
+            >
+              Log in
+            </a>
+            <a
+              href="#"
+              class="btn-primary inline-flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
+              data-i18n="nav.getStarted"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="flex flex-col gap-1">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden border-t border-slate-100"
+        role="menu"
+        aria-labelledby="mobile-menu-btn"
+      >
+        <ul class="py-4 space-y-1">
+          <li role="none">
+            <a
+              href="#"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.products"
+            >
+              Products
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.solutions"
+            >
+              Solutions
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.pricing"
+            >
+              Pricing
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.resources"
+            >
+              Resources
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#"
+              class="block px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+              role="menuitem"
+              data-i18n="nav.company"
+            >
+              Company
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Auth Section -->
+        <div class="py-4 px-4 border-t border-slate-100 space-y-3">
+          <a
+            href="#"
+            class="block w-full text-center px-4 py-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg font-medium text-sm transition-colors"
+            data-i18n="nav.login"
+          >
+            Log in
+          </a>
+          <a
+            href="#"
+            class="block w-full text-center px-4 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium text-sm transition-colors"
+            data-i18n="nav.getStarted"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content (Demo) -->
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="demo.nav002.title">
+        Logo Left + Links Right Navbar
+      </h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-6" data-i18n="demo.nav002.description">
+        A standard corporate/SaaS navigation pattern with logo on the left, navigation links
+        in the center, and a prominent CTA button on the right. Perfect for business websites.
+      </p>
+
+      <!-- Feature Tags -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8">
+        <span class="inline-flex items-center px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
+          justify-between
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">
+          CTA Button
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-violet-50 text-violet-700 rounded-full text-sm font-medium">
+          md: breakpoint
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm font-medium">
+          Corporate Style
+        </span>
+      </div>
+
+      <!-- Breakpoint Indicator -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-sm text-slate-600">
+        <span class="font-medium">Current breakpoint:</span>
+        <span class="sm:hidden font-bold text-primary-600">xs (< 640px)</span>
+        <span class="hidden sm:inline md:hidden font-bold text-primary-600">sm (640px+)</span>
+        <span class="hidden md:inline lg:hidden font-bold text-primary-600">md (768px+)</span>
+        <span class="hidden lg:inline xl:hidden font-bold text-primary-600">lg (1024px+)</span>
+        <span class="hidden xl:inline 2xl:hidden font-bold text-primary-600">xl (1280px+)</span>
+        <span class="hidden 2xl:inline font-bold text-primary-600">2xl (1536px+)</span>
+      </div>
+
+      <!-- Layout Comparison -->
+      <div class="mt-12 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl border border-slate-200 p-6 text-left">
+          <h3 class="font-semibold text-slate-900 mb-3">Desktop Layout (md+)</h3>
+          <div class="bg-slate-50 rounded-lg p-4">
+            <div class="flex justify-between items-center text-xs">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-primary-500 rounded"></div>
+                <span class="font-medium text-slate-700">Logo</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="flex gap-3">
+                  <span class="text-slate-500">Link</span>
+                  <span class="text-slate-500">Link</span>
+                  <span class="text-slate-500">Link</span>
+                </div>
+                <div class="h-4 w-px bg-slate-300"></div>
+                <span class="text-slate-500">Login</span>
+                <span class="px-2 py-1 bg-primary-500 text-white rounded text-xs">CTA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-6 text-left">
+          <h3 class="font-semibold text-slate-900 mb-3">Mobile Layout (< md)</h3>
+          <div class="bg-slate-50 rounded-lg p-4">
+            <div class="flex justify-between items-center text-xs mb-3">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-primary-500 rounded"></div>
+                <span class="font-medium text-slate-700">Logo</span>
+              </div>
+              <div class="flex flex-col gap-0.5">
+                <div class="w-4 h-0.5 bg-slate-400 rounded"></div>
+                <div class="w-4 h-0.5 bg-slate-400 rounded"></div>
+                <div class="w-4 h-0.5 bg-slate-400 rounded"></div>
+              </div>
+            </div>
+            <div class="border-t border-slate-200 pt-3 space-y-2">
+              <div class="text-slate-500 text-xs">Link</div>
+              <div class="text-slate-500 text-xs">Link</div>
+              <div class="text-slate-500 text-xs">Link</div>
+              <div class="border-t border-slate-200 pt-2 mt-2">
+                <div class="text-center text-slate-500 text-xs mb-1">Login</div>
+                <div class="text-center px-2 py-1 bg-primary-500 text-white rounded text-xs">CTA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back to Templates Link -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+    <a
+      href="../../index.html"
+      class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back to all templates
+    </a>
+  </div>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    (function() {
+      'use strict';
+
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+
+          // Toggle aria-expanded
+          menuBtn.setAttribute('aria-expanded', !isExpanded);
+
+          // Toggle hamburger animation
+          menuBtn.querySelector('span').classList.toggle('hamburger-active');
+
+          // Toggle menu visibility
+          mobileMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+
+        // Close menu when window is resized to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 768) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
