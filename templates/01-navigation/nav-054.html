@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation 054 - Portfolio Navigation - 8 Styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.86 0.08 260);
+            --color-primary-300: oklch(0.76 0.12 260);
+            --color-primary-400: oklch(0.64 0.16 260);
+            --color-primary-500: oklch(0.53 0.19 260);
+            --color-primary-600: oklch(0.45 0.18 260);
+            --color-primary-700: oklch(0.37 0.15 260);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Navigation 054 - Portfolio Navigation</h1>
+            <p class="text-gray-600">8 styles of portfolio/creative website navigation</p>
+        </header>
+
+        <!-- Style 1: Minimal Designer Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Minimal Designer Portfolio</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-20 flex items-center justify-between px-12">
+                    <a href="#" class="text-2xl font-light tracking-widest text-gray-900">STUDIO</a>
+                    <div class="flex items-center gap-12">
+                        <a href="#" class="text-sm tracking-wider text-gray-900 hover:text-primary-500 transition-colors">WORK</a>
+                        <a href="#" class="text-sm tracking-wider text-gray-500 hover:text-primary-500 transition-colors">ABOUT</a>
+                        <a href="#" class="text-sm tracking-wider text-gray-500 hover:text-primary-500 transition-colors">SERVICES</a>
+                        <a href="#" class="text-sm tracking-wider text-gray-500 hover:text-primary-500 transition-colors">CONTACT</a>
+                    </div>
+                    <a href="#" class="text-sm tracking-wider text-primary-500 hover:text-primary-600 transition-colors">LET'S TALK →</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 2: Creative Agency with Video Background -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Creative Agency Overlay</h2>
+            <div class="relative rounded-xl shadow-lg overflow-hidden h-[400px] bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+                <nav class="absolute top-0 left-0 right-0 z-10 h-24 flex items-center justify-between px-12">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 border-2 border-white flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">C</span>
+                        </div>
+                        <span class="text-white text-lg font-light tracking-wider">CREATIVE</span>
+                    </div>
+                    <div class="flex items-center gap-10">
+                        <a href="#" class="text-white/80 hover:text-white text-sm tracking-wide transition-colors relative group">
+                            Projects
+                            <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all group-hover:w-full"></span>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm tracking-wide transition-colors relative group">
+                            Studio
+                            <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all group-hover:w-full"></span>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm tracking-wide transition-colors relative group">
+                            Team
+                            <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all group-hover:w-full"></span>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-white text-sm tracking-wide transition-colors relative group">
+                            Journal
+                            <span class="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all group-hover:w-full"></span>
+                        </a>
+                    </div>
+                    <button class="flex flex-col gap-1.5 p-2 group">
+                        <span class="w-6 h-0.5 bg-white transition-transform group-hover:translate-x-1"></span>
+                        <span class="w-4 h-0.5 bg-white transition-transform group-hover:translate-x-1"></span>
+                        <span class="w-6 h-0.5 bg-white transition-transform group-hover:translate-x-1"></span>
+                    </button>
+                </nav>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white/20 text-sm tracking-widest">[ VIDEO BACKGROUND AREA ]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Photographer Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Photographer Portfolio</h2>
+            <div class="bg-black rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-20 flex items-center justify-between px-10 border-b border-white/10">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full overflow-hidden">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=photographer" alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <span class="text-white font-medium block">Sarah Chen</span>
+                            <span class="text-white/50 text-xs">Photographer</span>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="text-white text-sm font-medium border-b border-white pb-1">Portfolio</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">About</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Services</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Blog</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <button class="px-5 py-2 bg-white text-black text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+                            Book Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 4: Side Navigation Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Side Navigation Portfolio</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex h-[500px]">
+                    <!-- Fixed Side Navigation -->
+                    <nav class="w-24 bg-gray-900 flex flex-col items-center py-8">
+                        <a href="#" class="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mb-12">
+                            <span class="text-white font-bold text-xl">P</span>
+                        </a>
+                        <div class="flex-1 flex flex-col items-center gap-6">
+                            <a href="#" class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl flex items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <a href="#" class="text-white/50 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </a>
+                            <a href="#" class="text-white/50 hover:text-white transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </nav>
+                    <!-- Content Area -->
+                    <div class="flex-1 bg-gray-50 p-8">
+                        <p class="text-gray-500">Side navigation portfolio content...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: 3D Artist Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: 3D Artist Portfolio</h2>
+            <div class="bg-gradient-to-br from-violet-950 via-purple-900 to-fuchsia-900 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-20 flex items-center justify-between px-10">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-violet-500 flex items-center justify-center">
+                            <span class="text-white font-black text-xl">3D</span>
+                        </div>
+                        <div>
+                            <span class="text-white font-bold block">ALEX RENDER</span>
+                            <span class="text-white/50 text-xs tracking-wider">3D ARTIST & MOTION DESIGNER</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="text-white font-medium text-sm relative">
+                            Showreel
+                            <span class="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-pink-500 to-violet-500"></span>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Projects</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Process</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Tutorials</a>
+                        <a href="#" class="text-white/60 hover:text-white text-sm transition-colors">Shop</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="text-white/60 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 0a4 4 0 014 4v16a4 4 0 01-4 4H4a4 4 0 01-4-4V4a4 4 0 014-4h16zm-4.458 4.125c-.786 0-1.328.246-1.657.455a2.898 2.898 0 00-.5.39l-.073.084-.004-.019a1.857 1.857 0 00-.053-.223l-.038-.12-.044-.122-.05-.12c-.076-.172-.163-.325-.25-.458-.084-.13-.167-.24-.244-.328a1.57 1.57 0 00-.291-.281 1.377 1.377 0 00-.65-.256l-.144-.015h-.138l-.156.012a1.82 1.82 0 00-.487.118 2.09 2.09 0 00-.413.219c-.263.178-.507.408-.722.661-.212.25-.393.516-.537.78a4.457 4.457 0 00-.387.947l-.034.12-.054.23-.031.162-.026.17-.038.341-.026.343-.008.26.001.269.014.285.028.31.022.175.054.35.065.335.036.16.045.17.098.334.113.334.129.334.072.17.153.335.168.334.087.16.091.158.19.307.1.151.207.294.109.145.222.28.23.269.238.259c.407.416.84.742 1.284.978l.157.078.322.14.166.063.338.111.172.047.35.079.178.031.36.047.182.014.365.013.185-.005.37-.024.187-.022.373-.057.187-.036.374-.088.187-.052.37-.118.183-.069.364-.156.09-.043.178-.093.35-.2.172-.11.338-.239.166-.129.325-.277.08-.074.155-.156.302-.329.148-.175.287-.367.07-.097.137-.2.265-.418.128-.217.247-.453.06-.118.116-.24.222-.497.053-.127.101-.258.19-.531.044-.134.084-.27.156-.556.036-.143.067-.287.12-.593.024-.154.044-.31.072-.64.012-.166.02-.333.027-.686 0-.178-.004-.355-.013-.709a21.16 21.16 0 00-.046-.697l-.07-.68c-.013-.11-.027-.218-.043-.325l-.023-.157c.358-.197.671-.41.938-.64.27-.232.493-.481.668-.744.176-.267.302-.548.377-.84.075-.295.098-.6.067-.91a2.197 2.197 0 00-.238-.785 2.078 2.078 0 00-.479-.6 2.09 2.09 0 00-.66-.395 2.263 2.263 0 00-.78-.144z"/></svg>
+                        </a>
+                        <button class="px-6 py-2.5 bg-gradient-to-r from-pink-500 to-violet-500 text-white text-sm font-semibold rounded-full hover:opacity-90 transition-opacity">
+                            Hire Me
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 6: Developer Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Developer Portfolio</h2>
+            <div class="bg-slate-900 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-16 flex items-center justify-between px-8 border-b border-slate-700">
+                    <div class="flex items-center gap-3">
+                        <span class="text-emerald-400 font-mono text-lg">{"</span>
+                        <span class="text-white font-mono font-medium">john.dev</span>
+                        <span class="text-emerald-400 font-mono text-lg">/}</span>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-slate-300 hover:text-white text-sm font-mono transition-colors">
+                            <span class="text-emerald-400">01.</span> about()
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-white text-sm font-mono transition-colors">
+                            <span class="text-emerald-400">02.</span> skills()
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-white text-sm font-mono transition-colors">
+                            <span class="text-emerald-400">03.</span> projects()
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-white text-sm font-mono transition-colors">
+                            <span class="text-emerald-400">04.</span> contact()
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <button class="px-4 py-2 border border-emerald-400 text-emerald-400 text-sm font-mono rounded hover:bg-emerald-400/10 transition-colors">
+                            Resume.pdf
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 7: Architect Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 7: Architect Portfolio</h2>
+            <div class="bg-stone-100 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-24 flex items-center justify-between px-12 border-b border-stone-200">
+                    <div class="flex items-center gap-6">
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl font-extralight text-stone-800 tracking-widest">ARCHI</span>
+                            <span class="text-[10px] tracking-[0.3em] text-stone-500">ARCHITECTURE</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-12">
+                        <a href="#" class="text-stone-800 text-sm tracking-wider font-medium relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-stone-800">PROJECTS</a>
+                        <a href="#" class="text-stone-500 text-sm tracking-wider hover:text-stone-800 transition-colors">PRACTICE</a>
+                        <a href="#" class="text-stone-500 text-sm tracking-wider hover:text-stone-800 transition-colors">PHILOSOPHY</a>
+                        <a href="#" class="text-stone-500 text-sm tracking-wider hover:text-stone-800 transition-colors">AWARDS</a>
+                        <a href="#" class="text-stone-500 text-sm tracking-wider hover:text-stone-800 transition-colors">PRESS</a>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-stone-500 hover:text-stone-800 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-stone-500 hover:text-stone-800 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 0a4 4 0 014 4v16a4 4 0 01-4 4H4a4 4 0 01-4-4V4a4 4 0 014-4h16zm-4.458 4.125c-.786 0-1.328.246-1.657.455a2.898 2.898 0 00-.5.39l-.073.084-.004-.019a1.857 1.857 0 00-.053-.223l-.038-.12-.044-.122-.05-.12c-.076-.172-.163-.325-.25-.458-.084-.13-.167-.24-.244-.328a1.57 1.57 0 00-.291-.281 1.377 1.377 0 00-.65-.256l-.144-.015h-.138l-.156.012a1.82 1.82 0 00-.487.118 2.09 2.09 0 00-.413.219c-.263.178-.507.408-.722.661-.212.25-.393.516-.537.78a4.457 4.457 0 00-.387.947l-.034.12-.054.23-.031.162-.026.17-.038.341-.026.343-.008.26.001.269.014.285.028.31.022.175.054.35.065.335.036.16.045.17.098.334.113.334.129.334.072.17.153.335.168.334.087.16.091.158.19.307.1.151.207.294.109.145.222.28.23.269.238.259c.407.416.84.742 1.284.978l.157.078.322.14.166.063.338.111.172.047.35.079.178.031.36.047.182.014.365.013.185-.005.37-.024.187-.022.373-.057.187-.036.374-.088.187-.052.37-.118.183-.069.364-.156.09-.043.178-.093.35-.2.172-.11.338-.239.166-.129.325-.277.08-.074.155-.156.302-.329.148-.175.287-.367.07-.097.137-.2.265-.418.128-.217.247-.453.06-.118.116-.24.222-.497.053-.127.101-.258.19-.531.044-.134.084-.27.156-.556.036-.143.067-.287.12-.593.024-.154.044-.31.072-.64.012-.166.02-.333.027-.686 0-.178-.004-.355-.013-.709a21.16 21.16 0 00-.046-.697l-.07-.68c-.013-.11-.027-.218-.043-.325l-.023-.157c.358-.197.671-.41.938-.64.27-.232.493-.481.668-.744.176-.267.302-.548.377-.84.075-.295.098-.6.067-.91a2.197 2.197 0 00-.238-.785 2.078 2.078 0 00-.479-.6 2.09 2.09 0 00-.66-.395 2.263 2.263 0 00-.78-.144z"/></svg>
+                        </a>
+                        <button class="px-6 py-3 bg-stone-800 text-white text-sm tracking-wider hover:bg-stone-700 transition-colors">
+                            CONTACT
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 8: Illustrator Portfolio -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 8: Illustrator Portfolio</h2>
+            <div class="bg-gradient-to-r from-amber-50 via-rose-50 to-violet-50 rounded-xl shadow-lg overflow-hidden">
+                <nav class="h-20 flex items-center justify-between px-10">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 via-fuchsia-500 to-violet-500 flex items-center justify-center shadow-lg shadow-rose-200">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-gray-800 block">Luna Creative</span>
+                            <span class="text-sm text-gray-500">Illustrator & Artist</span>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-8">
+                        <a href="#" class="relative text-gray-800 font-medium text-sm group">
+                            Gallery
+                            <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-rose-400 to-violet-400 rounded-full"></span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-800 text-sm transition-colors">Commissions</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-800 text-sm transition-colors">Shop</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-800 text-sm transition-colors">About</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-800 text-sm transition-colors">Process</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-rose-500 hover:shadow-md transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-blue-500 hover:shadow-md transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <button class="px-6 py-2.5 bg-gradient-to-r from-rose-500 to-violet-500 text-white text-sm font-medium rounded-full shadow-lg shadow-rose-200 hover:shadow-xl hover:shadow-rose-300 transition-all">
+                            Hire Me
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
