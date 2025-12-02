@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Language Switcher Navigation</h1>
+            <p class="text-gray-600">Navigation with language/locale selection options</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Dropdown Language Selector -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Dropdown Language Selector</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Global</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-primary-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Products</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">About</a>
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Contact</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                                        <span class="text-xl">🇺🇸</span>
+                                        <span class="text-sm text-gray-700">English</span>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 bg-primary-50 text-primary-700 rounded-lg">
+                                                <span class="text-xl">🇺🇸</span>
+                                                <span class="text-sm font-medium">English</span>
+                                                <svg class="w-4 h-4 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-xl">🇪🇸</span>
+                                                <span class="text-sm text-gray-700">Español</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-xl">🇫🇷</span>
+                                                <span class="text-sm text-gray-700">Français</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-xl">🇩🇪</span>
+                                                <span class="text-sm text-gray-700">Deutsch</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-xl">🇯🇵</span>
+                                                <span class="text-sm text-gray-700">日本語</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-xl">🇨🇳</span>
+                                                <span class="text-sm text-gray-700">中文</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Hover over language to see dropdown</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Flag Icon Only -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Flag Icon Only Dropdown</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Compact</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-emerald-600 font-medium">Dashboard</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Analytics</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Reports</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="relative group">
+                                    <button class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                                        <span class="text-2xl">🇺🇸</span>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-2 flex flex-col gap-1">
+                                            <a href="#" class="p-2 bg-emerald-50 rounded-lg">
+                                                <span class="text-2xl">🇺🇸</span>
+                                            </a>
+                                            <a href="#" class="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-2xl">🇬🇧</span>
+                                            </a>
+                                            <a href="#" class="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-2xl">🇪🇸</span>
+                                            </a>
+                                            <a href="#" class="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-2xl">🇫🇷</span>
+                                            </a>
+                                            <a href="#" class="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-2xl">🇩🇪</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="p-2 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                </button>
+                                <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                                    <span class="text-emerald-700 font-medium text-sm">JD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Compact flag-only selector</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Language Code Pills -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Language Code Pills</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Pills</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-violet-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Features</a>
+                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Pricing</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center bg-gray-100 rounded-full p-1">
+                                    <button class="px-3 py-1 bg-white text-violet-600 font-medium text-sm rounded-full shadow-sm">EN</button>
+                                    <button class="px-3 py-1 text-gray-600 hover:text-violet-600 font-medium text-sm rounded-full transition-colors">ES</button>
+                                    <button class="px-3 py-1 text-gray-600 hover:text-violet-600 font-medium text-sm rounded-full transition-colors">FR</button>
+                                    <button class="px-3 py-1 text-gray-600 hover:text-violet-600 font-medium text-sm rounded-full transition-colors">DE</button>
+                                </div>
+                                <a href="#" class="bg-violet-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-violet-700 transition-colors">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Quick language toggle pills</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Globe Icon with Dropdown -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Globe Icon with Dropdown</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Globe</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-rose-600 font-medium">Products</a>
+                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Solutions</a>
+                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Resources</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                                        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                        </svg>
+                                        <span class="text-sm text-gray-700">EN</span>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-3 border-b border-gray-100">
+                                            <p class="text-xs font-medium text-gray-500 uppercase">Select Language</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center justify-between px-3 py-2 bg-rose-50 text-rose-700 rounded-lg">
+                                                <div class="flex items-center gap-3">
+                                                    <span class="text-lg">🇺🇸</span>
+                                                    <div>
+                                                        <p class="text-sm font-medium">English</p>
+                                                        <p class="text-xs text-rose-500">United States</p>
+                                                    </div>
+                                                </div>
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-lg">🇬🇧</span>
+                                                <div>
+                                                    <p class="text-sm font-medium text-gray-900">English</p>
+                                                    <p class="text-xs text-gray-500">United Kingdom</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-lg">🇪🇸</span>
+                                                <div>
+                                                    <p class="text-sm font-medium text-gray-900">Español</p>
+                                                    <p class="text-xs text-gray-500">España</p>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                                <span class="text-lg">🇲🇽</span>
+                                                <div>
+                                                    <p class="text-sm font-medium text-gray-900">Español</p>
+                                                    <p class="text-xs text-gray-500">México</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="bg-rose-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-rose-700 transition-colors">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Globe icon with region selection</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Top Bar Language Selector -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Top Bar Language Selector</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <!-- Top utility bar -->
+                <div class="bg-gray-900 text-white text-sm">
+                    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-400">Free shipping on orders over $50</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="relative group">
+                                <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors">
+                                    <span>🇺🇸</span>
+                                    <span>English</span>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <div class="absolute right-0 top-full mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                    <div class="p-1">
+                                        <a href="#" class="flex items-center gap-2 px-3 py-2 bg-cyan-50 text-cyan-700 rounded-md text-sm">
+                                            <span>🇺🇸</span> English
+                                        </a>
+                                        <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md text-sm transition-colors">
+                                            <span>🇪🇸</span> Español
+                                        </a>
+                                        <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md text-sm transition-colors">
+                                            <span>🇫🇷</span> Français
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-gray-600">|</span>
+                            <div class="relative group">
+                                <button class="flex items-center gap-1 text-gray-300 hover:text-white transition-colors">
+                                    <span>USD $</span>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <div class="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                    <div class="p-1">
+                                        <a href="#" class="block px-3 py-2 bg-cyan-50 text-cyan-700 rounded-md text-sm">USD $</a>
+                                        <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md text-sm transition-colors">EUR €</a>
+                                        <a href="#" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md text-sm transition-colors">GBP £</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main nav -->
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Store</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-cyan-600 font-medium">Shop</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Collections</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Sale</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-500 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Language in utility bar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Sidebar Language with Search -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Modal Language Selector</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Modal</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-amber-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">About</a>
+                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Services</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button id="lang-modal-trigger" class="flex items-center gap-2 px-3 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">EN</span>
+                                </button>
+                                <a href="#" class="bg-amber-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-amber-600 transition-colors">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Language Modal Preview -->
+                <div class="bg-black/50 p-8 flex items-center justify-center">
+                    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md">
+                        <div class="p-6 border-b border-gray-100">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold text-gray-900">Select Language</h3>
+                                <button class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-4 relative">
+                                <input type="text" placeholder="Search languages..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="p-4 max-h-64 overflow-y-auto">
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="#" class="flex items-center gap-3 p-3 bg-amber-50 border-2 border-amber-500 rounded-xl">
+                                    <span class="text-2xl">🇺🇸</span>
+                                    <span class="font-medium text-amber-700">English</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-amber-300 hover:bg-amber-50 transition-colors">
+                                    <span class="text-2xl">🇪🇸</span>
+                                    <span class="text-gray-700">Español</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-amber-300 hover:bg-amber-50 transition-colors">
+                                    <span class="text-2xl">🇫🇷</span>
+                                    <span class="text-gray-700">Français</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-amber-300 hover:bg-amber-50 transition-colors">
+                                    <span class="text-2xl">🇩🇪</span>
+                                    <span class="text-gray-700">Deutsch</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-amber-300 hover:bg-amber-50 transition-colors">
+                                    <span class="text-2xl">🇯🇵</span>
+                                    <span class="text-gray-700">日本語</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-amber-300 hover:bg-amber-50 transition-colors">
+                                    <span class="text-2xl">🇰🇷</span>
+                                    <span class="text-gray-700">한국어</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Dark Theme Language -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Dark Theme Language Switcher</h2>
+            <div class="rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg"></div>
+                                <span class="font-bold text-xl text-white">Dark</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-white font-medium">Platform</a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Docs</a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <button class="flex items-center gap-2 px-3 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
+                                        <span class="text-lg">🇺🇸</span>
+                                        <span class="text-sm text-gray-300">EN</span>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-44 bg-gray-800 rounded-xl shadow-xl border border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 bg-indigo-600 text-white rounded-lg">
+                                                <span class="text-lg">🇺🇸</span>
+                                                <span class="text-sm">English</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition-colors">
+                                                <span class="text-lg">🇪🇸</span>
+                                                <span class="text-sm">Español</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition-colors">
+                                                <span class="text-lg">🇫🇷</span>
+                                                <span class="text-sm">Français</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition-colors">
+                                                <span class="text-lg">🇩🇪</span>
+                                                <span class="text-sm">Deutsch</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gray-800 flex items-center justify-center">
+                    <span class="text-gray-500">Page Content</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Footer Language Selector -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Inline Select Dropdown</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Select</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-teal-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Products</a>
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Blog</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                    </svg>
+                                    <select class="bg-transparent border-0 text-sm text-gray-700 focus:outline-none focus:ring-0 cursor-pointer pr-8">
+                                        <option value="en">English (US)</option>
+                                        <option value="en-gb">English (UK)</option>
+                                        <option value="es">Español</option>
+                                        <option value="fr">Français</option>
+                                        <option value="de">Deutsch</option>
+                                        <option value="ja">日本語</option>
+                                        <option value="zh">中文</option>
+                                        <option value="ko">한국어</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="bg-teal-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-teal-700 transition-colors">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Native select dropdown</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
+            <p>Language Switcher Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+</body>
+</html>
