@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-500: oklch(0.55 0.2 250);
+            --color-primary-600: oklch(0.48 0.2 250);
+            --color-primary-700: oklch(0.4 0.2 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-gray-900">Sticky Header Navigation</h1>
+            <p class="text-gray-600 mt-2">Headers that stick to the top and transform on scroll</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Style 1: Simple Sticky Header -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 1: Simple Sticky Header</h2>
+                <p class="text-gray-600 text-sm mt-1">Basic sticky navigation that stays at top</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative">
+                <!-- Sticky Header -->
+                <header class="sticky top-0 bg-white shadow-md z-10">
+                    <div class="px-6 py-4 flex items-center justify-between">
+                        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                        <nav class="flex space-x-6">
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+                        </nav>
+                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
+                            Sign Up
+                        </button>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-6">
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Shrinking Header -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 2: Shrinking Header</h2>
+                <p class="text-gray-600 text-sm mt-1">Header that shrinks on scroll (demo simulation)</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative" id="shrinkContainer">
+                <!-- Large Header (Initial) -->
+                <header id="shrinkHeader" class="sticky top-0 bg-white shadow-md z-10 transition-all duration-300">
+                    <div class="px-6 py-6 flex flex-col items-center">
+                        <a href="#" class="text-2xl font-bold text-primary-600 mb-4">Brand Logo</a>
+                        <nav class="flex space-x-8">
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Home</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Products</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Services</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">About</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Contact</a>
+                        </nav>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-6">
+                    <p class="text-gray-600 text-sm">Scroll to see the header shrink effect simulation.</p>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Transparent to Solid Header -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 3: Transparent to Solid Header</h2>
+                <p class="text-gray-600 text-sm mt-1">Header transitions from transparent to solid on scroll</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative">
+                <!-- Hero Section -->
+                <div class="h-48 bg-gradient-to-br from-primary-500 to-purple-600 relative">
+                    <!-- Transparent Header -->
+                    <header class="sticky top-0 bg-transparent z-10">
+                        <div class="px-6 py-4 flex items-center justify-between">
+                            <a href="#" class="text-xl font-bold text-white">Brand</a>
+                            <nav class="flex space-x-6">
+                                <a href="#" class="text-white/90 hover:text-white transition-colors">Home</a>
+                                <a href="#" class="text-white/90 hover:text-white transition-colors">Products</a>
+                                <a href="#" class="text-white/90 hover:text-white transition-colors">About</a>
+                            </nav>
+                            <button class="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm backdrop-blur-sm">
+                                Get Started
+                            </button>
+                        </div>
+                    </header>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h2 class="text-3xl font-bold text-white">Hero Section</h2>
+                    </div>
+                </div>
+                <!-- Solid Header (after scroll) -->
+                <header class="sticky top-0 bg-white shadow-md z-10">
+                    <div class="px-6 py-4 flex items-center justify-between">
+                        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                        <nav class="flex space-x-6">
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                        </nav>
+                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
+                            Get Started
+                        </button>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-6">
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Hide on Scroll Down, Show on Scroll Up -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 4: Hide/Show on Scroll</h2>
+                <p class="text-gray-600 text-sm mt-1">Header hides on scroll down, shows on scroll up</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative" id="hideShowContainer">
+                <!-- Animated Header -->
+                <header id="hideShowHeader" class="sticky top-0 bg-white shadow-md z-10 transition-transform duration-300">
+                    <div class="px-6 py-4 flex items-center justify-between">
+                        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                        <nav class="flex space-x-6">
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+                        </nav>
+                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
+                            Sign Up
+                        </button>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-6">
+                    <p class="text-gray-600 text-sm">Scroll down to hide header, scroll up to show it again.</p>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 5</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Sticky Header with Sub-navigation -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 5: Sticky Header with Sub-navigation</h2>
+                <p class="text-gray-600 text-sm mt-1">Multi-level sticky header with secondary navigation</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative">
+                <!-- Primary Header -->
+                <header class="sticky top-0 z-20">
+                    <div class="bg-gray-900 text-white">
+                        <div class="px-6 py-3 flex items-center justify-between">
+                            <a href="#" class="text-xl font-bold">Brand</a>
+                            <nav class="flex space-x-6">
+                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
+                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Shop</a>
+                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
+                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
+                            </nav>
+                            <div class="flex items-center space-x-4">
+                                <button class="p-2 hover:bg-white/10 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-white/10 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Secondary Navigation -->
+                    <div class="bg-white border-b border-gray-200 shadow-sm">
+                        <div class="px-6 py-2 flex items-center space-x-6 overflow-x-auto">
+                            <a href="#" class="text-primary-600 font-medium text-sm whitespace-nowrap">All Products</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">New Arrivals</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">Best Sellers</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">Sale</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">Collections</a>
+                        </div>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-6">
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
+                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Dark Sticky Header -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 6: Dark Sticky Header</h2>
+                <p class="text-gray-600 text-sm mt-1">Dark themed sticky header with glassmorphism effect</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative bg-gray-900">
+                <!-- Dark Sticky Header -->
+                <header class="sticky top-0 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800 z-10">
+                    <div class="px-6 py-4 flex items-center justify-between">
+                        <a href="#" class="text-xl font-bold text-white">Brand</a>
+                        <nav class="flex space-x-6">
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">Products</a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                        </nav>
+                        <button class="bg-gradient-to-r from-primary-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm shadow-lg shadow-primary-500/30">
+                            Get Started
+                        </button>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-6">
+                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 1</div>
+                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 2</div>
+                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 3</div>
+                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 4</div>
+                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Sticky Header with Progress -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 7: Sticky Header with Progress</h2>
+                <p class="text-gray-600 text-sm mt-1">Sticky header with reading/scroll progress indicator</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative" id="progressContainer">
+                <!-- Sticky Header with Progress -->
+                <header class="sticky top-0 bg-white z-10">
+                    <!-- Progress Bar -->
+                    <div class="h-1 bg-gray-100">
+                        <div id="progressBar" class="h-full bg-gradient-to-r from-primary-500 to-purple-500 transition-all duration-100" style="width: 0%"></div>
+                    </div>
+                    <div class="px-6 py-4 flex items-center justify-between border-b border-gray-200">
+                        <a href="#" class="text-xl font-bold text-primary-600">Blog</a>
+                        <nav class="flex space-x-6">
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Articles</a>
+                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                        </nav>
+                        <div class="flex items-center space-x-3">
+                            <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+                <!-- Article Content -->
+                <article class="p-6">
+                    <h1 class="text-2xl font-bold text-gray-900 mb-4">Article Title Goes Here</h1>
+                    <div class="space-y-4 text-gray-600">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Style 8: Compact Sticky Header -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 8: Compact Sticky Header</h2>
+                <p class="text-gray-600 text-sm mt-1">Minimal sticky header for content-focused pages</p>
+            </div>
+            <div class="h-80 overflow-y-auto relative">
+                <!-- Compact Sticky Header -->
+                <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-10">
+                    <div class="px-6 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <a href="#" class="text-sm font-bold text-gray-900">Brand</a>
+                            <span class="text-gray-300">|</span>
+                            <span class="text-sm text-gray-500">Documentation</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-1.5 hover:bg-gray-100 rounded transition-colors">
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </button>
+                            <button class="p-1.5 hover:bg-gray-100 rounded transition-colors">
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </button>
+                            <a href="#" class="text-sm text-primary-600 hover:text-primary-700 font-medium ml-2">
+                                Sign In
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <!-- Content -->
+                <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-bold text-gray-900">Getting Started</h2>
+                    <p class="text-gray-600">Welcome to our documentation. This guide will help you get started quickly.</p>
+                    <div class="h-24 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Code Example</div>
+                    <p class="text-gray-600">Follow the steps below to set up your project.</p>
+                    <div class="h-24 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Configuration</div>
+                    <p class="text-gray-600">Once configured, you can start building your application.</p>
+                    <div class="h-24 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">More Content</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <p class="text-center text-gray-600">Sticky Header Navigation - Part of 1000 Tailwind UI Templates Collection</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hide/Show on scroll
+        let lastScrollTop = 0;
+        const hideShowContainer = document.getElementById('hideShowContainer');
+        const hideShowHeader = document.getElementById('hideShowHeader');
+
+        if (hideShowContainer && hideShowHeader) {
+            hideShowContainer.addEventListener('scroll', function() {
+                const scrollTop = hideShowContainer.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > 50) {
+                    hideShowHeader.style.transform = 'translateY(-100%)';
+                } else {
+                    hideShowHeader.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+        }
+
+        // Progress bar
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+
+        if (progressContainer && progressBar) {
+            progressContainer.addEventListener('scroll', function() {
+                const scrollTop = progressContainer.scrollTop;
+                const scrollHeight = progressContainer.scrollHeight - progressContainer.clientHeight;
+                const progress = (scrollTop / scrollHeight) * 100;
+                progressBar.style.width = progress + '%';
+            });
+        }
+
+        // Shrinking header simulation
+        const shrinkContainer = document.getElementById('shrinkContainer');
+        const shrinkHeader = document.getElementById('shrinkHeader');
+
+        if (shrinkContainer && shrinkHeader) {
+            shrinkContainer.addEventListener('scroll', function() {
+                if (shrinkContainer.scrollTop > 30) {
+                    shrinkHeader.classList.add('py-2');
+                    shrinkHeader.classList.remove('py-6');
+                    shrinkHeader.querySelector('a').classList.remove('text-2xl', 'mb-4');
+                    shrinkHeader.querySelector('a').classList.add('text-lg', 'mb-0');
+                } else {
+                    shrinkHeader.classList.remove('py-2');
+                    shrinkHeader.classList.add('py-6');
+                    shrinkHeader.querySelector('a').classList.add('text-2xl', 'mb-4');
+                    shrinkHeader.querySelector('a').classList.remove('text-lg', 'mb-0');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
