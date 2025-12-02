@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation 062 - Footer Navigation - 8 Styles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.86 0.08 260);
+            --color-primary-300: oklch(0.76 0.12 260);
+            --color-primary-400: oklch(0.64 0.16 260);
+            --color-primary-500: oklch(0.53 0.19 260);
+            --color-primary-600: oklch(0.45 0.18 260);
+            --color-primary-700: oklch(0.37 0.15 260);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-7xl mx-auto space-y-16">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Navigation 062 - Footer Navigation</h1>
+            <p class="text-gray-600">8 styles of website footer navigation</p>
+        </header>
+
+        <!-- Style 1: Multi-column Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Multi-column Footer</h2>
+            <footer class="bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-12">
+                    <div class="grid grid-cols-5 gap-8">
+                        <div class="col-span-2">
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-10 h-10 bg-primary-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">B</span>
+                                </div>
+                                <span class="font-bold text-white text-xl">Brand</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-6 max-w-xs">Making the world a better place through constructing elegant solutions.</p>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-4">Product</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Features</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Pricing</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Integrations</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Changelog</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-4">Company</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Blog</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Careers</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Press</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-4">Support</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Help Center</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Documentation</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Status</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 py-4 border-t border-gray-800 flex items-center justify-between">
+                    <p class="text-gray-500 text-sm">© 2025 Brand, Inc. All rights reserved.</p>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">Cookie Settings</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 2: Simple Centered Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Simple Centered Footer</h2>
+            <footer class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-12 text-center">
+                    <div class="flex items-center justify-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">L</span>
+                        </div>
+                        <span class="font-bold text-gray-900 text-lg">Logo</span>
+                    </div>
+                    <nav class="flex items-center justify-center gap-8 mb-8">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">Home</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">Features</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">Pricing</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">About</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">Contact</a>
+                    </nav>
+                    <div class="flex items-center justify-center gap-6 mb-8">
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2025 Company Name. All rights reserved.</p>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 3: Newsletter Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Newsletter Footer</h2>
+            <footer class="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-12">
+                    <div class="grid grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Subscribe to our newsletter</h3>
+                            <p class="text-primary-100 mb-6">Get the latest news and updates delivered to your inbox.</p>
+                            <form class="flex gap-3">
+                                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:bg-white/20">
+                                <button class="px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors">
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                        <div class="grid grid-cols-3 gap-8">
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Product</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Features</a></li>
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Pricing</a></li>
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">API</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Company</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">About</a></li>
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Blog</a></li>
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Legal</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Privacy</a></li>
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Terms</a></li>
+                                    <li><a href="#" class="text-primary-100 hover:text-white text-sm transition-colors">Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 py-4 bg-black/10 flex items-center justify-between">
+                    <p class="text-primary-100 text-sm">© 2025 Brand. All rights reserved.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-primary-100 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-primary-100 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="text-primary-100 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 4: App Download Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: App Download Footer</h2>
+            <footer class="bg-gray-900 rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-10">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-400 rounded-xl"></div>
+                                <span class="font-bold text-white text-xl">AppName</span>
+                            </div>
+                            <nav class="flex items-center gap-6">
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Features</a>
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Pricing</a>
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Support</a>
+                                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Blog</a>
+                            </nav>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg hover:bg-gray-100 transition-colors">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                                <div class="text-left">
+                                    <p class="text-[10px] text-gray-500 leading-none">Download on the</p>
+                                    <p class="text-sm font-semibold text-gray-900 leading-tight">App Store</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg hover:bg-gray-100 transition-colors">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                                <div class="text-left">
+                                    <p class="text-[10px] text-gray-500 leading-none">GET IT ON</p>
+                                    <p class="text-sm font-semibold text-gray-900 leading-tight">Google Play</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 py-4 border-t border-gray-800 flex items-center justify-between">
+                    <p class="text-gray-500 text-sm">© 2025 AppName Inc.</p>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">Privacy</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">Terms</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">Sitemap</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 5: Minimal Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Minimal Footer</h2>
+            <footer class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-6 flex items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <span class="font-semibold text-gray-900">Brand</span>
+                        <nav class="flex items-center gap-6">
+                            <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">About</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Blog</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Careers</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition-colors">Contact</a>
+                        </nav>
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2025 Brand, Inc.</p>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 6: Two-row Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Two-row Footer</h2>
+            <footer class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-8 border-b border-gray-200">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-white font-bold">S</span>
+                                </div>
+                                <span class="font-bold text-gray-900">Startup</span>
+                            </div>
+                            <p class="text-gray-500 text-sm max-w-xs">Building the future of productivity, one feature at a time.</p>
+                        </div>
+                        <div class="flex gap-16">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Product</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Features</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Pricing</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Security</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Resources</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Documentation</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Guides</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">API Reference</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Company</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">About</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Blog</a></li>
+                                    <li><a href="#" class="text-gray-500 hover:text-gray-900 text-sm">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 text-sm text-gray-500">
+                        <a href="#" class="hover:text-gray-900">Privacy Policy</a>
+                        <a href="#" class="hover:text-gray-900">Terms of Service</a>
+                        <span>© 2025 Startup Inc.</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 7: Dark Gradient Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 7: Dark Gradient Footer</h2>
+            <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl shadow-lg overflow-hidden">
+                <div class="px-8 py-12">
+                    <div class="grid grid-cols-4 gap-8 mb-12">
+                        <div>
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">T</span>
+                                </div>
+                                <span class="font-bold text-white text-xl">TechCo</span>
+                            </div>
+                            <p class="text-gray-400 text-sm">Empowering teams to build better products faster.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-4">Solutions</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Marketing</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Analytics</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Commerce</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Insights</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-4">Support</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Pricing</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Documentation</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Guides</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">API Status</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-4">Company</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">About</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Blog</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Jobs</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Partners</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pt-8 border-t border-gray-700 flex items-center justify-between">
+                        <p class="text-gray-500 text-sm">© 2025 TechCo, Inc. All rights reserved.</p>
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Style 8: Language Selector Footer -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 8: Language Selector Footer</h2>
+            <footer class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="px-8 py-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold">G</span>
+                            </div>
+                            <span class="font-bold text-gray-900">Global</span>
+                        </div>
+                        <nav class="flex items-center gap-8">
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Products</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Solutions</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Resources</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Company</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Support</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="px-8 py-4 flex items-center justify-between bg-gray-50">
+                    <div class="flex items-center gap-6">
+                        <select class="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                            <option>English (US)</option>
+                            <option>English (UK)</option>
+                            <option>Español</option>
+                            <option>Français</option>
+                            <option>Deutsch</option>
+                            <option>日本語</option>
+                            <option>中文</option>
+                        </select>
+                        <div class="flex items-center gap-4 text-sm text-gray-500">
+                            <a href="#" class="hover:text-gray-900">Privacy</a>
+                            <a href="#" class="hover:text-gray-900">Terms</a>
+                            <a href="#" class="hover:text-gray-900">Cookies</a>
+                            <a href="#" class="hover:text-gray-900">Sitemap</a>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2025 Global Inc. All rights reserved.</p>
+                </div>
+            </footer>
+        </section>
+
+    </div>
+</body>
+</html>
