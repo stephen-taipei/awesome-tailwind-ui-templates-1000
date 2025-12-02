@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-200: oklch(0.86 0.08 250);
+            --color-primary-300: oklch(0.75 0.14 250);
+            --color-primary-400: oklch(0.65 0.19 250);
+            --color-primary-500: oklch(0.55 0.24 250);
+            --color-primary-600: oklch(0.48 0.22 250);
+            --color-primary-700: oklch(0.42 0.19 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Search Navigation</h1>
+            <p class="text-gray-600">Navigation with various search bar styles</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+
+        <!-- Style 1: Centered Search Bar -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Centered Search Bar</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Search</span>
+                            </a>
+                            <div class="flex-1 max-w-xl mx-8">
+                                <div class="relative">
+                                    <input type="text" placeholder="Search anything..." class="w-full pl-10 pr-4 py-2.5 bg-gray-100 border-0 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:bg-white transition-all">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Sign in</a>
+                                <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Page Content</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Expandable Search -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Expandable Search Icon</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Expand</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-emerald-600 font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Products</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">About</a>
+                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="relative group">
+                                    <input type="text" placeholder="Search..." class="w-0 group-focus-within:w-64 pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300 opacity-0 group-focus-within:opacity-100">
+                                    <button class="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a href="#" class="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click search icon to expand</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Search with Filters -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Search with Category Filter</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Filter</span>
+                            </a>
+                            <div class="flex-1 max-w-2xl mx-8">
+                                <div class="flex items-center bg-gray-100 rounded-xl overflow-hidden">
+                                    <select class="px-4 py-2.5 bg-transparent border-r border-gray-200 text-sm text-gray-600 focus:outline-none cursor-pointer">
+                                        <option>All Categories</option>
+                                        <option>Products</option>
+                                        <option>Articles</option>
+                                        <option>Users</option>
+                                    </select>
+                                    <input type="text" placeholder="Search..." class="flex-1 px-4 py-2.5 bg-transparent text-sm focus:outline-none">
+                                    <button class="px-4 py-2.5 bg-violet-600 text-white hover:bg-violet-700 transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Search with category dropdown</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Search with Suggestions Dropdown -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Search with Suggestions</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Suggest</span>
+                            </a>
+                            <div class="flex-1 max-w-xl mx-8">
+                                <div class="relative group">
+                                    <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                    <!-- Suggestions Dropdown -->
+                                    <div class="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+                                        <div class="p-3 border-b border-gray-100">
+                                            <p class="text-xs font-medium text-gray-500 uppercase">Recent Searches</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-rose-50 rounded-lg transition-colors">
+                                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Wireless headphones</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-rose-50 rounded-lg transition-colors">
+                                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">Smart watch</span>
+                                            </a>
+                                        </div>
+                                        <div class="p-3 border-t border-gray-100">
+                                            <p class="text-xs font-medium text-gray-500 uppercase">Popular</p>
+                                        </div>
+                                        <div class="p-2">
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-rose-50 rounded-lg transition-colors">
+                                                <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">iPhone 15 Pro</span>
+                                                <span class="ml-auto text-xs text-rose-500 font-medium">Trending</span>
+                                            </a>
+                                            <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-rose-50 rounded-lg transition-colors">
+                                                <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                                </svg>
+                                                <span class="text-sm text-gray-700">MacBook Air M3</span>
+                                                <span class="ml-auto text-xs text-rose-500 font-medium">Trending</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                    </svg>
+                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Click search box to see suggestions</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Command Palette Style Search -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Command Palette Style (Cmd+K)</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Command</span>
+                            </a>
+                            <div class="hidden md:flex items-center gap-6">
+                                <a href="#" class="text-cyan-600 font-medium">Docs</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">API</a>
+                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Examples</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="flex items-center gap-3 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-500 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                    <span>Search...</span>
+                                    <kbd class="px-2 py-0.5 bg-white rounded border border-gray-300 text-xs font-mono">⌘K</kbd>
+                                </button>
+                                <a href="#" class="bg-cyan-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-cyan-700 transition-colors">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Press Cmd+K style search trigger</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Full-Width Search Header -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Full-Width Search Header</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gradient-to-r from-amber-500 to-orange-500">
+                    <div class="max-w-7xl mx-auto px-6 py-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                    <span class="text-amber-600 font-bold">S</span>
+                                </div>
+                                <span class="font-bold text-xl text-white">Shop</span>
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Help</a>
+                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Orders</a>
+                                <button class="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors relative">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                    </svg>
+                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-white text-amber-600 text-xs font-bold rounded-full flex items-center justify-center">2</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="Search for products, brands, and more..." class="w-full pl-12 pr-4 py-3.5 bg-white rounded-xl text-sm focus:outline-none focus:ring-4 focus:ring-white/30">
+                            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">E-commerce style search</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 7: Dark Theme Search -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Dark Theme Search</h2>
+            <div class="rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg"></div>
+                                <span class="font-bold text-xl text-white">Dark</span>
+                            </a>
+                            <div class="flex-1 max-w-md mx-8">
+                                <div class="relative">
+                                    <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                    </svg>
+                                </button>
+                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gray-800 flex items-center justify-center">
+                    <span class="text-gray-500">Page Content</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 8: Voice Search Navigation -->
+        <section>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Voice Search Navigation</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <nav class="bg-white border-b">
+                    <div class="max-w-7xl mx-auto px-6">
+                        <div class="flex items-center justify-between h-16">
+                            <a href="#" class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg"></div>
+                                <span class="font-bold text-xl text-gray-900">Voice</span>
+                            </a>
+                            <div class="flex-1 max-w-xl mx-8">
+                                <div class="relative flex items-center">
+                                    <input type="text" placeholder="Search or speak..." class="w-full pl-10 pr-24 py-2.5 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent">
+                                    <svg class="absolute left-3 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                    <div class="absolute right-2 flex items-center gap-1">
+                                        <button class="p-2 text-gray-400 hover:text-teal-600 hover:bg-teal-50 rounded-full transition-colors">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="p-2 text-gray-400 hover:text-teal-600 hover:bg-teal-50 rounded-full transition-colors">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="text-gray-600 hover:text-teal-600 transition-colors">Sign in</a>
+                                <a href="#" class="bg-teal-600 text-white px-4 py-2 rounded-full font-medium hover:bg-teal-700 transition-colors">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                    <span class="text-gray-400">Search with voice and camera options</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
+            <p>Search Navigation - Part of 1000 Tailwind UI Templates</p>
+        </div>
+    </footer>
+</body>
+</html>
