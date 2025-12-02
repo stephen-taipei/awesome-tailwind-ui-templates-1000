@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selector Navigation - Tailwind UI Templates</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-500: oklch(0.55 0.2 250);
+            --color-primary-600: oklch(0.48 0.2 250);
+            --color-primary-700: oklch(0.4 0.2 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-gray-900">Language Selector Navigation</h1>
+            <p class="text-gray-600 mt-2">Navigation components with language/locale selection capabilities</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Style 1: Dropdown Language Selector -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 1: Dropdown Language Selector</h2>
+                <p class="text-gray-600 text-sm mt-1">Classic dropdown with flag icons</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="bg-white shadow-md rounded-lg">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <div class="flex items-center justify-between h-16">
+                            <!-- Logo -->
+                            <div class="flex items-center space-x-8">
+                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                                <div class="hidden md:flex space-x-6">
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+                                </div>
+                            </div>
+
+                            <!-- Language Dropdown -->
+                            <div class="relative" id="langDropdown1">
+                                <button class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="toggleDropdown('langMenu1')">
+                                    <span class="text-xl">🇺🇸</span>
+                                    <span class="text-sm text-gray-700">English</span>
+                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <div id="langMenu1" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100 bg-primary-50">
+                                        <span class="text-xl">🇺🇸</span>
+                                        <span class="text-sm text-gray-700">English</span>
+                                        <svg class="w-4 h-4 text-primary-500 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-xl">🇪🇸</span>
+                                        <span class="text-sm text-gray-700">Español</span>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-xl">🇫🇷</span>
+                                        <span class="text-sm text-gray-700">Français</span>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-xl">🇩🇪</span>
+                                        <span class="text-sm text-gray-700">Deutsch</span>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-xl">🇯🇵</span>
+                                        <span class="text-sm text-gray-700">日本語</span>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-xl">🇨🇳</span>
+                                        <span class="text-sm text-gray-700">中文</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 2: Globe Icon with Flyout -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 2: Globe Icon with Flyout</h2>
+                <p class="text-gray-600 text-sm mt-1">Compact globe icon that opens a larger selection panel</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="bg-white shadow-md rounded-lg">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center space-x-8">
+                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                                <div class="hidden md:flex space-x-6">
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <!-- Globe Icon Trigger -->
+                                <div class="relative" id="langDropdown2">
+                                    <button class="p-2 rounded-full hover:bg-gray-100 transition-colors" onclick="toggleDropdown('langMenu2')">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                        </svg>
+                                    </button>
+                                    <!-- Flyout Panel -->
+                                    <div id="langMenu2" class="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 p-4 hidden z-50">
+                                        <h3 class="text-sm font-semibold text-gray-900 mb-3">Select Language & Region</h3>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 bg-primary-50 border border-primary-200">
+                                                <span>🇺🇸</span>
+                                                <div>
+                                                    <div class="text-sm font-medium text-gray-900">English</div>
+                                                    <div class="text-xs text-gray-500">United States</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
+                                                <span>🇬🇧</span>
+                                                <div>
+                                                    <div class="text-sm font-medium text-gray-900">English</div>
+                                                    <div class="text-xs text-gray-500">United Kingdom</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
+                                                <span>🇪🇸</span>
+                                                <div>
+                                                    <div class="text-sm font-medium text-gray-900">Español</div>
+                                                    <div class="text-xs text-gray-500">España</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
+                                                <span>🇲🇽</span>
+                                                <div>
+                                                    <div class="text-sm font-medium text-gray-900">Español</div>
+                                                    <div class="text-xs text-gray-500">México</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
+                                                <span>🇫🇷</span>
+                                                <div>
+                                                    <div class="text-sm font-medium text-gray-900">Français</div>
+                                                    <div class="text-xs text-gray-500">France</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
+                                                <span>🇩🇪</span>
+                                                <div>
+                                                    <div class="text-sm font-medium text-gray-900">Deutsch</div>
+                                                    <div class="text-xs text-gray-500">Deutschland</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mt-4 pt-4 border-t border-gray-200">
+                                            <a href="#" class="text-sm text-primary-600 hover:text-primary-700">View all regions →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
+                                    Sign In
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 3: Inline Language Tabs -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 3: Inline Language Tabs</h2>
+                <p class="text-gray-600 text-sm mt-1">Language codes displayed as inline tabs</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="bg-white shadow-md rounded-lg">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center space-x-8">
+                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                                <div class="hidden md:flex space-x-6">
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                                </div>
+                            </div>
+
+                            <!-- Language Tabs -->
+                            <div class="flex items-center">
+                                <div class="flex bg-gray-100 rounded-lg p-1">
+                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md bg-white text-primary-600 shadow-sm">EN</button>
+                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">ES</button>
+                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">FR</button>
+                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">DE</button>
+                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">JA</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 4: Full Width Language Bar -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 4: Full Width Language Bar</h2>
+                <p class="text-gray-600 text-sm mt-1">Top bar with language selection above main navigation</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <!-- Language Bar -->
+                    <div class="bg-gray-900 text-white">
+                        <div class="max-w-7xl mx-auto px-4">
+                            <div class="flex items-center justify-between h-10 text-sm">
+                                <div class="flex items-center space-x-4">
+                                    <span class="text-gray-400">📍 Shipping to:</span>
+                                    <div class="relative" id="langDropdown4">
+                                        <button class="flex items-center space-x-1 hover:text-primary-400 transition-colors" onclick="toggleDropdown('langMenu4')">
+                                            <span>🇺🇸</span>
+                                            <span>United States (USD)</span>
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </button>
+                                        <div id="langMenu4" class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
+                                            <div class="px-4 py-2 border-b border-gray-100">
+                                                <span class="text-xs font-semibold text-gray-500 uppercase">Region & Currency</span>
+                                            </div>
+                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700 bg-primary-50">
+                                                <div class="flex items-center space-x-2">
+                                                    <span>🇺🇸</span>
+                                                    <span>United States</span>
+                                                </div>
+                                                <span class="text-gray-500">USD $</span>
+                                            </a>
+                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700">
+                                                <div class="flex items-center space-x-2">
+                                                    <span>🇪🇺</span>
+                                                    <span>European Union</span>
+                                                </div>
+                                                <span class="text-gray-500">EUR €</span>
+                                            </a>
+                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700">
+                                                <div class="flex items-center space-x-2">
+                                                    <span>🇬🇧</span>
+                                                    <span>United Kingdom</span>
+                                                </div>
+                                                <span class="text-gray-500">GBP £</span>
+                                            </a>
+                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700">
+                                                <div class="flex items-center space-x-2">
+                                                    <span>🇯🇵</span>
+                                                    <span>Japan</span>
+                                                </div>
+                                                <span class="text-gray-500">JPY ¥</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-6">
+                                    <a href="#" class="hover:text-primary-400 transition-colors">Help</a>
+                                    <a href="#" class="hover:text-primary-400 transition-colors">Track Order</a>
+                                    <div class="relative" id="langDropdown4b">
+                                        <button class="flex items-center space-x-1 hover:text-primary-400 transition-colors" onclick="toggleDropdown('langMenu4b')">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                            </svg>
+                                            <span>English</span>
+                                        </button>
+                                        <div id="langMenu4b" class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
+                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 bg-primary-50">English</a>
+                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Español</a>
+                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Français</a>
+                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Deutsch</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main Navigation -->
+                    <nav class="bg-white">
+                        <div class="max-w-7xl mx-auto px-4">
+                            <div class="flex items-center justify-between h-16">
+                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                                <div class="flex space-x-6">
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Shop</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Categories</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Sale</a>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button class="p-2 hover:bg-gray-100 rounded-full">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded-full">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Split Button Language Selector -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 5: Split Button Language Selector</h2>
+                <p class="text-gray-600 text-sm mt-1">Grouped button with current selection and dropdown</p>
+            </div>
+            <div class="p-6 bg-gray-50">
+                <nav class="bg-white shadow-md rounded-lg">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center space-x-8">
+                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+                                <div class="hidden md:flex space-x-6">
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
+                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                                </div>
+                            </div>
+
+                            <!-- Split Button -->
+                            <div class="relative inline-flex" id="langDropdown5">
+                                <button class="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-l-lg border-r border-gray-300 transition-colors">
+                                    <span class="text-lg">🇺🇸</span>
+                                    <span class="text-sm font-medium text-gray-700">EN</span>
+                                </button>
+                                <button class="px-2 py-2 bg-gray-100 hover:bg-gray-200 rounded-r-lg transition-colors" onclick="toggleDropdown('langMenu5')">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </button>
+                                <div id="langMenu5" class="absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
+                                    <div class="px-4 py-2 border-b border-gray-100">
+                                        <span class="text-xs font-semibold text-gray-500 uppercase">Select Language</span>
+                                    </div>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100 bg-primary-50">
+                                        <span class="text-lg">🇺🇸</span>
+                                        <div class="flex-1">
+                                            <div class="text-sm font-medium text-gray-900">English</div>
+                                            <div class="text-xs text-gray-500">EN-US</div>
+                                        </div>
+                                        <svg class="w-4 h-4 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-lg">🇪🇸</span>
+                                        <div class="flex-1">
+                                            <div class="text-sm font-medium text-gray-900">Español</div>
+                                            <div class="text-xs text-gray-500">ES</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-lg">🇫🇷</span>
+                                        <div class="flex-1">
+                                            <div class="text-sm font-medium text-gray-900">Français</div>
+                                            <div class="text-xs text-gray-500">FR</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-lg">🇩🇪</span>
+                                        <div class="flex-1">
+                                            <div class="text-sm font-medium text-gray-900">Deutsch</div>
+                                            <div class="text-xs text-gray-500">DE</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
+                                        <span class="text-lg">🇯🇵</span>
+                                        <div class="flex-1">
+                                            <div class="text-sm font-medium text-gray-900">日本語</div>
+                                            <div class="text-xs text-gray-500">JA</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 6: Dark Mode Language Navigation -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-800">Style 6: Dark Mode Language Navigation</h2>
+                <p class="text-gray-600 text-sm mt-1">Dark themed navigation with glowing language selector</p>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg">
+                <nav class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl">
+                    <div class="max-w-7xl mx-auto px-4">
+                        <div class="flex items-center justify-between h-16">
+                            <div class="flex items-center space-x-8">
+                                <a href="#" class="text-xl font-bold text-white">Brand</a>
+                                <div class="hidden md:flex space-x-6">
+                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Products</a>
+                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
+                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <!-- Glowing Language Selector -->
+                                <div class="relative" id="langDropdown6">
+                                    <button class="flex items-center space-x-2 px-4 py-2 bg-gray-700/50 hover:bg-gray-700 rounded-lg border border-gray-600 transition-all hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/20" onclick="toggleDropdown('langMenu6')">
+                                        <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                        </svg>
+                                        <span class="text-sm text-gray-200">EN</span>
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div id="langMenu6" class="absolute right-0 mt-2 w-56 bg-gray-800 rounded-xl shadow-xl border border-gray-700 py-2 hidden z-50">
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-200 bg-primary-900/30 border-l-2 border-primary-500">
+                                            <span class="text-lg">🇺🇸</span>
+                                            <span class="text-sm">English (US)</span>
+                                            <svg class="w-4 h-4 text-primary-400 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇬🇧</span>
+                                            <span class="text-sm">English (UK)</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇪🇸</span>
+                                            <span class="text-sm">Español</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇫🇷</span>
+                                            <span class="text-sm">Français</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇩🇪</span>
+                                            <span class="text-sm">Deutsch</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇯🇵</span>
+                                            <span class="text-sm">日本語</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇨🇳</span>
+                                            <span class="text-sm">中文简体</span>
+                                        </a>
+                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
+                                            <span class="text-lg">🇹🇼</span>
+                                            <span class="text-sm">中文繁體</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm shadow-lg shadow-primary-500/30">
+                                    Get Started
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <p class="text-center text-gray-600">Language Selector Navigation - Part of 1000 Tailwind UI Templates Collection</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(menuId) {
+            const menu = document.getElementById(menuId);
+            const allMenus = document.querySelectorAll('[id^="langMenu"]');
+
+            // Close all other dropdowns
+            allMenus.forEach(m => {
+                if (m.id !== menuId) {
+                    m.classList.add('hidden');
+                }
+            });
+
+            // Toggle current dropdown
+            menu.classList.toggle('hidden');
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdowns = document.querySelectorAll('[id^="langDropdown"]');
+            let clickedInside = false;
+
+            dropdowns.forEach(dropdown => {
+                if (dropdown.contains(e.target)) {
+                    clickedInside = true;
+                }
+            });
+
+            if (!clickedInside) {
+                document.querySelectorAll('[id^="langMenu"]').forEach(menu => {
+                    menu.classList.add('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
