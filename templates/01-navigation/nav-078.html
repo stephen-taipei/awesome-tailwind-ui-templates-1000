@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radial Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 260);
+      --color-primary-100: oklch(0.93 0.04 260);
+      --color-primary-200: oklch(0.86 0.08 260);
+      --color-primary-300: oklch(0.76 0.12 260);
+      --color-primary-400: oklch(0.64 0.17 260);
+      --color-primary-500: oklch(0.53 0.20 260);
+      --color-primary-600: oklch(0.44 0.18 260);
+      --color-primary-700: oklch(0.37 0.15 260);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+  <div class="max-w-6xl mx-auto space-y-16">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Radial Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Simple Radial Menu -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">1. Simple Radial Menu</h2>
+      <div class="bg-gray-200 rounded-xl h-80 relative flex items-center justify-center">
+        <div class="relative">
+          <!-- Center button -->
+          <button class="w-14 h-14 bg-primary-500 text-white rounded-full flex items-center justify-center shadow-lg z-10 relative">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+          </button>
+          <!-- Radial items -->
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="top: -60px; left: 50%; transform: translateX(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="top: -42px; right: -42px; transform: translateX(50%) translateY(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="top: 50%; right: -60px; transform: translateY(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="bottom: -42px; right: -42px; transform: translateX(50%) translateY(50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="bottom: -60px; left: 50%; transform: translateX(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="bottom: -42px; left: -42px; transform: translateX(-50%) translateY(50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="top: 50%; left: -60px; transform: translateY(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center shadow-md hover:bg-primary-50 hover:text-primary-600" style="top: -42px; left: -42px; transform: translateX(-50%) translateY(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 2: Quarter Circle Menu -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">2. Quarter Circle Menu</h2>
+      <div class="bg-gray-800 rounded-xl h-80 relative overflow-hidden">
+        <div class="absolute bottom-4 left-4">
+          <!-- Center button -->
+          <button class="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center shadow-lg z-10 relative">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <!-- Quarter arc items -->
+          <a href="#" class="absolute w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="top: -50px; left: 0;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="top: -35px; left: 35px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="top: 0; left: 50px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </a>
+        </div>
+        <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-600">Page Content</span>
+      </div>
+    </section>
+
+    <!-- Style 3: Pie Menu -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">3. Pie Menu</h2>
+      <div class="bg-gray-200 rounded-xl h-80 relative flex items-center justify-center">
+        <div class="relative w-48 h-48">
+          <!-- Pie segments using conic gradient simulation -->
+          <div class="absolute inset-0 rounded-full overflow-hidden">
+            <a href="#" class="absolute w-1/2 h-1/2 top-0 left-0 bg-primary-500 hover:bg-primary-600 flex items-center justify-center origin-bottom-right rotate-0">
+              <svg class="w-6 h-6 text-white -rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </a>
+            <a href="#" class="absolute w-1/2 h-1/2 top-0 right-0 bg-blue-500 hover:bg-blue-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </a>
+            <a href="#" class="absolute w-1/2 h-1/2 bottom-0 right-0 bg-green-500 hover:bg-green-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </a>
+            <a href="#" class="absolute w-1/2 h-1/2 bottom-0 left-0 bg-purple-500 hover:bg-purple-600 flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </a>
+          </div>
+          <!-- Center circle -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 4: Ring Navigation -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">4. Ring Navigation</h2>
+      <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl h-80 relative flex items-center justify-center">
+        <div class="relative">
+          <!-- Outer ring -->
+          <div class="w-48 h-48 rounded-full border-2 border-primary-500/30 flex items-center justify-center">
+            <!-- Inner ring with items -->
+            <div class="w-32 h-32 rounded-full border-2 border-primary-500/50 relative">
+              <a href="#" class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+              </a>
+              <a href="#" class="absolute top-1/2 -right-3 -translate-y-1/2 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </a>
+              <a href="#" class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </a>
+              <a href="#" class="absolute top-1/2 -left-3 -translate-y-1/2 w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </a>
+              <!-- Center -->
+              <div class="absolute inset-4 bg-gray-800 rounded-full flex items-center justify-center">
+                <span class="text-primary-400 font-bold">MENU</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Orbit Navigation -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">5. Orbit Navigation</h2>
+      <div class="bg-primary-50 rounded-xl h-80 relative flex items-center justify-center">
+        <div class="relative">
+          <!-- Center -->
+          <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center shadow-xl z-10 relative">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <!-- Orbit ring -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-2 border-dashed border-primary-300"></div>
+          <!-- Orbiting items -->
+          <a href="#" class="absolute w-12 h-12 bg-white text-primary-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="top: -80px; left: 50%; transform: translateX(-50%);">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="top: 50%; right: -80px; transform: translateY(-50%);">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-12 h-12 bg-white text-green-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="bottom: -80px; left: 50%; transform: translateX(-50%);">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-12 h-12 bg-white text-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="top: 50%; left: -80px; transform: translateY(-50%);">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 6: Semicircle Navigation -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">6. Semicircle Navigation</h2>
+      <div class="bg-gray-200 rounded-xl h-80 relative overflow-hidden">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2">
+          <!-- Semicircle background -->
+          <div class="w-64 h-32 bg-gray-800 rounded-t-full flex items-start justify-center pt-4">
+            <!-- Center icon -->
+            <button class="w-10 h-10 bg-primary-500 text-white rounded-full flex items-center justify-center z-10">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Arc items -->
+          <a href="#" class="absolute w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="bottom: 90px; left: 15px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="bottom: 110px; left: 55px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="bottom: 120px; left: 50%; transform: translateX(-50%);">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="bottom: 110px; right: 55px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform" style="bottom: 90px; right: 15px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </a>
+        </div>
+        <span class="absolute top-1/3 left-1/2 -translate-x-1/2 text-gray-400">Page Content</span>
+      </div>
+    </section>
+
+    <!-- Style 7: Dial Navigation -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">7. Dial Navigation</h2>
+      <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl h-80 relative flex items-center justify-center">
+        <div class="relative">
+          <!-- Outer dial -->
+          <div class="w-52 h-52 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 shadow-2xl flex items-center justify-center p-2">
+            <!-- Tick marks ring -->
+            <div class="w-full h-full rounded-full border border-slate-600 relative flex items-center justify-center">
+              <!-- Nav items -->
+              <a href="#" class="absolute w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 text-white rounded-full flex flex-col items-center justify-center shadow-lg hover:scale-110 transition-transform" style="top: 5px; left: 50%; transform: translateX(-50%);">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <span class="text-[8px] mt-0.5">Home</span>
+              </a>
+              <a href="#" class="absolute w-12 h-12 bg-slate-700 text-slate-300 rounded-full flex flex-col items-center justify-center hover:bg-slate-600 transition-colors" style="top: 50%; right: 5px; transform: translateY(-50%);">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <span class="text-[8px] mt-0.5">Search</span>
+              </a>
+              <a href="#" class="absolute w-12 h-12 bg-slate-700 text-slate-300 rounded-full flex flex-col items-center justify-center hover:bg-slate-600 transition-colors" style="bottom: 5px; left: 50%; transform: translateX(-50%);">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span class="text-[8px] mt-0.5">Profile</span>
+              </a>
+              <a href="#" class="absolute w-12 h-12 bg-slate-700 text-slate-300 rounded-full flex flex-col items-center justify-center hover:bg-slate-600 transition-colors" style="top: 50%; left: 5px; transform: translateY(-50%);">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span class="text-[8px] mt-0.5">Settings</span>
+              </a>
+              <!-- Center display -->
+              <div class="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center border-4 border-slate-600">
+                <span class="text-primary-400 font-mono text-xs">NAVIGATE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 8: Floating Radial FAB -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">8. Floating Radial FAB</h2>
+      <div class="bg-gray-100 rounded-xl h-80 relative overflow-hidden">
+        <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-300">Page Content</span>
+        <div class="absolute bottom-6 right-6">
+          <!-- Radial items (shown on hover/click) -->
+          <a href="#" class="absolute w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="bottom: 55px; right: 55px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="bottom: 70px; right: 0;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+            </svg>
+          </a>
+          <a href="#" class="absolute w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" style="bottom: 0; right: 70px;">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </a>
+          <!-- Main FAB button -->
+          <button class="relative w-14 h-14 bg-primary-500 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-primary-600 transition-colors z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
