@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food & Restaurant Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Food Delivery App -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 1: Food Delivery App</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+              <span class="text-white text-xl">🍔</span>
+            </div>
+            <span class="text-xl font-bold text-gray-900">FoodDash</span>
+          </a>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full">
+            <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span class="text-gray-700 text-sm font-medium">123 Main Street</span>
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+        <div class="flex-1 max-w-md mx-6">
+          <div class="relative">
+            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" placeholder="Search for restaurants or dishes..." class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors relative">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 text-white text-xs rounded-full flex items-center justify-center">3</span>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Sign In</a>
+          <a href="#" class="px-5 py-2 bg-orange-500 text-white text-sm font-semibold rounded-full hover:bg-orange-600 transition-colors">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Fine Dining Restaurant -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 2: Fine Dining Restaurant</h2>
+    <nav class="bg-gray-900 rounded-2xl shadow-lg p-6">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-serif text-white tracking-wide">La <span class="text-amber-400 italic">Maison</span></a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-white uppercase text-xs tracking-widest font-medium">Menu</a>
+          <a href="#" class="text-gray-400 hover:text-white uppercase text-xs tracking-widest transition-colors">Wine List</a>
+          <a href="#" class="text-gray-400 hover:text-white uppercase text-xs tracking-widest transition-colors">Private Events</a>
+          <a href="#" class="text-gray-400 hover:text-white uppercase text-xs tracking-widest transition-colors">Our Story</a>
+          <a href="#" class="text-gray-400 hover:text-white uppercase text-xs tracking-widest transition-colors">Contact</a>
+        </div>
+        <a href="#" class="px-6 py-2 border border-amber-400 text-amber-400 text-sm font-medium hover:bg-amber-400 hover:text-gray-900 transition-colors">Reserve a Table</a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Fast Food Chain -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 3: Fast Food Chain</h2>
+    <nav class="bg-red-600 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+              <span class="text-red-600 font-black text-2xl">B</span>
+            </div>
+            <span class="text-white font-black text-2xl">BURGER</span>
+          </a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-white font-bold text-sm">Menu</a>
+            <a href="#" class="text-red-100 hover:text-white font-bold text-sm transition-colors">Deals</a>
+            <a href="#" class="text-red-100 hover:text-white font-bold text-sm transition-colors">Locations</a>
+            <a href="#" class="text-red-100 hover:text-white font-bold text-sm transition-colors">Rewards</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-2 px-4 py-2 bg-yellow-400 text-red-600 font-bold rounded-full hover:bg-yellow-300 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span>Find Store</span>
+          </a>
+          <a href="#" class="px-5 py-2 bg-white text-red-600 font-bold rounded-full hover:bg-red-50 transition-colors">Order Now</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Recipe Website -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 4: Recipe Website</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <span class="text-3xl">👨‍🍳</span>
+            <span class="text-xl font-bold text-gray-900">Tasty<span class="text-green-500">Recipes</span></span>
+          </a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-green-600 font-medium text-sm">Recipes</a>
+            <a href="#" class="text-gray-500 hover:text-green-600 transition-colors text-sm">Meal Plans</a>
+            <a href="#" class="text-gray-500 hover:text-green-600 transition-colors text-sm">Videos</a>
+            <a href="#" class="text-gray-500 hover:text-green-600 transition-colors text-sm">Tips & Tricks</a>
+            <a href="#" class="text-gray-500 hover:text-green-600 transition-colors text-sm">Shop</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" placeholder="Search recipes..." class="w-48 pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+          </div>
+          <a href="#" class="p-2 text-gray-400 hover:text-red-500 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </a>
+          <a href="#" class="px-4 py-2 bg-green-500 text-white text-sm font-semibold rounded-full hover:bg-green-600 transition-colors">Subscribe</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Coffee Shop -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 5: Coffee Shop</h2>
+    <nav class="bg-amber-900 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+              <span class="text-2xl">☕</span>
+            </div>
+            <span class="text-xl font-bold text-amber-100">Bean & Brew</span>
+          </a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-amber-100 font-medium text-sm">Menu</a>
+            <a href="#" class="text-amber-300 hover:text-amber-100 transition-colors text-sm">Locations</a>
+            <a href="#" class="text-amber-300 hover:text-amber-100 transition-colors text-sm">Our Coffee</a>
+            <a href="#" class="text-amber-300 hover:text-amber-100 transition-colors text-sm">Gift Cards</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-2 text-amber-300 hover:text-amber-100 transition-colors text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span>Find a Store</span>
+          </a>
+          <a href="#" class="px-5 py-2 bg-amber-100 text-amber-900 text-sm font-semibold rounded-full hover:bg-white transition-colors">Order Ahead</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Grocery Delivery -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 6: Grocery Delivery</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <span class="text-xl font-bold text-gray-900">FreshCart</span>
+          </a>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-green-100 rounded-full">
+            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span class="text-green-700 text-sm font-medium">Deliver to 10001</span>
+          </div>
+        </div>
+        <div class="flex-1 max-w-xl mx-6">
+          <div class="relative">
+            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-2 p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors relative">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <span class="text-sm font-medium">$42.50</span>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-green-500 text-white text-xs rounded-full flex items-center justify-center">5</span>
+          </a>
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=grocery1" alt="Profile" class="w-9 h-9 rounded-full border-2 border-green-500">
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Food Blog -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 7: Food Blog</h2>
+    <nav class="bg-rose-50 rounded-2xl shadow-lg p-6">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-3xl font-serif text-rose-900">Delicious <span class="italic text-rose-500">Bites</span></a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-rose-900 font-medium">Recipes</a>
+          <a href="#" class="text-rose-400 hover:text-rose-900 transition-colors">Travel</a>
+          <a href="#" class="text-rose-400 hover:text-rose-900 transition-colors">Lifestyle</a>
+          <a href="#" class="text-rose-400 hover:text-rose-900 transition-colors">About</a>
+          <a href="#" class="text-rose-400 hover:text-rose-900 transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-rose-400 hover:text-rose-900 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4z"/><circle cx="18.406" cy="5.594" r="1.44"/></svg>
+          </a>
+          <a href="#" class="text-rose-400 hover:text-rose-900 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+          </a>
+          <a href="#" class="px-5 py-2 bg-rose-500 text-white text-sm font-medium rounded-full hover:bg-rose-600 transition-colors">Newsletter</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Restaurant Reservation -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 8: Restaurant Reservation</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="text-xl font-bold text-gray-900">OpenTable</span>
+          </a>
+        </div>
+        <div class="flex-1 max-w-2xl mx-6">
+          <div class="flex items-center bg-gray-100 rounded-full p-1">
+            <div class="flex items-center gap-2 px-4 py-2 flex-1 border-r border-gray-300">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <input type="text" placeholder="Dec 3, 2025" class="bg-transparent text-sm focus:outline-none w-24">
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2 flex-1 border-r border-gray-300">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <input type="text" placeholder="7:00 PM" class="bg-transparent text-sm focus:outline-none w-20">
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2 flex-1 border-r border-gray-300">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              <input type="text" placeholder="2 guests" class="bg-transparent text-sm focus:outline-none w-20">
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2 flex-1">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+              <input type="text" placeholder="Location or cuisine" class="bg-transparent text-sm focus:outline-none w-32">
+            </div>
+            <button class="px-6 py-2 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 transition-colors">Find</button>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Sign In</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
