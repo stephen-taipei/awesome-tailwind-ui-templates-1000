@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Sticky Top Anchor -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Sticky Top Anchor</h2>
+    <div class="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden">
+      <nav class="bg-white border-b border-gray-200 px-6 py-3 sticky top-0">
+        <ul class="flex items-center gap-6">
+          <li><a href="#overview" class="text-primary-600 font-medium border-b-2 border-primary-600 pb-3">Overview</a></li>
+          <li><a href="#features" class="text-gray-600 hover:text-primary-600 pb-3">Features</a></li>
+          <li><a href="#pricing" class="text-gray-600 hover:text-primary-600 pb-3">Pricing</a></li>
+          <li><a href="#faq" class="text-gray-600 hover:text-primary-600 pb-3">FAQ</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-primary-600 pb-3">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="p-6">
+        <p class="text-gray-600">Page content with sections...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 2: Sidebar Anchor -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Sidebar Anchor</h2>
+    <div class="flex rounded-lg overflow-hidden border border-gray-200">
+      <nav class="w-56 bg-gray-50 border-r border-gray-200 p-4">
+        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">On This Page</h3>
+        <ul class="space-y-1">
+          <li>
+            <a href="#intro" class="block px-3 py-2 text-sm text-primary-600 bg-primary-50 rounded-lg font-medium border-l-2 border-primary-600">Introduction</a>
+          </li>
+          <li>
+            <a href="#getting-started" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg">Getting Started</a>
+          </li>
+          <li>
+            <a href="#installation" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg pl-6">Installation</a>
+          </li>
+          <li>
+            <a href="#configuration" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg pl-6">Configuration</a>
+          </li>
+          <li>
+            <a href="#api" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg">API Reference</a>
+          </li>
+          <li>
+            <a href="#examples" class="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg">Examples</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="flex-1 bg-white p-6">
+        <p class="text-gray-600">Documentation content...</p>
+      </main>
+    </div>
+  </section>
+
+  <!-- Style 3: Floating Table of Contents -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Floating Table of Contents</h2>
+    <div class="relative bg-white shadow-sm border border-gray-200 rounded-lg p-6 min-h-[300px]">
+      <p class="text-gray-600">Article content goes here...</p>
+
+      <nav class="absolute right-6 top-6 w-48 bg-white border border-gray-200 rounded-lg shadow-lg p-4">
+        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Contents</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="#section1" class="text-primary-600 font-medium flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-primary-600 rounded-full"></span>
+              Introduction
+            </a>
+          </li>
+          <li>
+            <a href="#section2" class="text-gray-600 hover:text-primary-600 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+              Background
+            </a>
+          </li>
+          <li>
+            <a href="#section3" class="text-gray-600 hover:text-primary-600 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+              Methods
+            </a>
+          </li>
+          <li>
+            <a href="#section4" class="text-gray-600 hover:text-primary-600 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+              Results
+            </a>
+          </li>
+          <li>
+            <a href="#section5" class="text-gray-600 hover:text-primary-600 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
+              Conclusion
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 4: Progress Indicator -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Progress Indicator</h2>
+    <div class="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden">
+      <nav class="bg-gray-50 border-b border-gray-200 px-6 py-3">
+        <div class="flex items-center justify-between">
+          <ul class="flex items-center gap-6">
+            <li><a href="#s1" class="text-primary-600 font-medium">Chapter 1</a></li>
+            <li><a href="#s2" class="text-gray-600 hover:text-primary-600">Chapter 2</a></li>
+            <li><a href="#s3" class="text-gray-600 hover:text-primary-600">Chapter 3</a></li>
+          </ul>
+          <span class="text-sm text-gray-500">35% complete</span>
+        </div>
+        <div class="mt-3 h-1 bg-gray-200 rounded-full">
+          <div class="h-full bg-primary-500 rounded-full" style="width: 35%"></div>
+        </div>
+      </nav>
+      <div class="p-6">
+        <p class="text-gray-600">Long-form content with progress...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 5: Pill Anchors -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Pill Anchors</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ul class="flex items-center gap-2 flex-wrap">
+        <li>
+          <a href="#all" class="px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium">All</a>
+        </li>
+        <li>
+          <a href="#design" class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Design</a>
+        </li>
+        <li>
+          <a href="#development" class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Development</a>
+        </li>
+        <li>
+          <a href="#marketing" class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Marketing</a>
+        </li>
+        <li>
+          <a href="#business" class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Business</a>
+        </li>
+        <li>
+          <a href="#lifestyle" class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Lifestyle</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- Style 6: Vertical Dots -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Vertical Dots</h2>
+    <div class="flex gap-6">
+      <div class="flex-1 bg-white shadow-sm border border-gray-200 rounded-lg p-6 min-h-[300px]">
+        <p class="text-gray-600">Page content with sections...</p>
+      </div>
+      <nav class="flex flex-col items-center gap-4 py-6">
+        <a href="#section1" class="group relative">
+          <span class="w-3 h-3 bg-primary-500 rounded-full block"></span>
+          <span class="absolute left-6 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Section 1</span>
+        </a>
+        <a href="#section2" class="group relative">
+          <span class="w-3 h-3 bg-gray-300 hover:bg-primary-400 rounded-full block"></span>
+          <span class="absolute left-6 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Section 2</span>
+        </a>
+        <a href="#section3" class="group relative">
+          <span class="w-3 h-3 bg-gray-300 hover:bg-primary-400 rounded-full block"></span>
+          <span class="absolute left-6 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Section 3</span>
+        </a>
+        <a href="#section4" class="group relative">
+          <span class="w-3 h-3 bg-gray-300 hover:bg-primary-400 rounded-full block"></span>
+          <span class="absolute left-6 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Section 4</span>
+        </a>
+        <a href="#section5" class="group relative">
+          <span class="w-3 h-3 bg-gray-300 hover:bg-primary-400 rounded-full block"></span>
+          <span class="absolute left-6 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Section 5</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 7: Numbered Sections -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Numbered Sections</h2>
+    <div class="flex rounded-lg overflow-hidden border border-gray-200">
+      <nav class="w-64 bg-white border-r border-gray-200 p-4">
+        <ul class="space-y-2">
+          <li>
+            <a href="#step1" class="flex items-center gap-3 px-3 py-2 bg-primary-50 text-primary-700 rounded-lg">
+              <span class="w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+              <span class="text-sm font-medium">Getting Started</span>
+            </a>
+          </li>
+          <li>
+            <a href="#step2" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 text-gray-700 rounded-lg">
+              <span class="w-6 h-6 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+              <span class="text-sm">Installation</span>
+            </a>
+          </li>
+          <li>
+            <a href="#step3" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 text-gray-700 rounded-lg">
+              <span class="w-6 h-6 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+              <span class="text-sm">Configuration</span>
+            </a>
+          </li>
+          <li>
+            <a href="#step4" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 text-gray-700 rounded-lg">
+              <span class="w-6 h-6 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold">4</span>
+              <span class="text-sm">Usage</span>
+            </a>
+          </li>
+          <li>
+            <a href="#step5" class="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 text-gray-700 rounded-lg">
+              <span class="w-6 h-6 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold">5</span>
+              <span class="text-sm">Deployment</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="flex-1 bg-gray-50 p-6">
+        <p class="text-gray-600">Tutorial content...</p>
+      </main>
+    </div>
+  </section>
+
+  <!-- Style 8: Mobile Bottom Anchor -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Mobile Bottom Anchor</h2>
+    <div class="max-w-sm mx-auto">
+      <div class="bg-white shadow-sm border border-gray-200 rounded-t-lg p-4 min-h-[200px]">
+        <p class="text-gray-600 text-sm">Mobile article content...</p>
+      </div>
+      <nav class="bg-white border border-t-0 border-gray-200 rounded-b-lg overflow-hidden">
+        <ul class="flex divide-x divide-gray-200">
+          <li class="flex-1">
+            <a href="#prev" class="flex items-center justify-center gap-1 py-3 text-gray-600 hover:bg-gray-50">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              <span class="text-sm">Previous</span>
+            </a>
+          </li>
+          <li class="flex-1">
+            <a href="#toc" class="flex items-center justify-center gap-1 py-3 text-primary-600 hover:bg-primary-50 font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/>
+              </svg>
+              <span class="text-sm">Contents</span>
+            </a>
+          </li>
+          <li class="flex-1">
+            <a href="#next" class="flex items-center justify-center gap-1 py-3 text-gray-600 hover:bg-gray-50">
+              <span class="text-sm">Next</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+</body>
+</html>
