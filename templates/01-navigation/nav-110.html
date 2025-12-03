@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphism Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+    .neu-flat {
+      background: #e0e5ec;
+      box-shadow: 6px 6px 12px #b8bcc2, -6px -6px 12px #ffffff;
+    }
+    .neu-pressed {
+      background: #e0e5ec;
+      box-shadow: inset 4px 4px 8px #b8bcc2, inset -4px -4px 8px #ffffff;
+    }
+    .neu-convex {
+      background: linear-gradient(145deg, #f0f5fc, #cacfd6);
+      box-shadow: 6px 6px 12px #b8bcc2, -6px -6px 12px #ffffff;
+    }
+    .neu-concave {
+      background: linear-gradient(145deg, #cacfd6, #f0f5fc);
+      box-shadow: 6px 6px 12px #b8bcc2, -6px -6px 12px #ffffff;
+    }
+    .neu-dark {
+      background: #2d3436;
+      box-shadow: 5px 5px 10px #1a1d1e, -5px -5px 10px #40494e;
+    }
+    .neu-dark-pressed {
+      background: #2d3436;
+      box-shadow: inset 4px 4px 8px #1a1d1e, inset -4px -4px 8px #40494e;
+    }
+  </style>
+</head>
+<body class="bg-[#e0e5ec] p-8 space-y-12">
+
+  <!-- Style 1: Flat Neumorphic Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 1: Flat Neumorphic Header</h2>
+    <nav class="neu-flat rounded-2xl p-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-gray-700">NeuNav</a>
+        <div class="flex items-center gap-2">
+          <a href="#" class="px-5 py-3 rounded-xl neu-pressed text-primary-600 font-medium">Home</a>
+          <a href="#" class="px-5 py-3 rounded-xl text-gray-600 hover:neu-pressed transition-all">Products</a>
+          <a href="#" class="px-5 py-3 rounded-xl text-gray-600 hover:neu-pressed transition-all">Services</a>
+          <a href="#" class="px-5 py-3 rounded-xl text-gray-600 hover:neu-pressed transition-all">About</a>
+        </div>
+        <button class="p-3 rounded-xl neu-flat hover:neu-pressed transition-all">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Convex Icon Bar -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 2: Convex Icon Bar</h2>
+    <nav class="neu-flat rounded-2xl p-6">
+      <div class="flex items-center justify-around">
+        <a href="#" class="flex flex-col items-center gap-2">
+          <div class="w-14 h-14 rounded-2xl neu-pressed flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          </div>
+          <span class="text-sm text-primary-600 font-medium">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-2">
+          <div class="w-14 h-14 rounded-2xl neu-convex flex items-center justify-center hover:neu-pressed transition-all">
+            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <span class="text-sm text-gray-500">Search</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-2">
+          <div class="w-14 h-14 rounded-2xl neu-convex flex items-center justify-center hover:neu-pressed transition-all">
+            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </div>
+          <span class="text-sm text-gray-500">Alerts</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-2">
+          <div class="w-14 h-14 rounded-2xl neu-convex flex items-center justify-center hover:neu-pressed transition-all">
+            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          </div>
+          <span class="text-sm text-gray-500">Profile</span>
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Sidebar Neumorphic -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 3: Sidebar Neumorphic</h2>
+    <div class="flex gap-6">
+      <nav class="w-64 neu-flat rounded-2xl p-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 rounded-xl neu-convex flex items-center justify-center">
+            <span class="text-primary-600 font-bold text-xl">N</span>
+          </div>
+          <span class="text-gray-700 font-bold text-lg">NeuSide</span>
+        </div>
+        <div class="space-y-3">
+          <a href="#" class="flex items-center gap-3 p-4 rounded-xl neu-pressed text-primary-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <span class="font-medium">Dashboard</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-4 rounded-xl text-gray-500 hover:neu-pressed transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Analytics</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-4 rounded-xl text-gray-500 hover:neu-pressed transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Settings</span>
+          </a>
+        </div>
+      </nav>
+      <div class="flex-1 neu-pressed rounded-2xl p-6 flex items-center justify-center">
+        <span class="text-gray-400">Content Area</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 4: Pill Tabs Neumorphic -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 4: Pill Tabs Neumorphic</h2>
+    <nav class="neu-flat rounded-full p-3 inline-flex gap-2">
+      <a href="#" class="px-6 py-3 rounded-full neu-pressed text-primary-600 font-medium">All</a>
+      <a href="#" class="px-6 py-3 rounded-full text-gray-500 hover:neu-pressed transition-all">Design</a>
+      <a href="#" class="px-6 py-3 rounded-full text-gray-500 hover:neu-pressed transition-all">Development</a>
+      <a href="#" class="px-6 py-3 rounded-full text-gray-500 hover:neu-pressed transition-all">Marketing</a>
+    </nav>
+  </section>
+
+  <!-- Style 5: Dark Neumorphic -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 5: Dark Neumorphic</h2>
+    <div class="bg-[#2d3436] rounded-2xl p-8">
+      <nav class="neu-dark rounded-2xl p-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-xl font-bold text-gray-200">DarkNeu</a>
+          <div class="flex items-center gap-3">
+            <a href="#" class="p-3 rounded-xl neu-dark-pressed text-primary-400">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            </a>
+            <a href="#" class="p-3 rounded-xl neu-dark text-gray-400 hover:neu-dark-pressed hover:text-primary-400 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </a>
+            <a href="#" class="p-3 rounded-xl neu-dark text-gray-400 hover:neu-dark-pressed hover:text-primary-400 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            </a>
+            <a href="#" class="p-3 rounded-xl neu-dark text-gray-400 hover:neu-dark-pressed hover:text-primary-400 transition-all">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 6: Floating Action Neumorphic -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 6: Floating Action Neumorphic</h2>
+    <div class="neu-pressed rounded-2xl p-8 relative min-h-[200px]">
+      <p class="text-gray-400 text-center">Content Area</p>
+      <nav class="absolute bottom-6 right-6 flex flex-col gap-3">
+        <button class="w-12 h-12 rounded-full neu-flat flex items-center justify-center text-gray-500 hover:neu-pressed hover:text-primary-500 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+        </button>
+        <button class="w-12 h-12 rounded-full neu-flat flex items-center justify-center text-gray-500 hover:neu-pressed hover:text-primary-500 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </button>
+        <button class="w-14 h-14 rounded-full neu-convex flex items-center justify-center text-primary-500 hover:neu-pressed transition-all">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 7: Card Grid Neumorphic -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 7: Card Grid Neumorphic</h2>
+    <nav class="grid grid-cols-4 gap-4">
+      <a href="#" class="neu-pressed rounded-2xl p-6 flex flex-col items-center gap-3 text-primary-600">
+        <div class="w-12 h-12 rounded-xl neu-convex flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <span class="font-medium">Dashboard</span>
+      </a>
+      <a href="#" class="neu-flat rounded-2xl p-6 flex flex-col items-center gap-3 text-gray-500 hover:neu-pressed hover:text-primary-600 transition-all">
+        <div class="w-12 h-12 rounded-xl neu-convex flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <span class="font-medium">Analytics</span>
+      </a>
+      <a href="#" class="neu-flat rounded-2xl p-6 flex flex-col items-center gap-3 text-gray-500 hover:neu-pressed hover:text-primary-600 transition-all">
+        <div class="w-12 h-12 rounded-xl neu-convex flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <span class="font-medium">Team</span>
+      </a>
+      <a href="#" class="neu-flat rounded-2xl p-6 flex flex-col items-center gap-3 text-gray-500 hover:neu-pressed hover:text-primary-600 transition-all">
+        <div class="w-12 h-12 rounded-xl neu-convex flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <span class="font-medium">Settings</span>
+      </a>
+    </nav>
+  </section>
+
+  <!-- Style 8: Search Bar Neumorphic -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 8: Search Bar Neumorphic</h2>
+    <nav class="neu-flat rounded-2xl p-4">
+      <div class="flex items-center gap-4">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl neu-convex flex items-center justify-center">
+            <span class="text-primary-600 font-bold">S</span>
+          </div>
+        </a>
+        <div class="flex-1 relative">
+          <input type="text" placeholder="Search..." class="w-full pl-12 pr-4 py-4 rounded-xl neu-pressed bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none">
+          <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="p-3 rounded-xl neu-flat text-gray-500 hover:neu-pressed hover:text-primary-500 transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
+          </button>
+          <button class="p-3 rounded-xl neu-flat text-gray-500 hover:neu-pressed hover:text-primary-500 transition-all relative">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">3</span>
+          </button>
+          <div class="w-10 h-10 rounded-xl neu-convex overflow-hidden">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=neu" alt="Avatar" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
