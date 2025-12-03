@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: ARIA Landmark Navigation -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: ARIA Landmark Navigation</h2>
+    <nav aria-label="Main navigation" class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-primary-600" aria-label="Brand homepage">Brand</a>
+        <ul class="flex items-center gap-6" role="menubar" aria-label="Primary">
+          <li role="none">
+            <a href="#" role="menuitem" class="text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded px-2 py-1" aria-current="page">Home</a>
+          </li>
+          <li role="none">
+            <a href="#" role="menuitem" class="text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded px-2 py-1">About</a>
+          </li>
+          <li role="none">
+            <a href="#" role="menuitem" class="text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded px-2 py-1">Services</a>
+          </li>
+          <li role="none">
+            <a href="#" role="menuitem" class="text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded px-2 py-1">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: High Contrast Mode -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: High Contrast Mode</h2>
+    <nav class="bg-black rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold text-yellow-400">Brand</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-white hover:text-yellow-400 underline underline-offset-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black rounded px-2">Home</a>
+          <a href="#" class="text-white hover:text-yellow-400 underline underline-offset-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black rounded px-2">About</a>
+          <a href="#" class="text-white hover:text-yellow-400 underline underline-offset-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black rounded px-2">Services</a>
+          <a href="#" class="text-white hover:text-yellow-400 underline underline-offset-4 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-black rounded px-2">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Large Touch Targets -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Large Touch Targets</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-primary-600 p-2">Brand</a>
+        <div class="flex items-center gap-2">
+          <a href="#" class="min-w-[44px] min-h-[44px] px-6 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex items-center justify-center text-lg focus:outline-none focus:ring-2 focus:ring-primary-500">Home</a>
+          <a href="#" class="min-w-[44px] min-h-[44px] px-6 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex items-center justify-center text-lg focus:outline-none focus:ring-2 focus:ring-primary-500">About</a>
+          <a href="#" class="min-w-[44px] min-h-[44px] px-6 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex items-center justify-center text-lg focus:outline-none focus:ring-2 focus:ring-primary-500">Services</a>
+          <a href="#" class="min-w-[44px] min-h-[44px] px-6 py-3 text-gray-700 hover:bg-gray-100 rounded-lg flex items-center justify-center text-lg focus:outline-none focus:ring-2 focus:ring-primary-500">Contact</a>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-500 text-center">Minimum 44x44px touch targets for accessibility</p>
+    </nav>
+  </section>
+
+  <!-- Style 4: Screen Reader Optimized -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Screen Reader Optimized</h2>
+    <nav aria-label="Primary navigation" class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white">Skip to main content</a>
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-primary-600" aria-label="Return to homepage">
+          <span aria-hidden="true">Brand</span>
+          <span class="sr-only">Brand Homepage</span>
+        </a>
+        <ul class="flex items-center gap-6" role="navigation" aria-label="Main menu">
+          <li>
+            <a href="#" class="text-primary-600 font-medium" aria-current="page">
+              Home
+              <span class="sr-only">(current page)</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-primary-600">
+              About
+              <span class="sr-only">Learn about our company</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-primary-600">
+              Services
+              <span class="sr-only">View our services</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-700 hover:text-primary-600">
+              Contact
+              <span class="sr-only">Get in touch with us</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Focus Visible States -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Focus Visible States</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-primary-600 rounded focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:ring-offset-2">Brand</a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:bg-primary-50">Home</a>
+          <a href="#" class="px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:bg-primary-50">About</a>
+          <a href="#" class="px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:bg-primary-50">Services</a>
+          <a href="#" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-500 focus-visible:ring-offset-2">Contact</a>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-500 text-center">Tab through to see enhanced focus states</p>
+    </nav>
+  </section>
+
+  <!-- Style 6: Text Resize Friendly -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Text Resize Friendly</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <a href="#" class="text-xl font-bold text-primary-600" style="font-size: clamp(1rem, 2vw, 1.5rem);">Brand</a>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#" class="text-gray-700 hover:text-primary-600" style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600" style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">About</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600" style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">Services</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600" style="font-size: clamp(0.875rem, 1.5vw, 1.125rem);">Contact</a>
+        </div>
+        <div class="flex items-center gap-2 border-l border-gray-200 pl-4">
+          <button class="w-8 h-8 flex items-center justify-center rounded border border-gray-300 text-gray-600 hover:bg-gray-100 text-sm" aria-label="Decrease text size">A-</button>
+          <button class="w-8 h-8 flex items-center justify-center rounded border border-gray-300 text-gray-600 hover:bg-gray-100 font-medium" aria-label="Increase text size">A+</button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Color Blind Friendly -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Color Blind Friendly</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-gray-900">Brand</a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-2 px-3 py-2 border-b-2 border-gray-900 text-gray-900 font-medium">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+            </svg>
+            Home
+          </a>
+          <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 border-b-2 border-transparent hover:border-gray-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            About
+          </a>
+          <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 border-b-2 border-transparent hover:border-gray-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Services
+          </a>
+          <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 border-b-2 border-transparent hover:border-gray-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contact
+          </a>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-500 text-center">Uses icons and underlines, not just color, to indicate state</p>
+    </nav>
+  </section>
+
+  <!-- Style 8: Reduced Motion -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Reduced Motion</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg motion-safe:transition-colors motion-safe:duration-200 motion-reduce:transition-none">Home</a>
+          <a href="#" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg motion-safe:transition-colors motion-safe:duration-200 motion-reduce:transition-none">About</a>
+          <a href="#" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg motion-safe:transition-colors motion-safe:duration-200 motion-reduce:transition-none">Services</a>
+          <a href="#" class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 motion-safe:transition-colors motion-safe:duration-200 motion-reduce:transition-none">Contact</a>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-500 text-center">Respects prefers-reduced-motion media query</p>
+    </nav>
+  </section>
+
+</body>
+</html>
