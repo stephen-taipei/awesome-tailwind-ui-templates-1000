@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.63 0.20 250);
+      --color-primary-500: oklch(0.53 0.24 250);
+      --color-primary-600: oklch(0.45 0.24 250);
+      --color-primary-700: oklch(0.38 0.20 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-5xl mx-auto space-y-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Filter Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Pill Filter Tabs -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 1: Pill Filter Tabs</h2>
+      <div class="flex flex-wrap gap-2">
+        <button class="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full transition-colors">All</button>
+        <button class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">Active</button>
+        <button class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">Pending</button>
+        <button class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">Completed</button>
+        <button class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">Archived</button>
+      </div>
+    </section>
+
+    <!-- Style 2: Checkbox Filter List -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 2: Checkbox Filter List</h2>
+      <div class="w-64 border border-gray-200 rounded-lg p-4">
+        <h3 class="text-sm font-semibold text-gray-900 mb-3">Category</h3>
+        <div class="space-y-2">
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500">
+            <span class="ml-2 text-sm text-gray-700">Electronics</span>
+            <span class="ml-auto text-xs text-gray-400">128</span>
+          </label>
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500">
+            <span class="ml-2 text-sm text-gray-700">Clothing</span>
+            <span class="ml-auto text-xs text-gray-400">256</span>
+          </label>
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" checked class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500">
+            <span class="ml-2 text-sm text-gray-700">Home & Garden</span>
+            <span class="ml-auto text-xs text-gray-400">64</span>
+          </label>
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500">
+            <span class="ml-2 text-sm text-gray-700">Sports</span>
+            <span class="ml-auto text-xs text-gray-400">89</span>
+          </label>
+          <label class="flex items-center cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500">
+            <span class="ml-2 text-sm text-gray-700">Books</span>
+            <span class="ml-auto text-xs text-gray-400">312</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 3: Tag Filter with Remove -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 3: Tag Filter with Remove</h2>
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2">
+          <span class="text-sm text-gray-500">Active filters:</span>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary-100 text-primary-700">
+              Electronics
+              <button class="ml-1.5 hover:text-primary-900">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-700">
+              In Stock
+              <button class="ml-1.5 hover:text-green-900">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-yellow-100 text-yellow-700">
+              $50 - $100
+              <button class="ml-1.5 hover:text-yellow-900">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <button class="text-sm text-red-600 hover:text-red-700">Clear all</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 4: Dropdown Filters -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 4: Dropdown Filters</h2>
+      <div class="flex flex-wrap gap-3">
+        <div class="relative group">
+          <button class="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+            Category
+            <svg class="w-4 h-4 ml-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">All Categories</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Electronics</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Clothing</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Home</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors">
+            Price: $50-$100
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Any Price</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Under $25</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">$25 - $50</a>
+            <a href="#" class="block px-4 py-2 text-sm text-primary-600 bg-primary-50">$50 - $100</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Over $100</a>
+          </div>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+            Sort by
+            <svg class="w-4 h-4 ml-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Newest</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Price: Low to High</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Price: High to Low</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Best Rated</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Sidebar Filter Panel -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 5: Sidebar Filter Panel</h2>
+      <div class="w-72 border border-gray-200 rounded-xl overflow-hidden">
+        <div class="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between">
+          <h3 class="text-sm font-semibold text-gray-900">Filters</h3>
+          <button class="text-xs text-primary-600 hover:text-primary-700">Reset all</button>
+        </div>
+        <div class="divide-y divide-gray-100">
+          <details class="group" open>
+            <summary class="flex items-center justify-between px-4 py-3 cursor-pointer">
+              <span class="text-sm font-medium text-gray-900">Price Range</span>
+              <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="px-4 pb-4">
+              <div class="flex items-center space-x-2">
+                <input type="number" placeholder="Min" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                <span class="text-gray-400">-</span>
+                <input type="number" placeholder="Max" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+              </div>
+            </div>
+          </details>
+          <details class="group" open>
+            <summary class="flex items-center justify-between px-4 py-3 cursor-pointer">
+              <span class="text-sm font-medium text-gray-900">Brand</span>
+              <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="px-4 pb-4 space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" checked class="w-4 h-4 text-primary-600 rounded border-gray-300">
+                <span class="ml-2 text-sm text-gray-700">Apple</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300">
+                <span class="ml-2 text-sm text-gray-700">Samsung</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300">
+                <span class="ml-2 text-sm text-gray-700">Sony</span>
+              </label>
+            </div>
+          </details>
+          <details class="group">
+            <summary class="flex items-center justify-between px-4 py-3 cursor-pointer">
+              <span class="text-sm font-medium text-gray-900">Rating</span>
+              <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="px-4 pb-4 space-y-2">
+              <label class="flex items-center">
+                <input type="radio" name="rating" class="w-4 h-4 text-primary-600 border-gray-300">
+                <span class="ml-2 text-sm text-gray-700">4 stars & up</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="rating" class="w-4 h-4 text-primary-600 border-gray-300">
+                <span class="ml-2 text-sm text-gray-700">3 stars & up</span>
+              </label>
+            </div>
+          </details>
+        </div>
+        <div class="px-4 py-3 bg-gray-50 border-t border-gray-200">
+          <button class="w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors">Apply Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 6: Toggle Switch Filters -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 6: Toggle Switch Filters</h2>
+      <div class="w-72 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-700">In Stock Only</span>
+          <button class="relative w-11 h-6 bg-primary-500 rounded-full transition-colors">
+            <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-700">Free Shipping</span>
+          <button class="relative w-11 h-6 bg-gray-300 rounded-full transition-colors">
+            <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-700">On Sale</span>
+          <button class="relative w-11 h-6 bg-primary-500 rounded-full transition-colors">
+            <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-700">New Arrivals</span>
+          <button class="relative w-11 h-6 bg-gray-300 rounded-full transition-colors">
+            <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 7: Search with Filter -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 7: Search with Filter</h2>
+      <div class="flex items-center space-x-3 max-w-2xl">
+        <div class="relative flex-1">
+          <input type="text" placeholder="Search products..." class="w-full px-4 py-2.5 pl-10 bg-gray-100 border border-transparent rounded-lg text-sm focus:outline-none focus:bg-white focus:border-primary-500 transition-all">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+            <svg class="w-5 h-5 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+            </svg>
+            Filters
+            <span class="ml-2 flex items-center justify-center w-5 h-5 bg-primary-500 text-white text-xs rounded-full">3</span>
+          </button>
+          <div class="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                <select class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  <option>All Categories</option>
+                  <option>Electronics</option>
+                  <option>Clothing</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Price Range</label>
+                <div class="flex items-center space-x-2">
+                  <input type="number" placeholder="Min" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                  <span>-</span>
+                  <input type="number" placeholder="Max" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                </div>
+              </div>
+              <button class="w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 8: Segmented Control Filter -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 8: Segmented Control Filter</h2>
+      <div class="space-y-4">
+        <div class="inline-flex p-1 bg-gray-100 rounded-xl">
+          <button class="px-6 py-2 text-sm font-medium text-white bg-primary-500 rounded-lg shadow-sm transition-all">All</button>
+          <button class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-colors">Published</button>
+          <button class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-colors">Drafts</button>
+          <button class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-colors">Archived</button>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="inline-flex p-1 bg-gray-100 rounded-lg">
+            <button class="p-2 text-primary-600 bg-white rounded shadow-sm transition-all" title="Grid View">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </button>
+            <button class="p-2 text-gray-500 hover:text-gray-700 rounded transition-colors" title="List View">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+          <span class="text-sm text-gray-500">Showing 24 of 156 results</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
