@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 260);
+      --color-primary-100: oklch(0.93 0.04 260);
+      --color-primary-200: oklch(0.86 0.08 260);
+      --color-primary-300: oklch(0.76 0.12 260);
+      --color-primary-400: oklch(0.64 0.17 260);
+      --color-primary-500: oklch(0.53 0.20 260);
+      --color-primary-600: oklch(0.44 0.18 260);
+      --color-primary-700: oklch(0.37 0.15 260);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+  <div class="max-w-6xl mx-auto space-y-16">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Split Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Logo Left + Actions Right -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">1. Logo Left + Actions Right</h2>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <nav class="flex items-center justify-between px-6 py-4">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-primary-500 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-lg">A</span>
+            </div>
+            <span class="font-bold text-xl text-gray-900">Acme</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="px-4 py-2 text-gray-600 hover:text-gray-900 font-medium text-sm">Sign In</button>
+            <button class="px-4 py-2 bg-primary-500 text-white rounded-lg font-medium text-sm hover:bg-primary-600">Get Started</button>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Style 2: Logo Center Split -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">2. Logo Center Split</h2>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <nav class="flex items-center justify-between px-6 py-4">
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Products</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Solutions</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Pricing</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-purple-500 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-lg">B</span>
+            </div>
+            <span class="font-bold text-xl text-gray-900">Brand</span>
+          </div>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Resources</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium">Support</a>
+            <a href="#" class="text-primary-600 font-medium text-sm">Login</a>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Style 3: Two Column Split -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">3. Two Column Split</h2>
+      <div class="bg-gray-900 rounded-xl shadow-sm overflow-hidden">
+        <nav class="flex">
+          <!-- Left column -->
+          <div class="flex-1 flex items-center gap-6 px-6 py-4 border-r border-gray-800">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-primary-500 rounded-lg"></div>
+              <span class="font-bold text-white">Logo</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <a href="#" class="text-gray-400 hover:text-white text-sm">Products</a>
+              <a href="#" class="text-gray-400 hover:text-white text-sm">Services</a>
+              <a href="#" class="text-gray-400 hover:text-white text-sm">About</a>
+            </div>
+          </div>
+          <!-- Right column -->
+          <div class="flex items-center gap-4 px-6 py-4">
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-lg">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-white text-sm w-32">
+            </div>
+            <button class="p-2 text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+              </svg>
+            </button>
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=nav80" alt="User" class="w-8 h-8 rounded-full">
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Style 4: Split with Tabs -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">4. Split with Tabs</h2>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary-500 rounded-lg"></div>
+            <span class="font-bold text-gray-900">Dashboard</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="p-2 text-gray-400 hover:text-gray-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </button>
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=nav80b" alt="User" class="w-8 h-8 rounded-full">
+          </div>
+        </nav>
+        <div class="flex px-6">
+          <a href="#" class="px-4 py-3 text-primary-600 font-medium text-sm border-b-2 border-primary-500">Overview</a>
+          <a href="#" class="px-4 py-3 text-gray-500 hover:text-gray-700 text-sm">Analytics</a>
+          <a href="#" class="px-4 py-3 text-gray-500 hover:text-gray-700 text-sm">Reports</a>
+          <a href="#" class="px-4 py-3 text-gray-500 hover:text-gray-700 text-sm">Settings</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Split with Divider -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">5. Split with Divider</h2>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <nav class="flex items-center px-6 py-4">
+          <div class="flex items-center gap-2 pr-6 border-r border-gray-200">
+            <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              </svg>
+            </div>
+            <span class="font-bold text-gray-900">Flame</span>
+          </div>
+          <div class="flex-1 flex items-center justify-center gap-8">
+            <a href="#" class="text-primary-600 font-medium text-sm">Home</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Features</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Pricing</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Blog</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm">Contact</a>
+          </div>
+          <div class="flex items-center gap-3 pl-6 border-l border-gray-200">
+            <button class="px-4 py-2 text-gray-600 hover:text-gray-900 font-medium text-sm">Login</button>
+            <button class="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-medium text-sm">Sign Up</button>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Style 6: Split Sidebar + Header -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">6. Split Sidebar + Header</h2>
+      <div class="bg-gray-100 rounded-xl overflow-hidden flex h-64">
+        <!-- Sidebar portion -->
+        <div class="w-16 bg-gray-900 flex flex-col items-center py-4 gap-4">
+          <div class="w-10 h-10 bg-primary-500 rounded-xl flex items-center justify-center">
+            <span class="text-white font-bold">A</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-3 mt-4">
+            <a href="#" class="p-2 bg-gray-800 text-white rounded-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </a>
+            <a href="#" class="p-2 text-gray-500 hover:text-white rounded-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </a>
+            <a href="#" class="p-2 text-gray-500 hover:text-white rounded-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </a>
+          </div>
+          <a href="#" class="p-2 text-gray-500 hover:text-white rounded-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </a>
+        </div>
+        <!-- Main content with header -->
+        <div class="flex-1 flex flex-col">
+          <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <h1 class="text-lg font-semibold text-gray-900">Dashboard</h1>
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-lg">
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-sm w-48">
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <button class="p-2 text-gray-400 hover:text-gray-600 relative">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                </svg>
+                <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+              </button>
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=nav80c" alt="User" class="w-8 h-8 rounded-full">
+            </div>
+          </header>
+          <div class="flex-1 p-6 text-gray-400 text-center">Content area</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 7: Split Header with Info -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">7. Split Header with Info</h2>
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <nav class="flex items-center justify-between px-6 py-4">
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h1 class="font-bold text-gray-900">Power App</h1>
+                <p class="text-xs text-gray-500">v2.4.1 - Pro Plan</p>
+              </div>
+            </div>
+            <div class="h-8 w-px bg-gray-200"></div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span class="text-gray-600">All systems operational</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-lg text-sm">
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="text-gray-600">1,234 credits</span>
+            </div>
+            <button class="p-2 text-gray-400 hover:text-gray-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </button>
+            <div class="flex items-center gap-2">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=nav80d" alt="User" class="w-8 h-8 rounded-full">
+              <div class="text-sm">
+                <p class="font-medium text-gray-900">John Doe</p>
+                <p class="text-xs text-gray-500">Admin</p>
+              </div>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Style 8: Split Mobile Navigation -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-gray-700">8. Split Mobile Navigation</h2>
+      <div class="bg-gray-100 rounded-xl overflow-hidden max-w-sm mx-auto">
+        <!-- Top header -->
+        <header class="bg-white px-4 py-3 flex items-center justify-between border-b border-gray-100">
+          <button class="p-2 text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary-500 rounded-lg"></div>
+            <span class="font-bold text-gray-900">App</span>
+          </div>
+          <button class="p-2 text-gray-600 relative">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          </button>
+        </header>
+        <!-- Content placeholder -->
+        <div class="h-40 flex items-center justify-center text-gray-400 text-sm">Content Area</div>
+        <!-- Bottom tab bar -->
+        <nav class="bg-white border-t border-gray-100 flex">
+          <a href="#" class="flex-1 flex flex-col items-center gap-1 py-3 text-primary-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            <span class="text-xs font-medium">Home</span>
+          </a>
+          <a href="#" class="flex-1 flex flex-col items-center gap-1 py-3 text-gray-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="text-xs">Search</span>
+          </a>
+          <a href="#" class="flex-1 flex flex-col items-center gap-1 py-3 text-gray-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            <span class="text-xs">Favorites</span>
+          </a>
+          <a href="#" class="flex-1 flex flex-col items-center gap-1 py-3 text-gray-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            <span class="text-xs">Profile</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
