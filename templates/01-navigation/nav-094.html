@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Numbered Steps -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Numbered Steps</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
+      <ol class="flex items-center justify-between">
+        <li class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center text-sm font-medium">1</span>
+          <span class="text-gray-900 font-medium">Account</span>
+        </li>
+        <li class="flex-1 h-px bg-gray-300 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center text-sm font-medium">2</span>
+          <span class="text-gray-900 font-medium">Profile</span>
+        </li>
+        <li class="flex-1 h-px bg-gray-300 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-full border-2 border-primary-500 text-primary-500 flex items-center justify-center text-sm font-medium">3</span>
+          <span class="text-gray-500">Payment</span>
+        </li>
+        <li class="flex-1 h-px bg-gray-300 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center text-sm font-medium">4</span>
+          <span class="text-gray-400">Review</span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 2: With Checkmarks -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: With Checkmarks</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
+      <ol class="flex items-center justify-between">
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium text-gray-900">Step 1</p>
+            <p class="text-xs text-gray-500">Details</p>
+          </div>
+        </li>
+        <li class="flex-1 h-0.5 bg-green-500 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <div>
+            <p class="text-sm font-medium text-gray-900">Step 2</p>
+            <p class="text-xs text-gray-500">Address</p>
+          </div>
+        </li>
+        <li class="flex-1 h-0.5 bg-gray-300 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center text-sm font-bold">3</span>
+          <div>
+            <p class="text-sm font-medium text-gray-900">Step 3</p>
+            <p class="text-xs text-gray-500">Payment</p>
+          </div>
+        </li>
+        <li class="flex-1 h-0.5 bg-gray-300 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center text-sm font-bold">4</span>
+          <div>
+            <p class="text-sm font-medium text-gray-400">Step 4</p>
+            <p class="text-xs text-gray-400">Confirm</p>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 3: Vertical Steps -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Vertical Steps</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6 max-w-md">
+      <ol class="space-y-6">
+        <li class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            <div class="flex-1 w-0.5 bg-green-500 mt-2"></div>
+          </div>
+          <div class="pb-6">
+            <p class="font-medium text-gray-900">Create Account</p>
+            <p class="text-sm text-gray-500 mt-1">Set up your email and password</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold">2</span>
+            <div class="flex-1 w-0.5 bg-gray-300 mt-2"></div>
+          </div>
+          <div class="pb-6">
+            <p class="font-medium text-gray-900">Personal Information</p>
+            <p class="text-sm text-gray-500 mt-1">Fill in your personal details</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center font-bold">3</span>
+            <div class="flex-1 w-0.5 bg-gray-300 mt-2"></div>
+          </div>
+          <div class="pb-6">
+            <p class="font-medium text-gray-400">Payment Method</p>
+            <p class="text-sm text-gray-400 mt-1">Add your payment details</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center font-bold">4</span>
+          </div>
+          <div>
+            <p class="font-medium text-gray-400">Complete</p>
+            <p class="text-sm text-gray-400 mt-1">Review and submit</p>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 4: Progress Bar Style -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Progress Bar Style</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
+      <div class="relative">
+        <div class="absolute top-5 left-0 right-0 h-1 bg-gray-200 rounded-full">
+          <div class="h-full bg-primary-500 rounded-full" style="width: 60%"></div>
+        </div>
+        <ol class="relative flex justify-between">
+          <li class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-medium z-10">1</span>
+            <span class="mt-2 text-sm font-medium text-gray-900">Cart</span>
+          </li>
+          <li class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-medium z-10">2</span>
+            <span class="mt-2 text-sm font-medium text-gray-900">Shipping</span>
+          </li>
+          <li class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-medium z-10">3</span>
+            <span class="mt-2 text-sm font-medium text-gray-900">Payment</span>
+          </li>
+          <li class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full border-2 border-gray-300 bg-white text-gray-400 flex items-center justify-center font-medium z-10">4</span>
+            <span class="mt-2 text-sm text-gray-400">Review</span>
+          </li>
+          <li class="flex flex-col items-center">
+            <span class="w-10 h-10 rounded-full border-2 border-gray-300 bg-white text-gray-400 flex items-center justify-center font-medium z-10">5</span>
+            <span class="mt-2 text-sm text-gray-400">Complete</span>
+          </li>
+        </ol>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Arrow Steps -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Arrow Steps</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden">
+      <ol class="flex">
+        <li class="flex-1 relative">
+          <div class="px-6 py-4 bg-green-500 text-white">
+            <p class="font-medium">1. Account</p>
+            <p class="text-sm text-green-100">Completed</p>
+          </div>
+          <div class="absolute right-0 top-0 h-full w-4 bg-green-500" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+        </li>
+        <li class="flex-1 relative ml-2">
+          <div class="px-6 py-4 bg-primary-500 text-white pl-8">
+            <p class="font-medium">2. Profile</p>
+            <p class="text-sm text-primary-100">In Progress</p>
+          </div>
+          <div class="absolute right-0 top-0 h-full w-4 bg-primary-500" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+        </li>
+        <li class="flex-1 relative ml-2">
+          <div class="px-6 py-4 bg-gray-100 text-gray-500 pl-8">
+            <p class="font-medium">3. Payment</p>
+            <p class="text-sm text-gray-400">Pending</p>
+          </div>
+          <div class="absolute right-0 top-0 h-full w-4 bg-gray-100" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+        </li>
+        <li class="flex-1 ml-2">
+          <div class="px-6 py-4 bg-gray-100 text-gray-500 pl-8">
+            <p class="font-medium">4. Review</p>
+            <p class="text-sm text-gray-400">Pending</p>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 6: Icon Steps -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Icon Steps</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
+      <ol class="flex items-center justify-between">
+        <li class="flex flex-col items-center gap-2">
+          <span class="w-14 h-14 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </span>
+          <span class="text-sm font-medium text-gray-900">Account</span>
+        </li>
+        <li class="flex-1 h-0.5 bg-green-500 mx-2"></li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="w-14 h-14 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center ring-4 ring-primary-100">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </span>
+          <span class="text-sm font-medium text-primary-600">Address</span>
+        </li>
+        <li class="flex-1 h-0.5 bg-gray-200 mx-2"></li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="w-14 h-14 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+          </span>
+          <span class="text-sm text-gray-400">Payment</span>
+        </li>
+        <li class="flex-1 h-0.5 bg-gray-200 mx-2"></li>
+        <li class="flex flex-col items-center gap-2">
+          <span class="w-14 h-14 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </span>
+          <span class="text-sm text-gray-400">Confirm</span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 7: Dark Theme -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Dark Theme</h2>
+    <nav class="bg-gray-900 rounded-lg px-6 py-6">
+      <ol class="flex items-center justify-between">
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <span class="text-white font-medium">Details</span>
+        </li>
+        <li class="flex-1 h-0.5 bg-green-500 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold">2</span>
+          <span class="text-white font-medium">Shipping</span>
+        </li>
+        <li class="flex-1 h-0.5 bg-gray-700 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-gray-700 text-gray-400 flex items-center justify-center font-bold">3</span>
+          <span class="text-gray-400">Payment</span>
+        </li>
+        <li class="flex-1 h-0.5 bg-gray-700 mx-4"></li>
+        <li class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-gray-700 text-gray-400 flex items-center justify-center font-bold">4</span>
+          <span class="text-gray-400">Review</span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 8: Compact Pills -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Compact Pills</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-center gap-2">
+        <span class="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Account
+        </span>
+        <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium">
+          Profile
+        </span>
+        <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="px-4 py-2 bg-gray-100 text-gray-500 rounded-full text-sm font-medium">
+          Payment
+        </span>
+        <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="px-4 py-2 bg-gray-100 text-gray-500 rounded-full text-sm font-medium">
+          Review
+        </span>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
