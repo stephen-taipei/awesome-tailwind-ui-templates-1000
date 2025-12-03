@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News/Media Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Classic News Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 1: Classic News Header</h2>
+    <nav class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="bg-red-700 px-6 py-2 flex items-center justify-between">
+        <div class="flex items-center gap-4 text-white text-sm">
+          <span>Breaking News:</span>
+          <span class="font-medium">Latest updates on global events</span>
+        </div>
+        <div class="flex items-center gap-4 text-white/80 text-sm">
+          <span>December 3, 2025</span>
+          <a href="#" class="hover:text-white transition-colors">Subscribe</a>
+        </div>
+      </div>
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-4xl font-serif font-bold text-gray-900">The Daily News</a>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-900 font-medium">Home</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">World</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Politics</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Business</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Tech</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Sports</a>
+            <a href="#" class="p-2 text-gray-600 hover:bg-gray-100 rounded-full transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Modern Digital News -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 2: Modern Digital News</h2>
+    <nav class="bg-gray-900 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-2xl font-bold text-white">TECH<span class="text-cyan-400">PULSE</span></a>
+          <div class="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
+            <a href="#" class="px-4 py-2 bg-cyan-500 text-white text-sm font-medium rounded-md">Latest</a>
+            <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">AI</a>
+            <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">Crypto</a>
+            <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">Startups</a>
+            <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">Gadgets</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="p-2 text-gray-400 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </a>
+          <a href="#" class="px-4 py-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">Sign In</a>
+          <a href="#" class="px-4 py-2 bg-cyan-500 text-white text-sm font-semibold rounded-lg hover:bg-cyan-600 transition-colors">Subscribe</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Magazine Style -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 3: Magazine Style</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-6">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 mb-4">
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors text-sm">Newsletter</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors text-sm">Podcast</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors text-sm">Events</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="px-4 py-2 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Sign In</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-4xl font-serif italic text-gray-900">Lifestyle</a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-gray-900 font-medium">Fashion</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Beauty</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Culture</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Travel</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Food</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Wellness</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Financial News -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 4: Financial News</h2>
+    <nav class="bg-slate-900 rounded-2xl shadow-lg overflow-hidden">
+      <div class="bg-amber-500 px-6 py-1 flex items-center justify-center gap-6 text-slate-900 text-sm font-medium overflow-x-auto">
+        <span>DJIA <span class="text-green-800">+0.45%</span></span>
+        <span>S&P 500 <span class="text-green-800">+0.32%</span></span>
+        <span>NASDAQ <span class="text-red-800">-0.12%</span></span>
+        <span>BTC <span class="text-green-800">+2.34%</span></span>
+        <span>EUR/USD <span class="text-green-800">+0.08%</span></span>
+      </div>
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-2xl font-bold text-white">Market<span class="text-amber-500">Watch</span></a>
+            <div class="flex items-center gap-4">
+              <a href="#" class="text-white font-medium text-sm">Markets</a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Investing</a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Economy</a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Real Estate</a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Personal Finance</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="p-2 text-gray-400 hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </a>
+            <a href="#" class="px-4 py-2 border border-amber-500 text-amber-500 text-sm font-semibold rounded hover:bg-amber-500 hover:text-slate-900 transition-colors">Pro Access</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Sports News -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 5: Sports News</h2>
+    <nav class="bg-green-800 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-2xl font-black text-white uppercase tracking-tight">SportsZone</a>
+          <div class="flex items-center gap-2">
+            <a href="#" class="px-4 py-2 bg-white text-green-800 text-sm font-bold rounded-lg">NFL</a>
+            <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">NBA</a>
+            <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">MLB</a>
+            <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">Soccer</a>
+            <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">NHL</a>
+            <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">Fantasy</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </a>
+          <a href="#" class="flex items-center gap-2 px-4 py-2 bg-yellow-400 text-green-900 text-sm font-bold rounded-lg hover:bg-yellow-300 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <span>ESPN+</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Weather/Local News -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 6: Weather/Local News</h2>
+    <nav class="bg-gradient-to-r from-sky-500 to-blue-600 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-2xl font-bold text-white">WeatherNews</a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-white/20 text-white text-sm font-medium rounded-full">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Local</span>
+            </a>
+            <a href="#" class="text-white/80 text-sm font-medium hover:text-white transition-colors">National</a>
+            <a href="#" class="text-white/80 text-sm font-medium hover:text-white transition-colors">Radar</a>
+            <a href="#" class="text-white/80 text-sm font-medium hover:text-white transition-colors">10-Day</a>
+            <a href="#" class="text-white/80 text-sm font-medium hover:text-white transition-colors">Alerts</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
+            <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
+            <span class="text-white font-bold">72°F</span>
+            <span class="text-white/70 text-sm">New York</span>
+          </div>
+          <a href="#" class="flex items-center gap-2 px-4 py-2 bg-white text-blue-600 text-sm font-semibold rounded-full hover:bg-blue-50 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Change Location</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Opinion/Blog Platform -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 7: Opinion/Blog Platform</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-3xl font-serif text-gray-900">Perspective</a>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-900 font-medium border-b-2 border-gray-900 pb-1">Featured</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Politics</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Culture</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Tech</a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Ideas</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="p-2 text-gray-500 hover:text-gray-900 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </a>
+          <a href="#" class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+            <span class="text-sm font-medium">Saved</span>
+          </a>
+          <a href="#" class="px-5 py-2 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Write</a>
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=blogger1" alt="Profile" class="w-9 h-9 rounded-full">
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: News Aggregator -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 8: News Aggregator</h2>
+    <nav class="bg-gray-50 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-xl">N</span>
+            </div>
+            <span class="text-xl font-bold text-gray-900">NewsFlow</span>
+          </a>
+          <div class="flex items-center gap-2 bg-white rounded-full p-1 shadow-sm">
+            <a href="#" class="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">For You</a>
+            <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Headlines</a>
+            <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Following</a>
+            <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Local</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" placeholder="Search news..." class="w-56 pl-10 pr-4 py-2 bg-white rounded-full text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900">
+          </div>
+          <a href="#" class="p-2 text-gray-600 hover:bg-white rounded-full transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </a>
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=aggregator1" alt="Profile" class="w-9 h-9 rounded-full border-2 border-gray-200">
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
