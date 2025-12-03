@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Profit/Charity Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 145);
+      --color-primary-100: oklch(0.93 0.04 145);
+      --color-primary-200: oklch(0.86 0.08 145);
+      --color-primary-300: oklch(0.75 0.14 145);
+      --color-primary-400: oklch(0.65 0.19 145);
+      --color-primary-500: oklch(0.55 0.22 145);
+      --color-primary-600: oklch(0.45 0.20 145);
+      --color-primary-700: oklch(0.35 0.16 145);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Environmental Charity -->
+  <nav class="bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-2xl shadow-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">EarthGuard</span>
+            <span class="block text-xs text-green-100">Protecting Our Planet</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="hover:text-green-200 transition font-medium">Our Mission</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">Projects</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">Impact</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">Get Involved</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">News</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="bg-white text-green-600 px-6 py-2.5 rounded-full font-bold hover:bg-green-50 transition shadow-lg">
+            Donate Now
+          </button>
+        </div>
+      </div>
+      <div class="bg-green-700/50 px-6 py-2 flex items-center justify-center gap-6 text-sm">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          1M+ Trees Planted
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          50K Volunteers
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          100+ Countries
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Humanitarian Aid -->
+  <nav class="bg-white rounded-xl shadow-lg">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-red-600 text-white px-6 py-2 flex items-center justify-between text-sm">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          Emergency Appeal: Syria Relief Fund - $2.5M needed
+        </span>
+        <a href="#" class="underline hover:no-underline font-medium">Donate urgently</a>
+      </div>
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-800">Global Aid Alliance</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-red-600 transition font-medium">Who We Are</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 transition font-medium">Where We Work</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 transition font-medium">What We Do</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 transition font-medium">Latest News</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 transition font-medium">Resources</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="text-gray-600 hover:text-red-600 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+          <button class="bg-red-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Donate
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Animal Welfare -->
+  <nav class="bg-gradient-to-r from-amber-50 to-orange-50 border-b-4 border-amber-500">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.5 11.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S8.38 9 7 9s-2.5 1.12-2.5 2.5zm9 0c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5S17.38 9 16 9s-2.5 1.12-2.5 2.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold text-amber-800">Paws & Hearts</span>
+            <span class="block text-sm text-amber-600">Rescue • Rehabilitate • Rehome</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Adopt
+          </a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Foster</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Volunteer</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Events</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Shop</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="hidden lg:flex items-center gap-2 bg-amber-100 px-4 py-2 rounded-full text-amber-700 text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            247 Pets Adopted This Month
+          </span>
+          <button class="bg-amber-500 text-white px-5 py-2.5 rounded-full font-bold hover:bg-amber-600 transition">
+            Help Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Children's Charity -->
+  <nav class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-3xl shadow-2xl mx-4">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-7 h-7 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+            </svg>
+          </div>
+          <span class="text-2xl font-bold">KidsBright</span>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="hover:text-blue-200 transition font-medium">Programs</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">Success Stories</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">Schools</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">Partner With Us</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white/30 transition">
+            Sponsor a Child
+          </button>
+          <button class="bg-yellow-400 text-gray-900 px-5 py-2 rounded-full font-bold hover:bg-yellow-300 transition flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            Give Hope
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Medical Research Foundation -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-3 border-b border-gray-100">
+        <div class="flex items-center gap-6 text-sm text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            1-800-CURE-NOW
+          </span>
+          <span>|</span>
+          <a href="#" class="hover:text-teal-600 transition">For Researchers</a>
+          <a href="#" class="hover:text-teal-600 transition">For Healthcare Providers</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-500 hover:text-teal-600 transition">Patient Stories</a>
+          <a href="#" class="text-gray-500 hover:text-teal-600 transition">Contact</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-800">CureHope Foundation</span>
+            <span class="block text-xs text-teal-600">Advancing Medical Research</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-700 hover:text-teal-600 transition font-medium">Our Research</a>
+          <a href="#" class="text-gray-700 hover:text-teal-600 transition font-medium">Clinical Trials</a>
+          <a href="#" class="text-gray-700 hover:text-teal-600 transition font-medium">Breakthroughs</a>
+          <a href="#" class="text-gray-700 hover:text-teal-600 transition font-medium">Ways to Give</a>
+          <a href="#" class="text-gray-700 hover:text-teal-600 transition font-medium">Events</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="border-2 border-teal-500 text-teal-600 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition">
+            Find a Trial
+          </button>
+          <button class="bg-teal-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-teal-700 transition">
+            Fund Research
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Community Foundation -->
+  <nav class="bg-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-rose-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Together Community</span>
+            <span class="block text-xs text-slate-400">Building Stronger Neighborhoods</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="hover:text-orange-400 transition">About Us</a>
+          <a href="#" class="hover:text-orange-400 transition">Programs</a>
+          <a href="#" class="hover:text-orange-400 transition">Impact</a>
+          <a href="#" class="hover:text-orange-400 transition">Get Involved</a>
+          <a href="#" class="hover:text-orange-400 transition">Grants</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden lg:flex items-center gap-2 text-sm">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-slate-300">$1.2M raised this month</span>
+          </div>
+          <button class="bg-gradient-to-r from-orange-500 to-rose-500 px-6 py-2.5 rounded-lg font-bold hover:opacity-90 transition">
+            Support Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Education Non-Profit -->
+  <nav class="bg-gradient-to-b from-indigo-900 to-indigo-800 text-white rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 bg-yellow-400 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-indigo-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Scholars Rising</span>
+            <span class="block text-xs text-indigo-300">Education for Every Child</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="hover:text-yellow-400 transition font-medium">Our Work</a>
+          <a href="#" class="hover:text-yellow-400 transition font-medium">Scholarships</a>
+          <a href="#" class="hover:text-yellow-400 transition font-medium">Schools</a>
+          <a href="#" class="hover:text-yellow-400 transition font-medium">Results</a>
+          <a href="#" class="hover:text-yellow-400 transition font-medium">Blog</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="border border-indigo-400 px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+            Become a Mentor
+          </button>
+          <button class="bg-yellow-400 text-indigo-900 px-5 py-2 rounded-lg font-bold hover:bg-yellow-300 transition">
+            Fund a Student
+          </button>
+        </div>
+      </div>
+      <div class="bg-indigo-950/50 px-6 py-2">
+        <div class="flex items-center justify-center gap-8 text-sm text-indigo-200">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            50,000+ Students Supported
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            200 Schools Built
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            30 Countries
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Religious/Faith-Based Charity -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-violet-600 to-purple-700 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-800">Faith in Action</span>
+            <span class="block text-sm text-violet-600">Serving with Compassion</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-600 hover:text-violet-600 transition font-medium">Our Mission</a>
+          <a href="#" class="text-gray-600 hover:text-violet-600 transition font-medium">Ministries</a>
+          <a href="#" class="text-gray-600 hover:text-violet-600 transition font-medium">Outreach</a>
+          <a href="#" class="text-gray-600 hover:text-violet-600 transition font-medium">Testimonies</a>
+          <a href="#" class="text-gray-600 hover:text-violet-600 transition font-medium">Prayer Requests</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="text-violet-600 border border-violet-200 px-4 py-2 rounded-lg hover:bg-violet-50 transition font-medium">
+            Volunteer
+          </button>
+          <button class="bg-gradient-to-r from-violet-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Give Today
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>
