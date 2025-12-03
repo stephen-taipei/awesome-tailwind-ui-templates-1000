@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Command Menu Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Basic Command Palette -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Basic Command Palette</h2>
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div class="p-4 border-b border-gray-200">
+          <div class="relative">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Type a command or search..." class="w-full pl-10 pr-4 py-2 text-lg focus:outline-none">
+          </div>
+        </div>
+        <div class="max-h-80 overflow-auto">
+          <div class="p-2">
+            <p class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase">Suggestions</p>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg bg-primary-50 text-left">
+              <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+              </svg>
+              <span class="flex-1 text-gray-900">Create new document</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘N</kbd>
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <span class="flex-1 text-gray-700">Search files</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘F</kbd>
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span class="flex-1 text-gray-700">Open settings</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘,</kbd>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 2: Grouped Commands -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Grouped Commands</h2>
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div class="p-4 border-b border-gray-200">
+          <div class="relative">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Search commands..." class="w-full pl-10 pr-4 py-2 focus:outline-none">
+          </div>
+        </div>
+        <div class="max-h-80 overflow-auto divide-y divide-gray-100">
+          <div class="p-2">
+            <p class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase">File</p>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              <span class="flex-1 text-gray-700">New File</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘N</kbd>
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+              </svg>
+              <span class="flex-1 text-gray-700">Save</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘S</kbd>
+            </button>
+          </div>
+          <div class="p-2">
+            <p class="px-3 py-2 text-xs font-semibold text-gray-500 uppercase">Edit</p>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/>
+              </svg>
+              <span class="flex-1 text-gray-700">Undo</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘Z</kbd>
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10h-10a8 8 0 00-8 8v2M21 10l-6 6m6-6l-6-6"/>
+              </svg>
+              <span class="flex-1 text-gray-700">Redo</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘⇧Z</kbd>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 3: Spotlight Style -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Spotlight Style</h2>
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-xl mx-auto">
+        <div class="bg-white/95 backdrop-blur rounded-2xl shadow-2xl overflow-hidden">
+          <div class="p-5">
+            <div class="relative">
+              <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <input type="text" placeholder="Spotlight Search" class="w-full pl-14 pr-4 py-4 text-xl bg-transparent focus:outline-none">
+            </div>
+          </div>
+          <div class="border-t border-gray-200 max-h-96 overflow-auto">
+            <div class="p-2">
+              <button class="w-full flex items-center gap-4 p-3 rounded-xl bg-primary-50 text-left">
+                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="font-medium text-gray-900">Project Proposal.pdf</p>
+                  <p class="text-sm text-gray-500">Documents → Work</p>
+                </div>
+              </button>
+              <button class="w-full flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 text-left">
+                <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="font-medium text-gray-900">Projects</p>
+                  <p class="text-sm text-gray-500">Folder</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 4: VS Code Style -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: VS Code Style</h2>
+    <div class="bg-gray-900 rounded-lg p-8">
+      <div class="max-w-lg mx-auto bg-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-700">
+        <div class="p-3 border-b border-gray-700">
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">›</span>
+            <input type="text" placeholder="Show and Run Commands" class="w-full pl-8 pr-4 py-1.5 bg-gray-700 text-white placeholder-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-primary-500 text-sm">
+          </div>
+        </div>
+        <div class="max-h-72 overflow-auto">
+          <button class="w-full flex items-center gap-3 px-4 py-2 bg-primary-600/30 text-left">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span class="flex-1 text-white text-sm">Terminal: Create New Terminal</span>
+          </button>
+          <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-700 text-left">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+            <span class="flex-1 text-gray-300 text-sm">View: Toggle Side Bar</span>
+            <kbd class="px-1.5 py-0.5 bg-gray-700 text-gray-400 text-xs rounded">⌘B</kbd>
+          </button>
+          <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-700 text-left">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+            <span class="flex-1 text-gray-300 text-sm">File: New File</span>
+            <kbd class="px-1.5 py-0.5 bg-gray-700 text-gray-400 text-xs rounded">⌘N</kbd>
+          </button>
+          <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-700 text-left">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span class="flex-1 text-gray-300 text-sm">Preferences: Open Settings</span>
+            <kbd class="px-1.5 py-0.5 bg-gray-700 text-gray-400 text-xs rounded">⌘,</kbd>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 5: Quick Actions -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Quick Actions</h2>
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div class="p-4 border-b border-gray-200 flex items-center gap-3">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <input type="text" placeholder="Quick actions..." class="flex-1 focus:outline-none">
+          <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded">ESC</kbd>
+        </div>
+        <div class="p-3 grid grid-cols-3 gap-2">
+          <button class="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50">
+            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+              </svg>
+            </div>
+            <span class="text-xs text-gray-700">New</span>
+          </button>
+          <button class="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50">
+            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+              </svg>
+            </div>
+            <span class="text-xs text-gray-700">Upload</span>
+          </button>
+          <button class="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50">
+            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+              </svg>
+            </div>
+            <span class="text-xs text-gray-700">Share</span>
+          </button>
+          <button class="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50">
+            <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+            <span class="text-xs text-gray-700">Favorite</span>
+          </button>
+          <button class="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50">
+            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </div>
+            <span class="text-xs text-gray-700">Delete</span>
+          </button>
+          <button class="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-gray-50">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/>
+              </svg>
+            </div>
+            <span class="text-xs text-gray-700">More</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 6: Recent & Favorites -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Recent & Favorites</h2>
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div class="p-4 border-b border-gray-200">
+          <input type="text" placeholder="Search or jump to..." class="w-full px-4 py-2 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <div class="flex border-b border-gray-200">
+          <button class="flex-1 px-4 py-3 text-sm font-medium text-primary-600 border-b-2 border-primary-600">Recent</button>
+          <button class="flex-1 px-4 py-3 text-sm text-gray-500 hover:text-gray-700">Favorites</button>
+          <button class="flex-1 px-4 py-3 text-sm text-gray-500 hover:text-gray-700">All</button>
+        </div>
+        <div class="max-h-64 overflow-auto p-2">
+          <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm text-gray-900 truncate">Q4 Report.docx</p>
+              <p class="text-xs text-gray-500">Edited 2 hours ago</p>
+            </div>
+          </button>
+          <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 text-left">
+            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm text-gray-900 truncate">Sales Dashboard.xlsx</p>
+              <p class="text-xs text-gray-500">Edited yesterday</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 7: Trigger Button -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Trigger Button</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">Docs</a>
+        <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-600 text-sm">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <span>Search...</span>
+          <kbd class="ml-2 px-2 py-0.5 bg-white border border-gray-300 rounded text-xs">⌘K</kbd>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Minimal Command Input -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Minimal Command Input</h2>
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-xl mx-auto">
+        <div class="bg-white rounded-full shadow-2xl overflow-hidden flex items-center px-6 py-4">
+          <svg class="w-6 h-6 text-gray-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" placeholder="Type a command..." class="flex-1 text-lg focus:outline-none">
+          <div class="flex items-center gap-2 ml-4">
+            <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-sm rounded">⌘</kbd>
+            <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-sm rounded">K</kbd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
