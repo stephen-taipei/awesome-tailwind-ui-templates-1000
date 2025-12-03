@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breadcrumb Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Slash Separator -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Slash Separator</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-2 text-sm">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600">Home</a>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600">Products</a>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600">Electronics</a>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-900 font-medium">Smartphones</li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 2: Chevron Separator -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Chevron Separator</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-2 text-sm">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600 flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600">Dashboard</a>
+        </li>
+        <li>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600">Settings</a>
+        </li>
+        <li>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li class="text-primary-600 font-medium">Profile</li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 3: Pill Style -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Pill Style</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-2 text-sm">
+        <li>
+          <a href="#" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full transition-colors">Home</a>
+        </li>
+        <li class="text-gray-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full transition-colors">Category</a>
+        </li>
+        <li class="text-gray-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li>
+          <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full font-medium">Current Page</span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 4: Arrow Shape -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Arrow Shape</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ol class="flex items-center text-sm">
+        <li class="flex items-center">
+          <a href="#" class="relative px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-l-lg pr-6">
+            Home
+            <span class="absolute right-0 top-0 h-full w-3 bg-gray-100 transform skew-x-12 translate-x-1.5"></span>
+          </a>
+        </li>
+        <li class="flex items-center -ml-1">
+          <a href="#" class="relative px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 pl-6 pr-6">
+            Products
+            <span class="absolute right-0 top-0 h-full w-3 bg-gray-200 transform skew-x-12 translate-x-1.5"></span>
+          </a>
+        </li>
+        <li class="flex items-center -ml-1">
+          <span class="relative px-4 py-2 bg-primary-500 text-white pl-6 rounded-r-lg font-medium">
+            Details
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 5: With Dropdown -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: With Dropdown</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-2 text-sm">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600 flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </a>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li class="relative group">
+          <button class="flex items-center gap-1 text-gray-500 hover:text-primary-600">
+            <span class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center text-xs">...</span>
+          </button>
+          <div class="absolute left-0 top-full mt-1 w-40 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-t-lg">Category</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Subcategory</a>
+            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-b-lg">Products</a>
+          </div>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-primary-600">Electronics</a>
+        </li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-900 font-medium">iPhone 15 Pro</li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 6: Dark Theme -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Dark Theme</h2>
+    <nav class="bg-gray-900 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-3 text-sm">
+        <li>
+          <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-white">Projects</a>
+        </li>
+        <li>
+          <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-400 hover:text-white">Website Redesign</a>
+        </li>
+        <li>
+          <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+          </svg>
+        </li>
+        <li class="text-white font-medium">Settings</li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 7: With Icons -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: With Icons</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-3 text-sm">
+        <li>
+          <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-primary-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="text-gray-300">→</li>
+        <li>
+          <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-primary-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+            </svg>
+            <span>Documents</span>
+          </a>
+        </li>
+        <li class="text-gray-300">→</li>
+        <li>
+          <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-primary-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+            </svg>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li class="text-gray-300">→</li>
+        <li class="flex items-center gap-2 text-primary-600 font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          <span>Report.pdf</span>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 8: Contained Background -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Contained Background</h2>
+    <nav class="bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg px-6 py-4">
+      <ol class="flex items-center gap-2 text-sm">
+        <li>
+          <a href="#" class="flex items-center gap-1 text-white/70 hover:text-white transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <svg class="w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">Library</a>
+        </li>
+        <li>
+          <svg class="w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">Components</a>
+        </li>
+        <li>
+          <svg class="w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </li>
+        <li class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-white font-medium">Breadcrumbs</li>
+      </ol>
+    </nav>
+  </section>
+
+</body>
+</html>
