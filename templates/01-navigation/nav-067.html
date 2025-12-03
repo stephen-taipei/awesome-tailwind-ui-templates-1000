@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.63 0.20 250);
+      --color-primary-500: oklch(0.53 0.24 250);
+      --color-primary-600: oklch(0.45 0.24 250);
+      --color-primary-700: oklch(0.38 0.20 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-4xl mx-auto space-y-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Notification Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Simple Bell with Badge -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 1: Simple Bell with Badge</h2>
+      <div class="flex items-center space-x-6">
+        <div class="relative">
+          <button class="p-2 text-gray-500 hover:text-primary-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </button>
+          <span class="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full">3</span>
+        </div>
+        <div class="relative">
+          <button class="p-2 text-gray-500 hover:text-primary-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </button>
+          <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+        </div>
+        <div class="relative">
+          <button class="p-2 text-gray-500 hover:text-primary-600 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </button>
+          <span class="absolute -top-1 -right-1 flex items-center justify-center min-w-[20px] px-1 h-5 bg-primary-500 text-white text-xs font-bold rounded-full">99+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 2: Notification Dropdown -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 2: Notification Dropdown</h2>
+      <div class="relative inline-block group">
+        <button class="relative p-2 text-gray-500 hover:text-primary-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+          <span class="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full">5</span>
+        </button>
+        <div class="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+          <div class="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+            <h3 class="text-sm font-semibold text-gray-900">Notifications</h3>
+            <a href="#" class="text-xs text-primary-600 hover:underline">Mark all read</a>
+          </div>
+          <div class="max-h-80 overflow-y-auto">
+            <a href="#" class="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors bg-primary-50/50">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="User" class="w-10 h-10 rounded-full mr-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm text-gray-900"><span class="font-medium">John Doe</span> commented on your post</p>
+                <p class="text-xs text-gray-500 mt-0.5">2 minutes ago</p>
+              </div>
+              <span class="w-2 h-2 bg-primary-500 rounded-full mt-2"></span>
+            </a>
+            <a href="#" class="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors bg-primary-50/50">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" alt="User" class="w-10 h-10 rounded-full mr-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm text-gray-900"><span class="font-medium">Jane Smith</span> liked your photo</p>
+                <p class="text-xs text-gray-500 mt-0.5">1 hour ago</p>
+              </div>
+              <span class="w-2 h-2 bg-primary-500 rounded-full mt-2"></span>
+            </a>
+            <a href="#" class="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" alt="User" class="w-10 h-10 rounded-full mr-3">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm text-gray-900"><span class="font-medium">Mike Johnson</span> started following you</p>
+                <p class="text-xs text-gray-500 mt-0.5">2 hours ago</p>
+              </div>
+            </a>
+          </div>
+          <div class="px-4 py-3 border-t border-gray-100 text-center">
+            <a href="#" class="text-sm text-primary-600 hover:underline">View all notifications</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 3: Categorized Notifications -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 3: Categorized Notifications</h2>
+      <div class="relative inline-block group">
+        <button class="relative p-2 text-gray-500 hover:text-primary-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+          <span class="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full">8</span>
+        </button>
+        <div class="absolute right-0 top-full mt-2 w-96 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+          <div class="flex border-b border-gray-200">
+            <button class="flex-1 px-4 py-3 text-sm font-medium text-primary-600 border-b-2 border-primary-600">All</button>
+            <button class="flex-1 px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700">Mentions</button>
+            <button class="flex-1 px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700">Comments</button>
+          </div>
+          <div class="max-h-80 overflow-y-auto py-2">
+            <a href="#" class="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors">
+              <span class="flex items-center justify-center w-10 h-10 bg-blue-100 text-blue-600 rounded-full mr-3">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"/>
+                </svg>
+              </span>
+              <div class="flex-1">
+                <p class="text-sm text-gray-900"><span class="font-medium">New comment</span> on your project</p>
+                <p class="text-xs text-gray-500 mt-0.5">5 minutes ago</p>
+              </div>
+            </a>
+            <a href="#" class="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors">
+              <span class="flex items-center justify-center w-10 h-10 bg-green-100 text-green-600 rounded-full mr-3">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <div class="flex-1">
+                <p class="text-sm text-gray-900"><span class="font-medium">Task completed</span> - Design review</p>
+                <p class="text-xs text-gray-500 mt-0.5">1 hour ago</p>
+              </div>
+            </a>
+            <a href="#" class="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors">
+              <span class="flex items-center justify-center w-10 h-10 bg-yellow-100 text-yellow-600 rounded-full mr-3">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <div class="flex-1">
+                <p class="text-sm text-gray-900"><span class="font-medium">Warning:</span> Storage almost full</p>
+                <p class="text-xs text-gray-500 mt-0.5">2 hours ago</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 4: Toast-Style Notifications -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 4: Toast-Style Notifications</h2>
+      <div class="space-y-3 max-w-sm">
+        <div class="flex items-center p-4 bg-green-50 border border-green-200 rounded-lg">
+          <span class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full mr-3">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm font-medium text-green-800">Successfully saved!</p>
+            <p class="text-xs text-green-600">Your changes have been saved.</p>
+          </div>
+          <button class="text-green-500 hover:text-green-700">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center p-4 bg-red-50 border border-red-200 rounded-lg">
+          <span class="flex items-center justify-center w-8 h-8 bg-red-500 text-white rounded-full mr-3">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm font-medium text-red-800">Error occurred</p>
+            <p class="text-xs text-red-600">Please try again later.</p>
+          </div>
+          <button class="text-red-500 hover:text-red-700">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <span class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full mr-3">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm font-medium text-blue-800">New update available</p>
+            <p class="text-xs text-blue-600">Version 2.0 is ready to install.</p>
+          </div>
+          <button class="text-blue-500 hover:text-blue-700">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Notification Center Panel -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 5: Notification Center Panel</h2>
+      <div class="max-w-sm bg-gray-50 rounded-xl border border-gray-200">
+        <div class="flex items-center justify-between px-4 py-3 bg-white rounded-t-xl border-b border-gray-200">
+          <h3 class="text-base font-semibold text-gray-900">Notification Center</h3>
+          <div class="flex items-center space-x-2">
+            <button class="text-gray-400 hover:text-gray-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="p-2 space-y-2">
+          <div class="bg-white rounded-lg p-3 shadow-sm">
+            <div class="flex items-start">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" alt="User" class="w-8 h-8 rounded-full mr-3">
+              <div class="flex-1">
+                <p class="text-sm text-gray-900"><span class="font-medium">Alex</span> invited you to a project</p>
+                <div class="flex items-center space-x-2 mt-2">
+                  <button class="px-3 py-1 text-xs font-medium text-white bg-primary-500 rounded hover:bg-primary-600">Accept</button>
+                  <button class="px-3 py-1 text-xs font-medium text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Decline</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg p-3 shadow-sm">
+            <div class="flex items-start">
+              <span class="flex items-center justify-center w-8 h-8 bg-purple-100 text-purple-600 rounded-full mr-3">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                </svg>
+              </span>
+              <div class="flex-1">
+                <p class="text-sm text-gray-900">Reminder: Meeting in 30 minutes</p>
+                <p class="text-xs text-gray-500 mt-1">Team sync - Conference Room A</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 6: Inbox-Style Notifications -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 6: Inbox-Style Notifications</h2>
+      <div class="max-w-md border border-gray-200 rounded-xl overflow-hidden">
+        <div class="divide-y divide-gray-100">
+          <div class="flex items-center px-4 py-3 bg-primary-50 hover:bg-primary-100 transition-colors cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300 mr-3">
+            <span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900 truncate">New message from Sarah</p>
+              <p class="text-xs text-gray-500 truncate">Hey, can we schedule a call...</p>
+            </div>
+            <span class="text-xs text-gray-400 ml-2">2m</span>
+          </div>
+          <div class="flex items-center px-4 py-3 bg-primary-50 hover:bg-primary-100 transition-colors cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300 mr-3">
+            <span class="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900 truncate">Payment received</p>
+              <p class="text-xs text-gray-500 truncate">You received $150 from...</p>
+            </div>
+            <span class="text-xs text-gray-400 ml-2">1h</span>
+          </div>
+          <div class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-gray-300 mr-3">
+            <span class="w-2 h-2 mr-3"></span>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm text-gray-700 truncate">Weekly report available</p>
+              <p class="text-xs text-gray-500 truncate">Your weekly analytics report...</p>
+            </div>
+            <span class="text-xs text-gray-400 ml-2">1d</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 7: Activity Feed -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 7: Activity Feed</h2>
+      <div class="max-w-sm">
+        <div class="relative pl-8 space-y-6">
+          <div class="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-200"></div>
+          <div class="relative">
+            <span class="absolute left-[-22px] flex items-center justify-center w-6 h-6 bg-green-500 text-white rounded-full">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm text-gray-900"><span class="font-medium">Task completed</span> - Design mockups</p>
+              <p class="text-xs text-gray-500 mt-1">Just now</p>
+            </div>
+          </div>
+          <div class="relative">
+            <span class="absolute left-[-22px] flex items-center justify-center w-6 h-6 bg-blue-500 text-white rounded-full">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"/>
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm text-gray-900"><span class="font-medium">New comment</span> by Emma on PR #42</p>
+              <p class="text-xs text-gray-500 mt-1">5 minutes ago</p>
+            </div>
+          </div>
+          <div class="relative">
+            <span class="absolute left-[-22px] flex items-center justify-center w-6 h-6 bg-purple-500 text-white rounded-full">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm text-gray-900"><span class="font-medium">New team member</span> - David joined</p>
+              <p class="text-xs text-gray-500 mt-1">1 hour ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 8: Floating Notification Stack -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 8: Floating Notification Stack</h2>
+      <div class="relative h-48">
+        <div class="absolute right-4 top-4 space-y-3 w-80">
+          <div class="flex items-start p-4 bg-white rounded-lg shadow-lg border border-gray-100 animate-pulse">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tom" alt="User" class="w-10 h-10 rounded-full mr-3">
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <p class="text-sm font-medium text-gray-900">Tom Wilson</p>
+                <span class="text-xs text-gray-400">now</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">Just sent you a message</p>
+            </div>
+            <button class="ml-2 text-gray-400 hover:text-gray-600">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-start p-4 bg-white rounded-lg shadow-lg border border-gray-100 opacity-90 transform translate-x-2">
+            <span class="flex items-center justify-center w-10 h-10 bg-green-100 text-green-600 rounded-full mr-3">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <div class="flex-1">
+              <p class="text-sm font-medium text-gray-900">Payment successful</p>
+              <p class="text-sm text-gray-600 mt-1">$99.00 charged</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
