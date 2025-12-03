@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Style 1: Frosted Header -->
+  <section class="mb-12 relative">
+    <h2 class="text-lg font-semibold mb-4 px-8 pt-8">Style 1: Frosted Header</h2>
+    <div class="h-64 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 relative overflow-hidden rounded-2xl mx-8">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      <nav class="absolute top-4 left-4 right-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-xl font-bold text-white">GlassNav</a>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-white font-medium">Home</a>
+            <a href="#" class="text-white/80 hover:text-white transition-colors">Products</a>
+            <a href="#" class="text-white/80 hover:text-white transition-colors">About</a>
+            <a href="#" class="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-colors border border-white/20">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 2: Floating Glass Card -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 2: Floating Glass Card</h2>
+    <div class="relative h-72 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-2xl overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <nav class="bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/30 p-6 shadow-2xl">
+          <div class="flex items-center gap-8">
+            <a href="#" class="flex flex-col items-center gap-2 p-4 rounded-2xl bg-white/20 text-white">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <span class="text-sm font-medium">Home</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-2 p-4 rounded-2xl text-white/70 hover:text-white hover:bg-white/10 transition-all">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span class="text-sm font-medium">Search</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-2 p-4 rounded-2xl text-white/70 hover:text-white hover:bg-white/10 transition-all">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <span class="text-sm font-medium">Favorites</span>
+            </a>
+            <a href="#" class="flex flex-col items-center gap-2 p-4 rounded-2xl text-white/70 hover:text-white hover:bg-white/10 transition-all">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              <span class="text-sm font-medium">Profile</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 3: Sidebar Glass -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 3: Sidebar Glass</h2>
+    <div class="flex h-80 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 rounded-2xl overflow-hidden">
+      <nav class="w-64 bg-white/5 backdrop-blur-xl border-r border-white/10 p-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+            <span class="text-white font-bold">G</span>
+          </div>
+          <span class="text-white font-bold text-lg">GlassSide</span>
+        </div>
+        <div class="space-y-2">
+          <a href="#" class="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white border border-white/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Analytics</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 p-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Settings</span>
+          </a>
+        </div>
+      </nav>
+      <div class="flex-1 p-6 flex items-center justify-center">
+        <p class="text-white/50">Content Area</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 4: Bottom Tab Glass -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 4: Bottom Tab Glass</h2>
+    <div class="relative h-72 bg-gradient-to-br from-rose-500 via-fuchsia-500 to-violet-600 rounded-2xl overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <p class="text-white/50 text-lg">App Content</p>
+      </div>
+      <nav class="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-2">
+        <div class="flex items-center justify-around">
+          <a href="#" class="flex flex-col items-center gap-1 p-3 rounded-xl bg-white/20 text-white">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span class="text-xs">Home</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1 p-3 rounded-xl text-white/60 hover:text-white hover:bg-white/10 transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <span class="text-xs">Search</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1 p-3 rounded-xl text-white/60 hover:text-white hover:bg-white/10 transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+            <span class="text-xs">Add</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1 p-3 rounded-xl text-white/60 hover:text-white hover:bg-white/10 transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            <span class="text-xs">Alerts</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1 p-3 rounded-xl text-white/60 hover:text-white hover:bg-white/10 transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            <span class="text-xs">Profile</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 5: Pill Navigation Glass -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 5: Pill Navigation Glass</h2>
+    <div class="h-48 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl relative overflow-hidden flex items-center justify-center">
+      <nav class="bg-black/20 backdrop-blur-xl rounded-full border border-white/20 p-2">
+        <div class="flex items-center gap-1">
+          <a href="#" class="px-6 py-3 rounded-full bg-white text-emerald-600 font-medium shadow-lg">Overview</a>
+          <a href="#" class="px-6 py-3 rounded-full text-white hover:bg-white/10 transition-colors">Analytics</a>
+          <a href="#" class="px-6 py-3 rounded-full text-white hover:bg-white/10 transition-colors">Reports</a>
+          <a href="#" class="px-6 py-3 rounded-full text-white hover:bg-white/10 transition-colors">Settings</a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 6: Card Stack Glass -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 6: Card Stack Glass</h2>
+    <div class="h-80 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl relative overflow-hidden p-8">
+      <nav class="max-w-xs">
+        <a href="#" class="block mb-3 p-4 bg-white/15 backdrop-blur-xl rounded-2xl border border-white/20 text-white hover:bg-white/25 transition-all hover:-translate-y-1 hover:shadow-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Dashboard</p>
+              <p class="text-sm text-white/70">Overview & Stats</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="block mb-3 p-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Analytics</p>
+              <p class="text-sm text-white/50">Reports & Insights</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="block p-4 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-all hover:-translate-y-1">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Settings</p>
+              <p class="text-sm text-white/50">Preferences</p>
+            </div>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 7: Minimal Glass Bar -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 7: Minimal Glass Bar</h2>
+    <div class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl relative overflow-hidden">
+      <div class="absolute inset-0 opacity-30" style="background-image: url('data:image/svg+xml,%3Csvg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\" fill=\"%23ffffff\" fill-opacity=\"0.1\" fill-rule=\"evenodd\"/%3E%3C/svg%3E')"></div>
+      <nav class="absolute top-4 left-4 right-4 flex items-center justify-between">
+        <a href="#" class="px-4 py-2 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 text-white font-medium">
+          Logo
+        </a>
+        <div class="flex items-center gap-2 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 p-1">
+          <a href="#" class="px-4 py-2 rounded-lg bg-white/10 text-white text-sm">Home</a>
+          <a href="#" class="px-4 py-2 rounded-lg text-white/60 hover:text-white text-sm transition-colors">About</a>
+          <a href="#" class="px-4 py-2 rounded-lg text-white/60 hover:text-white text-sm transition-colors">Work</a>
+          <a href="#" class="px-4 py-2 rounded-lg text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+        </div>
+        <button class="p-2 bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 text-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 8: Layered Glass -->
+  <section class="mb-12 px-8">
+    <h2 class="text-lg font-semibold mb-4">Style 8: Layered Glass</h2>
+    <div class="h-64 bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 rounded-2xl relative overflow-hidden flex items-end justify-center pb-8">
+      <nav class="relative">
+        <!-- Back layer -->
+        <div class="absolute -inset-2 bg-white/5 backdrop-blur-sm rounded-3xl"></div>
+        <!-- Middle layer -->
+        <div class="absolute -inset-1 bg-white/10 backdrop-blur-md rounded-2xl"></div>
+        <!-- Front layer -->
+        <div class="relative bg-white/20 backdrop-blur-xl rounded-xl border border-white/30 p-3 flex items-center gap-2">
+          <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-blue-600 font-medium shadow-lg">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>Features</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Pricing</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Contact</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+</body>
+</html>
