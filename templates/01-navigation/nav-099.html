@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Toggle Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Grid/List Toggle -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Grid/List Toggle</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-600">24 items</span>
+        <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+          <button class="p-2 bg-primary-500 text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-500 hover:bg-gray-50">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Three View Options -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Three View Options</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-600">Showing 1-12 of 48</span>
+        <div class="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+          <button class="p-2 bg-white text-primary-600 rounded-md shadow-sm" title="Large Grid">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-500 hover:text-gray-700 rounded-md" title="Small Grid">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-500 hover:text-gray-700 rounded-md" title="List">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: View with Labels -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: View with Labels</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-600">128 results</span>
+        <div class="flex items-center gap-2">
+          <span class="text-sm text-gray-500">View:</span>
+          <button class="flex items-center gap-2 px-3 py-2 bg-primary-100 text-primary-700 rounded-lg text-sm font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            Grid
+          </button>
+          <button class="flex items-center gap-2 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+            </svg>
+            List
+          </button>
+          <button class="flex items-center gap-2 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-lg text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+            </svg>
+            Board
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Segmented Control -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Segmented Control</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-center">
+        <div class="inline-flex bg-gray-100 rounded-full p-1">
+          <button class="px-6 py-2 bg-white text-gray-900 rounded-full text-sm font-medium shadow-sm">All</button>
+          <button class="px-6 py-2 text-gray-600 hover:text-gray-900 rounded-full text-sm">Active</button>
+          <button class="px-6 py-2 text-gray-600 hover:text-gray-900 rounded-full text-sm">Completed</button>
+          <button class="px-6 py-2 text-gray-600 hover:text-gray-900 rounded-full text-sm">Archived</button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Compact Icon Buttons -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Compact Icon Buttons</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="text-sm text-gray-600">Files</span>
+          <div class="flex items-center gap-1">
+            <button class="w-8 h-8 flex items-center justify-center rounded bg-primary-100 text-primary-600" title="Icons">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </button>
+            <button class="w-8 h-8 flex items-center justify-center rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600" title="List">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+              </svg>
+            </button>
+            <button class="w-8 h-8 flex items-center justify-center rounded text-gray-400 hover:bg-gray-100 hover:text-gray-600" title="Details">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <select class="px-3 py-1.5 border border-gray-300 rounded text-sm">
+            <option>Name</option>
+            <option>Date</option>
+            <option>Size</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Dark Theme View Toggle -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Dark Theme View Toggle</h2>
+    <nav class="bg-gray-900 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-400">48 items</span>
+        <div class="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
+          <button class="p-2 bg-primary-600 text-white rounded-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-400 hover:text-white rounded-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-400 hover:text-white rounded-md">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Dropdown View Menu -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Dropdown View Menu</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-600">Projects</span>
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            Grid View
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm rounded-t-lg">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+              Grid View
+              <svg class="w-4 h-4 ml-auto text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+              </svg>
+              List View
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+              </svg>
+              Board View
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm rounded-b-lg">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Calendar View
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Mobile View Toggle -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Mobile View Toggle</h2>
+    <div class="max-w-sm mx-auto">
+      <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-4 py-3">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-gray-900">Products</span>
+          <div class="flex items-center gap-2">
+            <button class="p-2 bg-primary-100 text-primary-600 rounded-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+              </svg>
+            </button>
+            <button class="p-2 text-gray-400 hover:bg-gray-100 rounded-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+</body>
+</html>
