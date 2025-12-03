@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Badge Notification -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Badge Notification</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <button class="relative p-2 hover:bg-gray-100 rounded-lg text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+          <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Dropdown Notification List -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Dropdown Notification List</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <div class="relative group">
+          <button class="relative p-2 hover:bg-gray-100 rounded-lg text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">5</span>
+          </button>
+          <div class="absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+              <h3 class="font-semibold text-gray-900">Notifications</h3>
+              <button class="text-sm text-primary-600 hover:text-primary-700">Mark all read</button>
+            </div>
+            <div class="max-h-80 overflow-auto">
+              <a href="#" class="flex gap-3 p-4 hover:bg-gray-50 border-l-4 border-primary-500 bg-primary-50">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" class="w-10 h-10 rounded-full" alt="">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-900"><strong>John Doe</strong> liked your post</p>
+                  <p class="text-xs text-gray-500">2 minutes ago</p>
+                </div>
+              </a>
+              <a href="#" class="flex gap-3 p-4 hover:bg-gray-50">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" class="w-10 h-10 rounded-full" alt="">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-900"><strong>Jane Smith</strong> commented on your photo</p>
+                  <p class="text-xs text-gray-500">1 hour ago</p>
+                </div>
+              </a>
+              <a href="#" class="flex gap-3 p-4 hover:bg-gray-50">
+                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-900">Your order has been shipped!</p>
+                  <p class="text-xs text-gray-500">Yesterday</p>
+                </div>
+              </a>
+            </div>
+            <a href="#" class="block p-3 text-center text-sm text-primary-600 hover:bg-gray-50 border-t border-gray-200">View all notifications</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Animated Bell -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Animated Bell</h2>
+    <nav class="bg-gray-900 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-white">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-300 hover:text-white">Home</a>
+        <a href="#" class="text-gray-300 hover:text-white">About</a>
+        <button class="relative p-2 hover:bg-gray-800 rounded-lg text-gray-300 hover:text-white group">
+          <svg class="w-6 h-6 group-hover:animate-[wiggle_0.3s_ease-in-out_2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+          <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Multiple Notification Types -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Multiple Notification Types</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <div class="flex items-center gap-2">
+          <button class="relative p-2 hover:bg-gray-100 rounded-lg text-gray-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 text-white text-xs font-bold rounded-full flex items-center justify-center">2</span>
+          </button>
+          <button class="relative p-2 hover:bg-gray-100 rounded-lg text-gray-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">5</span>
+          </button>
+          <button class="relative p-2 hover:bg-gray-100 rounded-lg text-gray-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Toast Notification Bar -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Toast Notification Bar</h2>
+    <div class="space-y-0">
+      <div class="bg-primary-600 text-white px-4 py-2 flex items-center justify-center gap-2 rounded-t-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span class="text-sm">New feature available! Check out our latest updates.</span>
+        <button class="ml-4 text-white/80 hover:text-white">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="bg-white shadow-sm border border-gray-200 rounded-b-lg px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Style 6: Slide-in Panel -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Slide-in Panel</h2>
+    <div class="flex rounded-lg overflow-hidden border border-gray-200">
+      <div class="flex-1">
+        <nav class="bg-white px-6 py-4 flex items-center justify-between border-b border-gray-200">
+          <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+            <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+            <button class="relative p-2 hover:bg-gray-100 rounded-lg text-primary-600 bg-primary-50">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+              </svg>
+              <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">4</span>
+            </button>
+          </div>
+        </nav>
+        <div class="p-6 bg-white">
+          <p class="text-gray-600">Main content area</p>
+        </div>
+      </div>
+      <aside class="w-80 bg-gray-50 border-l border-gray-200">
+        <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+          <h3 class="font-semibold text-gray-900">Notifications</h3>
+          <button class="text-gray-400 hover:text-gray-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="divide-y divide-gray-200">
+          <div class="p-4 bg-white">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-gray-900 font-medium">System Update</p>
+                <p class="text-xs text-gray-500 mt-1">New version available for download</p>
+                <p class="text-xs text-gray-400 mt-1">5 min ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-start gap-3">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" class="w-8 h-8 rounded-full" alt="">
+              <div>
+                <p class="text-sm text-gray-900 font-medium">Mike Johnson</p>
+                <p class="text-xs text-gray-500 mt-1">Sent you a message</p>
+                <p class="text-xs text-gray-400 mt-1">1 hour ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Style 7: Grouped Notifications -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Grouped Notifications</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <div class="relative group">
+          <button class="relative p-2 hover:bg-gray-100 rounded-lg text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">8</span>
+          </button>
+          <div class="absolute right-0 top-full mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <div class="p-4 border-b border-gray-200">
+              <div class="flex gap-2">
+                <button class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">All</button>
+                <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-sm">Mentions</button>
+                <button class="px-3 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-sm">Updates</button>
+              </div>
+            </div>
+            <div class="max-h-80 overflow-auto">
+              <div class="p-3 bg-gray-50">
+                <p class="text-xs font-medium text-gray-500 uppercase">Today</p>
+              </div>
+              <a href="#" class="flex gap-3 p-4 hover:bg-gray-50 border-l-4 border-primary-500">
+                <div class="relative">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Anna" class="w-10 h-10 rounded-full" alt="">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" class="w-6 h-6 rounded-full absolute -bottom-1 -right-1 border-2 border-white" alt="">
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm text-gray-900"><strong>Anna</strong> and <strong>2 others</strong> liked your post</p>
+                  <p class="text-xs text-gray-500">10 minutes ago</p>
+                </div>
+              </a>
+              <div class="p-3 bg-gray-50">
+                <p class="text-xs font-medium text-gray-500 uppercase">Yesterday</p>
+              </div>
+              <a href="#" class="flex gap-3 p-4 hover:bg-gray-50">
+                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm text-gray-900">Meeting reminder: Team sync at 3 PM</p>
+                  <p class="text-xs text-gray-500">Yesterday at 2:45 PM</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Floating Notification Center -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Floating Notification Center</h2>
+    <div class="relative bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg p-6 min-h-[250px]">
+      <nav class="flex items-center justify-between mb-6">
+        <a href="#" class="text-xl font-bold text-white">Brand</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-white/80 hover:text-white">Home</a>
+          <a href="#" class="text-white/80 hover:text-white">About</a>
+          <a href="#" class="text-white/80 hover:text-white">Contact</a>
+        </div>
+      </nav>
+      <p class="text-white/80">Page content goes here...</p>
+
+      <!-- Floating Notification Stack -->
+      <div class="absolute bottom-6 right-6 space-y-3 w-80">
+        <div class="bg-white rounded-lg shadow-xl p-4 flex items-start gap-3 animate-[slideIn_0.3s_ease-out]">
+          <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm font-medium text-gray-900">Payment Successful</p>
+            <p class="text-xs text-gray-500 mt-1">Your order #1234 has been confirmed</p>
+          </div>
+          <button class="text-gray-400 hover:text-gray-600">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="bg-white rounded-lg shadow-xl p-4 flex items-start gap-3">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" class="w-10 h-10 rounded-full" alt="">
+          <div class="flex-1">
+            <p class="text-sm font-medium text-gray-900">Sarah sent you a message</p>
+            <p class="text-xs text-gray-500 mt-1">"Hey, are you free for lunch?"</p>
+          </div>
+          <button class="text-gray-400 hover:text-gray-600">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
