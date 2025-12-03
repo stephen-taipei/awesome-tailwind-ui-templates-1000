@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Inline Search Bar -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Inline Search Bar</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex-1 max-w-lg mx-8">
+        <div class="relative">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Expandable Search Icon -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Expandable Search Icon</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
+        <div class="group relative">
+          <button class="p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <div class="bg-white rounded-lg shadow-xl border border-gray-200 p-2 w-72">
+              <input type="text" placeholder="Search..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm" autofocus>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Search with Categories -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Search with Categories</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between mb-4">
+        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <select class="px-4 py-2 border border-gray-300 rounded-l-lg bg-gray-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <option>All Categories</option>
+          <option>Products</option>
+          <option>Articles</option>
+          <option>Users</option>
+        </select>
+        <div class="flex-1 relative">
+          <input type="text" placeholder="Search..." class="w-full px-4 py-2 border-y border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <button class="px-6 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-r-lg transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Full-Width Search Header -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Full-Width Search Header</h2>
+    <nav class="bg-gray-900 rounded-lg overflow-hidden">
+      <div class="px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-white">Brand</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-300 hover:text-white">Home</a>
+          <a href="#" class="text-gray-300 hover:text-white">About</a>
+          <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 px-6 py-4">
+        <div class="max-w-2xl mx-auto relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" placeholder="Search anything..." class="w-full pl-12 pr-4 py-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <kbd class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-1 bg-gray-600 text-gray-300 text-xs rounded">⌘K</kbd>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Search with Suggestions -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Search with Suggestions</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex-1 max-w-lg mx-8 relative group">
+        <div class="relative">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" placeholder="Search..." value="tai" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+        </div>
+        <div class="absolute left-0 right-0 top-full mt-1 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-focus-within:opacity-100 group-focus-within:visible transition-all z-10">
+          <div class="p-2">
+            <p class="px-3 py-1 text-xs text-gray-500 uppercase">Suggestions</p>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <span class="text-gray-700"><strong>tai</strong>lwind css</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <span class="text-gray-700"><strong>tai</strong>lwind ui</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <span class="text-gray-700"><strong>tai</strong>lwind components</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Command Palette Style -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Command Palette Style</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-600 text-sm transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <span>Search...</span>
+          <kbd class="ml-4 px-2 py-0.5 bg-white border border-gray-300 rounded text-xs">⌘K</kbd>
+        </button>
+      </div>
+    </nav>
+    <!-- Command Palette Modal Preview -->
+    <div class="bg-gray-900/50 rounded-lg p-8">
+      <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div class="p-4 border-b border-gray-200">
+          <div class="relative">
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Search commands..." class="w-full pl-10 pr-4 py-2 text-lg focus:outline-none">
+          </div>
+        </div>
+        <div class="max-h-80 overflow-auto">
+          <div class="p-2">
+            <p class="px-3 py-2 text-xs text-gray-500 uppercase">Recent</p>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 text-left">
+              <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              </svg>
+              <span class="flex-1 text-gray-700">Go to Projects</span>
+              <kbd class="px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">⌘P</kbd>
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg bg-primary-50 text-left">
+              <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+              </svg>
+              <span class="flex-1 text-primary-700">Create New Document</span>
+              <kbd class="px-2 py-0.5 bg-primary-100 text-primary-600 text-xs rounded">⌘N</kbd>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 7: Voice Search -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Voice Search</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex-1 max-w-lg mx-8">
+        <div class="relative flex items-center">
+          <svg class="absolute left-3 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" placeholder="Search or speak..." class="w-full pl-10 pr-24 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+          <div class="absolute right-2 flex items-center gap-1">
+            <button class="p-2 hover:bg-gray-100 rounded-lg text-gray-500 hover:text-primary-500 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+              </svg>
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded-lg text-gray-500 hover:text-primary-500 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Filter Search Bar -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Filter Search Bar</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg">
+      <div class="px-6 py-4 flex items-center justify-between border-b border-gray-200">
+        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+      </div>
+      <div class="px-6 py-3 flex items-center gap-4">
+        <div class="flex-1 relative">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="px-3 py-2 bg-primary-100 text-primary-700 rounded-lg text-sm font-medium flex items-center gap-1">
+            <span>Type: All</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium flex items-center gap-1">
+            <span>Date</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium flex items-center gap-1">
+            <span>Status</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <button class="p-2 hover:bg-gray-100 rounded-lg text-gray-500">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
