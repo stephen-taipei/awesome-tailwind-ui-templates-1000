@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.63 0.20 250);
+      --color-primary-500: oklch(0.53 0.24 250);
+      --color-primary-600: oklch(0.45 0.24 250);
+      --color-primary-700: oklch(0.38 0.20 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-5xl mx-auto space-y-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Timeline Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Simple Vertical Timeline -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 1: Simple Vertical Timeline</h2>
+      <div class="relative pl-8 max-w-lg">
+        <div class="absolute left-3 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-22px] w-6 h-6 bg-primary-500 rounded-full border-4 border-white shadow"></span>
+          <div class="ml-4">
+            <time class="text-xs text-gray-500">December 2024</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Project Started</h4>
+            <p class="text-sm text-gray-600 mt-1">Initial planning and team formation completed.</p>
+          </div>
+        </div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-22px] w-6 h-6 bg-primary-500 rounded-full border-4 border-white shadow"></span>
+          <div class="ml-4">
+            <time class="text-xs text-gray-500">January 2025</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Design Phase</h4>
+            <p class="text-sm text-gray-600 mt-1">UI/UX designs finalized and approved.</p>
+          </div>
+        </div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-22px] w-6 h-6 bg-gray-300 rounded-full border-4 border-white shadow"></span>
+          <div class="ml-4">
+            <time class="text-xs text-gray-500">February 2025</time>
+            <h4 class="text-sm font-medium text-gray-500 mt-1">Development</h4>
+            <p class="text-sm text-gray-400 mt-1">Upcoming: Core features implementation.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <span class="absolute left-[-22px] w-6 h-6 bg-gray-300 rounded-full border-4 border-white shadow"></span>
+          <div class="ml-4">
+            <time class="text-xs text-gray-500">March 2025</time>
+            <h4 class="text-sm font-medium text-gray-500 mt-1">Launch</h4>
+            <p class="text-sm text-gray-400 mt-1">Upcoming: Product launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 2: Timeline with Icons -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 2: Timeline with Icons</h2>
+      <div class="relative pl-10 max-w-lg">
+        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-26px] flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="ml-4 p-4 bg-green-50 rounded-lg border border-green-100">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-semibold text-gray-900">Order Confirmed</h4>
+              <time class="text-xs text-gray-500">10:30 AM</time>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">Your order #12345 has been confirmed.</p>
+          </div>
+        </div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-26px] flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+            </svg>
+          </span>
+          <div class="ml-4 p-4 bg-blue-50 rounded-lg border border-blue-100">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-semibold text-gray-900">Package Shipped</h4>
+              <time class="text-xs text-gray-500">2:45 PM</time>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">Package is on its way to you.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <span class="absolute left-[-26px] flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-400 rounded-full">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </span>
+          <div class="ml-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-medium text-gray-500">Delivered</h4>
+              <time class="text-xs text-gray-400">Pending</time>
+            </div>
+            <p class="text-sm text-gray-400 mt-1">Estimated: Dec 5, 2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 3: Alternating Timeline -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 3: Alternating Timeline</h2>
+      <div class="relative max-w-3xl mx-auto">
+        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+        <div class="relative flex items-center justify-end w-1/2 pr-8 pb-8">
+          <div class="text-right">
+            <time class="text-xs text-gray-500">2020</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Company Founded</h4>
+            <p class="text-sm text-gray-600 mt-1">Started with a team of 3 people.</p>
+          </div>
+          <span class="absolute right-0 translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow"></span>
+        </div>
+        <div class="relative flex items-center w-1/2 ml-auto pl-8 pb-8">
+          <span class="absolute left-0 -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow"></span>
+          <div>
+            <time class="text-xs text-gray-500">2021</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">First Product Launch</h4>
+            <p class="text-sm text-gray-600 mt-1">Launched our flagship product.</p>
+          </div>
+        </div>
+        <div class="relative flex items-center justify-end w-1/2 pr-8 pb-8">
+          <div class="text-right">
+            <time class="text-xs text-gray-500">2022</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Series A Funding</h4>
+            <p class="text-sm text-gray-600 mt-1">Raised $10M in funding.</p>
+          </div>
+          <span class="absolute right-0 translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow"></span>
+        </div>
+        <div class="relative flex items-center w-1/2 ml-auto pl-8">
+          <span class="absolute left-0 -translate-x-1/2 w-4 h-4 bg-gray-300 rounded-full border-4 border-white shadow"></span>
+          <div>
+            <time class="text-xs text-gray-500">2023</time>
+            <h4 class="text-sm font-medium text-gray-500 mt-1">Global Expansion</h4>
+            <p class="text-sm text-gray-400 mt-1">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 4: Horizontal Timeline -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 4: Horizontal Timeline</h2>
+      <div class="relative">
+        <div class="absolute top-4 left-0 right-0 h-0.5 bg-gray-200"></div>
+        <div class="flex justify-between">
+          <div class="relative flex flex-col items-center">
+            <span class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full z-10">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <div class="mt-3 text-center">
+              <p class="text-sm font-semibold text-gray-900">Ordered</p>
+              <time class="text-xs text-gray-500">Dec 1</time>
+            </div>
+          </div>
+          <div class="relative flex flex-col items-center">
+            <span class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full z-10">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <div class="mt-3 text-center">
+              <p class="text-sm font-semibold text-gray-900">Shipped</p>
+              <time class="text-xs text-gray-500">Dec 2</time>
+            </div>
+          </div>
+          <div class="relative flex flex-col items-center">
+            <span class="flex items-center justify-center w-8 h-8 bg-primary-500 text-white rounded-full z-10 ring-4 ring-primary-100">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </span>
+            <div class="mt-3 text-center">
+              <p class="text-sm font-semibold text-primary-600">In Transit</p>
+              <time class="text-xs text-gray-500">Dec 3</time>
+            </div>
+          </div>
+          <div class="relative flex flex-col items-center">
+            <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-400 rounded-full z-10">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+              </svg>
+            </span>
+            <div class="mt-3 text-center">
+              <p class="text-sm font-medium text-gray-400">Out for Delivery</p>
+              <time class="text-xs text-gray-400">Dec 4</time>
+            </div>
+          </div>
+          <div class="relative flex flex-col items-center">
+            <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-400 rounded-full z-10">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </span>
+            <div class="mt-3 text-center">
+              <p class="text-sm font-medium text-gray-400">Delivered</p>
+              <time class="text-xs text-gray-400">Dec 5</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Activity Feed Timeline -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 5: Activity Feed Timeline</h2>
+      <div class="max-w-md space-y-4">
+        <div class="flex items-start space-x-3">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="User" class="w-8 h-8 rounded-full">
+          <div class="flex-1 bg-gray-50 rounded-lg p-3">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">John Doe</span>
+              <time class="text-xs text-gray-500">2 min ago</time>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">Created a new branch <code class="px-1 bg-gray-200 rounded text-xs">feature/auth</code></p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-3">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jane" alt="User" class="w-8 h-8 rounded-full">
+          <div class="flex-1 bg-gray-50 rounded-lg p-3">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Jane Smith</span>
+              <time class="text-xs text-gray-500">15 min ago</time>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">Merged PR #42 into main</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-3">
+          <span class="flex items-center justify-center w-8 h-8 bg-green-100 text-green-600 rounded-full">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="flex-1 bg-green-50 rounded-lg p-3">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900">Build Passed</span>
+              <time class="text-xs text-gray-500">30 min ago</time>
+            </div>
+            <p class="text-sm text-gray-600 mt-1">All tests passed successfully.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 6: Grouped Timeline -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 6: Grouped Timeline</h2>
+      <div class="max-w-lg">
+        <div class="mb-6">
+          <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Today</h3>
+          <div class="relative pl-6 space-y-4">
+            <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-gray-200"></div>
+            <div class="relative">
+              <span class="absolute left-[-14px] w-3 h-3 bg-primary-500 rounded-full"></span>
+              <div class="flex items-center justify-between">
+                <p class="text-sm text-gray-900">New user registered</p>
+                <time class="text-xs text-gray-500">9:30 AM</time>
+              </div>
+            </div>
+            <div class="relative">
+              <span class="absolute left-[-14px] w-3 h-3 bg-green-500 rounded-full"></span>
+              <div class="flex items-center justify-between">
+                <p class="text-sm text-gray-900">Payment received - $99.00</p>
+                <time class="text-xs text-gray-500">10:15 AM</time>
+              </div>
+            </div>
+            <div class="relative">
+              <span class="absolute left-[-14px] w-3 h-3 bg-yellow-500 rounded-full"></span>
+              <div class="flex items-center justify-between">
+                <p class="text-sm text-gray-900">Support ticket opened</p>
+                <time class="text-xs text-gray-500">2:45 PM</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Yesterday</h3>
+          <div class="relative pl-6 space-y-4">
+            <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-gray-200"></div>
+            <div class="relative">
+              <span class="absolute left-[-14px] w-3 h-3 bg-gray-400 rounded-full"></span>
+              <div class="flex items-center justify-between">
+                <p class="text-sm text-gray-600">Newsletter sent</p>
+                <time class="text-xs text-gray-500">4:00 PM</time>
+              </div>
+            </div>
+            <div class="relative">
+              <span class="absolute left-[-14px] w-3 h-3 bg-gray-400 rounded-full"></span>
+              <div class="flex items-center justify-between">
+                <p class="text-sm text-gray-600">Product updated</p>
+                <time class="text-xs text-gray-500">11:30 AM</time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 7: Compact Timeline -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 7: Compact Timeline</h2>
+      <div class="max-w-md">
+        <div class="flex items-center space-x-4 py-2 border-b border-gray-100">
+          <time class="text-xs text-gray-400 w-16">10:30 AM</time>
+          <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+          <p class="text-sm text-gray-700 flex-1">Meeting with design team</p>
+        </div>
+        <div class="flex items-center space-x-4 py-2 border-b border-gray-100">
+          <time class="text-xs text-gray-400 w-16">11:00 AM</time>
+          <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+          <p class="text-sm text-gray-700 flex-1">Code review completed</p>
+        </div>
+        <div class="flex items-center space-x-4 py-2 border-b border-gray-100">
+          <time class="text-xs text-gray-400 w-16">1:00 PM</time>
+          <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+          <p class="text-sm text-gray-700 flex-1">Lunch break</p>
+        </div>
+        <div class="flex items-center space-x-4 py-2 border-b border-gray-100">
+          <time class="text-xs text-gray-400 w-16">2:30 PM</time>
+          <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+          <p class="text-sm text-gray-700 flex-1">Sprint planning</p>
+        </div>
+        <div class="flex items-center space-x-4 py-2">
+          <time class="text-xs text-gray-400 w-16">4:00 PM</time>
+          <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+          <p class="text-sm text-gray-700 flex-1">Client presentation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 8: Visual Timeline with Images -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 8: Visual Timeline with Images</h2>
+      <div class="relative pl-10 max-w-lg">
+        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-purple-500 to-pink-500"></div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-26px] flex items-center justify-center w-8 h-8 bg-primary-500 text-white rounded-full shadow-lg">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="ml-4">
+            <img src="https://api.dicebear.com/7.x/shapes/svg?seed=event1" alt="Event" class="w-full h-32 object-cover rounded-lg mb-2">
+            <time class="text-xs text-gray-500">January 15, 2025</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Team Building Event</h4>
+            <p class="text-sm text-gray-600 mt-1">Annual team gathering at the beach resort.</p>
+          </div>
+        </div>
+        <div class="relative pb-8">
+          <span class="absolute left-[-26px] flex items-center justify-center w-8 h-8 bg-purple-500 text-white rounded-full shadow-lg">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </span>
+          <div class="ml-4">
+            <img src="https://api.dicebear.com/7.x/shapes/svg?seed=event2" alt="Event" class="w-full h-32 object-cover rounded-lg mb-2">
+            <time class="text-xs text-gray-500">February 20, 2025</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Product Launch Party</h4>
+            <p class="text-sm text-gray-600 mt-1">Celebrating our newest product release.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <span class="absolute left-[-26px] flex items-center justify-center w-8 h-8 bg-pink-500 text-white rounded-full shadow-lg">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div class="ml-4">
+            <img src="https://api.dicebear.com/7.x/shapes/svg?seed=event3" alt="Event" class="w-full h-32 object-cover rounded-lg mb-2">
+            <time class="text-xs text-gray-500">March 10, 2025</time>
+            <h4 class="text-sm font-semibold text-gray-900 mt-1">Annual Conference</h4>
+            <p class="text-sm text-gray-600 mt-1">Industry conference and networking event.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
