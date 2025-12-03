@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes thinking {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: AI Assistant Chat -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 1: AI Assistant Chat</h2>
+    <nav class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="p-4 bg-gradient-to-r from-primary-500 to-primary-600 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold text-white">AI Assistant</p>
+          <p class="text-sm text-white/70">Online and ready to help</p>
+        </div>
+        <button class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/></svg>
+        </button>
+      </div>
+      <div class="p-4 space-y-4">
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="bg-gray-100 rounded-2xl rounded-tl-none p-4 max-w-xs">
+            <p class="text-gray-700">Hi! Where would you like to navigate today? I can help you find anything.</p>
+          </div>
+        </div>
+        <div class="flex gap-2 flex-wrap pl-11">
+          <button class="px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-100 transition-colors">Dashboard</button>
+          <button class="px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-100 transition-colors">Settings</button>
+          <button class="px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-100 transition-colors">Recent files</button>
+        </div>
+      </div>
+      <div class="p-4 border-t border-gray-100">
+        <div class="flex items-center gap-3">
+          <input type="text" placeholder="Ask where to go..." class="flex-1 px-4 py-3 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <button class="w-12 h-12 rounded-xl bg-primary-500 text-white flex items-center justify-center hover:bg-primary-600 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Smart Suggestions -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 2: Smart Suggestions</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">AI Suggestions</p>
+          <p class="text-xs text-gray-500">Based on your activity</p>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <a href="#" class="flex items-center gap-4 p-3 rounded-xl bg-gradient-to-r from-primary-50 to-purple-50 border border-primary-100 hover:border-primary-200 transition-colors">
+          <div class="w-10 h-10 rounded-lg bg-white shadow flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-medium text-gray-800">Analytics Dashboard</p>
+            <p class="text-sm text-gray-500">You usually check this at 9 AM</p>
+          </div>
+          <span class="px-2 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">Recommended</span>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+          <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-medium text-gray-800">Unread Messages</p>
+            <p class="text-sm text-gray-500">3 new messages waiting</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+          <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-medium text-gray-800">Recent Projects</p>
+            <p class="text-sm text-gray-500">Continue where you left off</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: AI Thinking State -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 3: AI Thinking State</h2>
+    <nav class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-lg p-6">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-gray-900"></span>
+        </div>
+        <div>
+          <p class="text-white font-semibold">Finding the best path...</p>
+          <div class="flex items-center gap-1 mt-1">
+            <span class="w-2 h-2 rounded-full bg-primary-400" style="animation: thinking 1s ease-in-out infinite"></span>
+            <span class="w-2 h-2 rounded-full bg-primary-400" style="animation: thinking 1s ease-in-out 0.2s infinite"></span>
+            <span class="w-2 h-2 rounded-full bg-primary-400" style="animation: thinking 1s ease-in-out 0.4s infinite"></span>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div class="h-10 rounded-lg bg-gray-700/50" style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); background-size: 200% 100%; animation: shimmer 1.5s infinite"></div>
+        <div class="h-10 rounded-lg bg-gray-700/50 w-3/4" style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); background-size: 200% 100%; animation: shimmer 1.5s 0.2s infinite"></div>
+        <div class="h-10 rounded-lg bg-gray-700/50 w-1/2" style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); background-size: 200% 100%; animation: shimmer 1.5s 0.4s infinite"></div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Predictive Navigation -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 4: Predictive Navigation</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="relative mb-4">
+        <input type="text" value="Show me sales re" class="w-full pl-12 pr-4 py-4 bg-gray-100 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500">
+        <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </div>
+      <div class="border border-primary-200 rounded-xl overflow-hidden">
+        <div class="p-3 bg-primary-50 border-b border-primary-100">
+          <div class="flex items-center gap-2 text-sm text-primary-700">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>AI Predictions</span>
+          </div>
+        </div>
+        <a href="#" class="flex items-center gap-3 p-3 hover:bg-gray-50 border-b border-gray-100">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <span class="text-gray-800">Show me sales <strong>reports</strong></span>
+        </a>
+        <a href="#" class="flex items-center gap-3 p-3 hover:bg-gray-50 border-b border-gray-100">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          <span class="text-gray-800">Show me sales <strong>representatives</strong></span>
+        </a>
+        <a href="#" class="flex items-center gap-3 p-3 hover:bg-gray-50">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="text-gray-800">Show me sales <strong>revenue</strong></span>
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Context-Aware Menu -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 5: Context-Aware Menu</h2>
+    <nav class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="p-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white">
+        <div class="flex items-center gap-2 mb-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span class="text-sm font-medium">Detected: Office Location</span>
+        </div>
+        <p class="text-sm text-white/80">Showing work-related navigation</p>
+      </div>
+      <div class="p-4 space-y-2">
+        <a href="#" class="flex items-center gap-4 p-3 rounded-xl bg-green-50 border border-green-100">
+          <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <p class="font-medium text-gray-800">Today's Meetings</p>
+            <p class="text-sm text-gray-500">3 scheduled for today</p>
+          </div>
+          <span class="w-6 h-6 rounded-full bg-green-500 text-white text-xs flex items-center justify-center">3</span>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50">
+          <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+          </div>
+          <div>
+            <p class="font-medium text-gray-800">Task List</p>
+            <p class="text-sm text-gray-500">7 pending tasks</p>
+          </div>
+        </a>
+        <a href="#" class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50">
+          <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <div>
+            <p class="font-medium text-gray-800">Team Directory</p>
+            <p class="text-sm text-gray-500">Find colleagues</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Learning History -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 6: Learning History</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">AI Learned Preferences</p>
+            <p class="text-xs text-gray-500">Updated continuously</p>
+          </div>
+        </div>
+        <button class="text-sm text-primary-600 hover:text-primary-700">Manage</button>
+      </div>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-gray-700">You prefer morning updates</span>
+          </div>
+          <span class="text-xs text-gray-400">98% confident</span>
+        </div>
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            <span class="text-gray-700">Often access project docs</span>
+          </div>
+          <span class="text-xs text-gray-400">92% confident</span>
+        </div>
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span class="text-gray-700">Check analytics weekly</span>
+          </div>
+          <span class="text-xs text-gray-400">87% confident</span>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Natural Language Bar -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 7: Natural Language Bar</h2>
+    <nav class="bg-gradient-to-br from-primary-600 to-purple-600 rounded-2xl shadow-lg p-6">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-3">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="text-white font-medium">AI Navigation</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-2">Where do you want to go?</h3>
+        <p class="text-white/70">Just describe it in your own words</p>
+      </div>
+      <div class="bg-white rounded-xl p-2 flex items-center gap-2">
+        <input type="text" placeholder='Try: "Show me last month\'s best selling products"' class="flex-1 px-4 py-3 focus:outline-none text-gray-800 placeholder-gray-400">
+        <button class="px-6 py-3 bg-primary-500 text-white font-medium rounded-lg hover:bg-primary-600 transition-colors">Go</button>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-2 justify-center">
+        <span class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full">Recent orders</span>
+        <span class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full">Customer list</span>
+        <span class="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full">Reports</span>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: AI Status Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 8: AI Status Header</h2>
+    <nav class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="flex items-center justify-between p-4 border-b border-gray-100">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-purple-500 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">AI Assistant</p>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              <span class="text-sm text-gray-500">Active &bull; Learning from 1,247 interactions</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+            <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </button>
+          <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <span>Chat</span>
+          </button>
+        </div>
+      </div>
+      <div class="p-4 flex items-center gap-4 overflow-x-auto">
+        <a href="#" class="flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-lg whitespace-nowrap">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span class="font-medium">For You</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg whitespace-nowrap transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="font-medium">Recent</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg whitespace-nowrap transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          <span class="font-medium">Favorites</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg whitespace-nowrap transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"/></svg>
+          <span class="font-medium">All Pages</span>
+        </a>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
