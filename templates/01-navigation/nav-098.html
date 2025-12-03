@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Dropdown Sort -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Dropdown Sort</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-600">Showing 1-24 of 256 results</span>
+        <div class="flex items-center gap-2">
+          <span class="text-sm text-gray-600">Sort by:</span>
+          <select class="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+            <option>Most Relevant</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest First</option>
+            <option>Best Selling</option>
+            <option>Top Rated</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Button Group Sort -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Button Group Sort</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-600">128 items</span>
+        <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+          <button class="px-4 py-2 bg-primary-500 text-white text-sm font-medium">Newest</button>
+          <button class="px-4 py-2 bg-white text-gray-700 hover:bg-gray-50 text-sm border-l border-gray-300">Popular</button>
+          <button class="px-4 py-2 bg-white text-gray-700 hover:bg-gray-50 text-sm border-l border-gray-300">Price ↑</button>
+          <button class="px-4 py-2 bg-white text-gray-700 hover:bg-gray-50 text-sm border-l border-gray-300">Price ↓</button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Pill Sort Options -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Pill Sort Options</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-sm text-gray-600 mr-2">Sort:</span>
+        <button class="px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium">Recommended</button>
+        <button class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Newest</button>
+        <button class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Best Sellers</button>
+        <button class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Price: Low to High</button>
+        <button class="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full text-sm">Price: High to Low</button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Table Header Sort -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Table Header Sort</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden">
+      <div class="grid grid-cols-5 bg-gray-50 border-b border-gray-200">
+        <button class="px-6 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center gap-1">
+          Name
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
+          </svg>
+        </button>
+        <button class="px-6 py-3 text-left text-sm font-medium text-primary-600 hover:bg-gray-100 flex items-center gap-1">
+          Date
+          <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <button class="px-6 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center gap-1">
+          Size
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
+          </svg>
+        </button>
+        <button class="px-6 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center gap-1">
+          Status
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/>
+          </svg>
+        </button>
+        <button class="px-6 py-3 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 flex items-center gap-1">
+          Actions
+        </button>
+      </div>
+      <div class="p-6 text-gray-500 text-sm">Table rows would go here...</div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Icon Sort Buttons -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Icon Sort Buttons</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1">
+          <button class="p-2 bg-primary-100 text-primary-600 rounded-lg" title="Sort A-Z">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-500 hover:bg-gray-100 rounded-lg" title="Sort Z-A">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+            </svg>
+          </button>
+          <div class="w-px h-6 bg-gray-300 mx-2"></div>
+          <button class="p-2 text-gray-500 hover:bg-gray-100 rounded-lg" title="Sort by Date">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </button>
+          <button class="p-2 text-gray-500 hover:bg-gray-100 rounded-lg" title="Sort by Size">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+            </svg>
+          </button>
+        </div>
+        <span class="text-sm text-gray-500">Sorted by: Name (A-Z)</span>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Dropdown with Icons -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Dropdown with Icons</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-end">
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm">
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/>
+            </svg>
+            Sort: Newest First
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-10">
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm text-left rounded-t-lg">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Newest First
+              <svg class="w-4 h-4 ml-auto text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm text-left">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Oldest First
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm text-left">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+              Top Rated
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm text-left">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Price: Low to High
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 hover:bg-gray-50 text-sm text-left rounded-b-lg">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Price: High to Low
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Dark Theme Sort -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Dark Theme Sort</h2>
+    <nav class="bg-gray-900 rounded-lg px-6 py-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-400">64 results</span>
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-gray-400">Sort by:</span>
+          <div class="flex items-center bg-gray-800 rounded-lg overflow-hidden">
+            <button class="px-4 py-2 bg-primary-600 text-white text-sm font-medium">Latest</button>
+            <button class="px-4 py-2 text-gray-300 hover:bg-gray-700 text-sm">Popular</button>
+            <button class="px-4 py-2 text-gray-300 hover:bg-gray-700 text-sm">Name</button>
+          </div>
+          <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Mobile Sort Sheet -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Mobile Sort Sheet</h2>
+    <div class="max-w-sm mx-auto">
+      <nav class="bg-white shadow-sm border border-gray-200 rounded-t-lg px-4 py-3 flex items-center justify-between">
+        <span class="text-sm text-gray-600">24 items</span>
+        <button class="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg text-sm">
+          <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/>
+          </svg>
+          Sort
+        </button>
+      </nav>
+      <div class="bg-gray-100 p-4 min-h-[100px] border-x border-gray-200">
+        <p class="text-gray-600 text-sm">Content...</p>
+      </div>
+      <!-- Bottom Sheet Sort -->
+      <div class="bg-white border border-gray-200 rounded-b-lg">
+        <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
+          <h3 class="font-semibold text-gray-900">Sort by</h3>
+          <button class="text-gray-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="p-2">
+          <button class="w-full flex items-center justify-between px-4 py-3 rounded-lg bg-primary-50 text-primary-700">
+            <span>Most Relevant</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <button class="w-full flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">Newest First</button>
+          <button class="w-full flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">Price: Low to High</button>
+          <button class="w-full flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">Price: High to Low</button>
+          <button class="w-full flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">Top Rated</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
