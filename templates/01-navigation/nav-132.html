@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government/Civic Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Federal Government -->
+  <nav class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-blue-950 px-6 py-2 flex items-center justify-between text-sm">
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Official Government Website
+          </span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-blue-200 transition flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Contact
+          </a>
+          <a href="#" class="hover:text-blue-200 transition">Accessibility</a>
+          <select class="bg-transparent border border-blue-700 rounded px-2 py-1 text-xs">
+            <option>English</option>
+            <option>Español</option>
+            <option>中文</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+            <svg class="w-9 h-9 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold">UNITED STATES</span>
+            <span class="block text-sm text-blue-200">Department of Commerce</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-blue-200 transition font-medium">About</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">Services</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">News</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">Resources</a>
+          <a href="#" class="hover:text-blue-200 transition font-medium">Data</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <input type="text" placeholder="Search..." class="bg-blue-700/50 border border-blue-600 rounded-lg px-4 py-2 pl-10 text-sm placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: City/Municipal Government -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-800">City of Riverside</span>
+            <span class="block text-sm text-emerald-600">Official City Website</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition font-medium">Residents</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition font-medium">Business</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition font-medium">Visitors</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition font-medium">City Hall</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition font-medium">I Want To...</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 hover:bg-gray-100 rounded-lg transition">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+          <button class="bg-emerald-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-emerald-700 transition">
+            Report an Issue
+          </button>
+        </div>
+      </div>
+      <div class="bg-gray-50 border-t px-6 py-3">
+        <div class="flex items-center justify-center gap-8 text-sm">
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            Pay Bills
+          </a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+            Meetings & Events
+          </a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Maps & GIS
+          </a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: State Government -->
+  <nav class="bg-gradient-to-r from-slate-800 to-slate-700 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-2 border-b border-slate-600 text-sm">
+        <span class="text-slate-300">State of California - Official Website</span>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-300 hover:text-white transition">Translate</a>
+          <a href="#" class="text-slate-300 hover:text-white transition">Settings</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-between py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold tracking-tight">CA.GOV</span>
+            <span class="block text-xs text-slate-400">The Official Website of the State of California</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-amber-400 transition">Agencies</a>
+          <a href="#" class="hover:text-amber-400 transition">Services</a>
+          <a href="#" class="hover:text-amber-400 transition">News</a>
+          <a href="#" class="hover:text-amber-400 transition">Topics</a>
+          <a href="#" class="hover:text-amber-400 transition">Jobs</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="bg-amber-500 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-amber-400 transition">
+            Get Help
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Public Safety / Emergency Services -->
+  <nav class="bg-red-700 text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-red-900 px-6 py-2 flex items-center justify-center gap-2 text-sm">
+        <svg class="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>Emergency Alert System Active - Check local updates</span>
+      </div>
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <svg class="w-8 h-8 text-red-700" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Public Safety</span>
+            <span class="block text-xs text-red-200">Department of Emergency Services</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="hover:text-red-200 transition font-medium">Emergencies</a>
+          <a href="#" class="hover:text-red-200 transition font-medium">Preparedness</a>
+          <a href="#" class="hover:text-red-200 transition font-medium">Resources</a>
+          <a href="#" class="hover:text-red-200 transition font-medium">Report</a>
+          <a href="#" class="hover:text-red-200 transition font-medium">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="hidden lg:flex items-center gap-2 text-sm bg-red-800 px-3 py-1 rounded-full">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            911 for Emergencies
+          </span>
+          <button class="bg-white text-red-700 px-5 py-2 rounded-lg font-bold hover:bg-red-50 transition">
+            Get Alerts
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Tax/Revenue Office -->
+  <nav class="bg-white shadow-md border-t-4 border-blue-600">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-800">Tax Services</span>
+            <span class="block text-sm text-gray-500">Internal Revenue Authority</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition font-medium">File Taxes</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition font-medium">Pay</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition font-medium">Refunds</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition font-medium">Credits & Deductions</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition font-medium">Forms</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <input type="text" placeholder="Search IRS.gov" class="border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button class="absolute right-2 top-1/2 -translate-y-1/2">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </button>
+          </div>
+          <button class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Public Library System -->
+  <nav class="bg-gradient-to-r from-amber-100 to-orange-100 border-b-2 border-amber-400">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-amber-600 rounded-xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-amber-900">Metro Public Library</span>
+            <span class="block text-sm text-amber-700">Knowledge for Everyone</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Catalog</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">E-Books</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Events</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Locations</a>
+          <a href="#" class="text-amber-800 hover:text-amber-600 transition font-medium">Research</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <input type="text" placeholder="Search books, movies, more..." class="bg-white border border-amber-300 rounded-full px-4 py-2 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 w-64">
+            <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <button class="bg-amber-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-amber-700 transition">
+            My Account
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Voting/Elections -->
+  <nav class="bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-gradient-to-r from-red-600 via-white to-blue-600 h-1"></div>
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-slate-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 13h-.68l-2 2h1.91L19 17H5l1.78-2h2.05l-2-2H6l-3 3v4c0 1.1.89 2 1.99 2H19c1.1 0 2-.89 2-2v-4l-3-3zm-1-5.05l-4.95 4.95-3.54-3.54 4.95-4.95L17 7.95zm-4.24-5.66L6.39 8.66c-.39.39-.39 1.02 0 1.41l4.95 4.95c.39.39 1.02.39 1.41 0l6.36-6.36c.39-.39.39-1.02 0-1.41L14.16 2.3c-.38-.4-1.01-.4-1.4-.01z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Vote.gov</span>
+            <span class="block text-xs text-slate-400">Official Voter Information</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#" class="hover:text-blue-400 transition font-medium">Register to Vote</a>
+          <a href="#" class="hover:text-blue-400 transition font-medium">Find Polling Place</a>
+          <a href="#" class="hover:text-blue-400 transition font-medium">Election Dates</a>
+          <a href="#" class="hover:text-blue-400 transition font-medium">Results</a>
+          <a href="#" class="hover:text-blue-400 transition font-medium">FAQs</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="bg-gradient-to-r from-red-500 to-blue-500 px-6 py-2.5 rounded-lg font-bold hover:opacity-90 transition">
+            Check Registration
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Transportation/DMV -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-teal-600 text-white px-6 py-2 flex items-center justify-between text-sm">
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            Average Wait: 12 minutes
+          </span>
+        </div>
+        <a href="#" class="underline hover:no-underline">Make an Appointment</a>
+      </div>
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-800">DMV Online</span>
+            <span class="block text-sm text-teal-600">Department of Motor Vehicles</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-teal-600 transition font-medium">Driver License</a>
+          <a href="#" class="text-gray-600 hover:text-teal-600 transition font-medium">Registration</a>
+          <a href="#" class="text-gray-600 hover:text-teal-600 transition font-medium">Title & Records</a>
+          <a href="#" class="text-gray-600 hover:text-teal-600 transition font-medium">Appointments</a>
+          <a href="#" class="text-gray-600 hover:text-teal-600 transition font-medium">Offices</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="border border-teal-600 text-teal-600 px-4 py-2 rounded-lg font-semibold hover:bg-teal-50 transition">
+            Renew Online
+          </button>
+          <button class="bg-teal-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-teal-700 transition">
+            My DMV
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>
