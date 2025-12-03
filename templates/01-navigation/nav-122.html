@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: University Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 1: University Header</h2>
+    <nav class="bg-blue-900 rounded-2xl shadow-lg overflow-hidden">
+      <div class="bg-blue-950 px-6 py-2 flex items-center justify-between text-sm">
+        <div class="flex items-center gap-6 text-blue-200">
+          <a href="#" class="hover:text-white transition-colors">Students</a>
+          <a href="#" class="hover:text-white transition-colors">Faculty</a>
+          <a href="#" class="hover:text-white transition-colors">Alumni</a>
+          <a href="#" class="hover:text-white transition-colors">Parents</a>
+        </div>
+        <div class="flex items-center gap-4 text-blue-200">
+          <a href="#" class="hover:text-white transition-colors">Library</a>
+          <a href="#" class="hover:text-white transition-colors">Campus Map</a>
+          <a href="#" class="flex items-center gap-1 hover:text-white transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            Search
+          </a>
+        </div>
+      </div>
+      <div class="px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+              <span class="text-blue-900 font-bold text-xl">U</span>
+            </div>
+            <div>
+              <span class="text-white font-bold text-xl block">State University</span>
+              <span class="text-blue-300 text-sm">Excellence in Education</span>
+            </div>
+          </a>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-white font-medium">Admissions</a>
+            <a href="#" class="text-blue-300 hover:text-white transition-colors">Academics</a>
+            <a href="#" class="text-blue-300 hover:text-white transition-colors">Research</a>
+            <a href="#" class="text-blue-300 hover:text-white transition-colors">Campus Life</a>
+            <a href="#" class="text-blue-300 hover:text-white transition-colors">Athletics</a>
+            <a href="#" class="px-5 py-2 bg-yellow-500 text-blue-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Online Learning Platform -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 2: Online Learning Platform</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <span class="text-xl font-bold text-gray-900">LearnHub</span>
+          </a>
+          <div class="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+            <a href="#" class="px-4 py-2 bg-white text-gray-900 text-sm font-medium rounded-md shadow-sm">Courses</a>
+            <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-md hover:bg-white transition-colors">Paths</a>
+            <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-md hover:bg-white transition-colors">Certificates</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" placeholder="Search courses..." class="w-64 pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+          </div>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors font-medium">Sign In</a>
+          <a href="#" class="px-5 py-2 bg-purple-600 text-white font-medium rounded-full hover:bg-purple-700 transition-colors">Start Free</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: K-12 School -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 3: K-12 School</h2>
+    <nav class="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+            <span class="text-green-600 font-bold text-2xl">🎓</span>
+          </div>
+          <div>
+            <span class="text-white font-bold text-xl block">Greenwood Academy</span>
+            <span class="text-green-100 text-sm">Inspiring Young Minds</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-white font-medium">Home</a>
+          <a href="#" class="text-green-100 hover:text-white transition-colors">About Us</a>
+          <a href="#" class="text-green-100 hover:text-white transition-colors">Programs</a>
+          <a href="#" class="text-green-100 hover:text-white transition-colors">Admissions</a>
+          <a href="#" class="text-green-100 hover:text-white transition-colors">Parents</a>
+          <a href="#" class="text-green-100 hover:text-white transition-colors">Calendar</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="px-4 py-2 bg-white text-green-600 font-semibold rounded-full hover:bg-green-50 transition-colors">Portal Login</a>
+          <a href="#" class="p-2 text-white hover:bg-white/10 rounded-full transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Coding Bootcamp -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 4: Coding Bootcamp</h2>
+    <nav class="bg-gray-900 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center">
+              <span class="text-gray-900 font-mono font-bold">{}</span>
+            </div>
+            <span class="text-white font-bold text-xl">CodeCamp</span>
+          </a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-cyan-400 font-medium text-sm">Programs</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Curriculum</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Outcomes</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Financing</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Blog</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Sign In</a>
+          <a href="#" class="px-5 py-2 bg-cyan-500 text-gray-900 font-semibold rounded-lg hover:bg-cyan-400 transition-colors">Apply Now</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Language Learning -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 5: Language Learning</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+              <span class="text-white text-xl">🌍</span>
+            </div>
+            <span class="text-xl font-bold text-gray-900">Lingua<span class="text-green-500">Learn</span></span>
+          </a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 text-sm font-medium rounded-full">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Learn
+            </a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Practice</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Stories</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Leaderboard</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-amber-100 rounded-full">
+            <span class="text-amber-600">🔥</span>
+            <span class="text-amber-700 font-semibold text-sm">15 day streak</span>
+          </div>
+          <a href="#" class="flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full">
+            <span>💎</span>
+            <span class="text-gray-700 font-semibold text-sm">1,250</span>
+          </a>
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=language1" alt="Profile" class="w-9 h-9 rounded-full border-2 border-green-500">
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Corporate Training -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 6: Corporate Training</h2>
+    <nav class="bg-slate-800 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-xl font-bold text-white">Skill<span class="text-orange-400">Force</span></a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-white font-medium text-sm">Solutions</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Content Library</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">For Teams</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Resources</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Pricing</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Sign In</a>
+          <a href="#" class="px-4 py-2 border border-orange-400 text-orange-400 text-sm font-semibold rounded-lg hover:bg-orange-400 hover:text-slate-800 transition-colors">Request Demo</a>
+          <a href="#" class="px-4 py-2 bg-orange-400 text-slate-800 text-sm font-semibold rounded-lg hover:bg-orange-300 transition-colors">Start Free Trial</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Tutoring Platform -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 7: Tutoring Platform</h2>
+    <nav class="bg-white rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <span class="text-xl font-bold text-gray-900">TutorMatch</span>
+          </a>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-indigo-600 font-medium text-sm">Find Tutors</a>
+            <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors text-sm">Subjects</a>
+            <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors text-sm">How It Works</a>
+            <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors text-sm">Become a Tutor</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" placeholder="Search by subject or tutor..." class="w-72 pl-10 pr-4 py-2 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors font-medium text-sm">Log In</a>
+          <a href="#" class="px-5 py-2 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 transition-colors">Get Started</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Kids Learning App -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 8: Kids Learning App</h2>
+    <nav class="bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-2xl shadow-lg p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-md">
+              <span class="text-3xl">🦊</span>
+            </div>
+            <span class="text-2xl font-black text-white drop-shadow-md">FunLearn</span>
+          </a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="px-4 py-2 bg-white/30 text-white text-sm font-bold rounded-full backdrop-blur-sm">📚 Learn</a>
+          <a href="#" class="px-4 py-2 text-white/80 text-sm font-bold rounded-full hover:bg-white/20 transition-colors">🎮 Games</a>
+          <a href="#" class="px-4 py-2 text-white/80 text-sm font-bold rounded-full hover:bg-white/20 transition-colors">🎨 Create</a>
+          <a href="#" class="px-4 py-2 text-white/80 text-sm font-bold rounded-full hover:bg-white/20 transition-colors">🏆 Rewards</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white rounded-full shadow-md">
+            <span>⭐</span>
+            <span class="text-orange-600 font-bold text-sm">2,450</span>
+          </div>
+          <a href="#" class="px-4 py-2 bg-white text-orange-500 font-bold rounded-full shadow-md hover:shadow-lg transition-shadow">👨‍👩‍👧 Parents</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
