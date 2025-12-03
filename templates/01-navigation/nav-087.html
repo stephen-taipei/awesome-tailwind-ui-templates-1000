@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Toggle Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Toggle Switch -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Toggle Switch</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
+        <button class="relative w-14 h-7 bg-gray-200 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <span class="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow flex items-center justify-center transition-transform">
+            <svg class="w-3 h-3 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Icon Button Toggle -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Icon Button Toggle</h2>
+    <nav class="bg-gray-900 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-white">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-300 hover:text-white">Home</a>
+        <a href="#" class="text-gray-300 hover:text-white">About</a>
+        <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+        <button class="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-yellow-400 transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Segmented Theme Control -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Segmented Theme Control</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <div class="flex bg-gray-100 rounded-lg p-1">
+          <button class="p-2 rounded-md bg-white shadow text-yellow-500">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <button class="p-2 rounded-md text-gray-400 hover:text-gray-600">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+            </svg>
+          </button>
+          <button class="p-2 rounded-md text-gray-400 hover:text-gray-600">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.321a.75.75 0 01-.557 1.394l-1.61-.644a.75.75 0 01-.481-.707V14H8.94v.863a.75.75 0 01-.481.707l-1.61.644a.75.75 0 01-.557-1.394l.804-.32L7.22 14H5a2 2 0 01-2-2V5zm4.5 4a.5.5 0 100 1 .5.5 0 000-1zM12 9a.5.5 0 11-1 0 .5.5 0 011 0z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Dropdown Theme Selector -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Dropdown Theme Selector</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-700">
+            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm">Light</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-1 w-40 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <button class="w-full flex items-center gap-3 px-4 py-2 text-left hover:bg-gray-50 text-gray-700 rounded-t-lg">
+              <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm">Light</span>
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 text-left hover:bg-gray-50 text-gray-700">
+              <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+              </svg>
+              <span class="text-sm">Dark</span>
+            </button>
+            <button class="w-full flex items-center gap-3 px-4 py-2 text-left hover:bg-gray-50 text-gray-700 rounded-b-lg">
+              <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.321a.75.75 0 01-.557 1.394l-1.61-.644a.75.75 0 01-.481-.707V14H8.94v.863a.75.75 0 01-.481.707l-1.61.644a.75.75 0 01-.557-1.394l.804-.32L7.22 14H5a2 2 0 01-2-2V5z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-sm">System</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Animated Sun/Moon Toggle -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Animated Sun/Moon Toggle</h2>
+    <nav class="bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-white">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-white/80 hover:text-white">Home</a>
+        <a href="#" class="text-white/80 hover:text-white">About</a>
+        <a href="#" class="text-white/80 hover:text-white">Contact</a>
+        <button class="relative w-16 h-8 bg-white/20 backdrop-blur rounded-full transition-colors">
+          <div class="absolute left-1 top-1 w-6 h-6 bg-yellow-400 rounded-full shadow-lg flex items-center justify-center transition-all duration-300">
+            <svg class="w-4 h-4 text-yellow-800" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <svg class="absolute right-2 top-2 w-4 h-4 text-white/50" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Color Theme Picker -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Color Theme Picker</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+        <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+        <div class="relative group">
+          <button class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100">
+            <div class="w-5 h-5 rounded-full bg-primary-500 ring-2 ring-offset-2 ring-primary-500"></div>
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-1 p-3 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <div class="grid grid-cols-4 gap-2">
+              <button class="w-8 h-8 rounded-full bg-blue-500 hover:scale-110 transition-transform ring-2 ring-offset-2 ring-blue-500"></button>
+              <button class="w-8 h-8 rounded-full bg-purple-500 hover:scale-110 transition-transform"></button>
+              <button class="w-8 h-8 rounded-full bg-pink-500 hover:scale-110 transition-transform"></button>
+              <button class="w-8 h-8 rounded-full bg-red-500 hover:scale-110 transition-transform"></button>
+              <button class="w-8 h-8 rounded-full bg-orange-500 hover:scale-110 transition-transform"></button>
+              <button class="w-8 h-8 rounded-full bg-yellow-500 hover:scale-110 transition-transform"></button>
+              <button class="w-8 h-8 rounded-full bg-green-500 hover:scale-110 transition-transform"></button>
+              <button class="w-8 h-8 rounded-full bg-teal-500 hover:scale-110 transition-transform"></button>
+            </div>
+            <div class="mt-3 pt-3 border-t border-gray-200 flex gap-2">
+              <button class="flex-1 flex items-center justify-center gap-1 py-1.5 rounded bg-gray-100 text-gray-700 text-xs">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                Light
+              </button>
+              <button class="flex-1 flex items-center justify-center gap-1 py-1.5 rounded bg-gray-800 text-white text-xs">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Sidebar Theme Settings -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Sidebar Theme Settings</h2>
+    <div class="flex rounded-lg overflow-hidden border border-gray-200">
+      <aside class="w-64 bg-gray-900 p-4 space-y-4">
+        <a href="#" class="text-xl font-bold text-white block">Brand</a>
+        <nav class="space-y-1">
+          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-800 text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Projects
+          </a>
+        </nav>
+        <div class="pt-4 border-t border-gray-700">
+          <p class="px-3 text-xs font-medium text-gray-500 uppercase mb-2">Theme</p>
+          <div class="space-y-1">
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800">
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+              Light Mode
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-800 text-white">
+              <svg class="w-5 h-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+              Dark Mode
+              <svg class="w-4 h-4 ml-auto text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </button>
+            <button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.321a.75.75 0 01-.557 1.394l-1.61-.644a.75.75 0 01-.481-.707V14H8.94v.863a.75.75 0 01-.481.707l-1.61.644a.75.75 0 01-.557-1.394l.804-.32L7.22 14H5a2 2 0 01-2-2V5z" clip-rule="evenodd"/></svg>
+              System
+            </button>
+          </div>
+        </div>
+      </aside>
+      <main class="flex-1 bg-white p-8">
+        <p class="text-gray-600">Main content area</p>
+      </main>
+    </div>
+  </section>
+
+  <!-- Style 8: Floating Theme FAB -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Floating Theme FAB</h2>
+    <div class="relative bg-white shadow-sm border border-gray-200 rounded-lg p-6 min-h-[200px]">
+      <nav class="flex items-center justify-between mb-6">
+        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
+        </div>
+      </nav>
+      <p class="text-gray-600">Page content goes here...</p>
+
+      <!-- Floating Theme Button -->
+      <div class="absolute bottom-6 right-6 group">
+        <div class="absolute bottom-16 right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+          <div class="bg-white rounded-lg shadow-xl border border-gray-200 p-2 space-y-1">
+            <button class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700 w-full">
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+              <span>Light</span>
+            </button>
+            <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 text-gray-900 w-full">
+              <svg class="w-5 h-5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+              <span>Dark</span>
+              <svg class="w-4 h-4 ml-auto text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </button>
+            <button class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-gray-100 text-gray-700 w-full">
+              <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.321a.75.75 0 01-.557 1.394l-1.61-.644a.75.75 0 01-.481-.707V14H8.94v.863a.75.75 0 01-.481.707l-1.61.644a.75.75 0 01-.557-1.394l.804-.32L7.22 14H5a2 2 0 01-2-2V5z" clip-rule="evenodd"/></svg>
+              <span>System</span>
+            </button>
+          </div>
+        </div>
+        <button class="w-14 h-14 rounded-full bg-primary-500 hover:bg-primary-600 text-white shadow-lg flex items-center justify-center transition-all hover:scale-110">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
