@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-12">
+
+  <!-- Style 1: Professional Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 1: Professional Header</h2>
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <a href="#" class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary-600 rounded"></div>
+            <span class="text-lg font-semibold text-gray-900">Enterprise</span>
+          </a>
+          <div class="flex items-center gap-8">
+            <a href="#" class="text-gray-900 font-medium">Solutions</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Products</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Company</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Sign In</a>
+            <a href="#" class="px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Two-Tier Navigation -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 2: Two-Tier Navigation</h2>
+    <nav class="bg-white shadow-sm rounded-xl overflow-hidden">
+      <div class="bg-gray-900 px-6 py-2">
+        <div class="flex items-center justify-between text-sm">
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Investors</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">News</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-gray-400">1-800-COMPANY</span>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold">C</span>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Corporation</span>
+        </a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-gray-900 font-medium">Solutions</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Industries</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+          <a href="#" class="px-5 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">Request Demo</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 3: Mega Menu Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 3: Mega Menu Header</h2>
+    <nav class="bg-white shadow-lg rounded-xl">
+      <div class="px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-xl font-bold text-gray-900">GlobalTech</a>
+        <div class="flex items-center gap-1">
+          <div class="relative group">
+            <button class="px-4 py-2 text-gray-700 font-medium flex items-center gap-1 hover:bg-gray-100 rounded-lg transition-colors">
+              Products
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-4">
+              <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                <p class="font-medium text-gray-900">Cloud Platform</p>
+                <p class="text-sm text-gray-500">Enterprise cloud solutions</p>
+              </a>
+              <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                <p class="font-medium text-gray-900">Analytics</p>
+                <p class="text-sm text-gray-500">Business intelligence tools</p>
+              </a>
+              <a href="#" class="block p-3 rounded-lg hover:bg-gray-50">
+                <p class="font-medium text-gray-900">Security</p>
+                <p class="text-sm text-gray-500">Enterprise security suite</p>
+              </a>
+            </div>
+          </div>
+          <a href="#" class="px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition-colors">Solutions</a>
+          <a href="#" class="px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition-colors">Resources</a>
+          <a href="#" class="px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-lg transition-colors">Partners</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="p-2 text-gray-500 hover:text-gray-700 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+          <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 transition-colors">Sign In</a>
+          <a href="#" class="px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">Contact Sales</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Sidebar Corporate -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 4: Sidebar Corporate</h2>
+    <div class="flex h-80 bg-white rounded-xl shadow-lg overflow-hidden">
+      <nav class="w-64 bg-gray-900 p-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">B</span>
+          </div>
+          <div>
+            <p class="text-white font-semibold">Business Suite</p>
+            <p class="text-gray-400 text-xs">Enterprise Edition</p>
+          </div>
+        </div>
+        <div class="space-y-1">
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-600 text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            <span class="font-medium">Dashboard</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>Analytics</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <span>Team</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Settings</span>
+          </a>
+        </div>
+      </nav>
+      <div class="flex-1 p-6 flex items-center justify-center text-gray-400">
+        Content Area
+      </div>
+    </div>
+  </section>
+
+  <!-- Style 5: Financial Services -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 5: Financial Services</h2>
+    <nav class="bg-slate-900 rounded-xl p-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <svg class="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg>
+          <span class="text-xl font-bold text-white">FinanceHub</span>
+        </a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-white font-medium">Banking</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Investments</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Insurance</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Wealth</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="px-4 py-2 text-white font-medium hover:bg-slate-800 rounded-lg transition-colors">Login</a>
+          <a href="#" class="px-4 py-2 bg-emerald-500 text-white rounded-lg font-medium hover:bg-emerald-600 transition-colors">Open Account</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Law Firm -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 6: Law Firm</h2>
+    <nav class="bg-white border-b-4 border-amber-700 rounded-t-xl shadow-lg">
+      <div class="px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <svg class="w-10 h-10 text-amber-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          <div>
+            <p class="text-xl font-serif font-bold text-gray-900">Morrison & Associates</p>
+            <p class="text-xs text-gray-500 tracking-wider uppercase">Attorneys at Law</p>
+          </div>
+        </a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-gray-900 font-medium">Practice Areas</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Our Team</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Case Results</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
+          <a href="#" class="px-5 py-2 bg-amber-700 text-white rounded font-medium hover:bg-amber-800 transition-colors">Free Consultation</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Healthcare -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 7: Healthcare</h2>
+    <nav class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="bg-sky-600 px-6 py-2 text-sm text-white flex items-center justify-between">
+        <span>Emergency: 1-800-HEALTH</span>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Patient Portal</a>
+          <a href="#" class="hover:underline">Find a Doctor</a>
+        </div>
+      </div>
+      <div class="px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <svg class="w-10 h-10 text-sky-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+          <span class="text-xl font-bold text-gray-900">MedCare Health</span>
+        </a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-gray-900 font-medium">Services</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Locations</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Patients</a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">About Us</a>
+          <a href="#" class="px-5 py-2 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700 transition-colors">Schedule Visit</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Consulting Firm -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 8: Consulting Firm</h2>
+    <nav class="bg-gray-900 rounded-xl p-6">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-light tracking-widest text-white">NEXUS</a>
+        <div class="flex items-center gap-10">
+          <a href="#" class="text-sm tracking-wider text-white uppercase font-medium">Industries</a>
+          <a href="#" class="text-sm tracking-wider text-gray-400 uppercase hover:text-white transition-colors">Capabilities</a>
+          <a href="#" class="text-sm tracking-wider text-gray-400 uppercase hover:text-white transition-colors">Insights</a>
+          <a href="#" class="text-sm tracking-wider text-gray-400 uppercase hover:text-white transition-colors">Careers</a>
+          <a href="#" class="text-sm tracking-wider text-gray-400 uppercase hover:text-white transition-colors">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <button class="p-2 text-gray-400 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </button>
+          <a href="#" class="px-5 py-2 border border-white text-white text-sm tracking-wider uppercase hover:bg-white hover:text-gray-900 transition-colors">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
