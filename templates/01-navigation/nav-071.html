@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stepper Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.63 0.20 250);
+      --color-primary-500: oklch(0.53 0.24 250);
+      --color-primary-600: oklch(0.45 0.24 250);
+      --color-primary-700: oklch(0.38 0.20 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8">
+  <div class="max-w-5xl mx-auto space-y-12">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Stepper Navigation - 8 Styles</h1>
+
+    <!-- Style 1: Simple Numbered Stepper -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 1: Simple Numbered Stepper</h2>
+      <div class="flex items-center justify-between max-w-2xl">
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-8 h-8 bg-primary-500 text-white text-sm font-bold rounded-full">1</span>
+          <span class="ml-2 text-sm font-medium text-primary-600">Account</span>
+        </div>
+        <div class="flex-1 h-0.5 mx-4 bg-primary-500"></div>
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-8 h-8 bg-primary-500 text-white text-sm font-bold rounded-full">2</span>
+          <span class="ml-2 text-sm font-medium text-primary-600">Profile</span>
+        </div>
+        <div class="flex-1 h-0.5 mx-4 bg-gray-300"></div>
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-500 text-sm font-bold rounded-full">3</span>
+          <span class="ml-2 text-sm font-medium text-gray-500">Review</span>
+        </div>
+        <div class="flex-1 h-0.5 mx-4 bg-gray-300"></div>
+        <div class="flex items-center">
+          <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-500 text-sm font-bold rounded-full">4</span>
+          <span class="ml-2 text-sm font-medium text-gray-500">Complete</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 2: Stepper with Icons -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 2: Stepper with Icons</h2>
+      <div class="flex items-center justify-between max-w-3xl">
+        <div class="flex flex-col items-center">
+          <span class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <span class="mt-2 text-sm font-medium text-green-600">Cart</span>
+        </div>
+        <div class="flex-1 h-1 mx-2 bg-green-500 rounded"></div>
+        <div class="flex flex-col items-center">
+          <span class="flex items-center justify-center w-12 h-12 bg-primary-500 text-white rounded-full ring-4 ring-primary-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </span>
+          <span class="mt-2 text-sm font-medium text-primary-600">Shipping</span>
+        </div>
+        <div class="flex-1 h-1 mx-2 bg-gray-200 rounded"></div>
+        <div class="flex flex-col items-center">
+          <span class="flex items-center justify-center w-12 h-12 bg-gray-200 text-gray-400 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+          </span>
+          <span class="mt-2 text-sm font-medium text-gray-400">Payment</span>
+        </div>
+        <div class="flex-1 h-1 mx-2 bg-gray-200 rounded"></div>
+        <div class="flex flex-col items-center">
+          <span class="flex items-center justify-center w-12 h-12 bg-gray-200 text-gray-400 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </span>
+          <span class="mt-2 text-sm font-medium text-gray-400">Confirm</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 3: Vertical Stepper -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 3: Vertical Stepper</h2>
+      <div class="max-w-md">
+        <div class="relative pl-8 pb-8 border-l-2 border-green-500">
+          <span class="absolute left-0 -translate-x-1/2 flex items-center justify-center w-6 h-6 bg-green-500 text-white rounded-full">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-900">Step 1: Create Account</h4>
+            <p class="text-sm text-gray-500 mt-1">Your account has been created successfully.</p>
+          </div>
+        </div>
+        <div class="relative pl-8 pb-8 border-l-2 border-primary-500">
+          <span class="absolute left-0 -translate-x-1/2 flex items-center justify-center w-6 h-6 bg-primary-500 text-white text-xs font-bold rounded-full ring-4 ring-primary-100">2</span>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-900">Step 2: Personal Information</h4>
+            <p class="text-sm text-gray-500 mt-1">Fill in your personal details.</p>
+          </div>
+        </div>
+        <div class="relative pl-8 pb-8 border-l-2 border-gray-200">
+          <span class="absolute left-0 -translate-x-1/2 flex items-center justify-center w-6 h-6 bg-gray-200 text-gray-500 text-xs font-bold rounded-full">3</span>
+          <div>
+            <h4 class="text-sm font-medium text-gray-500">Step 3: Verification</h4>
+            <p class="text-sm text-gray-400 mt-1">Verify your email address.</p>
+          </div>
+        </div>
+        <div class="relative pl-8">
+          <span class="absolute left-0 -translate-x-1/2 flex items-center justify-center w-6 h-6 bg-gray-200 text-gray-500 text-xs font-bold rounded-full">4</span>
+          <div>
+            <h4 class="text-sm font-medium text-gray-500">Step 4: Complete</h4>
+            <p class="text-sm text-gray-400 mt-1">Setup is complete.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 4: Progress Bar Stepper -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 4: Progress Bar Stepper</h2>
+      <div class="max-w-2xl">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm font-medium text-gray-700">Step 2 of 4</span>
+          <span class="text-sm text-gray-500">50% Complete</span>
+        </div>
+        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div class="h-full bg-primary-500 rounded-full transition-all" style="width: 50%"></div>
+        </div>
+        <div class="flex justify-between mt-2">
+          <span class="text-xs text-primary-600 font-medium">Account</span>
+          <span class="text-xs text-primary-600 font-medium">Profile</span>
+          <span class="text-xs text-gray-400">Settings</span>
+          <span class="text-xs text-gray-400">Complete</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 5: Dot Stepper -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 5: Dot Stepper</h2>
+      <div class="flex flex-col items-center">
+        <div class="flex items-center space-x-3">
+          <span class="w-3 h-3 bg-primary-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-primary-500 rounded-full"></span>
+          <span class="w-3 h-3 bg-primary-500 rounded-full ring-4 ring-primary-100"></span>
+          <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+          <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+        </div>
+        <p class="mt-3 text-sm text-gray-600">Step 3 of 5</p>
+      </div>
+    </section>
+
+    <!-- Style 6: Card Stepper -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 6: Card Stepper</h2>
+      <div class="grid grid-cols-4 gap-4 max-w-4xl">
+        <div class="relative p-4 bg-green-50 border-2 border-green-500 rounded-xl">
+          <span class="absolute -top-3 left-4 px-2 bg-green-500 text-white text-xs font-bold rounded">COMPLETED</span>
+          <div class="flex items-center space-x-3">
+            <span class="flex items-center justify-center w-10 h-10 bg-green-500 text-white rounded-lg">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Details</p>
+              <p class="text-xs text-gray-500">Basic info</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative p-4 bg-primary-50 border-2 border-primary-500 rounded-xl">
+          <span class="absolute -top-3 left-4 px-2 bg-primary-500 text-white text-xs font-bold rounded">CURRENT</span>
+          <div class="flex items-center space-x-3">
+            <span class="flex items-center justify-center w-10 h-10 bg-primary-500 text-white rounded-lg text-sm font-bold">2</span>
+            <div>
+              <p class="text-sm font-semibold text-gray-900">Address</p>
+              <p class="text-xs text-gray-500">Shipping info</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-gray-50 border-2 border-gray-200 rounded-xl">
+          <div class="flex items-center space-x-3">
+            <span class="flex items-center justify-center w-10 h-10 bg-gray-200 text-gray-400 rounded-lg text-sm font-bold">3</span>
+            <div>
+              <p class="text-sm font-medium text-gray-400">Payment</p>
+              <p class="text-xs text-gray-400">Card details</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-gray-50 border-2 border-gray-200 rounded-xl">
+          <div class="flex items-center space-x-3">
+            <span class="flex items-center justify-center w-10 h-10 bg-gray-200 text-gray-400 rounded-lg text-sm font-bold">4</span>
+            <div>
+              <p class="text-sm font-medium text-gray-400">Confirm</p>
+              <p class="text-xs text-gray-400">Review order</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style 7: Arrow Stepper -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 7: Arrow Stepper</h2>
+      <nav class="flex max-w-3xl" aria-label="Progress">
+        <ol class="flex items-center w-full">
+          <li class="relative flex-1">
+            <a href="#" class="group flex items-center">
+              <span class="flex items-center px-6 py-4 text-sm font-medium bg-primary-500 text-white clip-arrow">
+                <span class="flex items-center justify-center w-8 h-8 bg-white/20 rounded-full mr-3 text-sm">1</span>
+                Account
+              </span>
+            </a>
+          </li>
+          <li class="relative flex-1">
+            <a href="#" class="group flex items-center">
+              <span class="flex items-center px-6 py-4 text-sm font-medium bg-primary-400 text-white clip-arrow-middle">
+                <span class="flex items-center justify-center w-8 h-8 bg-white/20 rounded-full mr-3 text-sm">2</span>
+                Profile
+              </span>
+            </a>
+          </li>
+          <li class="relative flex-1">
+            <a href="#" class="group flex items-center">
+              <span class="flex items-center px-6 py-4 text-sm font-medium bg-gray-200 text-gray-500 clip-arrow-middle">
+                <span class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full mr-3 text-sm">3</span>
+                Review
+              </span>
+            </a>
+          </li>
+          <li class="relative flex-1">
+            <a href="#" class="group flex items-center">
+              <span class="flex items-center px-6 py-4 text-sm font-medium bg-gray-200 text-gray-500 rounded-r-lg clip-arrow-end">
+                <span class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full mr-3 text-sm">4</span>
+                Complete
+              </span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <style>
+        .clip-arrow { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%); }
+        .clip-arrow-middle { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%); }
+        .clip-arrow-end { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 12px 50%); }
+      </style>
+    </section>
+
+    <!-- Style 8: Wizard Stepper with Actions -->
+    <section class="bg-white rounded-xl shadow-sm p-6">
+      <h2 class="text-lg font-semibold text-gray-700 mb-6">Style 8: Wizard Stepper with Actions</h2>
+      <div class="max-w-2xl border border-gray-200 rounded-xl overflow-hidden">
+        <div class="px-6 py-4 bg-gray-50 border-b border-gray-200">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+              <div class="flex items-center">
+                <span class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span class="ml-2 text-sm font-medium text-green-600">Info</span>
+              </div>
+              <div class="w-12 h-0.5 bg-green-500"></div>
+              <div class="flex items-center">
+                <span class="flex items-center justify-center w-8 h-8 bg-primary-500 text-white text-sm font-bold rounded-full ring-4 ring-primary-100">2</span>
+                <span class="ml-2 text-sm font-medium text-primary-600">Settings</span>
+              </div>
+              <div class="w-12 h-0.5 bg-gray-300"></div>
+              <div class="flex items-center">
+                <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-500 text-sm font-bold rounded-full">3</span>
+                <span class="ml-2 text-sm font-medium text-gray-500">Finish</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Configure Settings</h3>
+          <p class="text-sm text-gray-500 mb-6">Customize your preferences for the best experience.</p>
+          <div class="h-32 flex items-center justify-center bg-gray-100 rounded-lg text-gray-400">
+            Form content goes here...
+          </div>
+        </div>
+        <div class="flex items-center justify-between px-6 py-4 bg-gray-50 border-t border-gray-200">
+          <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+            <span class="flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              Previous
+            </span>
+          </button>
+          <button class="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors">
+            <span class="flex items-center">
+              Next Step
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
