@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bold Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Heavy Header -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 1: Heavy Header</h2>
+    <nav class="bg-black rounded-2xl p-6">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-4xl font-black text-white tracking-tight">BOLD</a>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-xl font-bold text-white">HOME</a>
+          <a href="#" class="text-xl font-bold text-gray-500 hover:text-white transition-colors">WORK</a>
+          <a href="#" class="text-xl font-bold text-gray-500 hover:text-white transition-colors">ABOUT</a>
+          <a href="#" class="text-xl font-bold text-gray-500 hover:text-white transition-colors">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 2: Block Color -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 2: Block Color</h2>
+    <nav class="flex rounded-2xl overflow-hidden">
+      <a href="#" class="flex-1 bg-yellow-400 p-6 text-center hover:bg-yellow-300 transition-colors">
+        <span class="text-2xl font-black text-black">HOME</span>
+      </a>
+      <a href="#" class="flex-1 bg-pink-500 p-6 text-center hover:bg-pink-400 transition-colors">
+        <span class="text-2xl font-black text-white">WORK</span>
+      </a>
+      <a href="#" class="flex-1 bg-blue-600 p-6 text-center hover:bg-blue-500 transition-colors">
+        <span class="text-2xl font-black text-white">ABOUT</span>
+      </a>
+      <a href="#" class="flex-1 bg-green-500 p-6 text-center hover:bg-green-400 transition-colors">
+        <span class="text-2xl font-black text-white">CONTACT</span>
+      </a>
+    </nav>
+  </section>
+
+  <!-- Style 3: Oversized Text -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 3: Oversized Text</h2>
+    <nav class="bg-white rounded-2xl shadow-xl p-8">
+      <div class="flex items-end justify-between">
+        <a href="#" class="text-6xl font-black text-gray-900 leading-none">STUDIO</a>
+        <div class="flex items-center gap-6 pb-2">
+          <a href="#" class="text-lg font-bold text-gray-900 border-b-4 border-gray-900 pb-1">Work</a>
+          <a href="#" class="text-lg font-bold text-gray-400 hover:text-gray-900 border-b-4 border-transparent hover:border-gray-300 pb-1 transition-all">About</a>
+          <a href="#" class="text-lg font-bold text-gray-400 hover:text-gray-900 border-b-4 border-transparent hover:border-gray-300 pb-1 transition-all">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 4: Stripe Accent -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 4: Stripe Accent</h2>
+    <nav class="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="h-2 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500"></div>
+      <div class="p-6 flex items-center justify-between">
+        <a href="#" class="text-3xl font-black text-gray-900">BRAND</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="px-6 py-3 bg-gray-900 text-white font-bold rounded-xl">HOME</a>
+          <a href="#" class="px-6 py-3 text-gray-700 font-bold hover:bg-gray-100 rounded-xl transition-colors">PRODUCTS</a>
+          <a href="#" class="px-6 py-3 text-gray-700 font-bold hover:bg-gray-100 rounded-xl transition-colors">ABOUT</a>
+          <a href="#" class="px-6 py-3 text-gray-700 font-bold hover:bg-gray-100 rounded-xl transition-colors">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 5: Stacked Bold -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 5: Stacked Bold</h2>
+    <nav class="bg-gray-900 rounded-2xl p-6">
+      <a href="#" class="text-5xl font-black text-white mb-8 block">AGENCY</a>
+      <div class="grid grid-cols-4 gap-4">
+        <a href="#" class="p-4 bg-white rounded-xl text-center">
+          <span class="text-lg font-black text-gray-900">HOME</span>
+        </a>
+        <a href="#" class="p-4 bg-gray-800 rounded-xl text-center hover:bg-gray-700 transition-colors">
+          <span class="text-lg font-bold text-gray-300">SERVICES</span>
+        </a>
+        <a href="#" class="p-4 bg-gray-800 rounded-xl text-center hover:bg-gray-700 transition-colors">
+          <span class="text-lg font-bold text-gray-300">PORTFOLIO</span>
+        </a>
+        <a href="#" class="p-4 bg-gray-800 rounded-xl text-center hover:bg-gray-700 transition-colors">
+          <span class="text-lg font-bold text-gray-300">CONTACT</span>
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 6: Contrast Split -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 6: Contrast Split</h2>
+    <nav class="flex rounded-2xl overflow-hidden shadow-xl">
+      <div class="bg-black p-8 flex-1">
+        <a href="#" class="text-4xl font-black text-white">BLACK</a>
+      </div>
+      <div class="bg-white p-8 flex-1 flex items-center justify-end gap-8">
+        <a href="#" class="text-lg font-black text-black">HOME</a>
+        <a href="#" class="text-lg font-bold text-gray-400 hover:text-black transition-colors">WORK</a>
+        <a href="#" class="text-lg font-bold text-gray-400 hover:text-black transition-colors">INFO</a>
+        <a href="#" class="px-6 py-3 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-colors">CONTACT</a>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 7: Diagonal Bold -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 7: Diagonal Bold</h2>
+    <nav class="bg-primary-600 rounded-2xl p-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-primary-700 origin-top-right -skew-x-12 translate-x-1/2"></div>
+      <div class="relative flex items-center justify-between">
+        <a href="#" class="text-3xl font-black text-white">DESIGN</a>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-lg font-bold text-white">HOME</a>
+          <a href="#" class="text-lg font-bold text-primary-200 hover:text-white transition-colors">PROJECTS</a>
+          <a href="#" class="text-lg font-bold text-primary-200 hover:text-white transition-colors">ABOUT</a>
+          <a href="#" class="px-6 py-3 bg-white text-primary-600 font-bold rounded-xl hover:bg-primary-50 transition-colors">HIRE US</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Style 8: Thick Border -->
+  <section>
+    <h2 class="text-lg font-semibold mb-4">Style 8: Thick Border</h2>
+    <nav class="bg-white rounded-2xl border-4 border-black p-6">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-3xl font-black text-black">BRUTAL</a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="px-5 py-3 bg-black text-white font-bold border-4 border-black">HOME</a>
+          <a href="#" class="px-5 py-3 text-black font-bold border-4 border-black hover:bg-black hover:text-white transition-colors">WORK</a>
+          <a href="#" class="px-5 py-3 text-black font-bold border-4 border-black hover:bg-black hover:text-white transition-colors">ABOUT</a>
+          <a href="#" class="px-5 py-3 text-black font-bold border-4 border-black hover:bg-black hover:text-white transition-colors">CONTACT</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+</body>
+</html>
