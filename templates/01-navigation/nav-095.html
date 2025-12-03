@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-200: oklch(0.86 0.08 250);
+      --color-primary-300: oklch(0.75 0.14 250);
+      --color-primary-400: oklch(0.65 0.19 250);
+      --color-primary-500: oklch(0.55 0.24 250);
+      --color-primary-600: oklch(0.45 0.22 250);
+      --color-primary-700: oklch(0.35 0.18 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8 space-y-16">
+
+  <!-- Style 1: Simple Vertical Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Vertical Timeline</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-6 max-w-lg">
+      <ol class="relative border-l-2 border-gray-200 ml-3 space-y-6">
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-primary-500 rounded-full ring-4 ring-white">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+          </span>
+          <time class="text-xs text-gray-500">January 2024</time>
+          <h3 class="font-medium text-gray-900">Project Started</h3>
+          <p class="text-sm text-gray-600">Initial project setup and planning phase.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-primary-500 rounded-full ring-4 ring-white">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+          </span>
+          <time class="text-xs text-gray-500">March 2024</time>
+          <h3 class="font-medium text-gray-900">Development Phase</h3>
+          <p class="text-sm text-gray-600">Core features implementation.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-gray-300 rounded-full ring-4 ring-white">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+          </span>
+          <time class="text-xs text-gray-400">June 2024</time>
+          <h3 class="font-medium text-gray-400">Launch</h3>
+          <p class="text-sm text-gray-400">Product launch scheduled.</p>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 2: Horizontal Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 2: Horizontal Timeline</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-6 overflow-x-auto">
+      <ol class="flex items-start min-w-max">
+        <li class="flex flex-col items-center w-48">
+          <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <div class="flex-1 w-full h-0.5 bg-green-500 mt-5 -mb-5"></div>
+          <div class="mt-8 text-center">
+            <time class="text-xs text-gray-500">Jan 2024</time>
+            <h3 class="font-medium text-gray-900 text-sm">Planning</h3>
+          </div>
+        </li>
+        <li class="flex flex-col items-center w-48">
+          <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <div class="flex-1 w-full h-0.5 bg-primary-500 mt-5 -mb-5"></div>
+          <div class="mt-8 text-center">
+            <time class="text-xs text-gray-500">Mar 2024</time>
+            <h3 class="font-medium text-gray-900 text-sm">Design</h3>
+          </div>
+        </li>
+        <li class="flex flex-col items-center w-48">
+          <div class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-bold">3</div>
+          <div class="flex-1 w-full h-0.5 bg-gray-300 mt-5 -mb-5"></div>
+          <div class="mt-8 text-center">
+            <time class="text-xs text-gray-500">May 2024</time>
+            <h3 class="font-medium text-gray-900 text-sm">Development</h3>
+          </div>
+        </li>
+        <li class="flex flex-col items-center w-48">
+          <div class="w-10 h-10 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center font-bold">4</div>
+          <div class="flex-1 w-full h-0.5 bg-gray-300 mt-5 -mb-5"></div>
+          <div class="mt-8 text-center">
+            <time class="text-xs text-gray-400">Jul 2024</time>
+            <h3 class="font-medium text-gray-400 text-sm">Testing</h3>
+          </div>
+        </li>
+        <li class="flex flex-col items-center w-48">
+          <div class="w-10 h-10 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center font-bold">5</div>
+          <div class="mt-8 text-center">
+            <time class="text-xs text-gray-400">Sep 2024</time>
+            <h3 class="font-medium text-gray-400 text-sm">Launch</h3>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 3: Alternating Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 3: Alternating Timeline</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-6">
+      <ol class="relative">
+        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+        <li class="flex items-center mb-8">
+          <div class="w-1/2 pr-8 text-right">
+            <time class="text-xs text-gray-500">January 2024</time>
+            <h3 class="font-medium text-gray-900">Project Kickoff</h3>
+            <p class="text-sm text-gray-600">Team assembled and goals defined.</p>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white"></div>
+          <div class="w-1/2 pl-8"></div>
+        </li>
+        <li class="flex items-center mb-8">
+          <div class="w-1/2 pr-8"></div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white"></div>
+          <div class="w-1/2 pl-8">
+            <time class="text-xs text-gray-500">March 2024</time>
+            <h3 class="font-medium text-gray-900">Design Complete</h3>
+            <p class="text-sm text-gray-600">UI/UX designs finalized.</p>
+          </div>
+        </li>
+        <li class="flex items-center">
+          <div class="w-1/2 pr-8 text-right">
+            <time class="text-xs text-gray-500">May 2024</time>
+            <h3 class="font-medium text-gray-900">Beta Launch</h3>
+            <p class="text-sm text-gray-600">First public release.</p>
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-gray-300 rounded-full border-4 border-white"></div>
+          <div class="w-1/2 pl-8"></div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 4: Icon Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 4: Icon Timeline</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-6 max-w-lg">
+      <ol class="relative border-l-2 border-primary-200 ml-4 space-y-8">
+        <li class="ml-8">
+          <span class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-blue-100 text-blue-600 rounded-full ring-4 ring-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </span>
+          <div class="p-4 bg-blue-50 rounded-lg">
+            <time class="text-xs text-blue-600 font-medium">Phase 1</time>
+            <h3 class="font-medium text-gray-900 mt-1">Ideation</h3>
+            <p class="text-sm text-gray-600 mt-1">Brainstorming and concept development.</p>
+          </div>
+        </li>
+        <li class="ml-8">
+          <span class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-purple-100 text-purple-600 rounded-full ring-4 ring-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </span>
+          <div class="p-4 bg-purple-50 rounded-lg">
+            <time class="text-xs text-purple-600 font-medium">Phase 2</time>
+            <h3 class="font-medium text-gray-900 mt-1">Design</h3>
+            <p class="text-sm text-gray-600 mt-1">Visual design and prototyping.</p>
+          </div>
+        </li>
+        <li class="ml-8">
+          <span class="absolute -left-5 flex items-center justify-center w-10 h-10 bg-gray-100 text-gray-400 rounded-full ring-4 ring-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </span>
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <time class="text-xs text-gray-500 font-medium">Phase 3</time>
+            <h3 class="font-medium text-gray-400 mt-1">Development</h3>
+            <p class="text-sm text-gray-400 mt-1">Building the product.</p>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 5: Card Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 5: Card Timeline</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-6 overflow-x-auto">
+      <ol class="flex gap-4 min-w-max">
+        <li class="w-64 flex-shrink-0">
+          <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </span>
+              <span class="text-xs text-green-600 font-medium">Completed</span>
+            </div>
+            <h3 class="font-medium text-gray-900">Requirements</h3>
+            <p class="text-sm text-gray-600 mt-1">Gathered all project requirements.</p>
+            <time class="text-xs text-gray-400 mt-2 block">Jan 15, 2024</time>
+          </div>
+        </li>
+        <li class="w-64 flex-shrink-0">
+          <div class="bg-primary-50 border border-primary-200 rounded-lg p-4 ring-2 ring-primary-500">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 bg-primary-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+              <span class="text-xs text-primary-600 font-medium">In Progress</span>
+            </div>
+            <h3 class="font-medium text-gray-900">Implementation</h3>
+            <p class="text-sm text-gray-600 mt-1">Building core features.</p>
+            <time class="text-xs text-gray-400 mt-2 block">Mar 1, 2024</time>
+          </div>
+        </li>
+        <li class="w-64 flex-shrink-0">
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 bg-gray-300 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+              <span class="text-xs text-gray-500 font-medium">Upcoming</span>
+            </div>
+            <h3 class="font-medium text-gray-400">Testing</h3>
+            <p class="text-sm text-gray-400 mt-1">Quality assurance phase.</p>
+            <time class="text-xs text-gray-400 mt-2 block">May 1, 2024</time>
+          </div>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 6: Dark Theme Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 6: Dark Theme Timeline</h2>
+    <nav class="bg-gray-900 rounded-lg p-6 max-w-lg">
+      <ol class="relative border-l-2 border-gray-700 ml-3 space-y-6">
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-green-500 rounded-full ring-4 ring-gray-900">
+            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </span>
+          <time class="text-xs text-gray-500">Week 1</time>
+          <h3 class="font-medium text-white">Sprint Planning</h3>
+          <p class="text-sm text-gray-400">Defined sprint goals and tasks.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-primary-500 rounded-full ring-4 ring-gray-900"></span>
+          <time class="text-xs text-gray-500">Week 2</time>
+          <h3 class="font-medium text-white">Development</h3>
+          <p class="text-sm text-gray-400">Active development in progress.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-gray-700 rounded-full ring-4 ring-gray-900"></span>
+          <time class="text-xs text-gray-600">Week 3</time>
+          <h3 class="font-medium text-gray-500">Review</h3>
+          <p class="text-sm text-gray-600">Sprint review scheduled.</p>
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+  <!-- Style 7: Activity Feed -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 7: Activity Feed</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-6 max-w-lg">
+      <h3 class="font-semibold text-gray-900 mb-4">Recent Activity</h3>
+      <ol class="space-y-4">
+        <li class="flex gap-3">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alice" class="w-8 h-8 rounded-full" alt="">
+          <div class="flex-1 min-w-0">
+            <p class="text-sm text-gray-900"><span class="font-medium">Alice</span> created a new task</p>
+            <p class="text-xs text-gray-500">2 minutes ago</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bob" class="w-8 h-8 rounded-full" alt="">
+          <div class="flex-1 min-w-0">
+            <p class="text-sm text-gray-900"><span class="font-medium">Bob</span> completed <span class="text-primary-600">Design Review</span></p>
+            <p class="text-xs text-gray-500">1 hour ago</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm text-gray-900">Sprint <span class="font-medium">v2.1</span> was released</p>
+            <p class="text-xs text-gray-500">Yesterday</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Carol" class="w-8 h-8 rounded-full" alt="">
+          <div class="flex-1 min-w-0">
+            <p class="text-sm text-gray-900"><span class="font-medium">Carol</span> commented on your PR</p>
+            <p class="text-xs text-gray-500">2 days ago</p>
+          </div>
+        </li>
+      </ol>
+      <button class="w-full mt-4 py-2 text-sm text-primary-600 hover:bg-primary-50 rounded-lg">View all activity</button>
+    </nav>
+  </section>
+
+  <!-- Style 8: Compact Timeline -->
+  <section class="space-y-4">
+    <h2 class="text-xl font-bold text-gray-800">Style 8: Compact Timeline</h2>
+    <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-4">
+      <ol class="flex items-center gap-1 overflow-x-auto">
+        <li class="flex items-center gap-1 px-3 py-2 bg-green-100 text-green-700 rounded-l-full text-sm whitespace-nowrap">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Q1: Planning
+        </li>
+        <li class="flex items-center gap-1 px-3 py-2 bg-green-100 text-green-700 text-sm whitespace-nowrap">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Q2: Design
+        </li>
+        <li class="flex items-center gap-1 px-3 py-2 bg-primary-100 text-primary-700 text-sm whitespace-nowrap font-medium">
+          <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+          Q3: Build
+        </li>
+        <li class="flex items-center gap-1 px-3 py-2 bg-gray-100 text-gray-500 text-sm whitespace-nowrap">
+          Q4: Launch
+        </li>
+        <li class="flex items-center gap-1 px-3 py-2 bg-gray-100 text-gray-500 rounded-r-full text-sm whitespace-nowrap">
+          Q1 '25: Scale
+        </li>
+      </ol>
+    </nav>
+  </section>
+
+</body>
+</html>
