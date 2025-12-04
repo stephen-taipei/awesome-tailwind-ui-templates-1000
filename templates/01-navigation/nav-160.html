@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Inspection Services Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-inspector-50: oklch(0.97 0.01 250);
+      --color-inspector-100: oklch(0.93 0.02 250);
+      --color-inspector-200: oklch(0.87 0.04 250);
+      --color-inspector-300: oklch(0.78 0.06 250);
+      --color-inspector-400: oklch(0.67 0.10 250);
+      --color-inspector-500: oklch(0.55 0.14 250);
+      --color-inspector-600: oklch(0.47 0.14 250);
+      --color-inspector-700: oklch(0.40 0.12 250);
+      --color-inspector-800: oklch(0.34 0.10 250);
+      --color-inspector-900: oklch(0.28 0.08 250);
+      --color-inspector-950: oklch(0.18 0.06 250);
+
+      --color-foundation-50: oklch(0.97 0.01 60);
+      --color-foundation-100: oklch(0.93 0.02 60);
+      --color-foundation-200: oklch(0.87 0.04 60);
+      --color-foundation-300: oklch(0.78 0.07 60);
+      --color-foundation-400: oklch(0.67 0.10 60);
+      --color-foundation-500: oklch(0.55 0.12 60);
+      --color-foundation-600: oklch(0.47 0.11 60);
+      --color-foundation-700: oklch(0.40 0.09 60);
+      --color-foundation-800: oklch(0.34 0.07 60);
+      --color-foundation-900: oklch(0.28 0.05 60);
+      --color-foundation-950: oklch(0.18 0.04 60);
+
+      --color-roof-50: oklch(0.97 0.01 25);
+      --color-roof-100: oklch(0.92 0.03 25);
+      --color-roof-200: oklch(0.85 0.06 25);
+      --color-roof-300: oklch(0.75 0.10 25);
+      --color-roof-400: oklch(0.65 0.14 25);
+      --color-roof-500: oklch(0.55 0.16 25);
+      --color-roof-600: oklch(0.47 0.14 25);
+      --color-roof-700: oklch(0.40 0.12 25);
+      --color-roof-800: oklch(0.34 0.10 25);
+      --color-roof-900: oklch(0.28 0.08 25);
+      --color-roof-950: oklch(0.18 0.06 25);
+
+      --color-electrical-50: oklch(0.97 0.02 85);
+      --color-electrical-100: oklch(0.93 0.04 85);
+      --color-electrical-200: oklch(0.87 0.08 85);
+      --color-electrical-300: oklch(0.78 0.14 85);
+      --color-electrical-400: oklch(0.70 0.18 85);
+      --color-electrical-500: oklch(0.62 0.18 85);
+      --color-electrical-600: oklch(0.52 0.16 85);
+      --color-electrical-700: oklch(0.44 0.13 85);
+      --color-electrical-800: oklch(0.37 0.10 85);
+      --color-electrical-900: oklch(0.30 0.08 85);
+      --color-electrical-950: oklch(0.20 0.05 85);
+
+      --color-plumb-50: oklch(0.97 0.02 230);
+      --color-plumb-100: oklch(0.93 0.04 230);
+      --color-plumb-200: oklch(0.87 0.08 230);
+      --color-plumb-300: oklch(0.78 0.12 230);
+      --color-plumb-400: oklch(0.67 0.16 230);
+      --color-plumb-500: oklch(0.55 0.18 230);
+      --color-plumb-600: oklch(0.47 0.16 230);
+      --color-plumb-700: oklch(0.40 0.14 230);
+      --color-plumb-800: oklch(0.34 0.11 230);
+      --color-plumb-900: oklch(0.28 0.08 230);
+      --color-plumb-950: oklch(0.18 0.06 230);
+
+      --color-mold-50: oklch(0.97 0.02 160);
+      --color-mold-100: oklch(0.93 0.04 160);
+      --color-mold-200: oklch(0.87 0.07 160);
+      --color-mold-300: oklch(0.78 0.11 160);
+      --color-mold-400: oklch(0.67 0.14 160);
+      --color-mold-500: oklch(0.55 0.14 160);
+      --color-mold-600: oklch(0.47 0.12 160);
+      --color-mold-700: oklch(0.40 0.10 160);
+      --color-mold-800: oklch(0.34 0.08 160);
+      --color-mold-900: oklch(0.28 0.06 160);
+      --color-mold-950: oklch(0.18 0.04 160);
+
+      --color-thermal-50: oklch(0.97 0.02 15);
+      --color-thermal-100: oklch(0.92 0.05 15);
+      --color-thermal-200: oklch(0.85 0.10 15);
+      --color-thermal-300: oklch(0.75 0.15 15);
+      --color-thermal-400: oklch(0.65 0.20 15);
+      --color-thermal-500: oklch(0.55 0.22 15);
+      --color-thermal-600: oklch(0.48 0.20 15);
+      --color-thermal-700: oklch(0.42 0.16 15);
+      --color-thermal-800: oklch(0.35 0.12 15);
+      --color-thermal-900: oklch(0.28 0.09 15);
+      --color-thermal-950: oklch(0.18 0.06 15);
+
+      --color-commercial-50: oklch(0.97 0.01 220);
+      --color-commercial-100: oklch(0.93 0.02 220);
+      --color-commercial-200: oklch(0.87 0.04 220);
+      --color-commercial-300: oklch(0.78 0.07 220);
+      --color-commercial-400: oklch(0.67 0.11 220);
+      --color-commercial-500: oklch(0.55 0.13 220);
+      --color-commercial-600: oklch(0.47 0.12 220);
+      --color-commercial-700: oklch(0.40 0.10 220);
+      --color-commercial-800: oklch(0.34 0.08 220);
+      --color-commercial-900: oklch(0.28 0.06 220);
+      --color-commercial-950: oklch(0.18 0.04 220);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: General Home Inspection - Professional trust-building design -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-inspector-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-inspector-800">TrustCheck</span>
+            <span class="block text-xs text-inspector-500">Certified Inspections</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-inspector-700 hover:bg-inspector-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-inspector-700 hover:bg-inspector-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="#" class="px-4 py-2 text-inspector-700 hover:bg-inspector-50 rounded-lg font-medium transition-colors">Sample Reports</a>
+          <a href="#" class="px-4 py-2 text-inspector-700 hover:bg-inspector-50 rounded-lg font-medium transition-colors">Credentials</a>
+          <a href="#" class="px-4 py-2 text-inspector-700 hover:bg-inspector-50 rounded-lg font-medium transition-colors">Pricing</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="tel:555-0160" class="hidden sm:flex items-center space-x-2 text-inspector-600 font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-0100</span>
+          </a>
+          <button class="bg-inspector-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-inspector-700 transition-colors shadow-md">
+            Schedule Inspection
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Foundation/Structural Inspection - Solid, grounded design -->
+  <nav class="bg-gradient-to-r from-foundation-800 to-foundation-700 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-foundation-500 rounded-lg flex items-center justify-center border-2 border-foundation-300">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">SolidBase</span>
+            <span class="block text-xs text-foundation-200">Foundation Specialists</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-foundation-100 hover:text-white font-medium transition-colors border-b-2 border-transparent hover:border-foundation-300 pb-1">Overview</a>
+          <a href="#" class="text-foundation-100 hover:text-white font-medium transition-colors border-b-2 border-transparent hover:border-foundation-300 pb-1">Structural Analysis</a>
+          <a href="#" class="text-foundation-100 hover:text-white font-medium transition-colors border-b-2 border-transparent hover:border-foundation-300 pb-1">Foundation Types</a>
+          <a href="#" class="text-foundation-100 hover:text-white font-medium transition-colors border-b-2 border-transparent hover:border-foundation-300 pb-1">Case Studies</a>
+          <a href="#" class="text-foundation-100 hover:text-white font-medium transition-colors border-b-2 border-transparent hover:border-foundation-300 pb-1">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-foundation-600 rounded-full text-foundation-100 text-sm">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            PE Certified
+          </span>
+          <button class="bg-white text-foundation-800 px-5 py-2 rounded-lg font-bold hover:bg-foundation-100 transition-colors">
+            Get Assessment
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Roof Inspection - Elevated, protective design -->
+  <nav class="bg-white border-b-4 border-roof-500 shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-14 h-10 bg-roof-600 clip-triangle flex items-end justify-center pb-1">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-roof-800">TopView</span>
+            <span class="block text-xs text-roof-500">Roof Inspection Experts</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center">
+          <a href="#" class="px-4 py-5 text-roof-700 hover:text-roof-500 font-medium border-b-4 border-transparent hover:border-roof-400 transition-all -mb-1">Home</a>
+          <a href="#" class="px-4 py-5 text-roof-700 hover:text-roof-500 font-medium border-b-4 border-transparent hover:border-roof-400 transition-all -mb-1">Inspections</a>
+          <a href="#" class="px-4 py-5 text-roof-700 hover:text-roof-500 font-medium border-b-4 border-transparent hover:border-roof-400 transition-all -mb-1">Drone Survey</a>
+          <a href="#" class="px-4 py-5 text-roof-700 hover:text-roof-500 font-medium border-b-4 border-transparent hover:border-roof-400 transition-all -mb-1">Roof Types</a>
+          <a href="#" class="px-4 py-5 text-roof-700 hover:text-roof-500 font-medium border-b-4 border-transparent hover:border-roof-400 transition-all -mb-1">Book Now</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-roof-100 rounded-full">
+            <svg class="w-4 h-4 text-roof-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-sm text-roof-700 font-medium">24hr Reports</span>
+          </div>
+          <button class="bg-roof-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-roof-700 transition-colors flex items-center space-x-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>Schedule</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <style>
+      .clip-triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+    </style>
+  </nav>
+
+  <!-- Style 4: Electrical Inspection - Energy-focused bright design -->
+  <nav class="bg-electrical-900 shadow-xl rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-electrical-400 rounded-full flex items-center justify-center animate-pulse">
+            <svg class="w-6 h-6 text-electrical-900" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">VoltCheck</span>
+            <span class="block text-xs text-electrical-300">Electrical Safety Inspections</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-electrical-100 hover:bg-electrical-800 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-electrical-100 hover:bg-electrical-800 rounded-lg font-medium transition-colors">Services</a>
+          <a href="#" class="px-4 py-2 text-electrical-100 hover:bg-electrical-800 rounded-lg font-medium transition-colors">Panel Inspection</a>
+          <a href="#" class="px-4 py-2 text-electrical-100 hover:bg-electrical-800 rounded-lg font-medium transition-colors">Safety Tips</a>
+          <a href="#" class="px-4 py-2 text-electrical-100 hover:bg-electrical-800 rounded-lg font-medium transition-colors">FAQ</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:inline-flex items-center px-3 py-1 bg-electrical-700 rounded-full text-electrical-200 text-sm">
+            <svg class="w-4 h-4 mr-1 text-electrical-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Licensed & Insured
+          </span>
+          <button class="bg-electrical-400 text-electrical-900 px-5 py-2 rounded-lg font-bold hover:bg-electrical-300 transition-colors shadow-lg shadow-electrical-400/30">
+            Book Inspection
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Plumbing Inspection - Clean, flowing design -->
+  <nav class="bg-gradient-to-r from-plumb-500 to-plumb-600 shadow-lg rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-plumb-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">FlowCheck</span>
+            <span class="block text-xs text-plumb-100">Plumbing Inspections</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-white hover:text-plumb-100 font-medium transition-colors">Home</a>
+          <a href="#" class="text-white hover:text-plumb-100 font-medium transition-colors">Services</a>
+          <a href="#" class="text-white hover:text-plumb-100 font-medium transition-colors">Sewer Camera</a>
+          <a href="#" class="text-white hover:text-plumb-100 font-medium transition-colors">Leak Detection</a>
+          <a href="#" class="text-white hover:text-plumb-100 font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 text-plumb-100">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span class="font-semibold">(555) 016-0105</span>
+          </div>
+          <button class="bg-white text-plumb-600 px-5 py-2 rounded-lg font-bold hover:bg-plumb-50 transition-colors">
+            Get Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Mold/Environmental Inspection - Health-focused clean design -->
+  <nav class="bg-white shadow-md rounded-xl border border-mold-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-mold-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-mold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-mold-800">PureAir</span>
+            <span class="block text-xs text-mold-500">Environmental Testing</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-mold-700 hover:bg-mold-50 rounded-lg font-medium transition-colors">Overview</a>
+          <a href="#" class="px-4 py-2 text-mold-700 hover:bg-mold-50 rounded-lg font-medium transition-colors">Mold Testing</a>
+          <a href="#" class="px-4 py-2 text-mold-700 hover:bg-mold-50 rounded-lg font-medium transition-colors">Air Quality</a>
+          <a href="#" class="px-4 py-2 text-mold-700 hover:bg-mold-50 rounded-lg font-medium transition-colors">Radon</a>
+          <a href="#" class="px-4 py-2 text-mold-700 hover:bg-mold-50 rounded-lg font-medium transition-colors">Lead/Asbestos</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-mold-100 rounded-lg text-mold-700 text-sm">
+            <svg class="w-4 h-4 mr-1 text-mold-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            EPA Certified
+          </span>
+          <button class="bg-mold-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-mold-700 transition-colors">
+            Request Testing
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Thermal/Infrared Inspection - Tech-forward warm design -->
+  <nav class="bg-gradient-to-r from-thermal-900 via-thermal-800 to-thermal-700 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-thermal-400 to-thermal-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">ThermalView</span>
+            <span class="block text-xs text-thermal-300">Infrared Imaging</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-thermal-100 hover:text-white font-medium transition-colors flex items-center space-x-1">
+            <span>Home</span>
+          </a>
+          <a href="#" class="text-thermal-100 hover:text-white font-medium transition-colors">Technology</a>
+          <a href="#" class="text-thermal-100 hover:text-white font-medium transition-colors">Applications</a>
+          <a href="#" class="text-thermal-100 hover:text-white font-medium transition-colors">Sample Images</a>
+          <a href="#" class="text-thermal-100 hover:text-white font-medium transition-colors">Book</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-thermal-800 rounded-full">
+            <div class="w-2 h-2 bg-thermal-400 rounded-full animate-pulse"></div>
+            <span class="text-thermal-200 text-sm">Latest Tech</span>
+          </div>
+          <button class="bg-gradient-to-r from-thermal-400 to-thermal-500 text-white px-5 py-2 rounded-lg font-bold hover:from-thermal-500 hover:to-thermal-600 transition-all shadow-lg">
+            Schedule Scan
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Commercial Property Inspection - Corporate professional design -->
+  <nav class="bg-commercial-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top bar -->
+      <div class="flex justify-between items-center py-2 border-b border-commercial-700 text-sm">
+        <div class="flex items-center space-x-4 text-commercial-300">
+          <span class="flex items-center space-x-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-0108</span>
+          </span>
+          <span class="flex items-center space-x-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>inspect@commercialpro.com</span>
+          </span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-commercial-300 hover:text-white transition-colors">Client Portal</a>
+          <a href="#" class="text-commercial-300 hover:text-white transition-colors">Careers</a>
+        </div>
+      </div>
+      <!-- Main nav -->
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-commercial-500 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-white">CommercialPro</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-commercial-100 hover:bg-commercial-700 rounded-lg font-medium transition-colors">About</a>
+          <a href="#" class="px-4 py-2 text-commercial-100 hover:bg-commercial-700 rounded-lg font-medium transition-colors">Services</a>
+          <a href="#" class="px-4 py-2 text-commercial-100 hover:bg-commercial-700 rounded-lg font-medium transition-colors">Industries</a>
+          <a href="#" class="px-4 py-2 text-commercial-100 hover:bg-commercial-700 rounded-lg font-medium transition-colors">Reports</a>
+          <a href="#" class="px-4 py-2 text-commercial-100 hover:bg-commercial-700 rounded-lg font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button class="hidden sm:block bg-commercial-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-commercial-500 transition-colors">
+            Request RFP
+          </button>
+          <button class="bg-white text-commercial-800 px-5 py-2 rounded-lg font-bold hover:bg-commercial-100 transition-colors">
+            Schedule Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm pt-8">
+    <p>Home Inspection Services Navigation Templates - 8 Styles</p>
+    <p class="mt-1">Template nav-160 | Tailwind CSS v4</p>
+  </footer>
+
+</body>
+</html>
