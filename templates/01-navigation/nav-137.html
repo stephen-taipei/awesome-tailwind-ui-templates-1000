@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet/Veterinary Services Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 150);
+      --color-primary-100: oklch(0.93 0.04 150);
+      --color-primary-200: oklch(0.86 0.08 150);
+      --color-primary-300: oklch(0.75 0.14 150);
+      --color-primary-400: oklch(0.65 0.19 150);
+      --color-primary-500: oklch(0.55 0.24 150);
+      --color-primary-600: oklch(0.45 0.22 150);
+      --color-primary-700: oklch(0.35 0.18 150);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Veterinary Clinic -->
+  <nav class="bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.5 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm15 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-12.5 3a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm10 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-5 7.5c3.5 0 6-2.5 6-6 0-2-1.5-3.5-3.5-3.5-.5 0-1 .1-1.5.3-.5-.2-1-.3-1.5-.3s-1 .1-1.5.3c-.5-.2-1-.3-1.5-.3-2 0-3.5 1.5-3.5 3.5 0 3.5 2.5 6 6 6z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">PawCare Vet</span>
+            <span class="block text-xs text-teal-100">Animal Hospital</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-teal-100 transition font-medium">Services</a>
+          <a href="#" class="hover:text-teal-100 transition font-medium">Our Team</a>
+          <a href="#" class="hover:text-teal-100 transition font-medium">Pet Care</a>
+          <a href="#" class="hover:text-teal-100 transition font-medium">Resources</a>
+          <a href="#" class="hover:text-teal-100 transition font-medium">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:555-0123" class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            (555) 123-PETS
+          </a>
+          <button class="bg-white text-teal-600 px-6 py-2.5 rounded-xl font-bold hover:bg-teal-50 transition">
+            Book Appointment
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Pet Store/E-commerce -->
+  <nav class="bg-white text-gray-900 rounded-2xl shadow-xl border border-orange-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🐕</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-900">PetMart</span>
+            <span class="block text-xs text-orange-600 font-medium">Everything for Your Pet</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-3 flex-1 max-w-md mx-8">
+          <div class="relative w-full">
+            <input type="text" placeholder="Search for pet supplies..." class="w-full bg-gray-100 rounded-full px-5 py-2.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"/>
+            <svg class="w-5 h-5 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">Dogs</a>
+          <a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">Cats</a>
+          <a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">Birds</a>
+          <a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">Fish</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="relative p-2 hover:bg-orange-50 rounded-full">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </button>
+          <button class="relative p-2 hover:bg-orange-50 rounded-full">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 text-white rounded-full text-xs flex items-center justify-center">3</span>
+          </button>
+          <button class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-5 py-2.5 rounded-full font-bold hover:shadow-lg transition">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Pet Grooming Salon -->
+  <nav class="bg-gradient-to-r from-pink-400 via-rose-400 to-pink-400 text-white rounded-3xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <span class="text-3xl">✂️</span>
+          </div>
+          <div>
+            <span class="text-2xl font-bold">Fluffy Styles</span>
+            <span class="block text-xs text-pink-100 font-medium">Pet Grooming Salon</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-pink-100 transition font-medium">Services</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Packages</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Gallery</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Groomers</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Tips</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+            <span class="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
+            Walk-ins Welcome!
+          </div>
+          <button class="bg-white text-pink-500 px-6 py-2.5 rounded-full font-bold hover:bg-pink-50 transition shadow-lg">
+            Book Grooming
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Pet Adoption Center -->
+  <nav class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Forever Home</span>
+            <span class="block text-xs text-purple-200">Pet Rescue & Adoption</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-purple-200 transition font-medium">Adopt</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Foster</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Volunteer</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Donate</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Events</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-yellow-400 text-purple-900 px-4 py-2 rounded-full text-sm font-bold">
+            <span>🐾</span>
+            127 Pets Need Homes
+          </div>
+          <button class="bg-white text-purple-600 px-6 py-2.5 rounded-xl font-bold hover:bg-purple-50 transition">
+            Meet Our Pets
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Pet Training Academy -->
+  <nav class="bg-slate-900 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">K9 Academy</span>
+            <span class="block text-xs text-amber-400 font-medium">Professional Dog Training</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Programs</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Trainers</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Puppy School</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Behavior</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Testimonials</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:block border border-amber-400 text-amber-400 px-5 py-2.5 rounded font-medium hover:bg-amber-400 hover:text-slate-900 transition">
+            Free Evaluation
+          </button>
+          <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 px-5 py-2.5 rounded font-bold hover:opacity-90 transition">
+            Enroll Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Pet Boarding/Daycare -->
+  <nav class="bg-gradient-to-r from-sky-400 to-blue-500 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <span class="text-2xl">🏠</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Pet Paradise</span>
+            <span class="block text-xs text-sky-100">Boarding & Daycare</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-sky-100 transition font-medium">Boarding</a>
+          <a href="#" class="hover:text-sky-100 transition font-medium">Daycare</a>
+          <a href="#" class="hover:text-sky-100 transition font-medium">Facilities</a>
+          <a href="#" class="hover:text-sky-100 transition font-medium">Webcams</a>
+          <a href="#" class="hover:text-sky-100 transition font-medium">Rates</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            24/7 Supervised
+          </div>
+          <button class="bg-white text-blue-600 px-6 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition">
+            Reserve Spot
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Pet Insurance -->
+  <nav class="bg-white text-gray-900 rounded-xl shadow-lg border border-gray-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-900">PetShield</span>
+            <span class="block text-xs text-green-600 font-medium">Pet Insurance</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Plans</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Coverage</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Claims</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Vets</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">FAQ</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="hidden md:block text-sm text-gray-500">Already insured?</span>
+          <button class="text-green-600 hover:text-green-700 font-medium">Login</button>
+          <button class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-xl font-bold hover:shadow-lg transition">
+            Get a Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Exotic Pet Specialty -->
+  <nav class="bg-gradient-to-r from-emerald-800 via-teal-800 to-emerald-800 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-lime-400 to-green-500 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🦎</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Exotic Kingdom</span>
+            <span class="block text-xs text-lime-300 font-medium">Reptiles, Birds & Exotics</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Reptiles</a>
+          <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Birds</a>
+          <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Small Pets</a>
+          <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Supplies</a>
+          <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Care Guides</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 text-sm text-emerald-200">
+            <span class="w-2 h-2 bg-lime-400 rounded-full animate-pulse"></span>
+            Expert Staff On Site
+          </div>
+          <button class="bg-gradient-to-r from-lime-400 to-green-500 text-emerald-900 px-6 py-2.5 rounded font-bold hover:opacity-90 transition">
+            Shop Exotics
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <div class="text-center py-8 text-gray-500 text-sm">
+    <p>nav-137: Pet/Veterinary Services Navigation - 8 Unique Styles</p>
+    <p class="mt-2">Tailwind CSS Navigation Components</p>
+  </div>
+
+</body>
+</html>
