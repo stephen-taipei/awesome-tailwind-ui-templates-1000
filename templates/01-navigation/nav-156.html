@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscaping/Lawn Care Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-lawn-50: oklch(0.98 0.03 140);
+      --color-lawn-100: oklch(0.95 0.05 140);
+      --color-lawn-200: oklch(0.90 0.10 140);
+      --color-lawn-300: oklch(0.82 0.14 140);
+      --color-lawn-400: oklch(0.70 0.16 140);
+      --color-lawn-500: oklch(0.58 0.16 140);
+      --color-lawn-600: oklch(0.48 0.14 140);
+      --color-lawn-700: oklch(0.40 0.12 140);
+      --color-lawn-800: oklch(0.32 0.10 140);
+      --color-lawn-900: oklch(0.22 0.08 140);
+
+      --color-garden-50: oklch(0.97 0.02 160);
+      --color-garden-100: oklch(0.94 0.04 160);
+      --color-garden-200: oklch(0.88 0.08 160);
+      --color-garden-300: oklch(0.78 0.12 160);
+      --color-garden-400: oklch(0.68 0.14 160);
+      --color-garden-500: oklch(0.55 0.14 160);
+      --color-garden-600: oklch(0.45 0.12 160);
+      --color-garden-700: oklch(0.38 0.10 160);
+      --color-garden-800: oklch(0.30 0.08 160);
+      --color-garden-900: oklch(0.22 0.06 160);
+
+      --color-earth-50: oklch(0.97 0.01 60);
+      --color-earth-100: oklch(0.94 0.02 60);
+      --color-earth-200: oklch(0.88 0.04 60);
+      --color-earth-300: oklch(0.78 0.06 60);
+      --color-earth-400: oklch(0.65 0.08 60);
+      --color-earth-500: oklch(0.52 0.08 60);
+      --color-earth-600: oklch(0.42 0.06 60);
+      --color-earth-700: oklch(0.35 0.05 60);
+      --color-earth-800: oklch(0.28 0.04 60);
+      --color-earth-900: oklch(0.20 0.03 60);
+
+      --color-bloom-50: oklch(0.98 0.02 350);
+      --color-bloom-100: oklch(0.95 0.04 350);
+      --color-bloom-200: oklch(0.90 0.08 350);
+      --color-bloom-300: oklch(0.82 0.12 350);
+      --color-bloom-400: oklch(0.72 0.16 350);
+      --color-bloom-500: oklch(0.60 0.18 350);
+      --color-bloom-600: oklch(0.50 0.16 350);
+      --color-bloom-700: oklch(0.42 0.14 350);
+      --color-bloom-800: oklch(0.34 0.12 350);
+      --color-bloom-900: oklch(0.24 0.08 350);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Lawn Care Service - Fresh & Professional -->
+  <nav class="bg-gradient-to-r from-lawn-600 to-lawn-500 shadow-xl rounded-lg overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-7 h-7 text-lawn-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">GreenLawn Pro</span>
+            <p class="text-lawn-100 text-xs">Professional Lawn Care</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 bg-white/20 text-white rounded-lg font-medium">Services</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Mowing</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Fertilization</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Pricing</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Reviews</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-white text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) MOW-LAWN</span>
+          </div>
+          <button class="bg-white text-lawn-600 px-5 py-2.5 rounded-lg font-bold hover:bg-lawn-50 transition-colors shadow-lg">
+            Free Estimate
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Landscape Design - Elegant & Creative -->
+  <nav class="bg-white border-b-2 border-garden-500 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-garden-100 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-garden-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-900">Eden Landscapes</span>
+            <p class="text-garden-600 text-xs font-medium">Design • Build • Maintain</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-garden-600 font-semibold">Design Services</a>
+          <a href="#" class="text-gray-600 hover:text-garden-600 font-medium transition-colors">Portfolio</a>
+          <a href="#" class="text-gray-600 hover:text-garden-600 font-medium transition-colors">Process</a>
+          <a href="#" class="text-gray-600 hover:text-garden-600 font-medium transition-colors">About</a>
+          <a href="#" class="text-gray-600 hover:text-garden-600 font-medium transition-colors">Contact</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="border-2 border-garden-500 text-garden-600 px-5 py-2 rounded-full font-medium hover:bg-garden-500 hover:text-white transition-all">
+            Schedule Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Commercial Landscaping - Professional & Industrial -->
+  <nav class="bg-earth-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between py-2 border-b border-earth-700 text-sm">
+        <div class="flex items-center space-x-6 text-earth-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            Licensed & Insured
+          </span>
+          <span>Serving Since 1998</span>
+        </div>
+        <div class="flex items-center space-x-4 text-earth-400">
+          <a href="#" class="hover:text-lawn-400 transition-colors">Careers</a>
+          <a href="#" class="hover:text-lawn-400 transition-colors">Client Portal</a>
+        </div>
+      </div>
+
+      <!-- Main Nav -->
+      <div class="flex items-center justify-between h-18">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-lawn-500 rounded flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">PREMIER GROUNDS</span>
+            <p class="text-earth-500 text-xs tracking-wider">COMMERCIAL LANDSCAPING</p>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="#" class="text-lawn-400 font-semibold border-b-2 border-lawn-500 pb-1">Services</a>
+          <a href="#" class="text-earth-300 hover:text-white font-medium transition-colors">Industries</a>
+          <a href="#" class="text-earth-300 hover:text-white font-medium transition-colors">Maintenance</a>
+          <a href="#" class="text-earth-300 hover:text-white font-medium transition-colors">Projects</a>
+          <a href="#" class="text-earth-300 hover:text-white font-medium transition-colors">About</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button class="bg-lawn-500 text-white px-6 py-2.5 font-bold hover:bg-lawn-600 transition-colors">
+            REQUEST PROPOSAL
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Garden Center - Warm & Inviting -->
+  <nav class="bg-gradient-to-r from-bloom-50 to-garden-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center border-4 border-bloom-200">
+            <svg class="w-8 h-8 text-bloom-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-earth-800">Bloom & Grow</span>
+            <p class="text-bloom-600 text-xs font-medium">Garden Center & Nursery</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-bloom-600 font-semibold">Plants</a>
+          <a href="#" class="text-gray-600 hover:text-bloom-600 font-medium transition-colors">Garden Supplies</a>
+          <a href="#" class="text-gray-600 hover:text-bloom-600 font-medium transition-colors">Workshops</a>
+          <a href="#" class="text-gray-600 hover:text-bloom-600 font-medium transition-colors">Tips & Blog</a>
+          <a href="#" class="text-gray-600 hover:text-bloom-600 font-medium transition-colors">Visit Us</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-earth-600 text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Open 7am-7pm</span>
+          </div>
+          <button class="bg-bloom-500 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-bloom-600 transition-colors shadow-md">
+            Shop Online
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Tree Service - Strong & Reliable -->
+  <nav class="bg-earth-900 border-b-4 border-lawn-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-lawn-600 rounded-full flex items-center justify-center">
+            <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black text-white tracking-tight">MIGHTY OAK</span>
+            <p class="text-earth-400 text-xs tracking-widest">TREE SERVICES</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-lawn-400 font-bold uppercase text-sm tracking-wide">Tree Removal</a>
+          <a href="#" class="text-earth-300 hover:text-lawn-400 font-bold uppercase text-sm tracking-wide transition-colors">Trimming</a>
+          <a href="#" class="text-earth-300 hover:text-lawn-400 font-bold uppercase text-sm tracking-wide transition-colors">Stump Grinding</a>
+          <a href="#" class="text-earth-300 hover:text-lawn-400 font-bold uppercase text-sm tracking-wide transition-colors">Emergency</a>
+          <a href="#" class="text-earth-300 hover:text-lawn-400 font-bold uppercase text-sm tracking-wide transition-colors">About</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-earth-400 text-sm">
+            <svg class="w-5 h-5 text-lawn-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <span>Fully Insured</span>
+          </div>
+          <button class="bg-lawn-500 text-white px-6 py-2.5 font-bold hover:bg-lawn-400 transition-colors">
+            FREE ESTIMATE
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Irrigation/Sprinkler - Technical & Efficient -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Aqua<span class="text-blue-600">Spray</span></span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-blue-600 font-semibold">Sprinkler Systems</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Drip Irrigation</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Repairs</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Winterization</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Smart Systems</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-green-50 rounded-full">
+            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+            <span class="text-green-700 text-sm font-medium">Water-Saving</span>
+          </div>
+          <button class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Free Inspection
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Hardscape/Patio - Modern & Premium -->
+  <nav class="bg-gradient-to-r from-stone-800 to-stone-700 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-amber-500 rounded flex items-center justify-center">
+            <svg class="w-7 h-7 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">StoneScape</span>
+            <p class="text-stone-400 text-xs">Hardscape & Outdoor Living</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-amber-400 font-semibold">Patios</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Walkways</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Retaining Walls</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Fire Features</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Gallery</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="border-2 border-amber-500 text-amber-400 px-5 py-2 font-semibold hover:bg-amber-500 hover:text-stone-900 transition-all">
+            Design Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Smart Lawn Tech - Modern & Innovative -->
+  <nav class="bg-gradient-to-r from-gray-900 via-lawn-900 to-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 bg-gradient-to-br from-lawn-400 to-lawn-600 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+            </div>
+            <div class="absolute -top-1 -right-1 w-3 h-3 bg-lawn-400 rounded-full animate-pulse"></div>
+          </div>
+          <div>
+            <span class="text-lg font-bold text-white">Smart<span class="text-lawn-400">Lawn</span></span>
+            <p class="text-gray-500 text-xs">AI-Powered Lawn Care</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden lg:flex items-center space-x-1 bg-gray-800/50 rounded-full px-2 py-1">
+          <a href="#" class="px-4 py-1.5 bg-lawn-600 text-white rounded-full font-medium text-sm">Smart Mowing</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Sensors</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">App Control</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Plans</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-400 hover:text-lawn-400 font-medium text-sm transition-colors">Download App</a>
+          <a href="#" class="text-gray-400 hover:text-lawn-400 font-medium text-sm transition-colors">Login</a>
+          <button class="bg-lawn-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-lawn-400 transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-gray-500 text-sm pb-8">
+    <p>Navigation Template: nav-156 | Landscaping/Lawn Care Navigation - 8 Unique Styles</p>
+    <p class="mt-1">Styles: Lawn Care Service, Landscape Design, Commercial Landscaping, Garden Center, Tree Service, Irrigation/Sprinkler, Hardscape/Patio, Smart Lawn Tech</p>
+  </footer>
+
+</body>
+</html>
