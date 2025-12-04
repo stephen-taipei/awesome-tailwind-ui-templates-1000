@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tattoo/Piercing Studio Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-ink-50: oklch(0.97 0.01 270);
+      --color-ink-100: oklch(0.93 0.02 270);
+      --color-ink-200: oklch(0.85 0.03 270);
+      --color-ink-300: oklch(0.75 0.04 270);
+      --color-ink-400: oklch(0.60 0.05 270);
+      --color-ink-500: oklch(0.45 0.05 270);
+      --color-ink-600: oklch(0.35 0.04 270);
+      --color-ink-700: oklch(0.28 0.03 270);
+      --color-ink-800: oklch(0.22 0.02 270);
+      --color-ink-900: oklch(0.16 0.02 270);
+      --color-ink-950: oklch(0.10 0.01 270);
+
+      --color-trad-50: oklch(0.97 0.02 25);
+      --color-trad-100: oklch(0.92 0.04 25);
+      --color-trad-200: oklch(0.85 0.08 25);
+      --color-trad-300: oklch(0.75 0.12 25);
+      --color-trad-400: oklch(0.65 0.16 25);
+      --color-trad-500: oklch(0.55 0.18 25);
+      --color-trad-600: oklch(0.47 0.16 25);
+      --color-trad-700: oklch(0.40 0.13 25);
+      --color-trad-800: oklch(0.34 0.10 25);
+      --color-trad-900: oklch(0.28 0.08 25);
+      --color-trad-950: oklch(0.18 0.05 25);
+
+      --color-minimal-50: oklch(0.98 0.00 0);
+      --color-minimal-100: oklch(0.95 0.00 0);
+      --color-minimal-200: oklch(0.90 0.00 0);
+      --color-minimal-300: oklch(0.82 0.00 0);
+      --color-minimal-400: oklch(0.70 0.00 0);
+      --color-minimal-500: oklch(0.55 0.00 0);
+      --color-minimal-600: oklch(0.45 0.00 0);
+      --color-minimal-700: oklch(0.35 0.00 0);
+      --color-minimal-800: oklch(0.25 0.00 0);
+      --color-minimal-900: oklch(0.18 0.00 0);
+      --color-minimal-950: oklch(0.10 0.00 0);
+
+      --color-neo-50: oklch(0.97 0.02 320);
+      --color-neo-100: oklch(0.93 0.05 320);
+      --color-neo-200: oklch(0.87 0.10 320);
+      --color-neo-300: oklch(0.78 0.15 320);
+      --color-neo-400: oklch(0.67 0.20 320);
+      --color-neo-500: oklch(0.55 0.22 320);
+      --color-neo-600: oklch(0.48 0.20 320);
+      --color-neo-700: oklch(0.42 0.16 320);
+      --color-neo-800: oklch(0.35 0.12 320);
+      --color-neo-900: oklch(0.28 0.08 320);
+      --color-neo-950: oklch(0.18 0.05 320);
+
+      --color-pierce-50: oklch(0.97 0.02 200);
+      --color-pierce-100: oklch(0.93 0.04 200);
+      --color-pierce-200: oklch(0.87 0.08 200);
+      --color-pierce-300: oklch(0.78 0.12 200);
+      --color-pierce-400: oklch(0.67 0.16 200);
+      --color-pierce-500: oklch(0.55 0.18 200);
+      --color-pierce-600: oklch(0.47 0.16 200);
+      --color-pierce-700: oklch(0.40 0.14 200);
+      --color-pierce-800: oklch(0.34 0.11 200);
+      --color-pierce-900: oklch(0.28 0.08 200);
+      --color-pierce-950: oklch(0.18 0.06 200);
+
+      --color-color-50: oklch(0.97 0.02 145);
+      --color-color-100: oklch(0.93 0.04 145);
+      --color-color-200: oklch(0.87 0.08 145);
+      --color-color-300: oklch(0.78 0.12 145);
+      --color-color-400: oklch(0.67 0.16 145);
+      --color-color-500: oklch(0.55 0.16 145);
+      --color-color-600: oklch(0.47 0.14 145);
+      --color-color-700: oklch(0.40 0.12 145);
+      --color-color-800: oklch(0.34 0.10 145);
+      --color-color-900: oklch(0.28 0.08 145);
+      --color-color-950: oklch(0.18 0.06 145);
+
+      --color-laser-50: oklch(0.97 0.02 15);
+      --color-laser-100: oklch(0.92 0.05 15);
+      --color-laser-200: oklch(0.85 0.10 15);
+      --color-laser-300: oklch(0.75 0.15 15);
+      --color-laser-400: oklch(0.65 0.20 15);
+      --color-laser-500: oklch(0.55 0.22 15);
+      --color-laser-600: oklch(0.48 0.20 15);
+      --color-laser-700: oklch(0.42 0.16 15);
+      --color-laser-800: oklch(0.35 0.12 15);
+      --color-laser-900: oklch(0.28 0.09 15);
+      --color-laser-950: oklch(0.18 0.06 15);
+
+      --color-custom-50: oklch(0.97 0.02 60);
+      --color-custom-100: oklch(0.93 0.04 60);
+      --color-custom-200: oklch(0.87 0.08 60);
+      --color-custom-300: oklch(0.78 0.12 60);
+      --color-custom-400: oklch(0.70 0.16 60);
+      --color-custom-500: oklch(0.62 0.16 60);
+      --color-custom-600: oklch(0.52 0.14 60);
+      --color-custom-700: oklch(0.44 0.11 60);
+      --color-custom-800: oklch(0.37 0.08 60);
+      --color-custom-900: oklch(0.30 0.06 60);
+      --color-custom-950: oklch(0.20 0.04 60);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Classic Tattoo Studio - Bold dark design -->
+  <nav class="bg-ink-950 shadow-xl rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-ink-800 rounded-lg flex items-center justify-center border border-ink-600">
+            <svg class="w-7 h-7 text-ink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white tracking-wide">INK MASTERS</span>
+            <span class="block text-xs text-ink-400">Est. 2005</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-ink-300 hover:text-white hover:bg-ink-800 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-ink-300 hover:text-white hover:bg-ink-800 rounded-lg font-medium transition-colors">Artists</a>
+          <a href="#" class="px-4 py-2 text-ink-300 hover:text-white hover:bg-ink-800 rounded-lg font-medium transition-colors">Gallery</a>
+          <a href="#" class="px-4 py-2 text-ink-300 hover:text-white hover:bg-ink-800 rounded-lg font-medium transition-colors">Aftercare</a>
+          <a href="#" class="px-4 py-2 text-ink-300 hover:text-white hover:bg-ink-800 rounded-lg font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="tel:555-0162" class="hidden sm:flex items-center space-x-2 text-ink-400 font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-2001</span>
+          </a>
+          <button class="bg-ink-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-ink-600 transition-colors border border-ink-500">
+            Book Session
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Traditional/Old School - Red vintage design -->
+  <nav class="bg-trad-900 shadow-xl rounded-xl border-b-4 border-trad-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-trad-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white" style="font-family: serif;">Old School Ink</span>
+            <span class="block text-xs text-trad-300">Traditional Tattoos</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-trad-200 hover:text-trad-400 font-medium transition-colors">Home</a>
+          <a href="#" class="text-trad-200 hover:text-trad-400 font-medium transition-colors">Flash Art</a>
+          <a href="#" class="text-trad-200 hover:text-trad-400 font-medium transition-colors">Custom Work</a>
+          <a href="#" class="text-trad-200 hover:text-trad-400 font-medium transition-colors">Artists</a>
+          <a href="#" class="text-trad-200 hover:text-trad-400 font-medium transition-colors">Walk-Ins</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-trad-800 rounded-full text-trad-300 text-sm font-medium">
+            Walk-Ins Welcome
+          </span>
+          <button class="bg-trad-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-trad-400 transition-colors">
+            View Flash
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Minimalist/Fine Line - Clean modern design -->
+  <nav class="bg-white shadow-md rounded-xl border border-minimal-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 border-2 border-minimal-900 rounded-full flex items-center justify-center">
+            <span class="text-minimal-900 font-light text-lg">FL</span>
+          </div>
+          <div>
+            <span class="text-xl font-light text-minimal-900 tracking-widest">FINE LINE</span>
+            <span class="block text-xs text-minimal-500 tracking-wider">STUDIO</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-minimal-600 hover:text-minimal-900 font-light tracking-wide transition-colors">Home</a>
+          <a href="#" class="text-minimal-600 hover:text-minimal-900 font-light tracking-wide transition-colors">Portfolio</a>
+          <a href="#" class="text-minimal-600 hover:text-minimal-900 font-light tracking-wide transition-colors">Artists</a>
+          <a href="#" class="text-minimal-600 hover:text-minimal-900 font-light tracking-wide transition-colors">Process</a>
+          <a href="#" class="text-minimal-600 hover:text-minimal-900 font-light tracking-wide transition-colors">Inquire</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button class="border-2 border-minimal-900 text-minimal-900 px-5 py-2 rounded-none font-light tracking-wide hover:bg-minimal-900 hover:text-white transition-all">
+            Book Consult
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Neo-Traditional - Vibrant pink/purple design -->
+  <nav class="bg-gradient-to-r from-neo-900 via-neo-800 to-neo-900 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-neo-400 to-neo-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Neon Rose</span>
+            <span class="block text-xs text-neo-300">Neo-Traditional Art</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-neo-200 hover:bg-neo-700 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-neo-200 hover:bg-neo-700 rounded-lg font-medium transition-colors">Artists</a>
+          <a href="#" class="px-4 py-2 text-neo-200 hover:bg-neo-700 rounded-lg font-medium transition-colors">Gallery</a>
+          <a href="#" class="px-4 py-2 text-neo-200 hover:bg-neo-700 rounded-lg font-medium transition-colors">Shop</a>
+          <a href="#" class="px-4 py-2 text-neo-200 hover:bg-neo-700 rounded-lg font-medium transition-colors">Book</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2">
+            <a href="#" class="w-8 h-8 bg-neo-700 rounded-full flex items-center justify-center text-neo-300 hover:bg-neo-600 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+            </a>
+          </div>
+          <button class="bg-gradient-to-r from-neo-500 to-neo-400 text-white px-5 py-2 rounded-lg font-bold hover:from-neo-400 hover:to-neo-300 transition-all shadow-lg shadow-neo-500/30">
+            Book Artist
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Professional Piercing - Clean teal design -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="bg-pierce-600 h-1"></div>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-17">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-pierce-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-pierce-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-pierce-800">Precision Pierce</span>
+            <span class="block text-xs text-pierce-500">Professional Body Piercing</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-pierce-700 hover:bg-pierce-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-pierce-700 hover:bg-pierce-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="#" class="px-4 py-2 text-pierce-700 hover:bg-pierce-50 rounded-lg font-medium transition-colors">Jewelry</a>
+          <a href="#" class="px-4 py-2 text-pierce-700 hover:bg-pierce-50 rounded-lg font-medium transition-colors">Aftercare</a>
+          <a href="#" class="px-4 py-2 text-pierce-700 hover:bg-pierce-50 rounded-lg font-medium transition-colors">FAQ</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-pierce-100 rounded-full text-pierce-700 text-sm font-medium">
+            <svg class="w-4 h-4 mr-1 text-pierce-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            APP Member
+          </span>
+          <button class="bg-pierce-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-pierce-700 transition-colors">
+            Book Piercing
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Color/Realism Specialist - Vibrant green design -->
+  <nav class="bg-gradient-to-r from-color-800 to-color-700 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-color-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Chromatic Ink</span>
+            <span class="block text-xs text-color-200">Color & Realism Masters</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-color-100 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-color-100 hover:text-white font-medium transition-colors">Realism</a>
+          <a href="#" class="text-color-100 hover:text-white font-medium transition-colors">Watercolor</a>
+          <a href="#" class="text-color-100 hover:text-white font-medium transition-colors">Portfolio</a>
+          <a href="#" class="text-color-100 hover:text-white font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-1 px-3 py-1 bg-color-600 rounded-full">
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+            <span class="text-color-100 text-sm ml-1">Full Spectrum</span>
+          </div>
+          <button class="bg-white text-color-700 px-5 py-2 rounded-lg font-bold hover:bg-color-100 transition-colors">
+            View Gallery
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Tattoo Removal/Laser - Medical red design -->
+  <nav class="bg-white shadow-md rounded-xl border border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-laser-100 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-laser-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-laser-800">LaserFresh</span>
+            <span class="block text-xs text-laser-500">Tattoo Removal Clinic</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium transition-colors">How It Works</a>
+          <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium transition-colors">Before/After</a>
+          <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium transition-colors">Pricing</a>
+          <a href="#" class="px-4 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium transition-colors">FAQ</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-green-100 rounded-full text-green-700 text-sm font-medium">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            FDA Approved
+          </span>
+          <button class="bg-laser-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-laser-700 transition-colors">
+            Free Consult
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Custom Design Studio - Premium gold design -->
+  <nav class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top accent bar -->
+      <div class="flex justify-center py-2 border-b border-gray-700">
+        <span class="text-custom-500 text-xs tracking-[0.3em] font-medium">CUSTOM TATTOO DESIGN STUDIO</span>
+      </div>
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-custom-500 rounded-full flex items-center justify-center">
+            <span class="text-gray-900 font-bold text-lg">A</span>
+          </div>
+          <span class="text-xl font-bold text-white tracking-wide">ATELIER</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-gray-400 hover:text-custom-400 font-medium transition-colors">Home</a>
+          <a href="#" class="text-gray-400 hover:text-custom-400 font-medium transition-colors">Design Process</a>
+          <a href="#" class="text-gray-400 hover:text-custom-400 font-medium transition-colors">Portfolio</a>
+          <a href="#" class="text-gray-400 hover:text-custom-400 font-medium transition-colors">Artists</a>
+          <a href="#" class="text-gray-400 hover:text-custom-400 font-medium transition-colors">Commission</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center text-custom-500 text-sm">
+            By Appointment Only
+          </span>
+          <button class="bg-custom-500 text-gray-900 px-5 py-2 rounded-lg font-bold hover:bg-custom-400 transition-colors">
+            Start Design
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm pt-8">
+    <p>Tattoo/Piercing Studio Navigation Templates - 8 Styles</p>
+    <p class="mt-1">Template nav-162 | Tailwind CSS v4</p>
+  </footer>
+
+</body>
+</html>
