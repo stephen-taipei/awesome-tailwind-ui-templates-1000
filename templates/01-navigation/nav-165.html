@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bicycle Shop/Repair Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-cycle-50: oklch(0.97 0.02 145);
+      --color-cycle-100: oklch(0.93 0.04 145);
+      --color-cycle-200: oklch(0.87 0.08 145);
+      --color-cycle-300: oklch(0.78 0.12 145);
+      --color-cycle-400: oklch(0.67 0.16 145);
+      --color-cycle-500: oklch(0.55 0.16 145);
+      --color-cycle-600: oklch(0.47 0.14 145);
+      --color-cycle-700: oklch(0.40 0.12 145);
+      --color-cycle-800: oklch(0.34 0.10 145);
+      --color-cycle-900: oklch(0.28 0.08 145);
+      --color-cycle-950: oklch(0.18 0.06 145);
+
+      --color-road-50: oklch(0.97 0.02 25);
+      --color-road-100: oklch(0.92 0.04 25);
+      --color-road-200: oklch(0.85 0.08 25);
+      --color-road-300: oklch(0.75 0.12 25);
+      --color-road-400: oklch(0.65 0.16 25);
+      --color-road-500: oklch(0.55 0.18 25);
+      --color-road-600: oklch(0.47 0.16 25);
+      --color-road-700: oklch(0.40 0.14 25);
+      --color-road-800: oklch(0.34 0.11 25);
+      --color-road-900: oklch(0.28 0.08 25);
+      --color-road-950: oklch(0.18 0.06 25);
+
+      --color-mountain-50: oklch(0.97 0.02 60);
+      --color-mountain-100: oklch(0.93 0.04 60);
+      --color-mountain-200: oklch(0.87 0.08 60);
+      --color-mountain-300: oklch(0.78 0.12 60);
+      --color-mountain-400: oklch(0.70 0.15 60);
+      --color-mountain-500: oklch(0.62 0.15 60);
+      --color-mountain-600: oklch(0.52 0.13 60);
+      --color-mountain-700: oklch(0.44 0.10 60);
+      --color-mountain-800: oklch(0.37 0.08 60);
+      --color-mountain-900: oklch(0.30 0.06 60);
+      --color-mountain-950: oklch(0.20 0.04 60);
+
+      --color-ebike-50: oklch(0.97 0.02 200);
+      --color-ebike-100: oklch(0.93 0.04 200);
+      --color-ebike-200: oklch(0.87 0.08 200);
+      --color-ebike-300: oklch(0.78 0.14 200);
+      --color-ebike-400: oklch(0.67 0.18 200);
+      --color-ebike-500: oklch(0.55 0.20 200);
+      --color-ebike-600: oklch(0.47 0.18 200);
+      --color-ebike-700: oklch(0.40 0.15 200);
+      --color-ebike-800: oklch(0.34 0.12 200);
+      --color-ebike-900: oklch(0.28 0.09 200);
+      --color-ebike-950: oklch(0.18 0.07 200);
+
+      --color-repair-50: oklch(0.97 0.01 240);
+      --color-repair-100: oklch(0.93 0.02 240);
+      --color-repair-200: oklch(0.87 0.04 240);
+      --color-repair-300: oklch(0.78 0.07 240);
+      --color-repair-400: oklch(0.67 0.11 240);
+      --color-repair-500: oklch(0.55 0.14 240);
+      --color-repair-600: oklch(0.47 0.13 240);
+      --color-repair-700: oklch(0.40 0.11 240);
+      --color-repair-800: oklch(0.34 0.09 240);
+      --color-repair-900: oklch(0.28 0.07 240);
+      --color-repair-950: oklch(0.18 0.05 240);
+
+      --color-vintage-50: oklch(0.97 0.01 45);
+      --color-vintage-100: oklch(0.93 0.02 45);
+      --color-vintage-200: oklch(0.87 0.04 45);
+      --color-vintage-300: oklch(0.78 0.06 45);
+      --color-vintage-400: oklch(0.67 0.08 45);
+      --color-vintage-500: oklch(0.55 0.08 45);
+      --color-vintage-600: oklch(0.47 0.07 45);
+      --color-vintage-700: oklch(0.40 0.06 45);
+      --color-vintage-800: oklch(0.34 0.05 45);
+      --color-vintage-900: oklch(0.28 0.04 45);
+      --color-vintage-950: oklch(0.18 0.03 45);
+
+      --color-urban-50: oklch(0.97 0.01 280);
+      --color-urban-100: oklch(0.93 0.02 280);
+      --color-urban-200: oklch(0.87 0.04 280);
+      --color-urban-300: oklch(0.78 0.07 280);
+      --color-urban-400: oklch(0.67 0.10 280);
+      --color-urban-500: oklch(0.55 0.12 280);
+      --color-urban-600: oklch(0.47 0.11 280);
+      --color-urban-700: oklch(0.40 0.09 280);
+      --color-urban-800: oklch(0.34 0.07 280);
+      --color-urban-900: oklch(0.28 0.05 280);
+      --color-urban-950: oklch(0.18 0.04 280);
+
+      --color-kids-50: oklch(0.97 0.02 250);
+      --color-kids-100: oklch(0.93 0.05 250);
+      --color-kids-200: oklch(0.87 0.10 250);
+      --color-kids-300: oklch(0.78 0.15 250);
+      --color-kids-400: oklch(0.67 0.18 250);
+      --color-kids-500: oklch(0.55 0.18 250);
+      --color-kids-600: oklch(0.47 0.16 250);
+      --color-kids-700: oklch(0.40 0.14 250);
+      --color-kids-800: oklch(0.34 0.11 250);
+      --color-kids-900: oklch(0.28 0.08 250);
+      --color-kids-950: oklch(0.18 0.06 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Full Service Bike Shop - Fresh green design -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-cycle-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-cycle-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <circle cx="5.5" cy="17.5" r="3.5" stroke-width="2"/>
+              <circle cx="18.5" cy="17.5" r="3.5" stroke-width="2"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 6h2l3 11M5.5 17.5l3-8.5h6l2.5 8.5M8.5 9L12 17.5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-cycle-800">CycleWorks</span>
+            <span class="block text-xs text-cycle-500">Bikes & Service</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-cycle-700 hover:bg-cycle-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-cycle-700 hover:bg-cycle-50 rounded-lg font-medium transition-colors">Shop Bikes</a>
+          <a href="#" class="px-4 py-2 text-cycle-700 hover:bg-cycle-50 rounded-lg font-medium transition-colors">Parts</a>
+          <a href="#" class="px-4 py-2 text-cycle-700 hover:bg-cycle-50 rounded-lg font-medium transition-colors">Service</a>
+          <a href="#" class="px-4 py-2 text-cycle-700 hover:bg-cycle-50 rounded-lg font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="tel:555-0165" class="hidden sm:flex items-center space-x-2 text-cycle-600 font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-5001</span>
+          </a>
+          <button class="bg-cycle-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-cycle-700 transition-colors shadow-md">
+            Book Service
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Road/Performance Cycling - Bold red design -->
+  <nav class="bg-gradient-to-r from-road-800 to-road-700 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-road-600 rounded-full flex items-center justify-center border-2 border-road-400">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white tracking-wide">VELOCITY</span>
+            <span class="block text-xs text-road-300">Performance Cycling</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-road-100 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-road-100 hover:text-white font-medium transition-colors">Road Bikes</a>
+          <a href="#" class="text-road-100 hover:text-white font-medium transition-colors">Components</a>
+          <a href="#" class="text-road-100 hover:text-white font-medium transition-colors">Apparel</a>
+          <a href="#" class="text-road-100 hover:text-white font-medium transition-colors">Team</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-road-600 rounded-full text-road-100 text-sm font-medium">
+            Pro Fitting Available
+          </span>
+          <button class="bg-white text-road-800 px-5 py-2 rounded-lg font-bold hover:bg-road-100 transition-colors">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Mountain Bike Shop - Rugged brown/orange design -->
+  <nav class="bg-mountain-800 shadow-xl rounded-xl border-b-4 border-mountain-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-mountain-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-mountain-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l4 9-4 9M19 3l-4 9 4 9M12 3v18"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">TrailBlaze</span>
+            <span class="block text-xs text-mountain-300">MTB Specialists</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-mountain-200 hover:bg-mountain-700 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-mountain-200 hover:bg-mountain-700 rounded-lg font-medium transition-colors">MTB Bikes</a>
+          <a href="#" class="px-4 py-2 text-mountain-200 hover:bg-mountain-700 rounded-lg font-medium transition-colors">Gear</a>
+          <a href="#" class="px-4 py-2 text-mountain-200 hover:bg-mountain-700 rounded-lg font-medium transition-colors">Trails</a>
+          <a href="#" class="px-4 py-2 text-mountain-200 hover:bg-mountain-700 rounded-lg font-medium transition-colors">Rentals</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-mountain-700 rounded-full text-mountain-300 text-sm">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            </svg>
+            Trail Access
+          </span>
+          <button class="bg-mountain-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-mountain-400 transition-colors">
+            Book Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: E-Bike Specialist - Modern cyan design -->
+  <nav class="bg-white shadow-lg rounded-xl border border-ebike-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-ebike-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-ebike-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-ebike-800">VoltRide</span>
+            <span class="block text-xs text-ebike-500">Electric Bikes</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-ebike-700 hover:bg-ebike-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-ebike-700 hover:bg-ebike-50 rounded-lg font-medium transition-colors">E-Bikes</a>
+          <a href="#" class="px-4 py-2 text-ebike-700 hover:bg-ebike-50 rounded-lg font-medium transition-colors">Compare</a>
+          <a href="#" class="px-4 py-2 text-ebike-700 hover:bg-ebike-50 rounded-lg font-medium transition-colors">Test Rides</a>
+          <a href="#" class="px-4 py-2 text-ebike-700 hover:bg-ebike-50 rounded-lg font-medium transition-colors">Support</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-ebike-100 rounded-full text-ebike-700 text-sm font-medium">
+            <svg class="w-4 h-4 mr-1 text-ebike-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+            </svg>
+            50+ Mile Range
+          </span>
+          <button class="bg-ebike-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-ebike-700 transition-colors">
+            Book Test Ride
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Bike Repair Shop - Professional navy design -->
+  <nav class="bg-repair-800 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-repair-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">FixMyBike</span>
+            <span class="block text-xs text-repair-300">Expert Repairs</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-repair-200 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-repair-200 hover:text-white font-medium transition-colors">Services</a>
+          <a href="#" class="text-repair-200 hover:text-white font-medium transition-colors">Pricing</a>
+          <a href="#" class="text-repair-200 hover:text-white font-medium transition-colors">Parts</a>
+          <a href="#" class="text-repair-200 hover:text-white font-medium transition-colors">Book</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-repair-700 rounded-full">
+            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span class="text-repair-200 text-sm">Same Day Service</span>
+          </div>
+          <button class="bg-white text-repair-800 px-5 py-2 rounded-lg font-bold hover:bg-repair-100 transition-colors">
+            Book Repair
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Vintage/Classic Bikes - Retro brown design -->
+  <nav class="bg-vintage-100 shadow-md rounded-xl border border-vintage-300">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 border-2 border-vintage-600 rounded-full flex items-center justify-center">
+            <span class="text-vintage-700 font-serif text-lg">VB</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-vintage-800" style="font-family: serif;">Vintage Bicycles</span>
+            <span class="block text-xs text-vintage-500">Est. 1985</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-vintage-700 hover:text-vintage-500 font-medium transition-colors">Home</a>
+          <a href="#" class="text-vintage-700 hover:text-vintage-500 font-medium transition-colors">Collection</a>
+          <a href="#" class="text-vintage-700 hover:text-vintage-500 font-medium transition-colors">Restoration</a>
+          <a href="#" class="text-vintage-700 hover:text-vintage-500 font-medium transition-colors">Parts</a>
+          <a href="#" class="text-vintage-700 hover:text-vintage-500 font-medium transition-colors">About</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button class="bg-vintage-700 text-vintage-100 px-5 py-2 rounded-lg font-medium hover:bg-vintage-600 transition-colors">
+            View Collection
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Urban Commuter Shop - Modern purple design -->
+  <nav class="bg-gradient-to-r from-urban-700 to-urban-600 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-urban-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">CityRide</span>
+            <span class="block text-xs text-urban-200">Urban Commuters</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-urban-100 hover:bg-urban-500 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-urban-100 hover:bg-urban-500 rounded-lg font-medium transition-colors">Commuter Bikes</a>
+          <a href="#" class="px-4 py-2 text-urban-100 hover:bg-urban-500 rounded-lg font-medium transition-colors">Accessories</a>
+          <a href="#" class="px-4 py-2 text-urban-100 hover:bg-urban-500 rounded-lg font-medium transition-colors">Locks & Safety</a>
+          <a href="#" class="px-4 py-2 text-urban-100 hover:bg-urban-500 rounded-lg font-medium transition-colors">Service</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-urban-500 rounded-full text-urban-100 text-sm">
+            Free City Delivery
+          </span>
+          <button class="bg-white text-urban-700 px-5 py-2 rounded-lg font-bold hover:bg-urban-100 transition-colors">
+            Shop Commuters
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Kids Bike Shop - Fun blue design -->
+  <nav class="bg-gradient-to-r from-kids-500 to-kids-600 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <svg class="w-7 h-7 text-kids-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">KidsCycle</span>
+            <span class="block text-xs text-kids-100">Fun on Wheels!</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-white hover:bg-kids-400 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-kids-400 rounded-lg font-medium transition-colors">By Age</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-kids-400 rounded-lg font-medium transition-colors">Balance Bikes</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-kids-400 rounded-lg font-medium transition-colors">Safety Gear</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-kids-400 rounded-lg font-medium transition-colors">Find Size</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-kids-400 rounded-full text-white text-sm font-medium">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            Training Wheels Free
+          </span>
+          <button class="bg-white text-kids-700 px-5 py-2 rounded-lg font-bold hover:bg-kids-50 transition-colors shadow-lg">
+            Shop Kids Bikes
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm pt-8">
+    <p>Bicycle Shop/Repair Navigation Templates - 8 Styles</p>
+    <p class="mt-1">Template nav-165 | Tailwind CSS v4</p>
+  </footer>
+
+</body>
+</html>
