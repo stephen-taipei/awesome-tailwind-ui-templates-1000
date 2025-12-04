@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pest Control Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-pest-50: oklch(0.97 0.02 140);
+      --color-pest-100: oklch(0.94 0.04 140);
+      --color-pest-200: oklch(0.88 0.08 140);
+      --color-pest-300: oklch(0.78 0.12 140);
+      --color-pest-400: oklch(0.65 0.14 140);
+      --color-pest-500: oklch(0.52 0.14 140);
+      --color-pest-600: oklch(0.42 0.12 140);
+      --color-pest-700: oklch(0.35 0.10 140);
+      --color-pest-800: oklch(0.28 0.08 140);
+      --color-pest-900: oklch(0.20 0.06 140);
+
+      --color-shield-50: oklch(0.97 0.02 250);
+      --color-shield-100: oklch(0.94 0.04 250);
+      --color-shield-200: oklch(0.88 0.08 250);
+      --color-shield-300: oklch(0.78 0.12 250);
+      --color-shield-400: oklch(0.65 0.14 250);
+      --color-shield-500: oklch(0.52 0.14 250);
+      --color-shield-600: oklch(0.42 0.12 250);
+      --color-shield-700: oklch(0.35 0.10 250);
+      --color-shield-800: oklch(0.28 0.08 250);
+      --color-shield-900: oklch(0.20 0.06 250);
+
+      --color-eco-50: oklch(0.97 0.02 160);
+      --color-eco-100: oklch(0.94 0.04 160);
+      --color-eco-200: oklch(0.88 0.08 160);
+      --color-eco-300: oklch(0.78 0.12 160);
+      --color-eco-400: oklch(0.68 0.14 160);
+      --color-eco-500: oklch(0.55 0.14 160);
+      --color-eco-600: oklch(0.45 0.12 160);
+      --color-eco-700: oklch(0.38 0.10 160);
+      --color-eco-800: oklch(0.30 0.08 160);
+      --color-eco-900: oklch(0.22 0.06 160);
+
+      --color-alert-50: oklch(0.98 0.02 25);
+      --color-alert-100: oklch(0.95 0.04 25);
+      --color-alert-200: oklch(0.90 0.08 25);
+      --color-alert-300: oklch(0.82 0.12 25);
+      --color-alert-400: oklch(0.72 0.16 25);
+      --color-alert-500: oklch(0.60 0.18 25);
+      --color-alert-600: oklch(0.50 0.16 25);
+      --color-alert-700: oklch(0.42 0.14 25);
+      --color-alert-800: oklch(0.34 0.12 25);
+      --color-alert-900: oklch(0.24 0.08 25);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Residential Pest Control - Friendly & Trustworthy -->
+  <nav class="bg-gradient-to-r from-pest-600 to-pest-500 shadow-xl rounded-lg overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-7 h-7 text-pest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">BugShield</span>
+            <p class="text-pest-100 text-xs">Home Pest Protection</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 bg-white/20 text-white rounded-lg font-medium">Services</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Pests</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Plans</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Prevention</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Reviews</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-white text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) BUG-FREE</span>
+          </div>
+          <button class="bg-white text-pest-600 px-5 py-2.5 rounded-lg font-bold hover:bg-pest-50 transition-colors shadow-lg">
+            Free Inspection
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Emergency Pest Control - Urgent & Available -->
+  <nav class="bg-gray-900 shadow-xl">
+    <!-- Emergency Banner -->
+    <div class="bg-alert-600 text-white text-center py-2 text-sm font-bold">
+      <span class="flex items-center justify-center gap-2">
+        <svg class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+        24/7 EMERGENCY PEST REMOVAL - CALL: 1-800-PEST-911
+      </span>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-alert-500 rounded flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-black text-white">RAPID PEST</span>
+            <p class="text-gray-500 text-xs tracking-wider">EMERGENCY SERVICES</p>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="#" class="text-alert-400 font-semibold border-b-2 border-alert-500 pb-1">Emergency</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Bed Bugs</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Rodents</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Wasps</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Areas</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <div class="hidden md:flex items-center space-x-2 px-3 py-1.5 bg-green-900/50 rounded-full">
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span class="text-green-400 text-sm font-medium">Technicians Ready</span>
+          </div>
+          <button class="bg-alert-500 text-white px-6 py-2.5 font-bold hover:bg-alert-600 transition-colors">
+            CALL NOW
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Commercial Pest Control - Professional & Corporate -->
+  <nav class="bg-shield-800 border-b-4 border-shield-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between py-2 border-b border-shield-700 text-sm">
+        <div class="flex items-center space-x-6 text-shield-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            State Certified
+          </span>
+          <span>Serving Businesses Since 1992</span>
+        </div>
+        <div class="flex items-center space-x-4 text-shield-400">
+          <a href="#" class="hover:text-shield-300 transition-colors">Client Portal</a>
+          <a href="#" class="hover:text-shield-300 transition-colors">Resources</a>
+        </div>
+      </div>
+
+      <!-- Main Nav -->
+      <div class="flex items-center justify-between h-18">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-shield-500 rounded flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">COMMERCIAL PEST PRO</span>
+            <p class="text-shield-500 text-xs tracking-wider">BUSINESS PROTECTION</p>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="#" class="text-shield-300 font-semibold border-b-2 border-shield-400 pb-1">Services</a>
+          <a href="#" class="text-shield-400 hover:text-shield-300 font-medium transition-colors">Industries</a>
+          <a href="#" class="text-shield-400 hover:text-shield-300 font-medium transition-colors">Compliance</a>
+          <a href="#" class="text-shield-400 hover:text-shield-300 font-medium transition-colors">Programs</a>
+          <a href="#" class="text-shield-400 hover:text-shield-300 font-medium transition-colors">About</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button class="bg-shield-500 text-white px-6 py-2.5 font-bold hover:bg-shield-600 transition-colors">
+            SCHEDULE AUDIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Eco-Friendly Pest Control - Green & Natural -->
+  <nav class="bg-gradient-to-r from-eco-50 to-eco-100 shadow-md border-b-2 border-eco-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center border-4 border-eco-200">
+            <svg class="w-8 h-8 text-eco-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-eco-800">NaturalGuard</span>
+            <p class="text-eco-600 text-xs font-medium">Eco-Friendly Pest Solutions</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-eco-700 font-semibold flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+            Green Solutions
+          </a>
+          <a href="#" class="text-gray-600 hover:text-eco-600 font-medium transition-colors">Methods</a>
+          <a href="#" class="text-gray-600 hover:text-eco-600 font-medium transition-colors">Pet Safe</a>
+          <a href="#" class="text-gray-600 hover:text-eco-600 font-medium transition-colors">Organic</a>
+          <a href="#" class="text-gray-600 hover:text-eco-600 font-medium transition-colors">FAQ</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-eco-100 rounded-full">
+            <svg class="w-4 h-4 text-eco-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-eco-700 text-sm font-medium">EPA Approved</span>
+          </div>
+          <button class="bg-eco-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-eco-700 transition-colors shadow-md">
+            Go Green Today
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Termite Specialists - Expert & Focused -->
+  <nav class="bg-amber-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-amber-600 rounded-lg flex items-center justify-center border-4 border-amber-500">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black text-white tracking-tight">TERMITE SHIELD</span>
+            <p class="text-amber-300 text-xs tracking-wide">Wood-Destroying Pest Experts</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-amber-300 font-semibold">Inspections</a>
+          <a href="#" class="text-amber-400 hover:text-amber-300 font-medium transition-colors">Treatments</a>
+          <a href="#" class="text-amber-400 hover:text-amber-300 font-medium transition-colors">Prevention</a>
+          <a href="#" class="text-amber-400 hover:text-amber-300 font-medium transition-colors">Warranties</a>
+          <a href="#" class="text-amber-400 hover:text-amber-300 font-medium transition-colors">Real Estate</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-amber-300 text-sm">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>$1M Damage Guarantee</span>
+          </div>
+          <button class="bg-amber-500 text-amber-900 px-5 py-2.5 font-bold hover:bg-amber-400 transition-colors">
+            FREE INSPECTION
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Bed Bug Specialists - Clean & Clinical -->
+  <nav class="bg-white shadow-lg border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900">BedBug<span class="text-red-600">Zero</span></span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-red-600 font-semibold">Heat Treatment</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Detection</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Hotels</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Apartments</a>
+          <a href="#" class="text-gray-600 hover:text-red-600 font-medium transition-colors">Prevention</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-green-50 rounded-full">
+            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-green-700 text-sm font-medium">100% Kill Rate</span>
+          </div>
+          <button class="bg-red-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+            Get Rid of Bed Bugs
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Wildlife Control - Nature & Professional -->
+  <nav class="bg-gradient-to-r from-stone-800 to-stone-700 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Critter Control</span>
+            <p class="text-stone-400 text-xs">Humane Wildlife Removal</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-amber-400 font-semibold">Wildlife Removal</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Raccoons</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Squirrels</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Exclusion</a>
+          <a href="#" class="text-stone-300 hover:text-white font-medium transition-colors">Damage Repair</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-stone-400 text-sm">
+            <svg class="w-5 h-5 text-eco-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            <span>Humane Methods</span>
+          </div>
+          <button class="bg-amber-600 text-white px-5 py-2.5 rounded font-semibold hover:bg-amber-500 transition-colors">
+            Wildlife Help
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Smart Pest Monitoring - Tech & Modern -->
+  <nav class="bg-gradient-to-r from-gray-900 via-pest-900 to-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 bg-gradient-to-br from-pest-400 to-pest-600 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+            </div>
+            <div class="absolute -top-1 -right-1 w-3 h-3 bg-pest-400 rounded-full animate-pulse"></div>
+          </div>
+          <div>
+            <span class="text-lg font-bold text-white">Pest<span class="text-pest-400">IQ</span></span>
+            <p class="text-gray-500 text-xs">Smart Pest Monitoring</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden lg:flex items-center space-x-1 bg-gray-800/50 rounded-full px-2 py-1">
+          <a href="#" class="px-4 py-1.5 bg-pest-600 text-white rounded-full font-medium text-sm">Smart Traps</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Monitoring</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Analytics</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">App</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-400 hover:text-pest-400 font-medium text-sm transition-colors">For Business</a>
+          <a href="#" class="text-gray-400 hover:text-pest-400 font-medium text-sm transition-colors">Login</a>
+          <button class="bg-pest-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-pest-400 transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            Get Protected
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-gray-500 text-sm pb-8">
+    <p>Navigation Template: nav-157 | Pest Control Navigation - 8 Unique Styles</p>
+    <p class="mt-1">Styles: Residential Pest Control, Emergency Pest Control, Commercial Pest Control, Eco-Friendly Pest Control, Termite Specialists, Bed Bug Specialists, Wildlife Control, Smart Pest Monitoring</p>
+  </footer>
+
+</body>
+</html>
