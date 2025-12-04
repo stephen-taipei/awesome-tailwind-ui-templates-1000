@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food & Beverage/Restaurant Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 25);
+      --color-primary-100: oklch(0.93 0.04 25);
+      --color-primary-200: oklch(0.86 0.08 25);
+      --color-primary-300: oklch(0.75 0.14 25);
+      --color-primary-400: oklch(0.65 0.19 25);
+      --color-primary-500: oklch(0.55 0.24 25);
+      --color-primary-600: oklch(0.45 0.22 25);
+      --color-primary-700: oklch(0.35 0.18 25);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Fine Dining Restaurant -->
+  <nav class="bg-slate-900 text-white rounded-none shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-8 py-6">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl font-serif tracking-widest">La Maison</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-12">
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide">Menu</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide">Wine List</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide">Private Dining</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide">Chef's Story</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:555-0123" class="hidden md:flex items-center gap-2 text-amber-400 text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            (555) RESERVE
+          </a>
+          <button class="border border-amber-400 text-amber-400 px-6 py-2.5 font-light tracking-wide hover:bg-amber-400 hover:text-slate-900 transition">
+            Reserve Table
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Fast Casual Restaurant -->
+  <nav class="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <span class="text-2xl">🍔</span>
+          </div>
+          <div>
+            <span class="text-xl font-black">BURGER BARN</span>
+            <span class="block text-xs text-orange-100 font-medium">Smash Burgers & Shakes</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-orange-100 transition font-bold">Menu</a>
+          <a href="#" class="hover:text-orange-100 transition font-bold">Locations</a>
+          <a href="#" class="hover:text-orange-100 transition font-bold">Catering</a>
+          <a href="#" class="hover:text-orange-100 transition font-bold">Rewards</a>
+          <a href="#" class="hover:text-orange-100 transition font-bold">Careers</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block bg-yellow-400 text-red-600 px-4 py-2 rounded-full text-sm font-black animate-pulse">
+            FREE FRIES TODAY!
+          </div>
+          <button class="bg-white text-red-500 px-6 py-2.5 rounded-full font-black hover:bg-red-50 transition">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Coffee Shop -->
+  <nav class="bg-gradient-to-r from-amber-800 to-amber-900 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-amber-800" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M2 21h18v-2H2M20 8h-2V5h2m0-2H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-3h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Roast & Co.</span>
+            <span class="block text-xs text-amber-300">Specialty Coffee</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-amber-200 hover:text-white transition font-medium">Menu</a>
+          <a href="#" class="text-amber-200 hover:text-white transition font-medium">Our Beans</a>
+          <a href="#" class="text-amber-200 hover:text-white transition font-medium">Locations</a>
+          <a href="#" class="text-amber-200 hover:text-white transition font-medium">Subscribe</a>
+          <a href="#" class="text-amber-200 hover:text-white transition font-medium">Shop</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 text-amber-300 text-sm">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+            Order Ahead
+          </div>
+          <button class="bg-amber-100 text-amber-900 px-6 py-2.5 rounded-lg font-bold hover:bg-white transition">
+            Find a Café
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Food Delivery Platform -->
+  <nav class="bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-red-500 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold">FoodDash</span>
+        </div>
+        <div class="hidden lg:flex items-center flex-1 max-w-lg mx-8">
+          <div class="relative w-full">
+            <div class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <input type="text" placeholder="Enter delivery address..." class="w-full bg-gray-100 rounded-full pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hidden md:block text-gray-600 hover:text-pink-500 font-medium">Browse</a>
+          <a href="#" class="hidden md:block text-gray-600 hover:text-pink-500 font-medium">Deals</a>
+          <button class="relative p-2 hover:bg-gray-100 rounded-full">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-pink-500 text-white rounded-full text-xs flex items-center justify-center">2</span>
+          </button>
+          <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white px-5 py-2.5 rounded-full font-bold hover:shadow-lg transition">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Brewery/Craft Beer -->
+  <nav class="bg-gradient-to-r from-amber-700 via-yellow-700 to-amber-700 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 border-2 border-amber-300 rounded-full flex items-center justify-center bg-amber-900">
+            <span class="text-2xl">🍺</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold tracking-wide">IRONSIDE BREWING</span>
+            <span class="block text-xs text-amber-200 tracking-widest">EST. 2015</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-amber-100 hover:text-white transition font-medium">Our Beers</a>
+          <a href="#" class="text-amber-100 hover:text-white transition font-medium">Taproom</a>
+          <a href="#" class="text-amber-100 hover:text-white transition font-medium">Tours</a>
+          <a href="#" class="text-amber-100 hover:text-white transition font-medium">Events</a>
+          <a href="#" class="text-amber-100 hover:text-white transition font-medium">Shop</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block bg-amber-900 text-amber-200 px-4 py-2 rounded text-sm font-medium">
+            21+ Only
+          </div>
+          <button class="bg-amber-300 text-amber-900 px-6 py-2.5 rounded font-bold hover:bg-amber-200 transition">
+            Visit Taproom
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Bakery/Patisserie -->
+  <nav class="bg-gradient-to-r from-pink-50 via-rose-50 to-pink-50 text-gray-900 rounded-3xl shadow-lg border border-pink-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-300 to-rose-400 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🥐</span>
+          </div>
+          <div>
+            <span class="text-xl font-serif text-rose-800">Petit Délice</span>
+            <span class="block text-xs text-rose-500 font-medium">French Patisserie</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Pastries</a>
+          <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Cakes</a>
+          <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Breads</a>
+          <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Catering</a>
+          <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Classes</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block text-sm text-rose-600">
+            Open 7am - 7pm
+          </div>
+          <button class="bg-gradient-to-r from-pink-400 to-rose-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg transition">
+            Order Online
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Sushi/Japanese Restaurant -->
+  <nav class="bg-slate-900 text-white rounded-lg shadow-xl border-b-2 border-red-500">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">桜</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold tracking-wide">SAKURA SUSHI</span>
+            <span class="block text-xs text-red-400 font-medium">Authentic Japanese</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Menu</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Omakase</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Sake Bar</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">About</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Locations</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:block border border-red-500 text-red-400 px-5 py-2.5 font-medium hover:bg-red-500 hover:text-white transition">
+            Order Takeout
+          </button>
+          <button class="bg-red-500 text-white px-5 py-2.5 font-bold hover:bg-red-600 transition">
+            Reserve
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Farm-to-Table Restaurant -->
+  <nav class="bg-gradient-to-r from-green-700 to-emerald-700 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 3.62 13.38 2.5 12 2.5S9.5 3.62 9.5 5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Harvest Table</span>
+            <span class="block text-xs text-green-200">Farm-to-Table Dining</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-green-200 transition font-medium">Seasonal Menu</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">Our Farm</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">Events</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">CSA</a>
+          <a href="#" class="hover:text-green-200 transition font-medium">About</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            100% Local
+          </div>
+          <button class="bg-white text-green-700 px-6 py-2.5 rounded-xl font-bold hover:bg-green-50 transition">
+            Reserve Table
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <div class="text-center py-8 text-gray-500 text-sm">
+    <p>nav-143: Food & Beverage/Restaurant Navigation - 8 Unique Styles</p>
+    <p class="mt-2">Tailwind CSS Navigation Components</p>
+  </div>
+
+</body>
+</html>
