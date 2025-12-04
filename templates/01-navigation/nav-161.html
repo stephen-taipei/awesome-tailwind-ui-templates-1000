@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Detailing/Car Wash Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-shine-50: oklch(0.97 0.02 250);
+      --color-shine-100: oklch(0.93 0.04 250);
+      --color-shine-200: oklch(0.87 0.08 250);
+      --color-shine-300: oklch(0.78 0.12 250);
+      --color-shine-400: oklch(0.67 0.16 250);
+      --color-shine-500: oklch(0.55 0.18 250);
+      --color-shine-600: oklch(0.47 0.16 250);
+      --color-shine-700: oklch(0.40 0.14 250);
+      --color-shine-800: oklch(0.34 0.11 250);
+      --color-shine-900: oklch(0.28 0.08 250);
+      --color-shine-950: oklch(0.18 0.06 250);
+
+      --color-premium-50: oklch(0.97 0.01 60);
+      --color-premium-100: oklch(0.93 0.03 60);
+      --color-premium-200: oklch(0.87 0.06 60);
+      --color-premium-300: oklch(0.78 0.10 60);
+      --color-premium-400: oklch(0.70 0.14 60);
+      --color-premium-500: oklch(0.62 0.14 60);
+      --color-premium-600: oklch(0.52 0.12 60);
+      --color-premium-700: oklch(0.44 0.10 60);
+      --color-premium-800: oklch(0.37 0.08 60);
+      --color-premium-900: oklch(0.30 0.06 60);
+      --color-premium-950: oklch(0.20 0.04 60);
+
+      --color-express-50: oklch(0.97 0.02 145);
+      --color-express-100: oklch(0.93 0.04 145);
+      --color-express-200: oklch(0.87 0.08 145);
+      --color-express-300: oklch(0.78 0.12 145);
+      --color-express-400: oklch(0.67 0.16 145);
+      --color-express-500: oklch(0.55 0.16 145);
+      --color-express-600: oklch(0.47 0.14 145);
+      --color-express-700: oklch(0.40 0.12 145);
+      --color-express-800: oklch(0.34 0.10 145);
+      --color-express-900: oklch(0.28 0.08 145);
+      --color-express-950: oklch(0.18 0.06 145);
+
+      --color-mobile-50: oklch(0.97 0.02 30);
+      --color-mobile-100: oklch(0.92 0.05 30);
+      --color-mobile-200: oklch(0.85 0.10 30);
+      --color-mobile-300: oklch(0.75 0.15 30);
+      --color-mobile-400: oklch(0.65 0.18 30);
+      --color-mobile-500: oklch(0.55 0.18 30);
+      --color-mobile-600: oklch(0.48 0.16 30);
+      --color-mobile-700: oklch(0.42 0.13 30);
+      --color-mobile-800: oklch(0.35 0.10 30);
+      --color-mobile-900: oklch(0.28 0.08 30);
+      --color-mobile-950: oklch(0.18 0.05 30);
+
+      --color-ceramic-50: oklch(0.97 0.01 220);
+      --color-ceramic-100: oklch(0.93 0.02 220);
+      --color-ceramic-200: oklch(0.87 0.04 220);
+      --color-ceramic-300: oklch(0.78 0.07 220);
+      --color-ceramic-400: oklch(0.67 0.11 220);
+      --color-ceramic-500: oklch(0.55 0.13 220);
+      --color-ceramic-600: oklch(0.47 0.12 220);
+      --color-ceramic-700: oklch(0.40 0.10 220);
+      --color-ceramic-800: oklch(0.34 0.08 220);
+      --color-ceramic-900: oklch(0.28 0.06 220);
+      --color-ceramic-950: oklch(0.18 0.04 220);
+
+      --color-eco-50: oklch(0.97 0.02 160);
+      --color-eco-100: oklch(0.93 0.04 160);
+      --color-eco-200: oklch(0.87 0.07 160);
+      --color-eco-300: oklch(0.78 0.11 160);
+      --color-eco-400: oklch(0.67 0.14 160);
+      --color-eco-500: oklch(0.55 0.14 160);
+      --color-eco-600: oklch(0.47 0.12 160);
+      --color-eco-700: oklch(0.40 0.10 160);
+      --color-eco-800: oklch(0.34 0.08 160);
+      --color-eco-900: oklch(0.28 0.06 160);
+      --color-eco-950: oklch(0.18 0.04 160);
+
+      --color-fleet-50: oklch(0.97 0.01 240);
+      --color-fleet-100: oklch(0.93 0.02 240);
+      --color-fleet-200: oklch(0.87 0.04 240);
+      --color-fleet-300: oklch(0.78 0.07 240);
+      --color-fleet-400: oklch(0.67 0.11 240);
+      --color-fleet-500: oklch(0.55 0.14 240);
+      --color-fleet-600: oklch(0.47 0.13 240);
+      --color-fleet-700: oklch(0.40 0.11 240);
+      --color-fleet-800: oklch(0.34 0.09 240);
+      --color-fleet-900: oklch(0.28 0.07 240);
+      --color-fleet-950: oklch(0.18 0.05 240);
+
+      --color-luxury-50: oklch(0.97 0.01 280);
+      --color-luxury-100: oklch(0.93 0.02 280);
+      --color-luxury-200: oklch(0.87 0.04 280);
+      --color-luxury-300: oklch(0.78 0.07 280);
+      --color-luxury-400: oklch(0.67 0.10 280);
+      --color-luxury-500: oklch(0.55 0.12 280);
+      --color-luxury-600: oklch(0.47 0.11 280);
+      --color-luxury-700: oklch(0.40 0.09 280);
+      --color-luxury-800: oklch(0.34 0.07 280);
+      --color-luxury-900: oklch(0.28 0.05 280);
+      --color-luxury-950: oklch(0.18 0.04 280);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Full Service Detailing - Professional shine design -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-shine-500 to-shine-700 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-shine-800">ShineWorks</span>
+            <span class="block text-xs text-shine-500">Professional Detailing</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-shine-700 hover:bg-shine-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-shine-700 hover:bg-shine-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="#" class="px-4 py-2 text-shine-700 hover:bg-shine-50 rounded-lg font-medium transition-colors">Packages</a>
+          <a href="#" class="px-4 py-2 text-shine-700 hover:bg-shine-50 rounded-lg font-medium transition-colors">Gallery</a>
+          <a href="#" class="px-4 py-2 text-shine-700 hover:bg-shine-50 rounded-lg font-medium transition-colors">Reviews</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="tel:555-0161" class="hidden sm:flex items-center space-x-2 text-shine-600 font-semibold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-1001</span>
+          </a>
+          <button class="bg-shine-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-shine-700 transition-colors shadow-md">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Premium Detail Studio - Luxury gold design -->
+  <nav class="bg-gradient-to-r from-gray-900 to-gray-800 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-premium-500 rounded-full flex items-center justify-center border-2 border-premium-300">
+            <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Elite Finish</span>
+            <span class="block text-xs text-premium-400">Premium Auto Spa</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-gray-300 hover:text-premium-400 font-medium transition-colors">Home</a>
+          <a href="#" class="text-gray-300 hover:text-premium-400 font-medium transition-colors">Services</a>
+          <a href="#" class="text-gray-300 hover:text-premium-400 font-medium transition-colors">VIP Packages</a>
+          <a href="#" class="text-gray-300 hover:text-premium-400 font-medium transition-colors">Showroom</a>
+          <a href="#" class="text-gray-300 hover:text-premium-400 font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-gray-700 rounded-full text-premium-400 text-sm font-medium">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/>
+            </svg>
+            Concierge Service
+          </span>
+          <button class="bg-premium-500 text-gray-900 px-5 py-2 rounded-lg font-bold hover:bg-premium-400 transition-colors">
+            Reserve
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Express Car Wash - Fast, efficient green design -->
+  <nav class="bg-express-600 shadow-lg rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-express-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">SpeedWash</span>
+            <span class="block text-xs text-express-100">3-Min Express</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-white hover:bg-express-500 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-express-500 rounded-lg font-medium transition-colors">Wash Menu</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-express-500 rounded-lg font-medium transition-colors">Unlimited Plans</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-express-500 rounded-lg font-medium transition-colors">Locations</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-express-500 rounded-lg font-medium transition-colors">Gift Cards</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-express-500 rounded-full">
+            <svg class="w-4 h-4 text-express-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-express-100 text-sm font-medium">Open 7am-9pm</span>
+          </div>
+          <button class="bg-white text-express-700 px-5 py-2 rounded-lg font-bold hover:bg-express-50 transition-colors">
+            Join Club
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Mobile Detailing - On-the-go orange design -->
+  <nav class="bg-white shadow-lg rounded-xl border-l-4 border-mobile-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-mobile-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-mobile-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-mobile-800">DetailToYou</span>
+            <span class="block text-xs text-mobile-500">Mobile Auto Detailing</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-mobile-700 hover:text-mobile-500 font-medium transition-colors">Home</a>
+          <a href="#" class="text-mobile-700 hover:text-mobile-500 font-medium transition-colors">Services</a>
+          <a href="#" class="text-mobile-700 hover:text-mobile-500 font-medium transition-colors">Service Areas</a>
+          <a href="#" class="text-mobile-700 hover:text-mobile-500 font-medium transition-colors">Pricing</a>
+          <a href="#" class="text-mobile-700 hover:text-mobile-500 font-medium transition-colors">FAQ</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-mobile-100 rounded-full text-mobile-700 text-sm font-medium">
+            <svg class="w-4 h-4 mr-1 text-mobile-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            We Come to You
+          </span>
+          <button class="bg-mobile-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-mobile-600 transition-colors">
+            Get Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Ceramic Coating Specialist - Sleek tech design -->
+  <nav class="bg-gradient-to-r from-ceramic-800 to-ceramic-700 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-ceramic-500 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">CeramiCoat</span>
+            <span class="block text-xs text-ceramic-300">Nano Protection</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-ceramic-100 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-ceramic-100 hover:text-white font-medium transition-colors">Ceramic Coating</a>
+          <a href="#" class="text-ceramic-100 hover:text-white font-medium transition-colors">PPF</a>
+          <a href="#" class="text-ceramic-100 hover:text-white font-medium transition-colors">Window Tint</a>
+          <a href="#" class="text-ceramic-100 hover:text-white font-medium transition-colors">Book</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-ceramic-600 rounded-full">
+            <span class="text-ceramic-200 text-sm">IDA Certified</span>
+          </div>
+          <button class="bg-white text-ceramic-800 px-5 py-2 rounded-lg font-bold hover:bg-ceramic-100 transition-colors">
+            Free Estimate
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Eco-Friendly Car Wash - Green sustainable design -->
+  <nav class="bg-white shadow-md rounded-xl border border-eco-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-eco-100 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-eco-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-eco-800">GreenGleam</span>
+            <span class="block text-xs text-eco-500">Eco-Friendly Wash</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-eco-700 hover:bg-eco-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-eco-700 hover:bg-eco-50 rounded-lg font-medium transition-colors">Services</a>
+          <a href="#" class="px-4 py-2 text-eco-700 hover:bg-eco-50 rounded-lg font-medium transition-colors">Our Mission</a>
+          <a href="#" class="px-4 py-2 text-eco-700 hover:bg-eco-50 rounded-lg font-medium transition-colors">Products</a>
+          <a href="#" class="px-4 py-2 text-eco-700 hover:bg-eco-50 rounded-lg font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-eco-100 rounded-full text-eco-700 text-sm">
+            <svg class="w-4 h-4 mr-1 text-eco-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/>
+            </svg>
+            Waterless Options
+          </span>
+          <button class="bg-eco-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-eco-700 transition-colors">
+            Book Green
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Fleet/Commercial Services - Corporate navy design -->
+  <nav class="bg-fleet-900 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top bar -->
+      <div class="flex justify-between items-center py-2 border-b border-fleet-800 text-sm">
+        <div class="flex items-center space-x-4 text-fleet-300">
+          <span class="flex items-center space-x-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-1007</span>
+          </span>
+          <span class="flex items-center space-x-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>fleet@prodetail.com</span>
+          </span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-fleet-300 hover:text-white transition-colors">Client Portal</a>
+          <a href="#" class="text-fleet-300 hover:text-white transition-colors">Careers</a>
+        </div>
+      </div>
+      <!-- Main nav -->
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-fleet-500 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-white">FleetPro</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-fleet-100 hover:bg-fleet-800 rounded-lg font-medium transition-colors">About</a>
+          <a href="#" class="px-4 py-2 text-fleet-100 hover:bg-fleet-800 rounded-lg font-medium transition-colors">Fleet Services</a>
+          <a href="#" class="px-4 py-2 text-fleet-100 hover:bg-fleet-800 rounded-lg font-medium transition-colors">Industries</a>
+          <a href="#" class="px-4 py-2 text-fleet-100 hover:bg-fleet-800 rounded-lg font-medium transition-colors">Case Studies</a>
+          <a href="#" class="px-4 py-2 text-fleet-100 hover:bg-fleet-800 rounded-lg font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button class="hidden sm:block bg-fleet-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-fleet-600 transition-colors">
+            Request RFP
+          </button>
+          <button class="bg-white text-fleet-900 px-5 py-2 rounded-lg font-bold hover:bg-fleet-100 transition-colors">
+            Get Fleet Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Luxury/Exotic Car Specialist - High-end purple design -->
+  <nav class="bg-gradient-to-r from-luxury-950 via-luxury-900 to-luxury-950 shadow-xl rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-luxury-400 to-luxury-600 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Prestige Detail</span>
+            <span class="block text-xs text-luxury-400">Exotic & Luxury Specialists</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-luxury-200 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-luxury-200 hover:text-white font-medium transition-colors">Concierge</a>
+          <a href="#" class="text-luxury-200 hover:text-white font-medium transition-colors">Services</a>
+          <a href="#" class="text-luxury-200 hover:text-white font-medium transition-colors">Portfolio</a>
+          <a href="#" class="text-luxury-200 hover:text-white font-medium transition-colors">Appointment</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-luxury-800 rounded-full text-luxury-300 text-sm">
+            By Appointment Only
+          </span>
+          <button class="bg-gradient-to-r from-luxury-400 to-luxury-500 text-white px-5 py-2 rounded-lg font-bold hover:from-luxury-500 hover:to-luxury-600 transition-all shadow-lg shadow-luxury-500/30">
+            Private Booking
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm pt-8">
+    <p>Auto Detailing/Car Wash Navigation Templates - 8 Styles</p>
+    <p class="mt-1">Template nav-161 | Tailwind CSS v4</p>
+  </footer>
+
+</body>
+</html>
