@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florist/Flower Shop Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-rose-50: oklch(0.97 0.02 350);
+      --color-rose-100: oklch(0.93 0.04 350);
+      --color-rose-200: oklch(0.87 0.08 350);
+      --color-rose-300: oklch(0.78 0.12 350);
+      --color-rose-400: oklch(0.67 0.16 350);
+      --color-rose-500: oklch(0.55 0.18 350);
+      --color-rose-600: oklch(0.47 0.16 350);
+      --color-rose-700: oklch(0.40 0.14 350);
+      --color-rose-800: oklch(0.34 0.11 350);
+      --color-rose-900: oklch(0.28 0.08 350);
+      --color-rose-950: oklch(0.18 0.06 350);
+
+      --color-garden-50: oklch(0.97 0.02 145);
+      --color-garden-100: oklch(0.93 0.04 145);
+      --color-garden-200: oklch(0.87 0.08 145);
+      --color-garden-300: oklch(0.78 0.12 145);
+      --color-garden-400: oklch(0.67 0.16 145);
+      --color-garden-500: oklch(0.55 0.16 145);
+      --color-garden-600: oklch(0.47 0.14 145);
+      --color-garden-700: oklch(0.40 0.12 145);
+      --color-garden-800: oklch(0.34 0.10 145);
+      --color-garden-900: oklch(0.28 0.08 145);
+      --color-garden-950: oklch(0.18 0.06 145);
+
+      --color-lavender-50: oklch(0.97 0.02 290);
+      --color-lavender-100: oklch(0.93 0.04 290);
+      --color-lavender-200: oklch(0.87 0.08 290);
+      --color-lavender-300: oklch(0.78 0.12 290);
+      --color-lavender-400: oklch(0.67 0.15 290);
+      --color-lavender-500: oklch(0.55 0.16 290);
+      --color-lavender-600: oklch(0.47 0.14 290);
+      --color-lavender-700: oklch(0.40 0.12 290);
+      --color-lavender-800: oklch(0.34 0.10 290);
+      --color-lavender-900: oklch(0.28 0.08 290);
+      --color-lavender-950: oklch(0.18 0.06 290);
+
+      --color-sunflower-50: oklch(0.97 0.03 85);
+      --color-sunflower-100: oklch(0.93 0.06 85);
+      --color-sunflower-200: oklch(0.87 0.12 85);
+      --color-sunflower-300: oklch(0.80 0.16 85);
+      --color-sunflower-400: oklch(0.75 0.18 85);
+      --color-sunflower-500: oklch(0.68 0.18 85);
+      --color-sunflower-600: oklch(0.58 0.16 85);
+      --color-sunflower-700: oklch(0.48 0.13 85);
+      --color-sunflower-800: oklch(0.40 0.10 85);
+      --color-sunflower-900: oklch(0.32 0.08 85);
+      --color-sunflower-950: oklch(0.22 0.05 85);
+
+      --color-orchid-50: oklch(0.97 0.02 320);
+      --color-orchid-100: oklch(0.93 0.05 320);
+      --color-orchid-200: oklch(0.87 0.10 320);
+      --color-orchid-300: oklch(0.78 0.15 320);
+      --color-orchid-400: oklch(0.67 0.18 320);
+      --color-orchid-500: oklch(0.55 0.20 320);
+      --color-orchid-600: oklch(0.48 0.18 320);
+      --color-orchid-700: oklch(0.42 0.15 320);
+      --color-orchid-800: oklch(0.35 0.12 320);
+      --color-orchid-900: oklch(0.28 0.09 320);
+      --color-orchid-950: oklch(0.18 0.06 320);
+
+      --color-succulent-50: oklch(0.97 0.02 170);
+      --color-succulent-100: oklch(0.93 0.04 170);
+      --color-succulent-200: oklch(0.87 0.07 170);
+      --color-succulent-300: oklch(0.78 0.11 170);
+      --color-succulent-400: oklch(0.67 0.14 170);
+      --color-succulent-500: oklch(0.55 0.14 170);
+      --color-succulent-600: oklch(0.47 0.12 170);
+      --color-succulent-700: oklch(0.40 0.10 170);
+      --color-succulent-800: oklch(0.34 0.08 170);
+      --color-succulent-900: oklch(0.28 0.06 170);
+      --color-succulent-950: oklch(0.18 0.04 170);
+
+      --color-wedding-50: oklch(0.98 0.01 30);
+      --color-wedding-100: oklch(0.95 0.02 30);
+      --color-wedding-200: oklch(0.90 0.03 30);
+      --color-wedding-300: oklch(0.85 0.05 30);
+      --color-wedding-400: oklch(0.78 0.06 30);
+      --color-wedding-500: oklch(0.70 0.07 30);
+      --color-wedding-600: oklch(0.60 0.06 30);
+      --color-wedding-700: oklch(0.50 0.05 30);
+      --color-wedding-800: oklch(0.40 0.04 30);
+      --color-wedding-900: oklch(0.30 0.03 30);
+      --color-wedding-950: oklch(0.20 0.02 30);
+
+      --color-tropical-50: oklch(0.97 0.02 30);
+      --color-tropical-100: oklch(0.92 0.05 30);
+      --color-tropical-200: oklch(0.85 0.10 30);
+      --color-tropical-300: oklch(0.75 0.15 30);
+      --color-tropical-400: oklch(0.65 0.18 30);
+      --color-tropical-500: oklch(0.55 0.18 30);
+      --color-tropical-600: oklch(0.48 0.16 30);
+      --color-tropical-700: oklch(0.42 0.13 30);
+      --color-tropical-800: oklch(0.35 0.10 30);
+      --color-tropical-900: oklch(0.28 0.08 30);
+      --color-tropical-950: oklch(0.18 0.05 30);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Classic Rose Florist - Romantic pink design -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-rose-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-rose-800" style="font-family: serif;">Petal & Bloom</span>
+            <span class="block text-xs text-rose-500">Fine Floristry</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-rose-700 hover:bg-rose-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-rose-700 hover:bg-rose-50 rounded-lg font-medium transition-colors">Shop</a>
+          <a href="#" class="px-4 py-2 text-rose-700 hover:bg-rose-50 rounded-lg font-medium transition-colors">Occasions</a>
+          <a href="#" class="px-4 py-2 text-rose-700 hover:bg-rose-50 rounded-lg font-medium transition-colors">Subscriptions</a>
+          <a href="#" class="px-4 py-2 text-rose-700 hover:bg-rose-50 rounded-lg font-medium transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="tel:555-0164" class="hidden sm:flex items-center space-x-2 text-rose-600 font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-4001</span>
+          </a>
+          <button class="bg-rose-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-rose-600 transition-colors shadow-md">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Garden Center/Nursery - Fresh green design -->
+  <nav class="bg-gradient-to-r from-garden-700 to-garden-600 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-garden-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">GreenThumb</span>
+            <span class="block text-xs text-garden-200">Garden Center</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-garden-100 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-garden-100 hover:text-white font-medium transition-colors">Plants</a>
+          <a href="#" class="text-garden-100 hover:text-white font-medium transition-colors">Garden Supplies</a>
+          <a href="#" class="text-garden-100 hover:text-white font-medium transition-colors">Workshops</a>
+          <a href="#" class="text-garden-100 hover:text-white font-medium transition-colors">Visit</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-garden-600 rounded-full text-garden-100 text-sm">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Open 8am-6pm
+          </span>
+          <button class="bg-white text-garden-700 px-5 py-2 rounded-lg font-bold hover:bg-garden-100 transition-colors">
+            Shop Plants
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Luxury Floral Boutique - Elegant lavender design -->
+  <nav class="bg-white shadow-md rounded-xl border border-lavender-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 border-2 border-lavender-400 rounded-full flex items-center justify-center">
+            <span class="text-lavender-600 font-serif text-lg">LF</span>
+          </div>
+          <div>
+            <span class="text-xl font-light text-lavender-900 tracking-widest">LAVANDE</span>
+            <span class="block text-xs text-lavender-500 tracking-wider">FLORAL ATELIER</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-lavender-600 hover:text-lavender-800 font-light tracking-wide transition-colors">Home</a>
+          <a href="#" class="text-lavender-600 hover:text-lavender-800 font-light tracking-wide transition-colors">Collections</a>
+          <a href="#" class="text-lavender-600 hover:text-lavender-800 font-light tracking-wide transition-colors">Bespoke</a>
+          <a href="#" class="text-lavender-600 hover:text-lavender-800 font-light tracking-wide transition-colors">Events</a>
+          <a href="#" class="text-lavender-600 hover:text-lavender-800 font-light tracking-wide transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button class="border-2 border-lavender-500 text-lavender-600 px-5 py-2 font-light tracking-wide hover:bg-lavender-500 hover:text-white transition-all">
+            Inquire
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Cheerful Sunflower Shop - Bright yellow design -->
+  <nav class="bg-sunflower-400 shadow-lg rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-sunflower-600 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-sunflower-100" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-sunflower-900">Sunny Blooms</span>
+            <span class="block text-xs text-sunflower-700">Happiness Delivered</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-sunflower-900 hover:bg-sunflower-300 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-sunflower-900 hover:bg-sunflower-300 rounded-lg font-medium transition-colors">Bouquets</a>
+          <a href="#" class="px-4 py-2 text-sunflower-900 hover:bg-sunflower-300 rounded-lg font-medium transition-colors">Same Day</a>
+          <a href="#" class="px-4 py-2 text-sunflower-900 hover:bg-sunflower-300 rounded-lg font-medium transition-colors">Gifts</a>
+          <a href="#" class="px-4 py-2 text-sunflower-900 hover:bg-sunflower-300 rounded-lg font-medium transition-colors">About</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-sunflower-500 rounded-full text-sunflower-900 text-sm font-medium">
+            Free Delivery $50+
+          </span>
+          <button class="bg-sunflower-900 text-sunflower-100 px-5 py-2 rounded-lg font-bold hover:bg-sunflower-800 transition-colors">
+            Send Flowers
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Exotic Orchid Specialist - Elegant magenta design -->
+  <nav class="bg-gradient-to-r from-orchid-900 via-orchid-800 to-orchid-900 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-orchid-400 to-orchid-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Orchid Elite</span>
+            <span class="block text-xs text-orchid-300">Exotic Specialists</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-orchid-200 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-orchid-200 hover:text-white font-medium transition-colors">Orchid Gallery</a>
+          <a href="#" class="text-orchid-200 hover:text-white font-medium transition-colors">Care Guide</a>
+          <a href="#" class="text-orchid-200 hover:text-white font-medium transition-colors">Rare Species</a>
+          <a href="#" class="text-orchid-200 hover:text-white font-medium transition-colors">Shop</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-orchid-700 rounded-full">
+            <span class="text-orchid-200 text-sm">Premium Collection</span>
+          </div>
+          <button class="bg-gradient-to-r from-orchid-400 to-orchid-500 text-white px-5 py-2 rounded-lg font-bold hover:from-orchid-500 hover:to-orchid-600 transition-all shadow-lg shadow-orchid-500/30">
+            Browse Orchids
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Modern Succulent & Plant Shop - Teal minimalist design -->
+  <nav class="bg-white shadow-md rounded-xl border-l-4 border-succulent-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-succulent-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-succulent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-succulent-800">Plantopia</span>
+            <span class="block text-xs text-succulent-500">Succulents & More</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-succulent-700 hover:text-succulent-500 font-medium transition-colors">Home</a>
+          <a href="#" class="text-succulent-700 hover:text-succulent-500 font-medium transition-colors">Succulents</a>
+          <a href="#" class="text-succulent-700 hover:text-succulent-500 font-medium transition-colors">Houseplants</a>
+          <a href="#" class="text-succulent-700 hover:text-succulent-500 font-medium transition-colors">Pots & Planters</a>
+          <a href="#" class="text-succulent-700 hover:text-succulent-500 font-medium transition-colors">Care Tips</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-succulent-100 rounded-full text-succulent-700 text-sm font-medium">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Plant Care Included
+          </span>
+          <button class="bg-succulent-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-succulent-700 transition-colors">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Wedding & Event Florist - Elegant cream/blush design -->
+  <nav class="bg-wedding-50 shadow-md rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 border border-wedding-400 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-wedding-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-light text-wedding-800 tracking-wide" style="font-family: serif;">Everlasting</span>
+            <span class="block text-xs text-wedding-500 tracking-wider">Wedding Florals</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-wedding-700 hover:text-wedding-500 font-light transition-colors">Home</a>
+          <a href="#" class="text-wedding-700 hover:text-wedding-500 font-light transition-colors">Portfolio</a>
+          <a href="#" class="text-wedding-700 hover:text-wedding-500 font-light transition-colors">Services</a>
+          <a href="#" class="text-wedding-700 hover:text-wedding-500 font-light transition-colors">Testimonials</a>
+          <a href="#" class="text-wedding-700 hover:text-wedding-500 font-light transition-colors">Inquire</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 text-wedding-600 text-sm">
+            As Seen In Vogue
+          </span>
+          <button class="bg-wedding-700 text-white px-5 py-2 rounded-full font-medium hover:bg-wedding-600 transition-colors">
+            Request Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Tropical Flower Market - Vibrant coral design -->
+  <nav class="bg-gradient-to-r from-tropical-500 to-tropical-600 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-tropical-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Tropicana</span>
+            <span class="block text-xs text-tropical-100">Exotic Flower Market</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-white hover:bg-tropical-400 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-tropical-400 rounded-lg font-medium transition-colors">Tropical Flowers</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-tropical-400 rounded-lg font-medium transition-colors">Leis & Garlands</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-tropical-400 rounded-lg font-medium transition-colors">Events</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-tropical-400 rounded-lg font-medium transition-colors">Delivery</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-tropical-400 rounded-full text-white text-sm font-medium">
+            Fresh Daily
+          </span>
+          <button class="bg-white text-tropical-600 px-5 py-2 rounded-lg font-bold hover:bg-tropical-50 transition-colors">
+            Order Tropicals
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm pt-8">
+    <p>Florist/Flower Shop Navigation Templates - 8 Styles</p>
+    <p class="mt-1">Template nav-164 | Tailwind CSS v4</p>
+  </footer>
+
+</body>
+</html>
