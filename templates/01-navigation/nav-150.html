@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agriculture/Farming Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-farm-50: oklch(0.98 0.02 130);
+      --color-farm-100: oklch(0.95 0.04 130);
+      --color-farm-200: oklch(0.90 0.08 130);
+      --color-farm-300: oklch(0.82 0.12 130);
+      --color-farm-400: oklch(0.70 0.14 130);
+      --color-farm-500: oklch(0.58 0.14 130);
+      --color-farm-600: oklch(0.48 0.12 130);
+      --color-farm-700: oklch(0.40 0.10 130);
+      --color-farm-800: oklch(0.32 0.08 130);
+      --color-farm-900: oklch(0.22 0.06 130);
+
+      --color-earth-50: oklch(0.97 0.01 60);
+      --color-earth-100: oklch(0.94 0.02 60);
+      --color-earth-200: oklch(0.88 0.04 60);
+      --color-earth-300: oklch(0.78 0.06 60);
+      --color-earth-400: oklch(0.65 0.08 60);
+      --color-earth-500: oklch(0.52 0.08 60);
+      --color-earth-600: oklch(0.42 0.06 60);
+      --color-earth-700: oklch(0.35 0.05 60);
+      --color-earth-800: oklch(0.28 0.04 60);
+      --color-earth-900: oklch(0.20 0.03 60);
+
+      --color-harvest-50: oklch(0.98 0.02 85);
+      --color-harvest-100: oklch(0.95 0.04 85);
+      --color-harvest-200: oklch(0.90 0.08 85);
+      --color-harvest-300: oklch(0.82 0.12 85);
+      --color-harvest-400: oklch(0.72 0.14 85);
+      --color-harvest-500: oklch(0.62 0.14 85);
+      --color-harvest-600: oklch(0.52 0.12 85);
+      --color-harvest-700: oklch(0.42 0.10 85);
+      --color-harvest-800: oklch(0.35 0.08 85);
+      --color-harvest-900: oklch(0.25 0.06 85);
+
+      --color-sky-50: oklch(0.97 0.02 220);
+      --color-sky-100: oklch(0.94 0.04 220);
+      --color-sky-200: oklch(0.88 0.08 220);
+      --color-sky-300: oklch(0.78 0.12 220);
+      --color-sky-400: oklch(0.68 0.14 220);
+      --color-sky-500: oklch(0.55 0.14 220);
+      --color-sky-600: oklch(0.45 0.12 220);
+      --color-sky-700: oklch(0.38 0.10 220);
+      --color-sky-800: oklch(0.30 0.08 220);
+      --color-sky-900: oklch(0.22 0.06 220);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Family Farm - Rustic & Authentic -->
+  <nav class="bg-earth-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-harvest-500 rounded-full flex items-center justify-center border-4 border-earth-600">
+            <svg class="w-8 h-8 text-earth-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold text-white font-serif">Heritage Acres</span>
+            <p class="text-earth-400 text-xs">Family Farm Since 1952</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-harvest-400 font-semibold">Our Story</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">Fresh Produce</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">Farm Stand</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">CSA Program</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">Visit Us</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-earth-400 text-sm">
+            <svg class="w-5 h-5 text-harvest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Open Sat-Sun 9am-5pm</span>
+          </div>
+          <button class="bg-harvest-500 text-earth-900 px-5 py-2.5 rounded font-bold hover:bg-harvest-400 transition-colors">
+            Shop Online
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Organic Farm - Clean & Natural -->
+  <nav class="bg-white border-b-2 border-farm-500 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-farm-100 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-farm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-900">Pure Roots</span>
+            <div class="flex items-center space-x-1">
+              <span class="text-xs text-farm-600 font-medium">Certified Organic</span>
+              <svg class="w-3 h-3 text-farm-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 bg-farm-50 text-farm-700 rounded-full font-medium text-sm">Products</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-farm-50 rounded-full font-medium text-sm transition-colors">Practices</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-farm-50 rounded-full font-medium text-sm transition-colors">Farmers Market</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-farm-50 rounded-full font-medium text-sm transition-colors">Wholesale</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-farm-50 rounded-full font-medium text-sm transition-colors">About</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-500 hover:text-farm-600 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+          </a>
+          <button class="bg-farm-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-farm-700 transition-colors">
+            Join CSA
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Agricultural Equipment - Industrial & Professional -->
+  <nav class="bg-gray-900 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between py-2 border-b border-gray-700 text-sm">
+        <div class="flex items-center space-x-6 text-gray-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            1-800-AG-EQUIP
+          </span>
+          <span>Financing Available</span>
+        </div>
+        <div class="flex items-center space-x-4 text-gray-400">
+          <a href="#" class="hover:text-farm-400 transition-colors">Parts</a>
+          <a href="#" class="hover:text-farm-400 transition-colors">Service</a>
+          <a href="#" class="hover:text-farm-400 transition-colors">Dealer Locator</a>
+        </div>
+      </div>
+
+      <!-- Main Nav -->
+      <div class="flex items-center justify-between h-18">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-farm-500 rounded flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-black text-white">AGRIFORCE</span>
+            <p class="text-gray-500 text-xs">Agricultural Equipment</p>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="#" class="text-farm-400 font-semibold border-b-2 border-farm-500 pb-1">Tractors</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Harvesters</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Implements</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Precision Ag</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Used Equipment</a>
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <button class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+          <button class="bg-farm-500 text-white px-5 py-2.5 font-bold hover:bg-farm-600 transition-colors">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Vineyard/Winery - Elegant & Refined -->
+  <nav class="bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 border-2 border-amber-400 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-serif text-white tracking-wide">Château Lumière</span>
+            <p class="text-purple-300 text-xs tracking-widest">ESTATE VINEYARD</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-amber-400 font-medium">Our Wines</a>
+          <a href="#" class="text-purple-200 hover:text-amber-400 font-medium transition-colors">The Vineyard</a>
+          <a href="#" class="text-purple-200 hover:text-amber-400 font-medium transition-colors">Tastings</a>
+          <a href="#" class="text-purple-200 hover:text-amber-400 font-medium transition-colors">Events</a>
+          <a href="#" class="text-purple-200 hover:text-amber-400 font-medium transition-colors">Wine Club</a>
+          <a href="#" class="text-purple-200 hover:text-amber-400 font-medium transition-colors">Visit</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-purple-300 hover:text-amber-400 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+          </a>
+          <button class="border-2 border-amber-400 text-amber-400 px-5 py-2 font-medium hover:bg-amber-400 hover:text-purple-900 transition-all">
+            Reserve Tasting
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Seed/Supply Company - Modern & Tech-Forward -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-farm-500 to-farm-700 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Seed<span class="text-farm-600">Tech</span></span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden lg:flex items-center space-x-6">
+          <div class="relative group">
+            <a href="#" class="text-farm-600 font-semibold flex items-center gap-1">
+              Products
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+          </div>
+          <a href="#" class="text-gray-600 hover:text-farm-600 font-medium transition-colors">Research</a>
+          <a href="#" class="text-gray-600 hover:text-farm-600 font-medium transition-colors">Agronomy</a>
+          <a href="#" class="text-gray-600 hover:text-farm-600 font-medium transition-colors">Digital Tools</a>
+          <a href="#" class="text-gray-600 hover:text-farm-600 font-medium transition-colors">Find Dealer</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden md:flex items-center space-x-2 bg-gray-100 rounded-lg px-3 py-2">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Search products..." class="bg-transparent text-sm w-40 focus:outline-none">
+          </div>
+          <a href="#" class="text-gray-600 hover:text-farm-600 font-medium transition-colors">Login</a>
+          <button class="bg-farm-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-farm-700 transition-colors">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Dairy Farm - Wholesome & Fresh -->
+  <nav class="bg-gradient-to-r from-sky-100 to-sky-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center border-4 border-sky-200">
+            <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-sky-800">Meadowbrook</span>
+            <p class="text-sky-600 text-xs font-medium">Fresh Dairy Since 1968</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-sky-700 font-semibold">Products</a>
+          <a href="#" class="text-gray-600 hover:text-sky-600 font-medium transition-colors">Our Farm</a>
+          <a href="#" class="text-gray-600 hover:text-sky-600 font-medium transition-colors">Quality</a>
+          <a href="#" class="text-gray-600 hover:text-sky-600 font-medium transition-colors">Recipes</a>
+          <a href="#" class="text-gray-600 hover:text-sky-600 font-medium transition-colors">Where to Buy</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-white rounded-full shadow-sm">
+            <svg class="w-4 h-4 text-farm-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-farm-700 text-sm font-medium">100% Grass-Fed</span>
+          </div>
+          <button class="bg-sky-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-sky-700 transition-colors shadow-md">
+            Store Locator
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Ranch/Livestock - Western & Traditional -->
+  <nav class="bg-earth-900 border-b-4 border-earth-600">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <div class="w-16 h-16 border-4 border-harvest-500 rounded-full flex items-center justify-center">
+              <svg class="w-10 h-10 text-harvest-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="text-2xl font-bold text-white tracking-wide" style="font-family: serif;">IRON CREEK</span>
+            <p class="text-earth-400 text-xs tracking-widest">CATTLE RANCH • EST. 1889</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-harvest-400 font-medium">Our Beef</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">The Ranch</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">Breeding</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">Sustainability</a>
+          <a href="#" class="text-earth-300 hover:text-harvest-400 font-medium transition-colors">Contact</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="border-2 border-harvest-500 text-harvest-500 px-5 py-2.5 font-bold hover:bg-harvest-500 hover:text-earth-900 transition-all">
+            ORDER BEEF
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: AgTech/Smart Farming - High-Tech & Innovative -->
+  <nav class="bg-gradient-to-r from-gray-900 via-farm-900 to-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 bg-gradient-to-br from-farm-400 to-farm-600 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+            </div>
+            <div class="absolute -top-1 -right-1 w-3 h-3 bg-farm-400 rounded-full animate-pulse"></div>
+          </div>
+          <div>
+            <span class="text-lg font-bold text-white">Agri<span class="text-farm-400">Sense</span></span>
+            <p class="text-gray-500 text-xs">Precision Agriculture</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden lg:flex items-center space-x-1 bg-gray-800/50 rounded-full px-2 py-1">
+          <a href="#" class="px-4 py-1.5 bg-farm-600 text-white rounded-full font-medium text-sm">Platform</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Sensors</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Analytics</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">Drones</a>
+          <a href="#" class="px-4 py-1.5 text-gray-400 hover:text-white font-medium text-sm transition-colors">API</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-400 hover:text-farm-400 font-medium text-sm transition-colors">Documentation</a>
+          <a href="#" class="text-gray-400 hover:text-farm-400 font-medium text-sm transition-colors">Login</a>
+          <button class="bg-farm-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-farm-400 transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Start Free Trial
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-gray-500 text-sm pb-8">
+    <p>Navigation Template: nav-150 | Agriculture/Farming Navigation - 8 Unique Styles</p>
+    <p class="mt-1">Styles: Family Farm, Organic Farm, Agricultural Equipment, Vineyard/Winery, Seed/Supply Company, Dairy Farm, Ranch/Livestock, AgTech/Smart Farming</p>
+  </footer>
+
+</body>
+</html>
