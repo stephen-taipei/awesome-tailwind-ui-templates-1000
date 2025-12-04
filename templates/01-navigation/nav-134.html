@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive/Car Dealership Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.01 250);
+      --color-primary-100: oklch(0.93 0.02 250);
+      --color-primary-200: oklch(0.86 0.04 250);
+      --color-primary-300: oklch(0.75 0.08 250);
+      --color-primary-400: oklch(0.65 0.12 250);
+      --color-primary-500: oklch(0.55 0.15 250);
+      --color-primary-600: oklch(0.45 0.14 250);
+      --color-primary-700: oklch(0.35 0.12 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Luxury Car Dealership -->
+  <nav class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white rounded-none shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <!-- Top bar -->
+      <div class="border-b border-slate-700/50 px-6 py-2">
+        <div class="flex items-center justify-between text-xs">
+          <div class="flex items-center gap-6">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              (888) 555-AUTO
+            </span>
+            <span class="hidden md:flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              123 Motor Mile, Beverly Hills, CA
+            </span>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-amber-400 font-medium">Open Today: 9AM - 8PM</span>
+          </div>
+        </div>
+      </div>
+      <!-- Main nav -->
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
+            <svg class="w-8 h-8 text-slate-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold tracking-tight">PRESTIGE MOTORS</span>
+            <span class="block text-xs text-amber-400 tracking-widest">LUXURY AUTOMOBILES</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-amber-400 transition font-medium">New Inventory</a>
+          <a href="#" class="hover:text-amber-400 transition font-medium">Pre-Owned</a>
+          <a href="#" class="hover:text-amber-400 transition font-medium">Specials</a>
+          <a href="#" class="hover:text-amber-400 transition font-medium">Service</a>
+          <a href="#" class="hover:text-amber-400 transition font-medium">Finance</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:flex items-center gap-2 border border-amber-400 text-amber-400 px-5 py-2.5 rounded font-medium hover:bg-amber-400 hover:text-slate-900 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            Schedule Test Drive
+          </button>
+          <button class="lg:hidden p-2 hover:bg-slate-700 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Modern Electric Vehicle -->
+  <nav class="bg-white text-gray-900 rounded-2xl shadow-xl border border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 20l4-4H5l6-10v8h6L11 4v8H5l6 8z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-900">ELECTRA</span>
+            <span class="block text-xs text-green-600 font-medium">ELECTRIC MOBILITY</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Models</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Charging</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Sustainability</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Experience</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Support</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            Zero Emissions
+          </div>
+          <button class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-2.5 rounded-xl font-bold hover:shadow-lg transition">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Classic/Vintage Car Dealer -->
+  <nav class="bg-gradient-to-b from-red-800 to-red-900 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-5">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 border-2 border-amber-300 rounded-full flex items-center justify-center bg-red-950">
+            <svg class="w-9 h-9 text-amber-300" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-serif font-bold tracking-wide">Heritage Motors</span>
+            <span class="block text-xs text-amber-300 tracking-widest uppercase">Est. 1952</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-red-100 hover:text-amber-300 transition font-medium">Collection</a>
+          <a href="#" class="text-red-100 hover:text-amber-300 transition font-medium">Restoration</a>
+          <a href="#" class="text-red-100 hover:text-amber-300 transition font-medium">Consignment</a>
+          <a href="#" class="text-red-100 hover:text-amber-300 transition font-medium">Auctions</a>
+          <a href="#" class="text-red-100 hover:text-amber-300 transition font-medium">About</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:flex items-center gap-2 bg-amber-400 text-red-900 px-5 py-2.5 rounded font-bold hover:bg-amber-300 transition">
+            View Collection
+          </button>
+          <button class="lg:hidden p-2 hover:bg-red-700 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Budget-Friendly Used Cars -->
+  <nav class="bg-blue-600 text-white rounded-xl shadow-lg">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">VALUE AUTO</span>
+            <span class="block text-xs text-blue-200">Quality Cars, Great Prices</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-yellow-300 transition font-medium">Browse Cars</a>
+          <a href="#" class="hover:text-yellow-300 transition font-medium">Under $15K</a>
+          <a href="#" class="hover:text-yellow-300 transition font-medium">Financing</a>
+          <a href="#" class="hover:text-yellow-300 transition font-medium">Trade-In</a>
+          <a href="#" class="hover:text-yellow-300 transition font-medium">Reviews</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block bg-yellow-400 text-blue-800 px-4 py-2 rounded-lg text-sm font-bold animate-pulse">
+            $0 Down Payment!
+          </div>
+          <button class="bg-white text-blue-600 px-5 py-2.5 rounded-lg font-bold hover:bg-blue-50 transition">
+            Get Pre-Approved
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Sports/Performance Cars -->
+  <nav class="bg-black text-white rounded-none shadow-2xl border-b-4 border-red-600">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-red-600 rounded-lg flex items-center justify-center transform -skew-x-6">
+            <svg class="w-8 h-8 text-white transform skew-x-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M21 11c0-4.97-4.03-9-9-9s-9 4.03-9 9c0 1.5.37 2.91 1.02 4.16L12 22l7.98-6.84c.65-1.25 1.02-2.66 1.02-4.16zM12 4c3.86 0 7 3.14 7 7 0 1.11-.26 2.16-.73 3.09L12 19.2l-6.27-5.11C5.26 13.16 5 12.11 5 11c0-3.86 3.14-7 7-7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black tracking-tight italic">APEX PERFORMANCE</span>
+            <span class="block text-xs text-red-500 font-bold tracking-widest">EXOTIC & SPORTS CARS</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-300 hover:text-red-500 transition font-bold uppercase text-sm">Exotics</a>
+          <a href="#" class="text-gray-300 hover:text-red-500 transition font-bold uppercase text-sm">Supercars</a>
+          <a href="#" class="text-gray-300 hover:text-red-500 transition font-bold uppercase text-sm">Tuning</a>
+          <a href="#" class="text-gray-300 hover:text-red-500 transition font-bold uppercase text-sm">Track Days</a>
+          <a href="#" class="text-gray-300 hover:text-red-500 transition font-bold uppercase text-sm">Gallery</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="bg-red-600 text-white px-6 py-3 font-black uppercase text-sm hover:bg-red-700 transition transform hover:scale-105">
+            Explore Fleet
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Family/SUV Dealership -->
+  <nav class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Family First Auto</span>
+            <span class="block text-xs text-emerald-100">SUVs & Family Vehicles</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-emerald-200 transition font-medium">SUVs</a>
+          <a href="#" class="hover:text-emerald-200 transition font-medium">Minivans</a>
+          <a href="#" class="hover:text-emerald-200 transition font-medium">Safety Ratings</a>
+          <a href="#" class="hover:text-emerald-200 transition font-medium">Family Plans</a>
+          <a href="#" class="hover:text-emerald-200 transition font-medium">Trade-In</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            5-Star Safety
+          </div>
+          <button class="bg-white text-emerald-600 px-5 py-2.5 rounded-xl font-bold hover:bg-emerald-50 transition">
+            Find Your SUV
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Truck & Commercial Vehicles -->
+  <nav class="bg-slate-800 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">IRONHORSE TRUCKS</span>
+            <span class="block text-xs text-orange-400 font-medium">Commercial & Fleet Vehicles</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-medium">Pickup Trucks</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-medium">Commercial</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-medium">Fleet Sales</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-medium">Service</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-medium">Parts</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:flex items-center gap-2 border border-orange-500 text-orange-400 px-5 py-2.5 rounded font-medium hover:bg-orange-500 hover:text-white transition">
+            Fleet Quote
+          </button>
+          <button class="bg-orange-500 text-white px-5 py-2.5 rounded font-bold hover:bg-orange-600 transition">
+            Shop Trucks
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Motorcycle Dealership -->
+  <nav class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white rounded-none shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <svg class="w-12 h-12 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.44 9.03L15.41 5H11v2h3.59l2 2H5c-2.8 0-5 2.2-5 5s2.2 5 5 5c2.46 0 4.45-1.69 4.9-4h1.65l2.77-2.77c-.21.54-.32 1.14-.32 1.77 0 2.8 2.2 5 5 5s5-2.2 5-5c0-2.65-1.97-4.77-4.56-4.97zM7.82 15C7.4 16.15 6.28 17 5 17c-1.63 0-3-1.37-3-3s1.37-3 3-3c1.28 0 2.4.85 2.82 2H5v2h2.82zM19 17c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black tracking-tight">THUNDER ROAD</span>
+            <span class="block text-xs text-orange-400 font-bold tracking-widest">MOTORCYCLES & GEAR</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-bold">Bikes</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-bold">Cruisers</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-bold">Sport Bikes</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-bold">Gear</a>
+          <a href="#" class="text-gray-300 hover:text-orange-400 transition font-bold">Events</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 text-sm text-gray-400">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Ride Season Open
+          </div>
+          <button class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2.5 rounded font-black hover:from-orange-600 hover:to-red-600 transition">
+            Find Your Ride
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <div class="text-center py-8 text-gray-500 text-sm">
+    <p>nav-134: Automotive/Car Dealership Navigation - 8 Unique Styles</p>
+    <p class="mt-2">Tailwind CSS Navigation Components</p>
+  </div>
+
+</body>
+</html>
