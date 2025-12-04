@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music/Entertainment Industry Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 320);
+      --color-primary-100: oklch(0.93 0.04 320);
+      --color-primary-200: oklch(0.86 0.08 320);
+      --color-primary-300: oklch(0.75 0.14 320);
+      --color-primary-400: oklch(0.65 0.19 320);
+      --color-primary-500: oklch(0.55 0.24 320);
+      --color-primary-600: oklch(0.45 0.22 320);
+      --color-primary-700: oklch(0.35 0.18 320);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Music Streaming Platform -->
+  <nav class="bg-gradient-to-r from-purple-900 via-violet-900 to-purple-900 text-white rounded-2xl shadow-2xl overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold">Soundwave</span>
+            <span class="block text-xs text-purple-300">Stream Unlimited</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-purple-200 hover:text-white transition font-medium">Browse</a>
+          <a href="#" class="text-purple-200 hover:text-white transition font-medium">Playlists</a>
+          <a href="#" class="text-purple-200 hover:text-white transition font-medium">Artists</a>
+          <a href="#" class="text-purple-200 hover:text-white transition font-medium">Podcasts</a>
+          <a href="#" class="text-purple-200 hover:text-white transition font-medium">Radio</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full">
+            <svg class="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" placeholder="Search songs, artists..." class="bg-transparent text-sm text-white placeholder-purple-300 focus:outline-none w-40"/>
+          </div>
+          <button class="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition">
+            Go Premium
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Concert/Live Events -->
+  <nav class="bg-black text-white rounded-none shadow-2xl border-b border-pink-500">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-orange-400 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3l.01 10.55c-.59-.34-1.27-.55-2-.55C7.79 13 6 14.79 6 17s1.79 4 4.01 4S14 19.21 14 17V7h4V3h-6zm-1.99 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black tracking-tight">LIVE NATION</span>
+            <span class="block text-xs text-pink-400 tracking-widest">CONCERTS & EVENTS</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-300 hover:text-pink-400 transition font-bold uppercase text-sm">Tours</a>
+          <a href="#" class="text-gray-300 hover:text-pink-400 transition font-bold uppercase text-sm">Festivals</a>
+          <a href="#" class="text-gray-300 hover:text-pink-400 transition font-bold uppercase text-sm">Venues</a>
+          <a href="#" class="text-gray-300 hover:text-pink-400 transition font-bold uppercase text-sm">VIP</a>
+          <a href="#" class="text-gray-300 hover:text-pink-400 transition font-bold uppercase text-sm">Artists</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-medium animate-pulse">
+            <span class="w-2 h-2 bg-pink-500 rounded-full"></span>
+            On Sale Now
+          </div>
+          <button class="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-6 py-2.5 rounded font-black hover:opacity-90 transition">
+            Find Tickets
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Record Label -->
+  <nav class="bg-gradient-to-b from-slate-900 to-slate-800 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-5">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 border-2 border-amber-400 rounded-full flex items-center justify-center bg-slate-900">
+            <svg class="w-8 h-8 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-bold tracking-wide">GOLD RECORDS</span>
+            <span class="block text-xs text-amber-400 tracking-widest uppercase">Est. 1985</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-slate-300 hover:text-amber-400 transition font-medium">Artists</a>
+          <a href="#" class="text-slate-300 hover:text-amber-400 transition font-medium">Releases</a>
+          <a href="#" class="text-slate-300 hover:text-amber-400 transition font-medium">Legacy</a>
+          <a href="#" class="text-slate-300 hover:text-amber-400 transition font-medium">Licensing</a>
+          <a href="#" class="text-slate-300 hover:text-amber-400 transition font-medium">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:block border border-amber-400 text-amber-400 px-5 py-2.5 rounded font-medium hover:bg-amber-400 hover:text-slate-900 transition">
+            Submit Demo
+          </button>
+          <button class="bg-amber-400 text-slate-900 px-5 py-2.5 rounded font-bold hover:bg-amber-300 transition">
+            New Releases
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: DJ/Producer Portfolio -->
+  <nav class="bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white rounded-2xl shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-5.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black">DJ NOVA</span>
+            <span class="block text-xs text-cyan-200">Electronic Artist</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-cyan-200 transition font-medium">Music</a>
+          <a href="#" class="hover:text-cyan-200 transition font-medium">Tour Dates</a>
+          <a href="#" class="hover:text-cyan-200 transition font-medium">Merch</a>
+          <a href="#" class="hover:text-cyan-200 transition font-medium">Videos</a>
+          <a href="#" class="hover:text-cyan-200 transition font-medium">Booking</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-3">
+            <a href="#" class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          </div>
+          <button class="bg-white text-blue-600 px-6 py-2.5 rounded-xl font-bold hover:bg-blue-50 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Music Festival -->
+  <nav class="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 text-white rounded-3xl shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center">
+            <span class="text-2xl">🎪</span>
+          </div>
+          <div>
+            <span class="text-2xl font-black">SUNBURST FEST</span>
+            <span class="block text-xs text-white/80 font-medium">July 15-17 • Desert Valley</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-white/80 transition font-bold">Lineup</a>
+          <a href="#" class="hover:text-white/80 transition font-bold">Schedule</a>
+          <a href="#" class="hover:text-white/80 transition font-bold">Experience</a>
+          <a href="#" class="hover:text-white/80 transition font-bold">Camping</a>
+          <a href="#" class="hover:text-white/80 transition font-bold">FAQ</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold">
+            <span class="w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
+            Limited Passes Left!
+          </div>
+          <button class="bg-white text-pink-600 px-6 py-2.5 rounded-full font-black hover:bg-pink-100 transition shadow-lg">
+            Get Passes
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Podcast Network -->
+  <nav class="bg-white text-gray-900 rounded-2xl shadow-xl border border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-gray-900">PodcastHub</span>
+            <span class="block text-xs text-purple-600 font-medium">Audio Network</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-600 hover:text-purple-600 transition font-medium">Shows</a>
+          <a href="#" class="text-gray-600 hover:text-purple-600 transition font-medium">Categories</a>
+          <a href="#" class="text-gray-600 hover:text-purple-600 transition font-medium">Top Charts</a>
+          <a href="#" class="text-gray-600 hover:text-purple-600 transition font-medium">For Creators</a>
+          <a href="#" class="text-gray-600 hover:text-purple-600 transition font-medium">About</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:block text-gray-600 hover:text-purple-600 font-medium">Sign In</button>
+          <button class="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-2.5 rounded-xl font-bold hover:shadow-lg transition">
+            Start Listening
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Music Production/Studio -->
+  <nav class="bg-slate-900 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-rose-600 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">STUDIO RED</span>
+            <span class="block text-xs text-red-400 font-medium">Professional Recording</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Studios</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Equipment</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Engineers</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Rates</a>
+          <a href="#" class="text-gray-300 hover:text-red-400 transition font-medium">Portfolio</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="hidden md:flex items-center gap-2 text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            (323) 555-BEAT
+          </a>
+          <button class="bg-gradient-to-r from-red-500 to-rose-600 text-white px-6 py-2.5 rounded font-bold hover:opacity-90 transition">
+            Book Session
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Music Education/School -->
+  <nav class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-2xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3l.01 10.55c-.59-.34-1.27-.55-2-.55C7.79 13 6 14.79 6 17s1.79 4 4.01 4S14 19.21 14 17V7h4V3h-6z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Harmony Academy</span>
+            <span class="block text-xs text-indigo-200">Music Education</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-indigo-200 transition font-medium">Programs</a>
+          <a href="#" class="hover:text-indigo-200 transition font-medium">Instruments</a>
+          <a href="#" class="hover:text-indigo-200 transition font-medium">Teachers</a>
+          <a href="#" class="hover:text-indigo-200 transition font-medium">Schedule</a>
+          <a href="#" class="hover:text-indigo-200 transition font-medium">Recitals</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            All Ages Welcome
+          </div>
+          <button class="bg-white text-indigo-600 px-6 py-2.5 rounded-xl font-bold hover:bg-indigo-50 transition">
+            Enroll Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <div class="text-center py-8 text-gray-500 text-sm">
+    <p>nav-135: Music/Entertainment Industry Navigation - 8 Unique Styles</p>
+    <p class="mt-2">Tailwind CSS Navigation Components</p>
+  </div>
+
+</body>
+</html>
