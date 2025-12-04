@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Store/Instrument Shop Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-guitar-50: oklch(0.97 0.02 35);
+      --color-guitar-100: oklch(0.93 0.04 35);
+      --color-guitar-200: oklch(0.87 0.08 35);
+      --color-guitar-300: oklch(0.78 0.12 35);
+      --color-guitar-400: oklch(0.68 0.15 35);
+      --color-guitar-500: oklch(0.58 0.15 35);
+      --color-guitar-600: oklch(0.48 0.13 35);
+      --color-guitar-700: oklch(0.40 0.10 35);
+      --color-guitar-800: oklch(0.33 0.08 35);
+      --color-guitar-900: oklch(0.26 0.06 35);
+      --color-guitar-950: oklch(0.16 0.04 35);
+
+      --color-piano-50: oklch(0.98 0.00 0);
+      --color-piano-100: oklch(0.95 0.00 0);
+      --color-piano-200: oklch(0.90 0.00 0);
+      --color-piano-300: oklch(0.82 0.00 0);
+      --color-piano-400: oklch(0.70 0.00 0);
+      --color-piano-500: oklch(0.55 0.00 0);
+      --color-piano-600: oklch(0.45 0.00 0);
+      --color-piano-700: oklch(0.35 0.00 0);
+      --color-piano-800: oklch(0.25 0.00 0);
+      --color-piano-900: oklch(0.18 0.00 0);
+      --color-piano-950: oklch(0.10 0.00 0);
+
+      --color-drum-50: oklch(0.97 0.02 25);
+      --color-drum-100: oklch(0.92 0.04 25);
+      --color-drum-200: oklch(0.85 0.08 25);
+      --color-drum-300: oklch(0.75 0.12 25);
+      --color-drum-400: oklch(0.65 0.16 25);
+      --color-drum-500: oklch(0.55 0.18 25);
+      --color-drum-600: oklch(0.47 0.16 25);
+      --color-drum-700: oklch(0.40 0.14 25);
+      --color-drum-800: oklch(0.34 0.11 25);
+      --color-drum-900: oklch(0.28 0.08 25);
+      --color-drum-950: oklch(0.18 0.06 25);
+
+      --color-vinyl-50: oklch(0.97 0.02 280);
+      --color-vinyl-100: oklch(0.93 0.04 280);
+      --color-vinyl-200: oklch(0.87 0.07 280);
+      --color-vinyl-300: oklch(0.78 0.11 280);
+      --color-vinyl-400: oklch(0.67 0.14 280);
+      --color-vinyl-500: oklch(0.55 0.15 280);
+      --color-vinyl-600: oklch(0.47 0.13 280);
+      --color-vinyl-700: oklch(0.40 0.11 280);
+      --color-vinyl-800: oklch(0.34 0.09 280);
+      --color-vinyl-900: oklch(0.28 0.07 280);
+      --color-vinyl-950: oklch(0.18 0.05 280);
+
+      --color-dj-50: oklch(0.97 0.02 200);
+      --color-dj-100: oklch(0.93 0.04 200);
+      --color-dj-200: oklch(0.87 0.08 200);
+      --color-dj-300: oklch(0.78 0.14 200);
+      --color-dj-400: oklch(0.67 0.18 200);
+      --color-dj-500: oklch(0.55 0.20 200);
+      --color-dj-600: oklch(0.47 0.18 200);
+      --color-dj-700: oklch(0.40 0.15 200);
+      --color-dj-800: oklch(0.34 0.12 200);
+      --color-dj-900: oklch(0.28 0.09 200);
+      --color-dj-950: oklch(0.18 0.07 200);
+
+      --color-orchestra-50: oklch(0.97 0.02 60);
+      --color-orchestra-100: oklch(0.93 0.04 60);
+      --color-orchestra-200: oklch(0.87 0.08 60);
+      --color-orchestra-300: oklch(0.78 0.12 60);
+      --color-orchestra-400: oklch(0.70 0.15 60);
+      --color-orchestra-500: oklch(0.62 0.15 60);
+      --color-orchestra-600: oklch(0.52 0.12 60);
+      --color-orchestra-700: oklch(0.44 0.10 60);
+      --color-orchestra-800: oklch(0.37 0.08 60);
+      --color-orchestra-900: oklch(0.30 0.06 60);
+      --color-orchestra-950: oklch(0.20 0.04 60);
+
+      --color-studio-50: oklch(0.97 0.02 145);
+      --color-studio-100: oklch(0.93 0.04 145);
+      --color-studio-200: oklch(0.87 0.08 145);
+      --color-studio-300: oklch(0.78 0.12 145);
+      --color-studio-400: oklch(0.67 0.16 145);
+      --color-studio-500: oklch(0.55 0.16 145);
+      --color-studio-600: oklch(0.47 0.14 145);
+      --color-studio-700: oklch(0.40 0.12 145);
+      --color-studio-800: oklch(0.34 0.10 145);
+      --color-studio-900: oklch(0.28 0.08 145);
+      --color-studio-950: oklch(0.18 0.06 145);
+
+      --color-school-50: oklch(0.97 0.02 250);
+      --color-school-100: oklch(0.93 0.05 250);
+      --color-school-200: oklch(0.87 0.10 250);
+      --color-school-300: oklch(0.78 0.15 250);
+      --color-school-400: oklch(0.67 0.18 250);
+      --color-school-500: oklch(0.55 0.18 250);
+      --color-school-600: oklch(0.47 0.16 250);
+      --color-school-700: oklch(0.40 0.14 250);
+      --color-school-800: oklch(0.34 0.11 250);
+      --color-school-900: oklch(0.28 0.08 250);
+      --color-school-950: oklch(0.18 0.06 250);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Guitar/String Instruments - Warm wood design -->
+  <nav class="bg-white shadow-lg rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-guitar-100 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-guitar-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-guitar-800">StringHouse</span>
+            <span class="block text-xs text-guitar-500">Guitars & More</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-guitar-700 hover:bg-guitar-50 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-guitar-700 hover:bg-guitar-50 rounded-lg font-medium transition-colors">Guitars</a>
+          <a href="#" class="px-4 py-2 text-guitar-700 hover:bg-guitar-50 rounded-lg font-medium transition-colors">Basses</a>
+          <a href="#" class="px-4 py-2 text-guitar-700 hover:bg-guitar-50 rounded-lg font-medium transition-colors">Amps</a>
+          <a href="#" class="px-4 py-2 text-guitar-700 hover:bg-guitar-50 rounded-lg font-medium transition-colors">Lessons</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="tel:555-0166" class="hidden sm:flex items-center space-x-2 text-guitar-600 font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>(555) 016-6001</span>
+          </a>
+          <button class="bg-guitar-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-guitar-700 transition-colors shadow-md">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Piano/Keyboard Store - Elegant black & white design -->
+  <nav class="bg-piano-950 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-piano-900" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zm-2-2H7v4h6v-4zm2 0h1V9h-1v2zm1-4V5h-1v2h1zM5 5v2H4V5h1zm0 4H4v2h1V9zm-1 4h1v2H4v-2z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white tracking-wide" style="font-family: serif;">STEINWAY</span>
+            <span class="block text-xs text-piano-400">Piano Gallery</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-piano-300 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-piano-300 hover:text-white font-medium transition-colors">Grand Pianos</a>
+          <a href="#" class="text-piano-300 hover:text-white font-medium transition-colors">Digital</a>
+          <a href="#" class="text-piano-300 hover:text-white font-medium transition-colors">Services</a>
+          <a href="#" class="text-piano-300 hover:text-white font-medium transition-colors">Showroom</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-piano-800 rounded-full text-piano-300 text-sm">
+            Private Appointments
+          </span>
+          <button class="bg-white text-piano-900 px-5 py-2 rounded-lg font-bold hover:bg-piano-100 transition-colors">
+            Schedule Visit
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Drum/Percussion Shop - Bold red design -->
+  <nav class="bg-gradient-to-r from-drum-800 to-drum-700 shadow-xl rounded-xl border-b-4 border-drum-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-drum-600 rounded-full flex items-center justify-center border-2 border-drum-400">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">BEATSHOP</span>
+            <span class="block text-xs text-drum-300">Drums & Percussion</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-drum-100 hover:bg-drum-600 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-drum-100 hover:bg-drum-600 rounded-lg font-medium transition-colors">Drum Kits</a>
+          <a href="#" class="px-4 py-2 text-drum-100 hover:bg-drum-600 rounded-lg font-medium transition-colors">Cymbals</a>
+          <a href="#" class="px-4 py-2 text-drum-100 hover:bg-drum-600 rounded-lg font-medium transition-colors">Hardware</a>
+          <a href="#" class="px-4 py-2 text-drum-100 hover:bg-drum-600 rounded-lg font-medium transition-colors">Lessons</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-drum-600 rounded-full text-drum-200 text-sm font-medium">
+            Demo Room Available
+          </span>
+          <button class="bg-white text-drum-800 px-5 py-2 rounded-lg font-bold hover:bg-drum-100 transition-colors">
+            Shop Drums
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Vinyl/Record Store - Retro purple design -->
+  <nav class="bg-vinyl-900 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-vinyl-700 rounded-full flex items-center justify-center border-2 border-vinyl-500">
+            <div class="w-6 h-6 bg-vinyl-400 rounded-full flex items-center justify-center">
+              <div class="w-2 h-2 bg-vinyl-900 rounded-full"></div>
+            </div>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">Vinyl Vibes</span>
+            <span class="block text-xs text-vinyl-400">Records & Audio</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-vinyl-300 hover:text-white font-medium transition-colors">Home</a>
+          <a href="#" class="text-vinyl-300 hover:text-white font-medium transition-colors">New Releases</a>
+          <a href="#" class="text-vinyl-300 hover:text-white font-medium transition-colors">Used Vinyl</a>
+          <a href="#" class="text-vinyl-300 hover:text-white font-medium transition-colors">Turntables</a>
+          <a href="#" class="text-vinyl-300 hover:text-white font-medium transition-colors">Events</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-vinyl-800 rounded-full">
+            <div class="w-2 h-2 bg-vinyl-400 rounded-full animate-pulse"></div>
+            <span class="text-vinyl-300 text-sm">Now Playing</span>
+          </div>
+          <button class="bg-vinyl-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-vinyl-400 transition-colors">
+            Browse Vinyl
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: DJ/Electronic Equipment - Modern cyan design -->
+  <nav class="bg-gray-950 shadow-xl rounded-xl border border-dj-700">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-dj-600 rounded-lg flex items-center justify-center animate-pulse">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-dj-400 tracking-wider">MIXPRO</span>
+            <span class="block text-xs text-dj-600">DJ & Production</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-dj-400 hover:text-dj-300 font-medium transition-colors">Home</a>
+          <a href="#" class="text-dj-400 hover:text-dj-300 font-medium transition-colors">Controllers</a>
+          <a href="#" class="text-dj-400 hover:text-dj-300 font-medium transition-colors">Turntables</a>
+          <a href="#" class="text-dj-400 hover:text-dj-300 font-medium transition-colors">Software</a>
+          <a href="#" class="text-dj-400 hover:text-dj-300 font-medium transition-colors">Support</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-dj-900 border border-dj-600 rounded-full text-dj-400 text-sm">
+            Pro Demos
+          </span>
+          <button class="bg-dj-500 text-white px-5 py-2 rounded-lg font-bold hover:bg-dj-400 transition-colors shadow-lg shadow-dj-500/30">
+            Shop DJ Gear
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Orchestra/Band Instruments - Elegant gold design -->
+  <nav class="bg-white shadow-md rounded-xl border border-orchestra-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 border-2 border-orchestra-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-orchestra-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-light text-orchestra-800 tracking-wide" style="font-family: serif;">Harmony Music</span>
+            <span class="block text-xs text-orchestra-500">Band & Orchestra</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-orchestra-700 hover:text-orchestra-500 font-medium transition-colors">Home</a>
+          <a href="#" class="text-orchestra-700 hover:text-orchestra-500 font-medium transition-colors">Brass</a>
+          <a href="#" class="text-orchestra-700 hover:text-orchestra-500 font-medium transition-colors">Woodwinds</a>
+          <a href="#" class="text-orchestra-700 hover:text-orchestra-500 font-medium transition-colors">Strings</a>
+          <a href="#" class="text-orchestra-700 hover:text-orchestra-500 font-medium transition-colors">Rentals</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-orchestra-100 rounded-full text-orchestra-700 text-sm">
+            School Programs
+          </span>
+          <button class="bg-orchestra-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-orchestra-700 transition-colors">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Recording/Studio Equipment - Modern green design -->
+  <nav class="bg-gradient-to-r from-studio-800 to-studio-700 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-studio-600 rounded-xl flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">StudioGear</span>
+            <span class="block text-xs text-studio-200">Pro Audio Equipment</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-studio-100 hover:bg-studio-600 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-studio-100 hover:bg-studio-600 rounded-lg font-medium transition-colors">Microphones</a>
+          <a href="#" class="px-4 py-2 text-studio-100 hover:bg-studio-600 rounded-lg font-medium transition-colors">Interfaces</a>
+          <a href="#" class="px-4 py-2 text-studio-100 hover:bg-studio-600 rounded-lg font-medium transition-colors">Monitors</a>
+          <a href="#" class="px-4 py-2 text-studio-100 hover:bg-studio-600 rounded-lg font-medium transition-colors">Bundles</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 bg-studio-600 rounded-full">
+            <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+            <span class="text-studio-100 text-sm">Expert Advice</span>
+          </div>
+          <button class="bg-white text-studio-800 px-5 py-2 rounded-lg font-bold hover:bg-studio-100 transition-colors">
+            Shop Pro Audio
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Music School/Education - Friendly blue design -->
+  <nav class="bg-gradient-to-r from-school-500 to-school-600 shadow-xl rounded-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-18">
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <svg class="w-7 h-7 text-school-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">MusicMakers</span>
+            <span class="block text-xs text-school-100">Learn & Play</span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 text-white hover:bg-school-400 rounded-lg font-medium transition-colors">Home</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-school-400 rounded-lg font-medium transition-colors">Lessons</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-school-400 rounded-lg font-medium transition-colors">Instruments</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-school-400 rounded-lg font-medium transition-colors">Rentals</a>
+          <a href="#" class="px-4 py-2 text-white hover:bg-school-400 rounded-lg font-medium transition-colors">About</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="hidden lg:flex items-center px-3 py-1 bg-school-400 rounded-full text-white text-sm font-medium">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            All Ages Welcome
+          </span>
+          <button class="bg-white text-school-700 px-5 py-2 rounded-lg font-bold hover:bg-school-50 transition-colors shadow-lg">
+            Start Learning
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm pt-8">
+    <p>Music Store/Instrument Shop Navigation Templates - 8 Styles</p>
+    <p class="mt-1">Template nav-166 | Tailwind CSS v4</p>
+  </footer>
+
+</body>
+</html>
