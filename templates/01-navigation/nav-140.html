@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty/Cosmetics Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 350);
+      --color-primary-100: oklch(0.93 0.04 350);
+      --color-primary-200: oklch(0.86 0.08 350);
+      --color-primary-300: oklch(0.75 0.14 350);
+      --color-primary-400: oklch(0.65 0.19 350);
+      --color-primary-500: oklch(0.55 0.24 350);
+      --color-primary-600: oklch(0.45 0.22 350);
+      --color-primary-700: oklch(0.35 0.18 350);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Luxury Cosmetics Brand -->
+  <nav class="bg-black text-white rounded-none shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-5">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl font-light tracking-[0.3em] uppercase">Lumière</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-10">
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide uppercase text-sm">Skincare</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide uppercase text-sm">Makeup</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide uppercase text-sm">Fragrance</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide uppercase text-sm">Sets</a>
+          <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-wide uppercase text-sm">Bestsellers</a>
+        </div>
+        <div class="flex items-center gap-5">
+          <button class="text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+          <button class="text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </button>
+          <button class="relative text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span class="absolute -top-2 -right-2 w-4 h-4 bg-white text-black rounded-full text-xs flex items-center justify-center">2</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Natural/Organic Beauty -->
+  <nav class="bg-gradient-to-r from-green-50 to-emerald-50 text-gray-900 rounded-2xl shadow-lg border border-green-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 3.62 13.38 2.5 12 2.5S9.5 3.62 9.5 5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-medium text-green-800">Botanica</span>
+            <span class="block text-xs text-green-600 font-medium">Organic Beauty</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-green-700 hover:text-green-500 transition font-medium">Shop</a>
+          <a href="#" class="text-green-700 hover:text-green-500 transition font-medium">Ingredients</a>
+          <a href="#" class="text-green-700 hover:text-green-500 transition font-medium">Our Story</a>
+          <a href="#" class="text-green-700 hover:text-green-500 transition font-medium">Sustainability</a>
+          <a href="#" class="text-green-700 hover:text-green-500 transition font-medium">Blog</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            100% Vegan
+          </div>
+          <button class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg transition">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: K-Beauty Brand -->
+  <nav class="bg-gradient-to-r from-pink-100 via-rose-50 to-pink-100 text-gray-900 rounded-3xl shadow-xl border border-pink-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-rose-500 rounded-2xl flex items-center justify-center">
+            <span class="text-white text-lg font-bold">글로</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-pink-700">GLOW LAB</span>
+            <span class="block text-xs text-pink-500 font-medium">Korean Beauty</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="text-pink-600 hover:text-pink-400 transition font-medium">Skincare</a>
+          <a href="#" class="text-pink-600 hover:text-pink-400 transition font-medium">Makeup</a>
+          <a href="#" class="text-pink-600 hover:text-pink-400 transition font-medium">New Arrivals</a>
+          <a href="#" class="text-pink-600 hover:text-pink-400 transition font-medium">K-Beauty Tips</a>
+          <a href="#" class="text-pink-600 hover:text-pink-400 transition font-medium">Bundles</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block bg-pink-200 text-pink-700 px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+            Free Sheet Mask $50+
+          </div>
+          <button class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg transition">
+            Shop K-Beauty
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: Men's Grooming -->
+  <nav class="bg-slate-900 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 border-2 border-amber-400 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold tracking-wide">GROOMWELL</span>
+            <span class="block text-xs text-amber-400 tracking-widest">MEN'S GROOMING</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Shave</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Skin</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Hair</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Beard</a>
+          <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Sets</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:block border border-amber-400 text-amber-400 px-5 py-2.5 rounded font-medium hover:bg-amber-400 hover:text-slate-900 transition">
+            Subscribe & Save
+          </button>
+          <button class="bg-amber-400 text-slate-900 px-5 py-2.5 rounded font-bold hover:bg-amber-300 transition">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Hair Salon -->
+  <nav class="bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white rounded-2xl shadow-2xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+            <svg class="w-7 h-7 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Luxe Salon</span>
+            <span class="block text-xs text-purple-200">Hair & Beauty</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="hover:text-purple-200 transition font-medium">Services</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Stylists</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Gallery</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Products</a>
+          <a href="#" class="hover:text-purple-200 transition font-medium">Locations</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:555-0123" class="hidden md:flex items-center gap-2 text-purple-200 text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            (555) LUXE-CUT
+          </a>
+          <button class="bg-white text-purple-600 px-6 py-2.5 rounded-full font-bold hover:bg-purple-50 transition">
+            Book Appointment
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Spa & Wellness -->
+  <nav class="bg-gradient-to-r from-teal-50 to-cyan-50 text-gray-900 rounded-2xl shadow-lg border border-teal-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-5">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🧘</span>
+          </div>
+          <div>
+            <span class="text-xl font-light text-teal-800 tracking-wide">Serenity Spa</span>
+            <span class="block text-xs text-teal-600 font-medium">Wellness & Beauty</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-teal-700 hover:text-teal-500 transition font-medium">Treatments</a>
+          <a href="#" class="text-teal-700 hover:text-teal-500 transition font-medium">Packages</a>
+          <a href="#" class="text-teal-700 hover:text-teal-500 transition font-medium">Membership</a>
+          <a href="#" class="text-teal-700 hover:text-teal-500 transition font-medium">Gift Cards</a>
+          <a href="#" class="text-teal-700 hover:text-teal-500 transition font-medium">About</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:block text-sm text-teal-600">
+            Open 7 Days a Week
+          </div>
+          <button class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg transition">
+            Book Spa Day
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Nail Salon -->
+  <nav class="bg-gradient-to-r from-rose-400 via-pink-500 to-fuchsia-500 text-white rounded-3xl shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center">
+            <span class="text-2xl">💅</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold">Polish & Co.</span>
+            <span class="block text-xs text-pink-100 font-medium">Nail Art Studio</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#" class="hover:text-pink-100 transition font-medium">Manicures</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Pedicures</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Nail Art</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Gallery</a>
+          <a href="#" class="hover:text-pink-100 transition font-medium">Prices</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+            <span class="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
+            Walk-ins Welcome
+          </div>
+          <button class="bg-white text-pink-600 px-6 py-2.5 rounded-full font-bold hover:bg-pink-50 transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Professional Makeup Artist -->
+  <nav class="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 text-white rounded-lg shadow-xl">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between px-6 py-5">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 border border-rose-400 rounded-full flex items-center justify-center">
+            <span class="text-lg font-light text-rose-400">MA</span>
+          </div>
+          <div>
+            <span class="text-lg font-light tracking-wide">Maya Artistry</span>
+            <span class="block text-xs text-gray-500 tracking-widest uppercase">Professional Makeup</span>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-10">
+          <a href="#" class="text-gray-400 hover:text-rose-400 transition font-light">Portfolio</a>
+          <a href="#" class="text-gray-400 hover:text-rose-400 transition font-light">Services</a>
+          <a href="#" class="text-gray-400 hover:text-rose-400 transition font-light">Bridal</a>
+          <a href="#" class="text-gray-400 hover:text-rose-400 transition font-light">Editorial</a>
+          <a href="#" class="text-gray-400 hover:text-rose-400 transition font-light">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-3">
+            <a href="#" class="text-gray-500 hover:text-rose-400 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-rose-400 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+          </div>
+          <button class="border border-rose-400 text-rose-400 px-6 py-2.5 font-light hover:bg-rose-400 hover:text-white transition">
+            Book Session
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <div class="text-center py-8 text-gray-500 text-sm">
+    <p>nav-140: Beauty/Cosmetics Navigation - 8 Unique Styles</p>
+    <p class="mt-2">Tailwind CSS Navigation Components</p>
+  </div>
+
+</body>
+</html>
