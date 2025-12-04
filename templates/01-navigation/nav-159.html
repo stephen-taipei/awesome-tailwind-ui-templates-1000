@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering/Event Food Navigation - 8 Styles</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-cater-50: oklch(0.98 0.02 30);
+      --color-cater-100: oklch(0.95 0.04 30);
+      --color-cater-200: oklch(0.90 0.08 30);
+      --color-cater-300: oklch(0.82 0.12 30);
+      --color-cater-400: oklch(0.72 0.16 30);
+      --color-cater-500: oklch(0.60 0.18 30);
+      --color-cater-600: oklch(0.50 0.16 30);
+      --color-cater-700: oklch(0.42 0.14 30);
+      --color-cater-800: oklch(0.34 0.12 30);
+      --color-cater-900: oklch(0.24 0.08 30);
+
+      --color-feast-50: oklch(0.97 0.02 50);
+      --color-feast-100: oklch(0.94 0.04 50);
+      --color-feast-200: oklch(0.88 0.08 50);
+      --color-feast-300: oklch(0.80 0.12 50);
+      --color-feast-400: oklch(0.70 0.16 50);
+      --color-feast-500: oklch(0.60 0.18 50);
+      --color-feast-600: oklch(0.50 0.16 50);
+      --color-feast-700: oklch(0.42 0.14 50);
+      --color-feast-800: oklch(0.34 0.12 50);
+      --color-feast-900: oklch(0.24 0.08 50);
+
+      --color-gourmet-50: oklch(0.97 0.01 60);
+      --color-gourmet-100: oklch(0.94 0.02 60);
+      --color-gourmet-200: oklch(0.88 0.04 60);
+      --color-gourmet-300: oklch(0.78 0.06 60);
+      --color-gourmet-400: oklch(0.65 0.08 60);
+      --color-gourmet-500: oklch(0.52 0.08 60);
+      --color-gourmet-600: oklch(0.42 0.06 60);
+      --color-gourmet-700: oklch(0.35 0.05 60);
+      --color-gourmet-800: oklch(0.28 0.04 60);
+      --color-gourmet-900: oklch(0.20 0.03 60);
+
+      --color-elegant-50: oklch(0.97 0.02 320);
+      --color-elegant-100: oklch(0.94 0.04 320);
+      --color-elegant-200: oklch(0.88 0.08 320);
+      --color-elegant-300: oklch(0.78 0.12 320);
+      --color-elegant-400: oklch(0.65 0.14 320);
+      --color-elegant-500: oklch(0.52 0.14 320);
+      --color-elegant-600: oklch(0.42 0.12 320);
+      --color-elegant-700: oklch(0.35 0.10 320);
+      --color-elegant-800: oklch(0.28 0.08 320);
+      --color-elegant-900: oklch(0.20 0.06 320);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 p-8 space-y-12">
+
+  <!-- Style 1: Wedding Catering - Elegant & Romantic -->
+  <nav class="bg-gradient-to-r from-elegant-100 to-rose-50 shadow-md border-b border-elegant-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-elegant-300">
+            <svg class="w-8 h-8 text-elegant-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-serif text-elegant-800">Ever After Catering</span>
+            <p class="text-elegant-500 text-xs tracking-wide">Wedding & Special Events</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-elegant-700 font-medium">Weddings</a>
+          <a href="#" class="text-gray-600 hover:text-elegant-600 font-medium transition-colors">Menus</a>
+          <a href="#" class="text-gray-600 hover:text-elegant-600 font-medium transition-colors">Gallery</a>
+          <a href="#" class="text-gray-600 hover:text-elegant-600 font-medium transition-colors">Testimonials</a>
+          <a href="#" class="text-gray-600 hover:text-elegant-600 font-medium transition-colors">Contact</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="border-2 border-elegant-500 text-elegant-600 px-5 py-2 rounded-full font-medium hover:bg-elegant-500 hover:text-white transition-all">
+            Schedule Tasting
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 2: Corporate Catering - Professional & Modern -->
+  <nav class="bg-gray-900 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between py-2 border-b border-gray-700 text-sm">
+        <div class="flex items-center space-x-6 text-gray-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-cater-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Serving Fortune 500 Companies
+          </span>
+        </div>
+        <div class="flex items-center space-x-4 text-gray-400">
+          <a href="#" class="hover:text-cater-400 transition-colors">Client Portal</a>
+          <a href="#" class="hover:text-cater-400 transition-colors">Quick Order</a>
+        </div>
+      </div>
+
+      <!-- Main Nav -->
+      <div class="flex items-center justify-between h-18">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-cater-500 rounded flex items-center justify-center">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">EXECUTIVE CATERING</span>
+            <p class="text-gray-500 text-xs tracking-wider">CORPORATE EVENTS</p>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-6">
+          <a href="#" class="text-cater-400 font-semibold border-b-2 border-cater-500 pb-1">Services</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Menus</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Events</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Case Studies</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">About</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button class="bg-cater-500 text-white px-6 py-2.5 font-bold hover:bg-cater-600 transition-colors">
+            REQUEST PROPOSAL
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 3: Food Truck Catering - Fun & Vibrant -->
+  <nav class="bg-gradient-to-r from-feast-500 to-orange-500 shadow-xl rounded-xl overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
+            <svg class="w-7 h-7 text-feast-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">RollingFeast</span>
+            <p class="text-feast-100 text-xs">Food Truck Events</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 bg-white/20 text-white rounded-lg font-medium">Our Trucks</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Events</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Menu</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Locations</a>
+          <a href="#" class="px-4 py-2 text-white/90 hover:bg-white/20 rounded-lg font-medium transition-colors">Book Us</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="bg-white text-feast-600 px-5 py-2.5 rounded-lg font-bold hover:bg-feast-50 transition-colors shadow-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            </svg>
+            Find a Truck
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 4: BBQ/Grill Catering - Rustic & Hearty -->
+  <nav class="bg-gourmet-900 border-b-4 border-cater-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-16 h-14 bg-cater-600 rounded flex items-center justify-center">
+            <svg class="w-10 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-2xl font-black text-white tracking-tight">SMOKIN' GOOD BBQ</span>
+            <p class="text-gourmet-400 text-xs tracking-wide">Authentic Pit BBQ Catering</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-cater-400 font-bold uppercase text-sm tracking-wide">Catering Menu</a>
+          <a href="#" class="text-gourmet-300 hover:text-cater-400 font-bold uppercase text-sm tracking-wide transition-colors">Packages</a>
+          <a href="#" class="text-gourmet-300 hover:text-cater-400 font-bold uppercase text-sm tracking-wide transition-colors">Events</a>
+          <a href="#" class="text-gourmet-300 hover:text-cater-400 font-bold uppercase text-sm tracking-wide transition-colors">About</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="bg-cater-500 text-white px-6 py-3 font-bold hover:bg-cater-600 transition-colors">
+            GET QUOTE
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 5: Fine Dining Catering - Luxurious & Refined -->
+  <nav class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 border-2 border-gray-900 flex items-center justify-center">
+            <span class="text-lg font-serif tracking-widest">GC</span>
+          </div>
+          <div>
+            <span class="text-lg font-light tracking-[0.2em] text-gray-900">GRAND CUISINE</span>
+            <p class="text-gray-500 text-xs tracking-wider">FINE DINING CATERING</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden lg:flex items-center space-x-10">
+          <a href="#" class="text-gray-900 font-light tracking-wide text-sm border-b border-gray-900 pb-1">Experience</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 font-light tracking-wide text-sm transition-colors">Menus</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 font-light tracking-wide text-sm transition-colors">Private Events</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 font-light tracking-wide text-sm transition-colors">Chef's Table</a>
+          <a href="#" class="text-gray-500 hover:text-gray-900 font-light tracking-wide text-sm transition-colors">Contact</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-900 font-light tracking-wide text-sm border-b border-gray-900 pb-0.5">
+            Request Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 6: Party/Event Catering - Fun & Festive -->
+  <nav class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center border border-white/30">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">PartyBites</span>
+            <p class="text-white/80 text-xs">Event Catering & More</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-white font-semibold">Parties</a>
+          <a href="#" class="text-white/80 hover:text-white font-medium transition-colors">Birthdays</a>
+          <a href="#" class="text-white/80 hover:text-white font-medium transition-colors">Graduations</a>
+          <a href="#" class="text-white/80 hover:text-white font-medium transition-colors">Themes</a>
+          <a href="#" class="text-white/80 hover:text-white font-medium transition-colors">Menu</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <button class="bg-white text-purple-600 px-5 py-2.5 rounded-full font-bold hover:bg-purple-50 transition-colors shadow-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+            Plan My Party
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 7: Healthy/Organic Catering - Fresh & Clean -->
+  <nav class="bg-gradient-to-r from-green-50 to-emerald-50 shadow-md border-b-2 border-emerald-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-18">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center border-4 border-emerald-200">
+            <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-emerald-800">GreenTable</span>
+            <p class="text-emerald-600 text-xs font-medium">Organic Catering</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-emerald-700 font-semibold flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+            </svg>
+            Menu
+          </a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Plant-Based</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Meal Prep</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Corporate</a>
+          <a href="#" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Our Story</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-emerald-100 rounded-full">
+            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-emerald-700 text-sm font-medium">100% Organic</span>
+          </div>
+          <button class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-emerald-700 transition-colors shadow-md">
+            Order Catering
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Style 8: Drop-Off Catering - Convenient & Modern -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-cater-500 to-cater-700 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold text-gray-900">Quick<span class="text-cater-500">Cater</span></span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-4 py-2 bg-cater-50 text-cater-700 rounded-lg font-medium text-sm">Order Online</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors">Menu</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors">Packages</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors">Delivery Areas</a>
+          <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors">FAQ</a>
+        </div>
+
+        <!-- Right -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden lg:flex items-center space-x-2 text-gray-500 text-sm">
+            <svg class="w-5 h-5 text-cater-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Order 24hrs ahead</span>
+          </div>
+          <button class="bg-cater-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-cater-700 transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            Start Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-gray-500 text-sm pb-8">
+    <p>Navigation Template: nav-159 | Catering/Event Food Navigation - 8 Unique Styles</p>
+    <p class="mt-1">Styles: Wedding Catering, Corporate Catering, Food Truck Catering, BBQ/Grill Catering, Fine Dining Catering, Party/Event Catering, Healthy/Organic Catering, Drop-Off Catering</p>
+  </footer>
+
+</body>
+</html>
