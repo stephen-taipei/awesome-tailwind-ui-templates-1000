@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fashion Landing Page - Minimalist high-end fashion brand template">
+  <title>landing-048: Fashion Landing | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --font-serif: "Playfair Display", serif;
+      --color-primary-900: oklch(0.20 0.02 260);
+      --color-secondary-100: oklch(0.95 0.01 260);
+    }
+  </style>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    .font-serif {
+      font-family: var(--font-serif);
+    }
+    
+    /* Image Hover Zoom */
+    .img-zoom-container {
+      overflow: hidden;
+    }
+    .img-zoom {
+      transition: transform 0.7s ease;
+    }
+    .group:hover .img-zoom {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+
+  <!-- Announcement Bar -->
+  <div class="bg-slate-900 text-white text-xs text-center py-2 uppercase tracking-widest" data-i18n="landing.fashion.announcement">
+    Free Worldwide Shipping on Orders Over $200
+  </div>
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center md:hidden">
+          <button class="text-slate-900 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+
+        <!-- Left Nav (Desktop) -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#shop" class="text-sm uppercase tracking-widest hover:text-slate-600 transition-colors" data-i18n="landing.fashion.shop">Shop</a>
+          <a href="#collection" class="text-sm uppercase tracking-widest hover:text-slate-600 transition-colors" data-i18n="landing.fashion.collection">Collection</a>
+          <a href="#about" class="text-sm uppercase tracking-widest hover:text-slate-600 transition-colors" data-i18n="landing.fashion.about">About</a>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+          <a href="#" class="font-serif text-3xl tracking-tighter italic" data-i18n="landing.fashion.brand">VOGUE & VIRTUE</a>
+        </div>
+
+        <!-- Right Nav -->
+        <div class="flex items-center space-x-6">
+          <a href="#" class="text-slate-900 hover:text-slate-600 transition-colors">
+            <span class="sr-only">Search</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </a>
+          <a href="#" class="text-slate-900 hover:text-slate-600 transition-colors">
+            <span class="sr-only">Account</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          </a>
+          <a href="#" class="text-slate-900 hover:text-slate-600 transition-colors relative">
+            <span class="sr-only">Bag</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span class="absolute -top-1 -right-1 bg-slate-900 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-[85vh] w-full overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-slate-200">
+       <!-- Placeholder for fashion model image -->
+       <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat grayscale-[20%]"></div>
+       <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+
+    <div class="relative h-full flex flex-col justify-center items-center text-center text-white px-4">
+      <p class="text-sm md:text-base uppercase tracking-[0.3em] mb-6" data-i18n="landing.fashion.season">Spring Summer 2025</p>
+      <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-8 italic leading-tight">
+        <span class="block" data-i18n="landing.fashion.heroTitle1">Elegance in</span>
+        <span class="block" data-i18n="landing.fashion.heroTitle2">Every Stitch</span>
+      </h1>
+      <a href="#shop" class="inline-block border border-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-colors duration-300" data-i18n="landing.fashion.shopNow">
+        Discover Collection
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="py-20 md:py-32">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Category 1 -->
+        <div class="group cursor-pointer">
+          <div class="img-zoom-container aspect-[3/4] overflow-hidden mb-6 bg-slate-100 relative">
+             <div class="img-zoom w-full h-full bg-[url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center"></div>
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+          </div>
+          <div class="text-center">
+            <h3 class="font-serif text-2xl italic mb-2" data-i18n="landing.fashion.cat1">Ready to Wear</h3>
+            <span class="text-xs uppercase tracking-widest border-b border-transparent group-hover:border-slate-900 transition-colors duration-300 pb-1">Shop Now</span>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="group cursor-pointer md:-mt-16">
+          <div class="img-zoom-container aspect-[3/4] overflow-hidden mb-6 bg-slate-100 relative">
+             <div class="img-zoom w-full h-full bg-[url('https://images.unsplash.com/photo-1550614000-4b9519e0228c?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center"></div>
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+          </div>
+          <div class="text-center">
+            <h3 class="font-serif text-2xl italic mb-2" data-i18n="landing.fashion.cat2">Accessories</h3>
+            <span class="text-xs uppercase tracking-widest border-b border-transparent group-hover:border-slate-900 transition-colors duration-300 pb-1">Shop Now</span>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="group cursor-pointer">
+          <div class="img-zoom-container aspect-[3/4] overflow-hidden mb-6 bg-slate-100 relative">
+             <div class="img-zoom w-full h-full bg-[url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center"></div>
+             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+          </div>
+          <div class="text-center">
+            <h3 class="font-serif text-2xl italic mb-2" data-i18n="landing.fashion.cat3">Footwear</h3>
+            <span class="text-xs uppercase tracking-widest border-b border-transparent group-hover:border-slate-900 transition-colors duration-300 pb-1">Shop Now</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals (Carousel/Slider look) -->
+  <section id="shop" class="py-20 bg-stone-50">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="font-serif text-4xl italic mb-2" data-i18n="landing.fashion.newArrivals">New Arrivals</h2>
+          <p class="text-slate-500 text-sm uppercase tracking-widest" data-i18n="landing.fashion.newArrivalsSub">Fresh from the runway</p>
+        </div>
+        <a href="#" class="hidden md:block text-xs uppercase tracking-widest border-b border-slate-300 hover:border-slate-900 pb-1 transition-colors">View All</a>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-8">
+        <!-- Product 1 -->
+        <div class="group">
+          <div class="relative aspect-[4/5] bg-white mb-4 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=800&auto=format&fit=crop" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur py-3 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between items-center">
+               <button class="text-xs uppercase tracking-wide font-bold hover:text-slate-600">Add to Bag</button>
+               <button class="hover:text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
+            </div>
+            <span class="absolute top-2 left-2 bg-white px-2 py-1 text-[10px] uppercase tracking-widest font-bold">New</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg">Velvet Evening Gown</h3>
+            <p class="text-slate-500 text-sm mt-1">$1,290.00</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="group">
+          <div class="relative aspect-[4/5] bg-white mb-4 overflow-hidden">
+             <img src="https://images.unsplash.com/photo-1552874869-5c39e5317426?q=80&w=800&auto=format&fit=crop" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur py-3 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between items-center">
+               <button class="text-xs uppercase tracking-wide font-bold hover:text-slate-600">Add to Bag</button>
+               <button class="hover:text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg">Silk Blouse</h3>
+            <p class="text-slate-500 text-sm mt-1">$450.00</p>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="group">
+          <div class="relative aspect-[4/5] bg-white mb-4 overflow-hidden">
+             <img src="https://images.unsplash.com/photo-1548624149-f32152fd562f?q=80&w=800&auto=format&fit=crop" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur py-3 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between items-center">
+               <button class="text-xs uppercase tracking-wide font-bold hover:text-slate-600">Add to Bag</button>
+               <button class="hover:text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg">Tailored Blazer</h3>
+            <p class="text-slate-500 text-sm mt-1">$890.00</p>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="group">
+          <div class="relative aspect-[4/5] bg-white mb-4 overflow-hidden">
+             <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur py-3 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-between items-center">
+               <button class="text-xs uppercase tracking-wide font-bold hover:text-slate-600">Add to Bag</button>
+               <button class="hover:text-red-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg">Pleated Skirt</h3>
+            <p class="text-slate-500 text-sm mt-1">$520.00</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center md:hidden">
+         <a href="#" class="text-xs uppercase tracking-widest border-b border-slate-300 hover:border-slate-900 pb-1 transition-colors">View All</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial / About Section -->
+  <section id="about" class="py-20 md:py-32">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div class="order-2 md:order-1">
+          <span class="text-xs text-slate-500 uppercase tracking-widest mb-4 block" data-i18n="landing.fashion.aboutSubtitle">Our Philosophy</span>
+          <h2 class="font-serif text-4xl md:text-5xl italic mb-6 leading-tight">
+            Sustainable Luxury for the Modern Era
+          </h2>
+          <p class="text-slate-600 leading-relaxed mb-8">
+            We believe that true luxury lies in the details and the story behind each piece. Our collections are crafted with ethically sourced materials and produced by master artisans who share our passion for quality and sustainability.
+          </p>
+          <div class="grid grid-cols-2 gap-8 mb-8">
+            <div>
+               <h4 class="font-serif text-xl italic mb-2">Ethical Sourcing</h4>
+               <p class="text-sm text-slate-500">100% trace-able materials from certified suppliers.</p>
+            </div>
+            <div>
+               <h4 class="font-serif text-xl italic mb-2">Artisan Crafted</h4>
+               <p class="text-sm text-slate-500">Hand-finished by expert tailors in Italy.</p>
+            </div>
+          </div>
+          <a href="#" class="text-sm uppercase tracking-widest border-b border-slate-900 pb-1 hover:text-slate-600 hover:border-slate-600 transition-colors" data-i18n="landing.fashion.readMore">Read Our Story</a>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="aspect-[4/5] bg-slate-100 overflow-hidden">
+             <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop" alt="Editorial" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-20 bg-slate-900 text-white text-center">
+    <div class="max-w-md mx-auto px-4">
+      <h2 class="font-serif text-3xl italic mb-4" data-i18n="landing.fashion.newsletterTitle">Join the List</h2>
+      <p class="text-slate-400 text-sm mb-8" data-i18n="landing.fashion.newsletterDesc">Sign up for exclusive access to new collections and special offers.</p>
+      <form class="flex flex-col gap-4">
+        <input type="email" placeholder="Email Address" class="bg-transparent border-b border-slate-700 py-3 px-2 text-center focus:outline-none focus:border-white transition-colors" aria-label="Email Address">
+        <button type="submit" class="bg-white text-slate-900 uppercase tracking-widest text-xs font-bold py-4 px-8 mt-4 hover:bg-slate-200 transition-colors" data-i18n="landing.fashion.subscribe">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-16 border-t border-slate-100">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Shop</h4>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li><a href="#" class="hover:text-slate-900">New Arrivals</a></li>
+            <li><a href="#" class="hover:text-slate-900">Clothing</a></li>
+            <li><a href="#" class="hover:text-slate-900">Accessories</a></li>
+            <li><a href="#" class="hover:text-slate-900">Shoes</a></li>
+            <li><a href="#" class="hover:text-slate-900">Sale</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Company</h4>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li><a href="#" class="hover:text-slate-900">About Us</a></li>
+            <li><a href="#" class="hover:text-slate-900">Sustainability</a></li>
+            <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+            <li><a href="#" class="hover:text-slate-900">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Support</h4>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li><a href="#" class="hover:text-slate-900">Contact Us</a></li>
+            <li><a href="#" class="hover:text-slate-900">Shipping & Returns</a></li>
+            <li><a href="#" class="hover:text-slate-900">Size Guide</a></li>
+            <li><a href="#" class="hover:text-slate-900">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Follow Us</h4>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li><a href="#" class="hover:text-slate-900">Instagram</a></li>
+            <li><a href="#" class="hover:text-slate-900">Pinterest</a></li>
+            <li><a href="#" class="hover:text-slate-900">Facebook</a></li>
+            <li><a href="#" class="hover:text-slate-900">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-100">
+        <p class="text-xs text-slate-400 mb-4 md:mb-0">&copy; 2025 Vogue & Virtue. All rights reserved.</p>
+        <div class="flex gap-4">
+           <span class="text-xs text-slate-400">Privacy Policy</span>
+           <span class="text-xs text-slate-400">Terms of Service</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../src/js/i18n.js" type="module"></script>
+</body>
+</html>
