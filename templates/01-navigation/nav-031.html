@@ -3,529 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Selector Navigation - Tailwind UI Templates</title>
+    <title>Nav-031: Search Navigation - Tailwind UI Templates</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            --color-primary-50: oklch(0.97 0.02 250);
-            --color-primary-100: oklch(0.93 0.04 250);
-            --color-primary-500: oklch(0.55 0.2 250);
-            --color-primary-600: oklch(0.48 0.2 250);
-            --color-primary-700: oklch(0.4 0.2 250);
+            --color-primary-50: oklch(0.97 0.02 260);
+            --color-primary-100: oklch(0.93 0.04 260);
+            --color-primary-200: oklch(0.88 0.08 260);
+            --color-primary-500: oklch(0.55 0.25 260);
+            --color-primary-600: oklch(0.48 0.25 260);
+            --color-primary-700: oklch(0.4 0.2 260);
         }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold text-gray-900">Language Selector Navigation</h1>
-            <p class="text-gray-600 mt-2">Navigation components with language/locale selection capabilities</p>
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Nav-031: Search Navigation</h1>
+            <p class="text-gray-600 mt-1">Search-centric navigation with filters and suggestions</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
 
-        <!-- Style 1: Dropdown Language Selector -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 1: Dropdown Language Selector</h2>
-                <p class="text-gray-600 text-sm mt-1">Classic dropdown with flag icons</p>
+        <!-- Style 1: Centered Search Bar with Quick Links -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 1: Centered Search Bar with Quick Links</h2>
+                <p class="text-sm text-gray-600">Hero-style search with popular suggestions</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="bg-white shadow-md rounded-lg">
-                    <div class="max-w-7xl mx-auto px-4">
-                        <div class="flex items-center justify-between h-16">
-                            <!-- Logo -->
-                            <div class="flex items-center space-x-8">
-                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                                <div class="hidden md:flex space-x-6">
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-                                </div>
-                            </div>
+            <div class="p-8 bg-gradient-to-br from-primary-500 to-primary-700">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold text-white mb-6">How can we help you today?</h3>
 
-                            <!-- Language Dropdown -->
-                            <div class="relative" id="langDropdown1">
-                                <button class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors" onclick="toggleDropdown('langMenu1')">
-                                    <span class="text-xl">🇺🇸</span>
-                                    <span class="text-sm text-gray-700">English</span>
-                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                    </svg>
-                                </button>
-                                <div id="langMenu1" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100 bg-primary-50">
-                                        <span class="text-xl">🇺🇸</span>
-                                        <span class="text-sm text-gray-700">English</span>
-                                        <svg class="w-4 h-4 text-primary-500 ml-auto" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-xl">🇪🇸</span>
-                                        <span class="text-sm text-gray-700">Español</span>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-xl">🇫🇷</span>
-                                        <span class="text-sm text-gray-700">Français</span>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-xl">🇩🇪</span>
-                                        <span class="text-sm text-gray-700">Deutsch</span>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-xl">🇯🇵</span>
-                                        <span class="text-sm text-gray-700">日本語</span>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-xl">🇨🇳</span>
-                                        <span class="text-sm text-gray-700">中文</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Search Bar -->
+                    <div class="relative">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" placeholder="Search for articles, tutorials, FAQs..." class="w-full pl-12 pr-4 py-4 text-lg rounded-xl border-0 shadow-lg focus:ring-4 focus:ring-white/30 focus:outline-none">
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">
+                            Search
+                        </button>
                     </div>
-                </nav>
-            </div>
-        </section>
 
-        <!-- Style 2: Globe Icon with Flyout -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 2: Globe Icon with Flyout</h2>
-                <p class="text-gray-600 text-sm mt-1">Compact globe icon that opens a larger selection panel</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="bg-white shadow-md rounded-lg">
-                    <div class="max-w-7xl mx-auto px-4">
-                        <div class="flex items-center justify-between h-16">
-                            <div class="flex items-center space-x-8">
-                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                                <div class="hidden md:flex space-x-6">
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center space-x-4">
-                                <!-- Globe Icon Trigger -->
-                                <div class="relative" id="langDropdown2">
-                                    <button class="p-2 rounded-full hover:bg-gray-100 transition-colors" onclick="toggleDropdown('langMenu2')">
-                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                                        </svg>
-                                    </button>
-                                    <!-- Flyout Panel -->
-                                    <div id="langMenu2" class="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 p-4 hidden z-50">
-                                        <h3 class="text-sm font-semibold text-gray-900 mb-3">Select Language & Region</h3>
-                                        <div class="grid grid-cols-2 gap-2">
-                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 bg-primary-50 border border-primary-200">
-                                                <span>🇺🇸</span>
-                                                <div>
-                                                    <div class="text-sm font-medium text-gray-900">English</div>
-                                                    <div class="text-xs text-gray-500">United States</div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                                                <span>🇬🇧</span>
-                                                <div>
-                                                    <div class="text-sm font-medium text-gray-900">English</div>
-                                                    <div class="text-xs text-gray-500">United Kingdom</div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                                                <span>🇪🇸</span>
-                                                <div>
-                                                    <div class="text-sm font-medium text-gray-900">Español</div>
-                                                    <div class="text-xs text-gray-500">España</div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                                                <span>🇲🇽</span>
-                                                <div>
-                                                    <div class="text-sm font-medium text-gray-900">Español</div>
-                                                    <div class="text-xs text-gray-500">México</div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                                                <span>🇫🇷</span>
-                                                <div>
-                                                    <div class="text-sm font-medium text-gray-900">Français</div>
-                                                    <div class="text-xs text-gray-500">France</div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                                                <span>🇩🇪</span>
-                                                <div>
-                                                    <div class="text-sm font-medium text-gray-900">Deutsch</div>
-                                                    <div class="text-xs text-gray-500">Deutschland</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="mt-4 pt-4 border-t border-gray-200">
-                                            <a href="#" class="text-sm text-primary-600 hover:text-primary-700">View all regions →</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
-                                    Sign In
-                                </button>
-                            </div>
-                        </div>
+                    <!-- Quick Links -->
+                    <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
+                        <span class="text-white/80 text-sm">Popular:</span>
+                        <a href="#" class="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-sm rounded-full transition-colors">Getting Started</a>
+                        <a href="#" class="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-sm rounded-full transition-colors">Pricing</a>
+                        <a href="#" class="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-sm rounded-full transition-colors">API Docs</a>
+                        <a href="#" class="px-3 py-1 bg-white/20 hover:bg-white/30 text-white text-sm rounded-full transition-colors">Integrations</a>
                     </div>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Style 3: Inline Language Tabs -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 3: Inline Language Tabs</h2>
-                <p class="text-gray-600 text-sm mt-1">Language codes displayed as inline tabs</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="bg-white shadow-md rounded-lg">
-                    <div class="max-w-7xl mx-auto px-4">
-                        <div class="flex items-center justify-between h-16">
-                            <div class="flex items-center space-x-8">
-                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                                <div class="hidden md:flex space-x-6">
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                                </div>
-                            </div>
-
-                            <!-- Language Tabs -->
-                            <div class="flex items-center">
-                                <div class="flex bg-gray-100 rounded-lg p-1">
-                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md bg-white text-primary-600 shadow-sm">EN</button>
-                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">ES</button>
-                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">FR</button>
-                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">DE</button>
-                                    <button class="px-3 py-1.5 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">JA</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Style 4: Full Width Language Bar -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 4: Full Width Language Bar</h2>
-                <p class="text-gray-600 text-sm mt-1">Top bar with language selection above main navigation</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <div class="rounded-lg overflow-hidden shadow-md">
-                    <!-- Language Bar -->
-                    <div class="bg-gray-900 text-white">
-                        <div class="max-w-7xl mx-auto px-4">
-                            <div class="flex items-center justify-between h-10 text-sm">
-                                <div class="flex items-center space-x-4">
-                                    <span class="text-gray-400">📍 Shipping to:</span>
-                                    <div class="relative" id="langDropdown4">
-                                        <button class="flex items-center space-x-1 hover:text-primary-400 transition-colors" onclick="toggleDropdown('langMenu4')">
-                                            <span>🇺🇸</span>
-                                            <span>United States (USD)</span>
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                            </svg>
-                                        </button>
-                                        <div id="langMenu4" class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
-                                            <div class="px-4 py-2 border-b border-gray-100">
-                                                <span class="text-xs font-semibold text-gray-500 uppercase">Region & Currency</span>
-                                            </div>
-                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700 bg-primary-50">
-                                                <div class="flex items-center space-x-2">
-                                                    <span>🇺🇸</span>
-                                                    <span>United States</span>
-                                                </div>
-                                                <span class="text-gray-500">USD $</span>
-                                            </a>
-                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700">
-                                                <div class="flex items-center space-x-2">
-                                                    <span>🇪🇺</span>
-                                                    <span>European Union</span>
-                                                </div>
-                                                <span class="text-gray-500">EUR €</span>
-                                            </a>
-                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700">
-                                                <div class="flex items-center space-x-2">
-                                                    <span>🇬🇧</span>
-                                                    <span>United Kingdom</span>
-                                                </div>
-                                                <span class="text-gray-500">GBP £</span>
-                                            </a>
-                                            <a href="#" class="flex items-center justify-between px-4 py-2 hover:bg-gray-100 text-gray-700">
-                                                <div class="flex items-center space-x-2">
-                                                    <span>🇯🇵</span>
-                                                    <span>Japan</span>
-                                                </div>
-                                                <span class="text-gray-500">JPY ¥</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex items-center space-x-6">
-                                    <a href="#" class="hover:text-primary-400 transition-colors">Help</a>
-                                    <a href="#" class="hover:text-primary-400 transition-colors">Track Order</a>
-                                    <div class="relative" id="langDropdown4b">
-                                        <button class="flex items-center space-x-1 hover:text-primary-400 transition-colors" onclick="toggleDropdown('langMenu4b')">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                                            </svg>
-                                            <span>English</span>
-                                        </button>
-                                        <div id="langMenu4b" class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 bg-primary-50">English</a>
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Español</a>
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Français</a>
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Deutsch</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Main Navigation -->
-                    <nav class="bg-white">
-                        <div class="max-w-7xl mx-auto px-4">
-                            <div class="flex items-center justify-between h-16">
-                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                                <div class="flex space-x-6">
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Shop</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Categories</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Sale</a>
-                                </div>
-                                <div class="flex items-center space-x-4">
-                                    <button class="p-2 hover:bg-gray-100 rounded-full">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                        </svg>
-                                    </button>
-                                    <button class="p-2 hover:bg-gray-100 rounded-full">
-                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
                 </div>
             </div>
         </section>
 
-        <!-- Style 5: Split Button Language Selector -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 5: Split Button Language Selector</h2>
-                <p class="text-gray-600 text-sm mt-1">Grouped button with current selection and dropdown</p>
+        <!-- Style 2: Search with Category Tabs -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 2: Search with Category Tabs</h2>
+                <p class="text-sm text-gray-600">Tabbed search filtering by content type</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="bg-white shadow-md rounded-lg">
-                    <div class="max-w-7xl mx-auto px-4">
-                        <div class="flex items-center justify-between h-16">
-                            <div class="flex items-center space-x-8">
-                                <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                                <div class="hidden md:flex space-x-6">
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                                    <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                                </div>
-                            </div>
+            <div class="p-6">
+                <nav class="bg-gray-50 rounded-xl p-4">
+                    <!-- Category Tabs -->
+                    <div class="flex gap-1 mb-4 bg-white rounded-lg p-1 shadow-sm">
+                        <button class="flex-1 px-4 py-2 bg-primary-500 text-white rounded-md font-medium text-sm transition-colors">
+                            All
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md font-medium text-sm transition-colors">
+                            Products
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md font-medium text-sm transition-colors">
+                            Articles
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md font-medium text-sm transition-colors">
+                            Users
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md font-medium text-sm transition-colors">
+                            Files
+                        </button>
+                    </div>
 
-                            <!-- Split Button -->
-                            <div class="relative inline-flex" id="langDropdown5">
-                                <button class="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-l-lg border-r border-gray-300 transition-colors">
-                                    <span class="text-lg">🇺🇸</span>
-                                    <span class="text-sm font-medium text-gray-700">EN</span>
-                                </button>
-                                <button class="px-2 py-2 bg-gray-100 hover:bg-gray-200 rounded-r-lg transition-colors" onclick="toggleDropdown('langMenu5')">
-                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                    </svg>
-                                </button>
-                                <div id="langMenu5" class="absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 hidden z-50">
-                                    <div class="px-4 py-2 border-b border-gray-100">
-                                        <span class="text-xs font-semibold text-gray-500 uppercase">Select Language</span>
-                                    </div>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100 bg-primary-50">
-                                        <span class="text-lg">🇺🇸</span>
-                                        <div class="flex-1">
-                                            <div class="text-sm font-medium text-gray-900">English</div>
-                                            <div class="text-xs text-gray-500">EN-US</div>
-                                        </div>
-                                        <svg class="w-4 h-4 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-lg">🇪🇸</span>
-                                        <div class="flex-1">
-                                            <div class="text-sm font-medium text-gray-900">Español</div>
-                                            <div class="text-xs text-gray-500">ES</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-lg">🇫🇷</span>
-                                        <div class="flex-1">
-                                            <div class="text-sm font-medium text-gray-900">Français</div>
-                                            <div class="text-xs text-gray-500">FR</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-lg">🇩🇪</span>
-                                        <div class="flex-1">
-                                            <div class="text-sm font-medium text-gray-900">Deutsch</div>
-                                            <div class="text-xs text-gray-500">DE</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-100">
-                                        <span class="text-lg">🇯🇵</span>
-                                        <div class="flex-1">
-                                            <div class="text-sm font-medium text-gray-900">日本語</div>
-                                            <div class="text-xs text-gray-500">JA</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                    <!-- Search Input -->
+                    <div class="relative">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" placeholder="Search everything..." class="w-full pl-12 pr-12 py-3 bg-white rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                        <button class="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Recent Searches -->
+                    <div class="mt-4">
+                        <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">Recent Searches</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="flex items-center gap-1 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-primary-300 hover:text-primary-600 transition-colors">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                dashboard templates
+                            </a>
+                            <a href="#" class="flex items-center gap-1 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-primary-300 hover:text-primary-600 transition-colors">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                user settings
+                            </a>
+                            <a href="#" class="flex items-center gap-1 px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-primary-300 hover:text-primary-600 transition-colors">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                API integration
+                            </a>
                         </div>
                     </div>
                 </nav>
             </div>
         </section>
 
-        <!-- Style 6: Dark Mode Language Navigation -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 6: Dark Mode Language Navigation</h2>
-                <p class="text-gray-600 text-sm mt-1">Dark themed navigation with glowing language selector</p>
+        <!-- Style 3: Command Palette Style -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 3: Command Palette Style</h2>
+                <p class="text-sm text-gray-600">macOS Spotlight / VS Code style search</p>
             </div>
-            <div class="p-6 bg-gray-900 rounded-lg">
-                <nav class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl">
-                    <div class="max-w-7xl mx-auto px-4">
-                        <div class="flex items-center justify-between h-16">
-                            <div class="flex items-center space-x-8">
-                                <a href="#" class="text-xl font-bold text-white">Brand</a>
-                                <div class="hidden md:flex space-x-6">
-                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
-                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Products</a>
-                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
-                                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                                </div>
+            <div class="p-6 bg-gray-900">
+                <div class="max-w-xl mx-auto">
+                    <div class="bg-gray-800 rounded-xl shadow-2xl border border-gray-700 overflow-hidden">
+                        <!-- Search Input -->
+                        <div class="flex items-center gap-3 p-4 border-b border-gray-700">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <input type="text" placeholder="Type a command or search..." class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" value="settings">
+                            <kbd class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">ESC</kbd>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="p-2 max-h-80 overflow-y-auto">
+                            <!-- Section: Actions -->
+                            <div class="mb-2">
+                                <p class="px-3 py-1.5 text-xs text-gray-500 uppercase tracking-wide">Actions</p>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-500/20 text-white group">
+                                    <div class="w-8 h-8 bg-primary-500/30 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium">Open Settings</p>
+                                        <p class="text-sm text-gray-400">Manage your preferences</p>
+                                    </div>
+                                    <kbd class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">Enter</kbd>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-700/50 text-gray-300 group">
+                                    <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium">Account Settings</p>
+                                        <p class="text-sm text-gray-500">Profile and security</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-700/50 text-gray-300 group">
+                                    <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="font-medium">Notification Settings</p>
+                                        <p class="text-sm text-gray-500">Email and push notifications</p>
+                                    </div>
+                                </a>
                             </div>
 
-                            <div class="flex items-center space-x-4">
-                                <!-- Glowing Language Selector -->
-                                <div class="relative" id="langDropdown6">
-                                    <button class="flex items-center space-x-2 px-4 py-2 bg-gray-700/50 hover:bg-gray-700 rounded-lg border border-gray-600 transition-all hover:border-primary-500 hover:shadow-lg hover:shadow-primary-500/20" onclick="toggleDropdown('langMenu6')">
-                                        <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                                        </svg>
-                                        <span class="text-sm text-gray-200">EN</span>
+                            <!-- Section: Pages -->
+                            <div>
+                                <p class="px-3 py-1.5 text-xs text-gray-500 uppercase tracking-wide">Pages</p>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-700/50 text-gray-300 group">
+                                    <div class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
                                         <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                         </svg>
-                                    </button>
-                                    <div id="langMenu6" class="absolute right-0 mt-2 w-56 bg-gray-800 rounded-xl shadow-xl border border-gray-700 py-2 hidden z-50">
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-200 bg-primary-900/30 border-l-2 border-primary-500">
-                                            <span class="text-lg">🇺🇸</span>
-                                            <span class="text-sm">English (US)</span>
-                                            <svg class="w-4 h-4 text-primary-400 ml-auto" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇬🇧</span>
-                                            <span class="text-sm">English (UK)</span>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇪🇸</span>
-                                            <span class="text-sm">Español</span>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇫🇷</span>
-                                            <span class="text-sm">Français</span>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇩🇪</span>
-                                            <span class="text-sm">Deutsch</span>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇯🇵</span>
-                                            <span class="text-sm">日本語</span>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇨🇳</span>
-                                            <span class="text-sm">中文简体</span>
-                                        </a>
-                                        <a href="#" class="flex items-center space-x-3 px-4 py-2 hover:bg-gray-700 text-gray-300 border-l-2 border-transparent">
-                                            <span class="text-lg">🇹🇼</span>
-                                            <span class="text-sm">中文繁體</span>
-                                        </a>
                                     </div>
-                                </div>
-                                <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm shadow-lg shadow-primary-500/30">
-                                    Get Started
-                                </button>
+                                    <div class="flex-1">
+                                        <p class="font-medium">Settings Documentation</p>
+                                        <p class="text-sm text-gray-500">docs/settings.md</p>
+                                    </div>
+                                </a>
                             </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="flex items-center justify-between px-4 py-3 border-t border-gray-700 bg-gray-800/50">
+                            <div class="flex items-center gap-4 text-xs text-gray-500">
+                                <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-gray-700 rounded">↑</kbd><kbd class="px-1.5 py-0.5 bg-gray-700 rounded">↓</kbd> Navigate</span>
+                                <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-gray-700 rounded">↵</kbd> Select</span>
+                            </div>
+                            <span class="text-xs text-gray-500">4 results</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: E-commerce Search with Filters -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 4: E-commerce Search with Filters</h2>
+                <p class="text-sm text-gray-600">Product search with inline filter pills</p>
+            </div>
+            <div class="p-6">
+                <nav class="space-y-4">
+                    <!-- Search Bar -->
+                    <div class="flex gap-3">
+                        <div class="flex-1 relative">
+                            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <input type="text" placeholder="Search products..." value="wireless headphones" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                        </div>
+                        <button class="px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            Search
+                        </button>
+                    </div>
+
+                    <!-- Active Filters -->
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-sm text-gray-500">Filters:</span>
+                        <button class="flex items-center gap-1.5 px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-200 transition-colors group">
+                            Category: Electronics
+                            <svg class="w-4 h-4 text-primary-500 group-hover:text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <button class="flex items-center gap-1.5 px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-200 transition-colors group">
+                            Price: $50 - $200
+                            <svg class="w-4 h-4 text-primary-500 group-hover:text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <button class="flex items-center gap-1.5 px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-200 transition-colors group">
+                            Rating: 4+ Stars
+                            <svg class="w-4 h-4 text-primary-500 group-hover:text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <button class="text-sm text-gray-500 hover:text-red-600 transition-colors">Clear all</button>
+                    </div>
+
+                    <!-- Filter Bar -->
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                        <button class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 hover:border-gray-300 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                            </svg>
+                            All Filters
+                        </button>
+                        <div class="h-6 w-px bg-gray-300"></div>
+                        <button class="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-white rounded-lg transition-colors">Brand</button>
+                        <button class="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-white rounded-lg transition-colors">Color</button>
+                        <button class="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-white rounded-lg transition-colors">Size</button>
+                        <button class="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-white rounded-lg transition-colors">Availability</button>
+                        <div class="flex-1"></div>
+                        <select class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                            <option>Sort: Relevance</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest First</option>
+                            <option>Best Selling</option>
+                        </select>
+                    </div>
+
+                    <!-- Results Info -->
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">Showing <span class="font-medium text-gray-900">1-24</span> of <span class="font-medium text-gray-900">156</span> results for "<span class="font-medium text-gray-900">wireless headphones</span>"</p>
+                        <div class="flex items-center gap-2">
+                            <button class="p-2 bg-primary-100 text-primary-600 rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                                </svg>
+                            </button>
+                            <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </nav>
+            </div>
+        </section>
+
+        <!-- Style 5: Autocomplete Dropdown -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 5: Autocomplete Dropdown</h2>
+                <p class="text-sm text-gray-600">Search with live suggestions and type-ahead</p>
+            </div>
+            <div class="p-6">
+                <div class="max-w-xl mx-auto">
+                    <div class="relative">
+                        <!-- Search Input -->
+                        <div class="relative">
+                            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <input type="text" placeholder="Search..." value="react" class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-t-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                            <button class="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-gray-400 hover:text-gray-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Dropdown -->
+                        <div class="border border-t-0 border-gray-300 rounded-b-xl bg-white shadow-lg">
+                            <!-- Suggestions -->
+                            <div class="p-2">
+                                <p class="px-3 py-1.5 text-xs text-gray-500 uppercase tracking-wide">Suggestions</p>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-50 text-primary-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">react</span> tutorial</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-100 text-gray-700">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">react</span> hooks</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-100 text-gray-700">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">react</span> native</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-100 text-gray-700">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">react</span> router</span>
+                                </a>
+                            </div>
+
+                            <!-- Quick Results -->
+                            <div class="border-t border-gray-200 p-2">
+                                <p class="px-3 py-1.5 text-xs text-gray-500 uppercase tracking-wide">Quick Results</p>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-100">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-900">React Documentation</p>
+                                        <p class="text-xs text-gray-500">Official React documentation and guides</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-100">
+                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-900">Getting Started with React</p>
+                                        <p class="text-xs text-gray-500">Beginner tutorial - 15 min read</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Footer -->
+                            <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 rounded-b-xl">
+                                <p class="text-xs text-gray-500">Press <kbd class="px-1.5 py-0.5 bg-white border border-gray-300 rounded text-gray-600">Enter</kbd> to search or <kbd class="px-1.5 py-0.5 bg-white border border-gray-300 rounded text-gray-600">↑</kbd> <kbd class="px-1.5 py-0.5 bg-white border border-gray-300 rounded text-gray-600">↓</kbd> to navigate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Search with Voice Input -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 6: Search with Voice & Camera</h2>
+                <p class="text-sm text-gray-600">Multi-modal search with voice and image options</p>
+            </div>
+            <div class="p-6">
+                <div class="max-w-2xl mx-auto">
+                    <!-- Main Search -->
+                    <div class="relative">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" placeholder="Search by text, voice, or image..." class="w-full pl-12 pr-32 py-4 border-2 border-gray-200 rounded-2xl focus:border-primary-500 focus:ring-0 focus:outline-none text-lg">
+                        <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                            <!-- Voice Button -->
+                            <button class="p-2.5 text-gray-400 hover:text-primary-500 hover:bg-primary-50 rounded-xl transition-colors group" title="Voice search">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                                </svg>
+                            </button>
+                            <!-- Camera Button -->
+                            <button class="p-2.5 text-gray-400 hover:text-primary-500 hover:bg-primary-50 rounded-xl transition-colors group" title="Image search">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </button>
+                            <!-- Divider -->
+                            <div class="h-6 w-px bg-gray-200 mx-1"></div>
+                            <!-- Search Button -->
+                            <button class="p-2.5 bg-primary-500 text-white rounded-xl hover:bg-primary-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Search Options -->
+                    <div class="mt-6 grid grid-cols-3 gap-4">
+                        <button class="flex flex-col items-center gap-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group">
+                            <div class="w-12 h-12 bg-gray-100 group-hover:bg-primary-100 rounded-full flex items-center justify-center transition-colors">
+                                <svg class="w-6 h-6 text-gray-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-primary-700">Voice Search</span>
+                            <span class="text-xs text-gray-500">Speak to search</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group">
+                            <div class="w-12 h-12 bg-gray-100 group-hover:bg-primary-100 rounded-full flex items-center justify-center transition-colors">
+                                <svg class="w-6 h-6 text-gray-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-primary-700">Image Search</span>
+                            <span class="text-xs text-gray-500">Upload a photo</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group">
+                            <div class="w-12 h-12 bg-gray-100 group-hover:bg-primary-100 rounded-full flex items-center justify-center transition-colors">
+                                <svg class="w-6 h-6 text-gray-500 group-hover:text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-primary-700">Scan QR/Barcode</span>
+                            <span class="text-xs text-gray-500">Use camera</span>
+                        </button>
+                    </div>
+
+                    <!-- Search History -->
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-sm font-medium text-gray-900">Recent Searches</h4>
+                            <button class="text-xs text-primary-600 hover:text-primary-700">Clear all</button>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="flex items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                iPhone 15 Pro case
+                            </a>
+                            <a href="#" class="flex items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                wireless earbuds
+                            </a>
+                            <a href="#" class="flex items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                standing desk
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 py-8">
-            <p class="text-center text-gray-600">Language Selector Navigation - Part of 1000 Tailwind UI Templates Collection</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleDropdown(menuId) {
-            const menu = document.getElementById(menuId);
-            const allMenus = document.querySelectorAll('[id^="langMenu"]');
-
-            // Close all other dropdowns
-            allMenus.forEach(m => {
-                if (m.id !== menuId) {
-                    m.classList.add('hidden');
-                }
-            });
-
-            // Toggle current dropdown
-            menu.classList.toggle('hidden');
-        }
-
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(e) {
-            const dropdowns = document.querySelectorAll('[id^="langDropdown"]');
-            let clickedInside = false;
-
-            dropdowns.forEach(dropdown => {
-                if (dropdown.contains(e.target)) {
-                    clickedInside = true;
-                }
-            });
-
-            if (!clickedInside) {
-                document.querySelectorAll('[id^="langMenu"]').forEach(menu => {
-                    menu.classList.add('hidden');
-                });
-            }
-        });
-    </script>
 </body>
 </html>
