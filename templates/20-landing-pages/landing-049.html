@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cryptocurrency Landing Page - Modern crypto exchange landing template">
+  <title>landing-049: Cryptocurrency Landing | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.25 260);
+      --color-primary-600: oklch(0.48 0.25 260);
+      --color-secondary-500: oklch(0.70 0.20 150);
+    }
+  </style>
+
+  <style>
+    /* Chart Animation */
+    @keyframes draw-line {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .animate-draw {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw-line 2s ease-out forwards;
+    }
+    
+    /* Coin Float Animation */
+    @keyframes float-coin {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+    .animate-float-coin {
+      animation: float-coin 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-slate-900 font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <span class="font-bold text-2xl tracking-tight text-slate-900" data-i18n="landing.crypto.brand">CryptoX</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#market" class="font-medium text-slate-600 hover:text-primary-600 transition-colors" data-i18n="landing.crypto.market">Market</a>
+          <a href="#features" class="font-medium text-slate-600 hover:text-primary-600 transition-colors" data-i18n="landing.crypto.features">Features</a>
+          <a href="#learn" class="font-medium text-slate-600 hover:text-primary-600 transition-colors" data-i18n="landing.crypto.learn">Learn</a>
+          <a href="#" class="font-medium text-slate-900 hover:text-primary-600 transition-colors" data-i18n="landing.crypto.login">Log In</a>
+          <a href="#" class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-lg font-bold transition-all shadow-lg shadow-primary-600/20" data-i18n="landing.crypto.getStarted">Get Started</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-slate-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-50 to-transparent -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <!-- Text Content -->
+        <div class="text-center lg:text-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+            Buy & Sell <br>
+            <span class="text-primary-600" data-i18n="landing.crypto.heroHighlight">Crypto Assets</span>
+            <br>Securely
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0" data-i18n="landing.crypto.heroDesc">
+            The world's most trusted cryptocurrency exchange. Buy Bitcoin, Ethereum, and 100+ cryptocurrencies with the lowest fees.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+            <div class="flex w-full sm:max-w-md shadow-lg rounded-lg overflow-hidden p-1 bg-white border border-slate-200">
+              <input type="email" placeholder="Email Address" class="flex-1 px-4 py-3 outline-none text-slate-600 bg-transparent" aria-label="Email Address">
+              <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-bold transition-colors" data-i18n="landing.crypto.registerNow">
+                Register Now
+              </button>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-center lg:justify-start gap-8 grayscale opacity-60">
+             <!-- Partner Logos (Placeholders) -->
+             <span class="font-bold text-xl text-slate-400">VISA</span>
+             <span class="font-bold text-xl text-slate-400">Mastercard</span>
+             <span class="font-bold text-xl text-slate-400">PayPal</span>
+          </div>
+        </div>
+
+        <!-- Hero Image / Animation -->
+        <div class="relative lg:h-[500px] flex items-center justify-center">
+          <!-- Phone Mockup -->
+          <div class="relative w-72 h-[500px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl z-10 overflow-hidden">
+            <!-- Screen Content -->
+            <div class="w-full h-full bg-slate-50 relative">
+              <div class="bg-primary-600 h-32 rounded-b-3xl p-6 text-white">
+                <div class="flex justify-between items-center mb-4">
+                   <div class="w-8 h-8 bg-white/20 rounded-full"></div>
+                   <div class="w-6 h-6 bg-white/20 rounded-full"></div>
+                </div>
+                <p class="text-sm opacity-80">Total Balance</p>
+                <p class="text-3xl font-bold">$42,593.00</p>
+              </div>
+              
+              <div class="p-6 space-y-4">
+                <!-- Chart -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                   <div class="flex justify-between mb-2">
+                     <span class="font-bold text-slate-700">Bitcoin</span>
+                     <span class="text-green-500 font-medium">+5.2%</span>
+                   </div>
+                   <svg viewBox="0 0 100 40" class="w-full h-12 stroke-primary-600 fill-none stroke-2">
+                     <path d="M0 30 Q 20 10 40 25 T 100 5" class="animate-draw" />
+                   </svg>
+                </div>
+                
+                <!-- List -->
+                <div class="space-y-3">
+                   <div class="flex items-center justify-between">
+                     <div class="flex items-center gap-3">
+                       <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500 font-bold">₿</div>
+                       <div>
+                         <p class="font-bold text-slate-800">BTC</p>
+                         <p class="text-xs text-slate-500">Bitcoin</p>
+                       </div>
+                     </div>
+                     <div class="text-right">
+                       <p class="font-bold text-slate-800">$45,230</p>
+                       <p class="text-xs text-green-500">+1.2%</p>
+                     </div>
+                   </div>
+                   <div class="flex items-center justify-between">
+                     <div class="flex items-center gap-3">
+                       <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-500 font-bold">Ξ</div>
+                       <div>
+                         <p class="font-bold text-slate-800">ETH</p>
+                         <p class="text-xs text-slate-500">Ethereum</p>
+                       </div>
+                     </div>
+                     <div class="text-right">
+                       <p class="font-bold text-slate-800">$3,120</p>
+                       <p class="text-xs text-red-500">-0.5%</p>
+                     </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Elements -->
+          <div class="absolute top-20 left-10 bg-white p-4 rounded-xl shadow-xl animate-float-coin flex items-center gap-3 border border-slate-100 z-20">
+            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500">Transaction</p>
+              <p class="font-bold text-slate-900">Success</p>
+            </div>
+          </div>
+
+          <div class="absolute bottom-40 -right-4 bg-white p-4 rounded-xl shadow-xl animate-float-coin flex items-center gap-3 border border-slate-100 z-20" style="animation-delay: 1s;">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg">%</div>
+            <div>
+              <p class="text-xs text-slate-500">APY</p>
+              <p class="font-bold text-slate-900">Up to 12%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Trend -->
+  <section id="market" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-slate-900 mb-12" data-i18n="landing.crypto.marketTrends">Market Trends</h2>
+      
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 text-sm uppercase tracking-wider">
+                <th class="p-6 font-semibold" data-i18n="landing.crypto.name">Name</th>
+                <th class="p-6 font-semibold" data-i18n="landing.crypto.price">Price</th>
+                <th class="p-6 font-semibold" data-i18n="landing.crypto.change">24h Change</th>
+                <th class="p-6 font-semibold hidden md:table-cell" data-i18n="landing.crypto.chart">Chart</th>
+                <th class="p-6 font-semibold text-right" data-i18n="landing.crypto.action">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="p-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-orange-500 rounded-full text-white flex items-center justify-center font-bold text-xs">B</div>
+                    <span class="font-bold text-slate-900">Bitcoin</span>
+                    <span class="text-slate-400 text-sm">BTC</span>
+                  </div>
+                </td>
+                <td class="p-6 font-mono font-medium">$45,234.12</td>
+                <td class="p-6 text-green-600 font-medium">+1.45%</td>
+                <td class="p-6 hidden md:table-cell">
+                  <svg class="w-24 h-10 stroke-green-500 fill-none stroke-2"><path d="M0 30 Q 12 25 24 10 T 48 15 T 72 5 T 96 20"></path></svg>
+                </td>
+                <td class="p-6 text-right">
+                  <button class="text-primary-600 hover:bg-primary-50 px-4 py-2 rounded-lg font-medium text-sm transition-colors">Trade</button>
+                </td>
+              </tr>
+              
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="p-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-indigo-500 rounded-full text-white flex items-center justify-center font-bold text-xs">E</div>
+                    <span class="font-bold text-slate-900">Ethereum</span>
+                    <span class="text-slate-400 text-sm">ETH</span>
+                  </div>
+                </td>
+                <td class="p-6 font-mono font-medium">$3,120.50</td>
+                <td class="p-6 text-red-500 font-medium">-0.23%</td>
+                <td class="p-6 hidden md:table-cell">
+                  <svg class="w-24 h-10 stroke-red-500 fill-none stroke-2"><path d="M0 10 Q 12 15 24 20 T 48 15 T 72 30 T 96 25"></path></svg>
+                </td>
+                <td class="p-6 text-right">
+                  <button class="text-primary-600 hover:bg-primary-50 px-4 py-2 rounded-lg font-medium text-sm transition-colors">Trade</button>
+                </td>
+              </tr>
+              
+               <tr class="hover:bg-slate-50 transition-colors">
+                <td class="p-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold text-xs">S</div>
+                    <span class="font-bold text-slate-900">Solana</span>
+                    <span class="text-slate-400 text-sm">SOL</span>
+                  </div>
+                </td>
+                <td class="p-6 font-mono font-medium">$102.45</td>
+                <td class="p-6 text-green-600 font-medium">+5.67%</td>
+                <td class="p-6 hidden md:table-cell">
+                  <svg class="w-24 h-10 stroke-green-500 fill-none stroke-2"><path d="M0 35 Q 12 30 24 20 T 48 10 T 72 5 T 96 2"></path></svg>
+                </td>
+                <td class="p-6 text-right">
+                  <button class="text-primary-600 hover:bg-primary-50 px-4 py-2 rounded-lg font-medium text-sm transition-colors">Trade</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="landing.crypto.whyChooseUs">Why Choose CryptoX</h2>
+        <p class="text-lg text-slate-600" data-i18n="landing.crypto.featuresDesc">Experience the next generation cryptocurrency platform with industry-leading features.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center text-primary-600 mb-6">
+             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="landing.crypto.secure">Bank-Grade Security</h3>
+          <p class="text-slate-600">Your assets are protected by offline cold storage and 2FA authentication.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-secondary-50 rounded-xl flex items-center justify-center text-secondary-600 mb-6">
+             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="landing.crypto.fast">Lightning Fast</h3>
+          <p class="text-slate-600">Execute trades in milliseconds. Our engine handles millions of transactions per second.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="landing.crypto.fees">Lowest Fees</h3>
+          <p class="text-slate-600">Save more with our competitive fee structure. Zero fees on your first deposit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Download Section -->
+  <section class="py-20 bg-primary-700 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2 text-center lg:text-left">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="landing.crypto.appTitle">Trade Anywhere, Anytime</h2>
+          <p class="text-primary-100 text-lg mb-8">
+            Stay connected to the market with our powerful mobile app. Set alerts, trade on the go, and manage your portfolio with ease.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <button class="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-slate-900 transition-colors">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 12.625c0-2.45 1.98-4.075 2.075-4.125-1.13-1.66-2.9-1.885-3.525-1.925-1.485-.15-2.905.885-3.655.885-.76 0-1.935-.86-3.185-.835-1.63.025-3.145.96-3.99 2.435-1.715 2.99-.44 7.415 1.215 9.835.81 1.18 1.775 2.5 3.04 2.45 1.215-.05 1.675-.785 3.14-.785 1.455 0 1.875.785 3.155.76 1.3-.025 2.13-1.19 2.925-2.36 0 0 .1-.225.125-.3-.95-.5-1.525-1.575-1.525-2.7 0-2.025 1.4-3.175 1.425-3.2zm-3.5-7.5c.665-.815 1.115-1.945.99-3.075-1.01.05-2.2.64-2.865 1.475-.595.735-1.125 1.96-1.005 3.025 1.125.085 2.225-.615 2.88-1.425z"></path></svg>
+              <div class="text-left">
+                <div class="text-xs">Download on the</div>
+                <div class="font-bold text-lg leading-none">App Store</div>
+              </div>
+            </button>
+            <button class="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-slate-900 transition-colors">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 1.5 24.194C.514 23.279 0 21.87 0 20.119V3.881c0-1.078.438-1.633 1.109-2.067zM15.594 13.8l3.24 3.215-4.957 2.826-3.573-3.524L15.594 13.8zm5.153-1.65l3.984 2.272c.888.507.888 1.336 0 1.842l-1.54 0.88-5.684-3.237 3.24-1.757zm-4.47-1.618l-3.573-3.524 4.957 2.826-1.384-1.302zM2.497 0.308L10.304 8.002 13.792 11.49 1.5 0.308z"></path></svg>
+              <div class="text-left">
+                <div class="text-xs">Get it on</div>
+                <div class="font-bold text-lg leading-none">Google Play</div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="lg:w-1/2 flex justify-center">
+           <!-- Mockup of App -->
+           <div class="w-64 h-[500px] bg-slate-900 rounded-[2.5rem] border-8 border-slate-800 shadow-2xl overflow-hidden relative">
+             <div class="w-full h-full bg-slate-50">
+               <!-- App Header -->
+               <div class="bg-primary-600 p-4 text-white">
+                 <p class="text-xs opacity-80">Hello, Alex</p>
+                 <p class="font-bold">Portfolio</p>
+               </div>
+               <!-- App Content -->
+               <div class="p-4 space-y-3">
+                  <div class="h-32 bg-primary-50 rounded-lg border border-primary-100"></div>
+                  <div class="h-12 bg-white rounded-lg shadow-sm"></div>
+                  <div class="h-12 bg-white rounded-lg shadow-sm"></div>
+                  <div class="h-12 bg-white rounded-lg shadow-sm"></div>
+                  <div class="h-12 bg-white rounded-lg shadow-sm"></div>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <span class="font-bold text-xl text-slate-900">CryptoX</span>
+          </div>
+          <p class="text-slate-500 text-sm">
+            The most trusted crypto currency platform to buy, sell and trade digital assets.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4">Platform</h4>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-primary-600">Markets</a></li>
+            <li><a href="#" class="hover:text-primary-600">Exchange</a></li>
+            <li><a href="#" class="hover:text-primary-600">Earn</a></li>
+            <li><a href="#" class="hover:text-primary-600">Wallet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4">Support</h4>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-primary-600">Help Center</a></li>
+            <li><a href="#" class="hover:text-primary-600">Fees</a></li>
+            <li><a href="#" class="hover:text-primary-600">Security</a></li>
+            <li><a href="#" class="hover:text-primary-600">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4">Company</h4>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-primary-600">About Us</a></li>
+            <li><a href="#" class="hover:text-primary-600">Careers</a></li>
+            <li><a href="#" class="hover:text-primary-600">Blog</a></li>
+            <li><a href="#" class="hover:text-primary-600">Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-500 text-sm">&copy; 2025 CryptoX. All rights reserved.</p>
+        <div class="flex gap-6">
+           <a href="#" class="text-slate-400 hover:text-slate-600">
+             <span class="sr-only">Twitter</span>
+             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+           </a>
+           <a href="#" class="text-slate-400 hover:text-slate-600">
+             <span class="sr-only">GitHub</span>
+             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+           </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../src/js/i18n.js" type="module"></script>
+</body>
+</html>
