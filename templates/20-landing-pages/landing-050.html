@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NFT/Web3 Landing Page - Dark themed landing page for Web3 projects">
+  <title>landing-050: NFT/Web3 Landing | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.65 0.25 300);
+      --color-primary-600: oklch(0.55 0.25 300);
+      --color-secondary-500: oklch(0.70 0.20 160);
+    }
+  </style>
+
+  <style>
+    /* Custom Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: float 8s ease-in-out infinite 1s;
+    }
+    
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5)); }
+      50% { filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.8)); }
+    }
+    .animate-glow {
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, oklch(0.65 0.25 300), oklch(0.70 0.20 160));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-white selection:bg-primary-500 selection:text-white font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center font-bold text-xl text-white">
+            N
+          </div>
+          <span class="font-bold text-xl tracking-tight" data-i18n="landing.nft.brand">NFT World</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#collection" class="hover:text-primary-500 transition-colors duration-200" data-i18n="landing.nft.collection">Collection</a>
+            <a href="#roadmap" class="hover:text-primary-500 transition-colors duration-200" data-i18n="landing.nft.roadmap">Roadmap</a>
+            <a href="#team" class="hover:text-primary-500 transition-colors duration-200" data-i18n="landing.nft.team">Team</a>
+            <a href="#faq" class="hover:text-primary-500 transition-colors duration-200" data-i18n="landing.nft.faq">FAQ</a>
+          </div>
+        </div>
+
+        <!-- Connect Wallet Button -->
+        <div class="hidden md:block">
+          <button class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]" data-i18n="landing.nft.connectWallet">
+            Connect Wallet
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/20 rounded-full blur-[100px] -z-10"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/20 rounded-full blur-[100px] -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8 backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span class="text-sm font-medium text-slate-300" data-i18n="landing.nft.mintingLive">Minting is Live</span>
+          </div>
+          <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+            Discover Rare <br>
+            <span class="text-gradient" data-i18n="landing.nft.heroTitleHighlight">Digital Art</span>
+          </h1>
+          <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0" data-i18n="landing.nft.heroDesc">
+            Join the exclusive community of collectors. 10,000 unique digital collectibles living on the blockchain.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <button class="bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/25" data-i18n="landing.nft.mintNow">
+              Mint Now
+            </button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-slate-700" data-i18n="landing.nft.viewCollection">
+              View Collection
+            </button>
+          </div>
+          
+          <!-- Stats -->
+          <div class="mt-12 grid grid-cols-3 gap-8 border-t border-slate-800 pt-8">
+            <div>
+              <p class="text-3xl font-bold text-white">10k</p>
+              <p class="text-sm text-slate-500 uppercase tracking-wider">Items</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-white">4.2k</p>
+              <p class="text-sm text-slate-500 uppercase tracking-wider">Owners</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-white">150</p>
+              <p class="text-sm text-slate-500 uppercase tracking-wider">Floor Price</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image/Animation -->
+        <div class="relative lg:h-[600px] flex items-center justify-center">
+          <div class="relative w-72 h-96 lg:w-96 lg:h-[500px] bg-slate-800 rounded-2xl border border-slate-700 shadow-2xl transform rotate-[-6deg] z-10 animate-float">
+            <div class="absolute inset-2 bg-gradient-to-br from-slate-700 to-slate-900 rounded-xl overflow-hidden">
+              <!-- Placeholder for NFT Image -->
+              <div class="w-full h-full flex items-center justify-center bg-slate-900">
+                <span class="text-6xl">🎨</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute w-72 h-96 lg:w-96 lg:h-[500px] bg-slate-800/50 rounded-2xl border border-slate-700/50 shadow-xl transform rotate-[6deg] translate-x-4 animate-float-delayed z-0">
+             <div class="absolute inset-2 bg-gradient-to-br from-slate-700/50 to-slate-900/50 rounded-xl overflow-hidden backdrop-blur-sm"></div>
+          </div>
+          
+          <!-- Floating Elements -->
+          <div class="absolute top-10 right-0 p-4 bg-slate-800/80 backdrop-blur-md rounded-xl border border-slate-700 shadow-xl animate-bounce" style="animation-duration: 3s;">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 font-bold">Ξ</div>
+              <div>
+                <p class="text-xs text-slate-400">Current Bid</p>
+                <p class="font-bold text-white">2.5 ETH</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collection -->
+  <section id="collection" class="py-20 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="landing.nft.featuredTitle">Featured Drops</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto" data-i18n="landing.nft.featuredDesc">Exclusive items from our latest collection. Limited edition and rare traits.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-2">
+          <div class="aspect-square bg-slate-700 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <button class="w-full bg-white text-slate-900 font-bold py-3 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Place Bid</button>
+            </div>
+            <!-- Placeholder -->
+            <div class="w-full h-full flex items-center justify-center text-4xl">👾</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Cyber Punk #001</h3>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-primary-500"></div>
+                <span class="text-sm text-slate-400">@artist</span>
+              </div>
+              <span class="text-primary-400 font-mono font-bold">1.2 ETH</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-2">
+          <div class="aspect-square bg-slate-700 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <button class="w-full bg-white text-slate-900 font-bold py-3 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Place Bid</button>
+            </div>
+             <!-- Placeholder -->
+             <div class="w-full h-full flex items-center justify-center text-4xl">🤖</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Mecha Droid #452</h3>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-secondary-500"></div>
+                <span class="text-sm text-slate-400">@creator</span>
+              </div>
+              <span class="text-primary-400 font-mono font-bold">0.8 ETH</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-2">
+          <div class="aspect-square bg-slate-700 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <button class="w-full bg-white text-slate-900 font-bold py-3 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Place Bid</button>
+            </div>
+             <!-- Placeholder -->
+             <div class="w-full h-full flex items-center justify-center text-4xl">👽</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Space Walker #888</h3>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-primary-600"></div>
+                <span class="text-sm text-slate-400">@designer</span>
+              </div>
+              <span class="text-primary-400 font-mono font-bold">2.5 ETH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="py-20 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="landing.nft.roadmapTitle">Roadmap</h2>
+        <p class="text-slate-400" data-i18n="landing.nft.roadmapDesc">Our journey to the metaverse and beyond.</p>
+      </div>
+
+      <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+        
+        <!-- Item 1 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-primary-500 bg-slate-900 group-[.is-active]:bg-primary-500 text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-800 border border-slate-700 rounded-xl shadow-lg hover:border-primary-500/50 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-lg text-white">Phase 1: Launch</h3>
+              <span class="text-xs font-mono text-primary-400 bg-primary-500/10 px-2 py-1 rounded">Q1 2025</span>
+            </div>
+            <p class="text-slate-400 text-sm">Website launch, community building, and initial whitelist opening. The beginning of the journey.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <span class="font-bold text-sm">2</span>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-800 border border-slate-700 rounded-xl shadow-lg hover:border-primary-500/50 transition-colors">
+             <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-lg text-white">Phase 2: Minting</h3>
+              <span class="text-xs font-mono text-slate-500 bg-slate-700 px-2 py-1 rounded">Q2 2025</span>
+            </div>
+            <p class="text-slate-400 text-sm">Public mint goes live. Reveal of rarity traits and partnership announcements.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <span class="font-bold text-sm">3</span>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-800 border border-slate-700 rounded-xl shadow-lg hover:border-primary-500/50 transition-colors">
+             <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-lg text-white">Phase 3: Utility</h3>
+              <span class="text-xs font-mono text-slate-500 bg-slate-700 px-2 py-1 rounded">Q3 2025</span>
+            </div>
+            <p class="text-slate-400 text-sm">Staking mechanism release. Holders earn passive income tokens. Merch store launch.</p>
+          </div>
+        </div>
+
+         <!-- Item 4 -->
+         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-700 bg-slate-900 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <span class="font-bold text-sm">4</span>
+          </div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-slate-800 border border-slate-700 rounded-xl shadow-lg hover:border-primary-500/50 transition-colors">
+             <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-lg text-white">Phase 4: Metaverse</h3>
+              <span class="text-xs font-mono text-slate-500 bg-slate-700 px-2 py-1 rounded">Q4 2025</span>
+            </div>
+            <p class="text-slate-400 text-sm">3D Avatars integration into partner metaverses. Exclusive virtual events for holders.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-slate-900/30">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="landing.nft.faqTitle">Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+          <button class="flex items-center justify-between w-full p-6 text-left" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-lg">What is the mint price?</span>
+            <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="hidden px-6 pb-6 text-slate-400">
+            The mint price is 0.08 ETH for presale and 0.1 ETH for public sale.
+          </div>
+        </div>
+        <style>
+          .open > div { display: block; }
+          .open svg { transform: rotate(180deg); }
+        </style>
+
+        <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+          <button class="flex items-center justify-between w-full p-6 text-left" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-lg">Which blockchain is it on?</span>
+             <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="hidden px-6 pb-6 text-slate-400">
+            We are launching on the Ethereum blockchain (ERC-721).
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+          <button class="flex items-center justify-between w-full p-6 text-left" onclick="this.parentElement.classList.toggle('open')">
+            <span class="font-medium text-lg">How many can I mint?</span>
+             <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="hidden px-6 pb-6 text-slate-400">
+             Max 2 per wallet during presale, and 5 per transaction during public sale.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 rounded bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center font-bold text-white">N</div>
+            <span class="font-bold text-xl">NFT World</span>
+          </div>
+          <p class="text-slate-400 max-w-xs">
+            The premier destination for next-generation digital collectibles. Join the revolution today.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-white">Community</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#" class="hover:text-primary-500">Discord</a></li>
+            <li><a href="#" class="hover:text-primary-500">Twitter</a></li>
+            <li><a href="#" class="hover:text-primary-500">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+           <h4 class="font-bold mb-4 text-white">Resources</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#" class="hover:text-primary-500">Whitepaper</a></li>
+            <li><a href="#" class="hover:text-primary-500">Smart Contract</a></li>
+            <li><a href="#" class="hover:text-primary-500">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-900 text-center text-slate-500 text-sm">
+        &copy; 2025 NFT World. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../src/js/i18n.js" type="module"></script>
+</body>
+</html>
