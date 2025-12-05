@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurant Landing Page - Elegant dining template with menu and reservation">
+  <title>landing-042: Restaurant Landing | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-900: oklch(0.15 0.05 30);
+      --color-primary-800: oklch(0.20 0.05 30);
+      --color-gold-500: oklch(0.75 0.15 60);
+      --color-gold-600: oklch(0.65 0.15 60);
+      --font-serif: "Playfair Display", serif;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-sans { font-family: 'Lato', sans-serif; }
+  </style>
+</head>
+<body class="bg-primary-900 text-slate-300 font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="absolute top-0 w-full z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-24 items-center">
+        <!-- Logo -->
+        <a href="#" class="text-center group">
+          <span class="block font-serif text-2xl font-bold text-gold-500 tracking-widest group-hover:text-white transition-colors" data-i18n="landing.restaurant.brand">SAVORY</span>
+          <span class="block text-[0.6rem] uppercase tracking-[0.3em] text-white group-hover:text-gold-500 transition-colors">Fine Dining</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="#about" class="text-sm uppercase tracking-widest text-white hover:text-gold-500 transition-colors" data-i18n="landing.restaurant.about">About</a>
+          <a href="#menu" class="text-sm uppercase tracking-widest text-white hover:text-gold-500 transition-colors" data-i18n="landing.restaurant.menu">Menu</a>
+          <a href="#gallery" class="text-sm uppercase tracking-widest text-white hover:text-gold-500 transition-colors" data-i18n="landing.restaurant.gallery">Gallery</a>
+          <a href="#reservation" class="text-sm uppercase tracking-widest text-gold-500 border border-gold-500 px-6 py-2 hover:bg-gold-500 hover:text-primary-900 transition-colors" data-i18n="landing.restaurant.book">Book a Table</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <!-- Background Video/Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop" alt="Fine Dining" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary-900 via-transparent to-primary-900/80"></div>
+    </div>
+
+    <div class="relative z-10 text-center max-w-4xl px-4">
+      <span class="block text-gold-500 font-serif text-xl md:text-2xl italic mb-4" data-i18n="landing.restaurant.tagline">Experience the Taste of Italy</span>
+      <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+        Exquisite Flavors <br> Unforgettable Moments
+      </h1>
+      <p class="text-slate-300 max-w-xl mx-auto mb-10 text-lg leading-relaxed font-light">
+        Indulge in a culinary journey crafted with passion and the finest seasonal ingredients.
+      </p>
+      <a href="#menu" class="inline-block border-b border-gold-500 text-gold-500 uppercase tracking-widest text-sm pb-1 hover:text-white hover:border-white transition-all" data-i18n="landing.restaurant.viewMenu">View Our Menu</a>
+    </div>
+
+    <!-- Scroll Down -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 lg:py-32 bg-primary-900 relative">
+    <!-- Decorative Element -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative">
+          <div class="relative z-10 border-4 border-gold-500/30 p-2">
+             <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1000&auto=format&fit=crop" alt="Chef" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000">
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-primary-800 -z-0"></div>
+        </div>
+        <div>
+          <span class="text-gold-500 font-serif italic text-xl mb-2 block" data-i18n="landing.restaurant.storyTag">Our Story</span>
+          <h2 class="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight" data-i18n="landing.restaurant.storyTitle">Culinary Excellence Since 1998</h2>
+          <p class="text-slate-400 mb-6 leading-loose font-light">
+            Founded by Chef Marco Rossi, Savory began as a humble dream to bring authentic, rustic Italian flavors to the heart of the city. Over the decades, we have evolved into a landmark for fine dining, maintaining our commitment to traditional techniques while embracing modern innovation.
+          </p>
+          <p class="text-slate-400 mb-8 leading-loose font-light">
+            Every dish tells a story of heritage, sourcing only the freshest produce from local farmers and premium imports directly from Italy.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" class="h-12 invert opacity-60">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights -->
+  <section id="menu" class="py-20 lg:py-32 bg-primary-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-gold-500 font-serif italic text-xl mb-2 block" data-i18n="landing.restaurant.menuTag">Discover</span>
+        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6" data-i18n="landing.restaurant.menuTitle">Chef's Specialties</h2>
+        <div class="w-24 h-px bg-gold-500 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+        <!-- Item 1 -->
+        <div class="flex justify-between items-baseline group cursor-default">
+          <div class="flex-1 pr-4">
+            <h3 class="font-serif text-xl text-white mb-1 group-hover:text-gold-500 transition-colors">Truffle Risotto</h3>
+            <p class="text-slate-500 text-sm italic">Arborio rice, black truffle, parmesan, white wine</p>
+          </div>
+          <span class="text-gold-500 font-serif text-xl">$34</span>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="flex justify-between items-baseline group cursor-default">
+          <div class="flex-1 pr-4">
+            <h3 class="font-serif text-xl text-white mb-1 group-hover:text-gold-500 transition-colors">Pan-Seared Scallops</h3>
+            <p class="text-slate-500 text-sm italic">Cauliflower purée, capers, lemon butter sauce</p>
+          </div>
+          <span class="text-gold-500 font-serif text-xl">$42</span>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="flex justify-between items-baseline group cursor-default">
+          <div class="flex-1 pr-4">
+            <h3 class="font-serif text-xl text-white mb-1 group-hover:text-gold-500 transition-colors">Wagyu Beef Carpaccio</h3>
+            <p class="text-slate-500 text-sm italic">Thinly sliced beef, arugula, truffle oil, parmesan</p>
+          </div>
+          <span class="text-gold-500 font-serif text-xl">$28</span>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="flex justify-between items-baseline group cursor-default">
+          <div class="flex-1 pr-4">
+            <h3 class="font-serif text-xl text-white mb-1 group-hover:text-gold-500 transition-colors">Lobster Ravioli</h3>
+            <p class="text-slate-500 text-sm italic">Handmade pasta, lobster bisque, fresh basil</p>
+          </div>
+          <span class="text-gold-500 font-serif text-xl">$38</span>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="flex justify-between items-baseline group cursor-default">
+          <div class="flex-1 pr-4">
+            <h3 class="font-serif text-xl text-white mb-1 group-hover:text-gold-500 transition-colors">Osso Buco</h3>
+            <p class="text-slate-500 text-sm italic">Braised veal shanks, vegetables, white wine, broth</p>
+          </div>
+          <span class="text-gold-500 font-serif text-xl">$45</span>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="flex justify-between items-baseline group cursor-default">
+          <div class="flex-1 pr-4">
+            <h3 class="font-serif text-xl text-white mb-1 group-hover:text-gold-500 transition-colors">Tiramisu</h3>
+            <p class="text-slate-500 text-sm italic">Espresso-soaked ladyfingers, mascarpone cream</p>
+          </div>
+          <span class="text-gold-500 font-serif text-xl">$14</span>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="#" class="inline-block border border-white/30 text-white px-8 py-3 text-xs uppercase tracking-widest hover:bg-gold-500 hover:border-gold-500 hover:text-primary-900 transition-all">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dish / Parallax -->
+  <section class="relative py-32 bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <span class="text-gold-500 font-serif text-2xl italic mb-4 block">Taste the Difference</span>
+      <h2 class="font-serif text-4xl md:text-6xl text-white font-bold mb-8 leading-tight">
+        Seasonal Ingredients,<br> Timeless Recipes
+      </h2>
+      <a href="#reservation" class="bg-gold-500 text-primary-900 px-8 py-4 uppercase text-xs tracking-widest font-bold hover:bg-white transition-colors">Reserve Your Table</a>
+    </div>
+  </section>
+
+  <!-- Reservation Form -->
+  <section id="reservation" class="py-20 lg:py-32 bg-primary-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-primary-800 p-8 md:p-12 border border-white/5 shadow-2xl relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-gold-500/30 -mr-4 -mt-4"></div>
+        <div class="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-gold-500/30 -ml-4 -mb-4"></div>
+
+        <div class="text-center mb-10">
+          <span class="text-gold-500 font-serif italic text-xl mb-2 block">Reservations</span>
+          <h2 class="font-serif text-3xl md:text-4xl text-white" data-i18n="landing.restaurant.bookTitle">Book a Table</h2>
+        </div>
+
+        <form class="grid md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Date</label>
+            <input type="date" class="w-full bg-primary-900 border border-white/10 text-white px-4 py-3 focus:border-gold-500 outline-none transition-colors text-sm">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Time</label>
+            <select class="w-full bg-primary-900 border border-white/10 text-white px-4 py-3 focus:border-gold-500 outline-none transition-colors text-sm">
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+              <option>9:00 PM</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Guests</label>
+            <select class="w-full bg-primary-900 border border-white/10 text-white px-4 py-3 focus:border-gold-500 outline-none transition-colors text-sm">
+              <option>2 People</option>
+              <option>3 People</option>
+              <option>4 People</option>
+              <option>5+ People</option>
+            </select>
+          </div>
+          <div class="md:col-span-3 mt-4 text-center">
+            <button type="submit" class="bg-gold-500 text-primary-900 px-10 py-4 uppercase text-xs tracking-widest font-bold hover:bg-white transition-colors w-full md:w-auto" data-i18n="landing.restaurant.confirm">
+              Confirm Reservation
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white/60 py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <a href="#" class="inline-block mb-8">
+        <span class="block font-serif text-3xl font-bold text-white tracking-widest mb-1">SAVORY</span>
+        <span class="block text-[0.6rem] uppercase tracking-[0.4em] text-gold-500">Fine Dining</span>
+      </a>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-12 text-sm font-light tracking-wide">
+        <div>
+          <h4 class="text-white uppercase tracking-widest text-xs mb-4 font-bold">Location</h4>
+          <p>123 Culinary Avenue,<br>Metropolis, NY 10012</p>
+        </div>
+        <div>
+          <h4 class="text-white uppercase tracking-widest text-xs mb-4 font-bold">Hours</h4>
+          <p>Mon-Sun: 5:00 PM - 11:00 PM<br>Happy Hour: 5:00 PM - 7:00 PM</p>
+        </div>
+        <div>
+          <h4 class="text-white uppercase tracking-widest text-xs mb-4 font-bold">Contact</h4>
+          <p>+1 (555) 123-4567<br>reservations@savory.com</p>
+        </div>
+      </div>
+
+      <div class="flex justify-center space-x-8 mb-8">
+        <a href="#" class="hover:text-gold-500 transition-colors"><span class="sr-only">Instagram</span><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.9c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg></a>
+        <a href="#" class="hover:text-gold-500 transition-colors"><span class="sr-only">Facebook</span><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+        <a href="#" class="hover:text-gold-500 transition-colors"><span class="sr-only">Twitter</span><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+      </div>
+      
+      <p class="text-xs text-white/30">&copy; 2025 Savory Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../src/js/i18n.js" type="module"></script>
+</body>
+</html>
