@@ -3,425 +3,511 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breadcrumb Navigation - Tailwind UI Templates</title>
+    <title>Nav-035: Social Navigation - Tailwind UI Templates</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            --color-primary-50: oklch(0.97 0.02 250);
-            --color-primary-100: oklch(0.93 0.04 250);
-            --color-primary-500: oklch(0.55 0.2 250);
-            --color-primary-600: oklch(0.48 0.2 250);
-            --color-primary-700: oklch(0.4 0.2 250);
+            --color-primary-50: oklch(0.97 0.02 240);
+            --color-primary-100: oklch(0.93 0.04 240);
+            --color-primary-200: oklch(0.88 0.08 240);
+            --color-primary-500: oklch(0.55 0.22 240);
+            --color-primary-600: oklch(0.48 0.22 240);
+            --color-primary-700: oklch(0.4 0.18 240);
         }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold text-gray-900">Breadcrumb Navigation</h1>
-            <p class="text-gray-600 mt-2">Various breadcrumb styles for showing page hierarchy and navigation path</p>
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Nav-035: Social Navigation</h1>
+            <p class="text-gray-600 mt-1">Social media and community platform navigation patterns</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
 
-        <!-- Style 1: Simple Breadcrumb -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 1: Simple Breadcrumb</h2>
-                <p class="text-gray-600 text-sm mt-1">Basic breadcrumb with slash separators</p>
+        <!-- Style 1: Social Profile Header Nav -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 1: Social Profile Header</h2>
+                <p class="text-sm text-gray-600">Profile page navigation with tabs and stats</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-2">
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">Home</a>
-                        </li>
-                        <li class="text-gray-400">/</li>
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">Products</a>
-                        </li>
-                        <li class="text-gray-400">/</li>
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors">Electronics</a>
-                        </li>
-                        <li class="text-gray-400">/</li>
-                        <li>
-                            <span class="text-gray-900 font-medium">Smartphones</span>
-                        </li>
-                    </ol>
+            <div class="bg-gradient-to-r from-primary-500 to-primary-700 h-32"></div>
+            <div class="px-6 pb-4">
+                <!-- Profile Info -->
+                <div class="flex items-end gap-4 -mt-12 mb-4">
+                    <div class="w-24 h-24 bg-white rounded-full border-4 border-white shadow-lg overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-2xl font-bold">
+                            JD
+                        </div>
+                    </div>
+                    <div class="flex-1 pb-2">
+                        <h3 class="text-xl font-bold text-gray-900">John Doe</h3>
+                        <p class="text-gray-600">@johndoe</p>
+                    </div>
+                    <div class="flex gap-2 pb-2">
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-full font-medium hover:bg-primary-600 transition-colors">
+                            Follow
+                        </button>
+                        <button class="p-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="flex gap-6 mb-4">
+                    <a href="#" class="text-center hover:text-primary-600 transition-colors">
+                        <p class="text-xl font-bold text-gray-900">1,234</p>
+                        <p class="text-sm text-gray-500">Posts</p>
+                    </a>
+                    <a href="#" class="text-center hover:text-primary-600 transition-colors">
+                        <p class="text-xl font-bold text-gray-900">45.6K</p>
+                        <p class="text-sm text-gray-500">Followers</p>
+                    </a>
+                    <a href="#" class="text-center hover:text-primary-600 transition-colors">
+                        <p class="text-xl font-bold text-gray-900">890</p>
+                        <p class="text-sm text-gray-500">Following</p>
+                    </a>
+                </div>
+
+                <!-- Tab Navigation -->
+                <nav class="flex border-b border-gray-200 -mx-6 px-6">
+                    <a href="#" class="px-4 py-3 text-sm font-medium text-primary-600 border-b-2 border-primary-500">
+                        Posts
+                    </a>
+                    <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300 transition-colors">
+                        Media
+                    </a>
+                    <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300 transition-colors">
+                        Likes
+                    </a>
+                    <a href="#" class="px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300 transition-colors">
+                        Replies
+                    </a>
                 </nav>
             </div>
         </section>
 
-        <!-- Style 2: Chevron Breadcrumb -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 2: Chevron Breadcrumb</h2>
-                <p class="text-gray-600 text-sm mt-1">Breadcrumb with chevron arrow separators</p>
+        <!-- Style 2: Activity Feed Navigation -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 2: Activity Feed Navigation</h2>
+                <p class="text-sm text-gray-600">Feed filter with notification indicators</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-1">
-                        <li>
-                            <a href="#" class="flex items-center text-gray-500 hover:text-primary-600 transition-colors">
-                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                                </svg>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <a href="#" class="ml-1 text-gray-500 hover:text-primary-600 transition-colors">Products</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <a href="#" class="ml-1 text-gray-500 hover:text-primary-600 transition-colors">Electronics</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex items-center">
-                                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                <span class="ml-1 text-gray-900 font-medium">Smartphones</span>
-                            </div>
-                        </li>
-                    </ol>
+            <div class="p-4">
+                <nav class="flex items-center gap-2 overflow-x-auto pb-2">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium whitespace-nowrap">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        For You
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors whitespace-nowrap">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        Following
+                    </button>
+                    <button class="relative flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors whitespace-nowrap">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                        Mentions
+                        <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">3</span>
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors whitespace-nowrap">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                        </svg>
+                        Trending
+                    </button>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors whitespace-nowrap">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                        </svg>
+                        News
+                    </button>
                 </nav>
             </div>
         </section>
 
-        <!-- Style 3: Pill Breadcrumb -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 3: Pill Breadcrumb</h2>
-                <p class="text-gray-600 text-sm mt-1">Breadcrumb items as pill-shaped buttons</p>
+        <!-- Style 3: Community Sidebar Nav -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 3: Community Sidebar</h2>
+                <p class="text-sm text-gray-600">Discord/Slack style community navigation</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-2">
-                        <li>
-                            <a href="#" class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+            <div class="flex">
+                <!-- Servers/Communities -->
+                <div class="w-18 bg-gray-900 p-3 flex flex-col items-center gap-3">
+                    <button class="w-12 h-12 bg-primary-500 rounded-2xl flex items-center justify-center text-white hover:rounded-xl transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                    </button>
+                    <div class="w-8 h-0.5 bg-gray-700 rounded-full"></div>
+                    <button class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white hover:rounded-2xl hover:bg-primary-500 transition-all group">
+                        <span class="font-bold">TC</span>
+                    </button>
+                    <button class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white hover:rounded-2xl transition-all relative">
+                        <span class="font-bold">DV</span>
+                        <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-red-500 rounded-full border-2 border-gray-900 text-xs flex items-center justify-center">2</span>
+                    </button>
+                    <button class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white hover:rounded-2xl transition-all">
+                        <span class="font-bold">UI</span>
+                    </button>
+                    <button class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-emerald-500 hover:rounded-2xl transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Channels -->
+                <div class="w-60 bg-gray-800 p-3">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <h3 class="font-bold text-white">Tech Community</h3>
+                        <button class="text-gray-400 hover:text-white">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors">
-                                Products
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </button>
+                    </div>
+
+                    <!-- Channel Category -->
+                    <div class="mb-4">
+                        <button class="flex items-center gap-1 text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1 hover:text-gray-300">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-gray-200 transition-colors">
-                                Electronics
+                            Text Channels
+                        </button>
+                        <nav class="space-y-0.5">
+                            <a href="#" class="flex items-center gap-2 px-2 py-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                                <span class="text-gray-500">#</span>
+                                general
                             </a>
-                        </li>
-                        <li>
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                            <a href="#" class="flex items-center gap-2 px-2 py-1.5 bg-gray-700 text-white rounded">
+                                <span class="text-gray-400">#</span>
+                                introductions
+                            </a>
+                            <a href="#" class="flex items-center gap-2 px-2 py-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded transition-colors relative">
+                                <span class="text-gray-500">#</span>
+                                help
+                                <span class="ml-auto w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">5</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-2 px-2 py-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                                <span class="text-gray-500">#</span>
+                                showcase
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Voice Channels -->
+                    <div>
+                        <button class="flex items-center gap-1 text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1 hover:text-gray-300">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </li>
-                        <li>
-                            <span class="px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
-                                Smartphones
-                            </span>
-                        </li>
-                    </ol>
-                </nav>
+                            Voice Channels
+                        </button>
+                        <nav class="space-y-0.5">
+                            <a href="#" class="flex items-center gap-2 px-2 py-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                </svg>
+                                Lounge
+                                <span class="ml-auto text-xs text-gray-500">2</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-2 px-2 py-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded transition-colors">
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                                </svg>
+                                Gaming
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content Preview -->
+                <div class="flex-1 bg-gray-700 p-4">
+                    <div class="flex items-center gap-2 text-gray-400 mb-4">
+                        <span class="text-gray-500">#</span>
+                        <span class="font-medium text-white">introductions</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Welcome to the introductions channel...</p>
+                </div>
             </div>
         </section>
 
-        <!-- Style 4: Arrow Breadcrumb -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 4: Arrow Breadcrumb</h2>
-                <p class="text-gray-600 text-sm mt-1">Connected arrow-shaped breadcrumb items</p>
+        <!-- Style 4: Messaging App Nav -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 4: Messaging App Navigation</h2>
+                <p class="text-sm text-gray-600">Chat list with conversation previews</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center">
-                        <li class="relative">
-                            <a href="#" class="flex items-center px-4 py-2 bg-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-300 transition-colors rounded-l-lg">
-                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                                </svg>
-                                Home
-                            </a>
-                            <div class="absolute right-0 top-0 h-full w-3 bg-gray-200" style="clip-path: polygon(0 0, 0 100%, 100% 50%);"></div>
-                        </li>
-                        <li class="relative ml-2">
-                            <a href="#" class="flex items-center px-4 py-2 pl-6 bg-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-300 transition-colors">
-                                Products
-                            </a>
-                            <div class="absolute right-0 top-0 h-full w-3 bg-gray-200" style="clip-path: polygon(0 0, 0 100%, 100% 50%);"></div>
-                        </li>
-                        <li class="relative ml-2">
-                            <a href="#" class="flex items-center px-4 py-2 pl-6 bg-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-300 transition-colors">
-                                Electronics
-                            </a>
-                            <div class="absolute right-0 top-0 h-full w-3 bg-gray-200" style="clip-path: polygon(0 0, 0 100%, 100% 50%);"></div>
-                        </li>
-                        <li class="relative ml-2">
-                            <span class="flex items-center px-4 py-2 pl-6 bg-primary-500 text-white text-sm font-medium rounded-r-lg">
-                                Smartphones
-                            </span>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Style 5: Breadcrumb with Dropdown -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 5: Breadcrumb with Dropdown</h2>
-                <p class="text-gray-600 text-sm mt-1">Breadcrumb with collapsible dropdown for long paths</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-1">
-                        <li>
-                            <a href="#" class="flex items-center text-gray-500 hover:text-primary-600 transition-colors">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li class="relative" id="breadcrumbDropdown">
-                            <button class="flex items-center px-2 py-1 text-gray-500 hover:text-primary-600 hover:bg-gray-100 rounded transition-colors" onclick="toggleBreadcrumbMenu()">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"/>
+            <div class="flex h-96">
+                <!-- Chat List -->
+                <div class="w-80 border-r border-gray-200">
+                    <!-- Header -->
+                    <div class="p-4 border-b border-gray-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-gray-900">Messages</h3>
+                            <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                                 </svg>
                             </button>
-                            <div id="breadcrumbMenu" class="absolute left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1 hidden z-50">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Products</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Electronics</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mobile Devices</a>
+                        </div>
+                        <div class="relative">
+                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <input type="text" placeholder="Search messages" class="w-full pl-9 pr-4 py-2 bg-gray-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-200">
+                        </div>
+                    </div>
+
+                    <!-- Conversations -->
+                    <nav class="overflow-y-auto h-[calc(100%-120px)]">
+                        <!-- Active Conversation -->
+                        <a href="#" class="flex items-center gap-3 p-4 bg-primary-50 border-l-4 border-primary-500">
+                            <div class="relative">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-medium">AS</div>
+                                <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
                             </div>
-                        </li>
-                        <li>
-                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-primary-600 transition-colors">Smartphones</a>
-                        </li>
-                        <li>
-                            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <span class="text-gray-900 font-medium">iPhone 15 Pro</span>
-                        </li>
-                    </ol>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between mb-1">
+                                    <p class="font-medium text-gray-900 truncate">Alice Smith</p>
+                                    <span class="text-xs text-gray-500">2m</span>
+                                </div>
+                                <p class="text-sm text-gray-600 truncate">Hey! Are you free for a call?</p>
+                            </div>
+                        </a>
+
+                        <!-- Unread -->
+                        <a href="#" class="flex items-center gap-3 p-4 hover:bg-gray-50 transition-colors">
+                            <div class="relative">
+                                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-medium">BW</div>
+                                <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between mb-1">
+                                    <p class="font-bold text-gray-900 truncate">Bob Wilson</p>
+                                    <span class="text-xs text-primary-600 font-medium">15m</span>
+                                </div>
+                                <p class="text-sm text-gray-900 font-medium truncate">Check out this new feature!</p>
+                            </div>
+                            <span class="w-5 h-5 bg-primary-500 text-white text-xs rounded-full flex items-center justify-center shrink-0">2</span>
+                        </a>
+
+                        <!-- Regular -->
+                        <a href="#" class="flex items-center gap-3 p-4 hover:bg-gray-50 transition-colors">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-medium">CD</div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between mb-1">
+                                    <p class="font-medium text-gray-900 truncate">Carol Davis</p>
+                                    <span class="text-xs text-gray-500">1h</span>
+                                </div>
+                                <p class="text-sm text-gray-600 truncate">Thanks for the help!</p>
+                            </div>
+                        </a>
+
+                        <!-- Group Chat -->
+                        <a href="#" class="flex items-center gap-3 p-4 hover:bg-gray-50 transition-colors">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between mb-1">
+                                    <p class="font-medium text-gray-900 truncate">Project Team</p>
+                                    <span class="text-xs text-gray-500">3h</span>
+                                </div>
+                                <p class="text-sm text-gray-600 truncate">Eve: Meeting at 3pm tomorrow</p>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Chat Content Preview -->
+                <div class="flex-1 bg-gray-50 flex items-center justify-center">
+                    <p class="text-gray-500">Select a conversation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Stories/Status Navigation -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 5: Stories/Status Navigation</h2>
+                <p class="text-sm text-gray-600">Instagram/Snapchat style story avatars</p>
+            </div>
+            <div class="p-4">
+                <nav class="flex gap-4 overflow-x-auto pb-2">
+                    <!-- Add Story -->
+                    <button class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
+                                <div class="w-14 h-14 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-white font-medium">
+                                    You
+                                </div>
+                            </div>
+                            <span class="absolute bottom-0 right-0 w-5 h-5 bg-primary-500 rounded-full border-2 border-white flex items-center justify-center">
+                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="text-xs text-gray-600">Your Story</span>
+                    </button>
+
+                    <!-- Stories with gradient ring -->
+                    <a href="#" class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full p-0.5">
+                            <div class="w-full h-full bg-white rounded-full p-0.5">
+                                <div class="w-full h-full bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-medium">
+                                    AS
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600">alice</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full p-0.5">
+                            <div class="w-full h-full bg-white rounded-full p-0.5">
+                                <div class="w-full h-full bg-amber-100 rounded-full flex items-center justify-center text-amber-600 font-medium">
+                                    BW
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600">bob</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full p-0.5">
+                            <div class="w-full h-full bg-white rounded-full p-0.5">
+                                <div class="w-full h-full bg-rose-100 rounded-full flex items-center justify-center text-rose-600 font-medium">
+                                    CD
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600">carol</span>
+                    </a>
+
+                    <!-- Viewed story (gray ring) -->
+                    <a href="#" class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full p-0.5">
+                            <div class="w-full h-full bg-white rounded-full p-0.5">
+                                <div class="w-full h-full bg-cyan-100 rounded-full flex items-center justify-center text-cyan-600 font-medium">
+                                    DE
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-400">dave</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full p-0.5">
+                            <div class="w-full h-full bg-white rounded-full p-0.5">
+                                <div class="w-full h-full bg-violet-100 rounded-full flex items-center justify-center text-violet-600 font-medium">
+                                    EF
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-400">eve</span>
+                    </a>
+
+                    <a href="#" class="flex flex-col items-center gap-1 shrink-0">
+                        <div class="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full p-0.5">
+                            <div class="w-full h-full bg-white rounded-full p-0.5">
+                                <div class="w-full h-full bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-medium">
+                                    FG
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-600">frank</span>
+                    </a>
                 </nav>
             </div>
         </section>
 
-        <!-- Style 6: Breadcrumb with Icons -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 6: Breadcrumb with Icons</h2>
-                <p class="text-gray-600 text-sm mt-1">Each breadcrumb item has an associated icon</p>
+        <!-- Style 6: Notification Center -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 6: Notification Center</h2>
+                <p class="text-sm text-gray-600">Categorized notification navigation</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-2">
-                        <li>
-                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
-                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                                </svg>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
-                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-                                </svg>
-                                Projects
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-600 hover:text-primary-600 hover:bg-gray-100 rounded-lg transition-colors">
-                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
-                                </svg>
-                                Marketing
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <span class="flex items-center px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg font-medium">
-                                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                                Campaign Report
-                            </span>
-                        </li>
-                    </ol>
+            <div class="p-4">
+                <!-- Tabs -->
+                <nav class="flex gap-1 p-1 bg-gray-100 rounded-xl mb-4">
+                    <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-lg shadow-sm text-sm font-medium">
+                        All
+                        <span class="px-1.5 py-0.5 bg-gray-200 text-gray-600 text-xs rounded-full">24</span>
+                    </button>
+                    <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Mentions
+                        <span class="px-1.5 py-0.5 bg-primary-100 text-primary-600 text-xs rounded-full">5</span>
+                    </button>
+                    <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Likes
+                    </button>
+                    <button class="flex-1 flex items-center justify-center gap-2 px-4 py-2 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                        Follows
+                    </button>
                 </nav>
-            </div>
-        </section>
 
-        <!-- Style 7: Underline Breadcrumb -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 7: Underline Breadcrumb</h2>
-                <p class="text-gray-600 text-sm mt-1">Minimal breadcrumb with underline hover effect</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-3">
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
-                                Home
-                            </a>
-                        </li>
-                        <li class="text-gray-300">→</li>
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
-                                Shop
-                            </a>
-                        </li>
-                        <li class="text-gray-300">→</li>
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
-                                Women
-                            </a>
-                        </li>
-                        <li class="text-gray-300">→</li>
-                        <li>
-                            <a href="#" class="text-gray-500 hover:text-gray-700 border-b border-transparent hover:border-gray-700 pb-0.5 transition-all">
-                                Dresses
-                            </a>
-                        </li>
-                        <li class="text-gray-300">→</li>
-                        <li>
-                            <span class="text-gray-900 font-medium border-b-2 border-primary-500 pb-0.5">
-                                Summer Collection
-                            </span>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-        </section>
+                <!-- Notification List -->
+                <div class="space-y-2">
+                    <a href="#" class="flex items-start gap-3 p-3 bg-primary-50 border border-primary-100 rounded-xl hover:bg-primary-100 transition-colors">
+                        <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 shrink-0">AS</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900"><span class="font-medium">Alice Smith</span> mentioned you in a comment</p>
+                            <p class="text-xs text-gray-500 mt-0.5">2 minutes ago</p>
+                        </div>
+                        <span class="w-2 h-2 bg-primary-500 rounded-full shrink-0 mt-2"></span>
+                    </a>
 
-        <!-- Style 8: Dark Breadcrumb -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 8: Dark Breadcrumb</h2>
-                <p class="text-gray-600 text-sm mt-1">Dark themed breadcrumb navigation</p>
-            </div>
-            <div class="p-6 bg-gray-900 rounded-lg">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-1">
-                        <li>
-                            <a href="#" class="flex items-center px-3 py-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
-                                <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-                                </svg>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                    <a href="#" class="flex items-start gap-3 p-3 bg-primary-50 border border-primary-100 rounded-xl hover:bg-primary-100 transition-colors">
+                        <div class="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 shrink-0">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
                             </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <a href="#" class="px-3 py-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
-                                Analytics
-                            </a>
-                        </li>
-                        <li>
-                            <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </li>
-                        <li>
-                            <span class="px-3 py-1.5 bg-primary-500/20 text-primary-400 rounded-lg font-medium border border-primary-500/30">
-                                Reports
-                            </span>
-                        </li>
-                    </ol>
-                </nav>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900"><span class="font-medium">Bob, Carol</span> and <span class="font-medium">12 others</span> liked your post</p>
+                            <p class="text-xs text-gray-500 mt-0.5">15 minutes ago</p>
+                        </div>
+                        <span class="w-2 h-2 bg-primary-500 rounded-full shrink-0 mt-2"></span>
+                    </a>
+
+                    <a href="#" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 shrink-0">BW</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900"><span class="font-medium">Bob Wilson</span> started following you</p>
+                            <p class="text-xs text-gray-500 mt-0.5">1 hour ago</p>
+                        </div>
+                        <button class="px-3 py-1 bg-primary-500 text-white text-xs rounded-full font-medium hover:bg-primary-600 transition-colors shrink-0">
+                            Follow
+                        </button>
+                    </a>
+
+                    <a href="#" class="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors">
+                        <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 shrink-0">CD</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900"><span class="font-medium">Carol Davis</span> commented on your photo</p>
+                            <p class="text-xs text-gray-500 mt-0.5">3 hours ago</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 py-8">
-            <p class="text-center text-gray-600">Breadcrumb Navigation - Part of 1000 Tailwind UI Templates Collection</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleBreadcrumbMenu() {
-            const menu = document.getElementById('breadcrumbMenu');
-            menu.classList.toggle('hidden');
-        }
-
-        document.addEventListener('click', function(e) {
-            const dropdown = document.getElementById('breadcrumbDropdown');
-            const menu = document.getElementById('breadcrumbMenu');
-            if (!dropdown.contains(e.target)) {
-                menu.classList.add('hidden');
-            }
-        });
-    </script>
 </body>
 </html>
