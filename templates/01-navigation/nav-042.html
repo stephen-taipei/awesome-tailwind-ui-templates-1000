@@ -3,413 +3,874 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Split Navigation - Tailwind UI Templates</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-primary-50: oklch(0.97 0.02 250);
-            --color-primary-100: oklch(0.93 0.04 250);
-            --color-primary-200: oklch(0.86 0.08 250);
-            --color-primary-300: oklch(0.75 0.14 250);
-            --color-primary-400: oklch(0.65 0.19 250);
-            --color-primary-500: oklch(0.55 0.24 250);
-            --color-primary-600: oklch(0.48 0.22 250);
-            --color-primary-700: oklch(0.42 0.19 250);
+    <title>Nav-042: Calendar Navigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'oklch(55% 0.24 270)',
+                        'primary-light': 'oklch(70% 0.2 270)',
+                        'primary-dark': 'oklch(45% 0.24 270)',
+                        secondary: 'oklch(60% 0.18 150)',
+                        accent: 'oklch(70% 0.22 30)',
+                        surface: 'oklch(98% 0.01 270)',
+                        'surface-dark': 'oklch(20% 0.02 270)',
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <h1 class="text-2xl font-bold text-gray-900">Split Navigation</h1>
-            <p class="text-gray-600">Navigation layouts with split/divided content areas</p>
+<body class="bg-gray-100 min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-3xl font-bold text-gray-800">Nav-042: Calendar Navigation</h1>
+            <p class="text-gray-600 mt-2">Calendar views, date pickers, and scheduling navigation patterns</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+    <main class="max-w-6xl mx-auto px-4 pb-16 space-y-16">
 
-        <!-- Style 1: Logo Left, Links Center, Actions Right -->
+        <!-- Style 1: Google Calendar Style -->
         <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Three-Way Split (Logo | Links | Actions)</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <!-- Left: Logo -->
-                            <div class="flex-shrink-0">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
-                                    <span class="font-bold text-xl text-gray-900">Brand</span>
-                                </a>
-                            </div>
-
-                            <!-- Center: Links -->
-                            <div class="hidden md:flex items-center gap-8">
-                                <a href="#" class="text-gray-900 font-medium hover:text-primary-600 transition-colors">Products</a>
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Solutions</a>
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Resources</a>
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Pricing</a>
-                            </div>
-
-                            <!-- Right: Actions -->
-                            <div class="flex items-center gap-4">
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Sign in</a>
-                                <a href="#" class="bg-primary-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Get Started</a>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Google Calendar Style</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-4 py-3 border-b flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="p-2 hover:bg-gray-100 rounded-full">
+                                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                            </button>
+                            <div class="flex items-center">
+                                <svg class="w-10 h-10 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                                </svg>
+                                <span class="ml-2 text-xl text-gray-700">Calendar</span>
                             </div>
                         </div>
+                        
+                        <div class="flex items-center space-x-2">
+                            <button class="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50">
+                                Today
+                            </button>
+                            <button class="p-2 hover:bg-gray-100 rounded-full">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-gray-100 rounded-full">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                            <h3 class="text-xl font-medium text-gray-800 ml-4">December 2024</h3>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="relative">
+                                <input type="text" placeholder="Search" class="w-48 bg-gray-100 border-0 rounded-lg px-4 py-2 text-sm">
+                                <svg class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                            <select class="border border-gray-300 rounded-md px-3 py-2 text-sm">
+                                <option>Week</option>
+                                <option>Day</option>
+                                <option selected>Month</option>
+                                <option>Year</option>
+                            </select>
+                            <button class="p-2 hover:bg-gray-100 rounded-full">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 2: Logo Left, Actions Right (Equal Split) -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Two-Way Split (Logo Left | Actions Right)</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <!-- Left: Logo + Links -->
-                            <div class="flex items-center gap-10">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
-                                    <span class="font-bold text-xl text-gray-900">Ecosys</span>
-                                </a>
-                                <div class="hidden md:flex items-center gap-6">
-                                    <a href="#" class="text-gray-900 font-medium">Dashboard</a>
-                                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Projects</a>
-                                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Team</a>
-                                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Reports</a>
+                    
+                    <div class="flex">
+                        <!-- Sidebar -->
+                        <div class="w-60 border-r p-4">
+                            <button class="w-full mb-6 px-6 py-3 bg-white border border-gray-300 rounded-full shadow-md hover:shadow-lg transition flex items-center justify-center">
+                                <svg class="w-8 h-8 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                                <span class="text-sm font-medium text-gray-700">Create</span>
+                            </button>
+                            
+                            <!-- Mini Calendar -->
+                            <div class="mb-6">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">December 2024</span>
+                                    <div class="flex">
+                                        <button class="p-1 hover:bg-gray-100 rounded">
+                                            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                            </svg>
+                                        </button>
+                                        <button class="p-1 hover:bg-gray-100 rounded">
+                                            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-7 gap-1 text-center text-xs">
+                                    <span class="text-gray-500">S</span>
+                                    <span class="text-gray-500">M</span>
+                                    <span class="text-gray-500">T</span>
+                                    <span class="text-gray-500">W</span>
+                                    <span class="text-gray-500">T</span>
+                                    <span class="text-gray-500">F</span>
+                                    <span class="text-gray-500">S</span>
+                                    <span class="text-gray-400 py-1">1</span>
+                                    <span class="py-1">2</span>
+                                    <span class="py-1">3</span>
+                                    <span class="py-1">4</span>
+                                    <span class="py-1">5</span>
+                                    <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto">6</span>
+                                    <span class="py-1">7</span>
+                                    <span class="py-1">8</span>
+                                    <span class="py-1">9</span>
+                                    <span class="py-1">10</span>
+                                    <span class="py-1">11</span>
+                                    <span class="py-1">12</span>
+                                    <span class="py-1">13</span>
+                                    <span class="py-1">14</span>
                                 </div>
                             </div>
-
-                            <!-- Right: Search + Icons + Profile -->
-                            <div class="flex items-center gap-4">
-                                <div class="relative hidden lg:block">
-                                    <input type="text" placeholder="Search..." class="w-64 pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
-                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                    </svg>
-                                </div>
-                                <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                    </svg>
-                                </button>
-                                <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <span class="text-emerald-700 font-medium text-sm">JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 3: Split with Vertical Divider -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Split with Vertical Divider</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center h-16">
-                            <!-- Left Section -->
-                            <div class="flex items-center gap-6 pr-6 border-r border-gray-200">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
-                                    <span class="font-bold text-xl text-gray-900">Violet</span>
-                                </a>
-                            </div>
-
-                            <!-- Center Section -->
-                            <div class="flex-1 flex items-center justify-center gap-8 px-6 border-r border-gray-200">
-                                <a href="#" class="text-gray-900 font-medium">Overview</a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Integrations</a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Docs</a>
-                            </div>
-
-                            <!-- Right Section -->
-                            <div class="flex items-center gap-4 pl-6">
-                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Login</a>
-                                <a href="#" class="bg-violet-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-violet-700 transition-colors">Sign up</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 4: Split Navigation with Colored Sections -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Colored Split Sections</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="flex items-stretch h-16">
-                    <!-- Left: Dark Section -->
-                    <div class="bg-gray-900 flex items-center px-6 gap-6">
-                        <a href="#" class="flex items-center gap-2">
-                            <div class="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg"></div>
-                            <span class="font-bold text-xl text-white">Flame</span>
-                        </a>
-                        <div class="hidden md:flex items-center gap-4">
-                            <a href="#" class="text-white font-medium">Home</a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Products</a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">About</a>
-                        </div>
-                    </div>
-
-                    <!-- Right: Light Section -->
-                    <div class="flex-1 bg-white flex items-center justify-end px-6 gap-4 border-b border-gray-200">
-                        <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Support</a>
-                        <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Contact</a>
-                        <a href="#" class="bg-amber-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-amber-600 transition-colors">Subscribe</a>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 5: Split Navigation with Dropdown Groups -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Split with Category Dropdowns</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <!-- Left: Logo + Category Dropdown -->
-                            <div class="flex items-center gap-6">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
-                                    <span class="font-bold text-xl text-gray-900">Bloom</span>
-                                </a>
-                                <div class="relative group">
-                                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg text-gray-700 font-medium hover:bg-gray-200 transition-colors">
-                                        Categories
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            
+                            <!-- Calendars List -->
+                            <div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-700">My calendars</span>
+                                    <button class="p-1 hover:bg-gray-100 rounded">
+                                        <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                                         </svg>
                                     </button>
-                                    <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                                        <div class="p-2">
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 rounded-lg transition-colors">Electronics</a>
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 rounded-lg transition-colors">Clothing</a>
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 rounded-lg transition-colors">Home & Garden</a>
-                                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 rounded-lg transition-colors">Sports</a>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" checked class="rounded border-blue-500 text-blue-500">
+                                        <span class="ml-2 text-sm text-gray-700">Personal</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" checked class="rounded border-green-500 text-green-500">
+                                        <span class="ml-2 text-sm text-gray-700">Work</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" checked class="rounded border-purple-500 text-purple-500">
+                                        <span class="ml-2 text-sm text-gray-700">Family</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded border-orange-500 text-orange-500">
+                                        <span class="ml-2 text-sm text-gray-700">Holidays</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Calendar Grid -->
+                        <div class="flex-1 p-4">
+                            <div class="grid grid-cols-7 border-l border-t">
+                                <!-- Header -->
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">SUN</div>
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">MON</div>
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">TUE</div>
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">WED</div>
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">THU</div>
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">FRI</div>
+                                <div class="py-2 text-center text-xs font-medium text-gray-500 border-r border-b bg-gray-50">SAT</div>
+                                
+                                <!-- Days -->
+                                <div class="h-24 border-r border-b p-1 bg-gray-50">
+                                    <span class="text-sm text-gray-400">1</span>
+                                </div>
+                                <div class="h-24 border-r border-b p-1">
+                                    <span class="text-sm">2</span>
+                                </div>
+                                <div class="h-24 border-r border-b p-1">
+                                    <span class="text-sm">3</span>
+                                    <div class="mt-1 px-1 py-0.5 bg-blue-100 text-blue-700 text-xs rounded truncate">Team Meeting</div>
+                                </div>
+                                <div class="h-24 border-r border-b p-1">
+                                    <span class="text-sm">4</span>
+                                </div>
+                                <div class="h-24 border-r border-b p-1">
+                                    <span class="text-sm">5</span>
+                                    <div class="mt-1 px-1 py-0.5 bg-green-100 text-green-700 text-xs rounded truncate">Project Review</div>
+                                </div>
+                                <div class="h-24 border-r border-b p-1 bg-blue-50">
+                                    <span class="w-6 h-6 bg-blue-500 text-white text-sm rounded-full flex items-center justify-center">6</span>
+                                </div>
+                                <div class="h-24 border-r border-b p-1 bg-gray-50">
+                                    <span class="text-sm text-gray-500">7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Apple Calendar Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Apple Calendar Style</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <!-- Header -->
+                    <div class="bg-gradient-to-b from-red-500 to-red-600 px-6 py-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <button class="p-2 hover:bg-white/10 rounded-lg text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-white/10 rounded-lg text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white">December 2024</h3>
+                            <div class="flex items-center space-x-2">
+                                <button class="px-4 py-1.5 bg-white/20 hover:bg-white/30 rounded-lg text-sm text-white font-medium">
+                                    Today
+                                </button>
+                                <div class="flex bg-white/20 rounded-lg p-0.5">
+                                    <button class="px-3 py-1 text-sm text-white/70 hover:text-white rounded-md">Day</button>
+                                    <button class="px-3 py-1 text-sm text-white/70 hover:text-white rounded-md">Week</button>
+                                    <button class="px-3 py-1 text-sm text-white bg-white/30 rounded-md">Month</button>
+                                    <button class="px-3 py-1 text-sm text-white/70 hover:text-white rounded-md">Year</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Calendar Body -->
+                    <div class="p-4">
+                        <!-- Week Days -->
+                        <div class="grid grid-cols-7 mb-2">
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Sun</div>
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Mon</div>
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Tue</div>
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Wed</div>
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Thu</div>
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Fri</div>
+                            <div class="py-2 text-center text-sm font-medium text-gray-400">Sat</div>
+                        </div>
+                        
+                        <!-- Days Grid -->
+                        <div class="grid grid-cols-7 gap-1">
+                            <!-- Previous Month -->
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">24</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">25</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">26</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">27</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">28</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">29</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg">
+                                <span class="text-sm text-gray-300">30</span>
+                            </div>
+                            
+                            <!-- Current Month -->
+                            <div class="h-20 p-2 rounded-lg hover:bg-gray-50">
+                                <span class="text-sm text-gray-700">1</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg hover:bg-gray-50">
+                                <span class="text-sm text-gray-700">2</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg hover:bg-gray-50">
+                                <span class="text-sm text-gray-700">3</span>
+                                <div class="mt-1 flex items-center">
+                                    <div class="w-2 h-2 rounded-full bg-blue-500 mr-1"></div>
+                                    <span class="text-xs text-gray-600 truncate">Design Review</span>
+                                </div>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg hover:bg-gray-50">
+                                <span class="text-sm text-gray-700">4</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg hover:bg-gray-50">
+                                <span class="text-sm text-gray-700">5</span>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg bg-red-50">
+                                <span class="w-7 h-7 flex items-center justify-center bg-red-500 text-white text-sm rounded-full">6</span>
+                                <div class="mt-1 flex items-center">
+                                    <div class="w-2 h-2 rounded-full bg-green-500 mr-1"></div>
+                                    <span class="text-xs text-gray-600 truncate">Lunch</span>
+                                </div>
+                            </div>
+                            <div class="h-20 p-2 rounded-lg hover:bg-gray-50">
+                                <span class="text-sm text-gray-700">7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Week View Schedule -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Week View Schedule</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-6 py-4 border-b flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Week of Dec 2 - 8, 2024</h3>
+                            <div class="flex items-center space-x-1">
+                                <button class="p-1.5 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                    </svg>
+                                </button>
+                                <button class="p-1.5 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark">
+                            + New Event
+                        </button>
+                    </div>
+                    
+                    <!-- Week Grid -->
+                    <div class="overflow-x-auto">
+                        <div class="min-w-[800px]">
+                            <!-- Day Headers -->
+                            <div class="grid grid-cols-8 border-b">
+                                <div class="w-16"></div>
+                                <div class="py-3 text-center border-l">
+                                    <p class="text-xs text-gray-500">MON</p>
+                                    <p class="text-lg font-semibold text-gray-700">2</p>
+                                </div>
+                                <div class="py-3 text-center border-l">
+                                    <p class="text-xs text-gray-500">TUE</p>
+                                    <p class="text-lg font-semibold text-gray-700">3</p>
+                                </div>
+                                <div class="py-3 text-center border-l">
+                                    <p class="text-xs text-gray-500">WED</p>
+                                    <p class="text-lg font-semibold text-gray-700">4</p>
+                                </div>
+                                <div class="py-3 text-center border-l">
+                                    <p class="text-xs text-gray-500">THU</p>
+                                    <p class="text-lg font-semibold text-gray-700">5</p>
+                                </div>
+                                <div class="py-3 text-center border-l bg-primary/5">
+                                    <p class="text-xs text-primary">FRI</p>
+                                    <p class="w-8 h-8 mx-auto flex items-center justify-center bg-primary text-white rounded-full text-lg font-semibold">6</p>
+                                </div>
+                                <div class="py-3 text-center border-l">
+                                    <p class="text-xs text-gray-500">SAT</p>
+                                    <p class="text-lg font-semibold text-gray-400">7</p>
+                                </div>
+                                <div class="py-3 text-center border-l">
+                                    <p class="text-xs text-gray-500">SUN</p>
+                                    <p class="text-lg font-semibold text-gray-400">8</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Time Grid -->
+                            <div class="relative">
+                                <!-- Time Slots -->
+                                <div class="grid grid-cols-8">
+                                    <!-- Time Labels -->
+                                    <div class="border-r">
+                                        <div class="h-12 flex items-start justify-end pr-2 pt-1">
+                                            <span class="text-xs text-gray-400">8 AM</span>
+                                        </div>
+                                        <div class="h-12 flex items-start justify-end pr-2 pt-1">
+                                            <span class="text-xs text-gray-400">9 AM</span>
+                                        </div>
+                                        <div class="h-12 flex items-start justify-end pr-2 pt-1">
+                                            <span class="text-xs text-gray-400">10 AM</span>
+                                        </div>
+                                        <div class="h-12 flex items-start justify-end pr-2 pt-1">
+                                            <span class="text-xs text-gray-400">11 AM</span>
+                                        </div>
+                                        <div class="h-12 flex items-start justify-end pr-2 pt-1">
+                                            <span class="text-xs text-gray-400">12 PM</span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Center: Search -->
-                            <div class="flex-1 max-w-xl mx-8">
-                                <div class="relative">
-                                    <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent">
-                                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- Right: Actions -->
-                            <div class="flex items-center gap-4">
-                                <button class="p-2 text-gray-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                    </svg>
-                                </button>
-                                <button class="p-2 text-gray-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                                    </svg>
-                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-rose-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
-                                </button>
-                                <div class="w-8 h-8 bg-rose-100 rounded-full flex items-center justify-center">
-                                    <span class="text-rose-700 font-medium text-sm">M</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 6: Split Navigation with Tab Sections -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Split with Tab Sections</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white">
-                    <!-- Top Bar -->
-                    <div class="border-b border-gray-200">
-                        <div class="max-w-7xl mx-auto px-6">
-                            <div class="flex items-center justify-between h-16">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg"></div>
-                                    <span class="font-bold text-xl text-gray-900">Aqua</span>
-                                </a>
-                                <div class="flex items-center gap-4">
-                                    <button class="p-2 text-gray-500 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                        </svg>
-                                    </button>
-                                    <button class="p-2 text-gray-500 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                        </svg>
-                                    </button>
-                                    <div class="w-8 h-8 bg-cyan-100 rounded-full overflow-hidden">
-                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar" class="w-full h-full object-cover">
+                                    
+                                    <!-- Day Columns -->
+                                    <div class="border-r relative">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                    </div>
+                                    <div class="border-r relative">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="absolute top-3 left-1 right-1 h-20 bg-blue-500 rounded-lg p-2 text-white shadow-md">
+                                            <p class="text-xs font-medium">Team Standup</p>
+                                            <p class="text-xs opacity-75">9:00 - 10:00 AM</p>
+                                        </div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                    </div>
+                                    <div class="border-r relative">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                    </div>
+                                    <div class="border-r relative">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="absolute top-[96px] left-1 right-1 h-14 bg-green-500 rounded-lg p-2 text-white shadow-md">
+                                            <p class="text-xs font-medium">Lunch Meeting</p>
+                                            <p class="text-xs opacity-75">11:00 AM</p>
+                                        </div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                    </div>
+                                    <div class="border-r bg-primary/5 relative">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="absolute top-[48px] left-1 right-1 h-20 bg-purple-500 rounded-lg p-2 text-white shadow-md">
+                                            <p class="text-xs font-medium">Design Review</p>
+                                            <p class="text-xs opacity-75">10:00 - 11:00 AM</p>
+                                        </div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                    </div>
+                                    <div class="border-r bg-gray-50">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                    </div>
+                                    <div class="bg-gray-50">
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
+                                        <div class="h-12 border-b border-gray-100"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Tab Bar -->
-                    <div class="bg-gray-50 border-b border-gray-200">
-                        <div class="max-w-7xl mx-auto px-6">
-                            <div class="flex items-center gap-1">
-                                <a href="#" class="px-4 py-3 text-cyan-600 font-medium border-b-2 border-cyan-600 -mb-px bg-white">Dashboard</a>
-                                <a href="#" class="px-4 py-3 text-gray-600 hover:text-cyan-600 hover:bg-white transition-colors">Analytics</a>
-                                <a href="#" class="px-4 py-3 text-gray-600 hover:text-cyan-600 hover:bg-white transition-colors">Reports</a>
-                                <a href="#" class="px-4 py-3 text-gray-600 hover:text-cyan-600 hover:bg-white transition-colors">Settings</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
                 </div>
             </div>
         </section>
 
-        <!-- Style 7: Dark Split Navigation -->
+        <!-- Style 4: Date Picker Component -->
         <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Dark Split Navigation</h2>
-            <div class="rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-gray-900">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <!-- Left -->
-                            <div class="flex items-center gap-8">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg"></div>
-                                    <span class="font-bold text-xl text-white">Nebula</span>
-                                </a>
-                                <div class="h-6 w-px bg-gray-700"></div>
-                                <div class="hidden md:flex items-center gap-6">
-                                    <a href="#" class="text-white font-medium">Console</a>
-                                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Projects</a>
-                                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Deployments</a>
-                                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Domains</a>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Date Picker Component</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="flex items-start space-x-8">
+                    <!-- Single Date Picker -->
+                    <div class="bg-white rounded-xl shadow-lg p-4 w-80">
+                        <div class="flex items-center justify-between mb-4">
+                            <button class="p-1 hover:bg-gray-100 rounded">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                </svg>
+                            </button>
+                            <h4 class="font-semibold text-gray-900">December 2024</h4>
+                            <button class="p-1 hover:bg-gray-100 rounded">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-7 gap-1 text-center">
+                            <span class="text-xs font-medium text-gray-400 py-2">Su</span>
+                            <span class="text-xs font-medium text-gray-400 py-2">Mo</span>
+                            <span class="text-xs font-medium text-gray-400 py-2">Tu</span>
+                            <span class="text-xs font-medium text-gray-400 py-2">We</span>
+                            <span class="text-xs font-medium text-gray-400 py-2">Th</span>
+                            <span class="text-xs font-medium text-gray-400 py-2">Fr</span>
+                            <span class="text-xs font-medium text-gray-400 py-2">Sa</span>
+                            
+                            <button class="py-2 text-sm text-gray-300 rounded-full">1</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">2</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">3</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">4</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">5</button>
+                            <button class="w-8 h-8 mx-auto text-sm text-white bg-primary rounded-full">6</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">7</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">8</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">9</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">10</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">11</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">12</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">13</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">14</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">15</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">16</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">17</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">18</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">19</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">20</button>
+                            <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-full">21</button>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t flex justify-end space-x-2">
+                            <button class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Cancel</button>
+                            <button class="px-4 py-2 text-sm text-white bg-primary hover:bg-primary-dark rounded-lg">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Range Picker -->
+                    <div class="bg-white rounded-xl shadow-lg p-4">
+                        <div class="flex space-x-4">
+                            <!-- Start Month -->
+                            <div class="w-72">
+                                <div class="flex items-center justify-between mb-4">
+                                    <button class="p-1 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                        </svg>
+                                    </button>
+                                    <h4 class="font-semibold text-gray-900">December 2024</h4>
+                                    <div class="w-5"></div>
+                                </div>
+                                
+                                <div class="grid grid-cols-7 gap-1 text-center">
+                                    <span class="text-xs font-medium text-gray-400 py-2">Su</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Mo</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Tu</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">We</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Th</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Fr</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Sa</span>
+                                    
+                                    <button class="py-2 text-sm text-gray-300 rounded-l-full">1</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">2</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">3</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">4</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">5</button>
+                                    <button class="w-8 h-8 mx-auto text-sm text-white bg-primary rounded-full">6</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary">7</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary">8</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary">9</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary">10</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary">11</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary">12</button>
+                                    <button class="py-2 text-sm bg-primary/20 text-primary rounded-r-full">13</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">14</button>
                                 </div>
                             </div>
-
-                            <!-- Right -->
-                            <div class="flex items-center gap-4">
-                                <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                    </svg>
-                                </button>
-                                <div class="h-6 w-px bg-gray-700"></div>
-                                <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors relative">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                    </svg>
-                                    <span class="absolute top-1 right-1 w-2 h-2 bg-indigo-500 rounded-full"></span>
-                                </button>
-                                <button class="flex items-center gap-2 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-white text-sm transition-colors">
-                                    <div class="w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center">
-                                        <span class="text-white font-medium text-xs">N</span>
-                                    </div>
-                                    <span>Nebula Team</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                    </svg>
-                                </button>
+                            
+                            <!-- End Month -->
+                            <div class="w-72">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="w-5"></div>
+                                    <h4 class="font-semibold text-gray-900">January 2025</h4>
+                                    <button class="p-1 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="grid grid-cols-7 gap-1 text-center">
+                                    <span class="text-xs font-medium text-gray-400 py-2">Su</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Mo</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Tu</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">We</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Th</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Fr</span>
+                                    <span class="text-xs font-medium text-gray-400 py-2">Sa</span>
+                                    
+                                    <button class="py-2 text-sm text-gray-300">29</button>
+                                    <button class="py-2 text-sm text-gray-300">30</button>
+                                    <button class="py-2 text-sm text-gray-300">31</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">1</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">2</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">3</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">4</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">5</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">6</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">7</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">8</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">9</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">10</button>
+                                    <button class="py-2 text-sm text-gray-700 hover:bg-gray-100">11</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t flex items-center justify-between">
+                            <div class="flex items-center space-x-4 text-sm">
+                                <span class="text-gray-500">Selected:</span>
+                                <span class="font-medium text-gray-900">Dec 6 - Dec 13, 2024</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Cancel</button>
+                                <button class="px-4 py-2 text-sm text-white bg-primary hover:bg-primary-dark rounded-lg">Apply</button>
                             </div>
                         </div>
                     </div>
-                </nav>
-                <div class="h-32 bg-gray-800 flex items-center justify-center">
-                    <span class="text-gray-500">Page Content</span>
                 </div>
             </div>
         </section>
 
-        <!-- Style 8: Split Navigation with Centered Logo -->
+        <!-- Style 5: Agenda/List View -->
         <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Centered Logo Split</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <!-- Left Links -->
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-gray-900 font-medium">Shop</a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Collections</a>
-                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Story</a>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Agenda/List View</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-6 py-4 border-b flex items-center justify-between">
+                        <h3 class="text-lg font-semibold text-gray-900">Upcoming Events</h3>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-2 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                                </svg>
+                            </button>
+                            <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">
+                                + Add Event
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Event List -->
+                    <div class="divide-y">
+                        <!-- Today Section -->
+                        <div class="px-6 py-3 bg-gray-50">
+                            <h4 class="text-sm font-semibold text-primary">Today · December 6</h4>
+                        </div>
+                        
+                        <div class="px-6 py-4 flex items-start hover:bg-gray-50">
+                            <div class="w-16 text-center flex-shrink-0">
+                                <p class="text-sm font-medium text-gray-900">9:00</p>
+                                <p class="text-xs text-gray-500">AM</p>
                             </div>
-
-                            <!-- Center Logo -->
-                            <div class="flex-shrink-0">
-                                <a href="#" class="flex items-center gap-2">
-                                    <div class="w-10 h-10 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center">
-                                        <span class="text-white font-bold text-lg">M</span>
+                            <div class="w-1 h-12 bg-blue-500 rounded-full mx-4"></div>
+                            <div class="flex-1">
+                                <h5 class="font-medium text-gray-900">Team Standup</h5>
+                                <p class="text-sm text-gray-500">30 min · Zoom Meeting</p>
+                                <div class="mt-2 flex items-center space-x-2">
+                                    <div class="flex -space-x-2">
+                                        <div class="w-6 h-6 bg-blue-400 rounded-full border-2 border-white"></div>
+                                        <div class="w-6 h-6 bg-green-400 rounded-full border-2 border-white"></div>
+                                        <div class="w-6 h-6 bg-purple-400 rounded-full border-2 border-white"></div>
                                     </div>
-                                    <span class="font-serif text-2xl text-gray-900">Maison</span>
-                                </a>
-                            </div>
-
-                            <!-- Right Links + Actions -->
-                            <div class="flex items-center gap-6">
-                                <div class="hidden md:flex items-center gap-6">
-                                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Journal</a>
-                                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-                                </div>
-                                <div class="flex items-center gap-3">
-                                    <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                        </svg>
-                                    </button>
-                                    <button class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors relative">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                                        </svg>
-                                        <span class="absolute -top-1 -right-1 w-4 h-4 bg-gray-900 text-white text-xs font-bold rounded-full flex items-center justify-center">2</span>
-                                    </button>
+                                    <span class="text-xs text-gray-500">+3 attendees</span>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="px-6 py-4 flex items-start hover:bg-gray-50">
+                            <div class="w-16 text-center flex-shrink-0">
+                                <p class="text-sm font-medium text-gray-900">2:00</p>
+                                <p class="text-xs text-gray-500">PM</p>
+                            </div>
+                            <div class="w-1 h-12 bg-green-500 rounded-full mx-4"></div>
+                            <div class="flex-1">
+                                <h5 class="font-medium text-gray-900">Design Review</h5>
+                                <p class="text-sm text-gray-500">1 hr · Conference Room A</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Tomorrow Section -->
+                        <div class="px-6 py-3 bg-gray-50">
+                            <h4 class="text-sm font-semibold text-gray-600">Tomorrow · December 7</h4>
+                        </div>
+                        
+                        <div class="px-6 py-4 flex items-start hover:bg-gray-50">
+                            <div class="w-16 text-center flex-shrink-0">
+                                <p class="text-sm font-medium text-gray-900">10:00</p>
+                                <p class="text-xs text-gray-500">AM</p>
+                            </div>
+                            <div class="w-1 h-12 bg-purple-500 rounded-full mx-4"></div>
+                            <div class="flex-1">
+                                <h5 class="font-medium text-gray-900">Client Presentation</h5>
+                                <p class="text-sm text-gray-500">2 hr · Client Office</p>
+                            </div>
+                        </div>
+                        
+                        <div class="px-6 py-4 flex items-start hover:bg-gray-50">
+                            <div class="w-16 text-center flex-shrink-0">
+                                <p class="text-sm font-medium text-gray-900">4:30</p>
+                                <p class="text-xs text-gray-500">PM</p>
+                            </div>
+                            <div class="w-1 h-12 bg-orange-500 rounded-full mx-4"></div>
+                            <div class="flex-1">
+                                <h5 class="font-medium text-gray-900">Team Happy Hour</h5>
+                                <p class="text-sm text-gray-500">Optional · Downtown Bar</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Next Week Section -->
+                        <div class="px-6 py-3 bg-gray-50">
+                            <h4 class="text-sm font-semibold text-gray-600">Next Week</h4>
+                        </div>
+                        
+                        <div class="px-6 py-4 flex items-start hover:bg-gray-50">
+                            <div class="w-16 text-center flex-shrink-0">
+                                <p class="text-xs text-gray-500">Mon</p>
+                                <p class="text-sm font-medium text-gray-900">Dec 9</p>
+                            </div>
+                            <div class="w-1 h-12 bg-red-500 rounded-full mx-4"></div>
+                            <div class="flex-1">
+                                <h5 class="font-medium text-gray-900">Quarterly Planning</h5>
+                                <p class="text-sm text-gray-500">All Day · Main Conference Room</p>
+                            </div>
+                        </div>
                     </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Booking/Scheduling UI -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Booking/Scheduling UI</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-8 py-6 border-b">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                JD
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Book a meeting with John Doe</h3>
+                                <p class="text-gray-500">30 minute consultation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <!-- Calendar Selection -->
+                        <div class="w-1/2 p-6 border-r">
+                            <h4 class="font-semibold text-gray-900 mb-4">Select a Date</h4>
+                            
+                            <div class="mb-4 flex items-center justify-between">
+                                <button class="p-1 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                    </svg>
+                                </button>
+                                <span class="font-medium text-gray-900">December 2024</span>
+                                <button class="p-1 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="grid grid-cols-7 gap-2 text-center">
+                                <span class="text-xs font-medium text-gray-400 py-2">Sun</span>
+                                <span class="text-xs font-medium text-gray-400 py-2">Mon</span>
+                                <span class="text-xs font-medium text-gray-400 py-2">Tue</span>
+                                <span class="text-xs font-medium text-gray-400 py-2">Wed</span>
+                                <span class="text-xs font-medium text-gray-400 py-2">Thu</span>
+                                <span class="text-xs font-medium text-gray-400 py-2">Fri</span>
+                                <span class="text-xs font-medium text-gray-400 py-2">Sat</span>
+                                
+                                <!-- Previous month days (unavailable) -->
+                                <span class="py-2 text-sm text-gray-300">1</span>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">2</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">3</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">4</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">5</button>
+                                <button class="w-10 h-10 mx-auto text-sm text-white bg-primary rounded-lg">6</button>
+                                <span class="py-2 text-sm text-gray-300">7</span>
+                                <span class="py-2 text-sm text-gray-300">8</span>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">9</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">10</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">11</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">12</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">13</button>
+                                <span class="py-2 text-sm text-gray-300">14</span>
+                                <span class="py-2 text-sm text-gray-300">15</span>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">16</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">17</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">18</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">19</button>
+                                <button class="py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">20</button>
+                                <span class="py-2 text-sm text-gray-300">21</span>
+                            </div>
+                            
+                            <div class="mt-4 flex items-center text-sm text-gray-500">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Timezone: Pacific Time (PT)
+                            </div>
+                        </div>
+                        
+                        <!-- Time Slots -->
+                        <div class="w-1/2 p-6">
+                            <h4 class="font-semibold text-gray-900 mb-4">Friday, December 6</h4>
+                            <p class="text-sm text-gray-500 mb-4">Available time slots</p>
+                            
+                            <div class="space-y-2 max-h-80 overflow-y-auto">
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    9:00 AM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    9:30 AM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-white bg-primary border-2 border-primary rounded-lg">
+                                    10:00 AM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    10:30 AM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    11:00 AM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    2:00 PM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    2:30 PM
+                                </button>
+                                <button class="w-full py-3 text-sm font-medium text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition">
+                                    3:00 PM
+                                </button>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t">
+                                <button class="w-full py-3 text-white bg-primary hover:bg-primary-dark rounded-lg font-medium transition">
+                                    Confirm Booking
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
-            <p>Split Navigation - Part of 1000 Tailwind UI Templates</p>
-        </div>
-    </footer>
 </body>
 </html>
