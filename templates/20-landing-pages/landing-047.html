@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Landing Page - Inspiring travel agency template with destination search">
+  <title>landing-047: Travel Landing | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.60 0.15 240);
+      --color-primary-600: oklch(0.50 0.15 240);
+      --color-accent-500: oklch(0.75 0.15 50);
+    }
+  </style>
+
+  <style>
+    /* Custom Scrollbar for horizontal scrolling */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-600 font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="absolute top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 text-white font-bold text-2xl drop-shadow-md">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span data-i18n="landing.travel.brand">Wanderlust</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-white/90 hover:text-white font-medium transition-colors drop-shadow-sm" data-i18n="landing.travel.destinations">Destinations</a>
+          <a href="#" class="text-white/90 hover:text-white font-medium transition-colors drop-shadow-sm" data-i18n="landing.travel.packages">Packages</a>
+          <a href="#" class="text-white/90 hover:text-white font-medium transition-colors drop-shadow-sm" data-i18n="landing.travel.blog">Travel Blog</a>
+          <a href="#" class="text-white/90 hover:text-white font-medium transition-colors drop-shadow-sm" data-i18n="landing.travel.contact">Contact</a>
+          <a href="#" class="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-5 py-2 rounded-full font-medium transition-all border border-white/30" data-i18n="landing.travel.login">Log In</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white focus:outline-none">
+          <svg class="w-8 h-8 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-[85vh] min-h-[600px] flex items-center justify-center">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" alt="Travel Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/20 to-slate-900/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+      <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-sm font-medium tracking-wide mb-6 animate-fade-in-up" data-i18n="landing.travel.tagline">Explore the World with Us</span>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight shadow-black drop-shadow-lg" data-i18n="landing.travel.heroTitle">
+        Discover Your Next <br>
+        <span class="text-accent-500">Great Adventure</span>
+      </h1>
+      
+      <!-- Search Bar -->
+      <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-4xl mx-auto transform translate-y-12 md:translate-y-24">
+        <form class="grid grid-cols-1 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          <div class="px-4 py-2 text-left">
+            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wide mb-1" data-i18n="landing.travel.destinationLabel">Destination</label>
+            <div class="flex items-center gap-2">
+               <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+               <input type="text" placeholder="Where to?" class="w-full outline-none text-slate-900 font-medium placeholder-slate-400">
+            </div>
+          </div>
+          <div class="px-4 py-2 text-left">
+            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wide mb-1" data-i18n="landing.travel.checkinLabel">Check In</label>
+            <div class="flex items-center gap-2">
+               <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+               <input type="text" placeholder="Add dates" class="w-full outline-none text-slate-900 font-medium placeholder-slate-400" onfocus="(this.type='date')" onblur="(this.type='text')">
+            </div>
+          </div>
+          <div class="px-4 py-2 text-left">
+            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wide mb-1" data-i18n="landing.travel.travelersLabel">Travelers</label>
+            <div class="flex items-center gap-2">
+               <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+               <select class="w-full outline-none text-slate-900 font-medium bg-transparent cursor-pointer">
+                 <option>1 Guest</option>
+                 <option>2 Guests</option>
+                 <option>3 Guests</option>
+                 <option>4+ Guests</option>
+               </select>
+            </div>
+          </div>
+          <div class="p-2 flex items-center justify-center">
+            <button type="button" class="w-full h-full bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30" data-i18n="landing.travel.search">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations -->
+  <section class="pt-32 pb-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="landing.travel.popularTitle">Popular Destinations</h2>
+          <p class="text-slate-600 max-w-xl" data-i18n="landing.travel.popularDesc">Explore our top-rated locations voted by travelers from around the world.</p>
+        </div>
+        <a href="#" class="hidden md:flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-500 transition-colors" data-i18n="landing.travel.viewAll">
+          View all destinations
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <a href="#" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop" alt="Bali" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent p-6 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1">Bali, Indonesia</h3>
+            <div class="flex items-center gap-1 text-yellow-400 mb-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <span class="text-sm font-bold">4.9</span>
+              <span class="text-xs text-white/80 ml-1">(2.5k Reviews)</span>
+            </div>
+            <p class="text-sm text-white/80 line-clamp-2">Experience the tropical paradise with stunning beaches and vibrant culture.</p>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+          <img src="https://images.unsplash.com/photo-1499856871940-a09627c6dcf6?q=80&w=1000&auto=format&fit=crop" alt="Paris" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent p-6 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1">Paris, France</h3>
+             <div class="flex items-center gap-1 text-yellow-400 mb-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <span class="text-sm font-bold">4.8</span>
+              <span class="text-xs text-white/80 ml-1">(3.1k Reviews)</span>
+            </div>
+            <p class="text-sm text-white/80 line-clamp-2">The city of love, known for its art, fashion, gastronomy and culture.</p>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1000&auto=format&fit=crop" alt="Cinque Terre" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent p-6 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1">Cinque Terre, Italy</h3>
+             <div class="flex items-center gap-1 text-yellow-400 mb-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <span class="text-sm font-bold">4.7</span>
+              <span class="text-xs text-white/80 ml-1">(1.8k Reviews)</span>
+            </div>
+            <p class="text-sm text-white/80 line-clamp-2">Colorful seaside villages on the rugged Italian Riviera coastline.</p>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#" class="group relative rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+          <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1000&auto=format&fit=crop" alt="Dubai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent p-6 flex flex-col justify-end text-white">
+            <h3 class="text-2xl font-bold mb-1">Dubai, UAE</h3>
+             <div class="flex items-center gap-1 text-yellow-400 mb-2">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <span class="text-sm font-bold">4.8</span>
+              <span class="text-xs text-white/80 ml-1">(2.2k Reviews)</span>
+            </div>
+            <p class="text-sm text-white/80 line-clamp-2">Modern architecture, luxury shopping and lively nightlife.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <span class="text-primary-600 font-bold uppercase tracking-wide text-sm mb-2 block" data-i18n="landing.travel.featuresSubtitle">Why Choose Us</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6" data-i18n="landing.travel.featuresTitle">We Make Your Travel Comfortable & Safe</h2>
+          <p class="text-slate-600 text-lg mb-8" data-i18n="landing.travel.featuresDesc">
+            We connect you with the best travel agencies worldwide to ensure you have the best experience possible.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg text-slate-900 mb-1">Affordable Prices</h4>
+                <p class="text-slate-600">We provide the best prices for your trip without compromising quality.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-accent-100 text-accent-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg text-slate-900 mb-1">Wide Variety of Destinations</h4>
+                <p class="text-slate-600">Choose from thousands of destinations worldwide for your next adventure.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg text-slate-900 mb-1">Highly Secured</h4>
+                <p class="text-slate-600">Your safety is our priority. We ensure all bookings are secure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-primary-600 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-xl">
+        <!-- Decorative Circles -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="landing.travel.newsletterTitle">Subscribe To Get The Latest News</h2>
+          <p class="text-white/80 mb-8 max-w-2xl mx-auto" data-i18n="landing.travel.newsletterDesc">Sign up for our newsletter and receive exclusive offers, travel tips, and destination inspiration directly to your inbox.</p>
+          
+          <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-full outline-none text-slate-900 shadow-sm focus:ring-4 focus:ring-white/30 transition-all" aria-label="Email Address">
+            <button type="submit" class="bg-accent-500 hover:bg-accent-400 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-accent-500/30 transition-colors" data-i18n="landing.travel.subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+        <div class="col-span-2 lg:col-span-2">
+          <a href="#" class="flex items-center gap-2 text-primary-600 font-bold text-2xl mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Wanderlust
+          </a>
+          <p class="text-slate-500 max-w-sm">
+            We help you find your dream destination and make your travel experience unforgettable. Join us today!
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4">Company</h4>
+          <ul class="space-y-3 text-slate-500 text-sm">
+            <li><a href="#" class="hover:text-primary-600">About Us</a></li>
+            <li><a href="#" class="hover:text-primary-600">Careers</a></li>
+            <li><a href="#" class="hover:text-primary-600">Blog</a></li>
+            <li><a href="#" class="hover:text-primary-600">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4">Destinations</h4>
+          <ul class="space-y-3 text-slate-500 text-sm">
+            <li><a href="#" class="hover:text-primary-600">Maldives</a></li>
+            <li><a href="#" class="hover:text-primary-600">Los Angelas</a></li>
+            <li><a href="#" class="hover:text-primary-600">Las Vegas</a></li>
+            <li><a href="#" class="hover:text-primary-600">Toronto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4">Support</h4>
+          <ul class="space-y-3 text-slate-500 text-sm">
+            <li><a href="#" class="hover:text-primary-600">Contact</a></li>
+            <li><a href="#" class="hover:text-primary-600">FAQ</a></li>
+            <li><a href="#" class="hover:text-primary-600">Terms</a></li>
+            <li><a href="#" class="hover:text-primary-600">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-400 text-sm text-center md:text-left">&copy; 2025 Wanderlust Travel. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-slate-50 text-slate-400 hover:bg-primary-50 hover:text-primary-600 flex items-center justify-center transition-colors">
+             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-slate-50 text-slate-400 hover:bg-primary-50 hover:text-primary-600 flex items-center justify-center transition-colors">
+             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-slate-50 text-slate-400 hover:bg-primary-50 hover:text-primary-600 flex items-center justify-center transition-colors">
+             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../src/js/i18n.js" type="module"></script>
+</body>
+</html>
