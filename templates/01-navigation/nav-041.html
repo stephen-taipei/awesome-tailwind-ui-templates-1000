@@ -3,420 +3,989 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Header Navigation - Tailwind UI Templates</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-primary-50: oklch(0.97 0.02 250);
-            --color-primary-100: oklch(0.93 0.04 250);
-            --color-primary-500: oklch(0.55 0.2 250);
-            --color-primary-600: oklch(0.48 0.2 250);
-            --color-primary-700: oklch(0.4 0.2 250);
+    <title>Nav-041: File Browser Navigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'oklch(55% 0.22 250)',
+                        'primary-light': 'oklch(70% 0.18 250)',
+                        'primary-dark': 'oklch(45% 0.22 250)',
+                        secondary: 'oklch(60% 0.15 200)',
+                        accent: 'oklch(70% 0.2 45)',
+                        surface: 'oklch(98% 0.01 250)',
+                        'surface-dark': 'oklch(20% 0.02 250)',
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
 <body class="bg-gray-100 min-h-screen">
+    
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold text-gray-900">Sticky Header Navigation</h1>
-            <p class="text-gray-600 mt-2">Headers that stick to the top and transform on scroll</p>
+    <header class="bg-white shadow-sm py-6 mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-3xl font-bold text-gray-800">Nav-041: File Browser Navigation</h1>
+            <p class="text-gray-600 mt-2">File explorer, folder navigation, and document browser patterns</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+    <main class="max-w-6xl mx-auto px-4 pb-16 space-y-16">
 
-        <!-- Style 1: Simple Sticky Header -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 1: Simple Sticky Header</h2>
-                <p class="text-gray-600 text-sm mt-1">Basic sticky navigation that stays at top</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative">
-                <!-- Sticky Header -->
-                <header class="sticky top-0 bg-white shadow-md z-10">
-                    <div class="px-6 py-4 flex items-center justify-between">
-                        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                        <nav class="flex space-x-6">
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-                        </nav>
-                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
-                            Sign Up
-                        </button>
-                    </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-6">
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 5</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 2: Shrinking Header -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 2: Shrinking Header</h2>
-                <p class="text-gray-600 text-sm mt-1">Header that shrinks on scroll (demo simulation)</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative" id="shrinkContainer">
-                <!-- Large Header (Initial) -->
-                <header id="shrinkHeader" class="sticky top-0 bg-white shadow-md z-10 transition-all duration-300">
-                    <div class="px-6 py-6 flex flex-col items-center">
-                        <a href="#" class="text-2xl font-bold text-primary-600 mb-4">Brand Logo</a>
-                        <nav class="flex space-x-8">
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Home</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Products</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Services</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">About</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors font-medium">Contact</a>
-                        </nav>
-                    </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-6">
-                    <p class="text-gray-600 text-sm">Scroll to see the header shrink effect simulation.</p>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 5</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 3: Transparent to Solid Header -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 3: Transparent to Solid Header</h2>
-                <p class="text-gray-600 text-sm mt-1">Header transitions from transparent to solid on scroll</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative">
-                <!-- Hero Section -->
-                <div class="h-48 bg-gradient-to-br from-primary-500 to-purple-600 relative">
-                    <!-- Transparent Header -->
-                    <header class="sticky top-0 bg-transparent z-10">
-                        <div class="px-6 py-4 flex items-center justify-between">
-                            <a href="#" class="text-xl font-bold text-white">Brand</a>
-                            <nav class="flex space-x-6">
-                                <a href="#" class="text-white/90 hover:text-white transition-colors">Home</a>
-                                <a href="#" class="text-white/90 hover:text-white transition-colors">Products</a>
-                                <a href="#" class="text-white/90 hover:text-white transition-colors">About</a>
-                            </nav>
-                            <button class="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm backdrop-blur-sm">
-                                Get Started
-                            </button>
-                        </div>
-                    </header>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <h2 class="text-3xl font-bold text-white">Hero Section</h2>
-                    </div>
-                </div>
-                <!-- Solid Header (after scroll) -->
-                <header class="sticky top-0 bg-white shadow-md z-10">
-                    <div class="px-6 py-4 flex items-center justify-between">
-                        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                        <nav class="flex space-x-6">
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                        </nav>
-                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
-                            Get Started
-                        </button>
-                    </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-6">
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 4: Hide on Scroll Down, Show on Scroll Up -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 4: Hide/Show on Scroll</h2>
-                <p class="text-gray-600 text-sm mt-1">Header hides on scroll down, shows on scroll up</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative" id="hideShowContainer">
-                <!-- Animated Header -->
-                <header id="hideShowHeader" class="sticky top-0 bg-white shadow-md z-10 transition-transform duration-300">
-                    <div class="px-6 py-4 flex items-center justify-between">
-                        <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-                        <nav class="flex space-x-6">
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-                        </nav>
-                        <button class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors text-sm">
-                            Sign Up
-                        </button>
-                    </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-6">
-                    <p class="text-gray-600 text-sm">Scroll down to hide header, scroll up to show it again.</p>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 5</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 6</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 5: Sticky Header with Sub-navigation -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 5: Sticky Header with Sub-navigation</h2>
-                <p class="text-gray-600 text-sm mt-1">Multi-level sticky header with secondary navigation</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative">
-                <!-- Primary Header -->
-                <header class="sticky top-0 z-20">
-                    <div class="bg-gray-900 text-white">
-                        <div class="px-6 py-3 flex items-center justify-between">
-                            <a href="#" class="text-xl font-bold">Brand</a>
-                            <nav class="flex space-x-6">
-                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Home</a>
-                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Shop</a>
-                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">About</a>
-                                <a href="#" class="text-white/80 hover:text-white transition-colors text-sm">Contact</a>
-                            </nav>
-                            <div class="flex items-center space-x-4">
-                                <button class="p-2 hover:bg-white/10 rounded-full transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        <!-- Style 1: macOS Finder Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: macOS Finder Style</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-gray-200 rounded-xl overflow-hidden shadow-lg">
+                    <!-- Toolbar -->
+                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 px-4 py-2 border-b border-gray-300">
+                        <div class="flex items-center justify-between">
+                            <!-- Window Controls -->
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            
+                            <!-- Navigation -->
+                            <div class="flex items-center space-x-1">
+                                <button class="p-1.5 hover:bg-gray-300 rounded">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                     </svg>
                                 </button>
-                                <button class="p-2 hover:bg-white/10 rounded-full transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                                <button class="p-1.5 hover:bg-gray-300 rounded">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                     </svg>
                                 </button>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Secondary Navigation -->
-                    <div class="bg-white border-b border-gray-200 shadow-sm">
-                        <div class="px-6 py-2 flex items-center space-x-6 overflow-x-auto">
-                            <a href="#" class="text-primary-600 font-medium text-sm whitespace-nowrap">All Products</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">New Arrivals</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">Best Sellers</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">Sale</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 text-sm whitespace-nowrap">Collections</a>
-                        </div>
-                    </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-6">
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 1</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 2</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 3</div>
-                    <div class="h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Content Block 4</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 6: Dark Sticky Header -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 6: Dark Sticky Header</h2>
-                <p class="text-gray-600 text-sm mt-1">Dark themed sticky header with glassmorphism effect</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative bg-gray-900">
-                <!-- Dark Sticky Header -->
-                <header class="sticky top-0 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800 z-10">
-                    <div class="px-6 py-4 flex items-center justify-between">
-                        <a href="#" class="text-xl font-bold text-white">Brand</a>
-                        <nav class="flex space-x-6">
-                            <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
-                            <a href="#" class="text-gray-300 hover:text-white transition-colors">Products</a>
-                            <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
-                            <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                        </nav>
-                        <button class="bg-gradient-to-r from-primary-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm shadow-lg shadow-primary-500/30">
-                            Get Started
-                        </button>
-                    </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-6">
-                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 1</div>
-                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 2</div>
-                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 3</div>
-                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 4</div>
-                    <div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500 border border-gray-700">Content Block 5</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 7: Sticky Header with Progress -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 7: Sticky Header with Progress</h2>
-                <p class="text-gray-600 text-sm mt-1">Sticky header with reading/scroll progress indicator</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative" id="progressContainer">
-                <!-- Sticky Header with Progress -->
-                <header class="sticky top-0 bg-white z-10">
-                    <!-- Progress Bar -->
-                    <div class="h-1 bg-gray-100">
-                        <div id="progressBar" class="h-full bg-gradient-to-r from-primary-500 to-purple-500 transition-all duration-100" style="width: 0%"></div>
-                    </div>
-                    <div class="px-6 py-4 flex items-center justify-between border-b border-gray-200">
-                        <a href="#" class="text-xl font-bold text-primary-600">Blog</a>
-                        <nav class="flex space-x-6">
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">Articles</a>
-                            <a href="#" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
-                        </nav>
-                        <div class="flex items-center space-x-3">
-                            <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
-                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                            
+                            <!-- Title -->
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
                                 </svg>
-                            </button>
-                            <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
-                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </header>
-                <!-- Article Content -->
-                <article class="p-6">
-                    <h1 class="text-2xl font-bold text-gray-900 mb-4">Article Title Goes Here</h1>
-                    <div class="space-y-4 text-gray-600">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Style 8: Compact Sticky Header -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 8: Compact Sticky Header</h2>
-                <p class="text-gray-600 text-sm mt-1">Minimal sticky header for content-focused pages</p>
-            </div>
-            <div class="h-80 overflow-y-auto relative">
-                <!-- Compact Sticky Header -->
-                <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-10">
-                    <div class="px-6 py-2 flex items-center justify-between">
-                        <div class="flex items-center space-x-4">
-                            <a href="#" class="text-sm font-bold text-gray-900">Brand</a>
-                            <span class="text-gray-300">|</span>
-                            <span class="text-sm text-gray-500">Documentation</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <button class="p-1.5 hover:bg-gray-100 rounded transition-colors">
-                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <span class="text-sm font-medium text-gray-700">Documents</span>
+                            </div>
+                            
+                            <!-- View Options -->
+                            <div class="flex items-center bg-gray-300/50 rounded-md p-0.5">
+                                <button class="p-1.5 bg-white rounded shadow-sm">
+                                    <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M4 6H6V8H4V6ZM4 11H6V13H4V11ZM4 16H6V18H4V16ZM20 8V6H8.023V8H20ZM20 11H8.023V13H20V11ZM20 16H8.023V18H20V16Z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-1.5 hover:bg-gray-200 rounded">
+                                    <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3 3H10V10H3V3ZM14 3H21V10H14V3ZM14 14H21V21H14V14ZM3 14H10V21H3V14Z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-1.5 hover:bg-gray-200 rounded">
+                                    <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M4 5V7H7V19H9V7H12V5H4ZM14 9V11H17V19H19V11H22V9H14Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Search -->
+                            <div class="relative">
+                                <input type="text" placeholder="Search" class="w-40 bg-white border border-gray-300 rounded-md px-3 py-1 text-sm">
+                                <svg class="w-4 h-4 text-gray-400 absolute right-2 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                 </svg>
-                            </button>
-                            <button class="p-1.5 hover:bg-gray-100 rounded transition-colors">
-                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <!-- Sidebar -->
+                        <div class="w-48 bg-gray-100/80 border-r border-gray-300 p-3">
+                            <div class="mb-4">
+                                <p class="text-xs font-semibold text-gray-500 uppercase mb-2">Favorites</p>
+                                <nav class="space-y-0.5">
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-gray-700 rounded hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M19 5V7H15V5H19ZM9 5V11H5V5H9ZM19 13V19H15V13H19ZM9 17V19H5V17H9ZM21 3H13V9H21V3ZM11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15Z"/>
+                                        </svg>
+                                        AirDrop
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-gray-700 rounded hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M10 4H14V8L19 3V10H22V14H19V21L14 16V20H10V16L5 21V14H2V10H5V3L10 8V4Z"/>
+                                        </svg>
+                                        Recents
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-gray-700 rounded hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4ZM4 8V18H20V8H4Z"/>
+                                        </svg>
+                                        Applications
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-white bg-blue-500 rounded">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                        </svg>
+                                        Documents
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-gray-700 rounded hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                        </svg>
+                                        Downloads
+                                    </a>
+                                </nav>
+                            </div>
+                            
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500 uppercase mb-2">Locations</p>
+                                <nav class="space-y-0.5">
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-gray-700 rounded hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                        </svg>
+                                        Network
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1.5 text-sm text-gray-700 rounded hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                                        </svg>
+                                        Macintosh HD
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                        
+                        <!-- File List -->
+                        <div class="flex-1 bg-white p-4">
+                            <div class="space-y-1">
+                                <a href="#" class="flex items-center p-2 hover:bg-blue-50 rounded-lg group">
+                                    <svg class="w-8 h-8 text-blue-400 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                    </svg>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-900">Projects</p>
+                                    </div>
+                                    <span class="text-xs text-gray-400">--</span>
+                                    <span class="text-xs text-gray-400 ml-8">Dec 5, 2024</span>
+                                </a>
+                                <a href="#" class="flex items-center p-2 hover:bg-blue-50 rounded-lg group">
+                                    <svg class="w-8 h-8 text-blue-400 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                    </svg>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-900">Reports</p>
+                                    </div>
+                                    <span class="text-xs text-gray-400">--</span>
+                                    <span class="text-xs text-gray-400 ml-8">Dec 4, 2024</span>
+                                </a>
+                                <a href="#" class="flex items-center p-2 hover:bg-blue-50 rounded-lg group">
+                                    <svg class="w-8 h-8 text-red-400 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                    </svg>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-900">Annual Report.pdf</p>
+                                    </div>
+                                    <span class="text-xs text-gray-400">2.4 MB</span>
+                                    <span class="text-xs text-gray-400 ml-8">Dec 3, 2024</span>
+                                </a>
+                                <a href="#" class="flex items-center p-2 hover:bg-blue-50 rounded-lg group">
+                                    <svg class="w-8 h-8 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                    </svg>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-900">Meeting Notes.docx</p>
+                                    </div>
+                                    <span class="text-xs text-gray-400">156 KB</span>
+                                    <span class="text-xs text-gray-400 ml-8">Dec 2, 2024</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Status Bar -->
+                    <div class="bg-gray-100 px-4 py-1 border-t border-gray-300">
+                        <p class="text-xs text-gray-500">4 items, 12.5 GB available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Windows Explorer Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Windows Explorer Style</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-300">
+                    <!-- Ribbon Tabs -->
+                    <div class="bg-gray-100 border-b border-gray-300">
+                        <div class="flex items-center px-2 pt-1">
+                            <div class="flex space-x-1">
+                                <button class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border-t border-l border-r border-gray-300 rounded-t">
+                                    Home
+                                </button>
+                                <button class="px-3 py-1.5 text-xs text-gray-600 hover:bg-gray-200 rounded-t">
+                                    Share
+                                </button>
+                                <button class="px-3 py-1.5 text-xs text-gray-600 hover:bg-gray-200 rounded-t">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Ribbon Content -->
+                        <div class="bg-white px-4 py-2 border-b border-gray-200">
+                            <div class="flex items-center space-x-6">
+                                <div class="flex flex-col items-center">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-xs text-gray-600">Copy</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-xs text-gray-600">Paste</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-xs text-gray-600">Cut</span>
+                                </div>
+                                <div class="w-px h-12 bg-gray-300"></div>
+                                <div class="flex flex-col items-center">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-xs text-gray-600">New</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-xs text-gray-600">Delete</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                        </svg>
+                                    </button>
+                                    <span class="text-xs text-gray-600">Rename</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Address Bar -->
+                    <div class="bg-gray-50 px-4 py-2 flex items-center space-x-2 border-b">
+                        <button class="p-1 hover:bg-gray-200 rounded">
+                            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <button class="p-1 hover:bg-gray-200 rounded">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="p-1 hover:bg-gray-200 rounded">
+                            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="flex-1 flex items-center bg-white border border-gray-300 rounded px-2 py-1">
+                            <svg class="w-4 h-4 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                            </svg>
+                            <span class="text-sm text-gray-600">This PC</span>
+                            <svg class="w-4 h-4 text-gray-400 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <span class="text-sm text-gray-600">Documents</span>
+                            <svg class="w-4 h-4 text-gray-400 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <span class="text-sm text-gray-900">Projects</span>
+                        </div>
+                        
+                        <div class="relative">
+                            <input type="text" placeholder="Search Projects" class="w-48 border border-gray-300 rounded px-3 py-1 text-sm">
+                            <svg class="w-4 h-4 text-gray-400 absolute right-2 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="flex h-64">
+                        <!-- Quick Access -->
+                        <div class="w-48 bg-gray-50 border-r p-2 overflow-y-auto">
+                            <div class="mb-3">
+                                <button class="flex items-center w-full text-left px-2 py-1 text-sm">
+                                    <svg class="w-4 h-4 text-gray-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                    Quick access
+                                </button>
+                                <div class="ml-4 space-y-0.5">
+                                    <a href="#" class="flex items-center px-2 py-1 text-sm text-gray-700 hover:bg-gray-200 rounded">
+                                        <svg class="w-4 h-4 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z"/>
+                                        </svg>
+                                        Desktop
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1 text-sm text-gray-700 hover:bg-gray-200 rounded">
+                                        <svg class="w-4 h-4 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z"/>
+                                        </svg>
+                                        Downloads
+                                    </a>
+                                    <a href="#" class="flex items-center px-2 py-1 text-sm text-white bg-blue-500 rounded">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z"/>
+                                        </svg>
+                                        Documents
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="flex items-center w-full text-left px-2 py-1 text-sm">
+                                    <svg class="w-4 h-4 text-gray-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                    This PC
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- File Grid -->
+                        <div class="flex-1 p-4 grid grid-cols-4 gap-4 content-start">
+                            <a href="#" class="flex flex-col items-center p-3 hover:bg-blue-50 rounded-lg">
+                                <svg class="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z"/>
                                 </svg>
-                            </button>
-                            <a href="#" class="text-sm text-primary-600 hover:text-primary-700 font-medium ml-2">
-                                Sign In
+                                <span class="text-xs text-gray-700 mt-1 text-center">Web Project</span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center p-3 hover:bg-blue-50 rounded-lg">
+                                <svg class="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z"/>
+                                </svg>
+                                <span class="text-xs text-gray-700 mt-1 text-center">App Design</span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center p-3 hover:bg-blue-50 rounded-lg">
+                                <svg class="w-12 h-12 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                </svg>
+                                <span class="text-xs text-gray-700 mt-1 text-center">Notes.docx</span>
+                            </a>
+                            <a href="#" class="flex flex-col items-center p-3 hover:bg-blue-50 rounded-lg">
+                                <svg class="w-12 h-12 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                </svg>
+                                <span class="text-xs text-gray-700 mt-1 text-center">Budget.xlsx</span>
                             </a>
                         </div>
                     </div>
-                </header>
-                <!-- Content -->
-                <div class="p-6 space-y-4">
-                    <h2 class="text-xl font-bold text-gray-900">Getting Started</h2>
-                    <p class="text-gray-600">Welcome to our documentation. This guide will help you get started quickly.</p>
-                    <div class="h-24 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Code Example</div>
-                    <p class="text-gray-600">Follow the steps below to set up your project.</p>
-                    <div class="h-24 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">Configuration</div>
-                    <p class="text-gray-600">Once configured, you can start building your application.</p>
-                    <div class="h-24 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">More Content</div>
+                    
+                    <!-- Status Bar -->
+                    <div class="bg-gray-100 px-4 py-1 border-t flex items-center justify-between">
+                        <span class="text-xs text-gray-600">4 items</span>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-1 hover:bg-gray-200 rounded">
+                                <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 6H6V8H4V6ZM4 11H6V13H4V11ZM4 16H6V18H4V16ZM20 8V6H8.023V8H20ZM20 11H8.023V13H20V11ZM20 16H8.023V18H20V16Z"/>
+                                </svg>
+                            </button>
+                            <button class="p-1 bg-gray-200 rounded">
+                                <svg class="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3 3H10V10H3V3ZM14 3H21V10H14V3ZM14 14H21V21H14V14ZM3 14H10V21H3V14Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Dropbox/Cloud Storage Style -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Cloud Storage Style</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-6 py-4 border-b flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <svg class="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L6 7L12 12L6 17L12 22L18 17L12 12L18 7L12 2Z"/>
+                                </svg>
+                                <span class="ml-2 text-xl font-semibold text-gray-900">Dropbox</span>
+                            </div>
+                            <nav class="flex space-x-1 ml-8">
+                                <a href="#" class="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg">All files</a>
+                                <a href="#" class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Shared</a>
+                                <a href="#" class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Signatures</a>
+                            </nav>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <div class="relative">
+                                <input type="text" placeholder="Search" class="w-64 bg-gray-100 border-0 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+                                <svg class="w-5 h-5 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                            <button class="p-2 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                </svg>
+                            </button>
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                                J
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Breadcrumb & Actions -->
+                    <div class="px-6 py-3 border-b flex items-center justify-between">
+                        <div class="flex items-center space-x-2 text-sm">
+                            <a href="#" class="text-blue-600 hover:underline">Dropbox</a>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <a href="#" class="text-blue-600 hover:underline">Work</a>
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <span class="text-gray-900">Projects</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2">
+                            <button class="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                                </svg>
+                                Upload
+                            </button>
+                            <button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                                Create
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- File List -->
+                    <div class="divide-y">
+                        <div class="px-6 py-3 flex items-center hover:bg-gray-50 cursor-pointer group">
+                            <input type="checkbox" class="rounded border-gray-300 text-blue-600 mr-4 opacity-0 group-hover:opacity-100">
+                            <svg class="w-10 h-10 text-blue-400 mr-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Design Assets</p>
+                                <p class="text-sm text-gray-500">Folder · Shared with team</p>
+                            </div>
+                            <span class="text-sm text-gray-500 mr-8">Dec 5, 2024</span>
+                            <button class="p-2 hover:bg-gray-200 rounded-lg opacity-0 group-hover:opacity-100">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="px-6 py-3 flex items-center hover:bg-gray-50 cursor-pointer group">
+                            <input type="checkbox" class="rounded border-gray-300 text-blue-600 mr-4 opacity-0 group-hover:opacity-100">
+                            <svg class="w-10 h-10 text-blue-400 mr-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Client Presentations</p>
+                                <p class="text-sm text-gray-500">Folder · Only you</p>
+                            </div>
+                            <span class="text-sm text-gray-500 mr-8">Dec 4, 2024</span>
+                            <button class="p-2 hover:bg-gray-200 rounded-lg opacity-0 group-hover:opacity-100">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="px-6 py-3 flex items-center hover:bg-gray-50 cursor-pointer group">
+                            <input type="checkbox" class="rounded border-gray-300 text-blue-600 mr-4 opacity-0 group-hover:opacity-100">
+                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Project Proposal.fig</p>
+                                <p class="text-sm text-gray-500">Figma · 2.4 MB</p>
+                            </div>
+                            <span class="text-sm text-gray-500 mr-8">Dec 3, 2024</span>
+                            <button class="p-2 hover:bg-gray-200 rounded-lg opacity-0 group-hover:opacity-100">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Code Editor File Tree -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Code Editor File Tree (VS Code Style)</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+                    <div class="flex">
+                        <!-- Activity Bar -->
+                        <div class="w-12 bg-gray-800 flex flex-col items-center py-2 space-y-4">
+                            <button class="p-2 text-white border-l-2 border-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 text-gray-500 hover:text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 text-gray-500 hover:text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 text-gray-500 hover:text-white relative">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                </svg>
+                                <span class="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full"></span>
+                            </button>
+                        </div>
+                        
+                        <!-- Sidebar -->
+                        <div class="w-56 bg-gray-800/50">
+                            <div class="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider flex items-center justify-between">
+                                Explorer
+                                <button class="hover:bg-gray-700 rounded p-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Project Name -->
+                            <div class="px-2">
+                                <button class="flex items-center w-full px-2 py-1 text-sm text-gray-300 hover:bg-gray-700 rounded">
+                                    <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                    <span class="font-semibold">MY-PROJECT</span>
+                                </button>
+                                
+                                <!-- File Tree -->
+                                <div class="ml-2 text-sm">
+                                    <button class="flex items-center w-full px-2 py-0.5 text-gray-300 hover:bg-gray-700 rounded">
+                                        <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 mr-1 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                        </svg>
+                                        src
+                                    </button>
+                                    <div class="ml-4">
+                                        <button class="flex items-center w-full px-2 py-0.5 text-gray-300 hover:bg-gray-700 rounded">
+                                            <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                            </svg>
+                                            <svg class="w-4 h-4 mr-1 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                            </svg>
+                                            components
+                                        </button>
+                                        <a href="#" class="flex items-center w-full px-2 py-0.5 text-gray-300 hover:bg-gray-700 rounded">
+                                            <span class="w-4 mr-1"></span>
+                                            <svg class="w-4 h-4 mr-1 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9-.82-.08-1.63-.2-2.4-.36-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68 0 1.69-1.83 2.93-4.37 3.68.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68 0-1.69 1.83-2.93 4.37-3.68-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26 0-.73-1.18-1.63-3.28-2.26-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26 0 .73 1.18 1.63 3.28 2.26.25-.76.55-1.51.89-2.26m9 2.26l-.3.51c.31-.05.61-.1.88-.16-.07-.28-.18-.57-.29-.86l-.29.51m-2.89 4.04c1.59 1.5 2.97 2.08 3.59 1.7.64-.35.83-1.82.32-3.96-.77.16-1.58.28-2.4.36-.48.67-.99 1.31-1.51 1.9M8.08 9.74l.3-.51c-.31.05-.61.1-.88.16.07.28.18.57.29.86l.29-.51m2.89-4.04C9.38 4.2 8 3.62 7.37 4c-.63.35-.82 1.82-.31 3.96.77-.16 1.58-.28 2.4-.36.48-.67.99-1.31 1.51-1.9z"/>
+                                            </svg>
+                                            App.tsx
+                                        </a>
+                                        <a href="#" class="flex items-center w-full px-2 py-0.5 text-white bg-gray-600 rounded">
+                                            <span class="w-4 mr-1"></span>
+                                            <svg class="w-4 h-4 mr-1 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9-.82-.08-1.63-.2-2.4-.36-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72z"/>
+                                            </svg>
+                                            index.tsx
+                                        </a>
+                                    </div>
+                                    <button class="flex items-center w-full px-2 py-0.5 text-gray-300 hover:bg-gray-700 rounded">
+                                        <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                        <svg class="w-4 h-4 mr-1 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H12L10 5H5C3.89543 5 3 5.89543 3 7Z"/>
+                                        </svg>
+                                        node_modules
+                                    </button>
+                                    <a href="#" class="flex items-center w-full px-2 py-0.5 text-gray-300 hover:bg-gray-700 rounded">
+                                        <span class="w-4 mr-1"></span>
+                                        <svg class="w-4 h-4 mr-1 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                        </svg>
+                                        package.json
+                                    </a>
+                                    <a href="#" class="flex items-center w-full px-2 py-0.5 text-gray-300 hover:bg-gray-700 rounded">
+                                        <span class="w-4 mr-1"></span>
+                                        <svg class="w-4 h-4 mr-1 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M3 3h18v18H3V3m2 2v14h14V5H5z"/>
+                                        </svg>
+                                        tsconfig.json
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Editor Area -->
+                        <div class="flex-1 flex flex-col">
+                            <!-- Tabs -->
+                            <div class="bg-gray-800 flex items-center">
+                                <div class="flex items-center px-3 py-2 bg-gray-900 text-white text-sm border-t border-blue-500">
+                                    <svg class="w-4 h-4 mr-2 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85s-1.87-.85-1.87-1.85c0-1.05.84-1.89 1.87-1.89z"/>
+                                    </svg>
+                                    index.tsx
+                                    <button class="ml-2 hover:bg-gray-700 rounded p-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="flex items-center px-3 py-2 text-gray-400 text-sm hover:bg-gray-700">
+                                    <svg class="w-4 h-4 mr-2 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85s-1.87-.85-1.87-1.85c0-1.05.84-1.89 1.87-1.89z"/>
+                                    </svg>
+                                    App.tsx
+                                    <button class="ml-2 hover:bg-gray-600 rounded p-0.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Code Content Placeholder -->
+                            <div class="flex-1 bg-gray-900 p-4 font-mono text-sm">
+                                <div class="flex">
+                                    <div class="text-gray-600 text-right pr-4 select-none">
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                    </div>
+                                    <div class="text-gray-300">
+                                        <div><span class="text-purple-400">import</span> React <span class="text-purple-400">from</span> <span class="text-green-400">'react'</span>;</div>
+                                        <div></div>
+                                        <div><span class="text-purple-400">export const</span> <span class="text-yellow-300">App</span> = () => {'{'}</div>
+                                        <div>  <span class="text-purple-400">return</span> <span class="text-gray-400">&lt;</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>Hello<span class="text-gray-400">&lt;/</span><span class="text-blue-400">div</span><span class="text-gray-400">&gt;</span>;</div>
+                                        <div>{'}'}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Photo Gallery Navigation -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Photo Gallery Browser</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="px-6 py-4 border-b flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="p-2 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                                </svg>
+                            </button>
+                            <h3 class="text-lg font-semibold text-gray-900">Photos</h3>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-2 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </button>
+                            <button class="p-2 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Navigation -->
+                    <div class="px-6 py-3 border-b">
+                        <div class="flex space-x-6">
+                            <a href="#" class="pb-3 text-sm font-medium text-primary border-b-2 border-primary">Library</a>
+                            <a href="#" class="pb-3 text-sm text-gray-500 hover:text-gray-700">For You</a>
+                            <a href="#" class="pb-3 text-sm text-gray-500 hover:text-gray-700">Albums</a>
+                            <a href="#" class="pb-3 text-sm text-gray-500 hover:text-gray-700">Search</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <!-- Sidebar -->
+                        <div class="w-48 border-r p-4">
+                            <nav class="space-y-1">
+                                <a href="#" class="flex items-center px-3 py-2 text-sm font-medium text-white bg-primary rounded-lg">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                    </svg>
+                                    All Photos
+                                </a>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                    Favorites
+                                </a>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                    </svg>
+                                    Videos
+                                </a>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Recents
+                                </a>
+                                <a href="#" class="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                    </svg>
+                                    Trash
+                                </a>
+                            </nav>
+                            
+                            <div class="mt-6 pt-6 border-t">
+                                <p class="px-3 text-xs font-semibold text-gray-400 uppercase">Albums</p>
+                                <nav class="mt-2 space-y-1">
+                                    <a href="#" class="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                        <div class="w-8 h-8 bg-gradient-to-br from-pink-400 to-purple-500 rounded mr-3"></div>
+                                        Vacation 2024
+                                    </a>
+                                    <a href="#" class="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                                        <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-blue-500 rounded mr-3"></div>
+                                        Nature
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                        
+                        <!-- Photo Grid -->
+                        <div class="flex-1 p-4">
+                            <div class="mb-4 flex items-center justify-between">
+                                <h4 class="font-semibold text-gray-900">December 2024</h4>
+                                <div class="flex items-center space-x-2">
+                                    <button class="text-sm text-primary">Select</button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <div class="aspect-square bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-green-400 to-cyan-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-orange-400 to-pink-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-pink-400 to-red-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-teal-400 to-green-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                                <div class="aspect-square bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg cursor-pointer hover:opacity-90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Document Library (SharePoint/Teams Style) -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Document Library (SharePoint Style)</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border">
+                    <!-- Command Bar -->
+                    <div class="px-4 py-3 border-b flex items-center justify-between bg-gray-50">
+                        <div class="flex items-center space-x-2">
+                            <button class="px-3 py-1.5 text-sm font-medium text-white bg-primary rounded hover:bg-primary-dark flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                </svg>
+                                New
+                            </button>
+                            <button class="px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-200 rounded flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                                </svg>
+                                Upload
+                            </button>
+                            <div class="w-px h-6 bg-gray-300"></div>
+                            <button class="px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-200 rounded flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                                </svg>
+                                Filter
+                            </button>
+                            <button class="px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-200 rounded flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"/>
+                                </svg>
+                                Sort
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="relative">
+                                <input type="text" placeholder="Search this library" class="w-56 border border-gray-300 rounded px-3 py-1.5 text-sm">
+                                <svg class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </div>
+                            <button class="p-1.5 hover:bg-gray-200 rounded">
+                                <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 6H6V8H4V6ZM4 11H6V13H4V11ZM4 16H6V18H4V16ZM20 8V6H8.023V8H20ZM20 11H8.023V13H20V11ZM20 16H8.023V18H20V16Z"/>
+                                </svg>
+                            </button>
+                            <button class="p-1.5 bg-gray-200 rounded">
+                                <svg class="w-5 h-5 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3 3H10V10H3V3ZM14 3H21V10H14V3ZM14 14H21V21H14V14ZM3 14H10V21H3V14Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Breadcrumb -->
+                    <div class="px-4 py-2 border-b bg-white">
+                        <div class="flex items-center text-sm">
+                            <a href="#" class="text-primary hover:underline">Documents</a>
+                            <svg class="w-4 h-4 text-gray-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <a href="#" class="text-primary hover:underline">Marketing</a>
+                            <svg class="w-4 h-4 text-gray-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <span class="text-gray-700">Campaigns</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Document List -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 border-b">
+                                <tr>
+                                    <th class="w-8 px-4 py-3">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Modified</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Modified By</th>
+                                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Size</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y">
+                                <tr class="hover:bg-gray-50 cursor-pointer">
+                                    <td class="px-4 py-3">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <svg class="w-8 h-8 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6H12L10 4Z"/>
+                                        </svg>
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <a href="#" class="text-primary hover:underline font-medium">Q4 Campaign Assets</a>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Dec 5, 2024</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Sarah Johnson</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">--</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 cursor-pointer">
+                                    <td class="px-4 py-3">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                        </svg>
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <a href="#" class="text-primary hover:underline font-medium">Campaign Budget.xlsx</a>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Dec 4, 2024</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Mike Chen</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">245 KB</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 cursor-pointer">
+                                    <td class="px-4 py-3">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                        </svg>
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <a href="#" class="text-primary hover:underline font-medium">Marketing Strategy.docx</a>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Dec 3, 2024</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Emily Davis</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">1.2 MB</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 cursor-pointer">
+                                    <td class="px-4 py-3">
+                                        <input type="checkbox" class="rounded border-gray-300">
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <svg class="w-8 h-8 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.89 22 5.99 22H18C19.1 22 20 21.1 20 20V8L14 2ZM16 18H8V16H16V18ZM16 14H8V12H16V14ZM13 9V3.5L18.5 9H13Z"/>
+                                        </svg>
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <a href="#" class="text-primary hover:underline font-medium">Q4 Presentation.pptx</a>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Dec 2, 2024</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">Sarah Johnson</td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">8.5 MB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 py-8">
-            <p class="text-center text-gray-600">Sticky Header Navigation - Part of 1000 Tailwind UI Templates Collection</p>
-        </div>
-    </footer>
-
-    <script>
-        // Hide/Show on scroll
-        let lastScrollTop = 0;
-        const hideShowContainer = document.getElementById('hideShowContainer');
-        const hideShowHeader = document.getElementById('hideShowHeader');
-
-        if (hideShowContainer && hideShowHeader) {
-            hideShowContainer.addEventListener('scroll', function() {
-                const scrollTop = hideShowContainer.scrollTop;
-                if (scrollTop > lastScrollTop && scrollTop > 50) {
-                    hideShowHeader.style.transform = 'translateY(-100%)';
-                } else {
-                    hideShowHeader.style.transform = 'translateY(0)';
-                }
-                lastScrollTop = scrollTop;
-            });
-        }
-
-        // Progress bar
-        const progressContainer = document.getElementById('progressContainer');
-        const progressBar = document.getElementById('progressBar');
-
-        if (progressContainer && progressBar) {
-            progressContainer.addEventListener('scroll', function() {
-                const scrollTop = progressContainer.scrollTop;
-                const scrollHeight = progressContainer.scrollHeight - progressContainer.clientHeight;
-                const progress = (scrollTop / scrollHeight) * 100;
-                progressBar.style.width = progress + '%';
-            });
-        }
-
-        // Shrinking header simulation
-        const shrinkContainer = document.getElementById('shrinkContainer');
-        const shrinkHeader = document.getElementById('shrinkHeader');
-
-        if (shrinkContainer && shrinkHeader) {
-            shrinkContainer.addEventListener('scroll', function() {
-                if (shrinkContainer.scrollTop > 30) {
-                    shrinkHeader.classList.add('py-2');
-                    shrinkHeader.classList.remove('py-6');
-                    shrinkHeader.querySelector('a').classList.remove('text-2xl', 'mb-4');
-                    shrinkHeader.querySelector('a').classList.add('text-lg', 'mb-0');
-                } else {
-                    shrinkHeader.classList.remove('py-2');
-                    shrinkHeader.classList.add('py-6');
-                    shrinkHeader.querySelector('a').classList.add('text-2xl', 'mb-4');
-                    shrinkHeader.querySelector('a').classList.remove('text-lg', 'mb-0');
-                }
-            });
-        }
-    </script>
 </body>
 </html>
