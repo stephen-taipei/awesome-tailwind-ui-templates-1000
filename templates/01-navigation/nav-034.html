@@ -3,323 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagination Navigation - Tailwind UI Templates</title>
+    <title>Nav-034: Wizard Navigation - Tailwind UI Templates</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            --color-primary-50: oklch(0.97 0.02 250);
-            --color-primary-100: oklch(0.93 0.04 250);
-            --color-primary-500: oklch(0.55 0.2 250);
-            --color-primary-600: oklch(0.48 0.2 250);
-            --color-primary-700: oklch(0.4 0.2 250);
+            --color-primary-50: oklch(0.97 0.02 220);
+            --color-primary-100: oklch(0.93 0.04 220);
+            --color-primary-200: oklch(0.88 0.08 220);
+            --color-primary-500: oklch(0.55 0.2 220);
+            --color-primary-600: oklch(0.48 0.2 220);
+            --color-primary-700: oklch(0.4 0.18 220);
         }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 py-6">
-            <h1 class="text-3xl font-bold text-gray-900">Pagination Navigation</h1>
-            <p class="text-gray-600 mt-2">Various pagination styles for navigating through content pages</p>
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Nav-034: Wizard Navigation</h1>
+            <p class="text-gray-600 mt-1">Multi-step form and setup wizard navigation patterns</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
 
-        <!-- Style 1: Simple Pagination -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 1: Simple Pagination</h2>
-                <p class="text-gray-600 text-sm mt-1">Basic pagination with previous/next and page numbers</p>
+        <!-- Style 1: Horizontal Wizard with Icons -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 1: Horizontal Wizard with Icons</h2>
+                <p class="text-sm text-gray-600">Step-by-step wizard with icon indicators</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex items-center justify-center space-x-1">
-                    <button class="px-3 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </button>
-                    <button class="px-4 py-2 text-white bg-primary-500 rounded-lg font-medium">1</button>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">2</button>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">3</button>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">4</button>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">5</button>
-                    <button class="px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </button>
-                </nav>
-            </div>
-        </section>
+            <div class="p-6">
+                <nav class="relative">
+                    <!-- Progress Line -->
+                    <div class="absolute top-6 left-0 right-0 h-0.5 bg-gray-200">
+                        <div class="h-full bg-primary-500 transition-all" style="width: 50%"></div>
+                    </div>
 
-        <!-- Style 2: Pagination with Ellipsis -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 2: Pagination with Ellipsis</h2>
-                <p class="text-gray-600 text-sm mt-1">Pagination showing first, last, and nearby pages with ellipsis</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex items-center justify-center space-x-1">
-                    <button class="flex items-center px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors">
-                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
+                    <div class="relative flex justify-between">
+                        <!-- Step 1 - Completed -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white z-10">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="mt-3 text-center">
+                                <p class="text-sm font-medium text-gray-900">Account Setup</p>
+                                <p class="text-xs text-gray-500">Basic information</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 - Completed -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white z-10">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="mt-3 text-center">
+                                <p class="text-sm font-medium text-gray-900">Profile Details</p>
+                                <p class="text-xs text-gray-500">Personal info</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 - Current -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white z-10 ring-4 ring-primary-100">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                                </svg>
+                            </div>
+                            <div class="mt-3 text-center">
+                                <p class="text-sm font-medium text-primary-600">Payment</p>
+                                <p class="text-xs text-primary-500">Current step</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 - Upcoming -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-400 z-10">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="mt-3 text-center">
+                                <p class="text-sm font-medium text-gray-400">Confirmation</p>
+                                <p class="text-xs text-gray-400">Review & submit</p>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Navigation Buttons -->
+                <div class="mt-8 flex justify-between">
+                    <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
                         Previous
                     </button>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">1</button>
-                    <span class="px-2 py-2 text-gray-400">...</span>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">4</button>
-                    <button class="px-4 py-2 text-white bg-primary-500 rounded-lg font-medium">5</button>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">6</button>
-                    <span class="px-2 py-2 text-gray-400">...</span>
-                    <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors">20</button>
-                    <button class="flex items-center px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors">
-                        Next
-                        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    <button class="px-6 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 2: Vertical Wizard Sidebar -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 2: Vertical Wizard Sidebar</h2>
+                <p class="text-sm text-gray-600">Sidebar wizard navigation with content area</p>
+            </div>
+            <div class="flex">
+                <!-- Sidebar Nav -->
+                <nav class="w-72 bg-gray-50 border-r border-gray-200 p-6">
+                    <div class="space-y-1">
+                        <!-- Step 1 - Completed -->
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-lg bg-primary-50 border border-primary-200">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white text-sm shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Getting Started</p>
+                                <p class="text-xs text-gray-500">Completed</p>
+                            </div>
+                        </a>
+
+                        <!-- Step 2 - Current -->
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-lg bg-white border-2 border-primary-500 shadow-sm">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white text-sm font-medium shrink-0">
+                                2
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-primary-700">Company Info</p>
+                                <p class="text-xs text-primary-500">In progress</p>
+                            </div>
+                        </a>
+
+                        <!-- Step 3 -->
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-medium shrink-0">
+                                3
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-600">Team Members</p>
+                                <p class="text-xs text-gray-400">Pending</p>
+                            </div>
+                        </a>
+
+                        <!-- Step 4 -->
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-medium shrink-0">
+                                4
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-600">Integrations</p>
+                                <p class="text-xs text-gray-400">Pending</p>
+                            </div>
+                        </a>
+
+                        <!-- Step 5 -->
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-sm font-medium shrink-0">
+                                5
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-600">Launch</p>
+                                <p class="text-xs text-gray-400">Pending</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-gray-600">Setup Progress</span>
+                            <span class="font-medium text-gray-900">40%</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary-500 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Content Area -->
+                <div class="flex-1 p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Company Information</h3>
+                    <p class="text-gray-600">Fill in your company details to continue with the setup wizard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Compact Numbered Steps -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 3: Compact Numbered Steps</h2>
+                <p class="text-sm text-gray-600">Minimal numbered step indicator</p>
+            </div>
+            <div class="p-6">
+                <nav class="flex items-center justify-center gap-2">
+                    <!-- Step 1 -->
+                    <button class="w-10 h-10 bg-primary-500 text-white rounded-full font-medium">1</button>
+                    <div class="w-12 h-1 bg-primary-500 rounded-full"></div>
+                    <!-- Step 2 -->
+                    <button class="w-10 h-10 bg-primary-500 text-white rounded-full font-medium">2</button>
+                    <div class="w-12 h-1 bg-primary-500 rounded-full"></div>
+                    <!-- Step 3 -->
+                    <button class="w-10 h-10 bg-primary-500 text-white rounded-full font-medium ring-4 ring-primary-100">3</button>
+                    <div class="w-12 h-1 bg-gray-200 rounded-full"></div>
+                    <!-- Step 4 -->
+                    <button class="w-10 h-10 bg-gray-200 text-gray-500 rounded-full font-medium">4</button>
+                    <div class="w-12 h-1 bg-gray-200 rounded-full"></div>
+                    <!-- Step 5 -->
+                    <button class="w-10 h-10 bg-gray-200 text-gray-500 rounded-full font-medium">5</button>
+                </nav>
+
+                <p class="text-center text-sm text-gray-600 mt-4">Step 3 of 5: Select your plan</p>
+            </div>
+        </section>
+
+        <!-- Style 4: Card-Based Wizard -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 4: Card-Based Wizard</h2>
+                <p class="text-sm text-gray-600">Steps presented as expandable cards</p>
+            </div>
+            <div class="p-6 space-y-4">
+                <!-- Step 1 - Completed -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <div class="flex items-center justify-between p-4 bg-primary-50 border-l-4 border-primary-500">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900">1. Account Creation</p>
+                                <p class="text-sm text-gray-500">Email verified, password set</p>
+                            </div>
+                        </div>
+                        <button class="text-sm text-primary-600 hover:text-primary-700 font-medium">Edit</button>
+                    </div>
+                </div>
+
+                <!-- Step 2 - Current (Expanded) -->
+                <div class="border-2 border-primary-500 rounded-xl overflow-hidden shadow-sm">
+                    <div class="flex items-center justify-between p-4 bg-white border-l-4 border-primary-500">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-medium">
+                                2
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-900">2. Personal Information</p>
+                                <p class="text-sm text-primary-600">Currently editing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border-t border-gray-100 bg-gray-50">
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-primary-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-200 focus:border-primary-500">
+                            </div>
+                        </div>
+                        <button class="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors text-sm font-medium">
+                            Save & Continue
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3 - Pending -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden opacity-60">
+                    <div class="flex items-center gap-3 p-4">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-medium">
+                            3
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-500">3. Preferences</p>
+                            <p class="text-sm text-gray-400">Complete step 2 first</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 - Pending -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden opacity-60">
+                    <div class="flex items-center gap-3 p-4">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-medium">
+                            4
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-500">4. Review & Submit</p>
+                            <p class="text-sm text-gray-400">Complete step 3 first</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Progress Pills -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 5: Progress Pills</h2>
+                <p class="text-sm text-gray-600">Pill-shaped step indicators with labels</p>
+            </div>
+            <div class="p-6">
+                <nav class="flex items-center justify-center gap-3 flex-wrap">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
+                        Basics
+                    </button>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Details
+                    </button>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium ring-2 ring-primary-500">
+                        <span class="w-5 h-5 bg-primary-500 text-white rounded-full flex items-center justify-center text-xs">3</span>
+                        Settings
+                    </button>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-500 rounded-full text-sm font-medium">
+                        <span class="w-5 h-5 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xs">4</span>
+                        Review
+                    </button>
+                    <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-500 rounded-full text-sm font-medium">
+                        <span class="w-5 h-5 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xs">5</span>
+                        Complete
                     </button>
                 </nav>
             </div>
         </section>
 
-        <!-- Style 3: Rounded Pagination -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 3: Rounded Pagination</h2>
-                <p class="text-gray-600 text-sm mt-1">Circular page buttons with outline style</p>
+        <!-- Style 6: Timeline Wizard -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 6: Timeline Wizard</h2>
+                <p class="text-sm text-gray-600">Vertical timeline with detailed step info</p>
             </div>
-            <div class="p-6 bg-gray-50">
-                <nav class="flex items-center justify-center space-x-2">
-                    <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                        </svg>
-                    </button>
-                    <button class="w-10 h-10 flex items-center justify-center text-white bg-primary-500 rounded-full font-medium">1</button>
-                    <button class="w-10 h-10 flex items-center justify-center text-gray-700 border border-gray-300 hover:border-primary-500 hover:text-primary-500 rounded-full font-medium transition-colors">2</button>
-                    <button class="w-10 h-10 flex items-center justify-center text-gray-700 border border-gray-300 hover:border-primary-500 hover:text-primary-500 rounded-full font-medium transition-colors">3</button>
-                    <button class="w-10 h-10 flex items-center justify-center text-gray-700 border border-gray-300 hover:border-primary-500 hover:text-primary-500 rounded-full font-medium transition-colors">4</button>
-                    <button class="w-10 h-10 flex items-center justify-center text-gray-700 border border-gray-300 hover:border-primary-500 hover:text-primary-500 rounded-full font-medium transition-colors">5</button>
-                    <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </button>
-                </nav>
-            </div>
-        </section>
+            <div class="p-6">
+                <div class="max-w-lg mx-auto">
+                    <nav class="relative">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                        <div class="absolute left-6 top-0 w-0.5 bg-primary-500" style="height: 55%"></div>
 
-        <!-- Style 4: Pagination with Info -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 4: Pagination with Info</h2>
-                <p class="text-gray-600 text-sm mt-1">Pagination showing results count and page info</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <div class="flex items-center justify-between">
-                    <p class="text-sm text-gray-600">
-                        Showing <span class="font-medium">1</span> to <span class="font-medium">10</span> of <span class="font-medium">97</span> results
-                    </p>
-                    <nav class="flex items-center space-x-1">
-                        <button class="px-3 py-2 text-sm text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-50 transition-colors disabled:opacity-50" disabled>
-                            Previous
-                        </button>
-                        <button class="px-4 py-2 text-sm text-white bg-primary-500 border border-primary-500">1</button>
-                        <button class="px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">2</button>
-                        <button class="px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">3</button>
-                        <button class="px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">...</button>
-                        <button class="px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors">10</button>
-                        <button class="px-3 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-50 transition-colors">
-                            Next
-                        </button>
-                    </nav>
-                </div>
-            </div>
-        </section>
+                        <div class="space-y-6">
+                            <!-- Step 1 - Completed -->
+                            <div class="relative flex gap-4">
+                                <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white z-10 shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1 bg-primary-50 border border-primary-200 rounded-xl p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h4 class="font-medium text-gray-900">Create Account</h4>
+                                        <span class="text-xs text-primary-600 bg-primary-100 px-2 py-1 rounded-full">Completed</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Account created with email verification.</p>
+                                </div>
+                            </div>
 
-        <!-- Style 5: Mini Pagination -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 5: Mini Pagination</h2>
-                <p class="text-gray-600 text-sm mt-1">Compact pagination with just arrows and page indicator</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <div class="flex items-center justify-center space-x-4">
-                    <!-- Style 5a: Simple Mini -->
-                    <nav class="flex items-center space-x-2 bg-white rounded-lg shadow px-2 py-1">
-                        <button class="p-1 text-gray-500 hover:text-gray-700 disabled:opacity-50" disabled>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                            </svg>
-                        </button>
-                        <span class="text-sm text-gray-600 px-2">Page <span class="font-medium">1</span> of <span class="font-medium">10</span></span>
-                        <button class="p-1 text-gray-700 hover:text-gray-900">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </nav>
+                            <!-- Step 2 - Completed -->
+                            <div class="relative flex gap-4">
+                                <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white z-10 shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1 bg-primary-50 border border-primary-200 rounded-xl p-4">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h4 class="font-medium text-gray-900">Connect Workspace</h4>
+                                        <span class="text-xs text-primary-600 bg-primary-100 px-2 py-1 rounded-full">Completed</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Workspace connected with 3 team members.</p>
+                                </div>
+                            </div>
 
-                    <!-- Style 5b: With Input -->
-                    <nav class="flex items-center space-x-2 bg-white rounded-lg shadow px-3 py-2">
-                        <button class="p-1 text-gray-500 hover:text-gray-700">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                            </svg>
-                        </button>
-                        <div class="flex items-center space-x-1 text-sm">
-                            <input type="number" value="5" min="1" max="10" class="w-12 px-2 py-1 border border-gray-300 rounded text-center focus:outline-none focus:ring-2 focus:ring-primary-500">
-                            <span class="text-gray-600">/ 10</span>
+                            <!-- Step 3 - Current -->
+                            <div class="relative flex gap-4">
+                                <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white z-10 shrink-0 ring-4 ring-primary-100 animate-pulse">
+                                    <span class="font-bold">3</span>
+                                </div>
+                                <div class="flex-1 bg-white border-2 border-primary-500 rounded-xl p-4 shadow-sm">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h4 class="font-medium text-primary-700">Import Data</h4>
+                                        <span class="text-xs text-white bg-primary-500 px-2 py-1 rounded-full">In Progress</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mb-3">Upload your existing data or connect to external sources.</p>
+                                    <button class="px-4 py-2 bg-primary-500 text-white text-sm rounded-lg hover:bg-primary-600 transition-colors">
+                                        Continue Setup
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 - Pending -->
+                            <div class="relative flex gap-4 opacity-60">
+                                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 z-10 shrink-0">
+                                    <span class="font-bold">4</span>
+                                </div>
+                                <div class="flex-1 bg-gray-50 border border-gray-200 border-dashed rounded-xl p-4">
+                                    <h4 class="font-medium text-gray-500 mb-1">Configure Settings</h4>
+                                    <p class="text-sm text-gray-400">Customize your workspace preferences.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 5 - Pending -->
+                            <div class="relative flex gap-4 opacity-60">
+                                <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 z-10 shrink-0">
+                                    <span class="font-bold">5</span>
+                                </div>
+                                <div class="flex-1 bg-gray-50 border border-gray-200 border-dashed rounded-xl p-4">
+                                    <h4 class="font-medium text-gray-500 mb-1">Launch</h4>
+                                    <p class="text-sm text-gray-400">Review everything and go live!</p>
+                                </div>
+                            </div>
                         </div>
-                        <button class="p-1 text-gray-700 hover:text-gray-900">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </button>
                     </nav>
-
-                    <!-- Style 5c: Button Group -->
-                    <nav class="inline-flex rounded-lg shadow">
-                        <button class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-50 transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
-                            </svg>
-                        </button>
-                        <button class="px-3 py-2 text-gray-700 bg-white border-t border-b border-gray-300 hover:bg-gray-50 transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                            </svg>
-                        </button>
-                        <button class="px-3 py-2 text-gray-700 bg-white border-t border-b border-gray-300 hover:bg-gray-50 transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                        <button class="px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-50 transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </nav>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 6: Dark Pagination -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 6: Dark Pagination</h2>
-                <p class="text-gray-600 text-sm mt-1">Dark themed pagination with glow effects</p>
-            </div>
-            <div class="p-6 bg-gray-900 rounded-lg">
-                <div class="flex items-center justify-between">
-                    <p class="text-sm text-gray-400">
-                        Showing <span class="text-white font-medium">41-50</span> of <span class="text-white font-medium">248</span>
-                    </p>
-                    <nav class="flex items-center space-x-1">
-                        <button class="flex items-center px-3 py-2 text-gray-400 hover:text-white bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition-colors">
-                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                            </svg>
-                            Prev
-                        </button>
-                        <button class="w-10 h-10 flex items-center justify-center text-gray-400 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 hover:text-white transition-colors">1</button>
-                        <span class="px-2 text-gray-600">...</span>
-                        <button class="w-10 h-10 flex items-center justify-center text-gray-400 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 hover:text-white transition-colors">4</button>
-                        <button class="w-10 h-10 flex items-center justify-center text-white bg-primary-500 border border-primary-500 rounded-lg shadow-lg shadow-primary-500/30">5</button>
-                        <button class="w-10 h-10 flex items-center justify-center text-gray-400 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 hover:text-white transition-colors">6</button>
-                        <span class="px-2 text-gray-600">...</span>
-                        <button class="w-10 h-10 flex items-center justify-center text-gray-400 bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 hover:text-white transition-colors">25</button>
-                        <button class="flex items-center px-3 py-2 text-gray-400 hover:text-white bg-gray-800 border border-gray-700 rounded-lg hover:border-gray-600 transition-colors">
-                            Next
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </nav>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 7: Load More Pagination -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 7: Load More Pagination</h2>
-                <p class="text-gray-600 text-sm mt-1">Alternative pagination with load more button</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <div class="space-y-4">
-                    <!-- Progress indicator -->
-                    <div class="text-center">
-                        <p class="text-sm text-gray-600 mb-2">Showing 20 of 100 items</p>
-                        <div class="w-64 mx-auto h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div class="w-1/5 h-full bg-primary-500 rounded-full"></div>
-                        </div>
-                    </div>
-                    <!-- Load More Button -->
-                    <div class="text-center">
-                        <button class="inline-flex items-center px-6 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 hover:border-gray-400 transition-colors shadow-sm">
-                            <svg class="w-5 h-5 mr-2 animate-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                            </svg>
-                            Load More
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 8: Infinite Scroll Indicator -->
-        <section class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Style 8: Infinite Scroll Indicator</h2>
-                <p class="text-gray-600 text-sm mt-1">Loading indicator for infinite scroll pagination</p>
-            </div>
-            <div class="p-6 bg-gray-50">
-                <div class="space-y-6">
-                    <!-- Loading State -->
-                    <div class="text-center py-4">
-                        <div class="inline-flex items-center space-x-2">
-                            <svg class="w-5 h-5 text-primary-500 animate-spin" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            <span class="text-sm text-gray-600">Loading more items...</span>
-                        </div>
-                    </div>
-
-                    <!-- End of List -->
-                    <div class="text-center py-4 border-t border-gray-200">
-                        <div class="inline-flex items-center space-x-2 text-gray-500">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-sm">You've reached the end</span>
-                        </div>
-                    </div>
-
-                    <!-- Back to Top -->
-                    <div class="text-center">
-                        <button class="inline-flex items-center px-4 py-2 text-sm text-primary-600 hover:text-primary-700 font-medium">
-                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-                            </svg>
-                            Back to top
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 py-8">
-            <p class="text-center text-gray-600">Pagination Navigation - Part of 1000 Tailwind UI Templates Collection</p>
-        </div>
-    </footer>
 </body>
 </html>
