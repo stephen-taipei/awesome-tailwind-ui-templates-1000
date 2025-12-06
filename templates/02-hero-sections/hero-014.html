@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Video with prominent text">
+  <title>hero-014: Video with Text Overlay | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       hero-014: Video with Text Overlay
+       Video with prominent text
+       ============================================ -->
+
+  <div class="relative h-screen w-full overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-stars-in-space-1610-large.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 flex h-full items-center justify-center">
+      <div class="z-10 relative text-center text-white max-w-4xl px-4">
+        <h1 class="text-6xl font-extrabold tracking-tight">The Future is Now</h1>
+        <p class="mt-4 text-xl text-slate-200">Experience the next generation of web design.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
