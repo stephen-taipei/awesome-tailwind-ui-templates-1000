@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hero with Image Carousel - Rotating background images"
+    />
+    <title>hero-007: Hero with Image Carousel | Tailwind UI Templates</title>
+
+    <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+    <!-- Custom Theme Variables -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary-500: oklch(0.55 0.2 250);
+        --color-primary-600: oklch(0.48 0.22 250);
+        --color-secondary-600: oklch(0.45 0.02 250);
+        --color-secondary-700: oklch(0.37 0.02 250);
+      }
+    </style>
+
+    <style>
+      /* Carousel Animation */
+      @keyframes fade {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        10%,
+        90% {
+          opacity: 1;
+        }
+      }
+
+      .carousel-item {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .carousel-item.active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900">
+    <!-- ============================================
+       hero-007: Hero with Image Carousel
+
+       A dynamic hero section with:
+       - Rotating background images (Carousel)
+       - Smooth fade transitions
+       - Centered content overlay
+       ============================================ -->
+
+    <div class="relative h-screen w-full overflow-hidden">
+      <!-- Carousel Backgrounds -->
+      <div id="hero-carousel" class="absolute inset-0">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Nature landscape"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Mountain view"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Forest path"
+            class="h-full w-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8"
+      >
+        <div class="text-center">
+          <h1
+            class="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            data-i18n="hero.title"
+          >
+            Explore the Unseen
+          </h1>
+          <p
+            class="mt-6 text-lg leading-8 text-slate-200 max-w-2xl mx-auto"
+            data-i18n="hero.subtitle"
+          >
+            Journey through breathtaking landscapes and discover the beauty of
+            the natural world. Your adventure begins here.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors"
+              data-i18n="hero.ctaPrimary"
+            >
+              Start Journey
+            </a>
+            <a
+              href="#"
+              class="text-sm font-semibold leading-6 text-white hover:text-slate-200 transition-colors"
+              data-i18n="hero.ctaSecondary"
+            >
+              View Gallery <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Indicators -->
+      <div
+        class="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-3"
+      >
+        <button
+          class="h-2 w-2 rounded-full bg-white transition-opacity hover:bg-white/80 focus:outline-none"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="h-2 w-2 rounded-full bg-white/50 transition-opacity hover:bg-white/80 focus:outline-none"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          class="h-2 w-2 rounded-full bg-white/50 transition-opacity hover:bg-white/80 focus:outline-none"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+    </div>
+
+    <script>
+      // Simple Carousel Script
+      (function () {
+        const items = document.querySelectorAll(".carousel-item");
+        const indicators = document.querySelectorAll(
+          ".absolute.bottom-8 button"
+        );
+        let currentIndex = 0;
+        const intervalTime = 5000; // 5 seconds
+
+        function showSlide(index) {
+          // Update slides
+          items.forEach((item) => item.classList.remove("active"));
+          items[index].classList.add("active");
+
+          // Update indicators
+          indicators.forEach((ind) =>
+            ind.classList.replace("bg-white", "bg-white/50")
+          );
+          indicators[index].classList.replace("bg-white/50", "bg-white");
+
+          currentIndex = index;
+        }
+
+        function nextSlide() {
+          let nextIndex = (currentIndex + 1) % items.length;
+          showSlide(nextIndex);
+        }
+
+        // Auto-advance
+        let slideInterval = setInterval(nextSlide, intervalTime);
+
+        // Manual navigation
+        indicators.forEach((ind, i) => {
+          ind.addEventListener("click", () => {
+            clearInterval(slideInterval);
+            showSlide(i);
+            slideInterval = setInterval(nextSlide, intervalTime);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
