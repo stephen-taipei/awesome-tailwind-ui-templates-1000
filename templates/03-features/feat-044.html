@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Icon-based alternating">
+  <title>feat-044: Zigzag with Icons | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-044: Zigzag with Icons
+       Icon-based alternating
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 space-y-24">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="h-48 w-48 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+            <svg class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-slate-900">Icon Focus</h3>
+          <p class="mt-4 text-lg text-slate-600">Using large icons instead of images.</p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="h-48 w-48 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600">
+            <svg class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-slate-900">Abstract</h3>
+          <p class="mt-4 text-lg text-slate-600">Representing concepts visually.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
