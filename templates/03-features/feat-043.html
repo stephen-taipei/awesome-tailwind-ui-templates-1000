@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alternating background colors">
+  <title>feat-043: Zigzag with Background Colors | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-043: Zigzag with Background Colors
+       Alternating background colors
+       ============================================ -->
+
+  <div>
+    <div class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2"><div class="bg-slate-200 h-64 rounded-xl"></div></div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-slate-900">White Background</h3>
+          <p class="mt-4 text-lg text-slate-600">Clean and simple start.</p>
+        </div>
+      </div>
+    </div>
+    <div class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-12">
+        <div class="w-full md:w-1/2"><div class="bg-white h-64 rounded-xl shadow-sm"></div></div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-slate-900">Grey Background</h3>
+          <p class="mt-4 text-lg text-slate-600">Subtle contrast to separate sections.</p>
+        </div>
+      </div>
+    </div>
+    <div class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2"><div class="bg-slate-200 h-64 rounded-xl"></div></div>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-3xl font-bold text-slate-900">White Background</h3>
+          <p class="mt-4 text-lg text-slate-600">Back to clean.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
