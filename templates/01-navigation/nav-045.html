@@ -3,538 +3,652 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification Navigation - Tailwind UI Templates</title>
-    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-primary-50: oklch(0.97 0.02 250);
-            --color-primary-100: oklch(0.93 0.04 250);
-            --color-primary-200: oklch(0.86 0.08 250);
-            --color-primary-300: oklch(0.75 0.14 250);
-            --color-primary-400: oklch(0.65 0.19 250);
-            --color-primary-500: oklch(0.55 0.24 250);
-            --color-primary-600: oklch(0.48 0.22 250);
-            --color-primary-700: oklch(0.42 0.19 250);
+    <title>Nav-045: Search Navigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'oklch(55% 0.24 250)',
+                        'primary-light': 'oklch(70% 0.2 250)',
+                        'primary-dark': 'oklch(45% 0.24 250)',
+                        secondary: 'oklch(60% 0.16 170)',
+                        accent: 'oklch(70% 0.2 60)',
+                        surface: 'oklch(98% 0.01 250)',
+                        'surface-dark': 'oklch(20% 0.02 250)',
+                    }
+                }
+            }
         }
-
-        @keyframes pulse-dot {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-        }
-        .pulse-dot {
-            animation: pulse-dot 2s ease-in-out infinite;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-10deg); }
-            75% { transform: rotate(10deg); }
-        }
-        .shake-on-hover:hover {
-            animation: shake 0.5s ease-in-out;
-        }
-    </style>
+    </script>
 </head>
-<body class="bg-gray-50 min-h-screen">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4">
-            <h1 class="text-2xl font-bold text-gray-900">Notification Navigation</h1>
-            <p class="text-gray-600">Navigation with notification badges and dropdowns</p>
+<body class="bg-gray-100 min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-3xl font-bold text-gray-800">Nav-045: Search Navigation</h1>
+            <p class="text-gray-600 mt-2">Search interfaces, command palettes, and autocomplete patterns</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 space-y-16">
+    <main class="max-w-6xl mx-auto px-4 pb-16 space-y-16">
 
-        <!-- Style 1: Simple Badge Notifications -->
+        <!-- Style 1: Command Palette (Spotlight Style) -->
         <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 1: Simple Badge Notifications</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Notify</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-primary-600 font-medium">Dashboard</a>
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors relative">
-                                    Messages
-                                    <span class="absolute -top-2 -right-4 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">5</span>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors relative">
-                                    Tasks
-                                    <span class="absolute -top-2 -right-4 w-5 h-5 bg-amber-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
-                                </a>
-                                <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">Settings</a>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <button class="p-2 text-gray-500 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors relative shake-on-hover">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                    </svg>
-                                    <span class="absolute top-0 right-0 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">12</span>
-                                </button>
-                                <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
-                                    <span class="text-primary-700 font-medium text-sm">JD</span>
-                                </div>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Command Palette (Spotlight Style)</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                        <!-- Search Input -->
+                        <div class="px-4 py-4 border-b flex items-center">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <input type="text" class="flex-1 ml-3 text-lg outline-none" placeholder="Search or type a command..." value="user settings">
+                            <div class="flex items-center space-x-1 text-xs text-gray-400">
+                                <kbd class="px-2 py-1 bg-gray-100 rounded">⌘</kbd>
+                                <kbd class="px-2 py-1 bg-gray-100 rounded">K</kbd>
                             </div>
                         </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 2: Notification Dropdown -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 2: Notification Dropdown Panel</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Alerts</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-emerald-600 font-medium">Home</a>
-                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Projects</a>
-                                <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Team</a>
+                        
+                        <!-- Results -->
+                        <div class="max-h-96 overflow-y-auto">
+                            <!-- Section: Pages -->
+                            <div class="px-4 py-2 bg-gray-50">
+                                <span class="text-xs font-semibold text-gray-500 uppercase">Pages</span>
                             </div>
-                            <div class="flex items-center gap-4">
-                                <div class="relative group">
-                                    <button class="p-2 text-gray-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors relative">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                            <div class="divide-y divide-gray-100">
+                                <a href="#" class="px-4 py-3 flex items-center hover:bg-primary/5 bg-primary/10">
+                                    <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                         </svg>
-                                        <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full pulse-dot"></span>
-                                    </button>
-                                    <!-- Dropdown -->
-                                    <div class="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                                        <div class="p-4 border-b border-gray-100">
-                                            <div class="flex items-center justify-between">
-                                                <h3 class="font-semibold text-gray-900">Notifications</h3>
-                                                <span class="text-xs text-emerald-600 font-medium cursor-pointer hover:underline">Mark all read</span>
-                                            </div>
-                                        </div>
-                                        <div class="max-h-64 overflow-y-auto">
-                                            <a href="#" class="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors border-l-4 border-emerald-500 bg-emerald-50">
-                                                <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                                    <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <p class="text-sm font-medium text-gray-900">Project completed</p>
-                                                    <p class="text-xs text-gray-500 mt-1">Your project "Website Redesign" is complete</p>
-                                                    <p class="text-xs text-emerald-600 mt-1">2 min ago</p>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors">
-                                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <p class="text-sm font-medium text-gray-900">New comment</p>
-                                                    <p class="text-xs text-gray-500 mt-1">Sarah left a comment on your task</p>
-                                                    <p class="text-xs text-gray-400 mt-1">15 min ago</p>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors">
-                                                <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <p class="text-sm font-medium text-gray-900">Deadline approaching</p>
-                                                    <p class="text-xs text-gray-500 mt-1">Task "API Integration" due tomorrow</p>
-                                                    <p class="text-xs text-gray-400 mt-1">1 hour ago</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <a href="#" class="block p-3 text-center text-sm text-emerald-600 font-medium hover:bg-gray-50 border-t border-gray-100">View all notifications</a>
                                     </div>
-                                </div>
-                                <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <span class="text-emerald-700 font-medium text-sm">JD</span>
-                                </div>
+                                    <div class="ml-3 flex-1">
+                                        <p class="text-sm font-medium text-gray-900"><span class="text-primary">User Settings</span></p>
+                                        <p class="text-xs text-gray-500">Manage your account preferences</p>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="px-4 py-3 flex items-center hover:bg-primary/5">
+                                    <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3 flex-1">
+                                        <p class="text-sm font-medium text-gray-900"><span class="text-primary">User</span> Management</p>
+                                        <p class="text-xs text-gray-500">Invite and manage team members</p>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            
+                            <!-- Section: Actions -->
+                            <div class="px-4 py-2 bg-gray-50">
+                                <span class="text-xs font-semibold text-gray-500 uppercase">Actions</span>
+                            </div>
+                            <div class="divide-y divide-gray-100">
+                                <a href="#" class="px-4 py-3 flex items-center hover:bg-primary/5">
+                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3 flex-1">
+                                        <p class="text-sm font-medium text-gray-900">Create new <span class="text-primary">user</span></p>
+                                    </div>
+                                    <kbd class="px-2 py-1 text-xs bg-gray-100 rounded">⌘N</kbd>
+                                </a>
+                                <a href="#" class="px-4 py-3 flex items-center hover:bg-primary/5">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ml-3 flex-1">
+                                        <p class="text-sm font-medium text-gray-900">Export <span class="text-primary">user</span> data</p>
+                                    </div>
+                                    <kbd class="px-2 py-1 text-xs bg-gray-100 rounded">⌘E</kbd>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="px-4 py-3 bg-gray-50 border-t flex items-center justify-between text-xs text-gray-500">
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center"><kbd class="px-1.5 py-0.5 bg-gray-200 rounded mr-1">↑↓</kbd> Navigate</span>
+                                <span class="flex items-center"><kbd class="px-1.5 py-0.5 bg-gray-200 rounded mr-1">↵</kbd> Select</span>
+                                <span class="flex items-center"><kbd class="px-1.5 py-0.5 bg-gray-200 rounded mr-1">esc</kbd> Close</span>
                             </div>
                         </div>
                     </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Hover over bell icon to see dropdown</span>
                 </div>
             </div>
         </section>
 
-        <!-- Style 3: Multiple Notification Types -->
+        <!-- Style 2: E-commerce Search with Filters -->
         <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 3: Multiple Notification Types</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Multi</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-violet-600 font-medium">Dashboard</a>
-                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Analytics</a>
-                                <a href="#" class="text-gray-600 hover:text-violet-600 transition-colors">Reports</a>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <!-- Messages -->
-                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                    </svg>
-                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-violet-500 text-white text-xs font-bold rounded-full flex items-center justify-center">8</span>
-                                </button>
-                                <!-- Notifications -->
-                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                    </svg>
-                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">3</span>
-                                </button>
-                                <!-- Alerts -->
-                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                                    </svg>
-                                    <span class="absolute top-0 right-0 w-2 h-2 bg-amber-500 rounded-full pulse-dot"></span>
-                                </button>
-                                <!-- Cart -->
-                                <button class="p-2 text-gray-500 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                                    </svg>
-                                    <span class="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 text-white text-xs font-bold rounded-full flex items-center justify-center">2</span>
-                                </button>
-                                <div class="w-px h-6 bg-gray-200 mx-2"></div>
-                                <div class="w-8 h-8 bg-violet-100 rounded-full flex items-center justify-center">
-                                    <span class="text-violet-700 font-medium text-sm">JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Multiple notification icons with badges</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 4: Inline Notification Banner -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 4: Inline Notification Banner</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <!-- Notification Banner -->
-                <div class="bg-gradient-to-r from-rose-500 to-pink-500 px-4 py-2 text-white text-sm flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
-                    </svg>
-                    <span>New update available! <a href="#" class="underline font-medium hover:no-underline">Learn more</a></span>
-                    <button class="ml-4 hover:bg-white/20 rounded p-1 transition-colors">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Banner</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-rose-600 font-medium">Home</a>
-                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Features</a>
-                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Pricing</a>
-                                <a href="#" class="text-gray-600 hover:text-rose-600 transition-colors">Contact</a>
-                            </div>
-                            <a href="#" class="bg-rose-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-rose-700 transition-colors">Get Started</a>
-                        </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Page Content</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 5: Toast-Style Notifications -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 5: Toast-Style Notification Area</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b relative">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Toast</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-cyan-600 font-medium">Dashboard</a>
-                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Projects</a>
-                                <a href="#" class="text-gray-600 hover:text-cyan-600 transition-colors">Team</a>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <button id="toast-trigger" class="p-2 text-gray-500 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                    </svg>
-                                    <span class="absolute top-0 right-0 w-2 h-2 bg-cyan-500 rounded-full"></span>
-                                </button>
-                                <div class="w-8 h-8 bg-cyan-100 rounded-full flex items-center justify-center">
-                                    <span class="text-cyan-700 font-medium text-sm">JD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Toast Notifications -->
-                    <div class="absolute top-full right-4 mt-2 space-y-2 z-50">
-                        <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-4 flex items-start gap-3 w-80 animate-[slideIn_0.3s_ease]">
-                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: E-commerce Search with Filters</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <!-- Search Header -->
+                    <div class="px-6 py-4 border-b">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1 relative">
+                                <input type="text" class="w-full pl-12 pr-4 py-3 bg-gray-100 border-0 rounded-xl text-gray-900 focus:ring-2 focus:ring-primary" placeholder="Search products..." value="wireless headphones">
+                                <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                 </svg>
                             </div>
-                            <div class="flex-1">
-                                <p class="text-sm font-medium text-gray-900">Changes saved</p>
-                                <p class="text-xs text-gray-500">Your profile has been updated</p>
+                            <button class="px-4 py-3 bg-primary text-white rounded-xl font-medium hover:bg-primary-dark">
+                                Search
+                            </button>
+                        </div>
+                        
+                        <!-- Quick Filters -->
+                        <div class="flex items-center space-x-2 mt-4">
+                            <button class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-full">All Categories</button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-200">Electronics</button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-200">Audio</button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-full hover:bg-gray-200">Accessories</button>
+                            <div class="flex-1"></div>
+                            <button class="flex items-center px-4 py-2 text-gray-600 hover:text-gray-900">
+                                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                                </svg>
+                                Filters
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Results Summary -->
+                    <div class="px-6 py-3 bg-gray-50 flex items-center justify-between">
+                        <p class="text-sm text-gray-600">Showing <span class="font-semibold">248 results</span> for "wireless headphones"</p>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm text-gray-500">Sort by:</span>
+                            <select class="text-sm border-0 bg-transparent font-medium text-gray-900 focus:ring-0 cursor-pointer">
+                                <option>Relevance</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Customer Rating</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Results -->
+                    <div class="p-6 grid grid-cols-4 gap-4">
+                        <div class="bg-white border rounded-xl p-4 hover:shadow-lg transition cursor-pointer">
+                            <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/>
+                                </svg>
                             </div>
-                            <button class="text-gray-400 hover:text-gray-600">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <h4 class="text-sm font-medium text-gray-900 line-clamp-2">Sony WH-1000XM5 Wireless Noise Canceling Headphones</h4>
+                            <div class="flex items-center mt-2">
+                                <div class="flex text-yellow-400">★★★★★</div>
+                                <span class="ml-1 text-xs text-gray-500">(2,847)</span>
+                            </div>
+                            <p class="mt-2 text-lg font-bold text-gray-900">$348.00</p>
+                        </div>
+                        <div class="bg-white border rounded-xl p-4 hover:shadow-lg transition cursor-pointer">
+                            <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-900 line-clamp-2">Apple AirPods Max - Space Gray</h4>
+                            <div class="flex items-center mt-2">
+                                <div class="flex text-yellow-400">★★★★☆</div>
+                                <span class="ml-1 text-xs text-gray-500">(1,523)</span>
+                            </div>
+                            <p class="mt-2 text-lg font-bold text-gray-900">$549.00</p>
+                        </div>
+                        <div class="bg-white border rounded-xl p-4 hover:shadow-lg transition cursor-pointer">
+                            <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-900 line-clamp-2">Bose QuietComfort 45 Bluetooth Wireless</h4>
+                            <div class="flex items-center mt-2">
+                                <div class="flex text-yellow-400">★★★★★</div>
+                                <span class="ml-1 text-xs text-gray-500">(3,102)</span>
+                            </div>
+                            <p class="mt-2 text-lg font-bold text-gray-900">$279.00</p>
+                        </div>
+                        <div class="bg-white border rounded-xl p-4 hover:shadow-lg transition cursor-pointer">
+                            <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg mb-3 flex items-center justify-center">
+                                <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-900 line-clamp-2">JBL Tune 760NC Active Noise Cancelling</h4>
+                            <div class="flex items-center mt-2">
+                                <div class="flex text-yellow-400">★★★★☆</div>
+                                <span class="ml-1 text-xs text-gray-500">(987)</span>
+                            </div>
+                            <p class="mt-2 text-lg font-bold text-gray-900">$129.95</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Autocomplete Search Dropdown -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Autocomplete Search Dropdown</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="max-w-xl mx-auto">
+                    <div class="relative">
+                        <!-- Search Input -->
+                        <div class="relative">
+                            <input type="text" class="w-full pl-12 pr-12 py-4 bg-white border-2 border-gray-200 rounded-2xl text-gray-900 focus:border-primary focus:ring-0 text-lg" placeholder="Search..." value="react">
+                            <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <button class="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-gray-100 rounded-lg">
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                                 </svg>
                             </button>
                         </div>
-                        <div class="bg-white rounded-lg shadow-lg border-l-4 border-amber-500 p-4 flex items-start gap-3 w-80">
-                            <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                                </svg>
+                        
+                        <!-- Dropdown Results -->
+                        <div class="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
+                            <!-- Suggestions -->
+                            <div class="p-4">
+                                <p class="text-xs font-semibold text-gray-500 uppercase mb-3">Suggestions</p>
+                                <div class="space-y-2">
+                                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                                        <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                        <span class="text-gray-900"><span class="font-semibold text-primary">react</span> tutorial</span>
+                                    </a>
+                                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                                        <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                        <span class="text-gray-900"><span class="font-semibold text-primary">react</span> hooks</span>
+                                    </a>
+                                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                                        <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                        <span class="text-gray-900"><span class="font-semibold text-primary">react</span> native</span>
+                                    </a>
+                                    <a href="#" class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                                        <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                        <span class="text-gray-900"><span class="font-semibold text-primary">react</span> vs vue</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="flex-1">
-                                <p class="text-sm font-medium text-gray-900">Warning</p>
-                                <p class="text-xs text-gray-500">Storage almost full (95%)</p>
+                            
+                            <!-- Recent Searches -->
+                            <div class="p-4 border-t">
+                                <p class="text-xs font-semibold text-gray-500 uppercase mb-3">Recent Searches</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="#" class="flex items-center px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-gray-400 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        javascript
+                                    </a>
+                                    <a href="#" class="flex items-center px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-gray-400 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        tailwind css
+                                    </a>
+                                    <a href="#" class="flex items-center px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-gray-200">
+                                        <svg class="w-4 h-4 text-gray-400 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        typescript
+                                    </a>
+                                </div>
                             </div>
-                            <button class="text-gray-400 hover:text-gray-600">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 4: Global Site Search -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Global Site Search (Full Page)</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="bg-gray-900/95 rounded-2xl p-8 min-h-[400px]">
+                    <div class="max-w-2xl mx-auto">
+                        <!-- Close Button -->
+                        <div class="flex justify-end mb-8">
+                            <button class="p-2 text-gray-400 hover:text-white">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                </nav>
-                <div class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Toast notifications appear on the right</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 6: Dark Theme Notifications -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 6: Dark Theme Notifications</h2>
-            <div class="rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-gray-900">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg"></div>
-                                <span class="font-bold text-xl text-white">Dark</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-white font-medium">Console</a>
-                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Projects</a>
-                                <a href="#" class="text-gray-400 hover:text-white transition-colors">Settings</a>
+                        
+                        <!-- Search Input -->
+                        <div class="relative mb-8">
+                            <input type="text" class="w-full bg-transparent border-b-2 border-gray-600 focus:border-white pb-4 text-white text-3xl font-light placeholder-gray-500 outline-none" placeholder="Search..." value="getting started">
+                        </div>
+                        
+                        <!-- Results Grid -->
+                        <div class="grid grid-cols-2 gap-6">
+                            <!-- Documentation -->
+                            <div>
+                                <h3 class="text-xs font-semibold text-gray-500 uppercase mb-4">Documentation</h3>
+                                <div class="space-y-3">
+                                    <a href="#" class="block p-3 rounded-lg hover:bg-white/10 transition">
+                                        <p class="text-white font-medium"><span class="text-primary">Getting Started</span> Guide</p>
+                                        <p class="text-sm text-gray-400 mt-1">Learn the basics and set up your first project</p>
+                                    </a>
+                                    <a href="#" class="block p-3 rounded-lg hover:bg-white/10 transition">
+                                        <p class="text-white font-medium"><span class="text-primary">Getting Started</span> with React</p>
+                                        <p class="text-sm text-gray-400 mt-1">Build your first React component</p>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                    </svg>
-                                    <span class="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 bg-indigo-500 text-white text-xs font-bold rounded-full flex items-center justify-center">23</span>
-                                </button>
-                                <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-                                    </svg>
-                                    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full pulse-dot"></span>
-                                </button>
-                                <div class="w-px h-6 bg-gray-700"></div>
-                                <div class="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center">
-                                    <span class="text-white font-medium text-sm">N</span>
+                            
+                            <!-- Tutorials -->
+                            <div>
+                                <h3 class="text-xs font-semibold text-gray-500 uppercase mb-4">Tutorials</h3>
+                                <div class="space-y-3">
+                                    <a href="#" class="block p-3 rounded-lg hover:bg-white/10 transition">
+                                        <p class="text-white font-medium"><span class="text-primary">Getting Started</span> with API</p>
+                                        <p class="text-sm text-gray-400 mt-1">Connect to our REST API in 5 minutes</p>
+                                    </a>
+                                    <a href="#" class="block p-3 rounded-lg hover:bg-white/10 transition">
+                                        <p class="text-white font-medium">Quick <span class="text-primary">Start</span> Tutorial</p>
+                                        <p class="text-sm text-gray-400 mt-1">Step-by-step walkthrough for beginners</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Quick Links -->
+                        <div class="mt-8 pt-8 border-t border-gray-700">
+                            <h3 class="text-xs font-semibold text-gray-500 uppercase mb-4">Quick Links</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="#" class="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 hover:bg-white/20 hover:text-white">
+                                    API Reference
+                                </a>
+                                <a href="#" class="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 hover:bg-white/20 hover:text-white">
+                                    Examples
+                                </a>
+                                <a href="#" class="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 hover:bg-white/20 hover:text-white">
+                                    Community
+                                </a>
+                                <a href="#" class="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 hover:bg-white/20 hover:text-white">
+                                    Blog
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </nav>
-                <div class="h-32 bg-gray-800 flex items-center justify-center">
-                    <span class="text-gray-500">Page Content</span>
                 </div>
             </div>
         </section>
 
-        <!-- Style 7: Activity Feed Navigation -->
+        <!-- Style 5: Voice & Visual Search -->
         <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 7: Activity Feed Dropdown</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Activity</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="text-amber-600 font-medium">Feed</a>
-                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Explore</a>
-                                <a href="#" class="text-gray-600 hover:text-amber-600 transition-colors">Messages</a>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Voice & Visual Search</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <!-- Search Bar with Voice/Camera -->
+                        <div class="relative">
+                            <input type="text" class="w-full pl-12 pr-28 py-4 bg-gray-100 border-0 rounded-full text-gray-900 focus:ring-2 focus:ring-primary text-lg" placeholder="Search anything...">
+                            <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center space-x-2">
+                                <button class="p-2 hover:bg-gray-200 rounded-full group">
+                                    <svg class="w-6 h-6 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-200 rounded-full group">
+                                    <svg class="w-6 h-6 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </button>
                             </div>
-                            <div class="flex items-center gap-4">
-                                <div class="relative group">
-                                    <button class="p-2 text-gray-500 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors relative">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </div>
+                        
+                        <!-- Voice Search Modal -->
+                        <div class="mt-8 p-8 bg-gray-50 rounded-2xl text-center">
+                            <div class="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center mb-6 animate-pulse">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Listening...</h3>
+                            <p class="text-gray-500">Try saying "Show me red running shoes"</p>
+                            
+                            <!-- Sound Wave Visualization -->
+                            <div class="flex items-center justify-center space-x-1 mt-6">
+                                <div class="w-1 h-8 bg-primary rounded-full animate-pulse" style="animation-delay: 0ms"></div>
+                                <div class="w-1 h-12 bg-primary rounded-full animate-pulse" style="animation-delay: 100ms"></div>
+                                <div class="w-1 h-6 bg-primary rounded-full animate-pulse" style="animation-delay: 200ms"></div>
+                                <div class="w-1 h-16 bg-primary rounded-full animate-pulse" style="animation-delay: 300ms"></div>
+                                <div class="w-1 h-10 bg-primary rounded-full animate-pulse" style="animation-delay: 400ms"></div>
+                                <div class="w-1 h-14 bg-primary rounded-full animate-pulse" style="animation-delay: 500ms"></div>
+                                <div class="w-1 h-8 bg-primary rounded-full animate-pulse" style="animation-delay: 600ms"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 6: Faceted Search Sidebar -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Faceted Search Sidebar</h2>
+            <div class="bg-gray-50 p-6 rounded-xl">
+                <div class="flex gap-6">
+                    <!-- Filters Sidebar -->
+                    <div class="w-64 bg-white rounded-2xl shadow-lg p-6 h-fit">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-semibold text-gray-900">Filters</h3>
+                            <button class="text-sm text-primary hover:text-primary-dark">Clear all</button>
+                        </div>
+                        
+                        <!-- Active Filters -->
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                                    Electronics
+                                    <button class="ml-1.5 hover:text-primary-dark">×</button>
+                                </span>
+                                <span class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+                                    $100-$500
+                                    <button class="ml-1.5 hover:text-primary-dark">×</button>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Category Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-gray-900 mb-3">Category</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" checked class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Electronics (248)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Audio (156)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Accessories (89)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Computers (67)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-gray-900 mb-3">Price Range</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="price" class="text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Under $50</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="price" class="text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">$50 - $100</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="price" checked class="text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">$100 - $500</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="price" class="text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">$500+</span>
+                                </label>
+                            </div>
+                            
+                            <!-- Custom Range -->
+                            <div class="mt-3 flex items-center space-x-2">
+                                <input type="text" placeholder="Min" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                                <span class="text-gray-400">-</span>
+                                <input type="text" placeholder="Max" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                            </div>
+                        </div>
+                        
+                        <!-- Brand Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-gray-900 mb-3">Brand</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Sony</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Apple</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">Bose</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <span class="ml-2 text-sm text-gray-700">JBL</span>
+                                </label>
+                            </div>
+                            <button class="mt-2 text-sm text-primary hover:text-primary-dark">Show more</button>
+                        </div>
+                        
+                        <!-- Rating Filter -->
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-3">Customer Rating</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <div class="ml-2 flex items-center">
+                                        <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                                        <span class="ml-1 text-sm text-gray-500">& up</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <div class="ml-2 flex items-center">
+                                        <div class="flex text-yellow-400 text-sm">★★★★</div>
+                                        <span class="text-gray-300 text-sm">★</span>
+                                        <span class="ml-1 text-sm text-gray-500">& up</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-primary focus:ring-primary">
+                                    <div class="ml-2 flex items-center">
+                                        <div class="flex text-yellow-400 text-sm">★★★</div>
+                                        <span class="text-gray-300 text-sm">★★</span>
+                                        <span class="ml-1 text-sm text-gray-500">& up</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Results Area -->
+                    <div class="flex-1 bg-white rounded-2xl shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <p class="text-gray-600">Showing <span class="font-semibold">1-24</span> of <span class="font-semibold">248</span> results</p>
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center space-x-2">
+                                    <button class="p-2 bg-gray-100 rounded-lg">
+                                        <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M3 3H10V10H3V3ZM14 3H21V10H14V3ZM14 14H21V21H14V14ZM3 14H10V21H3V14Z"/>
                                         </svg>
-                                        <span class="absolute -top-1 -right-1 w-5 h-5 bg-amber-500 text-white text-xs font-bold rounded-full flex items-center justify-center">5</span>
                                     </button>
-                                    <!-- Activity Dropdown -->
-                                    <div class="absolute right-0 top-full mt-2 w-96 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                                        <div class="p-4 border-b border-gray-100">
-                                            <h3 class="font-semibold text-gray-900">Activity</h3>
-                                        </div>
-                                        <div class="max-h-80 overflow-y-auto divide-y divide-gray-100">
-                                            <div class="p-4 flex items-start gap-3">
-                                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" alt="Sarah" class="w-10 h-10 rounded-full">
-                                                <div class="flex-1">
-                                                    <p class="text-sm"><span class="font-medium text-gray-900">Sarah</span> liked your post</p>
-                                                    <p class="text-xs text-gray-400 mt-1">2 minutes ago</p>
-                                                </div>
-                                                <div class="w-12 h-12 bg-gray-100 rounded-lg"></div>
-                                            </div>
-                                            <div class="p-4 flex items-start gap-3">
-                                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mike" alt="Mike" class="w-10 h-10 rounded-full">
-                                                <div class="flex-1">
-                                                    <p class="text-sm"><span class="font-medium text-gray-900">Mike</span> started following you</p>
-                                                    <p class="text-xs text-gray-400 mt-1">15 minutes ago</p>
-                                                </div>
-                                                <button class="px-3 py-1 bg-amber-500 text-white text-xs font-medium rounded-full hover:bg-amber-600 transition-colors">Follow</button>
-                                            </div>
-                                            <div class="p-4 flex items-start gap-3">
-                                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Emma" alt="Emma" class="w-10 h-10 rounded-full">
-                                                <div class="flex-1">
-                                                    <p class="text-sm"><span class="font-medium text-gray-900">Emma</span> commented: "Great work!"</p>
-                                                    <p class="text-xs text-gray-400 mt-1">1 hour ago</p>
-                                                </div>
-                                            </div>
-                                            <div class="p-4 flex items-start gap-3">
-                                                <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
-                                                    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="flex-1">
-                                                    <p class="text-sm"><span class="font-medium text-gray-900">3 people</span> mentioned you in comments</p>
-                                                    <p class="text-xs text-gray-400 mt-1">2 hours ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <button class="p-2 hover:bg-gray-100 rounded-lg">
+                                        <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M4 6H6V8H4V6ZM4 11H6V13H4V11ZM4 16H6V18H4V16ZM20 8V6H8.023V8H20ZM20 11H8.023V13H20V11ZM20 16H8.023V18H20V16Z"/>
+                                        </svg>
+                                    </button>
                                 </div>
-                                <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
-                                    <span class="text-amber-700 font-medium text-sm">JD</span>
-                                </div>
+                                <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-primary focus:border-primary">
+                                    <option>Sort: Relevance</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Customer Rating</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Hover over heart icon to see activity feed</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Style 8: Status Indicator Navigation -->
-        <section>
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Style 8: Status Indicator Navigation</h2>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <nav class="bg-white border-b">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="flex items-center justify-between h-16">
-                            <a href="#" class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg"></div>
-                                <span class="font-bold text-xl text-gray-900">Status</span>
-                            </a>
-                            <div class="hidden md:flex items-center gap-6">
-                                <a href="#" class="flex items-center gap-2 text-teal-600 font-medium">
-                                    <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
-                                    Dashboard
-                                </a>
-                                <a href="#" class="flex items-center gap-2 text-gray-600 hover:text-teal-600 transition-colors">
-                                    <span class="w-2 h-2 bg-amber-500 rounded-full pulse-dot"></span>
-                                    Pending (3)
-                                </a>
-                                <a href="#" class="flex items-center gap-2 text-gray-600 hover:text-teal-600 transition-colors">
-                                    <span class="w-2 h-2 bg-red-500 rounded-full"></span>
-                                    Issues (2)
-                                </a>
-                                <a href="#" class="flex items-center gap-2 text-gray-600 hover:text-teal-600 transition-colors">
-                                    <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-                                    Archived
-                                </a>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <!-- Status summary -->
-                                <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-gray-100 rounded-full">
-                                    <span class="flex items-center gap-1 text-xs text-gray-600">
-                                        <span class="w-2 h-2 bg-emerald-500 rounded-full"></span> 12
-                                    </span>
-                                    <span class="flex items-center gap-1 text-xs text-gray-600">
-                                        <span class="w-2 h-2 bg-amber-500 rounded-full"></span> 3
-                                    </span>
-                                    <span class="flex items-center gap-1 text-xs text-gray-600">
-                                        <span class="w-2 h-2 bg-red-500 rounded-full"></span> 2
-                                    </span>
-                                </div>
-                                <button class="p-2 text-gray-500 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors relative">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        
+                        <!-- Results Grid Placeholder -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-gray-100 rounded-xl aspect-square"></div>
+                            <div class="bg-gray-100 rounded-xl aspect-square"></div>
+                            <div class="bg-gray-100 rounded-xl aspect-square"></div>
+                            <div class="bg-gray-100 rounded-xl aspect-square"></div>
+                            <div class="bg-gray-100 rounded-xl aspect-square"></div>
+                            <div class="bg-gray-100 rounded-xl aspect-square"></div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="mt-8 flex items-center justify-center">
+                            <nav class="flex items-center space-x-1">
+                                <button class="px-3 py-2 text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                     </svg>
                                 </button>
-                                <div class="relative">
-                                    <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center">
-                                        <span class="text-teal-700 font-medium text-sm">JD</span>
-                                    </div>
-                                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
-                                </div>
-                            </div>
+                                <button class="px-4 py-2 bg-primary text-white rounded-lg">1</button>
+                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">2</button>
+                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">3</button>
+                                <span class="px-2 text-gray-400">...</span>
+                                <button class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">10</button>
+                                <button class="px-3 py-2 text-gray-600 hover:text-gray-900">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </nav>
                         </div>
                     </div>
-                </nav>
-                <div class="h-32 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                    <span class="text-gray-400">Status indicators with colored dots</span>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-16">
-        <div class="max-w-7xl mx-auto px-4 py-8 text-center text-gray-600">
-            <p>Notification Navigation - Part of 1000 Tailwind UI Templates</p>
-        </div>
-    </footer>
 </body>
 </html>
