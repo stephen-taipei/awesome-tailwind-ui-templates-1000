@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hero with Play Button - Video modal trigger"
+    />
+    <title>hero-012: Video with Play Button | Tailwind UI Templates</title>
+
+    <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+    <!-- Custom Theme Variables -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary-500: oklch(0.55 0.2 250);
+        --color-primary-600: oklch(0.48 0.22 250);
+        --color-secondary-600: oklch(0.45 0.02 250);
+        --color-secondary-700: oklch(0.37 0.02 250);
+      }
+    </style>
+
+    <style>
+      /* Pulse Animation for Play Button */
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+
+      .play-btn-ring::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        border-radius: 50%;
+        z-index: -1;
+        animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900">
+    <!-- ============================================
+       hero-012: Video with Play Button
+
+       A hero section focused on video content:
+       - Background image
+       - Prominent play button with pulse effect
+       - Simple modal trigger (simulated)
+       ============================================ -->
+
+    <div class="relative h-screen min-h-[600px] w-full overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          alt="Concert crowd"
+          class="h-full w-full object-cover"
+        />
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-slate-900/60 mix-blend-multiply"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8"
+      >
+        <!-- Play Button -->
+        <button
+          type="button"
+          class="play-btn-ring group relative mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30"
+          aria-label="Play video"
+        >
+          <svg
+            class="ml-1 h-8 w-8 text-primary-600 transition-colors group-hover:text-primary-700"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+
+        <h1
+          class="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+          data-i18n="hero.title"
+        >
+          Experience the Magic
+        </h1>
+        <p
+          class="mt-4 text-lg text-slate-300 max-w-2xl"
+          data-i18n="hero.subtitle"
+        >
+          Watch our latest tour documentary. Behind the scenes, on the road, and
+          live on stage.
+        </p>
+
+        <div class="mt-8">
+          <span
+            class="text-sm font-medium text-slate-400 uppercase tracking-wider"
+            >Now Streaming</span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
