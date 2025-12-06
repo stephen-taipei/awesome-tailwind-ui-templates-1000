@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edge-to-edge image section">
+  <title>content-011: Full Width Image | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-011: Full Width Image
+       Edge-to-edge image section
+       ============================================ -->
+
+  <div class="py-12 bg-white">
+    <div class="w-full h-96 md:h-[600px]">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" alt="Office Space">
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-8">
+      <p class="text-sm text-slate-500 text-right">Photo by Unsplash</p>
+    </div>
+  </div>
+
+</body>
+</html>
