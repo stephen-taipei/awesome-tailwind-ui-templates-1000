@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Long content with TOC">
+  <title>content-009: Content with Table of Contents | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-009: Content with Table of Contents
+       Long content with TOC
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div class="hidden lg:block">
+        <div class="sticky top-24">
+          <h3 class="font-bold text-slate-900 mb-4">Contents</h3>
+          <ul class="space-y-2 text-slate-600 border-l-2 border-slate-200 pl-4">
+            <li><a href="#intro" class="block hover:text-primary-600 hover:border-l-2 hover:border-primary-600 -ml-[18px] pl-4 transition-all">Introduction</a></li>
+            <li><a href="#method" class="block hover:text-primary-600 hover:border-l-2 hover:border-primary-600 -ml-[18px] pl-4 transition-all">Methodology</a></li>
+            <li><a href="#results" class="block hover:text-primary-600 hover:border-l-2 hover:border-primary-600 -ml-[18px] pl-4 transition-all">Results</a></li>
+            <li><a href="#conclusion" class="block hover:text-primary-600 hover:border-l-2 hover:border-primary-600 -ml-[18px] pl-4 transition-all">Conclusion</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lg:col-span-3 prose prose-slate max-w-none">
+        <h2 id="intro">Introduction</h2>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <h2 id="method">Methodology</h2>
+        <p>Consectetur adipiscing elit...</p>
+        <h2 id="results">Results</h2>
+        <p>Sed do eiusmod tempor incididunt...</p>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Ut labore et dolore magna aliqua...</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
