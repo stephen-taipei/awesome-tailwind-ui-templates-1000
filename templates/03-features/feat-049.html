@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Timeline alternating layout">
+  <title>feat-049: Zigzag Timeline | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-049: Zigzag Timeline
+       Timeline alternating layout
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6 relative">
+      <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 -translate-x-1/2 hidden md:block"></div>
+
+      <div class="space-y-12">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="w-full md:w-5/12 order-2 md:order-1 text-center md:text-right p-4">
+            <h3 class="text-xl font-bold text-slate-900">Phase 1</h3>
+            <p class="mt-2 text-slate-600">Initial planning and research.</p>
+          </div>
+          <div class="w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow order-1 md:order-2 z-10"></div>
+          <div class="w-full md:w-5/12 order-3"></div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="w-full md:w-5/12 order-3 md:order-1"></div>
+          <div class="w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow order-1 md:order-2 z-10"></div>
+          <div class="w-full md:w-5/12 order-2 md:order-3 text-center md:text-left p-4">
+            <h3 class="text-xl font-bold text-slate-900">Phase 2</h3>
+            <p class="mt-2 text-slate-600">Development and testing.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="w-full md:w-5/12 order-2 md:order-1 text-center md:text-right p-4">
+            <h3 class="text-xl font-bold text-slate-900">Phase 3</h3>
+            <p class="mt-2 text-slate-600">Launch and optimization.</p>
+          </div>
+          <div class="w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow order-1 md:order-2 z-10"></div>
+          <div class="w-full md:w-5/12 order-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
