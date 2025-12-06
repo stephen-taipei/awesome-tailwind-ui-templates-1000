@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Image + text list items">
+  <title>feat-014: Feature List with Images | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-014: Feature List with Images
+       Image + text list items
+       ============================================ -->
+
+  <div class="py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-6 space-y-12">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <img src="https://via.placeholder.com/200" class="w-full md:w-48 rounded-lg shadow-md" alt="Feature 1">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900">Visual Editing</h3>
+          <p class="mt-2 text-slate-600">Edit your content visually with our drag-and-drop builder. No coding required.</p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <img src="https://via.placeholder.com/200" class="w-full md:w-48 rounded-lg shadow-md" alt="Feature 2">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900">Asset Library</h3>
+          <p class="mt-2 text-slate-600">Access thousands of royalty-free images and icons directly within the editor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
