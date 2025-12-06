@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Video with audio control">
+  <title>hero-019: Video with Sound Toggle | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       hero-019: Video with Sound Toggle
+       Video with audio control
+       ============================================ -->
+
+  <div class="relative h-screen w-full overflow-hidden">
+    <video id="hero-video" autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4" type="video/mp4">
+    </video>
+    <button onclick="document.getElementById('hero-video').muted = !document.getElementById('hero-video').muted" class="absolute bottom-8 right-8 z-20 p-4 bg-white/20 backdrop-blur rounded-full text-white hover:bg-white/30">
+      Sound Toggle
+    </button>
+  </div>
+
+</body>
+</html>
