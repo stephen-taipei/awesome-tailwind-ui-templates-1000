@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hero with Image Overlay Pattern - Background image with decorative pattern overlay"
+    />
+    <title>
+      hero-005: Hero with Image Overlay Pattern | Tailwind UI Templates
+    </title>
+
+    <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+    <!-- Custom Theme Variables -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary-500: oklch(0.55 0.2 250);
+        --color-primary-600: oklch(0.48 0.22 250);
+        --color-secondary-600: oklch(0.45 0.02 250);
+        --color-secondary-700: oklch(0.37 0.02 250);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- ============================================
+       hero-005: Hero with Image Overlay Pattern
+
+       A textured hero section with:
+       - Background image
+       - SVG pattern overlay (dots/grid) for texture
+       - Gradient blend for text readability
+       ============================================ -->
+
+    <div class="relative bg-slate-900">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          class="h-full w-full object-cover"
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+          alt="People working on laptops"
+        />
+        <!-- Gradient Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-900/50 mix-blend-multiply"
+        ></div>
+      </div>
+
+      <!-- Pattern Overlay -->
+      <div class="absolute inset-0 opacity-20">
+        <svg
+          class="h-full w-full"
+          width="100%"
+          height="100%"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="dot-pattern"
+              x="0"
+              y="0"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle
+                cx="2"
+                cy="2"
+                r="1"
+                class="text-white"
+                fill="currentColor"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+        </svg>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40"
+      >
+        <div class="max-w-2xl">
+          <div class="hidden sm:mb-8 sm:flex">
+            <div
+              class="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-400 ring-1 ring-white/10 hover:ring-white/20"
+            >
+              Announcing our next round of funding.
+              <a href="#" class="font-semibold text-white"
+                ><span class="absolute inset-0" aria-hidden="true"></span>Read
+                more <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </div>
+          <h1
+            class="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            data-i18n="hero.title"
+          >
+            Work with us to build the future
+          </h1>
+          <p
+            class="mt-6 text-lg leading-8 text-slate-300"
+            data-i18n="hero.subtitle"
+          >
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+            fugiat aliqua.
+          </p>
+          <div class="mt-10 flex items-center gap-x-6">
+            <a
+              href="#"
+              class="rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-400 transition-colors"
+              data-i18n="hero.ctaPrimary"
+            >
+              Get started
+            </a>
+            <a
+              href="#"
+              class="text-sm font-semibold leading-6 text-white hover:text-primary-300 transition-colors"
+              data-i18n="hero.ctaSecondary"
+            >
+              Live demo <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
