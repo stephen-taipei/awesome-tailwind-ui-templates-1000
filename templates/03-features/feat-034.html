@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Border-styled feature cards">
+  <title>feat-034: Feature Cards with Border | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-034: Feature Cards with Border
+       Border-styled feature cards
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-xl border-2 border-slate-200 hover:border-primary-500 transition-colors">
+        <h3 class="text-xl font-bold text-slate-900">Bordered Card</h3>
+        <p class="mt-4 text-slate-600">Using borders instead of shadows for definition.</p>
+      </div>
+      <div class="p-8 rounded-xl border-2 border-slate-200 hover:border-primary-500 transition-colors">
+        <h3 class="text-xl font-bold text-slate-900">Clean Lines</h3>
+        <p class="mt-4 text-slate-600">A sharper, more technical look.</p>
+      </div>
+      <div class="p-8 rounded-xl border-2 border-slate-200 hover:border-primary-500 transition-colors">
+        <h3 class="text-xl font-bold text-slate-900">Interactive</h3>
+        <p class="mt-4 text-slate-600">Border color change on hover indicates interactivity.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
