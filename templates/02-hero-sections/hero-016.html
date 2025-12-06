@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Side-by-side video and content">
+  <title>hero-016: Split Video/Content Hero | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       hero-016: Split Video/Content Hero
+       Side-by-side video and content
+       ============================================ -->
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 h-screen">
+    <div class="flex items-center justify-center bg-white p-12">
+      <div class="max-w-lg">
+        <h1 class="text-4xl font-bold text-slate-900">Modern Split Layout</h1>
+        <p class="mt-4 text-lg text-slate-600">Combine rich media with compelling copy in this split screen design.</p>
+        <button class="mt-8 px-6 py-3 bg-slate-900 text-white rounded-md">Action</button>
+      </div>
+    </div>
+    <div class="relative h-64 lg:h-full overflow-hidden">
+      <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-ink-in-water-2444-large.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+</body>
+</html>
