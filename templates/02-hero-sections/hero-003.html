@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hero with Parallax Image - Scrolling parallax effect"
+    />
+    <title>hero-003: Hero with Parallax Image | Tailwind UI Templates</title>
+
+    <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+    <!-- Custom Theme Variables -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary-500: oklch(0.55 0.2 250);
+        --color-primary-600: oklch(0.48 0.22 250);
+        --color-secondary-600: oklch(0.45 0.02 250);
+        --color-secondary-700: oklch(0.37 0.02 250);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <!-- ============================================
+       hero-003: Hero with Parallax Image
+
+       A visually engaging hero section with:
+       - Fixed background image (parallax effect)
+       - Dark overlay for text readability
+       - Centered content
+       ============================================ -->
+
+    <!-- Parallax Section -->
+    <section
+      class="relative flex h-[80vh] min-h-[600px] w-full items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+      "
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <span
+          class="block text-lg font-semibold uppercase tracking-wider text-primary-400"
+          data-i18n="hero.tagline"
+        >
+          Adventure Awaits
+        </span>
+        <h1
+          class="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
+          data-i18n="hero.title"
+        >
+          Discover the World
+        </h1>
+        <p
+          class="mx-auto mt-6 max-w-2xl text-xl text-slate-200"
+          data-i18n="hero.subtitle"
+        >
+          Experience the beauty of nature with our guided tours. Unforgettable
+          journeys to the most breathtaking destinations on Earth.
+        </p>
+        <div class="mt-10 flex justify-center gap-4">
+          <a
+            href="#"
+            class="rounded-full bg-white px-8 py-3 text-base font-semibold text-slate-900 shadow-sm hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors"
+            data-i18n="hero.ctaPrimary"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section (to demonstrate parallax) -->
+    <section class="bg-white py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2
+            class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+          >
+            Scroll down to see the effect
+          </h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-500">
+            The background image above stays fixed while you scroll, creating a
+            subtle depth effect known as parallax scrolling.
+          </p>
+
+          <!-- Placeholder content -->
+          <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-lg bg-slate-50 p-8">
+              <div
+                class="h-12 w-12 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">Global Reach</h3>
+              <p class="mt-2 text-slate-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <div class="rounded-lg bg-slate-50 p-8">
+              <div
+                class="h-12 w-12 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">24/7 Support</h3>
+              <p class="mt-2 text-slate-600">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </p>
+            </div>
+            <div class="rounded-lg bg-slate-50 p-8">
+              <div
+                class="h-12 w-12 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-900">Fast Booking</h3>
+              <p class="mt-2 text-slate-600">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
