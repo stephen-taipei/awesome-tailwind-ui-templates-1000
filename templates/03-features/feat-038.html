@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dark theme feature cards">
+  <title>feat-038: Feature Cards Dark Mode | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-038: Feature Cards Dark Mode
+       Dark theme feature cards
+       ============================================ -->
+
+  <div class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700">
+        <h3 class="text-xl font-bold text-white">Dark Card</h3>
+        <p class="mt-4 text-slate-400">Optimized for low-light environments.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700">
+        <h3 class="text-xl font-bold text-white">Contrast</h3>
+        <p class="mt-4 text-slate-400">High contrast text for readability.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700">
+        <h3 class="text-xl font-bold text-white">Sleek</h3>
+        <p class="mt-4 text-slate-400">Professional and modern appearance.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
