@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mobile Drawer Navigation - Slide-out mobile menu patterns">
+  <title>nav-027: Mobile Drawer Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Drawer animation - Left */
+    .drawer-left {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .drawer-left.open {
+      transform: translateX(0);
+    }
+
+    /* Drawer animation - Right */
+    .drawer-right {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .drawer-right.open {
+      transform: translateX(0);
+    }
+
+    /* Overlay */
+    .drawer-overlay {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .drawer-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Menu item animation */
+    .drawer-item {
+      transition: all 0.15s ease;
+    }
+
+    .drawer-item:active {
+      transform: scale(0.98);
+    }
+
+    /* iOS safe area */
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+      .safe-bottom {
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-027: Mobile Drawer Navigation
+
+       Slide-out mobile menu patterns:
+       - Mobile apps
+       - Responsive websites
+       - PWAs
+       - E-commerce mobile
+       - Social apps
+
+       Features:
+       - Left/right drawers
+       - Multiple layouts
+       - Profile sections
+       - Nested menus
+       - Smooth animations
+       ============================================ -->
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <h1 class="text-lg font-semibold text-slate-900">Mobile Drawer Navigation</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl font-bold text-slate-900 mb-4">Mobile Drawer Navigation</h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Slide-out mobile menu patterns with various styles and layouts.
+      </p>
+    </div>
+
+    <div class="space-y-12">
+
+      <!-- Demo Buttons -->
+      <section class="bg-white rounded-xl border border-slate-200 p-8">
+        <h2 class="font-semibold text-slate-900 mb-6">Drawer Styles</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <button type="button" onclick="openDrawer('drawer-1')" class="p-4 text-left bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+            <h3 class="font-medium text-slate-900 mb-1">Style 1: Basic Left Drawer</h3>
+            <p class="text-sm text-slate-500">Simple navigation menu</p>
+          </button>
+          <button type="button" onclick="openDrawer('drawer-2')" class="p-4 text-left bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+            <h3 class="font-medium text-slate-900 mb-1">Style 2: With Profile</h3>
+            <p class="text-sm text-slate-500">User profile header section</p>
+          </button>
+          <button type="button" onclick="openDrawer('drawer-3')" class="p-4 text-left bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+            <h3 class="font-medium text-slate-900 mb-1">Style 3: Grouped Menu</h3>
+            <p class="text-sm text-slate-500">Categorized navigation items</p>
+          </button>
+          <button type="button" onclick="openDrawer('drawer-4')" class="p-4 text-left bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+            <h3 class="font-medium text-slate-900 mb-1">Style 4: Right Drawer</h3>
+            <p class="text-sm text-slate-500">Slide from right side</p>
+          </button>
+          <button type="button" onclick="openDrawer('drawer-5')" class="p-4 text-left bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+            <h3 class="font-medium text-slate-900 mb-1">Style 5: Full Width</h3>
+            <p class="text-sm text-slate-500">Full screen drawer menu</p>
+          </button>
+          <button type="button" onclick="openDrawer('drawer-6')" class="p-4 text-left bg-slate-50 hover:bg-slate-100 rounded-lg border border-slate-200 transition-colors">
+            <h3 class="font-medium text-slate-900 mb-1">Style 6: Dark Theme</h3>
+            <p class="text-sm text-slate-500">Dark mode drawer</p>
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- Drawer 1: Basic Left Drawer -->
+  <div id="drawer-1-overlay" class="drawer-overlay fixed inset-0 bg-black/50 z-40" onclick="closeDrawer('drawer-1')"></div>
+  <aside id="drawer-1" class="drawer-left fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 flex flex-col">
+    <div class="h-16 flex items-center justify-between px-4 border-b border-slate-200">
+      <span class="font-semibold text-slate-900">Menu</span>
+      <button onclick="closeDrawer('drawer-1')" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="space-y-1">
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 bg-primary-50 text-primary-700 rounded-lg font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Home
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          Profile
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          Notifications
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Settings
+        </a>
+      </div>
+    </nav>
+    <div class="p-4 border-t border-slate-200 safe-bottom">
+      <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg font-medium">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Drawer 2: With Profile -->
+  <div id="drawer-2-overlay" class="drawer-overlay fixed inset-0 bg-black/50 z-40" onclick="closeDrawer('drawer-2')"></div>
+  <aside id="drawer-2" class="drawer-left fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 flex flex-col">
+    <div class="p-6 bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <button onclick="closeDrawer('drawer-2')" class="absolute top-4 right-4 p-1 text-white/80 hover:text-white rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="User" class="w-16 h-16 rounded-full border-2 border-white/30 mb-3">
+      <h3 class="font-semibold text-lg">John Doe</h3>
+      <p class="text-white/80 text-sm">john@example.com</p>
+    </div>
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="space-y-1">
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Home
+        </a>
+        <a href="#" class="drawer-item flex items-center justify-between px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <span class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Messages
+          </span>
+          <span class="px-2 py-0.5 bg-red-500 text-white text-xs rounded-full">5</span>
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          Favorites
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          Orders
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-700 hover:bg-slate-100 rounded-lg font-medium">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Settings
+        </a>
+      </div>
+    </nav>
+    <div class="p-4 border-t border-slate-200 safe-bottom">
+      <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-lg font-medium">
+        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Drawer 3: Grouped Menu -->
+  <div id="drawer-3-overlay" class="drawer-overlay fixed inset-0 bg-black/50 z-40" onclick="closeDrawer('drawer-3')"></div>
+  <aside id="drawer-3" class="drawer-left fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 flex flex-col">
+    <div class="h-16 flex items-center justify-between px-4 border-b border-slate-200">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-sm">A</span>
+        </div>
+        <span class="font-semibold text-slate-900">AppName</span>
+      </div>
+      <button onclick="closeDrawer('drawer-3')" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="mb-6">
+        <p class="px-3 py-2 text-xs font-semibold text-slate-400 uppercase">Main</p>
+        <div class="space-y-1">
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Dashboard
+          </a>
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            Analytics
+          </a>
+        </div>
+      </div>
+      <div class="mb-6">
+        <p class="px-3 py-2 text-xs font-semibold text-slate-400 uppercase">Content</p>
+        <div class="space-y-1">
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            Posts
+          </a>
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Media
+          </a>
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+            </svg>
+            Tags
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="px-3 py-2 text-xs font-semibold text-slate-400 uppercase">System</p>
+        <div class="space-y-1">
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            Users
+          </a>
+          <a href="#" class="drawer-item flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Settings
+          </a>
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Drawer 4: Right Drawer -->
+  <div id="drawer-4-overlay" class="drawer-overlay fixed inset-0 bg-black/50 z-40" onclick="closeDrawer('drawer-4')"></div>
+  <aside id="drawer-4" class="drawer-right fixed top-0 right-0 h-full w-72 bg-white shadow-xl z-50 flex flex-col">
+    <div class="h-16 flex items-center justify-between px-4 border-b border-slate-200">
+      <button onclick="closeDrawer('drawer-4')" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <span class="font-semibold text-slate-900">Filters</span>
+    </div>
+    <div class="flex-1 p-4 overflow-y-auto">
+      <div class="mb-6">
+        <h3 class="text-sm font-semibold text-slate-900 mb-3">Categories</h3>
+        <div class="space-y-2">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" checked class="w-4 h-4 text-primary-600 rounded border-slate-300">
+            <span class="text-sm text-slate-700">All Items</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-slate-300">
+            <span class="text-sm text-slate-700">Electronics</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-slate-300">
+            <span class="text-sm text-slate-700">Clothing</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" class="w-4 h-4 text-primary-600 rounded border-slate-300">
+            <span class="text-sm text-slate-700">Home & Garden</span>
+          </label>
+        </div>
+      </div>
+      <div class="mb-6">
+        <h3 class="text-sm font-semibold text-slate-900 mb-3">Price Range</h3>
+        <div class="space-y-2">
+          <label class="flex items-center gap-3">
+            <input type="radio" name="price" class="w-4 h-4 text-primary-600 border-slate-300">
+            <span class="text-sm text-slate-700">Under $25</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="radio" name="price" class="w-4 h-4 text-primary-600 border-slate-300">
+            <span class="text-sm text-slate-700">$25 - $50</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="radio" name="price" class="w-4 h-4 text-primary-600 border-slate-300">
+            <span class="text-sm text-slate-700">$50 - $100</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="radio" name="price" class="w-4 h-4 text-primary-600 border-slate-300">
+            <span class="text-sm text-slate-700">Over $100</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 border-t border-slate-200 flex gap-2 safe-bottom">
+      <button class="flex-1 py-2 text-slate-600 font-medium rounded-lg border border-slate-200 hover:bg-slate-50">Clear</button>
+      <button class="flex-1 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg">Apply</button>
+    </div>
+  </aside>
+
+  <!-- Drawer 5: Full Width -->
+  <div id="drawer-5-overlay" class="drawer-overlay fixed inset-0 bg-black/50 z-40" onclick="closeDrawer('drawer-5')"></div>
+  <aside id="drawer-5" class="drawer-left fixed top-0 left-0 h-full w-full bg-white z-50 flex flex-col">
+    <div class="h-16 flex items-center justify-between px-4 border-b border-slate-200">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-sm">M</span>
+        </div>
+        <span class="font-semibold text-slate-900">Menu</span>
+      </div>
+      <button onclick="closeDrawer('drawer-5')" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 p-6 overflow-y-auto">
+      <div class="space-y-2">
+        <a href="#" class="drawer-item block px-4 py-4 text-lg font-medium text-slate-900 border-b border-slate-100">Home</a>
+        <a href="#" class="drawer-item block px-4 py-4 text-lg font-medium text-slate-900 border-b border-slate-100">Products</a>
+        <a href="#" class="drawer-item block px-4 py-4 text-lg font-medium text-slate-900 border-b border-slate-100">Services</a>
+        <a href="#" class="drawer-item block px-4 py-4 text-lg font-medium text-slate-900 border-b border-slate-100">About</a>
+        <a href="#" class="drawer-item block px-4 py-4 text-lg font-medium text-slate-900 border-b border-slate-100">Contact</a>
+      </div>
+    </nav>
+    <div class="p-6 border-t border-slate-200 safe-bottom">
+      <div class="flex gap-4 mb-4">
+        <a href="#" class="flex-1 py-3 text-center text-slate-700 font-medium rounded-lg border border-slate-200 hover:bg-slate-50">Sign In</a>
+        <a href="#" class="flex-1 py-3 text-center bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg">Sign Up</a>
+      </div>
+      <div class="flex justify-center gap-4">
+        <a href="#" class="p-2 text-slate-400 hover:text-slate-600">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+        </a>
+        <a href="#" class="p-2 text-slate-400 hover:text-slate-600">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="p-2 text-slate-400 hover:text-slate-600">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Drawer 6: Dark Theme -->
+  <div id="drawer-6-overlay" class="drawer-overlay fixed inset-0 bg-black/70 z-40" onclick="closeDrawer('drawer-6')"></div>
+  <aside id="drawer-6" class="drawer-left fixed top-0 left-0 h-full w-72 bg-slate-900 shadow-xl z-50 flex flex-col">
+    <div class="h-16 flex items-center justify-between px-4 border-b border-slate-700">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-sm">D</span>
+        </div>
+        <span class="font-semibold text-white">DarkApp</span>
+      </div>
+      <button onclick="closeDrawer('drawer-6')" class="p-2 text-slate-500 hover:text-slate-300 rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="space-y-1">
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 bg-white/10 text-white rounded-lg font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Home
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:text-white rounded-lg font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Explore
+        </a>
+        <a href="#" class="drawer-item flex items-center justify-between px-4 py-3 text-slate-400 hover:bg-white/5 hover:text-white rounded-lg font-medium">
+          <span class="flex items-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            Notifications
+          </span>
+          <span class="px-2 py-0.5 bg-red-500 text-white text-xs rounded-full">9</span>
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:text-white rounded-lg font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          Saved
+        </a>
+        <a href="#" class="drawer-item flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-white/5 hover:text-white rounded-lg font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Settings
+        </a>
+      </div>
+    </nav>
+    <div class="p-4 border-t border-slate-700 safe-bottom">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="User" class="w-10 h-10 rounded-full">
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-white truncate">John Doe</p>
+          <p class="text-xs text-slate-500 truncate">@johndoe</p>
+        </div>
+      </div>
+      <a href="#" class="drawer-item flex items-center gap-3 px-4 py-2 text-slate-400 hover:text-red-400 rounded-lg text-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <script>
+    (function() {
+      'use strict';
+
+      window.openDrawer = function(drawerId) {
+        const drawer = document.getElementById(drawerId);
+        const overlay = document.getElementById(drawerId + '-overlay');
+
+        if (drawer && overlay) {
+          drawer.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      };
+
+      window.closeDrawer = function(drawerId) {
+        const drawer = document.getElementById(drawerId);
+        const overlay = document.getElementById(drawerId + '-overlay');
+
+        if (drawer && overlay) {
+          drawer.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      };
+
+      // Close on escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.drawer-left.open, .drawer-right.open').forEach(function(drawer) {
+            const id = drawer.id;
+            closeDrawer(id);
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

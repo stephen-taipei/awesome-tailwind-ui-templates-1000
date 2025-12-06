@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Step Navigation - Wizard and multi-step form navigation patterns">
+  <title>nav-016: Step Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Step connector line */
+    .step-connector {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(226 232 240);
+      transform: translateY(-50%);
+    }
+
+    .step-connector.completed {
+      background-color: oklch(0.48 0.22 250);
+    }
+
+    /* Step circle animation */
+    .step-circle {
+      transition: all 0.3s ease;
+    }
+
+    .step-circle.active {
+      box-shadow: 0 0 0 4px oklch(0.93 0.04 250);
+    }
+
+    /* Progress bar animation */
+    .progress-bar {
+      transition: width 0.5s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-016: Step Navigation (Wizard)
+
+       Multi-step form navigation patterns:
+       - Checkout flows
+       - Onboarding wizards
+       - Form wizards
+       - Setup processes
+       - Booking systems
+
+       Features:
+       - Numbered steps
+       - Progress indicators
+       - Completed state icons
+       - Vertical and horizontal
+       - Mobile responsive
+       ============================================ -->
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <h1 class="text-lg font-semibold text-slate-900">Step Navigation</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl font-bold text-slate-900 mb-4">Step Navigation (Wizard)</h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Multi-step form and wizard navigation patterns for guided user flows.
+      </p>
+    </div>
+
+    <div class="space-y-12">
+
+      <!-- Style 1: Numbered Steps with Connector -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 1: Numbered Steps</h2>
+        </div>
+        <div class="p-8">
+          <nav aria-label="Progress">
+            <ol class="flex items-center justify-between max-w-3xl mx-auto">
+              <li class="relative flex-1">
+                <div class="flex items-center">
+                  <span class="step-circle w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="step-connector completed"></span>
+                </div>
+                <span class="absolute top-12 left-0 text-sm font-medium text-primary-600">Account</span>
+              </li>
+              <li class="relative flex-1">
+                <div class="flex items-center">
+                  <span class="step-circle active w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">2</span>
+                  <span class="step-connector"></span>
+                </div>
+                <span class="absolute top-12 left-0 text-sm font-medium text-primary-600">Profile</span>
+              </li>
+              <li class="relative flex-1">
+                <div class="flex items-center">
+                  <span class="step-circle w-10 h-10 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center font-semibold text-sm">3</span>
+                  <span class="step-connector"></span>
+                </div>
+                <span class="absolute top-12 left-0 text-sm font-medium text-slate-500">Settings</span>
+              </li>
+              <li class="relative">
+                <div class="flex items-center">
+                  <span class="step-circle w-10 h-10 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center font-semibold text-sm">4</span>
+                </div>
+                <span class="absolute top-12 left-0 text-sm font-medium text-slate-500">Complete</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 2: Simple Progress Steps -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 2: Progress Bar Steps</h2>
+        </div>
+        <div class="p-8">
+          <div class="max-w-2xl mx-auto">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-medium text-slate-900">Step 2 of 4</span>
+              <span class="text-sm text-slate-500">50% Complete</span>
+            </div>
+            <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div class="progress-bar h-full bg-primary-600 rounded-full" style="width: 50%"></div>
+            </div>
+            <div class="flex justify-between mt-2">
+              <span class="text-xs text-slate-500">Details</span>
+              <span class="text-xs text-primary-600 font-medium">Shipping</span>
+              <span class="text-xs text-slate-500">Payment</span>
+              <span class="text-xs text-slate-500">Confirm</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Style 3: Dots Navigation -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 3: Dot Indicators</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-center gap-3">
+            <button class="w-3 h-3 bg-primary-600 rounded-full"></button>
+            <button class="w-3 h-3 bg-primary-600 rounded-full"></button>
+            <button class="w-3 h-3 bg-primary-600 rounded-full ring-4 ring-primary-200"></button>
+            <button class="w-3 h-3 bg-slate-300 rounded-full hover:bg-slate-400"></button>
+            <button class="w-3 h-3 bg-slate-300 rounded-full hover:bg-slate-400"></button>
+          </div>
+          <p class="text-center text-sm text-slate-500 mt-4">Step 3 of 5</p>
+        </div>
+      </section>
+
+      <!-- Style 4: With Descriptions -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 4: With Descriptions</h2>
+        </div>
+        <div class="p-8">
+          <nav class="max-w-4xl mx-auto">
+            <ol class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <li class="relative p-4 bg-primary-50 border-2 border-primary-200 rounded-lg">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="font-medium text-primary-700">Cart</span>
+                </div>
+                <p class="text-xs text-primary-600">Review your items</p>
+              </li>
+              <li class="relative p-4 bg-primary-50 border-2 border-primary-600 rounded-lg">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">2</span>
+                  <span class="font-medium text-primary-700">Shipping</span>
+                </div>
+                <p class="text-xs text-primary-600">Enter address</p>
+              </li>
+              <li class="relative p-4 bg-slate-50 border border-slate-200 rounded-lg">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-8 h-8 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center text-sm font-semibold">3</span>
+                  <span class="font-medium text-slate-500">Payment</span>
+                </div>
+                <p class="text-xs text-slate-400">Add payment</p>
+              </li>
+              <li class="relative p-4 bg-slate-50 border border-slate-200 rounded-lg">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="w-8 h-8 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center text-sm font-semibold">4</span>
+                  <span class="font-medium text-slate-500">Confirm</span>
+                </div>
+                <p class="text-xs text-slate-400">Place order</p>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 5: Vertical Steps -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 5: Vertical Steps</h2>
+        </div>
+        <div class="p-8">
+          <nav class="max-w-md mx-auto">
+            <ol class="relative border-l-2 border-slate-200 ml-4">
+              <li class="mb-8 ml-8">
+                <span class="absolute -left-4 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <h3 class="font-medium text-slate-900">Account Created</h3>
+                <p class="text-sm text-slate-500">Your account has been set up successfully.</p>
+              </li>
+              <li class="mb-8 ml-8">
+                <span class="absolute -left-4 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center ring-4 ring-primary-100">2</span>
+                <h3 class="font-medium text-primary-600">Verify Email</h3>
+                <p class="text-sm text-slate-500">Check your inbox for verification link.</p>
+              </li>
+              <li class="mb-8 ml-8">
+                <span class="absolute -left-4 w-8 h-8 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center">3</span>
+                <h3 class="font-medium text-slate-400">Complete Profile</h3>
+                <p class="text-sm text-slate-400">Add your personal information.</p>
+              </li>
+              <li class="ml-8">
+                <span class="absolute -left-4 w-8 h-8 bg-slate-200 text-slate-500 rounded-full flex items-center justify-center">4</span>
+                <h3 class="font-medium text-slate-400">Start Using</h3>
+                <p class="text-sm text-slate-400">You're ready to go!</p>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 6: Compact Steps -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 6: Compact Navigation</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-center gap-1">
+            <button class="px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-l-lg">1. Info</button>
+            <button class="px-4 py-2 bg-primary-100 text-primary-700 text-sm font-medium">2. Address</button>
+            <button class="px-4 py-2 bg-slate-100 text-slate-500 text-sm font-medium">3. Payment</button>
+            <button class="px-4 py-2 bg-slate-100 text-slate-500 text-sm font-medium rounded-r-lg">4. Done</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>

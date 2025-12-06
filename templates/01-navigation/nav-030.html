@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-030: Timeline Navigation - Tailwind UI Templates</title>
+    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary-50: oklch(0.97 0.02 250);
+            --color-primary-100: oklch(0.93 0.04 250);
+            --color-primary-500: oklch(0.55 0.2 250);
+            --color-primary-600: oklch(0.48 0.2 250);
+            --color-primary-700: oklch(0.4 0.18 250);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold text-gray-900">Nav-030: Timeline Navigation</h1>
+            <p class="text-gray-600 mt-1">Step-by-step progress and timeline-based navigation patterns</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Style 1: Horizontal Step Navigation -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 1: Horizontal Step Navigation</h2>
+                <p class="text-sm text-gray-600">Classic horizontal stepper for multi-step processes</p>
+            </div>
+            <div class="p-6">
+                <nav class="flex items-center justify-between">
+                    <!-- Step 1 - Completed -->
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center w-10 h-10 bg-primary-500 rounded-full text-white">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Account</p>
+                            <p class="text-xs text-gray-500">Basic information</p>
+                        </div>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 bg-primary-500 mx-4"></div>
+
+                    <!-- Step 2 - Completed -->
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center w-10 h-10 bg-primary-500 rounded-full text-white">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Profile</p>
+                            <p class="text-xs text-gray-500">Personal details</p>
+                        </div>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 mx-4 bg-gradient-to-r from-primary-500 to-gray-300"></div>
+
+                    <!-- Step 3 - Current -->
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center w-10 h-10 border-2 border-primary-500 bg-primary-50 rounded-full text-primary-600 font-semibold">
+                            3
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-primary-600">Payment</p>
+                            <p class="text-xs text-gray-500">Billing details</p>
+                        </div>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 bg-gray-300 mx-4"></div>
+
+                    <!-- Step 4 - Upcoming -->
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center w-10 h-10 border-2 border-gray-300 rounded-full text-gray-400 font-semibold">
+                            4
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-400">Review</p>
+                            <p class="text-xs text-gray-400">Confirm order</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 2: Vertical Timeline Navigation -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 2: Vertical Timeline Navigation</h2>
+                <p class="text-sm text-gray-600">Side navigation with timeline connector</p>
+            </div>
+            <div class="p-6">
+                <div class="flex gap-8">
+                    <!-- Timeline Nav -->
+                    <nav class="w-64 relative">
+                        <!-- Vertical Line -->
+                        <div class="absolute left-5 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                        <div class="absolute left-5 top-0 w-0.5 h-40 bg-primary-500"></div>
+
+                        <!-- Items -->
+                        <div class="space-y-6">
+                            <a href="#" class="flex items-start group">
+                                <div class="relative z-10 flex items-center justify-center w-10 h-10 bg-primary-500 rounded-full text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <p class="text-sm font-medium text-gray-900">Getting Started</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">Introduction and setup</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flex items-start group">
+                                <div class="relative z-10 flex items-center justify-center w-10 h-10 bg-primary-500 rounded-full text-white shrink-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <p class="text-sm font-medium text-gray-900">Installation</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">Dependencies and packages</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flex items-start group">
+                                <div class="relative z-10 flex items-center justify-center w-10 h-10 border-2 border-primary-500 bg-white rounded-full text-primary-600 font-semibold shrink-0">
+                                    3
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <p class="text-sm font-medium text-primary-600">Configuration</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">Currently reading</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flex items-start group">
+                                <div class="relative z-10 flex items-center justify-center w-10 h-10 border-2 border-gray-300 bg-white rounded-full text-gray-400 font-semibold shrink-0 group-hover:border-gray-400 transition-colors">
+                                    4
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700 transition-colors">Customization</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Theme and styling</p>
+                                </div>
+                            </a>
+
+                            <a href="#" class="flex items-start group">
+                                <div class="relative z-10 flex items-center justify-center w-10 h-10 border-2 border-gray-300 bg-white rounded-full text-gray-400 font-semibold shrink-0 group-hover:border-gray-400 transition-colors">
+                                    5
+                                </div>
+                                <div class="ml-4 pt-1">
+                                    <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700 transition-colors">Deployment</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Production setup</p>
+                                </div>
+                            </a>
+                        </div>
+                    </nav>
+
+                    <!-- Content Area -->
+                    <div class="flex-1 bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900">Configuration</h3>
+                        <p class="text-gray-600 mt-2">Configure your project settings and environment variables...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 3: Breadcrumb Timeline -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 3: Breadcrumb Timeline</h2>
+                <p class="text-sm text-gray-600">Arrow-shaped breadcrumb progress indicator</p>
+            </div>
+            <div class="p-6">
+                <nav class="flex">
+                    <!-- Step 1 - Completed -->
+                    <a href="#" class="relative flex items-center px-6 py-3 bg-primary-500 text-white group">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm font-medium">Cart</span>
+                        </span>
+                        <div class="absolute right-0 top-0 h-full w-4 bg-primary-500" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+                    </a>
+
+                    <!-- Step 2 - Completed -->
+                    <a href="#" class="relative flex items-center px-6 py-3 bg-primary-500 text-white ml-1 group">
+                        <span class="flex items-center pl-2">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm font-medium">Shipping</span>
+                        </span>
+                        <div class="absolute right-0 top-0 h-full w-4 bg-primary-500" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+                    </a>
+
+                    <!-- Step 3 - Current -->
+                    <a href="#" class="relative flex items-center px-6 py-3 bg-primary-100 text-primary-700 ml-1 group">
+                        <span class="flex items-center pl-2">
+                            <span class="w-5 h-5 rounded-full border-2 border-primary-500 flex items-center justify-center mr-2 text-xs font-bold">3</span>
+                            <span class="text-sm font-medium">Payment</span>
+                        </span>
+                        <div class="absolute right-0 top-0 h-full w-4 bg-primary-100" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+                    </a>
+
+                    <!-- Step 4 - Upcoming -->
+                    <a href="#" class="relative flex items-center px-6 py-3 bg-gray-100 text-gray-500 ml-1 group hover:bg-gray-200 transition-colors">
+                        <span class="flex items-center pl-2">
+                            <span class="w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center mr-2 text-xs font-bold">4</span>
+                            <span class="text-sm font-medium">Confirm</span>
+                        </span>
+                        <div class="absolute right-0 top-0 h-full w-4 bg-gray-100 group-hover:bg-gray-200 transition-colors" style="clip-path: polygon(0 0, 0 100%, 100% 50%)"></div>
+                    </a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 4: Progress Bar Timeline -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 4: Progress Bar Timeline</h2>
+                <p class="text-sm text-gray-600">Continuous progress bar with step markers</p>
+            </div>
+            <div class="p-6">
+                <div class="relative">
+                    <!-- Background Bar -->
+                    <div class="absolute top-5 left-0 right-0 h-1 bg-gray-200 rounded-full"></div>
+                    <!-- Progress Bar -->
+                    <div class="absolute top-5 left-0 h-1 bg-primary-500 rounded-full" style="width: 62.5%"></div>
+
+                    <!-- Steps -->
+                    <nav class="relative flex justify-between">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white z-10">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-gray-900">Details</span>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white z-10">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-gray-900">Address</span>
+                        </div>
+
+                        <!-- Step 3 - Current -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white z-10 ring-4 ring-primary-100">
+                                <span class="font-semibold">3</span>
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-primary-600">Payment</span>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 z-10">
+                                <span class="font-semibold">4</span>
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-gray-500">Review</span>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 z-10">
+                                <span class="font-semibold">5</span>
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-gray-500">Complete</span>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Progress Info -->
+                <div class="mt-8 flex items-center justify-between text-sm">
+                    <span class="text-gray-600">Step 3 of 5</span>
+                    <span class="text-primary-600 font-medium">60% Complete</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style 5: Activity Timeline -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 5: Activity Timeline</h2>
+                <p class="text-sm text-gray-600">Event-based timeline with icons and timestamps</p>
+            </div>
+            <div class="p-6">
+                <nav class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+
+                    <div class="space-y-6">
+                        <!-- Event 1 -->
+                        <a href="#" class="flex gap-4 group">
+                            <div class="relative z-10 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 bg-gray-50 rounded-lg p-4 group-hover:bg-gray-100 transition-colors">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm font-medium text-gray-900">Order Confirmed</p>
+                                    <time class="text-xs text-gray-500">Dec 1, 10:30 AM</time>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Your order #12345 has been confirmed</p>
+                            </div>
+                        </a>
+
+                        <!-- Event 2 -->
+                        <a href="#" class="flex gap-4 group">
+                            <div class="relative z-10 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 bg-gray-50 rounded-lg p-4 group-hover:bg-gray-100 transition-colors">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm font-medium text-gray-900">Processing</p>
+                                    <time class="text-xs text-gray-500">Dec 1, 2:15 PM</time>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Your package is being prepared</p>
+                            </div>
+                        </a>
+
+                        <!-- Event 3 - Current -->
+                        <a href="#" class="flex gap-4 group">
+                            <div class="relative z-10 w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center shrink-0 ring-4 ring-primary-100">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 bg-primary-50 rounded-lg p-4 border-2 border-primary-200">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-sm font-medium text-primary-700">Shipped</p>
+                                    <time class="text-xs text-primary-600">Dec 2, 9:00 AM</time>
+                                </div>
+                                <p class="text-sm text-primary-600 mt-1">Your order is on its way</p>
+                                <p class="text-xs text-primary-500 mt-2">Tracking: 1Z999AA10123456784</p>
+                            </div>
+                        </a>
+
+                        <!-- Event 4 - Pending -->
+                        <div class="flex gap-4 opacity-60">
+                            <div class="relative z-10 w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 bg-gray-50 rounded-lg p-4 border-2 border-dashed border-gray-200">
+                                <p class="text-sm font-medium text-gray-500">Out for Delivery</p>
+                                <p class="text-sm text-gray-400 mt-1">Pending...</p>
+                            </div>
+                        </div>
+
+                        <!-- Event 5 - Pending -->
+                        <div class="flex gap-4 opacity-60">
+                            <div class="relative z-10 w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 bg-gray-50 rounded-lg p-4 border-2 border-dashed border-gray-200">
+                                <p class="text-sm font-medium text-gray-500">Delivered</p>
+                                <p class="text-sm text-gray-400 mt-1">Pending...</p>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Style 6: Dark Timeline Navigation -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-200 bg-gray-50">
+                <h2 class="font-semibold text-gray-900">Style 6: Dark Timeline Navigation</h2>
+                <p class="text-sm text-gray-600">Elegant dark theme with glowing indicators</p>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg">
+                <nav class="flex items-center justify-between px-4">
+                    <!-- Step 1 - Completed -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/30">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="mt-3 text-sm font-medium text-white">Account</span>
+                        <span class="text-xs text-emerald-400">Completed</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-500 mx-4"></div>
+
+                    <!-- Step 2 - Completed -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/30">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="mt-3 text-sm font-medium text-white">Profile</span>
+                        <span class="text-xs text-emerald-400">Completed</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 mx-4 bg-gradient-to-r from-emerald-500 via-primary-500 to-gray-700"></div>
+
+                    <!-- Step 3 - Current -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-primary-500/40 ring-4 ring-primary-500/20 animate-pulse">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <span class="mt-3 text-sm font-medium text-white">Payment</span>
+                        <span class="text-xs text-primary-400">In Progress</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 bg-gray-700 mx-4"></div>
+
+                    <!-- Step 4 - Pending -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-gray-800 border-2 border-gray-700 rounded-full flex items-center justify-center text-gray-500">
+                            <span class="font-bold">4</span>
+                        </div>
+                        <span class="mt-3 text-sm font-medium text-gray-500">Review</span>
+                        <span class="text-xs text-gray-600">Pending</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="flex-1 h-0.5 bg-gray-700 mx-4"></div>
+
+                    <!-- Step 5 - Pending -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 bg-gray-800 border-2 border-gray-700 rounded-full flex items-center justify-center text-gray-500">
+                            <span class="font-bold">5</span>
+                        </div>
+                        <span class="mt-3 text-sm font-medium text-gray-500">Complete</span>
+                        <span class="text-xs text-gray-600">Pending</span>
+                    </div>
+                </nav>
+
+                <!-- Progress Details -->
+                <div class="mt-8 bg-gray-800 rounded-xl p-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-sm text-gray-400">Overall Progress</span>
+                        <span class="text-sm font-medium text-white">50%</span>
+                    </div>
+                    <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <div class="h-full w-1/2 bg-gradient-to-r from-emerald-500 to-primary-500 rounded-full"></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-3 text-xs text-gray-500">
+                        <span>Step 3 of 5</span>
+                        <span>Estimated: 2 min remaining</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

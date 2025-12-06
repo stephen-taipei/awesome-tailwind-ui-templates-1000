@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Navbar with Search Box - Navigation template with integrated search functionality">
+  <title>nav-005: Navbar with Search Box | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Search input focus styles */
+    .search-input {
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 0 0 3px oklch(0.55 0.20 250 / 0.15);
+    }
+
+    /* Navigation link styles */
+    .nav-link {
+      position: relative;
+      color: rgb(71 85 105); /* slate-600 */
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: rgb(15 23 42); /* slate-900 */
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: oklch(0.55 0.20 250);
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after {
+      width: 100%;
+    }
+
+    /* Hamburger animation */
+    .hamburger-line {
+      display: block;
+      width: 1.25rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile menu animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 32rem;
+    }
+
+    /* Search suggestions dropdown */
+    .search-suggestions {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.2s ease;
+    }
+
+    .search-container:focus-within .search-suggestions {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Mobile search overlay */
+    .mobile-search-overlay {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-search-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Keyboard shortcut badge */
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-005: Navbar with Search Box
+
+       A navigation bar with integrated search:
+       - E-commerce sites
+       - Documentation sites
+       - Knowledge bases
+       - Blog platforms
+       - Admin dashboards
+
+       Features:
+       - Integrated search input with icon
+       - Keyboard shortcut indicator (Cmd/Ctrl+K)
+       - Search suggestions dropdown
+       - Mobile: Search collapses to icon
+       - Responsive design with hamburger menu
+       ============================================ -->
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <!-- Skip to main content link for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-md"
+      data-i18n="nav.skipToContent"
+    >
+      Skip to main content
+    </a>
+
+    <nav
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      aria-label="Main navigation"
+    >
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold text-slate-900 hover:text-primary-600 transition-colors"
+            aria-label="Go to homepage"
+            data-i18n-aria="nav.brandAriaLabel"
+          >
+            <!-- Logo Icon -->
+            <div class="w-8 h-8 rounded-lg bg-primary-600 flex items-center justify-center">
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            <span data-i18n="nav.brand">SearchUI</span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex lg:items-center lg:gap-6 flex-1 max-w-2xl mx-8">
+          <!-- Search Box -->
+          <div class="search-container relative flex-1">
+            <label for="desktop-search" class="sr-only">Search</label>
+            <div class="relative">
+              <!-- Search Icon -->
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg
+                  class="w-5 h-5 text-slate-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Search Input -->
+              <input
+                type="search"
+                id="desktop-search"
+                class="search-input block w-full pl-10 pr-20 py-2.5 bg-slate-100 border border-transparent rounded-lg text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:bg-white focus:border-primary-500"
+                placeholder="Search products, docs, and more..."
+                data-i18n-placeholder="nav.searchPlaceholder"
+                autocomplete="off"
+              />
+
+              <!-- Keyboard Shortcut -->
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                <span class="kbd inline-flex items-center gap-0.5 px-2 py-1 bg-white border border-slate-300 rounded text-xs text-slate-500 shadow-sm">
+                  <span class="text-xs">⌘</span>K
+                </span>
+              </div>
+            </div>
+
+            <!-- Search Suggestions Dropdown -->
+            <div class="search-suggestions absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-lg border border-slate-200 overflow-hidden">
+              <div class="p-2">
+                <p class="px-3 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider" data-i18n="nav.recentSearches">
+                  Recent Searches
+                </p>
+                <ul class="space-y-1">
+                  <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-md">
+                      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Dashboard components
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-md">
+                      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Form templates
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-md">
+                      <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Navigation patterns
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="border-t border-slate-200 p-2">
+                <p class="px-3 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider" data-i18n="nav.popularSearches">
+                  Popular
+                </p>
+                <ul class="space-y-1">
+                  <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-md">
+                      <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                      Trending templates
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-md">
+                      <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                      </svg>
+                      Featured components
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Right Section -->
+        <div class="hidden md:flex md:items-center md:gap-6">
+          <!-- Navigation Links -->
+          <ul class="hidden lg:flex items-center gap-6" role="menubar">
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.products"
+              >
+                Products
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.docs"
+              >
+                Docs
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="nav-link font-medium text-sm"
+                role="menuitem"
+                data-i18n="nav.pricing"
+              >
+                Pricing
+              </a>
+            </li>
+          </ul>
+
+          <!-- Tablet Search Button (shows on md, hidden on lg+) -->
+          <button
+            type="button"
+            id="tablet-search-btn"
+            class="lg:hidden p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+            aria-label="Open search"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+
+          <!-- Divider -->
+          <div class="h-6 w-px bg-slate-200" aria-hidden="true"></div>
+
+          <!-- User Actions -->
+          <div class="flex items-center gap-3">
+            <!-- Notifications -->
+            <button
+              type="button"
+              class="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors relative"
+              aria-label="View notifications"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+              <!-- Notification badge -->
+              <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+
+            <!-- User Avatar -->
+            <button
+              type="button"
+              class="flex items-center gap-2 p-1 rounded-full hover:bg-slate-100 transition-colors"
+              aria-label="User menu"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                alt="User avatar"
+                class="w-8 h-8 rounded-full object-cover ring-2 ring-slate-200"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <!-- Mobile Search Button -->
+          <button
+            type="button"
+            id="mobile-search-btn"
+            class="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+            aria-label="Open search"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            type="button"
+            id="mobile-menu-btn"
+            class="p-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="flex flex-col gap-1">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden"
+        role="menu"
+        aria-labelledby="mobile-menu-btn"
+      >
+        <div class="py-4 space-y-4">
+          <!-- Mobile Search -->
+          <div class="px-2">
+            <label for="mobile-menu-search" class="sr-only">Search</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="mobile-menu-search"
+                class="block w-full pl-10 pr-4 py-3 bg-slate-100 border border-transparent rounded-lg text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+                placeholder="Search..."
+                data-i18n-placeholder="nav.searchPlaceholder"
+              />
+            </div>
+          </div>
+
+          <!-- Mobile Nav Links -->
+          <ul class="space-y-1 px-2">
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.products"
+              >
+                Products
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.docs"
+              >
+                Docs
+              </a>
+            </li>
+            <li role="none">
+              <a
+                href="#"
+                class="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg font-medium text-sm transition-colors"
+                role="menuitem"
+                data-i18n="nav.pricing"
+              >
+                Pricing
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile User Section -->
+          <div class="border-t border-slate-200 pt-4 px-2">
+            <div class="flex items-center gap-3 px-4 py-3">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
+                alt="User avatar"
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-medium text-slate-900">John Doe</p>
+                <p class="text-sm text-slate-500">john@example.com</p>
+              </div>
+            </div>
+            <ul class="mt-2 space-y-1">
+              <li>
+                <a href="#" class="block px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg text-sm transition-colors">
+                  Your Profile
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg text-sm transition-colors">
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg text-sm transition-colors">
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Search Overlay -->
+  <div
+    id="mobile-search-overlay"
+    class="mobile-search-overlay fixed inset-0 z-50 bg-white"
+  >
+    <div class="flex flex-col h-full">
+      <!-- Header -->
+      <div class="flex items-center gap-3 px-4 py-3 border-b border-slate-200">
+        <button
+          type="button"
+          id="close-mobile-search"
+          class="p-2 -ml-2 text-slate-500 hover:text-slate-700"
+          aria-label="Close search"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <div class="flex-1 relative">
+          <input
+            type="search"
+            id="mobile-search-input"
+            class="block w-full py-2 text-base text-slate-900 placeholder-slate-500 focus:outline-none"
+            placeholder="Search..."
+            data-i18n-placeholder="nav.searchPlaceholder"
+            autofocus
+          />
+        </div>
+        <button
+          type="button"
+          class="px-3 py-1.5 text-sm font-medium text-primary-600 hover:text-primary-700"
+        >
+          Search
+        </button>
+      </div>
+
+      <!-- Search Content -->
+      <div class="flex-1 overflow-y-auto">
+        <div class="px-4 py-4">
+          <p class="text-xs font-medium text-slate-500 uppercase tracking-wider mb-3" data-i18n="nav.recentSearches">
+            Recent Searches
+          </p>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="flex items-center gap-3 py-2 text-slate-700">
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Dashboard components
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-3 py-2 text-slate-700">
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Form templates
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-3 py-2 text-slate-700">
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Navigation patterns
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="px-4 py-4 border-t border-slate-100">
+          <p class="text-xs font-medium text-slate-500 uppercase tracking-wider mb-3" data-i18n="nav.popularSearches">
+            Popular
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a href="#" class="inline-flex px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full transition-colors">
+              Templates
+            </a>
+            <a href="#" class="inline-flex px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full transition-colors">
+              Components
+            </a>
+            <a href="#" class="inline-flex px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full transition-colors">
+              Documentation
+            </a>
+            <a href="#" class="inline-flex px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm rounded-full transition-colors">
+              Getting Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content (Demo) -->
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4" data-i18n="demo.nav005.title">
+        Navbar with Search Box
+      </h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-6" data-i18n="demo.nav005.description">
+        A navigation bar with integrated search functionality. Features a desktop search box with keyboard shortcut indicator,
+        search suggestions dropdown, and mobile-optimized full-screen search overlay.
+      </p>
+
+      <!-- Feature Tags -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12">
+        <span class="inline-flex items-center px-3 py-1 bg-primary-50 text-primary-700 border border-primary-200 rounded-full text-sm font-medium">
+          Integrated Search
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full text-sm font-medium">
+          Keyboard Shortcuts
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full text-sm font-medium">
+          Search Suggestions
+        </span>
+        <span class="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full text-sm font-medium">
+          Mobile Overlay
+        </span>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+        <div class="bg-white rounded-xl border border-slate-200 p-6 text-left shadow-sm">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h4 class="font-semibold text-slate-900 mb-2">Integrated Search</h4>
+          <p class="text-sm text-slate-600">Search box is seamlessly integrated into the navbar with focus states and transitions.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-6 text-left shadow-sm">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+            </svg>
+          </div>
+          <h4 class="font-semibold text-slate-900 mb-2">Keyboard Shortcut</h4>
+          <p class="text-sm text-slate-600">Shows Cmd/Ctrl+K indicator for power users to quickly access search.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-6 text-left shadow-sm">
+          <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h4 class="font-semibold text-slate-900 mb-2">Mobile Optimized</h4>
+          <p class="text-sm text-slate-600">Full-screen search overlay on mobile for optimal touch experience.</p>
+        </div>
+      </div>
+
+      <!-- Usage Note -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 max-w-2xl mx-auto mb-12 text-left">
+        <div class="flex gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <h4 class="font-semibold text-amber-800 mb-1">Keyboard Shortcut</h4>
+            <p class="text-sm text-amber-700">
+              Press <kbd class="kbd px-1.5 py-0.5 bg-amber-100 border border-amber-300 rounded text-xs">⌘</kbd> + <kbd class="kbd px-1.5 py-0.5 bg-amber-100 border border-amber-300 rounded text-xs">K</kbd> (Mac) or
+              <kbd class="kbd px-1.5 py-0.5 bg-amber-100 border border-amber-300 rounded text-xs">Ctrl</kbd> + <kbd class="kbd px-1.5 py-0.5 bg-amber-100 border border-amber-300 rounded text-xs">K</kbd> (Windows/Linux) to focus the search box.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breakpoint Indicator -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 border border-slate-200 rounded-full text-sm text-slate-600">
+        <span class="font-medium">Current breakpoint:</span>
+        <span class="sm:hidden font-bold text-primary-600">xs (&lt; 640px)</span>
+        <span class="hidden sm:inline md:hidden font-bold text-primary-600">sm (640px+)</span>
+        <span class="hidden md:inline lg:hidden font-bold text-primary-600">md (768px+)</span>
+        <span class="hidden lg:inline xl:hidden font-bold text-primary-600">lg (1024px+)</span>
+        <span class="hidden xl:inline 2xl:hidden font-bold text-primary-600">xl (1280px+)</span>
+        <span class="hidden 2xl:inline font-bold text-primary-600">2xl (1536px+)</span>
+      </div>
+    </div>
+
+    <!-- Back to Templates Link -->
+    <div class="mt-16">
+      <a
+        href="../../index.html"
+        class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', !isExpanded);
+          menuBtn.querySelector('span').classList.toggle('hamburger-active');
+          mobileMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        });
+      }
+
+      // Mobile search overlay
+      const mobileSearchBtn = document.getElementById('mobile-search-btn');
+      const tabletSearchBtn = document.getElementById('tablet-search-btn');
+      const mobileSearchOverlay = document.getElementById('mobile-search-overlay');
+      const closeMobileSearch = document.getElementById('close-mobile-search');
+      const mobileSearchInput = document.getElementById('mobile-search-input');
+
+      function openMobileSearch() {
+        mobileSearchOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => mobileSearchInput.focus(), 100);
+      }
+
+      function closeMobileSearchOverlay() {
+        mobileSearchOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (mobileSearchBtn) {
+        mobileSearchBtn.addEventListener('click', openMobileSearch);
+      }
+
+      if (tabletSearchBtn) {
+        tabletSearchBtn.addEventListener('click', openMobileSearch);
+      }
+
+      if (closeMobileSearch) {
+        closeMobileSearch.addEventListener('click', closeMobileSearchOverlay);
+      }
+
+      // Close mobile search on Escape
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeMobileSearchOverlay();
+          // Also close mobile menu
+          if (menuBtn) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        }
+      });
+
+      // Keyboard shortcut (Cmd/Ctrl + K)
+      const desktopSearch = document.getElementById('desktop-search');
+
+      document.addEventListener('keydown', function(event) {
+        if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+          event.preventDefault();
+
+          // Check viewport width
+          if (window.innerWidth >= 1024 && desktopSearch) {
+            desktopSearch.focus();
+          } else {
+            openMobileSearch();
+          }
+        }
+      });
+
+      // Close menu on resize to desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+          if (menuBtn) {
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('span').classList.remove('hamburger-active');
+            mobileMenu.classList.remove('open');
+          }
+        }
+        if (window.innerWidth >= 1024) {
+          closeMobileSearchOverlay();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

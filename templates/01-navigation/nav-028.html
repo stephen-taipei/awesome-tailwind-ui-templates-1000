@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accordion Navigation - Expandable menu navigation patterns">
+  <title>nav-028: Accordion Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Accordion animation */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-content.open {
+      max-height: 500px;
+    }
+
+    /* Arrow rotation */
+    .accordion-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-trigger.open .accordion-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Hover effect */
+    .accordion-item {
+      transition: all 0.15s ease;
+    }
+
+    .accordion-item:hover {
+      background-color: rgb(248 250 252);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-028: Accordion Navigation
+
+       Expandable menu navigation patterns:
+       - FAQ sections
+       - Documentation navs
+       - Mobile menus
+       - Category navigation
+       - Settings panels
+
+       Features:
+       - Expand/collapse
+       - Nested levels
+       - Icons and badges
+       - Multiple styles
+       - Keyboard accessible
+       ============================================ -->
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <h1 class="text-lg font-semibold text-slate-900">Accordion Navigation</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl font-bold text-slate-900 mb-4">Accordion Navigation</h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Expandable and collapsible menu navigation patterns.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Style 1: Basic Accordion -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 1: Basic Accordion</h2>
+        </div>
+        <nav class="p-4">
+          <div class="space-y-1">
+            <div class="accordion">
+              <button class="accordion-trigger open w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span>Getting Started</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content open">
+                <div class="pl-4 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-primary-600 bg-primary-50 rounded-lg">Introduction</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Installation</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Quick Start</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span>Core Concepts</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-4 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Components</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Styling</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">State Management</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span>API Reference</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-4 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Hooks</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Utilities</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Types</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Style 2: With Icons -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 2: With Icons</h2>
+        </div>
+        <nav class="p-4">
+          <div class="space-y-1">
+            <div class="accordion">
+              <button class="accordion-trigger open w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  Dashboard
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content open">
+                <div class="pl-12 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-primary-600 bg-primary-50 rounded-lg">Overview</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Analytics</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Reports</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                  Users
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-12 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">All Users</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Add User</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Roles</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Settings
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-12 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">General</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Security</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Integrations</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Style 3: Bordered Accordion -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 3: Bordered</h2>
+        </div>
+        <nav class="p-4">
+          <div class="space-y-2">
+            <div class="accordion border border-slate-200 rounded-lg overflow-hidden">
+              <button class="accordion-trigger open w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 bg-slate-50" onclick="toggleAccordion(this)">
+                <span>Products</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content open border-t border-slate-200">
+                <div class="p-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">All Products</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">Categories</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">Inventory</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion border border-slate-200 rounded-lg overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 bg-slate-50" onclick="toggleAccordion(this)">
+                <span>Orders</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content border-t border-slate-200">
+                <div class="p-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">All Orders</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">Pending</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">Completed</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion border border-slate-200 rounded-lg overflow-hidden">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 bg-slate-50" onclick="toggleAccordion(this)">
+                <span>Customers</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content border-t border-slate-200">
+                <div class="p-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">All Customers</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded">Segments</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Style 4: With Badges -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 4: With Badges</h2>
+        </div>
+        <nav class="p-4">
+          <div class="space-y-1">
+            <div class="accordion">
+              <button class="accordion-trigger open w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-2">
+                  Inbox
+                  <span class="px-2 py-0.5 bg-red-100 text-red-700 text-xs font-medium rounded-full">12</span>
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content open">
+                <div class="pl-4 pb-2 space-y-1">
+                  <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">
+                    <span>Primary</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded-full">8</span>
+                  </a>
+                  <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">
+                    <span>Social</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded-full">3</span>
+                  </a>
+                  <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">
+                    <span>Promotions</span>
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded-full">1</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span>Sent</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-4 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">All Sent</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Scheduled</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-slate-900 hover:bg-slate-50 rounded-lg" onclick="toggleAccordion(this)">
+                <span>Drafts</span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-4 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">All Drafts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Style 5: Plus/Minus Icon -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 5: Plus/Minus Toggle</h2>
+        </div>
+        <nav class="divide-y divide-slate-200">
+          <div class="accordion">
+            <button class="accordion-trigger open w-full flex items-center justify-between px-6 py-4 text-left font-medium text-slate-900 hover:bg-slate-50" onclick="toggleAccordion(this)">
+              <span>Men's Clothing</span>
+              <span class="accordion-icon">
+                <svg class="w-5 h-5 text-slate-400 hidden open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                </svg>
+                <svg class="w-5 h-5 text-slate-400 closed-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-content open">
+              <div class="px-6 pb-4 space-y-2">
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">T-Shirts</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Shirts</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Pants</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Jackets</a>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left font-medium text-slate-900 hover:bg-slate-50" onclick="toggleAccordion(this)">
+              <span>Women's Clothing</span>
+              <span class="accordion-icon">
+                <svg class="w-5 h-5 text-slate-400 hidden open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                </svg>
+                <svg class="w-5 h-5 text-slate-400 closed-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-content">
+              <div class="px-6 pb-4 space-y-2">
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Dresses</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Tops</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Skirts</a>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <button class="accordion-trigger w-full flex items-center justify-between px-6 py-4 text-left font-medium text-slate-900 hover:bg-slate-50" onclick="toggleAccordion(this)">
+              <span>Accessories</span>
+              <span class="accordion-icon">
+                <svg class="w-5 h-5 text-slate-400 hidden open-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                </svg>
+                <svg class="w-5 h-5 text-slate-400 closed-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+              </span>
+            </button>
+            <div class="accordion-content">
+              <div class="px-6 pb-4 space-y-2">
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Bags</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Jewelry</a>
+                <a href="#" class="block text-sm text-slate-600 hover:text-primary-600">Watches</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Style 6: Dark Theme -->
+      <section class="bg-slate-900 rounded-xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-700 bg-slate-800">
+          <h2 class="font-semibold text-white">Style 6: Dark Theme</h2>
+        </div>
+        <nav class="p-4">
+          <div class="space-y-1">
+            <div class="accordion">
+              <button class="accordion-trigger open w-full flex items-center justify-between px-4 py-3 text-left font-medium text-white hover:bg-slate-800 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Documentation
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content open">
+                <div class="pl-12 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-primary-400 bg-primary-900/30 rounded-lg">Getting Started</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg">Tutorials</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg">API Reference</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-white hover:bg-slate-800 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Examples
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-12 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg">Basic Usage</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg">Advanced</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion">
+              <button class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left font-medium text-white hover:bg-slate-800 rounded-lg" onclick="toggleAccordion(this)">
+                <span class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Support
+                </span>
+                <svg class="accordion-arrow w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="pl-12 pb-2 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg">FAQ</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      'use strict';
+
+      window.toggleAccordion = function(trigger) {
+        const isOpen = trigger.classList.contains('open');
+        const content = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.accordion-icon');
+
+        // Toggle state
+        trigger.classList.toggle('open');
+        content.classList.toggle('open');
+
+        // Toggle plus/minus icons if present
+        if (icon) {
+          const openIcon = icon.querySelector('.open-icon');
+          const closedIcon = icon.querySelector('.closed-icon');
+          if (openIcon && closedIcon) {
+            if (trigger.classList.contains('open')) {
+              openIcon.classList.remove('hidden');
+              closedIcon.classList.add('hidden');
+            } else {
+              openIcon.classList.add('hidden');
+              closedIcon.classList.remove('hidden');
+            }
+          }
+        }
+      };
+
+      // Initialize plus/minus icons
+      document.querySelectorAll('.accordion-trigger.open').forEach(function(trigger) {
+        const icon = trigger.querySelector('.accordion-icon');
+        if (icon) {
+          const openIcon = icon.querySelector('.open-icon');
+          const closedIcon = icon.querySelector('.closed-icon');
+          if (openIcon && closedIcon) {
+            openIcon.classList.remove('hidden');
+            closedIcon.classList.add('hidden');
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

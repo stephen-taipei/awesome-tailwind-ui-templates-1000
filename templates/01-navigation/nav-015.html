@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Floating Action Navigation - FAB menus and floating navigation patterns">
+  <title>nav-015: Floating Action Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* FAB animations */
+    .fab-menu-item {
+      opacity: 0;
+      transform: scale(0) translateY(20px);
+      transition: all 0.2s ease;
+    }
+
+    .fab-menu.open .fab-menu-item {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .fab-menu.open .fab-menu-item:nth-child(1) { transition-delay: 0.05s; }
+    .fab-menu.open .fab-menu-item:nth-child(2) { transition-delay: 0.1s; }
+    .fab-menu.open .fab-menu-item:nth-child(3) { transition-delay: 0.15s; }
+    .fab-menu.open .fab-menu-item:nth-child(4) { transition-delay: 0.2s; }
+
+    /* FAB rotation */
+    .fab-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .fab-menu.open .fab-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Radial menu */
+    .radial-item {
+      position: absolute;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .radial-menu.open .radial-item {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Speed dial labels */
+    .speed-dial-label {
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.2s ease;
+    }
+
+    .fab-menu.open .speed-dial-label {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Pulse animation */
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 oklch(0.48 0.22 250 / 0.4); }
+      70% { box-shadow: 0 0 0 15px oklch(0.48 0.22 250 / 0); }
+      100% { box-shadow: 0 0 0 0 oklch(0.48 0.22 250 / 0); }
+    }
+
+    .fab-pulse {
+      animation: pulse-ring 2s ease infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-100">
+
+  <!-- ============================================
+       nav-015: Floating Action Navigation
+
+       Floating action button patterns:
+       - Mobile apps
+       - Quick actions
+       - Social sharing
+       - Creation tools
+       - Support widgets
+
+       Features:
+       - Speed dial menu
+       - Radial menu
+       - Labeled actions
+       - Back to top
+       - Multiple positions
+       ============================================ -->
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <h1 class="text-lg font-semibold text-slate-900">Floating Action Navigation</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Floating action button (FAB) navigation patterns. Check the corners of the page for interactive demos.
+      </p>
+    </div>
+
+    <!-- Demo Content -->
+    <div class="grid md:grid-cols-2 gap-8 mb-20">
+      <!-- Style 1: Speed Dial -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">Speed Dial (Bottom Right)</h3>
+        <p class="text-sm text-slate-600 mb-4">Click the + button in the bottom right corner to see the speed dial menu.</p>
+        <ul class="text-sm text-slate-500 space-y-1">
+          <li>- Vertical stack of actions</li>
+          <li>- Labels appear on open</li>
+          <li>- Staggered animation</li>
+        </ul>
+      </div>
+
+      <!-- Style 2: Horizontal FAB -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">Horizontal FAB (Bottom Left)</h3>
+        <p class="text-sm text-slate-600 mb-4">A horizontal floating action bar for quick access to common actions.</p>
+        <ul class="text-sm text-slate-500 space-y-1">
+          <li>- Multiple actions visible</li>
+          <li>- Icon-only compact design</li>
+          <li>- Great for toolbars</li>
+        </ul>
+      </div>
+
+      <!-- Style 3: Single FAB -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">Single Action FAB</h3>
+        <p class="text-sm text-slate-600 mb-4">Simple single-action floating button with pulse animation.</p>
+        <div class="flex gap-4 mt-4">
+          <button class="fab-pulse w-14 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </button>
+          <button class="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </button>
+          <button class="w-14 h-14 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-lg flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Style 4: Extended FAB -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">Extended FAB</h3>
+        <p class="text-sm text-slate-600 mb-4">FAB with icon and label for clarity.</p>
+        <div class="flex flex-wrap gap-4 mt-4">
+          <button class="inline-flex items-center gap-2 px-5 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Create
+          </button>
+          <button class="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full shadow-lg font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+            </svg>
+            Upload
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- More content for scrolling -->
+    <div class="space-y-8">
+      <div class="bg-white rounded-xl border border-slate-200 p-8">
+        <h3 class="text-xl font-semibold text-slate-900 mb-4">Scroll down to see Back to Top</h3>
+        <p class="text-slate-600">The back-to-top button appears after scrolling down the page. Look for it in the bottom right area.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl border border-slate-200 p-6 h-64"></div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6 h-64"></div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6 h-64"></div>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 p-8 h-96"></div>
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- FAB Speed Dial (Bottom Right) -->
+  <div id="fab-speed-dial" class="fab-menu fixed bottom-6 right-6 z-50">
+    <div class="flex flex-col-reverse items-center gap-3">
+      <!-- Menu Items -->
+      <div class="fab-menu-item flex items-center gap-3">
+        <span class="speed-dial-label px-3 py-1 bg-slate-900 text-white text-sm rounded-lg shadow whitespace-nowrap">New Document</span>
+        <button class="w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="fab-menu-item flex items-center gap-3">
+        <span class="speed-dial-label px-3 py-1 bg-slate-900 text-white text-sm rounded-lg shadow whitespace-nowrap">Upload File</span>
+        <button class="w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+          </svg>
+        </button>
+      </div>
+      <div class="fab-menu-item flex items-center gap-3">
+        <span class="speed-dial-label px-3 py-1 bg-slate-900 text-white text-sm rounded-lg shadow whitespace-nowrap">New Folder</span>
+        <button class="w-12 h-12 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full shadow-lg flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main FAB -->
+      <button id="fab-trigger" class="w-14 h-14 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-xl flex items-center justify-center">
+        <svg class="fab-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Horizontal FAB (Bottom Left) -->
+  <div class="fixed bottom-6 left-6 z-50">
+    <div class="flex items-center gap-2 p-2 bg-white rounded-full shadow-xl border border-slate-200">
+      <button class="w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </button>
+      <button class="w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+      <button class="w-10 h-10 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      </button>
+      <button class="w-10 h-10 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top fixed bottom-24 right-6 z-40 w-12 h-12 bg-slate-900 hover:bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // Speed Dial Toggle
+      const fabMenu = document.getElementById('fab-speed-dial');
+      const fabTrigger = document.getElementById('fab-trigger');
+
+      if (fabTrigger && fabMenu) {
+        fabTrigger.addEventListener('click', function() {
+          fabMenu.classList.toggle('open');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!fabMenu.contains(e.target)) {
+            fabMenu.classList.remove('open');
+          }
+        });
+      }
+
+      // Back to Top
+      const backToTop = document.getElementById('back-to-top');
+
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        });
+
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

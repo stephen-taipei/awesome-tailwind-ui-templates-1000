@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dropdown Menu Navigation - Various dropdown menu patterns and styles">
+  <title>nav-013: Dropdown Menu Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Dropdown animations */
+    .dropdown-menu {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.2s ease;
+    }
+
+    .dropdown-menu.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Hover trigger */
+    .dropdown-hover:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Scale animation */
+    .dropdown-scale {
+      transform: scale(0.95);
+      transform-origin: top right;
+    }
+
+    .dropdown-scale.open {
+      transform: scale(1);
+    }
+
+    /* Menu item hover */
+    .menu-item {
+      transition: all 0.15s ease;
+    }
+
+    .menu-item:hover {
+      padding-left: 1rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-013: Dropdown Menu Navigation
+
+       Various dropdown menu patterns:
+       - User account menus
+       - Settings dropdowns
+       - Action menus
+       - Context menus
+       - Multi-level dropdowns
+
+       Features:
+       - Click and hover triggers
+       - Multiple animation styles
+       - Icon support
+       - Keyboard navigation
+       - Grouped items with dividers
+       ============================================ -->
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="text-xl font-bold text-slate-900">DropdownUI</a>
+
+        <!-- Example Dropdowns in Header -->
+        <div class="flex items-center gap-4">
+          <!-- Simple Dropdown -->
+          <div class="dropdown-container relative">
+            <button id="demo-dropdown-btn" class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-lg">
+              Menu
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div id="demo-dropdown" class="dropdown-menu absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+              <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Option 1</a>
+              <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Option 2</a>
+              <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Option 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Dropdown Menu Navigation</h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        A collection of dropdown menu patterns for various use cases.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Style 1: Basic Dropdown -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">Basic Dropdown</h3>
+        <div class="dropdown-container relative inline-block">
+          <button class="dropdown-trigger flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-700">
+            Options
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Edit</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Duplicate</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Archive</a>
+            <hr class="my-1 border-slate-200">
+            <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Delete</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style 2: With Icons -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">With Icons</h3>
+        <div class="dropdown-container relative inline-block">
+          <button class="dropdown-trigger flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg text-sm font-medium text-white">
+            Actions
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+              </svg>
+              Edit
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              Duplicate
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+              </svg>
+              Archive
+            </a>
+            <hr class="my-1 border-slate-200">
+            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+              Delete
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style 3: User Menu -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">User Menu</h3>
+        <div class="dropdown-container relative inline-block">
+          <button class="dropdown-trigger flex items-center gap-3 p-2 hover:bg-slate-100 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="User" class="w-8 h-8 rounded-full">
+            <div class="text-left">
+              <p class="text-sm font-medium text-slate-900">John Doe</p>
+              <p class="text-xs text-slate-500">john@example.com</p>
+            </div>
+            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu dropdown-scale absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden z-50">
+            <div class="px-4 py-3 border-b border-slate-200">
+              <p class="text-sm font-medium text-slate-900">Signed in as</p>
+              <p class="text-sm text-slate-500 truncate">john@example.com</p>
+            </div>
+            <div class="py-1">
+              <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Help Center</a>
+            </div>
+            <div class="border-t border-slate-200 py-1">
+              <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style 4: With Descriptions -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">With Descriptions</h3>
+        <div class="dropdown-container relative inline-block">
+          <button class="dropdown-trigger flex items-center gap-2 px-4 py-2 border border-slate-300 hover:border-slate-400 rounded-lg text-sm font-medium text-slate-700">
+            Create New
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-lg border border-slate-200 py-2 z-50">
+            <a href="#" class="block px-4 py-3 hover:bg-slate-50">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-slate-900">New Document</p>
+                  <p class="text-xs text-slate-500">Create a blank document</p>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="block px-4 py-3 hover:bg-slate-50">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-slate-900">New Folder</p>
+                  <p class="text-xs text-slate-500">Organize your files</p>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="block px-4 py-3 hover:bg-slate-50">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-slate-900">Upload File</p>
+                  <p class="text-xs text-slate-500">Import from your device</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style 5: Hover Trigger -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">Hover Trigger</h3>
+        <div class="dropdown-hover relative inline-block">
+          <button class="flex items-center gap-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 rounded-lg text-sm font-medium text-white">
+            Hover Me
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Dashboard</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Analytics</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Reports</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Settings</a>
+          </div>
+        </div>
+        <p class="mt-2 text-xs text-slate-500">No click required</p>
+      </div>
+
+      <!-- Style 6: With Keyboard Shortcuts -->
+      <div class="bg-white rounded-xl border border-slate-200 p-6">
+        <h3 class="font-semibold text-slate-900 mb-4">With Shortcuts</h3>
+        <div class="dropdown-container relative inline-block">
+          <button class="dropdown-trigger flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-700">
+            Edit
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-50">
+            <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <span>Undo</span>
+              <kbd class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">Ctrl+Z</kbd>
+            </a>
+            <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <span>Redo</span>
+              <kbd class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">Ctrl+Y</kbd>
+            </a>
+            <hr class="my-1 border-slate-200">
+            <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <span>Cut</span>
+              <kbd class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">Ctrl+X</kbd>
+            </a>
+            <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <span>Copy</span>
+              <kbd class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">Ctrl+C</kbd>
+            </a>
+            <a href="#" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+              <span>Paste</span>
+              <kbd class="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded">Ctrl+V</kbd>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // Click-triggered dropdowns
+      document.querySelectorAll('.dropdown-container').forEach(function(container) {
+        const trigger = container.querySelector('.dropdown-trigger');
+        const menu = container.querySelector('.dropdown-menu');
+
+        if (trigger && menu) {
+          trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('open');
+          });
+        }
+      });
+
+      // Demo dropdown in header
+      const demoBtn = document.getElementById('demo-dropdown-btn');
+      const demoMenu = document.getElementById('demo-dropdown');
+      if (demoBtn && demoMenu) {
+        demoBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          demoMenu.classList.toggle('open');
+        });
+      }
+
+      // Close all dropdowns when clicking outside
+      document.addEventListener('click', function() {
+        document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+          menu.classList.remove('open');
+        });
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+            menu.classList.remove('open');
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

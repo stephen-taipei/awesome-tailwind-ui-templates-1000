@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Split Navigation - Header with centered logo and split navigation links">
+  <title>nav-014: Split Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: oklch(0.48 0.22 250);
+      transition: all 0.2s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 400px;
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 1.25rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: all 0.2s ease;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-active .hamburger-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-014: Split Navigation
+
+       Header with centered logo and split links:
+       - Fashion/lifestyle brands
+       - Portfolio websites
+       - Magazine sites
+       - Creative agencies
+       - Restaurant websites
+
+       Features:
+       - Centered logo
+       - Left/right navigation split
+       - Multiple layout variations
+       - Responsive mobile menu
+       ============================================ -->
+
+  <!-- Style 1: Classic Split -->
+  <header class="bg-white border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Left Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Home</a>
+          <a href="#" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">About</a>
+          <a href="#" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Services</a>
+        </div>
+
+        <!-- Centered Logo -->
+        <a href="#" class="flex-shrink-0">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">S</span>
+            </div>
+            <span class="text-xl font-bold text-slate-900">SplitNav</span>
+          </div>
+        </a>
+
+        <!-- Right Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Portfolio</a>
+          <a href="#" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Blog</a>
+          <a href="#" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button type="button" id="mobile-menu-btn-1" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
+          <span class="flex flex-col gap-1">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu-1" class="mobile-menu lg:hidden">
+        <div class="py-4 space-y-2">
+          <a href="#" class="block px-4 py-2 text-slate-700 hover:bg-slate-50 rounded-lg">Home</a>
+          <a href="#" class="block px-4 py-2 text-slate-700 hover:bg-slate-50 rounded-lg">About</a>
+          <a href="#" class="block px-4 py-2 text-slate-700 hover:bg-slate-50 rounded-lg">Services</a>
+          <a href="#" class="block px-4 py-2 text-slate-700 hover:bg-slate-50 rounded-lg">Portfolio</a>
+          <a href="#" class="block px-4 py-2 text-slate-700 hover:bg-slate-50 rounded-lg">Blog</a>
+          <a href="#" class="block px-4 py-2 text-slate-700 hover:bg-slate-50 rounded-lg">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Split Navigation</h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+        Header with centered logo and navigation links split on both sides. Perfect for brand-focused websites.
+      </p>
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="px-3 py-1 bg-primary-50 text-primary-700 border border-primary-200 rounded-full text-sm font-medium">Centered Logo</span>
+        <span class="px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full text-sm font-medium">Split Links</span>
+        <span class="px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-full text-sm font-medium">Brand Focus</span>
+      </div>
+    </div>
+
+    <!-- Additional Split Nav Variations -->
+    <div class="space-y-8">
+
+      <!-- Style 2: With CTA Buttons -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 2: With CTA Buttons</h2>
+        </div>
+        <div class="p-6">
+          <nav class="flex items-center justify-between">
+            <div class="flex items-center gap-6">
+              <a href="#" class="text-sm font-medium text-slate-600 hover:text-slate-900">Products</a>
+              <a href="#" class="text-sm font-medium text-slate-600 hover:text-slate-900">Solutions</a>
+            </div>
+            <a href="#" class="text-xl font-bold text-slate-900">BrandName</a>
+            <div class="flex items-center gap-4">
+              <a href="#" class="text-sm font-medium text-slate-600 hover:text-slate-900">Sign in</a>
+              <a href="#" class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg">Get Started</a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 3: Minimal Split -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 3: Minimal Split</h2>
+        </div>
+        <div class="p-6">
+          <nav class="flex items-center justify-between">
+            <div class="flex items-center gap-8">
+              <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Work</a>
+              <a href="#" class="text-sm text-slate-500 hover:text-slate-900">About</a>
+            </div>
+            <a href="#" class="text-2xl font-light tracking-widest text-slate-900">STUDIO</a>
+            <div class="flex items-center gap-8">
+              <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Journal</a>
+              <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Contact</a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 4: With Icons -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 4: With Social Icons</h2>
+        </div>
+        <div class="p-6">
+          <nav class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <a href="#" class="p-2 text-slate-500 hover:text-slate-900">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+              </a>
+              <a href="#" class="p-2 text-slate-500 hover:text-slate-900">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+            <a href="#" class="text-xl font-bold text-slate-900">LIFESTYLE</a>
+            <div class="flex items-center gap-4">
+              <a href="#" class="p-2 text-slate-500 hover:text-slate-900">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </a>
+              <a href="#" class="p-2 text-slate-500 hover:text-slate-900">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 5: Dark Theme -->
+      <section class="bg-slate-900 rounded-xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-700 bg-slate-800">
+          <h2 class="font-semibold text-white">Style 5: Dark Theme</h2>
+        </div>
+        <div class="p-6">
+          <nav class="flex items-center justify-between">
+            <div class="flex items-center gap-6">
+              <a href="#" class="text-sm font-medium text-slate-400 hover:text-white">Menu</a>
+              <a href="#" class="text-sm font-medium text-slate-400 hover:text-white">Reserve</a>
+            </div>
+            <a href="#" class="text-2xl font-serif text-white">La Maison</a>
+            <div class="flex items-center gap-6">
+              <a href="#" class="text-sm font-medium text-slate-400 hover:text-white">About</a>
+              <a href="#" class="text-sm font-medium text-slate-400 hover:text-white">Contact</a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      'use strict';
+
+      const menuBtn = document.getElementById('mobile-menu-btn-1');
+      const mobileMenu = document.getElementById('mobile-menu-1');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          menuBtn.querySelector('span').classList.toggle('hamburger-active');
+          mobileMenu.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

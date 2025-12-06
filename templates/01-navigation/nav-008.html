@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Breadcrumb Navigation - Various breadcrumb styles for hierarchical navigation">
+  <title>nav-008: Breadcrumb Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Breadcrumb link hover effect */
+    .breadcrumb-link {
+      transition: all 0.2s ease;
+    }
+
+    .breadcrumb-link:hover {
+      color: oklch(0.48 0.22 250); /* primary-600 */
+    }
+
+    /* Breadcrumb with background hover */
+    .breadcrumb-pill:hover {
+      background-color: rgb(241 245 249); /* slate-100 */
+    }
+
+    /* Dropdown styles */
+    .breadcrumb-dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4px);
+      transition: all 0.2s ease;
+    }
+
+    .breadcrumb-dropdown.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Chevron separator animation */
+    .separator-animated {
+      transition: transform 0.2s ease;
+    }
+
+    .breadcrumb-link:hover + .separator-animated {
+      transform: translateX(2px);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-008: Breadcrumb Navigation
+
+       Various breadcrumb navigation styles for:
+       - E-commerce product pages
+       - Documentation sites
+       - File management systems
+       - Multi-level content sites
+       - Admin dashboards
+
+       Features:
+       - Multiple visual styles
+       - Responsive truncation
+       - Dropdown for collapsed items
+       - Icon support
+       - Accessible markup with schema.org
+       ============================================ -->
+
+  <!-- Simple Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 text-xl font-bold text-slate-900">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <span>BreadcrumbUI</span>
+        </a>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-sm text-slate-600 hover:text-slate-900">Docs</a>
+          <a href="#" class="text-sm text-slate-600 hover:text-slate-900">Support</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Page Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Breadcrumb Navigation
+      </h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        A collection of breadcrumb navigation styles for hierarchical content navigation.
+        Essential for helping users understand their location within a website.
+      </p>
+    </div>
+
+    <!-- Breadcrumb Examples -->
+    <div class="space-y-12">
+
+      <!-- Style 1: Simple with Slash -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 1: Simple with Slash</h2>
+          <p class="text-sm text-slate-500 mt-1">Minimal design with slash separators</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-1 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600" itemprop="item">
+                  <span itemprop="name">Home</span>
+                </a>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li class="text-slate-400 mx-1">/</li>
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600" itemprop="item">
+                  <span itemprop="name">Products</span>
+                </a>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li class="text-slate-400 mx-1">/</li>
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600" itemprop="item">
+                  <span itemprop="name">Electronics</span>
+                </a>
+                <meta itemprop="position" content="3" />
+              </li>
+              <li class="text-slate-400 mx-1">/</li>
+              <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span class="font-medium text-slate-900" itemprop="name">Smartphones</span>
+                <meta itemprop="position" content="4" />
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 2: Chevron Separators -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 2: Chevron Separators</h2>
+          <p class="text-sm text-slate-500 mt-1">Modern look with chevron icons</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Home
+                </a>
+                <svg class="separator-animated w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Dashboard
+                </a>
+                <svg class="separator-animated w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Settings
+                </a>
+                <svg class="separator-animated w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="font-medium text-slate-900">Notifications</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 3: With Home Icon -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 3: With Home Icon</h2>
+          <p class="text-sm text-slate-500 mt-1">Home represented by icon for cleaner look</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-400 hover:text-primary-600" aria-label="Home">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Projects
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Website Redesign
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="font-medium text-slate-900">Tasks</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 4: Pill Style -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 4: Pill Style</h2>
+          <p class="text-sm text-slate-500 mt-1">Each item styled as a clickable pill</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li>
+                <a href="#" class="breadcrumb-pill inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <a href="#" class="breadcrumb-pill inline-flex items-center px-3 py-1.5 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full transition-colors">
+                  Library
+                </a>
+              </li>
+              <li>
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <a href="#" class="breadcrumb-pill inline-flex items-center px-3 py-1.5 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-full transition-colors">
+                  Components
+                </a>
+              </li>
+              <li>
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="inline-flex items-center px-3 py-1.5 bg-primary-100 text-primary-700 font-medium rounded-full">
+                  Buttons
+                </span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 5: With Dropdown for Collapsed Items -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 5: Collapsed with Dropdown</h2>
+          <p class="text-sm text-slate-500 mt-1">Middle items collapsed into a dropdown menu</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Home
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center relative">
+                <button
+                  type="button"
+                  id="breadcrumb-dropdown-btn"
+                  class="inline-flex items-center justify-center w-8 h-8 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <circle cx="6" cy="12" r="1.5" />
+                    <circle cx="12" cy="12" r="1.5" />
+                    <circle cx="18" cy="12" r="1.5" />
+                  </svg>
+                </button>
+                <!-- Dropdown -->
+                <div
+                  id="breadcrumb-dropdown"
+                  class="breadcrumb-dropdown absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 py-1 z-10"
+                >
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    Documents
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    Projects
+                  </a>
+                  <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900">
+                    2024
+                  </a>
+                </div>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Q4 Reports
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="font-medium text-slate-900">Annual Summary.pdf</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 6: Contained Background -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 6: Contained Background</h2>
+          <p class="text-sm text-slate-500 mt-1">Full breadcrumb in a contained box</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb" class="inline-flex items-center px-4 py-2 bg-slate-100 rounded-lg">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Store
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Clothing
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="font-medium text-slate-700">Women's Jackets</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 7: With Category Icons -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 7: With Category Icons</h2>
+          <p class="text-sm text-slate-500 mt-1">Each level has its own icon</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link flex items-center gap-1.5 text-slate-500 hover:text-primary-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  <span>Home</span>
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link flex items-center gap-1.5 text-slate-500 hover:text-primary-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                  <span>Categories</span>
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link flex items-center gap-1.5 text-slate-500 hover:text-primary-600">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span>Electronics</span>
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center gap-1.5 font-medium text-slate-900">
+                <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>Laptops</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 8: Arrow Style (Connected) -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 8: Arrow Style (Connected)</h2>
+          <p class="text-sm text-slate-500 mt-1">Connected arrows forming a path</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center text-sm">
+              <li>
+                <a href="#" class="relative inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  Home
+                  <!-- Arrow point -->
+                  <span class="absolute -right-2 top-0 bottom-0 w-4 overflow-hidden">
+                    <span class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-slate-100 rotate-45 border-r border-t border-slate-200"></span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="relative inline-flex items-center pl-6 pr-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors ml-1">
+                  Products
+                  <span class="absolute -right-2 top-0 bottom-0 w-4 overflow-hidden">
+                    <span class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-slate-100 rotate-45 border-r border-t border-slate-200"></span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="relative inline-flex items-center pl-6 pr-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors ml-1">
+                  Clothing
+                  <span class="absolute -right-2 top-0 bottom-0 w-4 overflow-hidden">
+                    <span class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-slate-100 rotate-45 border-r border-t border-slate-200"></span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <span class="relative inline-flex items-center pl-6 pr-4 py-2 bg-primary-100 text-primary-700 font-medium ml-1">
+                  Shirts
+                </span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Style 9: Mobile Responsive (Truncated) -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 9: Mobile Responsive (Truncated)</h2>
+          <p class="text-sm text-slate-500 mt-1">Shows only first and last on small screens</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Home
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <!-- Hidden on mobile -->
+              <li class="hidden sm:flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Documentation
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="hidden sm:flex items-center">
+                <a href="#" class="breadcrumb-link text-slate-500 hover:text-primary-600">
+                  Components
+                </a>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <!-- Ellipsis on mobile -->
+              <li class="sm:hidden flex items-center">
+                <span class="text-slate-400">...</span>
+                <svg class="w-4 h-4 text-slate-400 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="font-medium text-slate-900">Breadcrumbs</span>
+              </li>
+            </ol>
+          </nav>
+          <p class="mt-4 text-xs text-slate-500">
+            <span class="sm:hidden">Viewing mobile version (truncated)</span>
+            <span class="hidden sm:inline">Viewing full version - resize to see mobile truncation</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Style 10: Dark Theme -->
+      <section class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-700 bg-slate-800">
+          <h2 class="font-semibold text-white">Style 10: Dark Theme</h2>
+          <p class="text-sm text-slate-400 mt-1">For dark mode interfaces</p>
+        </div>
+        <div class="p-6">
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center flex-wrap gap-2 text-sm">
+              <li class="flex items-center">
+                <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </a>
+                <svg class="w-4 h-4 text-slate-600 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                  Dashboard
+                </a>
+                <svg class="w-4 h-4 text-slate-600 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li class="flex items-center">
+                <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                  Analytics
+                </a>
+                <svg class="w-4 h-4 text-slate-600 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </li>
+              <li>
+                <span class="font-medium text-white">Overview</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Feature Summary -->
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">10 Styles</h3>
+        <p class="text-sm text-slate-600">Various visual styles to match any design system</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Responsive</h3>
+        <p class="text-sm text-slate-600">Smart truncation for smaller screens</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Schema.org</h3>
+        <p class="text-sm text-slate-600">SEO-friendly structured data markup</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+        <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-2">Accessible</h3>
+        <p class="text-sm text-slate-600">Proper ARIA labels and navigation roles</p>
+      </div>
+    </div>
+
+    <!-- Breakpoint Indicator -->
+    <div class="mt-12 flex justify-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 border border-slate-200 rounded-full text-sm text-slate-600">
+        <span class="font-medium">Current breakpoint:</span>
+        <span class="sm:hidden font-bold text-primary-600">xs (&lt; 640px)</span>
+        <span class="hidden sm:inline md:hidden font-bold text-primary-600">sm (640px+)</span>
+        <span class="hidden md:inline lg:hidden font-bold text-primary-600">md (768px+)</span>
+        <span class="hidden lg:inline xl:hidden font-bold text-primary-600">lg (1024px+)</span>
+        <span class="hidden xl:inline 2xl:hidden font-bold text-primary-600">xl (1280px+)</span>
+        <span class="hidden 2xl:inline font-bold text-primary-600">2xl (1536px+)</span>
+      </div>
+    </div>
+
+    <!-- Back to Templates Link -->
+    <div class="mt-12">
+      <a
+        href="../../index.html"
+        class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    (function() {
+      'use strict';
+
+      // Dropdown toggle for Style 5
+      const dropdownBtn = document.getElementById('breadcrumb-dropdown-btn');
+      const dropdown = document.getElementById('breadcrumb-dropdown');
+
+      if (dropdownBtn && dropdown) {
+        dropdownBtn.addEventListener('click', function() {
+          const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
+          dropdownBtn.setAttribute('aria-expanded', !isExpanded);
+          dropdown.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!dropdownBtn.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+            dropdown.classList.remove('open');
+          }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+            dropdown.classList.remove('open');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

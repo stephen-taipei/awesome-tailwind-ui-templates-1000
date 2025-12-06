@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shopping Cart Navigation - E-commerce cart dropdowns and mini carts">
+  <title>nav-022: Shopping Cart Navigation | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: oklch(0.97 0.02 250);
+      --color-primary-100: oklch(0.93 0.04 250);
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-primary-700: oklch(0.42 0.20 250);
+    }
+  </style>
+
+  <style>
+    /* Cart dropdown animation */
+    .cart-dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s ease;
+    }
+
+    .cart-dropdown.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Cart slide panel */
+    .cart-panel {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .cart-panel.open {
+      transform: translateX(0);
+    }
+
+    .cart-overlay {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Quantity input */
+    .qty-input::-webkit-outer-spin-button,
+    .qty-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .qty-input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    /* Badge bounce */
+    .cart-badge {
+      animation: bounce 0.3s ease;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50">
+
+  <!-- ============================================
+       nav-022: Shopping Cart Navigation
+
+       E-commerce cart patterns:
+       - Online stores
+       - Marketplace platforms
+       - Food delivery apps
+       - Subscription services
+       - Digital product stores
+
+       Features:
+       - Mini cart dropdowns
+       - Slide-out cart panels
+       - Quantity controls
+       - Price summaries
+       - Checkout CTAs
+       ============================================ -->
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <h1 class="text-lg font-semibold text-slate-900">Shopping Cart Navigation</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl font-bold text-slate-900 mb-4">Shopping Cart Navigation</h1>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        E-commerce cart dropdowns, mini carts, and slide-out panels.
+      </p>
+    </div>
+
+    <div class="space-y-12">
+
+      <!-- Style 1: Mini Cart Dropdown -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 1: Mini Cart Dropdown</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-end">
+            <div class="relative" id="cart-1">
+              <button type="button" class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" onclick="toggleCart('dropdown-1')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="cart-badge absolute -top-1 -right-1 w-5 h-5 bg-primary-600 text-white text-xs rounded-full flex items-center justify-center font-medium">3</span>
+              </button>
+              <div id="dropdown-1" class="cart-dropdown absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-slate-200 z-50">
+                <div class="px-4 py-3 border-b border-slate-200">
+                  <h3 class="font-semibold text-slate-900">Shopping Cart (3)</h3>
+                </div>
+                <div class="max-h-72 overflow-y-auto p-4 space-y-4">
+                  <div class="flex gap-3">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=64&h=64&fit=crop" alt="Product" class="w-16 h-16 rounded-lg object-cover">
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-sm font-medium text-slate-900 truncate">Smart Watch Pro</h4>
+                      <p class="text-xs text-slate-500">Black / 42mm</p>
+                      <div class="flex items-center justify-between mt-1">
+                        <span class="text-sm font-semibold text-slate-900">$299.00</span>
+                        <span class="text-xs text-slate-500">Qty: 1</span>
+                      </div>
+                    </div>
+                    <button class="text-slate-400 hover:text-red-500">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex gap-3">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=64&h=64&fit=crop" alt="Product" class="w-16 h-16 rounded-lg object-cover">
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-sm font-medium text-slate-900 truncate">Wireless Earbuds</h4>
+                      <p class="text-xs text-slate-500">White</p>
+                      <div class="flex items-center justify-between mt-1">
+                        <span class="text-sm font-semibold text-slate-900">$149.00</span>
+                        <span class="text-xs text-slate-500">Qty: 2</span>
+                      </div>
+                    </div>
+                    <button class="text-slate-400 hover:text-red-500">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4 border-t border-slate-200 bg-slate-50">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm text-slate-600">Subtotal</span>
+                    <span class="text-lg font-semibold text-slate-900">$597.00</span>
+                  </div>
+                  <div class="space-y-2">
+                    <a href="#" class="block w-full py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium text-center rounded-lg transition-colors">Checkout</a>
+                    <a href="#" class="block w-full py-2 text-slate-600 hover:text-slate-900 text-sm font-medium text-center transition-colors">View Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Style 2: With Quantity Controls -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 2: With Quantity Controls</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-end">
+            <div class="relative" id="cart-2">
+              <button type="button" class="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors" onclick="toggleCart('dropdown-2')">
+                <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span class="text-sm font-medium text-slate-700">Cart</span>
+                <span class="px-2 py-0.5 bg-primary-600 text-white text-xs rounded-full">2</span>
+              </button>
+              <div id="dropdown-2" class="cart-dropdown absolute right-0 mt-2 w-96 bg-white rounded-xl shadow-lg border border-slate-200 z-50">
+                <div class="px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+                  <h3 class="font-semibold text-slate-900">Your Cart</h3>
+                  <button class="text-xs text-red-500 hover:text-red-600">Clear All</button>
+                </div>
+                <div class="max-h-80 overflow-y-auto">
+                  <div class="p-4 border-b border-slate-100">
+                    <div class="flex gap-4">
+                      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop" alt="Product" class="w-20 h-20 rounded-lg object-cover">
+                      <div class="flex-1">
+                        <div class="flex justify-between">
+                          <h4 class="text-sm font-medium text-slate-900">Premium Headphones</h4>
+                          <button class="text-slate-400 hover:text-red-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </button>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-0.5">Matte Black</p>
+                        <div class="flex items-center justify-between mt-2">
+                          <div class="flex items-center border border-slate-200 rounded-lg">
+                            <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">
+                              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                              </svg>
+                            </button>
+                            <input type="number" value="1" class="qty-input w-10 h-8 text-center text-sm border-x border-slate-200 focus:outline-none">
+                            <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">
+                              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                              </svg>
+                            </button>
+                          </div>
+                          <span class="text-sm font-semibold text-slate-900">$199.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <div class="flex gap-4">
+                      <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=80&h=80&fit=crop" alt="Product" class="w-20 h-20 rounded-lg object-cover">
+                      <div class="flex-1">
+                        <div class="flex justify-between">
+                          <h4 class="text-sm font-medium text-slate-900">Phone Case</h4>
+                          <button class="text-slate-400 hover:text-red-500">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </button>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-0.5">Clear</p>
+                        <div class="flex items-center justify-between mt-2">
+                          <div class="flex items-center border border-slate-200 rounded-lg">
+                            <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">
+                              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                              </svg>
+                            </button>
+                            <input type="number" value="2" class="qty-input w-10 h-8 text-center text-sm border-x border-slate-200 focus:outline-none">
+                            <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">
+                              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                              </svg>
+                            </button>
+                          </div>
+                          <span class="text-sm font-semibold text-slate-900">$58.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 border-t border-slate-200 bg-slate-50">
+                  <div class="space-y-2 mb-4">
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-500">Subtotal</span>
+                      <span class="text-slate-900">$257.00</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                      <span class="text-slate-500">Shipping</span>
+                      <span class="text-green-600">Free</span>
+                    </div>
+                    <div class="flex justify-between text-base font-semibold pt-2 border-t border-slate-200">
+                      <span class="text-slate-900">Total</span>
+                      <span class="text-slate-900">$257.00</span>
+                    </div>
+                  </div>
+                  <a href="#" class="block w-full py-2.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium text-center rounded-lg transition-colors">Proceed to Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Style 3: Icon with Amount -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 3: Icon with Amount</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-end">
+            <div class="relative" id="cart-3">
+              <button type="button" class="flex items-center gap-3 px-4 py-2 border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 rounded-xl transition-colors" onclick="toggleCart('dropdown-3')">
+                <div class="relative">
+                  <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                  <span class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">2</span>
+                </div>
+                <div class="text-left">
+                  <p class="text-xs text-slate-500">Cart</p>
+                  <p class="text-sm font-semibold text-slate-900">$257.00</p>
+                </div>
+              </button>
+              <div id="dropdown-3" class="cart-dropdown absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-lg border border-slate-200 z-50">
+                <div class="p-4 space-y-3">
+                  <div class="flex gap-3 items-center">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=48&h=48&fit=crop" alt="Product" class="w-12 h-12 rounded-lg object-cover">
+                    <div class="flex-1">
+                      <h4 class="text-sm font-medium text-slate-900">Premium Headphones</h4>
+                      <p class="text-xs text-slate-500">1 x $199.00</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-center">
+                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=48&h=48&fit=crop" alt="Product" class="w-12 h-12 rounded-lg object-cover">
+                    <div class="flex-1">
+                      <h4 class="text-sm font-medium text-slate-900">Phone Case</h4>
+                      <p class="text-xs text-slate-500">2 x $29.00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 border-t border-slate-200 flex gap-2">
+                  <a href="#" class="flex-1 py-2 text-slate-600 hover:text-slate-900 text-sm font-medium text-center border border-slate-200 rounded-lg transition-colors">View Cart</a>
+                  <a href="#" class="flex-1 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium text-center rounded-lg transition-colors">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Style 4: Empty Cart State -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 4: Empty Cart State</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-end">
+            <div class="relative" id="cart-4">
+              <button type="button" class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" onclick="toggleCart('dropdown-4')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </button>
+              <div id="dropdown-4" class="cart-dropdown absolute right-0 mt-2 w-72 bg-white rounded-xl shadow-lg border border-slate-200 z-50">
+                <div class="p-8 text-center">
+                  <div class="w-16 h-16 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-medium text-slate-900 mb-1">Your cart is empty</h3>
+                  <p class="text-sm text-slate-500 mb-4">Looks like you haven't added anything to your cart yet.</p>
+                  <a href="#" class="inline-block px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors">Start Shopping</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Style 5: Slide-out Cart Panel Button -->
+      <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200 bg-slate-50">
+          <h2 class="font-semibold text-slate-900">Style 5: Slide-out Panel</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-end">
+            <button type="button" class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" onclick="openCartPanel()">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span class="absolute -top-1 -right-1 w-5 h-5 bg-primary-600 text-white text-xs rounded-full flex items-center justify-center font-medium">3</span>
+            </button>
+          </div>
+          <p class="text-center text-sm text-slate-500 mt-4">Click the cart icon to open slide-out panel</p>
+        </div>
+      </section>
+
+      <!-- Style 6: Dark Theme -->
+      <section class="bg-slate-900 rounded-xl overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-700 bg-slate-800">
+          <h2 class="font-semibold text-white">Style 6: Dark Theme</h2>
+        </div>
+        <div class="p-8">
+          <div class="flex justify-end">
+            <div class="relative" id="cart-6">
+              <button type="button" class="relative p-2 text-slate-400 hover:bg-slate-800 rounded-lg transition-colors" onclick="toggleCart('dropdown-6')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="absolute -top-1 -right-1 w-5 h-5 bg-primary-500 text-white text-xs rounded-full flex items-center justify-center font-medium">2</span>
+              </button>
+              <div id="dropdown-6" class="cart-dropdown absolute right-0 mt-2 w-80 bg-slate-800 rounded-xl shadow-lg border border-slate-700 z-50">
+                <div class="px-4 py-3 border-b border-slate-700">
+                  <h3 class="font-semibold text-white">Shopping Cart</h3>
+                </div>
+                <div class="max-h-72 overflow-y-auto p-4 space-y-4">
+                  <div class="flex gap-3">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=64&h=64&fit=crop" alt="Product" class="w-16 h-16 rounded-lg object-cover">
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-sm font-medium text-white truncate">Smart Watch Pro</h4>
+                      <p class="text-xs text-slate-400">Black / 42mm</p>
+                      <div class="flex items-center justify-between mt-1">
+                        <span class="text-sm font-semibold text-white">$299.00</span>
+                        <span class="text-xs text-slate-400">Qty: 1</span>
+                      </div>
+                    </div>
+                    <button class="text-slate-500 hover:text-red-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex gap-3">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=64&h=64&fit=crop" alt="Product" class="w-16 h-16 rounded-lg object-cover">
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-sm font-medium text-white truncate">Wireless Earbuds</h4>
+                      <p class="text-xs text-slate-400">White</p>
+                      <div class="flex items-center justify-between mt-1">
+                        <span class="text-sm font-semibold text-white">$149.00</span>
+                        <span class="text-xs text-slate-400">Qty: 1</span>
+                      </div>
+                    </div>
+                    <button class="text-slate-500 hover:text-red-400">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="p-4 border-t border-slate-700 bg-slate-900/50">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm text-slate-400">Subtotal</span>
+                    <span class="text-lg font-semibold text-white">$448.00</span>
+                  </div>
+                  <a href="#" class="block w-full py-2.5 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium text-center rounded-lg transition-colors">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Back to Templates -->
+    <div class="mt-12">
+      <a href="../../index.html" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to all templates
+      </a>
+    </div>
+  </main>
+
+  <!-- Slide-out Cart Panel -->
+  <div id="cart-overlay" class="cart-overlay fixed inset-0 bg-black/50 z-50" onclick="closeCartPanel()"></div>
+  <div id="cart-panel" class="cart-panel fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-xl z-50 flex flex-col">
+    <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+      <h2 class="text-lg font-semibold text-slate-900">Shopping Cart</h2>
+      <button onclick="closeCartPanel()" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-6 space-y-6">
+      <div class="flex gap-4">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=96&h=96&fit=crop" alt="Product" class="w-24 h-24 rounded-xl object-cover">
+        <div class="flex-1">
+          <h3 class="font-medium text-slate-900">Smart Watch Pro</h3>
+          <p class="text-sm text-slate-500">Black / 42mm</p>
+          <div class="flex items-center gap-3 mt-2">
+            <div class="flex items-center border border-slate-200 rounded-lg">
+              <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">-</button>
+              <span class="w-8 text-center text-sm">1</span>
+              <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">+</button>
+            </div>
+            <span class="font-semibold text-slate-900">$299.00</span>
+          </div>
+        </div>
+        <button class="text-slate-400 hover:text-red-500">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex gap-4">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=96&h=96&fit=crop" alt="Product" class="w-24 h-24 rounded-xl object-cover">
+        <div class="flex-1">
+          <h3 class="font-medium text-slate-900">Wireless Earbuds</h3>
+          <p class="text-sm text-slate-500">White</p>
+          <div class="flex items-center gap-3 mt-2">
+            <div class="flex items-center border border-slate-200 rounded-lg">
+              <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">-</button>
+              <span class="w-8 text-center text-sm">2</span>
+              <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">+</button>
+            </div>
+            <span class="font-semibold text-slate-900">$298.00</span>
+          </div>
+        </div>
+        <button class="text-slate-400 hover:text-red-500">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex gap-4">
+        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=96&h=96&fit=crop" alt="Product" class="w-24 h-24 rounded-xl object-cover">
+        <div class="flex-1">
+          <h3 class="font-medium text-slate-900">Phone Case</h3>
+          <p class="text-sm text-slate-500">Clear</p>
+          <div class="flex items-center gap-3 mt-2">
+            <div class="flex items-center border border-slate-200 rounded-lg">
+              <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">-</button>
+              <span class="w-8 text-center text-sm">1</span>
+              <button class="w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-700">+</button>
+            </div>
+            <span class="font-semibold text-slate-900">$29.00</span>
+          </div>
+        </div>
+        <button class="text-slate-400 hover:text-red-500">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="p-6 border-t border-slate-200 bg-slate-50">
+      <div class="space-y-3 mb-4">
+        <div class="flex justify-between">
+          <span class="text-slate-600">Subtotal</span>
+          <span class="font-medium text-slate-900">$626.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-600">Shipping</span>
+          <span class="text-green-600 font-medium">Free</span>
+        </div>
+        <div class="flex justify-between pt-3 border-t border-slate-200">
+          <span class="text-lg font-semibold text-slate-900">Total</span>
+          <span class="text-lg font-semibold text-slate-900">$626.00</span>
+        </div>
+      </div>
+      <button class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl transition-colors">Proceed to Checkout</button>
+      <button onclick="closeCartPanel()" class="w-full py-3 text-slate-600 hover:text-slate-900 font-medium mt-2 transition-colors">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      let currentDropdown = null;
+
+      window.toggleCart = function(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+
+        if (currentDropdown && currentDropdown !== dropdown) {
+          currentDropdown.classList.remove('open');
+        }
+
+        dropdown.classList.toggle('open');
+        currentDropdown = dropdown.classList.contains('open') ? dropdown : null;
+      };
+
+      window.openCartPanel = function() {
+        document.getElementById('cart-overlay').classList.add('open');
+        document.getElementById('cart-panel').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeCartPanel = function() {
+        document.getElementById('cart-overlay').classList.remove('open');
+        document.getElementById('cart-panel').classList.remove('open');
+        document.body.style.overflow = '';
+      };
+
+      document.addEventListener('click', function(e) {
+        const cartContainers = document.querySelectorAll('[id^="cart-"]');
+        let clickedInside = false;
+
+        cartContainers.forEach(function(container) {
+          if (container.contains(e.target)) {
+            clickedInside = true;
+          }
+        });
+
+        if (!clickedInside && currentDropdown) {
+          currentDropdown.classList.remove('open');
+          currentDropdown = null;
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          if (currentDropdown) {
+            currentDropdown.classList.remove('open');
+            currentDropdown = null;
+          }
+          closeCartPanel();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
