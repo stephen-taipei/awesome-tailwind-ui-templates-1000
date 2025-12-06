@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bento box style varied sizes">
+  <title>feat-010: Bento Grid Features | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-010: Bento Grid Features
+       Bento box style varied sizes
+       ============================================ -->
+
+  <div class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px]">
+      <div class="bg-white p-6 rounded-2xl shadow md:col-span-2 md:row-span-2">Big Feature</div>
+      <div class="bg-white p-6 rounded-2xl shadow">Small</div>
+      <div class="bg-white p-6 rounded-2xl shadow">Small</div>
+      <div class="bg-white p-6 rounded-2xl shadow md:col-span-2">Wide Feature</div>
+    </div>
+  </div>
+
+</body>
+</html>
