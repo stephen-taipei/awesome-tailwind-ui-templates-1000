@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vertical timeline layout">
+  <title>feat-020: Timeline Feature List | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       feat-020: Timeline Feature List
+       Vertical timeline layout
+       ============================================ -->
+
+  <div class="py-24 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="relative border-l-2 border-slate-200 ml-3 space-y-12">
+        <div class="pl-8 relative">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-primary-600 ring-4 ring-white"></div>
+          <h3 class="font-bold text-slate-900">Q1 2024</h3>
+          <p class="mt-2 text-slate-600">Launched beta version to initial user group.</p>
+        </div>
+        <div class="pl-8 relative">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-slate-300 ring-4 ring-white"></div>
+          <h3 class="font-bold text-slate-900">Q2 2024</h3>
+          <p class="mt-2 text-slate-600">Public release and marketing campaign.</p>
+        </div>
+        <div class="pl-8 relative">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-slate-300 ring-4 ring-white"></div>
+          <h3 class="font-bold text-slate-900">Q3 2024</h3>
+          <p class="mt-2 text-slate-600">Expansion to new markets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
