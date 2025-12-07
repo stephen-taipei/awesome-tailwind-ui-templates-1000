@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Timeline event card.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+    <div class="max-w-md w-full">
+      <div class="relative pl-8 border-l-2 border-slate-200 space-y-8">
+        <!-- Item 1 -->
+        <div class="relative">
+          <div class="absolute -left-[41px] top-0 w-5 h-5 bg-blue-600 rounded-full border-4 border-white shadow-sm"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1 block">Today</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Project Kickoff</h3>
+            <p class="text-slate-500 text-sm">
+              Initial meeting with the stakeholders to discuss project requirements and timeline.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative">
+          <div class="absolute -left-[41px] top-0 w-5 h-5 bg-slate-300 rounded-full border-4 border-white shadow-sm"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 opacity-75">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 block">Tomorrow</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Design Sprint</h3>
+            <p class="text-slate-500 text-sm">
+              Three-day design sprint to prototype core features and validate assumptions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
