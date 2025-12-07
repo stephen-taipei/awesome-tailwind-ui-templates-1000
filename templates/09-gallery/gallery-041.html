@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Scroll Gallery - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Side scroll view">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar">
+        <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+          <div class="rounded-xl overflow-hidden shadow-sm">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover">
+            <div class="bg-white p-4">
+              <h3 class="font-bold text-slate-900">Project One</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+          <div class="rounded-xl overflow-hidden shadow-sm">
+            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover">
+            <div class="bg-white p-4">
+              <h3 class="font-bold text-slate-900">Project Two</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+          <div class="rounded-xl overflow-hidden shadow-sm">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover">
+            <div class="bg-white p-4">
+              <h3 class="font-bold text-slate-900">Project Three</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+          <div class="rounded-xl overflow-hidden shadow-sm">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover">
+            <div class="bg-white p-4">
+              <h3 class="font-bold text-slate-900">Project Four</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-80 md:w-96 snap-center">
+          <div class="rounded-xl overflow-hidden shadow-sm">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover">
+            <div class="bg-white p-4">
+              <h3 class="font-bold text-slate-900">Project Five</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  </div>
+</body>
+</html>
