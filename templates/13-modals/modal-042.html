@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal for detailed feedback.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+           <div class="bg-indigo-600 px-4 py-6 sm:px-6">
+              <h3 class="text-base font-semibold leading-6 text-white" id="modal-title">We value your feedback</h3>
+              <p class="mt-1 text-sm text-indigo-100">Help us improve your experience.</p>
+           </div>
+           <div class="p-6">
+              <div class="mb-6">
+                 <label class="block text-sm font-medium text-gray-700 mb-2">How would you rate your experience?</label>
+                 <div class="flex justify-between items-center text-4xl grayscale hover:grayscale-0 transition-all cursor-pointer">
+                    <span class="hover:scale-110 transition-transform" title="Terrible">😠</span>
+                    <span class="hover:scale-110 transition-transform" title="Bad">🙁</span>
+                    <span class="hover:scale-110 transition-transform" title="Okay">😐</span>
+                    <span class="hover:scale-110 transition-transform" title="Good">🙂</span>
+                    <span class="hover:scale-110 transition-transform" title="Excellent">🤩</span>
+                 </div>
+              </div>
+
+              <div class="mb-6">
+                 <label for="feedback-details" class="block text-sm font-medium text-gray-700 mb-2">What can we do better?</label>
+                 <textarea id="feedback-details" rows="4" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+              </div>
+
+              <div class="flex justify-end gap-3">
+                 <button type="button" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Cancel</button>
+                 <button type="button" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Submit Feedback</button>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
