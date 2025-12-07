@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightbox with Thumbnails - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Thumbnails in modal">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-white py-24" x-data="{ open: false, active: 0, images: [
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'
+  ] }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <template x-for="(img, index) in images" :key="index">
+          <div class="aspect-square rounded-xl overflow-hidden cursor-pointer" @click="open = true; active = index">
+            <img :src="img" class="w-full h-full object-cover hover:opacity-80 transition-opacity">
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <div x-show="open" class="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center p-8" @click="open = false" style="display: none;">
+      <div class="flex-1 flex items-center justify-center w-full mb-8" @click.stop>
+        <img :src="images[active]" class="max-w-full max-h-full rounded-lg shadow-2xl">
+      </div>
+      <div class="h-20 flex gap-4 overflow-x-auto max-w-full px-4" @click.stop>
+        <template x-for="(img, index) in images" :key="index">
+          <button @click="active = index" :class="active === index ? 'ring-2 ring-white opacity-100' : 'opacity-50 hover:opacity-100'" class="h-full aspect-square rounded-lg overflow-hidden transition-all flex-shrink-0">
+            <img :src="img" class="w-full h-full object-cover">
+          </button>
+        </template>
+      </div>
+      <button class="absolute top-4 right-4 text-white hover:text-gray-300" @click="open = false">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
