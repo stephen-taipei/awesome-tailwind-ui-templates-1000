@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vertical layout with sidebar">
+  <title>price-042: Pricing with Sidebar | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-042: Pricing with Sidebar
+       Vertical layout with sidebar
+       ============================================ -->
+
+  <div class="bg-slate-50 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8">
+      <div class="md:w-1/4">
+        <div class="sticky top-8">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Pricing</h2>
+          <nav class="space-y-2">
+            <a href="#" class="block px-4 py-2 bg-white rounded-lg shadow-sm font-medium text-primary-600 border-l-4 border-primary-600">Monthly Plans</a>
+            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-white hover:shadow-sm rounded-lg transition-all">Annual Plans</a>
+            <a href="#" class="block px-4 py-2 text-slate-600 hover:bg-white hover:shadow-sm rounded-lg transition-all">Enterprise</a>
+          </nav>
+        </div>
+      </div>
+      <div class="md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-slate-900">Starter</h3>
+          <div class="mt-2 text-3xl font-bold text-slate-900">$29</div>
+          <p class="mt-4 text-slate-600 text-sm">Great for individuals.</p>
+          <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Select</button>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-slate-900">Team</h3>
+          <div class="mt-2 text-3xl font-bold text-slate-900">$99</div>
+          <p class="mt-4 text-slate-600 text-sm">Perfect for small teams.</p>
+          <button class="mt-6 w-full py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Select</button>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-slate-900">Business</h3>
+          <div class="mt-2 text-3xl font-bold text-slate-900">$199</div>
+          <p class="mt-4 text-slate-600 text-sm">For growing companies.</p>
+          <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Select</button>
+        </div>
+        <div class="bg-slate-900 p-6 rounded-xl shadow-sm text-white">
+          <h3 class="text-lg font-bold">Custom</h3>
+          <div class="mt-2 text-3xl font-bold">Contact</div>
+          <p class="mt-4 text-slate-400 text-sm">Tailored solutions.</p>
+          <button class="mt-6 w-full py-2 bg-white text-slate-900 rounded hover:bg-slate-100 font-bold">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
