@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full screen overlay CTA">
+  <title>cta-037: CTA with Overlay | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       cta-037: CTA with Overlay
+       Full screen overlay CTA
+       ============================================ -->
+
+  <div class="relative h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+    <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+      <div class="text-center text-white px-6">
+        <h2 class="text-4xl font-bold mb-4">Focus on what matters</h2>
+        <p class="text-xl text-slate-200 mb-8">We handle the rest.</p>
+        <a href="#" class="rounded-full bg-white text-slate-900 px-8 py-3 font-bold hover:bg-slate-100 transition-colors">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
