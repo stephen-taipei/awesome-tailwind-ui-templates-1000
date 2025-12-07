@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permissions Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal for managing user permissions.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+           <div class="p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">Manage Permissions</h3>
+              <p class="text-sm text-gray-500 mb-6">Control what team members can do in this project.</p>
+
+              <div class="space-y-4">
+                 <div class="flex items-start justify-between">
+                    <div>
+                       <label for="perm-edit" class="font-medium text-gray-900">Edit Content</label>
+                       <p class="text-xs text-gray-500">Allows editing text and images.</p>
+                    </div>
+                    <div class="flex h-6 items-center">
+                       <input id="perm-edit" name="perm-edit" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" checked>
+                    </div>
+                 </div>
+                 <div class="flex items-start justify-between">
+                    <div>
+                       <label for="perm-publish" class="font-medium text-gray-900">Publish Changes</label>
+                       <p class="text-xs text-gray-500">Allows publishing changes to live site.</p>
+                    </div>
+                    <div class="flex h-6 items-center">
+                       <input id="perm-publish" name="perm-publish" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    </div>
+                 </div>
+                 <div class="flex items-start justify-between">
+                    <div>
+                       <label for="perm-invite" class="font-medium text-gray-900">Invite Members</label>
+                       <p class="text-xs text-gray-500">Allows inviting new users to the project.</p>
+                    </div>
+                    <div class="flex h-6 items-center">
+                       <input id="perm-invite" name="perm-invite" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    </div>
+                 </div>
+                 <div class="flex items-start justify-between">
+                    <div>
+                       <label for="perm-delete" class="font-medium text-gray-900">Delete Project</label>
+                       <p class="text-xs text-gray-500">Allows permanent deletion of the project.</p>
+                    </div>
+                    <div class="flex h-6 items-center">
+                       <input id="perm-delete" name="perm-delete" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" disabled>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="mt-8 flex justify-end gap-3">
+                 <button type="button" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Cancel</button>
+                 <button type="button" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Save Changes</button>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
