@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cards with 3D perspective">
+  <title>price-038: Pricing with 3D Cards | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-038: Pricing with 3D Cards
+       Cards with 3D perspective
+       ============================================ -->
+
+  <div class="bg-slate-100 py-24 perspective-1000">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="bg-white p-8 rounded-2xl shadow-xl transform rotate-y-12 hover:rotate-y-0 transition-transform duration-500 border-r-4 border-b-4 border-slate-300">
+        <h3 class="text-xl font-bold text-slate-900">Left</h3>
+        <div class="mt-4 text-3xl font-bold text-slate-900">$29</div>
+        <button class="mt-8 w-full py-2 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-slate-900">Select</button>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 border-r-4 border-b-4 border-primary-600 z-10">
+        <h3 class="text-xl font-bold text-primary-600">Center</h3>
+        <div class="mt-4 text-3xl font-bold text-slate-900">$59</div>
+        <button class="mt-8 w-full py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-bold text-white">Select</button>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-xl transform -rotate-y-12 hover:rotate-y-0 transition-transform duration-500 border-l-4 border-b-4 border-slate-300">
+        <h3 class="text-xl font-bold text-slate-900">Right</h3>
+        <div class="mt-4 text-3xl font-bold text-slate-900">$99</div>
+        <button class="mt-8 w-full py-2 bg-slate-100 hover:bg-slate-200 rounded-lg font-bold text-slate-900">Select</button>
+      </div>
+    </div>
+    <style>
+      .perspective-1000 { perspective: 1000px; }
+      .rotate-y-12 { transform: rotateY(12deg); }
+      .-rotate-y-12 { transform: rotateY(-12deg); }
+    </style>
+  </div>
+
+</body>
+</html>
