@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rotating quotes">
+  <title>content-038: Quote Carousel | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-038: Quote Carousel
+       Rotating quotes
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="relative">
+        <blockquote class="text-2xl text-slate-700">
+          "First, solve the problem. Then, write the code."
+        </blockquote>
+        <div class="mt-6 font-bold text-slate-900">- John Johnson</div>
+
+        <div class="mt-12 flex justify-center gap-2">
+          <button class="w-3 h-3 rounded-full bg-primary-600"></button>
+          <button class="w-3 h-3 rounded-full bg-slate-300"></button>
+          <button class="w-3 h-3 rounded-full bg-slate-300"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
