@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Global customer base">
+  <title>test-035: Testimonials with Map | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-035: Testimonials with Map
+       Global customer base
+       ============================================ -->
+
+  <div class="bg-slate-900 py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <!-- Simplified World Map SVG Background -->
+      <svg class="w-full h-full text-slate-500" fill="currentColor" viewBox="0 0 1000 500"><path d="M... (Map path would go here) ..." /></svg>
+      <div class="w-full h-full bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-cover bg-center opacity-30 grayscale"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-white">Loved around the world</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇺🇸</span>
+            <div class="font-bold text-white">New York, USA</div>
+          </div>
+          <p class="text-slate-300">"The best tool for remote teams, hands down."</p>
+        </div>
+        <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇬🇧</span>
+            <div class="font-bold text-white">London, UK</div>
+          </div>
+          <p class="text-slate-300">"Brilliant service and support."</p>
+        </div>
+        <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇯🇵</span>
+            <div class="font-bold text-white">Tokyo, Japan</div>
+          </div>
+          <p class="text-slate-300">"Very reliable and efficient."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
