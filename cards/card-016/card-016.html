@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Online course card with progress.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden max-w-sm w-full hover:shadow-lg transition-shadow">
+      <div class="bg-indigo-600 p-6 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-24 h-24 bg-black/10 rounded-full blur-xl"></div>
+
+        <span class="inline-block px-2 py-1 bg-white/20 rounded text-xs font-bold mb-3 backdrop-blur-sm">Development</span>
+        <h3 class="text-xl font-bold mb-1">Advanced React Patterns</h3>
+        <p class="text-indigo-200 text-sm">Master modern React development</p>
+      </div>
+
+      <div class="p-6">
+        <div class="flex justify-between text-sm text-gray-500 mb-2">
+          <span>Progress</span>
+          <span class="font-bold text-indigo-600">65%</span>
+        </div>
+        <div class="w-full bg-gray-100 rounded-full h-2 mb-6">
+          <div class="bg-indigo-600 h-2 rounded-full" style="width: 65%"></div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex -space-x-2">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student" class="w-8 h-8 rounded-full border-2 border-white">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student" class="w-8 h-8 rounded-full border-2 border-white">
+            <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-500">+8</div>
+          </div>
+          <button class="text-indigo-600 font-bold text-sm hover:text-indigo-700 transition-colors flex items-center gap-1">
+            Continue
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
