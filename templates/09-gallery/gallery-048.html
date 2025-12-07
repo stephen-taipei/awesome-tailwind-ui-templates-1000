@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360 View Gallery - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Product rotation">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-50 py-24" x-data="{ frame: 0, totalFrames: 36, dragging: false, startX: 0, startFrame: 0 }">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <div class="aspect-square relative cursor-ew-resize"
+             @mousedown="dragging = true; startX = $event.clientX; startFrame = frame"
+             @mousemove="if(dragging) { let delta = $event.clientX - startX; frame = (startFrame + Math.floor(delta / 10)) % totalFrames; if(frame < 0) frame += totalFrames; }"
+             @mouseup="dragging = false"
+             @mouseleave="dragging = false">
+          <template x-for="i in totalFrames" :key="i">
+            <img :src="`https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80&text=${i}`"
+                 x-show="frame === i - 1"
+                 class="w-full h-full object-contain pointer-events-none select-none">
+          </template>
+          <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-slate-900/10 px-4 py-2 rounded-full flex items-center gap-2">
+            <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            <span class="text-sm font-medium text-slate-600">Drag to rotate</span>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <h3 class="text-2xl font-bold text-slate-900">Product 360 View</h3>
+          <p class="text-slate-600 mt-2">Interactive product demonstration.</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
