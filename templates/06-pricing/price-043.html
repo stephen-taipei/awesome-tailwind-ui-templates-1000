@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Details in modal">
+  <title>price-043: Pricing with Modal | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-043: Pricing with Modal
+       Details in modal
+       ============================================ -->
+
+  <div class="bg-white py-24" x-data="{ open: false, plan: '' }">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-slate-900 mb-12">Select a Plan</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-slate-200 p-8 rounded-2xl">
+          <h3 class="text-xl font-bold">Basic</h3>
+          <div class="mt-4 text-3xl font-bold">$19</div>
+          <button class="mt-6 px-6 py-2 border border-slate-300 rounded hover:bg-slate-50" @click="open = true; plan = 'Basic'">View Details</button>
+        </div>
+        <div class="border border-primary-500 p-8 rounded-2xl ring-1 ring-primary-500">
+          <h3 class="text-xl font-bold">Pro</h3>
+          <div class="mt-4 text-3xl font-bold">$49</div>
+          <button class="mt-6 px-6 py-2 bg-primary-600 text-white rounded hover:bg-primary-700" @click="open = true; plan = 'Pro'">View Details</button>
+        </div>
+        <div class="border border-slate-200 p-8 rounded-2xl">
+          <h3 class="text-xl font-bold">Max</h3>
+          <div class="mt-4 text-3xl font-bold">$99</div>
+          <button class="mt-6 px-6 py-2 border border-slate-300 rounded hover:bg-slate-50" @click="open = true; plan = 'Max'">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <!-- Modal -->
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm" x-show="open" style="display: none;">
+      <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl" @click.away="open = false">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-slate-900" x-text="plan + ' Plan Details'"></h3>
+          <button @click="open = false" class="text-slate-400 hover:text-slate-600">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="space-y-4 text-slate-600">
+          <p>Here are the full details for the <span x-text="plan"></span> plan.</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Feature A included</li>
+            <li>Feature B included</li>
+            <li>24/7 Support</li>
+          </ul>
+        </div>
+        <div class="mt-8 flex gap-4">
+          <button class="flex-1 py-3 bg-primary-600 text-white rounded-lg font-bold hover:bg-primary-700">Subscribe Now</button>
+          <button class="px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-50" @click="open = false">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
