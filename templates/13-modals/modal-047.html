@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal showing weather details.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm text-white">
+           <div class="p-6">
+              <div class="flex justify-between items-start mb-8">
+                 <div>
+                    <h3 class="text-2xl font-bold">San Francisco</h3>
+                    <p class="text-blue-100">Monday, 10:23 AM</p>
+                 </div>
+                 <svg class="h-6 w-6 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              </div>
+
+              <div class="flex items-center justify-between mb-8">
+                 <div class="flex items-center">
+                    <svg class="h-20 w-20 text-yellow-300 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    <div class="ml-4">
+                       <span class="text-6xl font-thin">72°</span>
+                       <p class="text-blue-100">Sunny</p>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-4 border-t border-blue-400 pt-6">
+                 <div class="text-center">
+                    <p class="text-blue-200 text-xs uppercase mb-1">Wind</p>
+                    <p class="font-bold">6 mph</p>
+                 </div>
+                 <div class="text-center border-l border-blue-400">
+                    <p class="text-blue-200 text-xs uppercase mb-1">Humidity</p>
+                    <p class="font-bold">42%</p>
+                 </div>
+                 <div class="text-center border-l border-blue-400">
+                    <p class="text-blue-200 text-xs uppercase mb-1">Precip</p>
+                    <p class="font-bold">0%</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
