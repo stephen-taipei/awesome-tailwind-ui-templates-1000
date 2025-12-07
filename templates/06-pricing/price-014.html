@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Highlight annual savings">
+  <title>price-014: Pricing with Annual Savings | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-014: Pricing with Annual Savings
+       Highlight annual savings
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900">Save with Annual Billing</h2>
+        <p class="mt-4 text-green-600 font-bold">Get 2 months free when you pay annually!</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-slate-200 rounded-2xl p-8 relative overflow-hidden">
+          <h3 class="text-lg font-bold text-slate-900">Starter</h3>
+          <div class="mt-4">
+            <span class="text-3xl font-bold text-slate-900">$10</span>
+            <span class="text-slate-500">/mo</span>
+          </div>
+          <div class="mt-2 text-sm text-slate-500">Billed $100 yearly</div>
+          <div class="mt-2 text-xs font-bold text-green-600 bg-green-50 inline-block px-2 py-1 rounded">Save $20</div>
+          <button class="mt-8 w-full py-2 border border-slate-300 rounded-lg hover:bg-slate-50">Choose Starter</button>
+        </div>
+        <div class="border border-primary-500 rounded-2xl p-8 relative overflow-hidden ring-1 ring-primary-500">
+          <h3 class="text-lg font-bold text-slate-900">Growth</h3>
+          <div class="mt-4">
+            <span class="text-3xl font-bold text-slate-900">$25</span>
+            <span class="text-slate-500">/mo</span>
+          </div>
+          <div class="mt-2 text-sm text-slate-500">Billed $250 yearly</div>
+          <div class="mt-2 text-xs font-bold text-green-600 bg-green-50 inline-block px-2 py-1 rounded">Save $50</div>
+          <button class="mt-8 w-full py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">Choose Growth</button>
+        </div>
+        <div class="border border-slate-200 rounded-2xl p-8 relative overflow-hidden">
+          <h3 class="text-lg font-bold text-slate-900">Scale</h3>
+          <div class="mt-4">
+            <span class="text-3xl font-bold text-slate-900">$50</span>
+            <span class="text-slate-500">/mo</span>
+          </div>
+          <div class="mt-2 text-sm text-slate-500">Billed $500 yearly</div>
+          <div class="mt-2 text-xs font-bold text-green-600 bg-green-50 inline-block px-2 py-1 rounded">Save $100</div>
+          <button class="mt-8 w-full py-2 border border-slate-300 rounded-lg hover:bg-slate-50">Choose Scale</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
