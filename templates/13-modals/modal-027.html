@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal for system maintenance message.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+           <div class="p-8 text-center">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 mb-6">
+                 <svg class="h-8 w-8 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                 </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">System Maintenance</h3>
+              <p class="text-gray-500 mb-6">We're currently performing scheduled maintenance to improve our services. Please check back in a few hours.</p>
+              <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-4">
+                <div class="bg-orange-600 h-2.5 rounded-full" style="width: 45%"></div>
+              </div>
+              <p class="text-sm text-gray-400">Estimated completion time: 2:00 PM UTC</p>
+              <div class="mt-8">
+                 <button class="text-indigo-600 hover:text-indigo-500 font-medium">Check Status Page &rarr;</button>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
