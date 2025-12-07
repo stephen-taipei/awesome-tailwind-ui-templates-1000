@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parallax scrolling effect">
+  <title>test-044: Testimonials with Parallax | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-044: Testimonials with Parallax
+       Parallax scrolling effect
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+          <p class="text-slate-600 mb-6">"The design quality is unmatched. Every pixel is perfect."</p>
+          <div class="font-bold text-slate-900">Designer One</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg transform translate-x-8 hover:-translate-y-2 transition-transform duration-300">
+          <p class="text-slate-600 mb-6">"Code is clean, modular, and easy to extend. A developer's dream."</p>
+          <div class="font-bold text-slate-900">Developer Two</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+          <p class="text-slate-600 mb-6">"Support helped me launch in record time. Forever grateful."</p>
+          <div class="font-bold text-slate-900">Founder Three</div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary-500 to-purple-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team" class="relative rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
