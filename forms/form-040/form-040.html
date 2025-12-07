@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Reservation - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Elegant restaurant table reservation form.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-stone-900 flex items-center justify-center p-4 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat bg-blend-overlay">
+    <div class="max-w-md w-full bg-black/80 backdrop-blur-md rounded-none border border-stone-700 p-8 text-stone-100">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-serif text-amber-500 mb-2">LUMIÈRE</h2>
+        <p class="text-stone-400 text-sm uppercase tracking-widest">Table Reservation</p>
+      </div>
+
+      <form class="space-y-6">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs text-stone-500 uppercase tracking-wider mb-2">Date</label>
+            <input type="date" class="w-full bg-stone-800 border-stone-700 text-stone-200 px-4 py-3 rounded-sm focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all">
+          </div>
+          <div>
+            <label class="block text-xs text-stone-500 uppercase tracking-wider mb-2">Time</label>
+            <select class="w-full bg-stone-800 border-stone-700 text-stone-200 px-4 py-3 rounded-sm focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all">
+              <option>18:00</option>
+              <option>18:30</option>
+              <option>19:00</option>
+              <option>19:30</option>
+              <option>20:00</option>
+              <option>20:30</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs text-stone-500 uppercase tracking-wider mb-2">Guests</label>
+          <div class="flex gap-2">
+            <button type="button" class="flex-1 py-2 border border-stone-700 hover:border-amber-500 hover:text-amber-500 transition-colors rounded-sm">2</button>
+            <button type="button" class="flex-1 py-2 border border-stone-700 hover:border-amber-500 hover:text-amber-500 transition-colors rounded-sm bg-amber-500/10 border-amber-500 text-amber-500">4</button>
+            <button type="button" class="flex-1 py-2 border border-stone-700 hover:border-amber-500 hover:text-amber-500 transition-colors rounded-sm">6</button>
+            <button type="button" class="flex-1 py-2 border border-stone-700 hover:border-amber-500 hover:text-amber-500 transition-colors rounded-sm">8+</button>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <input type="text" placeholder="Full Name" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600">
+          <input type="tel" placeholder="Phone Number" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600">
+          <textarea placeholder="Special Requests (Allergies, Occasion)" rows="2" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600 resize-none"></textarea>
+        </div>
+
+        <button class="w-full bg-amber-600 text-black font-bold py-4 rounded-sm hover:bg-amber-500 transition-colors uppercase tracking-wider mt-4">
+          Reserve Table
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
