@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal with a functional layout for calculations.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-gray-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xs">
+           <div class="p-4">
+              <div class="bg-gray-800 rounded-lg p-4 mb-4 text-right">
+                 <span class="text-white text-3xl font-mono">0</span>
+              </div>
+              <div class="grid grid-cols-4 gap-2">
+                 <button class="bg-gray-700 text-white p-3 rounded hover:bg-gray-600">AC</button>
+                 <button class="bg-gray-700 text-white p-3 rounded hover:bg-gray-600">+/-</button>
+                 <button class="bg-gray-700 text-white p-3 rounded hover:bg-gray-600">%</button>
+                 <button class="bg-orange-500 text-white p-3 rounded hover:bg-orange-400">÷</button>
+
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">7</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">8</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">9</button>
+                 <button class="bg-orange-500 text-white p-3 rounded hover:bg-orange-400">×</button>
+
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">4</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">5</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">6</button>
+                 <button class="bg-orange-500 text-white p-3 rounded hover:bg-orange-400">-</button>
+
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">1</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">2</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">3</button>
+                 <button class="bg-orange-500 text-white p-3 rounded hover:bg-orange-400">+</button>
+
+                 <button class="col-span-2 bg-gray-800 text-white p-3 rounded hover:bg-gray-700 text-left pl-7">0</button>
+                 <button class="bg-gray-800 text-white p-3 rounded hover:bg-gray-700">.</button>
+                 <button class="bg-orange-500 text-white p-3 rounded hover:bg-orange-400">=</button>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
