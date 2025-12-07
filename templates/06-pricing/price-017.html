@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Overlapping cards layout">
+  <title>price-017: Pricing with Floating Cards | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-017: Pricing with Floating Cards
+       Overlapping cards layout
+       ============================================ -->
+
+  <div class="bg-slate-50 pt-24 pb-48">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-slate-900">Choose your plan</h2>
+      <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Start small and upgrade as you grow.</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 -mt-32 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-slate-300">
+        <h3 class="text-xl font-bold text-slate-900">Basic</h3>
+        <p class="text-3xl font-bold mt-4">$19</p>
+        <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Select</button>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-primary-600 transform -translate-y-4">
+        <h3 class="text-xl font-bold text-slate-900">Pro</h3>
+        <p class="text-3xl font-bold mt-4">$49</p>
+        <button class="mt-6 w-full py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Select</button>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-slate-300">
+        <h3 class="text-xl font-bold text-slate-900">Expert</h3>
+        <p class="text-3xl font-bold mt-4">$99</p>
+        <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Select</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
