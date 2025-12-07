@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step Wizard - Confirmation - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Step 3 of a multi-step wizard: Review and Confirm.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="bg-indigo-600 px-8 py-6">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold text-white">Confirmation</h2>
+          <span class="text-indigo-200 text-sm">Step 3 of 3</span>
+        </div>
+        <div class="w-full bg-indigo-900/50 h-2 rounded-full overflow-hidden">
+          <div class="w-full h-full bg-white rounded-full"></div>
+        </div>
+      </div>
+
+      <div class="p-8">
+        <div class="text-center mb-8">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800">All set!</h3>
+          <p class="text-slate-600 mt-2">Please review your information before submitting.</p>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-6 space-y-4 mb-8">
+          <div class="flex justify-between border-b border-slate-200 pb-4">
+            <span class="text-slate-500">Email</span>
+            <span class="font-medium text-slate-900">john.doe@example.com</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-200 pb-4">
+            <span class="text-slate-500">Name</span>
+            <span class="font-medium text-slate-900">John Doe</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-200 pb-4">
+            <span class="text-slate-500">Phone</span>
+            <span class="font-medium text-slate-900">+1 (555) 000-0000</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-500">
+            <input type="checkbox" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500" checked>
+            I agree to the Terms of Service and Privacy Policy
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <button type="button" class="px-8 py-3 text-slate-600 font-semibold hover:text-slate-900 transition-colors">
+            Back
+          </button>
+          <button type="button" class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/30">
+            Complete Registration
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
