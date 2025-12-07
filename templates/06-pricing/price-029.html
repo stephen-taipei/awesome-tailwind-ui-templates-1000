@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tabs to switch categories">
+  <title>price-029: Pricing with Feature Tabs | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-029: Pricing with Feature Tabs
+       Tabs to switch categories
+       ============================================ -->
+
+  <div class="bg-white py-24" x-data="{ tab: 'marketing' }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Tailored Solutions</h2>
+        <div class="mt-6 inline-flex bg-slate-100 p-1 rounded-lg">
+          <button class="px-4 py-2 rounded-md text-sm font-medium transition-colors" :class="tab === 'marketing' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'" @click="tab = 'marketing'">Marketing</button>
+          <button class="px-4 py-2 rounded-md text-sm font-medium transition-colors" :class="tab === 'sales' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'" @click="tab = 'sales'">Sales</button>
+          <button class="px-4 py-2 rounded-md text-sm font-medium transition-colors" :class="tab === 'dev' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'" @click="tab = 'dev'">Developers</button>
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/alpinejs" defer></script>
+
+      <div class="max-w-md mx-auto bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+        <div x-show="tab === 'marketing'">
+          <h3 class="text-xl font-bold text-slate-900">Marketing Suite</h3>
+          <p class="text-slate-500 mt-2">All the tools for growth.</p>
+          <div class="mt-6 text-4xl font-bold text-slate-900">$49<span class="text-base font-normal text-slate-500">/mo</span></div>
+          <ul class="mt-6 space-y-3 text-slate-600">
+            <li>Email Automation</li>
+            <li>Social Scheduling</li>
+            <li>Analytics Dashboard</li>
+          </ul>
+        </div>
+        <div x-show="tab === 'sales'" style="display: none;">
+          <h3 class="text-xl font-bold text-slate-900">Sales CRM</h3>
+          <p class="text-slate-500 mt-2">Close more deals faster.</p>
+          <div class="mt-6 text-4xl font-bold text-slate-900">$69<span class="text-base font-normal text-slate-500">/mo</span></div>
+          <ul class="mt-6 space-y-3 text-slate-600">
+            <li>Lead Management</li>
+            <li>Pipeline Tracking</li>
+            <li>Call Recording</li>
+          </ul>
+        </div>
+        <div x-show="tab === 'dev'" style="display: none;">
+          <h3 class="text-xl font-bold text-slate-900">Developer API</h3>
+          <p class="text-slate-500 mt-2">Build custom integrations.</p>
+          <div class="mt-6 text-4xl font-bold text-slate-900">$99<span class="text-base font-normal text-slate-500">/mo</span></div>
+          <ul class="mt-6 space-y-3 text-slate-600">
+            <li>Unlimited API Calls</li>
+            <li>Webhooks</li>
+            <li>Dedicated Support</li>
+          </ul>
+        </div>
+        <button class="mt-8 w-full py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
