@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plans with feature badges">
+  <title>price-007: Pricing with Badges | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-007: Pricing with Badges
+       Plans with feature badges
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Basic -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+        <div class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold mb-4">BASIC</div>
+        <h3 class="text-2xl font-bold text-slate-900">$19</h3>
+        <p class="text-slate-500 text-sm mb-6">Per user/month</p>
+        <a href="#" class="block w-full py-2 px-4 border border-slate-300 rounded-lg text-center text-slate-700 hover:bg-slate-50 font-medium">Select Plan</a>
+      </div>
+      <!-- Pro -->
+      <div class="bg-white rounded-xl shadow-md p-6 border-2 border-primary-500 relative">
+        <div class="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-bold mb-4">RECOMMENDED</div>
+        <h3 class="text-2xl font-bold text-slate-900">$49</h3>
+        <p class="text-slate-500 text-sm mb-6">Per user/month</p>
+        <a href="#" class="block w-full py-2 px-4 bg-primary-600 rounded-lg text-center text-white hover:bg-primary-700 font-medium">Select Plan</a>
+      </div>
+      <!-- Enterprise -->
+      <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+        <div class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold mb-4">ENTERPRISE</div>
+        <h3 class="text-2xl font-bold text-slate-900">$99</h3>
+        <p class="text-slate-500 text-sm mb-6">Per user/month</p>
+        <a href="#" class="block w-full py-2 px-4 border border-slate-300 rounded-lg text-center text-slate-700 hover:bg-slate-50 font-medium">Select Plan</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
