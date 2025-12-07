@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Selection - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal to select interface language.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm">
+           <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-base font-semibold leading-6 text-gray-900 mb-4">Select Language</h3>
+              <div class="space-y-2">
+                 <button class="flex items-center justify-between w-full p-3 rounded-md border border-indigo-600 bg-indigo-50 text-indigo-700">
+                    <div class="flex items-center">
+                       <span class="text-xl mr-3">🇺🇸</span>
+                       <span class="font-medium">English</span>
+                    </div>
+                    <svg class="h-5 w-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                 </button>
+                 <button class="flex items-center justify-between w-full p-3 rounded-md border border-gray-200 hover:bg-gray-50 text-gray-700">
+                    <div class="flex items-center">
+                       <span class="text-xl mr-3">🇪🇸</span>
+                       <span class="font-medium">Español</span>
+                    </div>
+                 </button>
+                 <button class="flex items-center justify-between w-full p-3 rounded-md border border-gray-200 hover:bg-gray-50 text-gray-700">
+                    <div class="flex items-center">
+                       <span class="text-xl mr-3">🇫🇷</span>
+                       <span class="font-medium">Français</span>
+                    </div>
+                 </button>
+                 <button class="flex items-center justify-between w-full p-3 rounded-md border border-gray-200 hover:bg-gray-50 text-gray-700">
+                    <div class="flex items-center">
+                       <span class="text-xl mr-3">🇩🇪</span>
+                       <span class="font-medium">Deutsch</span>
+                    </div>
+                 </button>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
