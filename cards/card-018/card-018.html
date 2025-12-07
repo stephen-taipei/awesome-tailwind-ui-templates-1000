@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Realistic credit card design.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div class="w-96 h-56 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl p-6 text-white relative overflow-hidden transform hover:scale-105 transition-transform duration-300">
+      <!-- Background Pattern -->
+      <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+      <div class="relative h-full flex flex-col justify-between">
+        <div class="flex justify-between items-start">
+          <div class="w-12 h-8 bg-gradient-to-r from-yellow-200 to-yellow-400 rounded-md opacity-80"></div>
+          <span class="font-bold text-lg italic tracking-wider">VISA</span>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex gap-4 items-center">
+            <span class="text-2xl font-mono tracking-widest">4532</span>
+            <span class="text-2xl font-mono tracking-widest">••••</span>
+            <span class="text-2xl font-mono tracking-widest">••••</span>
+            <span class="text-2xl font-mono tracking-widest">9018</span>
+          </div>
+
+          <div class="flex justify-between items-end">
+            <div>
+              <span class="block text-xs text-slate-400 uppercase tracking-wider mb-1">Card Holder</span>
+              <span class="font-medium tracking-wide uppercase">John Doe</span>
+            </div>
+            <div>
+              <span class="block text-xs text-slate-400 uppercase tracking-wider mb-1">Expires</span>
+              <span class="font-medium tracking-wide">12/25</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
