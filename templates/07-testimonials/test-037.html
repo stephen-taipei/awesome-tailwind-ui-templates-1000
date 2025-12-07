@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Searchable reviews">
+  <title>test-037: Testimonials with Search | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-037: Testimonials with Search
+       Searchable reviews
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24" x-data="{ search: '' }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-xl mx-auto mb-12">
+        <div class="relative">
+          <input type="text" x-model="search" placeholder="Search reviews (e.g., 'support', 'fast', 'easy')..." class="w-full px-6 py-4 rounded-full border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <svg class="w-6 h-6 text-slate-400 absolute right-4 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/alpinejs" defer></script>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm" x-show="'Great support team'.toLowerCase().includes(search.toLowerCase()) || search === ''">
+          <p class="text-slate-600 mb-4">"Great support team. They helped me solve my issue in minutes."</p>
+          <div class="font-bold text-slate-900">User 1</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm" x-show="'Fast and reliable'.toLowerCase().includes(search.toLowerCase()) || search === ''">
+          <p class="text-slate-600 mb-4">"Fast and reliable service. I've never had any downtime."</p>
+          <div class="font-bold text-slate-900">User 2</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm" x-show="'Easy to use'.toLowerCase().includes(search.toLowerCase()) || search === ''">
+          <p class="text-slate-600 mb-4">"Easy to use interface. My grandmother could use this."</p>
+          <div class="font-bold text-slate-900">User 3</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm" x-show="'Affordable pricing'.toLowerCase().includes(search.toLowerCase()) || search === ''">
+          <p class="text-slate-600 mb-4">"Affordable pricing for the value you get. Highly recommended."</p>
+          <div class="font-bold text-slate-900">User 4</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm" x-show="'Feature rich'.toLowerCase().includes(search.toLowerCase()) || search === ''">
+          <p class="text-slate-600 mb-4">"Feature rich platform. It has everything I need and more."</p>
+          <div class="font-bold text-slate-900">User 5</div>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm" x-show="'Beautiful design'.toLowerCase().includes(search.toLowerCase()) || search === ''">
+          <p class="text-slate-600 mb-4">"Beautiful design. It makes my work look professional."</p>
+          <div class="font-bold text-slate-900">User 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
