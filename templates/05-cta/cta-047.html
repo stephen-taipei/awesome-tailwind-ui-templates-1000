@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frosted glass effect">
+  <title>cta-047: CTA with Glassmorphism | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       cta-047: CTA with Glassmorphism
+       Frosted glass effect
+       ============================================ -->
+
+  <div class="relative py-32 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="bg-white/20 backdrop-blur-lg border border-white/30 p-12 rounded-2xl shadow-xl text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Glassmorphism</h2>
+        <p class="text-white/90 mb-8">Modern, sleek, and beautiful.</p>
+        <a href="#" class="rounded-md bg-white/30 border border-white/50 px-6 py-3 text-white font-bold hover:bg-white/40 transition-colors">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
