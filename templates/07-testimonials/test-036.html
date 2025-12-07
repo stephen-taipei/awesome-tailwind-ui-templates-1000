@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Filter by category">
+  <title>test-036: Testimonials with Filter | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-036: Testimonials with Filter
+       Filter by category
+       ============================================ -->
+
+  <div class="bg-white py-24" x-data="{ filter: 'all' }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+        <h2 class="text-3xl font-bold text-slate-900">Success Stories</h2>
+        <div class="flex gap-2">
+          <button @click="filter = 'all'" :class="filter === 'all' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'" class="px-4 py-2 rounded-full text-sm font-medium transition-colors">All</button>
+          <button @click="filter = 'tech'" :class="filter === 'tech' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'" class="px-4 py-2 rounded-full text-sm font-medium transition-colors">Tech</button>
+          <button @click="filter = 'marketing'" :class="filter === 'marketing' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'" class="px-4 py-2 rounded-full text-sm font-medium transition-colors">Marketing</button>
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/alpinejs" defer></script>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div x-show="filter === 'all' || filter === 'tech'" class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-xs font-bold text-blue-600 uppercase mb-2">Tech</div>
+          <p class="text-slate-600 mb-4">"Great for developers."</p>
+          <div class="font-bold text-slate-900">User A</div>
+        </div>
+        <div x-show="filter === 'all' || filter === 'marketing'" class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-xs font-bold text-green-600 uppercase mb-2">Marketing</div>
+          <p class="text-slate-600 mb-4">"Boosted our SEO."</p>
+          <div class="font-bold text-slate-900">User B</div>
+        </div>
+        <div x-show="filter === 'all' || filter === 'tech'" class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-xs font-bold text-blue-600 uppercase mb-2">Tech</div>
+          <p class="text-slate-600 mb-4">"Clean code."</p>
+          <div class="font-bold text-slate-900">User C</div>
+        </div>
+        <div x-show="filter === 'all' || filter === 'marketing'" class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-xs font-bold text-green-600 uppercase mb-2">Marketing</div>
+          <p class="text-slate-600 mb-4">"High conversion."</p>
+          <div class="font-bold text-slate-900">User D</div>
+        </div>
+        <div x-show="filter === 'all' || filter === 'tech'" class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-xs font-bold text-blue-600 uppercase mb-2">Tech</div>
+          <p class="text-slate-600 mb-4">"Scalable architecture."</p>
+          <div class="font-bold text-slate-900">User E</div>
+        </div>
+        <div x-show="filter === 'all' || filter === 'marketing'" class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-xs font-bold text-green-600 uppercase mb-2">Marketing</div>
+          <p class="text-slate-600 mb-4">"Easy to use."</p>
+          <div class="font-bold text-slate-900">User F</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
