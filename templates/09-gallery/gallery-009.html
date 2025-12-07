@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Scroll Grid - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Load more button">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-white py-24" x-data="{ items: [1, 2, 3, 4, 5, 6] }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+        <template x-for="item in items" :key="item">
+          <div class="aspect-square bg-slate-100 rounded-lg overflow-hidden animate-fadeIn">
+            <img :src="`https://source.unsplash.com/random/400x400?sig=${item}`" class="w-full h-full object-cover">
+          </div>
+        </template>
+      </div>
+      <div class="text-center">
+        <button @click="items.push(items.length + 1, items.length + 2, items.length + 3)" class="inline-flex items-center gap-2 px-8 py-3 bg-white border border-slate-300 rounded-lg font-medium text-slate-700 hover:bg-slate-50 transition-colors">
+          <span>Load More</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .animate-fadeIn { animation: fadeIn 0.5s ease-out; }
+    </style>
+  </div>
+</body>
+</html>
