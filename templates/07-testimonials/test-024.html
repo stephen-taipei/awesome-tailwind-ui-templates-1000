@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Click to read full review">
+  <title>test-024: Testimonials with Modal | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-024: Testimonials with Modal
+       Click to read full review
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24" x-data="{ open: false, review: '', author: '' }">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm cursor-pointer hover:shadow-md transition-shadow" @click="open = true; review = 'This is the full detailed review text that would be too long to show on the card itself. It goes into great detail about how the product helped solve specific problems and improved efficiency across the board. Highly recommended for anyone in a similar situation.'; author = 'User A'">
+        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+        <p class="text-slate-600 line-clamp-3 mb-4">"This is the full detailed review text that would be too long to show on the card itself..."</p>
+        <div class="font-bold text-slate-900">Read full review &rarr;</div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm cursor-pointer hover:shadow-md transition-shadow" @click="open = true; review = 'Another long review here. The customer support was fantastic and helped me set everything up. The features are robust and the interface is intuitive. I have already recommended this to several colleagues.'; author = 'User B'">
+        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+        <p class="text-slate-600 line-clamp-3 mb-4">"Another long review here. The customer support was fantastic and helped me set everything up..."</p>
+        <div class="font-bold text-slate-900">Read full review &rarr;</div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm cursor-pointer hover:shadow-md transition-shadow" @click="open = true; review = 'I was skeptical at first, but the free trial convinced me. The ROI has been positive from day one. It integrates perfectly with our existing stack and the API is very well documented.'; author = 'User C'">
+        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+        <p class="text-slate-600 line-clamp-3 mb-4">"I was skeptical at first, but the free trial convinced me. The ROI has been positive from day one..."</p>
+        <div class="font-bold text-slate-900">Read full review &rarr;</div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <!-- Modal -->
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm" x-show="open" style="display: none;">
+      <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl" @click.away="open = false">
+        <div class="flex justify-between items-start mb-6">
+          <div class="flex text-yellow-400 text-xl">★★★★★</div>
+          <button @click="open = false" class="text-slate-400 hover:text-slate-600">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <p class="text-slate-700 text-lg leading-relaxed mb-8" x-text="review"></p>
+        <div class="font-bold text-slate-900" x-text="author"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
