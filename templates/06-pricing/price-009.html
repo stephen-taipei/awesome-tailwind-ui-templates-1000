@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dark themed pricing">
+  <title>price-009: Dark Mode Pricing | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-009: Dark Mode Pricing
+       Dark themed pricing
+       ============================================ -->
+
+  <div class="bg-black py-24 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold">Transparent Pricing</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+          <h3 class="text-xl font-bold">Hobby</h3>
+          <div class="my-6 text-4xl font-bold">$0</div>
+          <ul class="space-y-3 text-slate-400 text-sm mb-8">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-slate-700 hover:bg-slate-800">Join</button>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-2xl border border-primary-500 shadow-[0_0_30px_rgba(var(--color-primary-500),0.3)]">
+          <h3 class="text-xl font-bold text-primary-400">Pro</h3>
+          <div class="my-6 text-4xl font-bold">$29</div>
+          <ul class="space-y-3 text-slate-300 text-sm mb-8">
+            <li>Everything in Hobby</li>
+            <li>Feature 3</li>
+            <li>Feature 4</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg bg-primary-600 hover:bg-primary-500 font-bold">Join Pro</button>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+          <h3 class="text-xl font-bold">Team</h3>
+          <div class="my-6 text-4xl font-bold">$99</div>
+          <ul class="space-y-3 text-slate-400 text-sm mb-8">
+            <li>Everything in Pro</li>
+            <li>Feature 5</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-slate-700 hover:bg-slate-800">Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
