@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcast Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Podcast episode card.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-purple-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl p-6 max-w-md w-full flex items-center gap-6">
+      <div class="relative w-24 h-24 flex-shrink-0">
+        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Podcast Cover" class="w-full h-full object-cover rounded-xl shadow-md">
+        <div class="absolute inset-0 flex items-center justify-center bg-black/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+          <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 ml-0.5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 min-w-0">
+        <span class="text-xs font-bold text-purple-600 uppercase tracking-wide">Episode 42</span>
+        <h3 class="text-lg font-bold text-gray-900 truncate mb-1">The Future of AI</h3>
+        <p class="text-sm text-gray-500 truncate mb-3">Tech Talk Daily • 45 min</p>
+
+        <div class="w-full bg-gray-100 rounded-full h-1.5 mb-2">
+          <div class="bg-purple-600 h-1.5 rounded-full" style="width: 35%"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-400 font-medium">
+          <span>15:24</span>
+          <span>45:00</span>
+        </div>
+      </div>
+
+      <button class="text-gray-400 hover:text-purple-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
