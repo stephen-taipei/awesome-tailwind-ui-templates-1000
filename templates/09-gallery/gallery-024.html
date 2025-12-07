@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel with Captions - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Slider with text">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-900 py-24" x-data="{ active: 0, slides: [
+    { img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80', title: 'Urban Exploration', desc: 'Discovering the city secrets.' },
+    { img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80', title: 'Natural Wonders', desc: 'Beauty of the wild.' }
+  ] }">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="relative rounded-2xl overflow-hidden aspect-[2/1]">
+        <template x-for="(slide, index) in slides" :key="index">
+          <div x-show="active === index" class="absolute inset-0">
+            <img :src="slide.img" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-12">
+              <div>
+                <h2 class="text-3xl font-bold text-white mb-2" x-text="slide.title"></h2>
+                <p class="text-slate-300 text-lg" x-text="slide.desc"></p>
+              </div>
+            </div>
+          </div>
+        </template>
+        <div class="absolute bottom-12 right-12 flex gap-4">
+          <button @click="active = active === 0 ? slides.length - 1 : active - 1" class="w-12 h-12 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button @click="active = active === slides.length - 1 ? 0 : active + 1" class="w-12 h-12 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
