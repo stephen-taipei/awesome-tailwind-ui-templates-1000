@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Detailed survey">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12">
+        <div class="mb-10">
+          <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Survey</span>
+          <h2 class="text-3xl font-bold text-slate-900 mt-4">Product Research</h2>
+          <p class="text-slate-600 mt-2">Help us build a better product for you.</p>
+        </div>
+
+        <form class="space-y-8">
+          <div class="space-y-4">
+            <label class="block text-lg font-bold text-slate-900">How often do you use our product?</label>
+            <div class="space-y-2">
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="radio" name="frequency" class="w-5 h-5 text-primary-600 focus:ring-primary-500">
+                <span class="text-slate-700">Daily</span>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="radio" name="frequency" class="w-5 h-5 text-primary-600 focus:ring-primary-500">
+                <span class="text-slate-700">Weekly</span>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="radio" name="frequency" class="w-5 h-5 text-primary-600 focus:ring-primary-500">
+                <span class="text-slate-700">Monthly</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <label class="block text-lg font-bold text-slate-900">Which features are most important to you?</label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="checkbox" class="w-5 h-5 text-primary-600 rounded focus:ring-primary-500">
+                <span class="text-slate-700">Analytics</span>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="checkbox" class="w-5 h-5 text-primary-600 rounded focus:ring-primary-500">
+                <span class="text-slate-700">Collaboration</span>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="checkbox" class="w-5 h-5 text-primary-600 rounded focus:ring-primary-500">
+                <span class="text-slate-700">Mobile App</span>
+              </label>
+              <label class="flex items-center gap-3 p-4 border border-slate-200 rounded-lg cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all">
+                <input type="checkbox" class="w-5 h-5 text-primary-600 rounded focus:ring-primary-500">
+                <span class="text-slate-700">Integrations</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="w-full bg-primary-600 text-white font-bold py-4 rounded-lg hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">Submit Survey</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
