@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Recipe list with cooking time.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-orange-50 flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="p-6 bg-orange-500 text-white">
+        <h2 class="text-2xl font-bold">Popular Recipes</h2>
+        <p class="text-orange-100 text-sm">Curated for you</p>
+      </div>
+
+      <div class="divide-y divide-gray-100">
+        <div class="p-4 flex gap-4 hover:bg-orange-50 transition-colors cursor-pointer group">
+          <img class="w-20 h-20 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=60" alt="">
+          <div class="flex-1">
+            <h3 class="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Classic Margherita Pizza</h3>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                45 min
+              </span>
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                4.8
+              </span>
+            </div>
+            <span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-800 text-[10px] font-bold rounded-full">Vegetarian</span>
+          </div>
+        </div>
+
+        <div class="p-4 flex gap-4 hover:bg-orange-50 transition-colors cursor-pointer group">
+          <img class="w-20 h-20 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=60" alt="">
+          <div class="flex-1">
+            <h3 class="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Buttermilk Pancakes</h3>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                25 min
+              </span>
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                4.9
+              </span>
+            </div>
+            <span class="inline-block mt-2 px-2 py-1 bg-yellow-100 text-yellow-800 text-[10px] font-bold rounded-full">Breakfast</span>
+          </div>
+        </div>
+
+        <div class="p-4 flex gap-4 hover:bg-orange-50 transition-colors cursor-pointer group">
+          <img class="w-20 h-20 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=60" alt="">
+          <div class="flex-1">
+            <h3 class="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Healthy Green Salad</h3>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                15 min
+              </span>
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                4.5
+              </span>
+            </div>
+            <span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-800 text-[10px] font-bold rounded-full">Vegan</span>
+          </div>
+        </div>
+
+        <div class="p-4 flex gap-4 hover:bg-orange-50 transition-colors cursor-pointer group">
+          <img class="w-20 h-20 rounded-lg object-cover shadow-sm group-hover:shadow-md transition-shadow" src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=60" alt="">
+          <div class="flex-1">
+            <h3 class="font-bold text-gray-900 group-hover:text-orange-600 transition-colors">Chocolate Cake</h3>
+            <div class="flex items-center gap-4 mt-2 text-xs text-gray-500">
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                60 min
+              </span>
+              <span class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                4.9
+              </span>
+            </div>
+            <span class="inline-block mt-2 px-2 py-1 bg-purple-100 text-purple-800 text-[10px] font-bold rounded-full">Dessert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
