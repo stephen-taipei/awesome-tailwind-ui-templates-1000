@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stats in card containers">
+  <title>content-027: Stats Cards | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-027: Stats Cards
+       Stats in card containers
+       ============================================ -->
+
+  <div class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow border border-slate-100">
+        <div class="text-sm text-slate-500 font-medium">Total Revenue</div>
+        <div class="mt-2 text-3xl font-bold text-slate-900">$45,231</div>
+        <div class="mt-2 text-sm text-green-600 flex items-center">
+          <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          +20.1%
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow border border-slate-100">
+        <div class="text-sm text-slate-500 font-medium">Active Users</div>
+        <div class="mt-2 text-3xl font-bold text-slate-900">2,345</div>
+        <div class="mt-2 text-sm text-green-600 flex items-center">
+          <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          +15.3%
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow border border-slate-100">
+        <div class="text-sm text-slate-500 font-medium">Bounce Rate</div>
+        <div class="mt-2 text-3xl font-bold text-slate-900">42.3%</div>
+        <div class="mt-2 text-sm text-red-600 flex items-center">
+          <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg>
+          -4.1%
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow border border-slate-100">
+        <div class="text-sm text-slate-500 font-medium">Avg. Session</div>
+        <div class="mt-2 text-3xl font-bold text-slate-900">4m 12s</div>
+        <div class="mt-2 text-sm text-slate-500">
+          No change
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
