@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Video background CTA">
+  <title>cta-018: CTA with Video Background | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       cta-018: CTA with Video Background
+       Video background CTA
+       ============================================ -->
+
+  <div class="relative py-32 sm:py-40">
+    <div class="absolute inset-0 overflow-hidden">
+      <video class="h-full w-full object-cover" autoplay muted loop playsinline poster="https://via.placeholder.com/1920x1080">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-stars-in-space-1610-large.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-slate-900/70 mix-blend-multiply"></div>
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Experience the impossible</h2>
+      <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">Push the boundaries of what's possible with our advanced technology.</p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a href="#" class="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Explore now</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
