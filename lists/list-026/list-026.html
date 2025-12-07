@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Job listing with tags.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div class="max-w-3xl w-full">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Open Positions</h2>
+        <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded-full">12 Available</span>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Senior Frontend Developer</h3>
+                <p class="text-gray-500 text-sm mb-2">Engineering • Remote</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded border border-blue-100">React</span>
+                  <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded border border-blue-100">TypeScript</span>
+                  <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded border border-blue-100">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 md:flex-col md:items-end">
+              <span class="text-gray-900 font-bold">$120k - $160k</span>
+              <span class="text-xs text-gray-500">Posted 2 days ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Product Designer</h3>
+                <p class="text-gray-500 text-sm mb-2">Design • New York, NY</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded border border-purple-100">Figma</span>
+                  <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded border border-purple-100">UI/UX</span>
+                  <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded border border-purple-100">Prototyping</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 md:flex-col md:items-end">
+              <span class="text-gray-900 font-bold">$100k - $140k</span>
+              <span class="text-xs text-gray-500">Posted 1 week ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Marketing Manager</h3>
+                <p class="text-gray-500 text-sm mb-2">Marketing • London, UK</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded border border-green-100">SEO</span>
+                  <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded border border-green-100">Content</span>
+                  <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded border border-green-100">Social Media</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 md:flex-col md:items-end">
+              <span class="text-gray-900 font-bold">$80k - $110k</span>
+              <span class="text-xs text-gray-500">Posted 3 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
