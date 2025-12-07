@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Testimonials with user photos">
+  <title>test-002: Testimonials with Avatars | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-002: Testimonials with Avatars
+       Testimonials with user photos
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="bg-slate-50 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User" class="w-16 h-16 rounded-full object-cover">
+          <div>
+            <p class="text-slate-600 italic mb-4">"I was blown away by the quality of the product. It exceeded all my expectations and has become an essential part of my daily routine."</p>
+            <div class="font-bold text-slate-900">Alice Smith</div>
+            <div class="text-sm text-slate-500">Marketing Director</div>
+          </div>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User" class="w-16 h-16 rounded-full object-cover">
+          <div>
+            <p class="text-slate-600 italic mb-4">"The team behind this is incredible. They listen to feedback and constantly improve the platform. A truly customer-centric company."</p>
+            <div class="font-bold text-slate-900">Bob Williams</div>
+            <div class="text-sm text-slate-500">CTO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
