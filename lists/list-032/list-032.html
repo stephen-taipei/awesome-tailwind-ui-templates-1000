@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Task list with drag handles.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="p-6 bg-indigo-600 text-white flex justify-between items-center">
+        <div>
+          <h2 class="text-xl font-bold">Today's Tasks</h2>
+          <p class="text-indigo-200 text-sm">5 tasks remaining</p>
+        </div>
+        <button class="bg-indigo-500 hover:bg-indigo-400 p-2 rounded-lg transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-4 space-y-2">
+        <div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow cursor-move group">
+          <div class="text-gray-300 cursor-move">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" class="rounded text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <span class="font-medium text-gray-900">Review PR #1024</span>
+            </div>
+          </div>
+          <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded">High</span>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow cursor-move group">
+          <div class="text-gray-300 cursor-move">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" class="rounded text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <span class="font-medium text-gray-900">Update documentation</span>
+            </div>
+          </div>
+          <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded">Medium</span>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow cursor-move group">
+          <div class="text-gray-300 cursor-move">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" class="rounded text-indigo-600 focus:ring-indigo-500 border-gray-300" checked>
+              <span class="font-medium text-gray-400 line-through">Team meeting</span>
+            </div>
+          </div>
+          <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Done</span>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow cursor-move group">
+          <div class="text-gray-300 cursor-move">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" class="rounded text-indigo-600 focus:ring-indigo-500 border-gray-300">
+              <span class="font-medium text-gray-900">Email client</span>
+            </div>
+          </div>
+          <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Low</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
