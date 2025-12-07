@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flip to reveal info">
+  <title>team-012: Team with Flip Cards | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       team-012: Team with Flip Cards
+       Flip to reveal info
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900">Flip to Meet</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group h-80 w-full [perspective:1000px]">
+          <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+              <img class="h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Leslie Alexander</h3>
+                <p class="text-primary-300">CEO</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-900 p-8 text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center">
+              <h3 class="text-xl font-bold text-white mb-2">Leslie Alexander</h3>
+              <p class="text-primary-400 mb-4">CEO</p>
+              <p class="text-sm">"Visionary leader with a passion for innovation and growth."</p>
+              <div class="mt-6 flex gap-4">
+                <a href="#" class="text-white hover:text-primary-400">Twitter</a>
+                <a href="#" class="text-white hover:text-primary-400">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group h-80 w-full [perspective:1000px]">
+          <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+              <img class="h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Michael Foster</h3>
+                <p class="text-primary-300">CTO</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-900 p-8 text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center">
+              <h3 class="text-xl font-bold text-white mb-2">Michael Foster</h3>
+              <p class="text-primary-400 mb-4">CTO</p>
+              <p class="text-sm">"Tech enthusiast ensuring our platform is always ahead of the curve."</p>
+              <div class="mt-6 flex gap-4">
+                <a href="#" class="text-white hover:text-primary-400">Twitter</a>
+                <a href="#" class="text-white hover:text-primary-400">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group h-80 w-full [perspective:1000px]">
+          <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+              <img class="h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Dries Vincent</h3>
+                <p class="text-primary-300">COO</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-900 p-8 text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center">
+              <h3 class="text-xl font-bold text-white mb-2">Dries Vincent</h3>
+              <p class="text-primary-400 mb-4">COO</p>
+              <p class="text-sm">"Operational wizard keeping everything running smoothly."</p>
+              <div class="mt-6 flex gap-4">
+                <a href="#" class="text-white hover:text-primary-400">Twitter</a>
+                <a href="#" class="text-white hover:text-primary-400">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="group h-80 w-full [perspective:1000px]">
+          <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+            <div class="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
+              <img class="h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Lindsay Walton</h3>
+                <p class="text-primary-300">Designer</p>
+              </div>
+            </div>
+            <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-900 p-8 text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center">
+              <h3 class="text-xl font-bold text-white mb-2">Lindsay Walton</h3>
+              <p class="text-primary-400 mb-4">Designer</p>
+              <p class="text-sm">"Creative mind crafting beautiful and intuitive user experiences."</p>
+              <div class="mt-6 flex gap-4">
+                <a href="#" class="text-white hover:text-primary-400">Twitter</a>
+                <a href="#" class="text-white hover:text-primary-400">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
