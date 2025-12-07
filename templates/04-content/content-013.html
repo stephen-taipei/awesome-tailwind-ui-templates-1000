@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Multiple image grid">
+  <title>content-013: Image Gallery Grid | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-013: Image Gallery Grid
+       Multiple image grid
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <img src="https://via.placeholder.com/400" class="w-full h-64 object-cover rounded-lg" alt="Gallery 1">
+        <img src="https://via.placeholder.com/400" class="w-full h-64 object-cover rounded-lg" alt="Gallery 2">
+        <img src="https://via.placeholder.com/400" class="w-full h-64 object-cover rounded-lg" alt="Gallery 3">
+        <img src="https://via.placeholder.com/400" class="w-full h-64 object-cover rounded-lg" alt="Gallery 4">
+        <img src="https://via.placeholder.com/400" class="w-full h-64 object-cover rounded-lg" alt="Gallery 5">
+        <img src="https://via.placeholder.com/400" class="w-full h-64 object-cover rounded-lg" alt="Gallery 6">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
