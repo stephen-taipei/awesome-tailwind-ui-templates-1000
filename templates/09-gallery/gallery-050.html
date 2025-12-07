@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixed Media Gallery - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Images, video, audio">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        <div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden relative group">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover">
+          <div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full">
+            <svg class="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          </div>
+        </div>
+        <div class="md:col-span-1 md:row-span-1 rounded-xl overflow-hidden relative group bg-slate-900 flex items-center justify-center">
+          <div class="text-center p-4">
+            <div class="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-2">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+            </div>
+            <span class="text-white font-bold text-sm">Podcast Ep. 1</span>
+          </div>
+        </div>
+        <div class="md:col-span-1 md:row-span-2 rounded-xl overflow-hidden relative group">
+          <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors cursor-pointer">
+              <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-1 md:row-span-1 rounded-xl overflow-hidden relative group bg-slate-100 p-6 flex flex-col justify-center">
+          <h3 class="font-bold text-slate-900 text-lg">Article</h3>
+          <p class="text-slate-600 text-sm mt-2 line-clamp-3">Read our latest thoughts on design and technology.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
