@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visual stats">
+  <title>test-033: Testimonials with Circular Progress | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-033: Testimonials with Circular Progress
+       Visual stats
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="relative w-32 h-32 mx-auto mb-6">
+          <svg class="w-full h-full transform -rotate-90">
+            <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="transparent" class="text-slate-100" />
+            <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="377" stroke-dashoffset="37" class="text-green-500" />
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-slate-900">90%</div>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Efficiency Increase</h3>
+        <p class="text-slate-600">"Our team is working 90% faster since we switched."</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="relative w-32 h-32 mx-auto mb-6">
+          <svg class="w-full h-full transform -rotate-90">
+            <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="transparent" class="text-slate-100" />
+            <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="377" stroke-dashoffset="18" class="text-blue-500" />
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-slate-900">95%</div>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Customer Satisfaction</h3>
+        <p class="text-slate-600">"Our customers love the new interface."</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+        <div class="relative w-32 h-32 mx-auto mb-6">
+          <svg class="w-full h-full transform -rotate-90">
+            <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="transparent" class="text-slate-100" />
+            <circle cx="64" cy="64" r="60" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="377" stroke-dashoffset="0" class="text-purple-500" />
+          </svg>
+          <div class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-slate-900">100%</div>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Uptime</h3>
+        <p class="text-slate-600">"Rock solid reliability we can count on."</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
