@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive pricing slider">
+  <title>price-008: Pricing with Slider | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-008: Pricing with Slider
+       Interactive pricing slider
+       ============================================ -->
+
+  <div class="bg-white py-24" x-data="{ users: 10, pricePerUser: 15 }">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-slate-900 mb-12">Scale with your team</h2>
+
+      <!-- Alpine.js required -->
+      <script src="https://unpkg.com/alpinejs" defer></script>
+
+      <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200">
+        <div class="flex items-center justify-between mb-8">
+          <div class="text-left">
+            <p class="text-sm font-bold text-slate-500 uppercase">Team Size</p>
+            <p class="text-3xl font-bold text-slate-900"><span x-text="users">10</span> Users</p>
+          </div>
+          <div class="text-right">
+            <p class="text-sm font-bold text-slate-500 uppercase">Estimated Cost</p>
+            <p class="text-3xl font-bold text-primary-600">$<span x-text="users * pricePerUser">150</span><span class="text-lg text-slate-400 font-normal">/mo</span></p>
+          </div>
+        </div>
+
+        <input type="range" min="1" max="100" x-model="users" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary-600">
+
+        <div class="mt-12">
+          <a href="#" class="inline-block bg-slate-900 text-white font-bold py-3 px-8 rounded-lg hover:bg-slate-800">Start Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
