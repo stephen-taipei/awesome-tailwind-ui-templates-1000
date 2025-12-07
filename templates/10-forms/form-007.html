@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Payment and shipping">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl font-bold text-slate-900 mb-8">Shipping Information</h2>
+          <form class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Address</label>
+              <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">City</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">State</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">ZIP Code</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-8">Payment Details</h2>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Card Number</label>
+              <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="0000 0000 0000 0000">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">Expiration Date</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="MM/YY">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">CVC</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="123">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h3 class="text-xl font-bold text-slate-900 mb-6">Order Summary</h3>
+            <div class="space-y-4 mb-6">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                  <div class="w-16 h-16 bg-gray-100 rounded-lg"></div>
+                  <div>
+                    <div class="font-bold text-slate-900">Premium Plan</div>
+                    <div class="text-sm text-slate-500">Monthly subscription</div>
+                  </div>
+                </div>
+                <div class="font-bold text-slate-900">$29.00</div>
+              </div>
+            </div>
+            <div class="border-t border-slate-100 pt-4 space-y-2">
+              <div class="flex justify-between text-slate-600">
+                <span>Subtotal</span>
+                <span>$29.00</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Tax</span>
+                <span>$2.90</span>
+              </div>
+              <div class="flex justify-between text-xl font-bold text-slate-900 pt-4 border-t border-slate-100 mt-4">
+                <span>Total</span>
+                <span>$31.90</span>
+              </div>
+            </div>
+            <button class="w-full bg-primary-600 text-white font-bold py-4 rounded-lg mt-8 hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">Pay Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
