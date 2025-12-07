@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel with Thumbnails - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Slider with preview">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-50 py-24" x-data="{ active: 0, slides: [
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'
+  ] }">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="overflow-hidden rounded-xl aspect-video mb-4">
+        <img :src="slides[active]" class="w-full h-full object-cover transition-opacity duration-300">
+      </div>
+      <div class="grid grid-cols-4 gap-4">
+        <template x-for="(slide, index) in slides" :key="index">
+          <button @click="active = index" :class="active === index ? 'ring-2 ring-primary-500' : 'opacity-70 hover:opacity-100'" class="rounded-lg overflow-hidden aspect-video transition-all">
+            <img :src="slide" class="w-full h-full object-cover">
+          </button>
+        </template>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
