@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Blog post or news article card.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-stone-100 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-md w-full hover:shadow-xl transition-shadow duration-300">
+      <div class="relative h-56">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Office" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute top-4 left-4">
+          <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Technology</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="flex items-center gap-3 mb-4 text-sm text-stone-500">
+          <div class="flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span>Oct 24, 2023</span>
+          </div>
+          <span>•</span>
+          <div class="flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>5 min read</span>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-stone-800 mb-3 leading-tight hover:text-blue-600 transition-colors cursor-pointer">
+          The Future of Remote Work: Trends to Watch in 2024
+        </h3>
+
+        <p class="text-stone-600 mb-6 line-clamp-3">
+          As we move into the new year, the landscape of remote work continues to evolve. From hybrid models to digital nomad visas, here's what you need to know about the changing workplace.
+        </p>
+
+        <div class="flex items-center justify-between pt-6 border-t border-stone-100">
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Author" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <p class="text-sm font-bold text-stone-800">David Miller</p>
+              <p class="text-xs text-stone-500">Editor in Chief</p>
+            </div>
+          </div>
+          <button class="text-stone-400 hover:text-blue-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
