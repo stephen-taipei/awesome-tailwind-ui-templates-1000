@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic 3 Column Grid - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Simple image grid">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900">Our Gallery</h2>
+        <p class="text-slate-600 mt-4">A collection of our best moments.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+          <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
+        </div>
+        <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="" class="object-cover w-full h-full hover:scale-105 transition-transform duration-300">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
