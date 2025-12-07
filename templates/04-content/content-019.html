@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sliding image gallery">
+  <title>content-019: Image Carousel | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-019: Image Carousel
+       Sliding image gallery
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex gap-4 overflow-x-auto pb-8 snap-x">
+        <div class="snap-center shrink-0 w-80 md:w-96">
+          <img src="https://via.placeholder.com/400x300" class="w-full rounded-xl shadow-md" alt="Slide 1">
+        </div>
+        <div class="snap-center shrink-0 w-80 md:w-96">
+          <img src="https://via.placeholder.com/400x300" class="w-full rounded-xl shadow-md" alt="Slide 2">
+        </div>
+        <div class="snap-center shrink-0 w-80 md:w-96">
+          <img src="https://via.placeholder.com/400x300" class="w-full rounded-xl shadow-md" alt="Slide 3">
+        </div>
+        <div class="snap-center shrink-0 w-80 md:w-96">
+          <img src="https://via.placeholder.com/400x300" class="w-full rounded-xl shadow-md" alt="Slide 4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
