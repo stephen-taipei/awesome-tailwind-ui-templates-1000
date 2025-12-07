@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey with Progress - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Multi-page survey with progress bar.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-emerald-50 flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+      <!-- Header -->
+      <div class="bg-emerald-800 p-8 text-white">
+        <h1 class="text-2xl font-bold mb-2">Employee Satisfaction Survey</h1>
+        <p class="text-emerald-200 text-sm">Help us improve our workplace environment.</p>
+
+        <div class="mt-8">
+          <div class="flex justify-between text-xs font-medium uppercase tracking-wider mb-2">
+            <span>Progress</span>
+            <span>40%</span>
+          </div>
+          <div class="w-full bg-emerald-900/50 h-2 rounded-full overflow-hidden">
+            <div class="w-2/5 h-full bg-emerald-400 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="p-8">
+        <form class="space-y-8">
+          <div class="space-y-4">
+            <h3 class="text-lg font-semibold text-gray-900">Work-Life Balance</h3>
+
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">I feel I have a good work-life balance.</label>
+                <div class="flex gap-2">
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q1" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Strongly Disagree</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q1" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Disagree</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q1" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Neutral</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q1" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Agree</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q1" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Strongly Agree</div>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">My workload is manageable.</label>
+                <div class="flex gap-2">
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q2" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Strongly Disagree</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q2" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Disagree</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q2" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Neutral</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q2" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Agree</div>
+                  </label>
+                  <label class="flex-1 cursor-pointer">
+                    <input type="radio" name="q2" class="peer sr-only">
+                    <div class="py-3 px-2 text-center text-sm border border-gray-200 rounded-lg hover:bg-gray-50 peer-checked:bg-emerald-50 peer-checked:border-emerald-500 peer-checked:text-emerald-700 transition-all">Strongly Agree</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between pt-6 border-t border-gray-100">
+            <button type="button" class="px-6 py-2.5 text-gray-600 font-medium hover:text-gray-900 transition-colors">Previous</button>
+            <button type="button" class="px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-500/30">Next Section</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
