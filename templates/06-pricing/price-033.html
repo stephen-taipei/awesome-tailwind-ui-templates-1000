@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frosted glass cards">
+  <title>price-033: Pricing with Glassmorphism | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-033: Pricing with Glassmorphism
+       Frosted glass cards
+       ============================================ -->
+
+  <div class="py-24 bg-gradient-to-br from-purple-500 via-pink-500 to-red-500">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white/20 backdrop-blur-lg border border-white/30 p-8 rounded-2xl text-white shadow-xl">
+        <h3 class="text-xl font-bold">Starter</h3>
+        <div class="mt-4 text-4xl font-bold">$19</div>
+        <p class="mt-2 text-white/80">Perfect for beginners.</p>
+        <button class="mt-8 w-full py-3 bg-white/20 hover:bg-white/30 rounded-xl font-bold border border-white/30 transition-colors">Get Started</button>
+      </div>
+      <div class="bg-white/40 backdrop-blur-lg border border-white/50 p-8 rounded-2xl text-white shadow-2xl transform scale-105">
+        <h3 class="text-xl font-bold">Professional</h3>
+        <div class="mt-4 text-4xl font-bold">$49</div>
+        <p class="mt-2 text-white/90">For serious creators.</p>
+        <button class="mt-8 w-full py-3 bg-white text-purple-600 rounded-xl font-bold hover:bg-slate-50 transition-colors shadow-lg">Get Started</button>
+      </div>
+      <div class="bg-white/20 backdrop-blur-lg border border-white/30 p-8 rounded-2xl text-white shadow-xl">
+        <h3 class="text-xl font-bold">Agency</h3>
+        <div class="mt-4 text-4xl font-bold">$99</div>
+        <p class="mt-2 text-white/80">For large teams.</p>
+        <button class="mt-8 w-full py-3 bg-white/20 hover:bg-white/30 rounded-xl font-bold border border-white/30 transition-colors">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
