@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pricing cards + FAQ section">
+  <title>price-010: Pricing with FAQ | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-010: Pricing with FAQ
+       Pricing cards + FAQ section
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+        <div class="border border-slate-200 p-8 rounded-2xl">
+          <h3 class="text-2xl font-bold text-slate-900">Monthly</h3>
+          <p class="text-4xl font-bold mt-4">$29<span class="text-base font-normal text-slate-500">/mo</span></p>
+          <button class="mt-8 w-full bg-slate-100 py-3 rounded-lg font-bold text-slate-900">Choose Monthly</button>
+        </div>
+        <div class="border border-primary-200 bg-primary-50 p-8 rounded-2xl">
+          <h3 class="text-2xl font-bold text-primary-900">Yearly</h3>
+          <p class="text-4xl font-bold mt-4 text-primary-900">$290<span class="text-base font-normal text-primary-700">/yr</span></p>
+          <p class="text-sm text-green-600 font-bold mt-1">Save 2 months</p>
+          <button class="mt-7 w-full bg-primary-600 py-3 rounded-lg font-bold text-white">Choose Yearly</button>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h3>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-bold text-slate-900">Can I cancel anytime?</h4>
+            <p class="mt-2 text-slate-600">Yes, you can cancel your subscription at any time. You will continue to have access until the end of your billing period.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900">Do you offer refunds?</h4>
+            <p class="mt-2 text-slate-600">We offer a 30-day money-back guarantee for all new subscriptions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
