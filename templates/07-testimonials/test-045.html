@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3D tilt effect">
+  <title>test-045: Testimonials with 3D Cards | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-045: Testimonials with 3D Cards
+       3D tilt effect
+       ============================================ -->
+
+  <div class="bg-slate-900 py-24 perspective-1000">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group h-96 w-full [perspective:1000px]">
+        <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-800 p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" class="w-24 h-24 rounded-full mb-6 border-4 border-primary-500">
+            <h3 class="text-xl font-bold text-white mb-2">John Doe</h3>
+            <p class="text-slate-400">CEO, TechCorp</p>
+            <p class="mt-6 text-primary-400 font-bold">Hover to read review &rarr;</p>
+          </div>
+          <div class="absolute inset-0 h-full w-full rounded-xl bg-primary-600 p-8 flex items-center justify-center text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="text-lg">"This product has completely transformed our workflow. We are 3x more productive now."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="group h-96 w-full [perspective:1000px]">
+        <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-800 p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" class="w-24 h-24 rounded-full mb-6 border-4 border-primary-500">
+            <h3 class="text-xl font-bold text-white mb-2">Jane Smith</h3>
+            <p class="text-slate-400">Designer, CreativeStudio</p>
+            <p class="mt-6 text-primary-400 font-bold">Hover to read review &rarr;</p>
+          </div>
+          <div class="absolute inset-0 h-full w-full rounded-xl bg-primary-600 p-8 flex items-center justify-center text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="text-lg">"The attention to detail is amazing. It's rare to find such high quality work."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="group h-96 w-full [perspective:1000px]">
+        <div class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 h-full w-full rounded-xl bg-slate-800 p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" class="w-24 h-24 rounded-full mb-6 border-4 border-primary-500">
+            <h3 class="text-xl font-bold text-white mb-2">Mike Johnson</h3>
+            <p class="text-slate-400">Dev, CodeHouse</p>
+            <p class="mt-6 text-primary-400 font-bold">Hover to read review &rarr;</p>
+          </div>
+          <div class="absolute inset-0 h-full w-full rounded-xl bg-primary-600 p-8 flex items-center justify-center text-center text-slate-100 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="text-lg">"Clean code, great documentation, and excellent support. What more could you ask for?"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
