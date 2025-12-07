@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History/Activity Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal showing history timeline.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+           <div class="p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-6">Activity History</h3>
+
+              <div class="flow-root">
+                 <ul role="list" class="-mb-8">
+                    <li>
+                       <div class="relative pb-8">
+                          <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                          <div class="relative flex space-x-3">
+                             <div>
+                                <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                   <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                </span>
+                             </div>
+                             <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                <div>
+                                   <p class="text-sm text-gray-500">Created new project <a href="#" class="font-medium text-gray-900">Website Redesign</a></p>
+                                </div>
+                                <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                                   <time datetime="2023-09-20">2h ago</time>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div class="relative pb-8">
+                          <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                          <div class="relative flex space-x-3">
+                             <div>
+                                <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                   <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </span>
+                             </div>
+                             <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                <div>
+                                   <p class="text-sm text-gray-500">Completed task <a href="#" class="font-medium text-gray-900">Wireframes</a></p>
+                                </div>
+                                <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                                   <time datetime="2023-09-20">4h ago</time>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div class="relative pb-8">
+                          <div class="relative flex space-x-3">
+                             <div>
+                                <span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
+                                   <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                                </span>
+                             </div>
+                             <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                <div>
+                                   <p class="text-sm text-gray-500">Commented on <a href="#" class="font-medium text-gray-900">Design Mockup</a></p>
+                                </div>
+                                <div class="whitespace-nowrap text-right text-sm text-gray-500">
+                                   <time datetime="2023-09-19">1d ago</time>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </li>
+                 </ul>
+              </div>
+              <button class="w-full mt-6 bg-gray-50 text-gray-600 font-medium py-2 rounded-md hover:bg-gray-100">View All Activity</button>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
