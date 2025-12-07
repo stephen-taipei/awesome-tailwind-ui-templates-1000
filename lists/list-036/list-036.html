@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Comment thread list.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="p-6 border-b border-gray-100">
+        <h2 class="text-xl font-bold text-gray-900">Comments (12)</h2>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <div class="flex gap-4">
+          <img class="w-10 h-10 rounded-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          <div class="flex-1">
+            <div class="bg-gray-50 p-4 rounded-lg rounded-tl-none">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-bold text-gray-900">Mark Johnson</h3>
+                <span class="text-xs text-gray-500">2 hours ago</span>
+              </div>
+              <p class="text-gray-600 text-sm">This is exactly what I was looking for! The design is clean and the code is easy to understand. Great job!</p>
+            </div>
+            <div class="flex gap-4 mt-2 ml-2">
+              <button class="text-xs font-medium text-gray-500 hover:text-gray-900">Like</button>
+              <button class="text-xs font-medium text-gray-500 hover:text-gray-900">Reply</button>
+            </div>
+
+            <div class="mt-4 flex gap-4">
+              <img class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <div class="flex-1">
+                <div class="bg-gray-50 p-3 rounded-lg rounded-tl-none">
+                  <div class="flex justify-between items-baseline mb-2">
+                    <h3 class="font-bold text-gray-900 text-sm">Emily Davis</h3>
+                    <span class="text-xs text-gray-500">1 hour ago</span>
+                  </div>
+                  <p class="text-gray-600 text-sm">I agree! It saved me so much time.</p>
+                </div>
+                <div class="flex gap-4 mt-2 ml-2">
+                  <button class="text-xs font-medium text-gray-500 hover:text-gray-900">Like</button>
+                  <button class="text-xs font-medium text-gray-500 hover:text-gray-900">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <img class="w-10 h-10 rounded-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          <div class="flex-1">
+            <div class="bg-gray-50 p-4 rounded-lg rounded-tl-none">
+              <div class="flex justify-between items-baseline mb-2">
+                <h3 class="font-bold text-gray-900">David Wilson</h3>
+                <span class="text-xs text-gray-500">5 hours ago</span>
+              </div>
+              <p class="text-gray-600 text-sm">Is there a dark mode version available? I'd love to use this in my project but I need dark mode support.</p>
+            </div>
+            <div class="flex gap-4 mt-2 ml-2">
+              <button class="text-xs font-medium text-gray-500 hover:text-gray-900">Like</button>
+              <button class="text-xs font-medium text-gray-500 hover:text-gray-900">Reply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 border-t border-gray-100 bg-gray-50">
+        <div class="flex gap-4">
+          <img class="w-10 h-10 rounded-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          <div class="flex-1">
+            <textarea rows="3" class="w-full border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-sm" placeholder="Write a comment..."></textarea>
+            <div class="mt-2 flex justify-end">
+              <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors">Post Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
