@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CTA with interactive slider">
+  <title>cta-030: CTA with Slider | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       cta-030: CTA with Slider
+       CTA with interactive slider
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl mb-8">Calculate your savings</h2>
+      <div class="bg-slate-50 p-8 rounded-2xl">
+        <label for="users-range" class="block mb-2 text-sm font-medium text-slate-900">Number of Users: <span id="user-count" class="font-bold text-primary-600">50</span></label>
+        <input id="users-range" type="range" min="1" max="100" value="50" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary-600">
+        <div class="mt-8">
+          <p class="text-lg text-slate-600">Estimated Savings:</p>
+          <p class="text-4xl font-bold text-slate-900">$<span id="savings-amount">500</span>/mo</p>
+        </div>
+        <div class="mt-8">
+          <a href="#" class="rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600">Start Saving</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const slider = document.getElementById('users-range');
+      const count = document.getElementById('user-count');
+      const amount = document.getElementById('savings-amount');
+      slider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        count.textContent = val;
+        amount.textContent = val * 10;
+      });
+    </script>
+  </div>
+
+</body>
+</html>
