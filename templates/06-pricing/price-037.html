@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dark mode with neon accents">
+  <title>price-037: Pricing with Neon Glow | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-037: Pricing with Neon Glow
+       Dark mode with neon accents
+       ============================================ -->
+
+  <div class="bg-slate-900 py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="bg-slate-800 p-8 rounded-2xl shadow-[0_0_15px_rgba(59,130,246,0.5)] border border-blue-500/30 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-shadow">
+        <h3 class="text-xl font-bold text-blue-400">Blue Neon</h3>
+        <div class="mt-4 text-3xl font-bold text-white">$29</div>
+        <button class="mt-8 w-full py-2 rounded-lg border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition-colors shadow-[0_0_10px_rgba(59,130,246,0.5)]">Glow</button>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-2xl shadow-[0_0_15px_rgba(168,85,247,0.5)] border border-purple-500/30 hover:shadow-[0_0_25px_rgba(168,85,247,0.7)] transition-shadow transform scale-105">
+        <h3 class="text-xl font-bold text-purple-400">Purple Neon</h3>
+        <div class="mt-4 text-3xl font-bold text-white">$59</div>
+        <button class="mt-8 w-full py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-500 transition-colors shadow-[0_0_15px_rgba(168,85,247,0.8)]">Glow</button>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-2xl shadow-[0_0_15px_rgba(236,72,153,0.5)] border border-pink-500/30 hover:shadow-[0_0_25px_rgba(236,72,153,0.7)] transition-shadow">
+        <h3 class="text-xl font-bold text-pink-400">Pink Neon</h3>
+        <div class="mt-4 text-3xl font-bold text-white">$99</div>
+        <button class="mt-8 w-full py-2 rounded-lg border border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-colors shadow-[0_0_10px_rgba(236,72,153,0.5)]">Glow</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
