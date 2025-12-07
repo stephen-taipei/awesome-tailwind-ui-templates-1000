@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discount badge on card">
+  <title>price-020: Pricing with Discount Badge | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-020: Pricing with Discount Badge
+       Discount badge on card
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="border border-slate-200 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-slate-900">Regular</h3>
+        <div class="mt-4 text-4xl font-bold">$49</div>
+        <button class="mt-8 w-full py-3 border border-slate-300 rounded-lg hover:bg-slate-50">Choose Regular</button>
+      </div>
+      <div class="border-2 border-red-500 rounded-2xl p-8 relative">
+        <div class="absolute -top-4 right-8 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-sm">SAVE 50%</div>
+        <h3 class="text-2xl font-bold text-slate-900">Special</h3>
+        <div class="mt-4 flex items-baseline gap-2">
+          <span class="text-4xl font-bold text-red-600">$24.50</span>
+          <span class="text-xl text-slate-400 line-through">$49</span>
+        </div>
+        <p class="text-sm text-red-600 mt-2 font-medium">Limited time offer!</p>
+        <button class="mt-6 w-full py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 font-bold">Claim Offer</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
