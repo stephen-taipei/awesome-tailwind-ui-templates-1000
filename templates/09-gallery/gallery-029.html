@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Row Carousel - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Grid slider">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-50 py-24" x-data="{ active: 0, pages: [
+    [
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'
+    ],
+    [
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'
+    ]
+  ] }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="relative overflow-hidden">
+        <template x-for="(page, index) in pages" :key="index">
+          <div x-show="active === index" class="grid grid-cols-2 md:grid-cols-4 gap-4" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-8" x-transition:enter-end="opacity-100 transform translate-x-0">
+            <template x-for="img in page" :key="img">
+              <div class="aspect-square rounded-xl overflow-hidden">
+                <img :src="img" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+      <div class="flex justify-center gap-4 mt-8">
+        <button @click="active = active === 0 ? pages.length - 1 : active - 1" class="p-2 rounded-full bg-white shadow-sm hover:bg-slate-50 text-slate-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button @click="active = active === pages.length - 1 ? 0 : active + 1" class="p-2 rounded-full bg-white shadow-sm hover:bg-slate-50 text-slate-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
