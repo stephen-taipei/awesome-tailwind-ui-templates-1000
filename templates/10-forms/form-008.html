@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Progress indicator">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24" x-data="{ step: 1 }">
+    <div class="max-w-3xl mx-auto px-6">
+      <!-- Steps -->
+      <div class="mb-12">
+        <div class="flex items-center justify-between relative">
+          <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-full h-1 bg-gray-200 -z-10"></div>
+          <div class="flex flex-col items-center gap-2 bg-gray-50 px-2">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors" :class="step >= 1 ? 'bg-primary-600 text-white' : 'bg-gray-200 text-slate-500'">1</div>
+            <span class="text-sm font-medium" :class="step >= 1 ? 'text-primary-600' : 'text-slate-500'">Account</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 bg-gray-50 px-2">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors" :class="step >= 2 ? 'bg-primary-600 text-white' : 'bg-gray-200 text-slate-500'">2</div>
+            <span class="text-sm font-medium" :class="step >= 2 ? 'text-primary-600' : 'text-slate-500'">Personal</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 bg-gray-50 px-2">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors" :class="step >= 3 ? 'bg-primary-600 text-white' : 'bg-gray-200 text-slate-500'">3</div>
+            <span class="text-sm font-medium" :class="step >= 3 ? 'text-primary-600' : 'text-slate-500'">Confirm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Content -->
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <div x-show="step === 1" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0">
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Account Information</h2>
+          <div class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Username</label>
+              <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+              <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Password</label>
+              <input type="password" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button @click="step = 2" class="bg-primary-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors">Next Step</button>
+          </div>
+        </div>
+
+        <div x-show="step === 2" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" style="display: none;">
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Personal Details</h2>
+          <div class="space-y-6">
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
+              <input type="tel" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button @click="step = 1" class="text-slate-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">Back</button>
+            <button @click="step = 3" class="bg-primary-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors">Next Step</button>
+          </div>
+        </div>
+
+        <div x-show="step === 3" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" style="display: none;">
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Confirmation</h2>
+          <div class="bg-primary-50 rounded-xl p-6 mb-8">
+            <p class="text-primary-800">Please review your information before submitting.</p>
+          </div>
+          <div class="space-y-4 text-slate-600">
+            <p>By clicking submit, you agree to our Terms of Service and Privacy Policy.</p>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button @click="step = 2" class="text-slate-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">Back</button>
+            <button class="bg-primary-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
