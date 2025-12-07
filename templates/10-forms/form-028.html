@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Report Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Issue reporting">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Report a Bug</h2>
+        <p class="text-slate-600 mb-8">Help us squash bugs by providing as much detail as possible.</p>
+
+        <form class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Issue Title</label>
+            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all" placeholder="e.g. Navigation menu not working on mobile">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Browser</label>
+              <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white">
+                <option>Chrome</option>
+                <option>Firefox</option>
+                <option>Safari</option>
+                <option>Edge</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-2">Operating System</label>
+              <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white">
+                <option>Windows</option>
+                <option>macOS</option>
+                <option>iOS</option>
+                <option>Android</option>
+                <option>Linux</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Steps to Reproduce</label>
+            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all" placeholder="1. Go to homepage&#10;2. Click on..."></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Expected Behavior</label>
+            <textarea rows="2" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Screenshot (Optional)</label>
+            <input type="file" class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-red-50 file:text-red-700 hover:file:bg-red-100 transition-colors">
+          </div>
+
+          <button class="w-full bg-red-600 text-white font-bold py-4 rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-500/30">Submit Report</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
