@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wave shape separator">
+  <title>price-048: Pricing with Wave Divider | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-048: Pricing with Wave Divider
+       Wave shape separator
+       ============================================ -->
+
+  <div class="bg-white relative pt-24 pb-48">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-slate-900">Simple Pricing</h2>
+      <p class="mt-4 text-slate-600">No hidden fees.</p>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 320" class="w-full h-auto text-slate-100 fill-current"><path d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
+  </div>
+  <div class="bg-slate-100 pb-24">
+    <div class="max-w-7xl mx-auto px-6 -mt-32 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-xl font-bold text-slate-900">Basic</h3>
+          <div class="mt-4 text-3xl font-bold">$29</div>
+          <button class="mt-6 w-full py-2 border border-slate-200 rounded hover:bg-slate-50">Select</button>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-primary-600 transform -translate-y-4">
+          <h3 class="text-xl font-bold text-slate-900">Pro</h3>
+          <div class="mt-4 text-3xl font-bold">$59</div>
+          <button class="mt-6 w-full py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Select</button>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-xl font-bold text-slate-900">Max</h3>
+          <div class="mt-4 text-3xl font-bold">$99</div>
+          <button class="mt-6 w-full py-2 border border-slate-200 rounded hover:bg-slate-50">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
