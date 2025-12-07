@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact with Map - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Split layout with map">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-4xl font-bold text-slate-900 mb-6">Let's talk about your project</h2>
+          <p class="text-slate-600 text-lg mb-12">We help companies and individuals build out their brand guidelines.</p>
+
+          <form class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <label class="block text-sm font-bold text-slate-900 mb-2">First Name</label>
+                <input type="text" class="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg focus:ring-2 focus:ring-primary-500 transition-all" placeholder="John">
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-slate-900 mb-2">Last Name</label>
+                <input type="text" class="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg focus:ring-2 focus:ring-primary-500 transition-all" placeholder="Doe">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-900 mb-2">Email</label>
+              <input type="email" class="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg focus:ring-2 focus:ring-primary-500 transition-all" placeholder="john@example.com">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-900 mb-2">Message</label>
+              <textarea rows="4" class="w-full px-4 py-3 bg-gray-50 border-0 rounded-lg focus:ring-2 focus:ring-primary-500 transition-all" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button class="bg-slate-900 text-white font-bold px-8 py-4 rounded-lg hover:bg-slate-800 transition-colors">Send Message</button>
+          </form>
+        </div>
+        <div class="h-[600px] bg-gray-100 rounded-2xl overflow-hidden relative">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1510522332001" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
