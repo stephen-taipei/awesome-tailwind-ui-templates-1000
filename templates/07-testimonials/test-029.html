@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vertical scrolling testimonials">
+  <title>test-029: Testimonials with Vertical Slider | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-029: Testimonials with Vertical Slider
+       Vertical scrolling testimonials
+       ============================================ -->
+
+  <div class="bg-slate-900 py-24 text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+      <div class="md:w-1/2">
+        <h2 class="text-4xl font-bold mb-6">Don't take our word for it</h2>
+        <p class="text-slate-400 text-lg mb-8">See what our customers have to say about their experience using our platform to scale their businesses.</p>
+        <button class="px-8 py-3 bg-primary-600 text-white rounded-lg font-bold hover:bg-primary-700 transition-colors">Read all reviews</button>
+      </div>
+      <div class="md:w-1/2 h-96 relative overflow-hidden mask-image-linear-gradient">
+        <div class="absolute inset-0 animate-scroll-vertical space-y-6">
+          <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <p class="text-slate-300 mb-4">"Absolutely amazing tool. Highly recommended!"</p>
+            <div class="font-bold">User A</div>
+          </div>
+          <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <p class="text-slate-300 mb-4">"Saved us so much time and money."</p>
+            <div class="font-bold">User B</div>
+          </div>
+          <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <p class="text-slate-300 mb-4">"Great support and even better product."</p>
+            <div class="font-bold">User C</div>
+          </div>
+          <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <p class="text-slate-300 mb-4">"I use it every single day."</p>
+            <div class="font-bold">User D</div>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <p class="text-slate-300 mb-4">"Absolutely amazing tool. Highly recommended!"</p>
+            <div class="font-bold">User A</div>
+          </div>
+          <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <p class="text-slate-300 mb-4">"Saved us so much time and money."</p>
+            <div class="font-bold">User B</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes scroll-vertical {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+      }
+      .animate-scroll-vertical {
+        animation: scroll-vertical 20s linear infinite;
+      }
+      .mask-image-linear-gradient {
+        mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+      }
+    </style>
+  </div>
+
+</body>
+</html>
