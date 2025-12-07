@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poll Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Voting poll">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        <span class="text-primary-600 font-bold tracking-wider text-sm uppercase">Community Poll</span>
+        <h2 class="text-2xl font-bold text-slate-900 mt-2 mb-8">What feature should we build next?</h2>
+
+        <form class="space-y-4">
+          <label class="flex items-center gap-4 p-4 border-2 border-slate-100 rounded-xl cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all group">
+            <input type="radio" name="poll" class="w-5 h-5 text-primary-600 focus:ring-primary-500">
+            <div class="flex-1">
+              <span class="block font-bold text-slate-900 group-hover:text-primary-700">Dark Mode</span>
+              <span class="block text-sm text-slate-500">Native dark theme support for all pages</span>
+            </div>
+            <span class="text-sm font-bold text-slate-400">42%</span>
+          </label>
+
+          <label class="flex items-center gap-4 p-4 border-2 border-slate-100 rounded-xl cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all group">
+            <input type="radio" name="poll" class="w-5 h-5 text-primary-600 focus:ring-primary-500">
+            <div class="flex-1">
+              <span class="block font-bold text-slate-900 group-hover:text-primary-700">Mobile App</span>
+              <span class="block text-sm text-slate-500">iOS and Android applications</span>
+            </div>
+            <span class="text-sm font-bold text-slate-400">35%</span>
+          </label>
+
+          <label class="flex items-center gap-4 p-4 border-2 border-slate-100 rounded-xl cursor-pointer hover:border-primary-500 hover:bg-primary-50 transition-all group">
+            <input type="radio" name="poll" class="w-5 h-5 text-primary-600 focus:ring-primary-500">
+            <div class="flex-1">
+              <span class="block font-bold text-slate-900 group-hover:text-primary-700">API Access</span>
+              <span class="block text-sm text-slate-500">Public API for developers</span>
+            </div>
+            <span class="text-sm font-bold text-slate-400">23%</span>
+          </label>
+
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <button class="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors">Submit Vote</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
