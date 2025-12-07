@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quote + author citation">
+  <title>content-032: Blockquote with Attribution | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-032: Blockquote with Attribution
+       Quote + author citation
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <figure>
+        <blockquote class="text-2xl font-medium text-slate-900 text-center">
+          "Innovation distinguishes between a leader and a follower."
+        </blockquote>
+        <figcaption class="mt-6 flex items-center justify-center space-x-3">
+          <div class="text-base font-semibold text-slate-900">Steve Jobs</div>
+          <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-slate-900"><circle cx="1" cy="1" r="1" /></svg>
+          <div class="text-base text-slate-500">Co-founder, Apple Inc.</div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+</body>
+</html>
