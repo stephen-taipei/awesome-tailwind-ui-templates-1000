@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comparison testimonial">
+  <title>test-020: Testimonials with Before/After | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-020: Testimonials with Before/After
+       Comparison testimonial
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900">Real Results</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <div class="font-bold text-slate-900">Jane Doe</div>
+              <div class="text-sm text-slate-500">Fitness Coach</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+              <div class="text-xs font-bold text-red-600 uppercase mb-1">Before</div>
+              <div class="text-slate-700 text-sm">Manual scheduling, missed appointments, chaos.</div>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+              <div class="text-xs font-bold text-green-600 uppercase mb-1">After</div>
+              <div class="text-slate-700 text-sm">Automated booking, zero no-shows, peace of mind.</div>
+            </div>
+          </div>
+          <p class="text-slate-600">"This software completely transformed my business. I went from being overwhelmed to having free time again."</p>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+          <div class="flex items-center gap-4 mb-6">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <div class="font-bold text-slate-900">Tom Brown</div>
+              <div class="text-sm text-slate-500">E-commerce Owner</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+              <div class="text-xs font-bold text-red-600 uppercase mb-1">Before</div>
+              <div class="text-slate-700 text-sm">1% Conversion Rate, High Cart Abandonment.</div>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+              <div class="text-xs font-bold text-green-600 uppercase mb-1">After</div>
+              <div class="text-slate-700 text-sm">4% Conversion Rate, Record Sales Month.</div>
+            </div>
+          </div>
+          <p class="text-slate-600">"The optimization tools are incredible. We saw an immediate uplift in sales after implementing them."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
