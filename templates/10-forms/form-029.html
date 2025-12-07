@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feature Request - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Suggest features">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">Suggest a Feature</h2>
+            <p class="text-slate-600">Have an idea? We'd love to hear it.</p>
+          </div>
+        </div>
+
+        <form class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Feature Name</label>
+            <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Problem it solves</label>
+            <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all" placeholder="Describe the problem you are facing..."></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Proposed Solution</label>
+            <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition-all" placeholder="How should this feature work?"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-2">Impact</label>
+            <div class="flex gap-4">
+              <label class="flex items-center gap-2 cursor-pointer p-3 border border-slate-200 rounded-lg flex-1 hover:bg-gray-50">
+                <input type="radio" name="impact" class="w-4 h-4 text-yellow-600 focus:ring-yellow-500">
+                <span class="text-slate-700">Nice to have</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer p-3 border border-slate-200 rounded-lg flex-1 hover:bg-gray-50">
+                <input type="radio" name="impact" class="w-4 h-4 text-yellow-600 focus:ring-yellow-500">
+                <span class="text-slate-700">Important</span>
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer p-3 border border-slate-200 rounded-lg flex-1 hover:bg-gray-50">
+                <input type="radio" name="impact" class="w-4 h-4 text-yellow-600 focus:ring-yellow-500">
+                <span class="text-slate-700">Critical</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors">Submit Idea</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
