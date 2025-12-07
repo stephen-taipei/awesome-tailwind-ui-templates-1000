@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Event details card with date and location.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-violet-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-sm w-full group">
+      <div class="relative h-48 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Concert" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg text-center shadow-sm">
+          <span class="block text-xs font-bold text-violet-600 uppercase">Nov</span>
+          <span class="block text-xl font-bold text-gray-900 leading-none">24</span>
+        </div>
+      </div>
+
+      <div class="p-6">
+        <span class="text-xs font-bold text-violet-600 uppercase tracking-wider">Music Festival</span>
+        <h3 class="text-xl font-bold text-gray-900 mt-1 mb-2 group-hover:text-violet-600 transition-colors">Neon Nights 2023</h3>
+
+        <div class="space-y-2 mb-6">
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>8:00 PM - 2:00 AM</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Central Park Arena, NY</span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex -space-x-2">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Attendee" class="w-8 h-8 rounded-full border-2 border-white">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Attendee" class="w-8 h-8 rounded-full border-2 border-white">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Attendee" class="w-8 h-8 rounded-full border-2 border-white">
+            <div class="w-8 h-8 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-500">+120</div>
+          </div>
+          <button class="bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-violet-700 transition-colors shadow-lg shadow-violet-500/30">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
