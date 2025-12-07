@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Monthly/Yearly toggle">
+  <title>price-003: Pricing with Toggle | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-003: Pricing with Toggle
+       Monthly/Yearly toggle
+       ============================================ -->
+
+  <div class="bg-white py-24" x-data="{ annual: false }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Simple Pricing</h2>
+        <div class="mt-6 flex items-center justify-center gap-4">
+          <span class="text-sm font-medium" :class="!annual ? 'text-slate-900' : 'text-slate-500'">Monthly</span>
+          <button type="button" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2" :class="annual ? 'bg-primary-600' : 'bg-slate-200'" @click="annual = !annual">
+            <span class="sr-only">Use setting</span>
+            <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out" :class="annual ? 'translate-x-5' : 'translate-x-0'"></span>
+          </button>
+          <span class="text-sm font-medium" :class="annual ? 'text-slate-900' : 'text-slate-500'">Yearly <span class="text-primary-600 font-bold">(-20%)</span></span>
+        </div>
+      </div>
+
+      <!-- Alpine.js is required for interactivity, adding script here for standalone template -->
+      <script src="https://unpkg.com/alpinejs" defer></script>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Plan 1 -->
+        <div class="border border-slate-200 rounded-2xl p-8">
+          <h3 class="text-lg font-semibold text-slate-900">Freelancer</h3>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-bold text-slate-900" x-text="annual ? '$12' : '$15'">$15</span>
+            <span class="ml-1 text-slate-500">/mo</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500" x-show="annual">Billed $144 yearly</p>
+          <a href="#" class="mt-8 block w-full bg-slate-900 text-white font-semibold py-3 px-4 rounded-lg text-center hover:bg-slate-800">Buy Now</a>
+        </div>
+        <!-- Plan 2 -->
+        <div class="border border-primary-500 ring-2 ring-primary-500 rounded-2xl p-8">
+          <h3 class="text-lg font-semibold text-slate-900">Startup</h3>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-bold text-slate-900" x-text="annual ? '$39' : '$49'">$49</span>
+            <span class="ml-1 text-slate-500">/mo</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500" x-show="annual">Billed $468 yearly</p>
+          <a href="#" class="mt-8 block w-full bg-primary-600 text-white font-semibold py-3 px-4 rounded-lg text-center hover:bg-primary-700">Buy Now</a>
+        </div>
+        <!-- Plan 3 -->
+        <div class="border border-slate-200 rounded-2xl p-8">
+          <h3 class="text-lg font-semibold text-slate-900">Enterprise</h3>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-bold text-slate-900" x-text="annual ? '$79' : '$99'">$99</span>
+            <span class="ml-1 text-slate-500">/mo</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500" x-show="annual">Billed $948 yearly</p>
+          <a href="#" class="mt-8 block w-full bg-slate-900 text-white font-semibold py-3 px-4 rounded-lg text-center hover:bg-slate-800">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
