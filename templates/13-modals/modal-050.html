@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Back Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal greeting returning user.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-900 bg-opacity-80 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg border border-gray-700">
+           <div class="p-8 text-center">
+              <div class="mx-auto w-20 h-20 bg-gradient-to-tr from-pink-500 to-violet-500 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-pink-500/30">
+                 <span class="text-3xl">👋</span>
+              </div>
+              <h3 class="text-3xl font-bold text-white mb-2">Welcome Back, Alex!</h3>
+              <p class="text-gray-400 mb-8">We've missed you. Check out what's new since your last visit.</p>
+
+              <div class="grid grid-cols-2 gap-4 mb-8 text-left">
+                 <div class="bg-gray-700/50 p-4 rounded-lg">
+                    <div class="flex items-center mb-2">
+                       <span class="w-2 h-2 rounded-full bg-green-400 mr-2"></span>
+                       <span class="text-white font-medium">New Dashboard</span>
+                    </div>
+                    <p class="text-xs text-gray-400">Completely redesigned analytics view.</p>
+                 </div>
+                 <div class="bg-gray-700/50 p-4 rounded-lg">
+                    <div class="flex items-center mb-2">
+                       <span class="w-2 h-2 rounded-full bg-blue-400 mr-2"></span>
+                       <span class="text-white font-medium">Dark Mode</span>
+                    </div>
+                    <p class="text-xs text-gray-400">Now available for all pages.</p>
+                 </div>
+              </div>
+
+              <button class="w-full bg-gradient-to-r from-pink-600 to-violet-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg hover:from-pink-500 hover:to-violet-500 transform hover:-translate-y-0.5 transition-all">Explore Dashboard</button>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
