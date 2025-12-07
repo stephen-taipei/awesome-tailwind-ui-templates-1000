@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cards scale on hover">
+  <title>price-013: Pricing with Hover Effects | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-013: Pricing with Hover Effects
+       Cards scale on hover
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900">Interactive Pricing</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
+          <h3 class="text-xl font-bold text-slate-900">Basic</h3>
+          <div class="my-6 text-4xl font-bold text-slate-900">$19</div>
+          <ul class="space-y-3 text-slate-600 mb-8">
+            <li>Feature A</li>
+            <li>Feature B</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-slate-200 hover:bg-slate-50 font-bold transition-colors">Select</button>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
+          <h3 class="text-xl font-bold text-slate-900">Pro</h3>
+          <div class="my-6 text-4xl font-bold text-slate-900">$49</div>
+          <ul class="space-y-3 text-slate-600 mb-8">
+            <li>Feature A</li>
+            <li>Feature B</li>
+            <li>Feature C</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg bg-primary-600 text-white hover:bg-primary-700 font-bold transition-colors">Select</button>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100">
+          <h3 class="text-xl font-bold text-slate-900">Enterprise</h3>
+          <div class="my-6 text-4xl font-bold text-slate-900">$99</div>
+          <ul class="space-y-3 text-slate-600 mb-8">
+            <li>All Features</li>
+            <li>Priority Support</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-slate-200 hover:bg-slate-50 font-bold transition-colors">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
