@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Playlist with track duration.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-zinc-900 flex items-center justify-center p-4">
+    <div class="bg-zinc-800 rounded-xl shadow-2xl max-w-md w-full overflow-hidden border border-zinc-700">
+      <div class="p-6 bg-gradient-to-b from-indigo-900 to-zinc-800">
+        <div class="flex items-end gap-4 mb-4">
+          <div class="w-24 h-24 bg-indigo-500 shadow-lg rounded-md flex items-center justify-center text-white text-4xl font-bold">
+            ♫
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white uppercase tracking-wider mb-1">Playlist</p>
+            <h2 class="text-2xl font-bold text-white mb-2">Chill Vibes</h2>
+            <p class="text-zinc-400 text-sm">Created by Stephen • 50 songs</p>
+          </div>
+        </div>
+      </div>
+      <ul class="divide-y divide-zinc-700/50">
+        <li class="px-4 py-3 hover:bg-white/5 transition-colors group cursor-pointer flex items-center gap-4">
+          <span class="text-zinc-500 font-mono w-6 text-center group-hover:text-white">1</span>
+          <div class="flex-1">
+            <h4 class="text-white font-medium">Midnight City</h4>
+            <p class="text-xs text-zinc-400">M83</p>
+          </div>
+          <span class="text-xs text-zinc-500">4:03</span>
+        </li>
+        <li class="px-4 py-3 hover:bg-white/5 transition-colors group cursor-pointer flex items-center gap-4 bg-white/5">
+          <span class="text-green-500 font-mono w-6 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-auto animate-pulse" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+          </span>
+          <div class="flex-1">
+            <h4 class="text-green-500 font-medium">Instant Crush</h4>
+            <p class="text-xs text-zinc-400">Daft Punk</p>
+          </div>
+          <span class="text-xs text-white">5:37</span>
+        </li>
+        <li class="px-4 py-3 hover:bg-white/5 transition-colors group cursor-pointer flex items-center gap-4">
+          <span class="text-zinc-500 font-mono w-6 text-center group-hover:text-white">3</span>
+          <div class="flex-1">
+            <h4 class="text-white font-medium">The Less I Know The Better</h4>
+            <p class="text-xs text-zinc-400">Tame Impala</p>
+          </div>
+          <span class="text-xs text-zinc-500">3:36</span>
+        </li>
+        <li class="px-4 py-3 hover:bg-white/5 transition-colors group cursor-pointer flex items-center gap-4">
+          <span class="text-zinc-500 font-mono w-6 text-center group-hover:text-white">4</span>
+          <div class="flex-1">
+            <h4 class="text-white font-medium">Heat Waves</h4>
+            <p class="text-xs text-zinc-400">Glass Animals</p>
+          </div>
+          <span class="text-xs text-zinc-500">3:58</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
