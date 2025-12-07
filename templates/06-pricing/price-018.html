@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Features with info tooltips">
+  <title>price-018: Pricing with Tooltips | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-018: Pricing with Tooltips
+       Features with info tooltips
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="border border-slate-200 rounded-2xl overflow-hidden">
+        <div class="bg-slate-50 p-6 border-b border-slate-200 text-center">
+          <h3 class="text-2xl font-bold text-slate-900">Standard Plan</h3>
+          <div class="text-4xl font-bold mt-2">$29</div>
+        </div>
+        <div class="p-8">
+          <ul class="space-y-4">
+            <li class="flex items-center justify-between">
+              <span class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                API Requests
+              </span>
+              <div class="relative group cursor-help">
+                <svg class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div class="absolute bottom-full right-0 mb-2 w-48 bg-slate-800 text-white text-xs rounded p-2 hidden group-hover:block z-10">
+                  10,000 requests per month included.
+                </div>
+              </div>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Data Retention
+              </span>
+              <div class="relative group cursor-help">
+                <svg class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div class="absolute bottom-full right-0 mb-2 w-48 bg-slate-800 text-white text-xs rounded p-2 hidden group-hover:block z-10">
+                  30 days of data history.
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="mt-8 w-full bg-primary-600 text-white py-3 rounded-lg font-bold hover:bg-primary-700">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
