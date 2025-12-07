@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Contact list with alphabet index.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex h-[600px]">
+      <div class="flex-1 overflow-y-auto">
+        <div class="p-4 border-b border-gray-100 bg-white sticky top-0 z-10">
+          <h2 class="text-xl font-bold text-gray-900">Contacts</h2>
+          <div class="mt-2 relative">
+            <input type="text" placeholder="Search" class="w-full bg-gray-100 border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-blue-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-gray-50 px-4 py-1 text-xs font-bold text-gray-500 sticky top-[73px]">A</div>
+          <div class="divide-y divide-gray-100">
+            <div class="p-4 flex items-center gap-3 hover:bg-gray-50 cursor-pointer">
+              <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">AB</div>
+              <div>
+                <h3 class="font-bold text-gray-900">Alice Brown</h3>
+                <p class="text-xs text-gray-500">alice@example.com</p>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3 hover:bg-gray-50 cursor-pointer">
+              <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <div>
+                <h3 class="font-bold text-gray-900">Andrew Smith</h3>
+                <p class="text-xs text-gray-500">andrew@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 px-4 py-1 text-xs font-bold text-gray-500 sticky top-[73px]">B</div>
+          <div class="divide-y divide-gray-100">
+            <div class="p-4 flex items-center gap-3 hover:bg-gray-50 cursor-pointer">
+              <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <div>
+                <h3 class="font-bold text-gray-900">Bob Johnson</h3>
+                <p class="text-xs text-gray-500">bob@example.com</p>
+              </div>
+            </div>
+            <div class="p-4 flex items-center gap-3 hover:bg-gray-50 cursor-pointer">
+              <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold">BW</div>
+              <div>
+                <h3 class="font-bold text-gray-900">Brian Wilson</h3>
+                <p class="text-xs text-gray-500">brian@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 px-4 py-1 text-xs font-bold text-gray-500 sticky top-[73px]">C</div>
+          <div class="divide-y divide-gray-100">
+            <div class="p-4 flex items-center gap-3 hover:bg-gray-50 cursor-pointer">
+              <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              <div>
+                <h3 class="font-bold text-gray-900">Catherine Lee</h3>
+                <p class="text-xs text-gray-500">catherine@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-6 bg-gray-50 border-l border-gray-200 flex flex-col items-center justify-center text-[10px] font-bold text-gray-500 gap-1 cursor-pointer">
+        <span class="hover:text-blue-600">A</span>
+        <span class="hover:text-blue-600">B</span>
+        <span class="hover:text-blue-600">C</span>
+        <span class="hover:text-blue-600">D</span>
+        <span class="hover:text-blue-600">E</span>
+        <span class="hover:text-blue-600">F</span>
+        <span class="hover:text-blue-600">G</span>
+        <span class="hover:text-blue-600">H</span>
+        <span class="hover:text-blue-600">I</span>
+        <span class="hover:text-blue-600">J</span>
+        <span class="hover:text-blue-600">K</span>
+        <span class="hover:text-blue-600">L</span>
+        <span class="hover:text-blue-600">M</span>
+        <span class="hover:text-blue-600">N</span>
+        <span class="hover:text-blue-600">O</span>
+        <span class="hover:text-blue-600">P</span>
+        <span class="hover:text-blue-600">Q</span>
+        <span class="hover:text-blue-600">R</span>
+        <span class="hover:text-blue-600">S</span>
+        <span class="hover:text-blue-600">T</span>
+        <span class="hover:text-blue-600">U</span>
+        <span class="hover:text-blue-600">V</span>
+        <span class="hover:text-blue-600">W</span>
+        <span class="hover:text-blue-600">X</span>
+        <span class="hover:text-blue-600">Y</span>
+        <span class="hover:text-blue-600">Z</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
