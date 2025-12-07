@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grid of features">
+  <title>price-025: Pricing with Grid Layout | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-025: Pricing with Grid Layout
+       Grid of features
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          <div class="p-8 text-center bg-slate-50 md:bg-white flex flex-col justify-center">
+            <h3 class="text-2xl font-bold text-slate-900">All Plans Include</h3>
+          </div>
+          <div class="p-8 text-center">
+            <h4 class="font-bold text-slate-900">Starter</h4>
+            <div class="text-2xl font-bold mt-2">$19</div>
+            <ul class="mt-6 space-y-2 text-sm text-slate-600">
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+            </ul>
+            <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Buy</button>
+          </div>
+          <div class="p-8 text-center bg-primary-50/30">
+            <h4 class="font-bold text-primary-700">Growth</h4>
+            <div class="text-2xl font-bold mt-2 text-primary-700">$49</div>
+            <ul class="mt-6 space-y-2 text-sm text-slate-600">
+              <li>Everything in Starter</li>
+              <li>Feature 3</li>
+            </ul>
+            <button class="mt-6 w-full py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Buy</button>
+          </div>
+          <div class="p-8 text-center">
+            <h4 class="font-bold text-slate-900">Scale</h4>
+            <div class="text-2xl font-bold mt-2">$99</div>
+            <ul class="mt-6 space-y-2 text-sm text-slate-600">
+              <li>Everything in Growth</li>
+              <li>Feature 4</li>
+            </ul>
+            <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
