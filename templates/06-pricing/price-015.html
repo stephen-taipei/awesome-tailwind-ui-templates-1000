@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plans with illustrative icons">
+  <title>price-015: Pricing with Custom Icons | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-015: Pricing with Custom Icons
+       Plans with illustrative icons
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+        <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Personal</h3>
+        <p class="text-slate-500 mt-2">For hobbyists.</p>
+        <div class="text-3xl font-bold text-slate-900 mt-4">$5</div>
+        <button class="mt-6 w-full py-2 bg-blue-50 text-blue-600 font-bold rounded-lg hover:bg-blue-100">Start</button>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm text-center border-t-4 border-primary-500">
+        <div class="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Professional</h3>
+        <p class="text-slate-500 mt-2">For experts.</p>
+        <div class="text-3xl font-bold text-slate-900 mt-4">$25</div>
+        <button class="mt-6 w-full py-2 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-700">Start</button>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+        <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Business</h3>
+        <p class="text-slate-500 mt-2">For teams.</p>
+        <div class="text-3xl font-bold text-slate-900 mt-4">$50</div>
+        <button class="mt-6 w-full py-2 bg-purple-50 text-purple-600 font-bold rounded-lg hover:bg-purple-100">Start</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
