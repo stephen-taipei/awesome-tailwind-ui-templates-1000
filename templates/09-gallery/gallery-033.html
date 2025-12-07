@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightbox Gallery - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Navigate between images">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-900 py-24" x-data="{ open: false, active: 0, images: [
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'
+  ] }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <template x-for="(img, index) in images" :key="index">
+          <div class="aspect-video rounded-xl overflow-hidden cursor-pointer border border-slate-700 hover:border-primary-500 transition-colors" @click="open = true; active = index">
+            <img :src="img" class="w-full h-full object-cover">
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <div x-show="open" class="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" @click="open = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;">
+      <div class="relative w-full max-w-5xl px-12" @click.stop>
+        <img :src="images[active]" class="w-full max-h-[80vh] object-contain rounded-lg">
+        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white hover:text-primary-400 p-4" @click="active = active === 0 ? images.length - 1 : active - 1">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white hover:text-primary-400 p-4" @click="active = active === images.length - 1 ? 0 : active + 1">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+      <button class="absolute top-4 right-4 text-white hover:text-gray-300" @click="open = false">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
