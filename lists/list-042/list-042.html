@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Course list with progress.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div class="max-w-3xl w-full">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">My Courses</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+          <div class="h-32 bg-blue-600 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-700"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded mb-2 inline-block">Development</span>
+              <h3 class="text-lg font-bold">Advanced React Patterns</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2 text-sm text-gray-500">
+              <span>Progress</span>
+              <span class="font-bold text-blue-600">75%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+              <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-white bg-gray-100 text-xs font-medium text-gray-500">+12</span>
+              </div>
+              <button class="text-blue-600 font-bold text-sm hover:underline">Continue</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+          <div class="h-32 bg-purple-600 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded mb-2 inline-block">Design</span>
+              <h3 class="text-lg font-bold">UI/UX Fundamentals</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2 text-sm text-gray-500">
+              <span>Progress</span>
+              <span class="font-bold text-purple-600">30%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+              <div class="bg-purple-600 h-2 rounded-full" style="width: 30%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-white bg-gray-100 text-xs font-medium text-gray-500">+5</span>
+              </div>
+              <button class="text-purple-600 font-bold text-sm hover:underline">Continue</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+          <div class="h-32 bg-green-600 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded mb-2 inline-block">Business</span>
+              <h3 class="text-lg font-bold">Product Management</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2 text-sm text-gray-500">
+              <span>Progress</span>
+              <span class="font-bold text-green-600">10%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+              <div class="bg-green-600 h-2 rounded-full" style="width: 10%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex -space-x-2">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-white bg-gray-100 text-xs font-medium text-gray-500">+8</span>
+              </div>
+              <button class="text-green-600 font-bold text-sm hover:underline">Continue</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+          <div class="h-32 bg-orange-600 relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded mb-2 inline-block">Marketing</span>
+              <h3 class="text-lg font-bold">Digital Marketing 101</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2 text-sm text-gray-500">
+              <span>Progress</span>
+              <span class="font-bold text-orange-600">0%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+              <div class="bg-orange-600 h-2 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex -space-x-2">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-white bg-gray-100 text-xs font-medium text-gray-500">0</span>
+              </div>
+              <button class="text-orange-600 font-bold text-sm hover:underline">Start</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
