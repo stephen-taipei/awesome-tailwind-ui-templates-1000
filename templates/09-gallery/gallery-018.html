@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Masonry - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Fade in items">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="columns-1 md:columns-3 gap-6 space-y-6">
+        <div class="break-inside-avoid rounded-xl overflow-hidden animate-fade-in-up" style="animation-delay: 0ms;">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full object-cover">
+        </div>
+        <div class="break-inside-avoid rounded-xl overflow-hidden animate-fade-in-up" style="animation-delay: 100ms;">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=700&q=80" class="w-full object-cover">
+        </div>
+        <div class="break-inside-avoid rounded-xl overflow-hidden animate-fade-in-up" style="animation-delay: 200ms;">
+          <img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=500&q=80" class="w-full object-cover">
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
+    </style>
+  </div>
+</body>
+</html>
