@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Testimonial over image">
+  <title>test-009: Testimonials with Background Image | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-009: Testimonials with Background Image
+       Testimonial over image
+       ============================================ -->
+
+  <div class="relative py-32 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+    <div class="absolute inset-0 bg-slate-900/80"></div>
+    <div class="relative max-w-4xl mx-auto px-6 text-center text-white">
+      <svg class="w-16 h-16 mx-auto text-white/30 mb-8" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.0547 15.372 15.5547 16.3945 15.5547C17.3281 15.5547 18.2617 16.293 18.2617 18.2617C18.2617 19.832 17.168 21 16.0312 21H14.017ZM8 21L8 18C8 16.0547 9.35547 15.5547 10.3789 15.5547C11.3125 15.5547 12.2461 16.293 12.2461 18.2617C12.2461 19.832 11.1523 21 10.0156 21H8ZM10.3789 3C7.68359 3 4 6.71484 4 13H10.3789C10.3789 11.332 11.6602 10.0508 13.3281 10.0508C14.9961 10.0508 16.2773 11.332 16.2773 13H19.9062C19.9062 6.71484 16.2227 3 13.5273 3H10.3789Z"/></svg>
+      <blockquote class="text-3xl md:text-5xl font-bold leading-tight mb-12">
+        "It's rare to find a product that delivers exactly what it promises. This is one of those rare finds."
+      </blockquote>
+      <div class="flex items-center justify-center gap-4">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User" class="w-12 h-12 rounded-full border-2 border-white">
+        <div class="text-left">
+          <div class="font-bold">James Wilson</div>
+          <div class="text-sm text-slate-300">Director of Sales</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
