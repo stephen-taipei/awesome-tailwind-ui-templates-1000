@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Carousel - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Perspective slider">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-slate-900 py-24 overflow-hidden" x-data="{ active: 1, slides: [
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+  ] }">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center justify-center h-[400px] perspective-1000">
+        <template x-for="(slide, index) in slides" :key="index">
+          <div @click="active = index" class="absolute w-[300px] md:w-[500px] aspect-video rounded-xl overflow-hidden shadow-2xl transition-all duration-500 cursor-pointer border-4 border-slate-800"
+               :class="{
+                 'z-20 scale-100 opacity-100 translate-x-0': active === index,
+                 'z-10 scale-75 opacity-60 -translate-x-[60%]': index === active - 1 || (active === 0 && index === slides.length - 1),
+                 'z-10 scale-75 opacity-60 translate-x-[60%]': index === active + 1 || (active === slides.length - 1 && index === 0)
+               }">
+            <img :src="slide" class="w-full h-full object-cover">
+          </div>
+        </template>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      .perspective-1000 { perspective: 1000px; }
+    </style>
+  </div>
+</body>
+</html>
