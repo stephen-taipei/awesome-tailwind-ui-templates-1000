@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hover for more info">
+  <title>price-044: Pricing with Popover | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-044: Pricing with Popover
+       Hover for more info
+       ============================================ -->
+
+  <div class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm relative group">
+        <h3 class="text-xl font-bold text-slate-900">Starter</h3>
+        <div class="mt-4 text-3xl font-bold text-slate-900">$29</div>
+        <button class="mt-6 w-full py-2 border border-slate-200 rounded hover:bg-slate-50">Select</button>
+
+        <!-- Popover -->
+        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 bg-slate-800 text-white text-sm rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+          <div class="font-bold mb-2">Includes:</div>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>1 User</li>
+            <li>5 Projects</li>
+            <li>Basic Support</li>
+          </ul>
+          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-3 h-3 bg-slate-800"></div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-primary-100 relative group">
+        <h3 class="text-xl font-bold text-slate-900">Growth</h3>
+        <div class="mt-4 text-3xl font-bold text-slate-900">$59</div>
+        <button class="mt-6 w-full py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Select</button>
+
+        <!-- Popover -->
+        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 bg-slate-800 text-white text-sm rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+          <div class="font-bold mb-2">Includes:</div>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>5 Users</li>
+            <li>Unlimited Projects</li>
+            <li>Priority Support</li>
+          </ul>
+          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-3 h-3 bg-slate-800"></div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-sm relative group">
+        <h3 class="text-xl font-bold text-slate-900">Scale</h3>
+        <div class="mt-4 text-3xl font-bold text-slate-900">$99</div>
+        <button class="mt-6 w-full py-2 border border-slate-200 rounded hover:bg-slate-50">Select</button>
+
+        <!-- Popover -->
+        <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 w-64 bg-slate-800 text-white text-sm rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+          <div class="font-bold mb-2">Includes:</div>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Unlimited Users</li>
+            <li>Advanced Analytics</li>
+            <li>Dedicated Manager</li>
+          </ul>
+          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-3 h-3 bg-slate-800"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
