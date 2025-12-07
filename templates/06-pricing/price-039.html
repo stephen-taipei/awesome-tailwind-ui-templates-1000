@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parallax scrolling effect">
+  <title>price-039: Pricing with Parallax | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-039: Pricing with Parallax
+       Parallax scrolling effect
+       ============================================ -->
+
+  <div class="relative h-screen overflow-y-auto overflow-x-hidden perspective-1px">
+    <div class="absolute inset-0 transform-style-3d -z-10">
+      <div class="absolute inset-0 bg-cover bg-center transform translate-z-[-1px] scale-2" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+    </div>
+    <div class="relative min-h-screen flex items-center justify-center py-24">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+          <h3 class="text-xl font-bold text-slate-900">Standard</h3>
+          <div class="mt-4 text-3xl font-bold text-slate-900">$29</div>
+          <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Select</button>
+        </div>
+        <div class="bg-primary-600/90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl transform scale-105 text-white">
+          <h3 class="text-xl font-bold">Premium</h3>
+          <div class="mt-4 text-3xl font-bold">$59</div>
+          <button class="mt-6 w-full py-2 bg-white text-primary-600 rounded hover:bg-slate-100 font-bold">Select</button>
+        </div>
+        <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+          <h3 class="text-xl font-bold text-slate-900">Ultimate</h3>
+          <div class="mt-4 text-3xl font-bold text-slate-900">$99</div>
+          <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Select</button>
+        </div>
+      </div>
+    </div>
+    <style>
+      .perspective-1px { perspective: 1px; }
+      .transform-style-3d { transform-style: preserve-3d; }
+      .translate-z-\[-1px\] { transform: translateZ(-1px); }
+      .scale-2 { transform: scale(2); }
+    </style>
+  </div>
+
+</body>
+</html>
