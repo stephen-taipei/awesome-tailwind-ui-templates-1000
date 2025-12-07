@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Accordion style FAQ list.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full">
+      <h2 class="text-3xl font-bold text-slate-900 text-center mb-8">Frequently Asked Questions</h2>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-bold text-slate-900">How do I reset my password?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-6 pb-4 text-slate-600">
+            You can reset your password by clicking on the "Forgot Password" link on the login page. We'll send you an email with instructions to create a new one.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-bold text-slate-900">Can I cancel my subscription anytime?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500 transform -rotate-90 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="hidden px-6 pb-4 text-slate-600">
+            Yes, you can cancel your subscription at any time from your account settings. You will continue to have access until the end of your current billing period.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-bold text-slate-900">Do you offer a free trial?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500 transform -rotate-90 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="hidden px-6 pb-4 text-slate-600">
+            Yes, we offer a 14-day free trial for all new users. No credit card is required to sign up.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-bold text-slate-900">How can I contact support?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-500 transform -rotate-90 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="hidden px-6 pb-4 text-slate-600">
+            Our support team is available 24/7. You can reach us via email at support@example.com or use the live chat widget in the bottom right corner.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
