@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal with onboarding steps.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+           <div class="p-6 text-center">
+              <img src="https://cdni.iconscout.com/illustration/premium/thumb/welcome-back-illustration-download-in-svg-png-gif-file-formats--wave-hi-hello-business-activities-pack-illustrations-3970725.png" alt="Welcome" class="mx-auto h-40 w-auto mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Welcome to Acme Corp!</h3>
+              <p class="text-gray-500 mb-8">We're excited to have you on board. Let's get you set up in just a few simple steps.</p>
+
+              <div class="flex justify-center gap-2 mb-8">
+                 <div class="w-2.5 h-2.5 rounded-full bg-indigo-600"></div>
+                 <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                 <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+              </div>
+
+              <button class="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg shadow hover:bg-indigo-500 transition-colors">Let's Get Started &rarr;</button>
+              <button class="w-full mt-3 text-gray-500 text-sm hover:text-gray-700">Skip For Now</button>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
