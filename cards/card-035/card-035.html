@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Skill proficiency card.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl shadow-lg p-6 max-w-xs w-full">
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-8 h-8">
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900">Python</h3>
+          <p class="text-sm text-slate-500">Backend Development</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between text-xs font-bold text-slate-600 mb-1">
+            <span>Proficiency</span>
+            <span>90%</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-2">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs font-bold text-slate-600 mb-1">
+            <span>Experience</span>
+            <span>5 Years</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-2">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+        <div class="flex -space-x-2">
+          <div class="w-6 h-6 rounded-full bg-slate-200 border-2 border-white"></div>
+          <div class="w-6 h-6 rounded-full bg-slate-300 border-2 border-white"></div>
+          <div class="w-6 h-6 rounded-full bg-slate-400 border-2 border-white"></div>
+        </div>
+        <span class="text-xs font-bold text-blue-600 cursor-pointer hover:underline">View Projects</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
