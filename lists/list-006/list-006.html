@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="List of products with prices and ratings.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-neutral-100 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl max-w-md w-full overflow-hidden">
+      <div class="px-6 py-5 border-b border-neutral-100">
+        <h3 class="text-xl font-bold text-neutral-900">Shopping Cart</h3>
+      </div>
+      <ul class="divide-y divide-neutral-100">
+        <li class="p-4 hover:bg-neutral-50 transition-colors">
+          <div class="flex gap-4">
+            <div class="w-20 h-20 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Shoe" class="w-full h-full object-cover">
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-neutral-900">Nike Air Max</h4>
+                <p class="text-sm text-neutral-500">Size: 10 • Color: Red</p>
+              </div>
+              <div class="flex justify-between items-end">
+                <span class="font-bold text-neutral-900">$129.00</span>
+                <div class="flex items-center gap-2">
+                  <button class="w-6 h-6 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-500 hover:bg-neutral-100">-</button>
+                  <span class="text-sm font-medium">1</span>
+                  <button class="w-6 h-6 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-500 hover:bg-neutral-100">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="p-4 hover:bg-neutral-50 transition-colors">
+          <div class="flex gap-4">
+            <div class="w-20 h-20 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Watch" class="w-full h-full object-cover">
+            </div>
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-neutral-900">Apple Watch</h4>
+                <p class="text-sm text-neutral-500">Series 7 • Midnight</p>
+              </div>
+              <div class="flex justify-between items-end">
+                <span class="font-bold text-neutral-900">$399.00</span>
+                <div class="flex items-center gap-2">
+                  <button class="w-6 h-6 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-500 hover:bg-neutral-100">-</button>
+                  <span class="text-sm font-medium">1</span>
+                  <button class="w-6 h-6 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-500 hover:bg-neutral-100">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="p-6 bg-neutral-50 border-t border-neutral-100">
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-neutral-500">Total</span>
+          <span class="text-2xl font-bold text-neutral-900">$528.00</span>
+        </div>
+        <button class="w-full bg-black text-white font-bold py-3 rounded-xl hover:bg-neutral-800 transition-colors">
+          Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
