@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Picker Modal - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Modal with calendar for date selection.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+          <div class="bg-white p-6">
+            <h3 class="text-base font-semibold leading-6 text-gray-900 mb-4" id="modal-title">Select Date</h3>
+            <div class="mt-2">
+               <!-- Simple Calendar Header -->
+               <div class="flex items-center justify-between mb-4">
+                  <button class="text-gray-500 hover:text-gray-900">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <span class="text-lg font-bold text-gray-900">October 2023</span>
+                  <button class="text-gray-500 hover:text-gray-900">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+               </div>
+               <!-- Calendar Grid -->
+               <div class="grid grid-cols-7 gap-2 text-center text-sm">
+                  <div class="text-gray-500 font-medium">Su</div>
+                  <div class="text-gray-500 font-medium">Mo</div>
+                  <div class="text-gray-500 font-medium">Tu</div>
+                  <div class="text-gray-500 font-medium">We</div>
+                  <div class="text-gray-500 font-medium">Th</div>
+                  <div class="text-gray-500 font-medium">Fr</div>
+                  <div class="text-gray-500 font-medium">Sa</div>
+
+                  <div class="text-gray-300 py-2">29</div>
+                  <div class="text-gray-300 py-2">30</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">1</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">2</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">3</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">4</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">5</div>
+
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">6</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">7</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">8</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">9</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">10</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">11</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">12</div>
+
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">13</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">14</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">15</div>
+                  <div class="bg-indigo-600 text-white rounded-full py-2 cursor-pointer">16</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">17</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">18</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">19</div>
+
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">20</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">21</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">22</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">23</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">24</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">25</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">26</div>
+
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">27</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">28</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">29</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">30</div>
+                  <div class="py-2 hover:bg-gray-100 rounded cursor-pointer">31</div>
+                  <div class="text-gray-300 py-2">1</div>
+                  <div class="text-gray-300 py-2">2</div>
+               </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+            <button type="button" class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto">Select</button>
+            <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
