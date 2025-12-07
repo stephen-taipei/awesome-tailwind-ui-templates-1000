@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before/After Gallery - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Comparison slider">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-white py-24" x-data="{ slider: 50 }">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden select-none cursor-ew-resize" @mousemove="slider = (($event.clientX - $el.getBoundingClientRect().left) / $el.offsetWidth) * 100" @touchmove="slider = (($event.touches[0].clientX - $el.getBoundingClientRect().left) / $el.offsetWidth) * 100">
+        <div class="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80&sat=-100" class="w-full h-full object-cover grayscale">
+          <div class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm font-bold">Before</div>
+        </div>
+        <div class="absolute inset-0 border-r-4 border-white" :style="`width: ${slider}%`">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover max-w-none" :style="`width: ${$el.parentElement.offsetWidth}px`">
+          <div class="absolute top-4 right-4 bg-primary-600/80 text-white px-3 py-1 rounded text-sm font-bold">After</div>
+        </div>
+        <div class="absolute inset-y-0 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center transform -translate-x-1/2 top-1/2 -mt-5" :style="`left: ${slider}%`">
+          <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <h3 class="text-2xl font-bold text-slate-900">Color Correction</h3>
+        <p class="text-slate-600 mt-2">Drag the slider to see the difference.</p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </div>
+</body>
+</html>
