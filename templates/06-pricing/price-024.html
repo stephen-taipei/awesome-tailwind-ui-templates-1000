@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top border accent cards">
+  <title>price-024: Pricing with Border Accent | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-024: Pricing with Border Accent
+       Top border accent cards
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden border-t-4 border-slate-300">
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-slate-900">Basic</h3>
+          <div class="mt-4 text-3xl font-bold">$29</div>
+          <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Choose</button>
+        </div>
+      </div>
+      <div class="bg-white shadow-xl rounded-lg overflow-hidden border-t-4 border-primary-600 transform scale-105">
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-slate-900">Pro</h3>
+          <div class="mt-4 text-3xl font-bold">$59</div>
+          <button class="mt-6 w-full py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Choose</button>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden border-t-4 border-slate-300">
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-slate-900">Enterprise</h3>
+          <div class="mt-4 text-3xl font-bold">$99</div>
+          <button class="mt-6 w-full py-2 border border-slate-300 rounded hover:bg-slate-50">Choose</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
