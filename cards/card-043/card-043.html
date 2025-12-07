@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Movie poster card with rating.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+    <div class="bg-gray-800 rounded-xl overflow-hidden max-w-xs w-full shadow-2xl group cursor-pointer">
+      <div class="relative aspect-[2/3] overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Movie Poster" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
+
+        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold text-xs px-2 py-1 rounded shadow-lg">
+          IMDb 8.5
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+          <h3 class="text-2xl font-bold text-white mb-1">Inception</h3>
+          <p class="text-gray-300 text-sm mb-3">Sci-Fi • Thriller • 2010</p>
+
+          <div class="flex gap-2">
+            <button class="flex-1 bg-red-600 text-white text-sm font-bold py-2 rounded hover:bg-red-700 transition-colors">
+              Watch Now
+            </button>
+            <button class="p-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
