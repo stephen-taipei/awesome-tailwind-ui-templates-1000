@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Animated floating elements">
+  <title>cta-033: CTA with Floating Elements | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       cta-033: CTA with Floating Elements
+       Animated floating elements
+       ============================================ -->
+
+  <div class="relative bg-slate-900 py-24 overflow-hidden">
+    <div class="absolute top-10 left-10 w-20 h-20 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+    <div class="absolute top-10 right-10 w-20 h-20 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-20 w-20 h-20 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Magic in the air</h2>
+      <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">Create stunning visuals with our design tools.</p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Start Creating</a>
+      </div>
+    </div>
+    <style>
+      @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      .animate-blob { animation: blob 7s infinite; }
+      .animation-delay-2000 { animation-delay: 2s; }
+      .animation-delay-4000 { animation-delay: 4s; }
+    </style>
+  </div>
+
+</body>
+</html>
