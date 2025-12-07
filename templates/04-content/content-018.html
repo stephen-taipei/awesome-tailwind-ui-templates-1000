@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Image comparison slider">
+  <title>content-018: Before/After Image Slider | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       content-018: Before/After Image Slider
+       Image comparison slider
+       ============================================ -->
+
+  <div class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden select-none cursor-ew-resize group">
+        <img src="https://via.placeholder.com/1200x675/333/fff?text=After" class="absolute inset-0 w-full h-full object-cover" alt="After">
+        <div class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white bg-white">
+          <img src="https://via.placeholder.com/1200x675/ccc/000?text=Before" class="absolute inset-0 w-[200%] max-w-none h-full object-cover" alt="Before">
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+          <div class="bg-white/80 px-4 py-2 rounded-full text-sm font-bold">Drag to compare</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
