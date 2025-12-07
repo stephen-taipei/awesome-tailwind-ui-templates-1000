@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Pricing plan selection">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  <div class="bg-gray-50 py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Choose your plan</h2>
+        <p class="text-slate-600 mt-4">Simple pricing for everyone.</p>
+      </div>
+
+      <form>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Basic Plan -->
+          <label class="relative bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-primary-500 cursor-pointer transition-all p-8 flex flex-col">
+            <input type="radio" name="plan" class="absolute top-8 right-8 w-6 h-6 text-primary-600 focus:ring-primary-500">
+            <h3 class="text-xl font-bold text-slate-900">Basic</h3>
+            <div class="mt-4 mb-6">
+              <span class="text-4xl font-bold text-slate-900">$19</span>
+              <span class="text-slate-500">/mo</span>
+            </div>
+            <ul class="space-y-4 mb-8 flex-1">
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                5 Projects
+              </li>
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Basic Analytics
+              </li>
+              <li class="flex items-center gap-3 text-slate-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                Team Collaboration
+              </li>
+            </ul>
+          </label>
+
+          <!-- Pro Plan -->
+          <label class="relative bg-white rounded-2xl shadow-xl border-2 border-primary-500 cursor-pointer transition-all p-8 flex flex-col transform md:-translate-y-4">
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-bold">Popular</div>
+            <input type="radio" name="plan" class="absolute top-8 right-8 w-6 h-6 text-primary-600 focus:ring-primary-500" checked>
+            <h3 class="text-xl font-bold text-slate-900">Pro</h3>
+            <div class="mt-4 mb-6">
+              <span class="text-4xl font-bold text-slate-900">$49</span>
+              <span class="text-slate-500">/mo</span>
+            </div>
+            <ul class="space-y-4 mb-8 flex-1">
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Unlimited Projects
+              </li>
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Advanced Analytics
+              </li>
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Team Collaboration
+              </li>
+            </ul>
+          </label>
+
+          <!-- Enterprise Plan -->
+          <label class="relative bg-white rounded-2xl shadow-sm border-2 border-transparent hover:border-primary-500 cursor-pointer transition-all p-8 flex flex-col">
+            <input type="radio" name="plan" class="absolute top-8 right-8 w-6 h-6 text-primary-600 focus:ring-primary-500">
+            <h3 class="text-xl font-bold text-slate-900">Enterprise</h3>
+            <div class="mt-4 mb-6">
+              <span class="text-4xl font-bold text-slate-900">$99</span>
+              <span class="text-slate-500">/mo</span>
+            </div>
+            <ul class="space-y-4 mb-8 flex-1">
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Everything in Pro
+              </li>
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Dedicated Support
+              </li>
+              <li class="flex items-center gap-3 text-slate-600">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Custom Integrations
+              </li>
+            </ul>
+          </label>
+        </div>
+
+        <div class="mt-12 text-center">
+          <button class="bg-primary-600 text-white font-bold px-12 py-4 rounded-lg hover:bg-primary-700 transition-colors shadow-lg shadow-primary-500/30">Continue to Payment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
