@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hover zoom effect CTA">
+  <title>cta-039: CTA with Zoom Effect | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       cta-039: CTA with Zoom Effect
+       Hover zoom effect CTA
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 flex justify-center">
+      <div class="group relative overflow-hidden rounded-2xl cursor-pointer">
+        <img src="https://images.unsplash.com/photo-1504384308090-c54be3855463?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full max-w-2xl transition-transform duration-500 group-hover:scale-110" alt="Zoom">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity duration-300 group-hover:bg-black/50">
+          <div class="text-center text-white">
+            <h2 class="text-3xl font-bold mb-2">Explore</h2>
+            <p class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Click to discover more</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
