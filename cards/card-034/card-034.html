@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Charity donation card.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-rose-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full text-center">
+      <div class="w-16 h-16 bg-rose-100 text-rose-500 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      </div>
+
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Support Our Cause</h3>
+      <p class="text-gray-500 mb-8">
+        Your contribution helps us provide education to children in need around the world.
+      </p>
+
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <button class="border-2 border-gray-200 rounded-xl py-2 font-bold text-gray-600 hover:border-rose-500 hover:text-rose-500 hover:bg-rose-50 transition-all">
+          $10
+        </button>
+        <button class="border-2 border-rose-500 bg-rose-50 rounded-xl py-2 font-bold text-rose-500 transition-all">
+          $25
+        </button>
+        <button class="border-2 border-gray-200 rounded-xl py-2 font-bold text-gray-600 hover:border-rose-500 hover:text-rose-500 hover:bg-rose-50 transition-all">
+          $50
+        </button>
+      </div>
+
+      <div class="relative mb-8">
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-bold">$</span>
+        <input type="number" placeholder="Custom Amount" class="w-full pl-8 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-rose-500 focus:ring-0 outline-none font-bold text-gray-900 placeholder-gray-400 transition-colors">
+      </div>
+
+      <button class="w-full bg-rose-600 text-white font-bold py-3.5 rounded-xl hover:bg-rose-700 transition-colors shadow-lg shadow-rose-500/30">
+        Donate Now
+      </button>
+    </div>
+  </div>
+</body>
+</html>
