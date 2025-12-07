@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Album Card - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Music album card with track list.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="min-h-screen bg-neutral-900 flex items-center justify-center p-4">
+    <div class="bg-neutral-800 rounded-xl shadow-2xl overflow-hidden max-w-sm w-full border border-neutral-700">
+      <div class="relative aspect-square">
+        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Album Cover" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6">
+          <h3 class="text-2xl font-bold text-white mb-1">Neon Dreams</h3>
+          <p class="text-neutral-400">The Synthetics</p>
+        </div>
+        <button class="absolute bottom-6 right-6 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-black hover:scale-105 transition-transform shadow-lg shadow-green-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="text-neutral-500 font-mono text-sm group-hover:text-green-500">01</span>
+              <div>
+                <h4 class="text-white font-medium group-hover:text-green-500 transition-colors">Night Drive</h4>
+                <p class="text-xs text-neutral-500">The Synthetics</p>
+              </div>
+            </div>
+            <span class="text-xs text-neutral-500">3:45</span>
+          </div>
+
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="text-green-500 font-mono text-sm">02</span>
+              <div>
+                <h4 class="text-green-500 font-medium">Cyber City</h4>
+                <p class="text-xs text-neutral-500">The Synthetics</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex gap-0.5 items-end h-3">
+                <div class="w-0.5 h-2 bg-green-500 animate-pulse"></div>
+                <div class="w-0.5 h-3 bg-green-500 animate-pulse delay-75"></div>
+                <div class="w-0.5 h-1 bg-green-500 animate-pulse delay-150"></div>
+                <div class="w-0.5 h-2.5 bg-green-500 animate-pulse delay-100"></div>
+              </div>
+              <span class="text-xs text-white">4:12</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="text-neutral-500 font-mono text-sm group-hover:text-green-500">03</span>
+              <div>
+                <h4 class="text-white font-medium group-hover:text-green-500 transition-colors">Digital Love</h4>
+                <p class="text-xs text-neutral-500">The Synthetics</p>
+              </div>
+            </div>
+            <span class="text-xs text-neutral-500">3:58</span>
+          </div>
+
+          <div class="flex items-center justify-between group cursor-pointer">
+            <div class="flex items-center gap-4">
+              <span class="text-neutral-500 font-mono text-sm group-hover:text-green-500">04</span>
+              <div>
+                <h4 class="text-white font-medium group-hover:text-green-500 transition-colors">Memory Lane</h4>
+                <p class="text-xs text-neutral-500">The Synthetics</p>
+              </div>
+            </div>
+            <span class="text-xs text-neutral-500">4:05</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
