@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed rating breakdown">
+  <title>test-032: Testimonials with Rating Bars | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       test-032: Testimonials with Rating Bars
+       Detailed rating breakdown
+       ============================================ -->
+
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Customer Reviews</h2>
+        <div class="flex items-center gap-4 mb-8">
+          <div class="text-5xl font-bold text-slate-900">4.8</div>
+          <div>
+            <div class="flex text-yellow-400 text-xl">★★★★★</div>
+            <div class="text-slate-500">Based on 1,234 reviews</div>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-center gap-4">
+            <div class="w-12 text-sm font-bold text-slate-600">5 star</div>
+            <div class="flex-grow h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-yellow-400 w-[80%]"></div>
+            </div>
+            <div class="w-12 text-sm text-slate-500 text-right">80%</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 text-sm font-bold text-slate-600">4 star</div>
+            <div class="flex-grow h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-yellow-400 w-[15%]"></div>
+            </div>
+            <div class="w-12 text-sm text-slate-500 text-right">15%</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 text-sm font-bold text-slate-600">3 star</div>
+            <div class="flex-grow h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-yellow-400 w-[3%]"></div>
+            </div>
+            <div class="w-12 text-sm text-slate-500 text-right">3%</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 text-sm font-bold text-slate-600">2 star</div>
+            <div class="flex-grow h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-yellow-400 w-[1%]"></div>
+            </div>
+            <div class="w-12 text-sm text-slate-500 text-right">1%</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 text-sm font-bold text-slate-600">1 star</div>
+            <div class="flex-grow h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-yellow-400 w-[1%]"></div>
+            </div>
+            <div class="w-12 text-sm text-slate-500 text-right">1%</div>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <div class="border-b border-slate-100 pb-6">
+          <div class="flex justify-between items-start mb-2">
+            <div class="font-bold text-slate-900">Great product</div>
+            <div class="text-slate-400 text-sm">2 days ago</div>
+          </div>
+          <div class="flex text-yellow-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-600">"Exactly what I was looking for. Works perfectly."</p>
+        </div>
+        <div class="border-b border-slate-100 pb-6">
+          <div class="flex justify-between items-start mb-2">
+            <div class="font-bold text-slate-900">Good value</div>
+            <div class="text-slate-400 text-sm">1 week ago</div>
+          </div>
+          <div class="flex text-yellow-400 text-sm mb-2">★★★★☆</div>
+          <p class="text-slate-600">"Very good for the price. Missing one minor feature but otherwise great."</p>
+        </div>
+        <div class="border-b border-slate-100 pb-6">
+          <div class="flex justify-between items-start mb-2">
+            <div class="font-bold text-slate-900">Excellent support</div>
+            <div class="text-slate-400 text-sm">2 weeks ago</div>
+          </div>
+          <div class="flex text-yellow-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-600">"Had an issue and they fixed it immediately."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
