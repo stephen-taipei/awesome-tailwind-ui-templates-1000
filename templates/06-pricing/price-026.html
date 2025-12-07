@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Switch between currencies">
+  <title>price-026: Pricing with Currency Toggle | Tailwind UI Templates</title>
+
+  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+
+  <!-- Custom Theme Variables -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: oklch(0.55 0.20 250);
+      --color-primary-600: oklch(0.48 0.22 250);
+      --color-secondary-600: oklch(0.45 0.02 250);
+      --color-secondary-700: oklch(0.37 0.02 250);
+    }
+  </style>
+</head>
+<body class="bg-slate-50">
+
+  <!-- ============================================
+       price-026: Pricing with Currency Toggle
+       Switch between currencies
+       ============================================ -->
+
+  <div class="bg-white py-24" x-data="{ currency: 'USD', rate: 1 }">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Global Pricing</h2>
+        <div class="mt-6 inline-flex bg-slate-100 p-1 rounded-lg">
+          <button class="px-4 py-2 rounded-md text-sm font-medium transition-colors" :class="currency === 'USD' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'" @click="currency = 'USD'; rate = 1">USD</button>
+          <button class="px-4 py-2 rounded-md text-sm font-medium transition-colors" :class="currency === 'EUR' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'" @click="currency = 'EUR'; rate = 0.92">EUR</button>
+          <button class="px-4 py-2 rounded-md text-sm font-medium transition-colors" :class="currency === 'GBP' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-900'" @click="currency = 'GBP'; rate = 0.79">GBP</button>
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/alpinejs" defer></script>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-slate-200 rounded-2xl p-8">
+          <h3 class="text-lg font-bold text-slate-900">Basic</h3>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-bold text-slate-900" x-text="currency === 'USD' ? '$' : (currency === 'EUR' ? '€' : '£')"></span>
+            <span class="text-4xl font-bold text-slate-900" x-text="Math.round(10 * rate)">10</span>
+          </div>
+          <button class="mt-8 w-full py-2 border border-slate-300 rounded-lg hover:bg-slate-50">Select</button>
+        </div>
+        <div class="border border-primary-500 rounded-2xl p-8 ring-1 ring-primary-500">
+          <h3 class="text-lg font-bold text-slate-900">Pro</h3>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-bold text-slate-900" x-text="currency === 'USD' ? '$' : (currency === 'EUR' ? '€' : '£')"></span>
+            <span class="text-4xl font-bold text-slate-900" x-text="Math.round(29 * rate)">29</span>
+          </div>
+          <button class="mt-8 w-full py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700">Select</button>
+        </div>
+        <div class="border border-slate-200 rounded-2xl p-8">
+          <h3 class="text-lg font-bold text-slate-900">Enterprise</h3>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-bold text-slate-900" x-text="currency === 'USD' ? '$' : (currency === 'EUR' ? '€' : '£')"></span>
+            <span class="text-4xl font-bold text-slate-900" x-text="Math.round(99 * rate)">99</span>
+          </div>
+          <button class="mt-8 w-full py-2 border border-slate-300 rounded-lg hover:bg-slate-50">Select</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
