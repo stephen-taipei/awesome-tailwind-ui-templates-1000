@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Failed - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Notification for payment failure.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="pointer-events-auto w-full max-w-sm rounded-lg bg-red-50 shadow-lg ring-1 ring-red-200">
+    <div class="p-4">
+      <div class="flex items-start">
+        <div class="flex-shrink-0">
+           <svg class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+        </div>
+        <div class="ml-3 w-0 flex-1">
+           <h3 class="text-sm font-medium text-red-800">Payment Failed</h3>
+           <p class="mt-1 text-sm text-red-700">We couldn't process your payment for Invoice #2023-10.</p>
+           <p class="mt-2 text-xs text-red-600">Reason: Card declined.</p>
+           <div class="mt-4">
+              <button type="button" class="w-full rounded-md bg-red-100 px-3 py-2 text-sm font-semibold text-red-800 hover:bg-red-200">Update Payment Method</button>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
