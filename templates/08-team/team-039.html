@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Layout with Image - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Team section with large image on side.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+    <div class="bg-white">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="relative h-64 lg:h-auto">
+                <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80" alt="Team meeting">
+            </div>
+            <div class="px-6 py-24 sm:px-12 sm:py-32 lg:px-16">
+                 <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Join our team</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">We are always looking for talented individuals to join our growing team.</p>
+                     <ul role="list" class="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
+                        <li>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Perks</h3>
+                            <p class="text-sm leading-6 text-gray-600">Remote work, health insurance, 401k matching.</p>
+                        </li>
+                         <li>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Culture</h3>
+                            <p class="text-sm leading-6 text-gray-600">Collaborative, inclusive, and fun environment.</p>
+                        </li>
+                        <li>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Growth</h3>
+                            <p class="text-sm leading-6 text-gray-600">Professional development budget and mentorship.</p>
+                        </li>
+                         <li>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Impact</h3>
+                            <p class="text-sm leading-6 text-gray-600">Work on projects that matter to millions of users.</p>
+                        </li>
+                     </ul>
+                     <div class="mt-10 flex items-center gap-x-6">
+                        <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">See open positions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
