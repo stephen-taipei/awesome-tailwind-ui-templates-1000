@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Digest - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Notification summary digest.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="pointer-events-auto w-full max-w-sm rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+    <div class="p-4">
+       <h3 class="text-sm font-bold text-gray-900 mb-2">Daily Digest &bull; Oct 25</h3>
+       <ul class="space-y-3">
+          <li class="flex items-center text-sm text-gray-600">
+             <span class="h-2 w-2 bg-blue-500 rounded-full mr-2"></span>
+             <span>5 new tasks assigned</span>
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+             <span class="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
+             <span>Project Alpha completed</span>
+          </li>
+          <li class="flex items-center text-sm text-gray-600">
+             <span class="h-2 w-2 bg-purple-500 rounded-full mr-2"></span>
+             <span>2 team meetings scheduled</span>
+          </li>
+       </ul>
+       <button class="mt-4 w-full bg-gray-50 text-gray-600 text-xs font-semibold py-2 rounded border border-gray-200 hover:bg-gray-100">Read Full Digest</button>
+    </div>
+  </div>
+</body>
+</html>
