@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications List</title>
+    <meta name="description" content="Dropdown or list of notifications.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <div class="max-w-md mx-auto mt-10 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+        <div class="px-4 py-3 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+            <h3 class="font-bold text-gray-900">Notifications</h3>
+            <button class="text-xs text-blue-600 font-semibold hover:text-blue-800">Mark all as read</button>
+        </div>
+        <div class="divide-y divide-gray-100 max-h-96 overflow-y-auto">
+            <a href="#" class="flex p-4 hover:bg-blue-50 transition bg-blue-50/50">
+                <div class="flex-shrink-0 mr-4">
+                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-gray-900">Leslie Alexander <span class="text-gray-500 font-normal">commented on</span> Project Alpha</p>
+                    <p class="text-xs text-gray-400 mt-1">10 minutes ago</p>
+                </div>
+                <div class="h-2 w-2 bg-blue-600 rounded-full self-center ml-2"></div>
+            </a>
+
+            <a href="#" class="flex p-4 hover:bg-gray-50 transition">
+                <div class="flex-shrink-0 mr-4">
+                     <span class="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                     </span>
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-gray-900">System Update <span class="text-gray-500 font-normal">completed successfully</span></p>
+                    <p class="text-xs text-gray-400 mt-1">2 hours ago</p>
+                </div>
+            </a>
+
+            <a href="#" class="flex p-4 hover:bg-gray-50 transition">
+                <div class="flex-shrink-0 mr-4">
+                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </div>
+                <div class="flex-1">
+                     <p class="text-sm font-medium text-gray-900">Michael Foster <span class="text-gray-500 font-normal">invited you to</span> Marketing Team</p>
+                    <p class="text-xs text-gray-400 mt-1">Yesterday</p>
+                </div>
+            </a>
+             <a href="#" class="flex p-4 hover:bg-gray-50 transition">
+                <div class="flex-shrink-0 mr-4">
+                     <span class="h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                     </span>
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-gray-900">Storage Alert <span class="text-gray-500 font-normal">80% capacity reached</span></p>
+                    <p class="text-xs text-gray-400 mt-1">Nov 23</p>
+                </div>
+            </a>
+        </div>
+        <a href="#" class="block bg-gray-50 text-center py-3 text-sm font-medium text-gray-600 hover:text-gray-900 border-t border-gray-100">View all notifications</a>
+    </div>
+</body>
+</html>
