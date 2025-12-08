@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Org Chart Tree - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Visual organizational chart structure.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+    <div class="bg-gray-50 py-24 sm:py-32 overflow-x-auto">
+      <div class="mx-auto min-w-[320px] max-w-4xl px-6 text-center">
+         <h2 class="text-3xl font-bold mb-16 text-gray-900">Structure</h2>
+         <div class="flex flex-col items-center">
+            <!-- CEO -->
+            <div class="border border-gray-200 bg-white rounded-lg p-4 shadow-sm w-48 relative">
+                <img class="h-12 w-12 rounded-full mx-auto mb-2" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                <p class="font-bold text-gray-900 text-sm">Leslie</p>
+                <p class="text-xs text-gray-500">CEO</p>
+                <div class="absolute bottom-[-24px] left-1/2 w-px h-6 bg-gray-300"></div>
+            </div>
+
+            <!-- Connector -->
+            <div class="w-[300px] h-px bg-gray-300 mt-6 relative">
+                 <div class="absolute top-0 left-0 w-px h-6 bg-gray-300 transform translate-y-0"></div>
+                 <div class="absolute top-0 right-0 w-px h-6 bg-gray-300 transform translate-y-0"></div>
+                  <div class="absolute top-0 left-1/2 w-px h-6 bg-gray-300 transform translate-y-0"></div>
+            </div>
+
+            <div class="flex gap-8 mt-6">
+                 <!-- VP 1 -->
+                <div class="border border-gray-200 bg-white rounded-lg p-4 shadow-sm w-40">
+                    <img class="h-10 w-10 rounded-full mx-auto mb-2" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    <p class="font-bold text-gray-900 text-sm">Michael</p>
+                    <p class="text-xs text-gray-500">CTO</p>
+                </div>
+                 <!-- VP 2 -->
+                <div class="border border-gray-200 bg-white rounded-lg p-4 shadow-sm w-40">
+                    <img class="h-10 w-10 rounded-full mx-auto mb-2" src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    <p class="font-bold text-gray-900 text-sm">John</p>
+                    <p class="text-xs text-gray-500">CFO</p>
+                </div>
+                 <!-- VP 3 -->
+                <div class="border border-gray-200 bg-white rounded-lg p-4 shadow-sm w-40">
+                    <img class="h-10 w-10 rounded-full mx-auto mb-2" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    <p class="font-bold text-gray-900 text-sm">Dries</p>
+                    <p class="text-xs text-gray-500">COO</p>
+                </div>
+            </div>
+         </div>
+      </div>
+    </div>
+</body>
+</html>
