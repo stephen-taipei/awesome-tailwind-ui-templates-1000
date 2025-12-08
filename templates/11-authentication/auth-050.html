@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login with Testimonial - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Login form with customer testimonial.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="flex min-h-full flex-1">
+    <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="mx-auto w-full max-w-sm lg:w-96">
+        <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in</h2>
+        <form class="space-y-6 mt-10">
+             <div>
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">
+             </div>
+             <div>
+                <input id="password" name="password" type="password" required class="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Password">
+             </div>
+             <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500">Sign in</button>
+        </form>
+      </div>
+    </div>
+    <div class="relative hidden w-0 flex-1 lg:block relative">
+      <img class="absolute inset-0 h-full w-full object-cover brightness-50" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1908&q=80" alt="">
+      <div class="absolute bottom-0 left-0 right-0 p-12 text-white">
+          <blockquote class="text-xl font-medium italic mb-4">
+             "The best authentication library we've ever used. Simple, secure, and fast."
+          </blockquote>
+          <p class="font-bold">Sarah Connor</p>
+          <p class="text-gray-300 text-sm">CTO, Skynet Inc.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
