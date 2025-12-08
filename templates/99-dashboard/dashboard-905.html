@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <meta name="description" content="User profile editing form.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <div class="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-2xl font-bold text-gray-900 mb-8">Account Settings</h1>
+
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900">Personal Information</h2>
+                <p class="mt-1 text-sm text-gray-500">Update your photo and personal details.</p>
+            </div>
+            <div class="p-6 space-y-6">
+                <!-- Photo -->
+                <div class="flex items-center">
+                    <img class="h-16 w-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    <div class="ml-4">
+                        <button class="bg-white border border-gray-300 text-gray-700 font-medium py-2 px-4 rounded-md hover:bg-gray-50 text-sm">Change</button>
+                        <button class="ml-2 text-red-600 font-medium text-sm hover:text-red-800">Remove</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input type="text" value="Tom" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm h-10 px-3 border">
+                    </div>
+                     <div>
+                        <label class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input type="text" value="Cook" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm h-10 px-3 border">
+                    </div>
+                     <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" value="tom.cook@example.com" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm h-10 px-3 border">
+                    </div>
+                      <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700">Bio</label>
+                        <textarea rows="3" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm p-3 border">Product Director. Tech enthusiast. Coffee lover.</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-6 py-4 flex justify-end">
+                <button class="bg-white border border-gray-300 text-gray-700 font-medium py-2 px-4 rounded-md hover:bg-gray-50 text-sm mr-2">Cancel</button>
+                <button class="bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 text-sm">Save Changes</button>
+            </div>
+        </div>
+
+         <div class="bg-white shadow rounded-lg overflow-hidden mt-8">
+            <div class="p-6 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900">Notifications</h2>
+                <p class="mt-1 text-sm text-gray-500">Manage how we communicate with you.</p>
+            </div>
+            <div class="p-6 space-y-4">
+               <div class="flex items-start">
+                   <div class="flex items-center h-5">
+                       <input type="checkbox" checked class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                   </div>
+                   <div class="ml-3 text-sm">
+                       <label class="font-medium text-gray-700">Email Comments</label>
+                       <p class="text-gray-500">Get notified when someone posts a comment on your article.</p>
+                   </div>
+               </div>
+                <div class="flex items-start">
+                   <div class="flex items-center h-5">
+                       <input type="checkbox" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                   </div>
+                   <div class="ml-3 text-sm">
+                       <label class="font-medium text-gray-700">Product Updates</label>
+                       <p class="text-gray-500">Receive weekly updates about new features.</p>
+                   </div>
+               </div>
+            </div>
+             <div class="bg-gray-50 px-6 py-4 flex justify-end">
+                <button class="bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 text-sm">Save Preferences</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
