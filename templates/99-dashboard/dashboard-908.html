@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result Item</title>
+    <meta name="description" content="Dashboard global search result items.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <div class="max-w-2xl mx-auto py-10">
+        <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Results for "project"</h2>
+        <ul class="bg-white rounded-lg shadow border border-gray-200 divide-y divide-gray-100">
+            <li class="p-4 hover:bg-gray-50 transition cursor-pointer group">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 rounded bg-blue-100 flex items-center justify-center text-blue-600 mr-4 group-hover:bg-blue-200 transition">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-bold text-gray-900 group-hover:text-blue-600 transition">Project Phoenix</h4>
+                        <p class="text-sm text-gray-500">/marketing/campaigns/q4</p>
+                    </div>
+                     <span class="ml-auto text-xs text-gray-400 border border-gray-200 rounded px-2 py-1">Folder</span>
+                </div>
+            </li>
+             <li class="p-4 hover:bg-gray-50 transition cursor-pointer group">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 rounded bg-purple-100 flex items-center justify-center text-purple-600 mr-4 group-hover:bg-purple-200 transition">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-bold text-gray-900 group-hover:text-blue-600 transition">Project Specs v2.pdf</h4>
+                        <p class="text-sm text-gray-500">Updated by Sarah 2 days ago</p>
+                    </div>
+                    <span class="ml-auto text-xs text-gray-400 border border-gray-200 rounded px-2 py-1">File</span>
+                </div>
+            </li>
+             <li class="p-4 hover:bg-gray-50 transition cursor-pointer group">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 rounded-full bg-gray-200 flex-shrink-0 mr-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                    </div>
+                    <div>
+                        <h4 class="text-md font-bold text-gray-900 group-hover:text-blue-600 transition">Project Manager</h4>
+                        <p class="text-sm text-gray-500">Job Title • Engineering</p>
+                    </div>
+                     <span class="ml-auto text-xs text-gray-400 border border-gray-200 rounded px-2 py-1">User</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
