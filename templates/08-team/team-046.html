@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Grid Layout - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Japanese bento box inspired grid.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+    <div class="bg-gray-100 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-12">The Squad</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-4 md:grid-rows-2 gap-4 h-[800px] md:h-[600px]">
+            <!-- Large Item -->
+            <div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform group-hover:scale-105" alt="">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-white text-2xl font-bold">The Engineering Team</h3>
+                    <p class="text-gray-300">Building the core platform.</p>
+                </div>
+            </div>
+            <!-- Medium Item -->
+            <div class="md:col-span-1 md:row-span-1 relative rounded-2xl overflow-hidden group">
+                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform group-hover:scale-105" alt="">
+                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                 <div class="absolute bottom-4 left-4">
+                     <p class="text-white font-bold">Leslie</p>
+                 </div>
+            </div>
+             <!-- Medium Item -->
+            <div class="md:col-span-1 md:row-span-1 relative rounded-2xl overflow-hidden group">
+                 <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform group-hover:scale-105" alt="">
+                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                  <div class="absolute bottom-4 left-4">
+                     <p class="text-white font-bold">Michael</p>
+                 </div>
+            </div>
+             <!-- Wide Item -->
+            <div class="md:col-span-2 md:row-span-1 relative rounded-2xl overflow-hidden group">
+                  <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform group-hover:scale-105" alt="">
+                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-white text-xl font-bold">Design Studio</h3>
+                    <p class="text-gray-300">Where magic happens.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
