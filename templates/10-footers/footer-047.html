@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Image Footer - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Footer with background image overlay.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <footer class="relative bg-gray-900 text-white">
+    <div class="absolute inset-0 overflow-hidden">
+       <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2850&q=80" alt="" class="w-full h-full object-cover opacity-10">
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 text-center">
+       <h2 class="text-2xl font-bold mb-6">Join our community</h2>
+       <p class="mb-8 max-w-2xl mx-auto text-gray-300">Connect with thousands of developers building the next generation of apps.</p>
+       <button class="bg-white text-gray-900 font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition">Get Involved</button>
+       <div class="mt-12 text-xs text-gray-500">
+          &copy; 2023 Community.
+       </div>
+    </div>
+  </footer>
+</body>
+</html>
