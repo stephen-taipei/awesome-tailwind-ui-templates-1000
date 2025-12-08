@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <meta name="description" content="Drag and drop file upload area.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <div class="max-w-xl mx-auto py-20 px-4">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Upload Assets</h2>
+        <div class="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-xl hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer group">
+            <div class="space-y-1 text-center">
+                <svg class="mx-auto h-12 w-12 text-gray-400 group-hover:text-blue-500 transition" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="flex text-sm text-gray-600 justify-center">
+                    <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                        <span>Upload a file</span>
+                        <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                    </label>
+                    <p class="pl-1">or drag and drop</p>
+                </div>
+                <p class="text-xs text-gray-500">
+                    PNG, JPG, GIF up to 10MB
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-6 space-y-3">
+            <div class="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 text-red-500 bg-red-50 rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-xs font-bold uppercase">PDF</span>
+                    </div>
+                    <div>
+                         <p class="text-sm font-medium text-gray-900">Documentation.pdf</p>
+                         <p class="text-xs text-gray-500">2.4 MB • Uploading...</p>
+                    </div>
+                </div>
+                <div class="w-24 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="bg-blue-500 h-full w-2/3"></div>
+                </div>
+            </div>
+
+             <div class="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg shadow-sm">
+                <div class="flex items-center">
+                    <div class="h-10 w-10 text-green-500 bg-green-50 rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-xs font-bold uppercase">PNG</span>
+                    </div>
+                    <div>
+                         <p class="text-sm font-medium text-gray-900">Dashboard_V2.png</p>
+                         <p class="text-xs text-gray-500">4.1 MB • Completed</p>
+                    </div>
+                </div>
+                 <button class="text-gray-400 hover:text-red-500">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
