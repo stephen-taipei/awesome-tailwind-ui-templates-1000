@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Subscription - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Minimal page focused on growing a mailing list.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+    <div class="bg-gray-50 min-h-screen flex items-center justify-center px-6">
+      <div class="w-full max-w-xl bg-white rounded-3xl shadow-xl p-8 sm:p-12 text-center">
+         <div class="mx-auto h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+             <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+         </div>
+         <h1 class="text-3xl font-bold text-gray-900 mb-4">Weekly Wisdom</h1>
+         <p class="text-gray-600 mb-8">Get the best tips on productivity, design, and tech delivered straight to your inbox every Monday. Join 10,000+ subscribers.</p>
+         <form class="flex flex-col sm:flex-row gap-3">
+             <input type="email" placeholder="john@example.com" class="flex-1 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-3 shadow-sm border">
+             <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Subscribe</button>
+         </form>
+         <p class="mt-4 text-xs text-gray-400">We respect your privacy. Unsubscribe at any time.</p>
+      </div>
+    </div>
+</body>
+</html>
