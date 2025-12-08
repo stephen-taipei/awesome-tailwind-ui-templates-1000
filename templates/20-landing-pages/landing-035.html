@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SASS Product Dark - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="B2B SaaS landing page in dark mode.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+    <div class="bg-gray-900 text-white font-sans">
+       <nav class="flex justify-between items-center p-6 container mx-auto">
+           <div class="font-bold text-xl tracking-tight">Struct<span class="text-blue-500">.io</span></div>
+           <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+               <a href="#" class="hover:text-white transition">Product</a>
+               <a href="#" class="hover:text-white transition">Solutions</a>
+               <a href="#" class="hover:text-white transition">Pricing</a>
+           </div>
+           <button class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-lg font-medium transition">Get Started</button>
+       </nav>
+
+       <div class="container mx-auto px-6 py-24 text-center">
+           <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">Data infrastructure<br>for everyone.</h1>
+           <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">Unified analytics, observability, and data management platform. Scale your insights without scaling your team.</p>
+
+           <div class="flex justify-center gap-4 mb-16">
+               <input type="email" placeholder="work@email.com" class="bg-gray-800 border border-gray-700 text-white px-6 py-3 rounded-lg w-80 focus:outline-none focus:border-blue-500">
+               <button class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg font-medium transition">Start Free Trial</button>
+           </div>
+
+           <div class="border border-gray-800 rounded-xl overflow-hidden shadow-2xl bg-gray-800 max-w-5xl mx-auto">
+                <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="p-8">
+                     <!-- Abstract Dashboard UI Mockup -->
+                     <div class="grid grid-cols-3 gap-6 mb-6">
+                         <div class="bg-gray-900 h-32 rounded-lg animate-pulse"></div>
+                         <div class="bg-gray-900 h-32 rounded-lg animate-pulse"></div>
+                         <div class="bg-gray-900 h-32 rounded-lg animate-pulse"></div>
+                     </div>
+                     <div class="bg-gray-900 h-64 rounded-lg animate-pulse"></div>
+                </div>
+           </div>
+
+           <div class="mt-24 grid grid-cols-2 md:grid-cols-5 gap-8 opacity-50 grayscale">
+               <!-- Partner Logos -->
+               <div class="font-bold text-2xl">ACME Corp</div>
+               <div class="font-bold text-2xl">GlobalTech</div>
+               <div class="font-bold text-2xl">Nebula</div>
+               <div class="font-bold text-2xl">FoxRun</div>
+               <div class="font-bold text-2xl">Circle</div>
+           </div>
+       </div>
+    </div>
+</body>
+</html>
