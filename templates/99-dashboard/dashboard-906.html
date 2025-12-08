@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Chart</title>
+    <meta name="description" content="Visual chart representation (mockup).">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <div class="bg-white p-6 rounded-xl shadow border border-gray-100 max-w-4xl mx-auto mt-10">
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <h3 class="text-lg font-bold text-gray-900">Traffic Overview</h3>
+                <p class="text-sm text-gray-500">Sep 1 - Sep 30</p>
+            </div>
+            <select class="border-gray-300 rounded-lg text-sm focus:ring-blue-500 focus:border-blue-500">
+                <option>Last 30 Days</option>
+                <option>Last 7 Days</option>
+                <option>Last Year</option>
+            </select>
+        </div>
+
+        <!-- Chart Area Placeholder -->
+        <div class="relative h-64 w-full bg-gray-50 rounded-lg border border-gray-200 flex items-end justify-between px-4 pb-4 gap-2">
+            <!-- Grid Lines -->
+            <div class="absolute inset-0 flex flex-col justify-between p-4 pointer-events-none opacity-20">
+                <div class="border-t border-gray-500 w-full"></div>
+                <div class="border-t border-gray-500 w-full"></div>
+                <div class="border-t border-gray-500 w-full"></div>
+                <div class="border-t border-gray-500 w-full"></div>
+                <div class="border-t border-gray-500 w-full"></div>
+            </div>
+
+            <!-- Bars -->
+            <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[40%] relative group">
+                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">400</div>
+            </div>
+             <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[60%] relative group">
+                  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">600</div>
+             </div>
+             <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[30%] relative group">
+                  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">300</div>
+             </div>
+             <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[75%] relative group">
+                  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">750</div>
+             </div>
+             <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[50%] relative group">
+                  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">500</div>
+             </div>
+             <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[85%] relative group">
+                  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">850</div>
+             </div>
+              <div class="w-full bg-blue-500 hover:bg-blue-600 transition rounded-t-sm h-[65%] relative group">
+                  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition">650</div>
+             </div>
+        </div>
+
+        <div class="flex justify-between text-xs text-gray-500 mt-4 px-2">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+        </div>
+    </div>
+</body>
+</html>
