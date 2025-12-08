@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call Incoming - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Notification for incoming call.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="pointer-events-auto w-full max-w-sm rounded-lg bg-gray-900 shadow-lg ring-1 ring-white ring-opacity-10 text-white">
+    <div class="p-4">
+       <div class="flex items-center">
+          <div class="flex-shrink-0 relative">
+             <div class="absolute inline-flex items-center justify-center w-full h-full rounded-full bg-green-400 opacity-75 animate-ping"></div>
+             <img class="relative h-12 w-12 rounded-full border-2 border-gray-800" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=160&h=160&q=80" alt="Avatar">
+          </div>
+          <div class="ml-4 flex-1">
+             <p class="text-base font-semibold">Incoming Call</p>
+             <p class="text-sm text-gray-400">David Smith</p>
+          </div>
+          <div class="flex gap-2">
+             <button class="bg-red-500 p-2 rounded-full hover:bg-red-600 transition-colors text-white"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06l1.89 1.89-1.89 1.89a.75.75 0 101.06 1.06l1.89-1.89 1.89 1.89a.75.75 0 101.06-1.06l-1.89-1.89 1.89-1.89a.75.75 0 00-1.06-1.06l-1.89 1.89-1.89-1.89z"/></svg></button>
+             <button class="bg-green-500 p-2 rounded-full hover:bg-green-600 transition-colors text-white"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></button>
+          </div>
+       </div>
+    </div>
+  </div>
+</body>
+</html>
