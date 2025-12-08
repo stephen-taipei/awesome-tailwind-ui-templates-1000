@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In Illustration Dark - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Dark mode sign in with illustration.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="flex min-h-screen bg-gray-900 text-white">
+    <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+      <div class="mx-auto w-full max-w-sm lg:w-96">
+        <div>
+          <img class="h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          <h2 class="mt-6 text-3xl font-extrabold text-white">Sign in to your account</h2>
+        </div>
+
+        <div class="mt-8">
+            <form action="#" method="POST" class="space-y-6">
+               <div>
+                <label for="email" class="block text-sm font-medium text-gray-300"> Email address </label>
+                <div class="mt-1">
+                  <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm placeholder-gray-500 bg-gray-800 text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+              </div>
+
+              <div>
+                <label for="password" class="block text-sm font-medium text-gray-300"> Password </label>
+                <div class="mt-1">
+                  <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm placeholder-gray-500 bg-gray-800 text-white focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign in</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="relative hidden w-0 flex-1 lg:block bg-gray-800">
+       <div class="flex items-center justify-center h-full">
+          <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App Illustration" class="max-w-[800px] shadow-2xl rounded-xl border border-gray-700">
+       </div>
+    </div>
+  </div>
+</body>
+</html>
