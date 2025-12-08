@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Notification - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Notification showing progress bar.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <div class="pointer-events-auto w-full max-w-sm rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+    <div class="p-4">
+       <div class="flex justify-between items-center mb-1">
+          <h4 class="text-sm font-medium text-gray-900">Exporting Data</h4>
+          <span class="text-xs text-gray-500">45%</span>
+       </div>
+       <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+         <div class="bg-indigo-600 h-1.5 rounded-full" style="width: 45%"></div>
+       </div>
+       <p class="mt-2 text-xs text-gray-400">This may take a few moments...</p>
+    </div>
+  </div>
+</body>
+</html>
