@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer with Contact Form - Awesome Tailwind UI Templates</title>
+  <meta name="description" content="Footer containing a mini contact form.">
+  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-50: #eff6ff;
+      --color-primary-100: #dbeafe;
+      --color-primary-200: #bfdbfe;
+      --color-primary-300: #93c5fd;
+      --color-primary-400: #60a5fa;
+      --color-primary-500: #3b82f6;
+      --color-primary-600: #2563eb;
+      --color-primary-700: #1d4ed8;
+      --color-primary-800: #1e40af;
+      --color-primary-900: #1e3a8a;
+      --color-primary-950: #172554;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+  
+  <footer class="bg-gray-800 text-white">
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+               <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+               <p class="text-gray-400 mb-6">Have questions? Send us a message directly.</p>
+               <form class="space-y-4">
+                  <input type="email" placeholder="Your Email" class="w-full rounded bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500">
+                  <textarea placeholder="Message" rows="3" class="w-full rounded bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-indigo-500"></textarea>
+                  <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded font-medium">Send Message</button>
+               </form>
+            </div>
+            <div class="pl-0 md:pl-12">
+               <h3 class="text-xl font-bold mb-4">Links</h3>
+               <ul class="space-y-2 text-gray-400">
+                  <li><a href="#" class="hover:text-white">FAQ</a></li>
+                  <li><a href="#" class="hover:text-white">Shipping</a></li>
+                  <li><a href="#" class="hover:text-white">Returns</a></li>
+               </ul>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
