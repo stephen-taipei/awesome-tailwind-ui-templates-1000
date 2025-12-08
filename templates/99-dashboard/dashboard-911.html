@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout 911</title>
+    <meta name="description" content="Dashboard template variation 911.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    
+    <div class="min-h-screen bg-gray-50 flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white border-r border-gray-200 hidden md:block">
+            <div class="h-16 flex items-center justify-center border-b border-gray-200">
+                <span class="font-bold text-xl text-blue-600">Admin 911</span>
+            </div>
+            <nav class="p-4 space-y-1">
+                <a href="#" class="block px-4 py-2 bg-blue-50 text-blue-700 rounded-md font-medium">Dashboard</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md font-medium">Orders</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md font-medium">Products</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md font-medium">Customers</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md font-medium">Reports</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8">
+                <h2 class="text-lg font-bold text-gray-900">Dashboard Overview</h2>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">Notifications</span>
+                        🔔
+                    </button>
+                    <img class="h-8 w-8 rounded-full bg-gray-300" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </div>
+            </header>
+
+            <main class="flex-1 p-8 overflow-y-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-sm font-medium text-gray-500">Total Users</h3>
+                        <p class="mt-2 text-3xl font-bold text-gray-900">12,345</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-sm font-medium text-gray-500">Total Revenue</h3>
+                        <p class="mt-2 text-3xl font-bold text-gray-900">$34,567</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-sm font-medium text-gray-500">Active Sessions</h3>
+                        <p class="mt-2 text-3xl font-bold text-gray-900">456</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-sm font-medium text-gray-500">Bounce Rate</h3>
+                        <p class="mt-2 text-3xl font-bold text-gray-900">12%</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 min-h-[400px] flex items-center justify-center text-gray-400">
+                    Chart Placeholder for Dashboard 911
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
