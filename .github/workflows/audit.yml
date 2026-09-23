@@ -1,0 +1,58 @@
+name: Codebase audit
+
+on:
+  push:
+    branches: [audit/codebase-remediation-20260924]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inventory tracked source
+        run: |
+          python3 - <<'PY'
+          import ast, collections, json, pathlib, re, subprocess
+          root = pathlib.Path('.')
+          paths = [pathlib.Path(p) for p in subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0') if p]
+          html = [p for p in paths if p.suffix == '.html']
+          report = {'tracked_files': len(paths), 'html_files': len(html), 'html_by_directory': dict(collections.Counter(str(p.parent) for p in html)), 'python_syntax_errors': [], 'root_relative_references': [], 'missing_local_references': []}
+          for p in paths:
+              if p.suffix == '.py':
+                  try: ast.parse(p.read_text(encoding='utf-8'), filename=str(p))
+                  except SyntaxError as e: report['python_syntax_errors'].append({'path': str(p), 'line': e.lineno, 'message': e.msg})
+          for p in html:
+              text = p.read_text(encoding='utf-8')
+              for attr, value in re.findall(r'(href|src)=[\"\']([^\"\']+)[\"\']', text):
+                  if value.startswith('/') and not value.startswith('//'):
+                      report['root_relative_references'].append({'path': str(p), 'value': value})
+                  if re.match(r'^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|//|#)', value): continue
+                  target = value.split('#')[0].split('?')[0]
+                  if not target: continue
+                  dest = root / target.lstrip('/') if target.startswith('/') else p.parent / target
+                  if not dest.exists(): report['missing_local_references'].append({'path': str(p), 'value': value})
+          pathlib.Path('/tmp/audit-baseline.json').write_text(json.dumps(report, indent=2))
+          print(json.dumps(report, indent=2)[:55000])
+          PY
+      - name: Package tracked source for audit inspection
+        run: git archive --format=tar HEAD | gzip > /tmp/audit-source.tar.gz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-baseline
+          path: |
+            /tmp/audit-baseline.json
+            /tmp/audit-source.tar.gz
+          retention-days: 1
+          if-no-files-found: error
