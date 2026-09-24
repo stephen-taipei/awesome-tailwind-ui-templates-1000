@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile Edit - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Simple profile form">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -36,13 +36,13 @@
             <label class="block text-sm font-bold text-slate-900 mb-2">Username</label>
             <div class="flex rounded-lg shadow-sm">
               <span class="inline-flex items-center px-4 rounded-l-lg border border-r-0 border-slate-200 bg-gray-50 text-slate-500 text-sm">example.com/</span>
-              <input type="text" class="flex-1 min-w-0 block w-full px-4 py-3 rounded-none rounded-r-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="username">
+              <input type="text" class="flex-1 min-w-0 block w-full px-4 py-3 rounded-none rounded-r-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="username" aria-label="username">
             </div>
           </div>
 
           <div>
             <label class="block text-sm font-bold text-slate-900 mb-2">About</label>
-            <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="Brief description for your profile."></textarea>
+            <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="Brief description for your profile." aria-label="Brief description for your profile."></textarea>
             <p class="mt-2 text-sm text-slate-500">Brief description for your profile. URLs are hyperlinked.</p>
           </div>
 
@@ -81,5 +81,6 @@
       </form>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

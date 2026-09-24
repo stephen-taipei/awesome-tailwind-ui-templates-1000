@@ -6,12 +6,12 @@
   <meta name="description" content="Dark Mode Navbar - Dark-themed navigation template for tech and gaming sites">
   <title>nav-004: Dark Mode Navbar | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-400: oklch(0.68 0.16 250);
       --color-primary-500: oklch(0.55 0.20 250);
       --color-primary-600: oklch(0.48 0.22 250);
@@ -493,5 +493,7 @@
       }
     })();
   </script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
+  <script type="module" src="../../src/js/i18n.js"></script>
 </body>
 </html>

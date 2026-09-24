@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waitlist Signup - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Viral waitlist signup form for upcoming products.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -39,7 +39,7 @@
       <form class="relative group">
         <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
         <div class="relative flex bg-black rounded-lg p-1 border border-white/10">
-          <input type="email" placeholder="Enter your email address" class="flex-1 bg-transparent text-white px-4 py-3 outline-none placeholder-gray-500">
+          <input type="email" placeholder="Enter your email address" class="flex-1 bg-transparent text-white px-4 py-3 outline-none placeholder-gray-500" aria-label="Enter your email address">
           <button class="bg-white text-black font-bold px-6 py-3 rounded-md hover:bg-gray-100 transition-colors">
             Join Waitlist
           </button>
@@ -56,5 +56,6 @@
       </div>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

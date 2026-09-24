@@ -64,3 +64,14 @@ proxy.conf.json
 AGENTS.md
 MIGRATION.md
 ARCHITECTURE.md
+
+# Reproducible tooling and local verification output
+node_modules/
+.build/
+.generated/
+__pycache__/
+*.pyc
+*.log
+playwright-report/
+test-results/
+audit-results/

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid Links Newsletter - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Grid of links with newsletter on side.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -30,7 +30,7 @@
           <h2 class="text-2xl font-bold mb-4">Stay updated</h2>
           <p class="text-gray-400 mb-6">Join our newsletter for the latest updates.</p>
           <form class="flex gap-2">
-             <input type="email" placeholder="Email" class="bg-gray-800 border-none rounded text-white p-2 w-full">
+             <input type="email" placeholder="Email" class="bg-gray-800 border-none rounded text-white p-2 w-full" aria-label="Email">
              <button class="bg-indigo-600 rounded px-4 py-2 hover:bg-indigo-500">Join</button>
           </form>
        </div>
@@ -63,5 +63,6 @@
        </div>
     </div>
   </footer>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

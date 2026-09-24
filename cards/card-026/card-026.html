@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Card - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Chat message card.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -70,7 +70,7 @@
       </div>
 
       <div class="relative">
-        <input type="text" placeholder="Type a message..." class="w-full bg-gray-50 border border-gray-200 rounded-full px-4 py-3 pr-12 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+        <input type="text" placeholder="Type a message..." class="w-full bg-gray-50 border border-gray-200 rounded-full px-4 py-3 pr-12 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" aria-label="Type a message...">
         <button class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
@@ -79,5 +79,6 @@
       </div>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

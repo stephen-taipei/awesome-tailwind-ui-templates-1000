@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Countdown Card - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Event countdown card.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -53,12 +53,13 @@
       </div>
 
       <form class="flex gap-2">
-        <input type="email" placeholder="Enter your email" class="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-indigo-300 focus:outline-none focus:border-indigo-400 focus:bg-white/20 transition-all">
+        <input type="email" placeholder="Enter your email" class="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-indigo-300 focus:outline-none focus:border-indigo-400 focus:bg-white/20 transition-all" aria-label="Enter your email">
         <button class="bg-indigo-500 hover:bg-indigo-400 text-white font-bold px-6 py-2.5 rounded-lg transition-colors shadow-lg shadow-indigo-500/30">
           Notify Me
         </button>
       </form>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pet/Veterinary Services Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 150);
       --color-primary-100: oklch(0.93 0.04 150);
       --color-primary-200: oklch(0.86 0.08 150);
@@ -72,7 +72,7 @@
         </div>
         <div class="hidden lg:flex items-center gap-3 flex-1 max-w-md mx-8">
           <div class="relative w-full">
-            <input type="text" placeholder="Search for pet supplies..." class="w-full bg-gray-100 rounded-full px-5 py-2.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"/>
+            <input type="text" placeholder="Search for pet supplies..." class="w-full bg-gray-100 rounded-full px-5 py-2.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" aria-label="Search for pet supplies..."/>
             <svg class="w-5 h-5 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
@@ -313,5 +313,6 @@
     <p class="mt-2">Tailwind CSS Navigation Components</p>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

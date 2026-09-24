@@ -6,12 +6,12 @@
   <meta name="description" content="Command Palette Navigation - Keyboard-driven command interfaces">
   <title>nav-020: Command Palette Navigation | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-500: oklch(0.55 0.20 250);
@@ -180,7 +180,7 @@
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Search for anything...">
+        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Search for anything..." aria-label="Search for anything...">
       </div>
       <div class="max-h-96 overflow-y-auto p-2">
         <div class="mb-4">
@@ -247,7 +247,7 @@
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Search or jump to...">
+        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Search or jump to..." aria-label="Search or jump to...">
       </div>
       <div class="max-h-96 overflow-y-auto p-2">
         <div class="mb-4">
@@ -325,7 +325,7 @@
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Type a command or search...">
+        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Type a command or search..." aria-label="Type a command or search...">
       </div>
       <div class="max-h-96 overflow-y-auto p-2">
         <div class="mb-4">
@@ -401,7 +401,7 @@
     <div class="command-panel w-full max-w-xl mx-4 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary-600 font-mono">&gt;</span>
-        <input type="text" class="search-input w-full pl-10 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Run a command..." value="">
+        <input type="text" class="search-input w-full pl-10 pr-4 py-4 text-lg border-b border-slate-200 focus:outline-none" placeholder="Run a command..." value="" aria-label="Run a command...">
       </div>
       <div class="max-h-96 overflow-y-auto p-2">
         <a href="#" class="command-result selected flex items-center gap-3 px-3 py-3 rounded-lg">
@@ -468,7 +468,7 @@
     <div class="command-panel w-full max-w-xl mx-4 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
       <div class="relative flex items-center border-b border-slate-200">
         <span class="pl-4 text-slate-400 text-sm">~/projects/</span>
-        <input type="text" class="search-input flex-1 px-2 py-4 text-lg focus:outline-none" placeholder="Find a file..." value="">
+        <input type="text" class="search-input flex-1 px-2 py-4 text-lg focus:outline-none" placeholder="Find a file..." value="" aria-label="Find a file...">
       </div>
       <div class="max-h-96 overflow-y-auto p-2">
         <a href="#" class="command-result flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 group">
@@ -535,7 +535,7 @@
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg bg-slate-900 text-white border-b border-slate-700 focus:outline-none placeholder-slate-500" placeholder="Search commands...">
+        <input type="text" class="search-input w-full pl-12 pr-4 py-4 text-lg bg-slate-900 text-white border-b border-slate-700 focus:outline-none placeholder-slate-500" placeholder="Search commands..." aria-label="Search commands...">
       </div>
       <div class="max-h-96 overflow-y-auto p-2">
         <div class="mb-4">
@@ -724,5 +724,6 @@
       });
     })();
   </script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

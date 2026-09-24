@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation 057 - Forum/Community Navigation - 8 Styles</title>
-    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-    <style type="text/tailwindcss">
-        @theme {
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+        :root {
             --color-primary-50: oklch(0.97 0.02 260);
             --color-primary-100: oklch(0.93 0.04 260);
             --color-primary-200: oklch(0.86 0.08 260);
@@ -48,7 +48,7 @@
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="relative">
-                                <input type="text" placeholder="Search..." class="w-48 pl-9 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-white/50 focus:outline-none focus:bg-white/20">
+                                <input type="text" placeholder="Search..." class="w-48 pl-9 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-white/50 focus:outline-none focus:bg-white/20" aria-label="Search...">
                                 <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                 </svg>
@@ -89,7 +89,7 @@
                             <span class="font-bold text-gray-900">community</span>
                         </a>
                         <div class="relative flex-1 max-w-xl">
-                            <input type="text" placeholder="Search Community" class="w-full pl-10 pr-4 py-2 bg-gray-100 border border-gray-100 rounded-full text-sm focus:outline-none focus:bg-white focus:border-blue-500">
+                            <input type="text" placeholder="Search Community" class="w-full pl-10 pr-4 py-2 bg-gray-100 border border-gray-100 rounded-full text-sm focus:outline-none focus:bg-white focus:border-blue-500" aria-label="Search Community">
                             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="flex items-center gap-3">
                         <div class="relative">
-                            <input type="text" placeholder="Search..." class="w-64 pl-9 pr-4 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-100">
+                            <input type="text" placeholder="Search..." class="w-64 pl-9 pr-4 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-100" aria-label="Search...">
                             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
@@ -263,7 +263,7 @@
                             </svg>
                         </a>
                         <div class="relative">
-                            <input type="text" placeholder="Search or jump to..." class="w-72 pl-9 pr-16 py-1.5 bg-gray-800 border border-gray-700 rounded-md text-sm text-gray-300 placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-gray-600">
+                            <input type="text" placeholder="Search or jump to..." class="w-72 pl-9 pr-16 py-1.5 bg-gray-800 border border-gray-700 rounded-md text-sm text-gray-300 placeholder-gray-500 focus:outline-none focus:bg-gray-700 focus:border-gray-600" aria-label="Search or jump to...">
                             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
@@ -447,7 +447,7 @@
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="relative">
-                                <input type="text" placeholder="Search community..." class="w-56 pl-9 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-white/50 focus:outline-none focus:bg-white/20">
+                                <input type="text" placeholder="Search community..." class="w-56 pl-9 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-white/50 focus:outline-none focus:bg-white/20" aria-label="Search community...">
                                 <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                 </svg>
@@ -479,5 +479,6 @@
         </section>
 
     </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

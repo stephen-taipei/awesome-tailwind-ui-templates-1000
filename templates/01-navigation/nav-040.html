@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav-040: Settings Navigation</title>
-    <link href="/vendor/tailwind/tailwind.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'oklch(55% 0.25 260)',
-                        'primary-light': 'oklch(70% 0.2 260)',
-                        'primary-dark': 'oklch(45% 0.25 260)',
-                        secondary: 'oklch(65% 0.15 180)',
-                        accent: 'oklch(75% 0.2 80)',
-                        surface: 'oklch(98% 0.01 260)',
-                        'surface-dark': 'oklch(20% 0.02 260)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+:root {
+  --color-primary: oklch(55% 0.25 260);
+  --color-primary-light: oklch(70% 0.2 260);
+  --color-primary-dark: oklch(45% 0.25 260);
+  --color-secondary: oklch(65% 0.15 180);
+  --color-accent: oklch(75% 0.2 80);
+  --color-surface: oklch(98% 0.01 260);
+  --color-surface-dark: oklch(20% 0.02 260);
+}
+</style>
     <style>
         .toggle-checkbox:checked {
             right: 0;
@@ -55,7 +49,7 @@
                             <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
-                            <input type="text" placeholder="Search" class="bg-transparent ml-2 outline-none w-full text-gray-700">
+                            <input type="text" placeholder="Search" class="bg-transparent ml-2 outline-none w-full text-gray-700" aria-label="Search">
                         </div>
                     </div>
                     
@@ -239,7 +233,7 @@
                         <div class="w-64 bg-gray-800/50 p-4">
                             <div class="mb-6">
                                 <div class="relative">
-                                    <input type="text" placeholder="Find a setting" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md text-sm placeholder-gray-400">
+                                    <input type="text" placeholder="Find a setting" class="w-full bg-gray-700 text-white px-4 py-2 rounded-md text-sm placeholder-gray-400" aria-label="Find a setting">
                                     <svg class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                     </svg>
@@ -702,5 +696,6 @@
 
     </main>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

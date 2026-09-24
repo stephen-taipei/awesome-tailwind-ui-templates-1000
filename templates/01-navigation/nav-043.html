@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav-043: Form Navigation</title>
-    <link href="/vendor/tailwind/tailwind.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'oklch(55% 0.22 240)',
-                        'primary-light': 'oklch(70% 0.18 240)',
-                        'primary-dark': 'oklch(45% 0.22 240)',
-                        secondary: 'oklch(60% 0.16 160)',
-                        accent: 'oklch(70% 0.2 50)',
-                        surface: 'oklch(98% 0.01 240)',
-                        'surface-dark': 'oklch(20% 0.02 240)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+:root {
+  --color-primary: oklch(55% 0.22 240);
+  --color-primary-light: oklch(70% 0.18 240);
+  --color-primary-dark: oklch(45% 0.22 240);
+  --color-secondary: oklch(60% 0.16 160);
+  --color-accent: oklch(70% 0.2 50);
+  --color-surface: oklch(98% 0.01 240);
+  --color-surface-dark: oklch(20% 0.02 240);
+}
+</style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     
@@ -96,17 +90,17 @@
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="John">
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="John" aria-label="John">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Doe">
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Doe" aria-label="Doe">
                                 </div>
                             </div>
                             
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Bio</label>
-                                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Tell us about yourself..."></textarea>
+                                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Tell us about yourself..." aria-label="Tell us about yourself..."></textarea>
                             </div>
                         </div>
                     </div>
@@ -311,7 +305,7 @@
                             
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">University/Institution</label>
-                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Enter institution name">
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Enter institution name" aria-label="Enter institution name">
                             </div>
                             
                             <div class="grid grid-cols-2 gap-4">
@@ -438,7 +432,7 @@
                             
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Bio</label>
-                                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Write a short bio..."></textarea>
+                                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Write a short bio..." aria-label="Write a short bio..."></textarea>
                             </div>
                         </div>
                     </div>
@@ -603,7 +597,7 @@
                             <div class="space-y-4 ml-12">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2">Street Address</label>
-                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="123 Main Street">
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary" placeholder="123 Main Street" aria-label="123 Main Street">
                                 </div>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div>
@@ -665,5 +659,6 @@
 
     </main>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav-045: Search Navigation</title>
-    <link href="/vendor/tailwind/tailwind.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'oklch(55% 0.24 250)',
-                        'primary-light': 'oklch(70% 0.2 250)',
-                        'primary-dark': 'oklch(45% 0.24 250)',
-                        secondary: 'oklch(60% 0.16 170)',
-                        accent: 'oklch(70% 0.2 60)',
-                        surface: 'oklch(98% 0.01 250)',
-                        'surface-dark': 'oklch(20% 0.02 250)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+:root {
+  --color-primary: oklch(55% 0.24 250);
+  --color-primary-light: oklch(70% 0.2 250);
+  --color-primary-dark: oklch(45% 0.24 250);
+  --color-secondary: oklch(60% 0.16 170);
+  --color-accent: oklch(70% 0.2 60);
+  --color-surface: oklch(98% 0.01 250);
+  --color-surface-dark: oklch(20% 0.02 250);
+}
+</style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     
@@ -46,7 +40,7 @@
                             <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
-                            <input type="text" class="flex-1 ml-3 text-lg outline-none" placeholder="Search or type a command..." value="user settings">
+                            <input type="text" class="flex-1 ml-3 text-lg outline-none" placeholder="Search or type a command..." value="user settings" aria-label="Search or type a command...">
                             <div class="flex items-center space-x-1 text-xs text-gray-400">
                                 <kbd class="px-2 py-1 bg-gray-100 rounded">⌘</kbd>
                                 <kbd class="px-2 py-1 bg-gray-100 rounded">K</kbd>
@@ -143,7 +137,7 @@
                     <div class="px-6 py-4 border-b">
                         <div class="flex items-center space-x-4">
                             <div class="flex-1 relative">
-                                <input type="text" class="w-full pl-12 pr-4 py-3 bg-gray-100 border-0 rounded-xl text-gray-900 focus:ring-2 focus:ring-primary" placeholder="Search products..." value="wireless headphones">
+                                <input type="text" class="w-full pl-12 pr-4 py-3 bg-gray-100 border-0 rounded-xl text-gray-900 focus:ring-2 focus:ring-primary" placeholder="Search products..." value="wireless headphones" aria-label="Search products...">
                                 <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                 </svg>
@@ -250,7 +244,7 @@
                     <div class="relative">
                         <!-- Search Input -->
                         <div class="relative">
-                            <input type="text" class="w-full pl-12 pr-12 py-4 bg-white border-2 border-gray-200 rounded-2xl text-gray-900 focus:border-primary focus:ring-0 text-lg" placeholder="Search..." value="react">
+                            <input type="text" class="w-full pl-12 pr-12 py-4 bg-white border-2 border-gray-200 rounded-2xl text-gray-900 focus:border-primary focus:ring-0 text-lg" placeholder="Search..." value="react" aria-label="Search...">
                             <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
@@ -341,7 +335,7 @@
                         
                         <!-- Search Input -->
                         <div class="relative mb-8">
-                            <input type="text" class="w-full bg-transparent border-b-2 border-gray-600 focus:border-white pb-4 text-white text-3xl font-light placeholder-gray-500 outline-none" placeholder="Search..." value="getting started">
+                            <input type="text" class="w-full bg-transparent border-b-2 border-gray-600 focus:border-white pb-4 text-white text-3xl font-light placeholder-gray-500 outline-none" placeholder="Search..." value="getting started" aria-label="Search...">
                         </div>
                         
                         <!-- Results Grid -->
@@ -408,7 +402,7 @@
                     <div class="bg-white rounded-2xl shadow-lg p-6">
                         <!-- Search Bar with Voice/Camera -->
                         <div class="relative">
-                            <input type="text" class="w-full pl-12 pr-28 py-4 bg-gray-100 border-0 rounded-full text-gray-900 focus:ring-2 focus:ring-primary text-lg" placeholder="Search anything...">
+                            <input type="text" class="w-full pl-12 pr-28 py-4 bg-gray-100 border-0 rounded-full text-gray-900 focus:ring-2 focus:ring-primary text-lg" placeholder="Search anything..." aria-label="Search anything...">
                             <svg class="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
@@ -526,9 +520,9 @@
                             
                             <!-- Custom Range -->
                             <div class="mt-3 flex items-center space-x-2">
-                                <input type="text" placeholder="Min" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                                <input type="text" placeholder="Min" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm" aria-label="Min">
                                 <span class="text-gray-400">-</span>
-                                <input type="text" placeholder="Max" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                                <input type="text" placeholder="Max" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm" aria-label="Max">
                             </div>
                         </div>
                         
@@ -650,5 +644,6 @@
 
     </main>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

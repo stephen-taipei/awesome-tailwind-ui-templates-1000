@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RSVP Form - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Event registration">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -74,7 +74,7 @@
             </div>
             <div>
               <label class="block text-sm font-bold text-slate-900 mb-2">Dietary Requirements</label>
-              <input type="text" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 transition-all" placeholder="None">
+              <input type="text" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 transition-all" placeholder="None" aria-label="None">
             </div>
             <button class="w-full bg-slate-900 text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors">Confirm Registration</button>
           </form>
@@ -82,5 +82,6 @@
       </div>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation 062 - Footer Navigation - 8 Styles</title>
-    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-    <style type="text/tailwindcss">
-        @theme {
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+        :root {
             --color-primary-50: oklch(0.97 0.02 260);
             --color-primary-100: oklch(0.93 0.04 260);
             --color-primary-200: oklch(0.86 0.08 260);
@@ -138,7 +138,7 @@
                             <h3 class="text-2xl font-bold text-white mb-2">Subscribe to our newsletter</h3>
                             <p class="text-primary-100 mb-6">Get the latest news and updates delivered to your inbox.</p>
                             <form class="flex gap-3">
-                                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:bg-white/20">
+                                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:bg-white/20" aria-label="Enter your email">
                                 <button class="px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors">
                                     Subscribe
                                 </button>
@@ -428,5 +428,6 @@
         </section>
 
     </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

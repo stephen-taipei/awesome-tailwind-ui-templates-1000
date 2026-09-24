@@ -6,12 +6,12 @@
   <meta name="description" content="Travel Landing Page - Inspiring travel agency template with destination search">
   <title>landing-047: Travel Landing | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.60 0.15 240);
       --color-primary-600: oklch(0.50 0.15 240);
       --color-accent-500: oklch(0.75 0.15 50);
@@ -80,14 +80,14 @@
             <label class="block text-xs font-bold text-slate-500 uppercase tracking-wide mb-1" data-i18n="landing.travel.destinationLabel">Destination</label>
             <div class="flex items-center gap-2">
                <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-               <input type="text" placeholder="Where to?" class="w-full outline-none text-slate-900 font-medium placeholder-slate-400">
+               <input type="text" placeholder="Where to?" class="w-full outline-none text-slate-900 font-medium placeholder-slate-400" aria-label="Where to?">
             </div>
           </div>
           <div class="px-4 py-2 text-left">
             <label class="block text-xs font-bold text-slate-500 uppercase tracking-wide mb-1" data-i18n="landing.travel.checkinLabel">Check In</label>
             <div class="flex items-center gap-2">
                <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-               <input type="text" placeholder="Add dates" class="w-full outline-none text-slate-900 font-medium placeholder-slate-400" onfocus="(this.type='date')" onblur="(this.type='text')">
+               <input type="text" placeholder="Add dates" class="w-full outline-none text-slate-900 font-medium placeholder-slate-400" onfocus="(this.type='date')" onblur="(this.type='text')" aria-label="Add dates">
             </div>
           </div>
           <div class="px-4 py-2 text-left">
@@ -322,5 +322,6 @@
   </footer>
 
   <script src="../../src/js/i18n.js" type="module"></script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

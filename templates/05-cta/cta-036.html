@@ -6,12 +6,12 @@
   <meta name="description" content="Sidebar layout CTA">
   <title>cta-036: CTA with Sidebar | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.55 0.20 250);
       --color-primary-600: oklch(0.48 0.22 250);
       --color-secondary-600: oklch(0.45 0.02 250);
@@ -36,12 +36,13 @@
         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 sticky top-6">
           <h3 class="text-lg font-bold text-slate-900 mb-2">Subscribe</h3>
           <p class="text-sm text-slate-600 mb-4">Get the latest updates.</p>
-          <input type="email" placeholder="Email address" class="w-full mb-3 rounded-md border-slate-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm">
+          <input type="email" placeholder="Email address" class="w-full mb-3 rounded-md border-slate-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm" aria-label="Email address">
           <button class="w-full rounded-md bg-primary-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-500">Subscribe</button>
         </div>
       </div>
     </div>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

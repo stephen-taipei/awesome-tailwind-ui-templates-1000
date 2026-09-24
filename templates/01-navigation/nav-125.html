@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food & Restaurant Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-200: oklch(0.86 0.08 250);
@@ -41,7 +41,7 @@
         <div class="flex-1 max-w-md mx-6">
           <div class="relative">
             <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" placeholder="Search for restaurants or dishes..." class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <input type="text" placeholder="Search for restaurants or dishes..." class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Search for restaurants or dishes...">
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -125,7 +125,7 @@
         <div class="flex items-center gap-4">
           <div class="relative">
             <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" placeholder="Search recipes..." class="w-48 pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+            <input type="text" placeholder="Search recipes..." class="w-48 pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500" aria-label="Search recipes...">
           </div>
           <a href="#" class="p-2 text-gray-400 hover:text-red-500 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
@@ -186,7 +186,7 @@
         <div class="flex-1 max-w-xl mx-6">
           <div class="relative">
             <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+            <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500" aria-label="Search products...">
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -244,7 +244,7 @@
           <div class="flex items-center bg-gray-100 rounded-full p-1">
             <div class="flex items-center gap-2 px-4 py-2 flex-1 border-r border-gray-300">
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-              <input type="text" placeholder="Dec 3, 2025" class="bg-transparent text-sm focus:outline-none w-24">
+              <input type="text" placeholder="Dec 3, 2025" class="bg-transparent text-sm focus:outline-none w-24" aria-label="Dec 3, 2025">
             </div>
             <div class="flex items-center gap-2 px-4 py-2 flex-1 border-r border-gray-300">
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -252,11 +252,11 @@
             </div>
             <div class="flex items-center gap-2 px-4 py-2 flex-1 border-r border-gray-300">
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-              <input type="text" placeholder="2 guests" class="bg-transparent text-sm focus:outline-none w-20">
+              <input type="text" placeholder="2 guests" class="bg-transparent text-sm focus:outline-none w-20" aria-label="2 guests">
             </div>
             <div class="flex items-center gap-2 px-4 py-2 flex-1">
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-              <input type="text" placeholder="Location or cuisine" class="bg-transparent text-sm focus:outline-none w-32">
+              <input type="text" placeholder="Location or cuisine" class="bg-transparent text-sm focus:outline-none w-32" aria-label="Location or cuisine">
             </div>
             <button class="px-6 py-2 bg-red-500 text-white font-semibold rounded-full hover:bg-red-600 transition-colors">Find</button>
           </div>
@@ -268,5 +268,6 @@
     </nav>
   </section>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Command Menu Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-200: oklch(0.86 0.08 250);
@@ -30,7 +30,7 @@
             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <input type="text" placeholder="Type a command or search..." class="w-full pl-10 pr-4 py-2 text-lg focus:outline-none">
+            <input type="text" placeholder="Type a command or search..." class="w-full pl-10 pr-4 py-2 text-lg focus:outline-none" aria-label="Type a command or search...">
           </div>
         </div>
         <div class="max-h-80 overflow-auto">
@@ -74,7 +74,7 @@
             <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <input type="text" placeholder="Search commands..." class="w-full pl-10 pr-4 py-2 focus:outline-none">
+            <input type="text" placeholder="Search commands..." class="w-full pl-10 pr-4 py-2 focus:outline-none" aria-label="Search commands...">
           </div>
         </div>
         <div class="max-h-80 overflow-auto divide-y divide-gray-100">
@@ -128,7 +128,7 @@
               <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
               </svg>
-              <input type="text" placeholder="Spotlight Search" class="w-full pl-14 pr-4 py-4 text-xl bg-transparent focus:outline-none">
+              <input type="text" placeholder="Spotlight Search" class="w-full pl-14 pr-4 py-4 text-xl bg-transparent focus:outline-none" aria-label="Spotlight Search">
             </div>
           </div>
           <div class="border-t border-gray-200 max-h-96 overflow-auto">
@@ -170,7 +170,7 @@
         <div class="p-3 border-b border-gray-700">
           <div class="relative">
             <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">›</span>
-            <input type="text" placeholder="Show and Run Commands" class="w-full pl-8 pr-4 py-1.5 bg-gray-700 text-white placeholder-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-primary-500 text-sm">
+            <input type="text" placeholder="Show and Run Commands" class="w-full pl-8 pr-4 py-1.5 bg-gray-700 text-white placeholder-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-primary-500 text-sm" aria-label="Show and Run Commands">
           </div>
         </div>
         <div class="max-h-72 overflow-auto">
@@ -216,7 +216,7 @@
           <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
-          <input type="text" placeholder="Quick actions..." class="flex-1 focus:outline-none">
+          <input type="text" placeholder="Quick actions..." class="flex-1 focus:outline-none" aria-label="Quick actions...">
           <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded">ESC</kbd>
         </div>
         <div class="p-3 grid grid-cols-3 gap-2">
@@ -279,7 +279,7 @@
     <div class="bg-gray-900/50 rounded-lg p-8">
       <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
         <div class="p-4 border-b border-gray-200">
-          <input type="text" placeholder="Search or jump to..." class="w-full px-4 py-2 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+          <input type="text" placeholder="Search or jump to..." class="w-full px-4 py-2 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Search or jump to...">
         </div>
         <div class="flex border-b border-gray-200">
           <button class="flex-1 px-4 py-3 text-sm font-medium text-primary-600 border-b-2 border-primary-600">Recent</button>
@@ -338,7 +338,7 @@
           <svg class="w-6 h-6 text-gray-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
-          <input type="text" placeholder="Type a command..." class="flex-1 text-lg focus:outline-none">
+          <input type="text" placeholder="Type a command..." class="flex-1 text-lg focus:outline-none" aria-label="Type a command...">
           <div class="flex items-center gap-2 ml-4">
             <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-sm rounded">⌘</kbd>
             <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-sm rounded">K</kbd>
@@ -348,5 +348,6 @@
     </div>
   </section>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

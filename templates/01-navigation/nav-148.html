@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logistics/Shipping Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-logistics-50: oklch(0.98 0.01 250);
       --color-logistics-100: oklch(0.95 0.02 250);
       --color-logistics-200: oklch(0.90 0.04 250);
@@ -89,7 +89,7 @@
         <!-- Track Input & CTA -->
         <div class="flex items-center space-x-3">
           <div class="hidden lg:flex items-center bg-white rounded-lg px-3 py-2">
-            <input type="text" placeholder="Enter tracking number" class="w-48 text-sm focus:outline-none text-gray-700">
+            <input type="text" placeholder="Enter tracking number" class="w-48 text-sm focus:outline-none text-gray-700" aria-label="Enter tracking number">
             <button class="ml-2 text-express-600 hover:text-express-700">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -492,7 +492,7 @@
             <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
-            <input type="text" placeholder="Track your package" class="bg-transparent text-sm w-40 focus:outline-none">
+            <input type="text" placeholder="Track your package" class="bg-transparent text-sm w-40 focus:outline-none" aria-label="Track your package">
           </div>
 
           <button class="p-2.5 text-gray-500 hover:text-express-600 hover:bg-express-50 rounded-xl transition-colors">
@@ -518,5 +518,6 @@
     <p class="mt-1">Styles: Package Delivery, Freight/Cargo, Warehouse/Fulfillment, International Shipping, Last-Mile Delivery, Fleet Management, Supply Chain Platform, Courier Service</p>
   </footer>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

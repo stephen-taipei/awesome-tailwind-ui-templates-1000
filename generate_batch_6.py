@@ -1401,35 +1401,10 @@ TEMPLATES_PART_3 = [
 TEMPLATES = TEMPLATES_PART_1 + TEMPLATES_PART_2 + TEMPLATES_PART_3
 
 def generate_and_push():
-    for tmpl in TEMPLATES:
-        # Create directory if not exists
-        os.makedirs(tmpl['dir'], exist_ok=True)
+    """Generate into an explicit output directory; never stage, commit, or push."""
+    from scripts.legacy import generate_templates
+    generate_templates(TEMPLATES, BASE_HTML)
 
-        # File path
-        file_path = os.path.join(tmpl['dir'], f"{tmpl['id']}.html")
-
-        # Generate content
-        html_content = BASE_HTML.format(
-            id=tmpl['id'],
-            title=tmpl['title'],
-            description=tmpl['description'],
-            content=tmpl['content']
-        )
-
-        # Write file
-        with open(file_path, 'w') as f:
-            f.write(html_content)
-
-        print(f"Generated {file_path}")
-
-        # Git operations
-        try:
-            subprocess.run(['git', 'add', file_path], check=True)
-            subprocess.run(['git', 'commit', '-m', f"feat: implement {tmpl['id']} template"], check=True)
-            subprocess.run(['git', 'push', 'origin', 'dev'], check=True)
-            print(f"Pushed {tmpl['id']}")
-        except subprocess.CalledProcessError as e:
-            print(f"Error processing {tmpl['id']}: {e}")
 
 if __name__ == "__main__":
     generate_and_push()

@@ -6,12 +6,12 @@
   <meta name="description" content="Click to read full review">
   <title>test-024: Testimonials with Modal | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.55 0.20 250);
       --color-primary-600: oklch(0.48 0.22 250);
       --color-secondary-600: oklch(0.45 0.02 250);
@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <script src="/vendor/misc/alpine.min.js" defer></script>
+    <script src="../../assets/vendor/alpine.min.js" defer></script>
 
     <!-- Modal -->
     <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm" x-show="open" style="display: none;">
@@ -62,5 +62,6 @@
     </div>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

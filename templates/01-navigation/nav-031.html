@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav-031: Search Navigation - Tailwind UI Templates</title>
-    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-    <style type="text/tailwindcss">
-        @theme {
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+        :root {
             --color-primary-50: oklch(0.97 0.02 260);
             --color-primary-100: oklch(0.93 0.04 260);
             --color-primary-200: oklch(0.88 0.08 260);
@@ -42,7 +42,7 @@
                         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
-                        <input type="text" placeholder="Search for articles, tutorials, FAQs..." class="w-full pl-12 pr-4 py-4 text-lg rounded-xl border-0 shadow-lg focus:ring-4 focus:ring-white/30 focus:outline-none">
+                        <input type="text" placeholder="Search for articles, tutorials, FAQs..." class="w-full pl-12 pr-4 py-4 text-lg rounded-xl border-0 shadow-lg focus:ring-4 focus:ring-white/30 focus:outline-none" aria-label="Search for articles, tutorials, FAQs...">
                         <button class="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">
                             Search
                         </button>
@@ -92,7 +92,7 @@
                         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
-                        <input type="text" placeholder="Search everything..." class="w-full pl-12 pr-12 py-3 bg-white rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                        <input type="text" placeholder="Search everything..." class="w-full pl-12 pr-12 py-3 bg-white rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none" aria-label="Search everything...">
                         <button class="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4"></path>
@@ -142,7 +142,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
-                            <input type="text" placeholder="Type a command or search..." class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" value="settings">
+                            <input type="text" placeholder="Type a command or search..." class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" value="settings" aria-label="Type a command or search...">
                             <kbd class="px-2 py-1 bg-gray-700 text-gray-400 text-xs rounded">ESC</kbd>
                         </div>
 
@@ -232,7 +232,7 @@
                             <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
-                            <input type="text" placeholder="Search products..." value="wireless headphones" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                            <input type="text" placeholder="Search products..." value="wireless headphones" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none" aria-label="Search products...">
                         </div>
                         <button class="px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors flex items-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,7 +323,7 @@
                             <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
-                            <input type="text" placeholder="Search..." value="react" class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-t-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none">
+                            <input type="text" placeholder="Search..." value="react" class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-t-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none" aria-label="Search...">
                             <button class="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-gray-400 hover:text-gray-600">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -412,7 +412,7 @@
                         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
-                        <input type="text" placeholder="Search by text, voice, or image..." class="w-full pl-12 pr-32 py-4 border-2 border-gray-200 rounded-2xl focus:border-primary-500 focus:ring-0 focus:outline-none text-lg">
+                        <input type="text" placeholder="Search by text, voice, or image..." class="w-full pl-12 pr-32 py-4 border-2 border-gray-200 rounded-2xl focus:border-primary-500 focus:ring-0 focus:outline-none text-lg" aria-label="Search by text, voice, or image...">
                         <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
                             <!-- Voice Button -->
                             <button class="p-2.5 text-gray-400 hover:text-primary-500 hover:bg-primary-50 rounded-xl transition-colors group" title="Voice search">
@@ -501,5 +501,6 @@
         </section>
 
     </main>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

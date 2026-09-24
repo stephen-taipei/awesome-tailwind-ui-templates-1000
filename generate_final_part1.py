@@ -41,53 +41,10 @@ ALL_TEMPLATES.extend(TEMPLATES_TEAM_NEW)
 ALL_TEMPLATES.extend(TEMPLATES_LANDING_NEW)
 
 def generate_and_push():
-    print(f"Total templates to generate: {len(ALL_TEMPLATES)}")
+    """Generate into an explicit output directory; never stage, commit, or push."""
+    from scripts.legacy import generate_templates
+    generate_templates(ALL_TEMPLATES, BASE_HTML)
 
-    if len(ALL_TEMPLATES) > 0:
-        print(f"First template: {ALL_TEMPLATES[0]['id']}")
-        print(f"Last template: {ALL_TEMPLATES[-1]['id']}")
-
-    for tmpl in ALL_TEMPLATES:
-        print(f"Processing {tmpl['id']} in {tmpl['dir']}")
-        # Create directory if not exists
-        os.makedirs(tmpl['dir'], exist_ok=True)
-
-        # File path
-        file_path = os.path.join(tmpl['dir'], f"{tmpl['id']}.html")
-
-        # Generate content
-        html_content = BASE_HTML.format(
-            title=tmpl['title'],
-            description=tmpl['description'],
-            content=tmpl['content']
-        )
-
-        # Write file
-        with open(file_path, 'w') as f:
-            f.write(html_content)
-
-        print(f"Generated {file_path}")
-
-        # Git operations: Add and Commit
-        try:
-            subprocess.run(['git', 'add', file_path], check=True)
-            # Check if there are changes to commit
-            status = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
-            if status.stdout.strip():
-                subprocess.run(['git', 'commit', '-m', f"feat: implement {tmpl['id']} template"], check=True)
-                print(f"Committed {tmpl['id']}")
-            else:
-                print(f"No changes for {tmpl['id']}, skipping commit.")
-        except subprocess.CalledProcessError as e:
-            print(f"Error processing {tmpl['id']}: {e}")
-
-    # Push all at once at the end
-    try:
-         print("Pushing all changes to origin dev...")
-         subprocess.run(['git', 'push', 'origin', 'dev'], check=True)
-         print("All changes pushed successfully.")
-    except subprocess.CalledProcessError as e:
-         print(f"Error pushing changes: {e}")
 
 if __name__ == "__main__":
     generate_and_push()

@@ -6,12 +6,12 @@
   <meta name="description" content="Healthcare Landing Page - Medical center template with appointment booking">
   <title>landing-045: Healthcare Landing | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.60 0.18 200);
       --color-primary-600: oklch(0.50 0.18 200);
       --color-secondary-500: oklch(0.80 0.12 150);
@@ -369,8 +369,8 @@
           <h3 class="text-2xl font-bold text-slate-900 mb-6">Make an Appointment</h3>
           <form class="space-y-4">
             <div class="grid grid-cols-2 gap-4">
-               <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
-               <input type="tel" placeholder="Phone" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all">
+               <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" aria-label="Name">
+               <input type="tel" placeholder="Phone" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" aria-label="Phone">
             </div>
             <div class="grid grid-cols-2 gap-4">
                <input type="date" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all text-slate-500">
@@ -381,7 +381,7 @@
                  <option>Neurology</option>
                </select>
             </div>
-            <textarea rows="3" placeholder="Message (Optional)" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all"></textarea>
+            <textarea rows="3" placeholder="Message (Optional)" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" aria-label="Message (Optional)"></textarea>
             <button type="submit" class="w-full bg-secondary-500 hover:bg-secondary-600 text-slate-900 font-bold py-4 rounded-lg transition-colors">Book Now</button>
           </form>
         </div>
@@ -459,5 +459,6 @@
   </footer>
 
   <script src="../../src/js/i18n.js" type="module"></script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

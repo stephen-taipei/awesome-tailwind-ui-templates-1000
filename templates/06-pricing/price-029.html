@@ -6,12 +6,12 @@
   <meta name="description" content="Tabs to switch categories">
   <title>price-029: Pricing with Feature Tabs | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.55 0.20 250);
       --color-primary-600: oklch(0.48 0.22 250);
       --color-secondary-600: oklch(0.45 0.02 250);
@@ -37,7 +37,7 @@
         </div>
       </div>
 
-      <script src="/vendor/misc/alpine.min.js" defer></script>
+      <script src="../../assets/vendor/alpine.min.js" defer></script>
 
       <div class="max-w-md mx-auto bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
         <div x-show="tab === 'marketing'">
@@ -75,5 +75,6 @@
     </div>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinite Scroll Grid - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Load more button">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -28,7 +28,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
         <template x-for="item in items" :key="item">
           <div class="aspect-square bg-slate-100 rounded-lg overflow-hidden animate-fadeIn">
-            <img :src="`https://source.unsplash.com/random/400x400?sig=${item}`" class="w-full h-full object-cover">
+            <img :src="`https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80&sig=${item}`" class="w-full h-full object-cover">
           </div>
         </template>
       </div>
@@ -39,11 +39,12 @@
         </button>
       </div>
     </div>
-    <script src="/vendor/misc/alpine.min.js" defer></script>
+    <script src="../../assets/vendor/alpine.min.js" defer></script>
     <style>
       @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       .animate-fadeIn { animation: fadeIn 0.5s ease-out; }
     </style>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>
