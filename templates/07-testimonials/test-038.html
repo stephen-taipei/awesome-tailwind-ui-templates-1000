@@ -6,12 +6,12 @@
   <meta name="description" content="Paginated reviews">
   <title>test-038: Testimonials with Pagination | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.55 0.20 250);
       --color-primary-600: oklch(0.48 0.22 250);
       --color-secondary-600: oklch(0.45 0.02 250);
@@ -86,7 +86,7 @@
         </template>
       </div>
 
-      <script src="/vendor/misc/alpine.min.js" defer></script>
+      <script src="../../assets/vendor/alpine.min.js" defer></script>
 
       <div class="flex justify-center gap-2">
         <button @click="page = 1" :class="page === 1 ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'" class="w-10 h-10 rounded-full font-bold transition-colors">1</button>
@@ -96,5 +96,6 @@
     </div>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

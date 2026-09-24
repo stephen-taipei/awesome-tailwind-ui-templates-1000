@@ -1,0 +1,60 @@
+name: Codebase audit
+
+on:
+  push:
+    branches: [main, audit/codebase-remediation-20260924]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Rebuild the catalog and local assets
+        run: npm run build
+      - name: Unit and migration regression tests
+        run: npm test
+      - name: Audit every published HTML file
+        run: npm run audit
+      - name: Require committed outputs to match the build
+        run: git diff --exit-code
+      - name: Dependency vulnerability report
+        run: npm audit --json > audit-results/npm-audit.json
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser interactions, accessibility and all-template viewport checks
+        run: npm run test:browser
+      - name: Capture verification identity
+        if: always()
+        run: |
+          mkdir -p audit-results
+          git rev-parse HEAD > audit-results/commit.txt
+          git status --short > audit-results/worktree-status.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: codebase-audit-evidence
+          path: |
+            audit-results/
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: error

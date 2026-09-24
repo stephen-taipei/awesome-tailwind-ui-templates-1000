@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landscaping/Lawn Care Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-lawn-50: oklch(0.98 0.03 140);
       --color-lawn-100: oklch(0.95 0.05 140);
       --color-lawn-200: oklch(0.90 0.10 140);
@@ -52,15 +52,26 @@
       --color-bloom-900: oklch(0.24 0.08 350);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
   <!-- Style 1: Lawn Care Service - Fresh & Professional -->
   <nav class="bg-gradient-to-r from-lawn-600 to-lawn-500 shadow-xl rounded-lg overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
             <svg class="w-7 h-7 text-lawn-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -82,7 +93,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-white text-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -100,9 +111,9 @@
   <!-- Style 2: Landscape Design - Elegant & Creative -->
   <nav class="bg-white border-b-2 border-garden-500 shadow-sm">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-14 h-14 bg-garden-100 rounded-full flex items-center justify-center">
             <svg class="w-8 h-8 text-garden-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -124,7 +135,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="border-2 border-garden-500 text-garden-600 px-5 py-2 rounded-full font-medium hover:bg-garden-500 hover:text-white transition-all">
             Schedule Consultation
           </button>
@@ -137,8 +148,8 @@
   <nav class="bg-earth-800 shadow-xl">
     <div class="max-w-7xl mx-auto px-4">
       <!-- Top Bar -->
-      <div class="flex items-center justify-between py-2 border-b border-earth-700 text-sm">
-        <div class="flex items-center space-x-6 text-earth-400">
+      <div class="flex items-center justify-between py-2 border-b border-earth-700 text-sm" data-mobile-wrap>
+        <div class="flex items-center space-x-6 text-earth-400" data-mobile-wrap>
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -147,15 +158,15 @@
           </span>
           <span>Serving Since 1998</span>
         </div>
-        <div class="flex items-center space-x-4 text-earth-400">
+        <div class="flex items-center space-x-4 text-earth-400" data-mobile-wrap>
           <a href="#" class="hover:text-lawn-400 transition-colors">Careers</a>
           <a href="#" class="hover:text-lawn-400 transition-colors">Client Portal</a>
         </div>
       </div>
 
       <!-- Main Nav -->
-      <div class="flex items-center justify-between h-18">
-        <div class="flex items-center space-x-4">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-lawn-500 rounded flex items-center justify-center">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -175,7 +186,7 @@
           <a href="#" class="text-earth-300 hover:text-white font-medium transition-colors">About</a>
         </div>
 
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="bg-lawn-500 text-white px-6 py-2.5 font-bold hover:bg-lawn-600 transition-colors">
             REQUEST PROPOSAL
           </button>
@@ -187,9 +198,9 @@
   <!-- Style 4: Garden Center - Warm & Inviting -->
   <nav class="bg-gradient-to-r from-bloom-50 to-garden-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center border-4 border-bloom-200">
             <svg class="w-8 h-8 text-bloom-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -211,7 +222,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-earth-600 text-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -229,9 +240,9 @@
   <!-- Style 5: Tree Service - Strong & Reliable -->
   <nav class="bg-earth-900 border-b-4 border-lawn-500">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-14 h-14 bg-lawn-600 rounded-full flex items-center justify-center">
             <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -253,7 +264,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-earth-400 text-sm">
             <svg class="w-5 h-5 text-lawn-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -271,9 +282,9 @@
   <!-- Style 6: Irrigation/Sprinkler - Technical & Efficient -->
   <nav class="bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
@@ -292,7 +303,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-green-50 rounded-full">
             <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -310,9 +321,9 @@
   <!-- Style 7: Hardscape/Patio - Modern & Premium -->
   <nav class="bg-gradient-to-r from-stone-800 to-stone-700 shadow-xl">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-amber-500 rounded flex items-center justify-center">
             <svg class="w-7 h-7 text-stone-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
@@ -334,7 +345,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="border-2 border-amber-500 text-amber-400 px-5 py-2 font-semibold hover:bg-amber-500 hover:text-stone-900 transition-all">
             Design Consultation
           </button>
@@ -346,9 +357,9 @@
   <!-- Style 8: Smart Lawn Tech - Modern & Innovative -->
   <nav class="bg-gradient-to-r from-gray-900 via-lawn-900 to-gray-900">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="relative">
             <div class="w-10 h-10 bg-gradient-to-br from-lawn-400 to-lawn-600 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -372,7 +383,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <a href="#" class="text-gray-400 hover:text-lawn-400 font-medium text-sm transition-colors">Download App</a>
           <a href="#" class="text-gray-400 hover:text-lawn-400 font-medium text-sm transition-colors">Login</a>
           <button class="bg-lawn-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-lawn-400 transition-colors flex items-center gap-2">
@@ -392,5 +403,6 @@
     <p class="mt-1">Styles: Lawn Care Service, Landscape Design, Commercial Landscaping, Garden Center, Tree Service, Irrigation/Sprinkler, Hardscape/Patio, Smart Lawn Tech</p>
   </footer>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

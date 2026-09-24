@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation Form - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Charity or non-profit donation form.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -53,7 +53,7 @@
             </label>
             <div class="col-span-2 relative">
               <span class="absolute left-4 top-3.5 text-gray-400">$</span>
-              <input type="number" placeholder="Custom Amount" class="w-full pl-8 pr-4 py-3 rounded-lg border-2 border-rose-100 focus:border-rose-600 outline-none transition-all font-bold text-gray-700">
+              <input type="number" placeholder="Custom Amount" class="w-full pl-8 pr-4 py-3 rounded-lg border-2 border-rose-100 focus:border-rose-600 outline-none transition-all font-bold text-gray-700" aria-label="Custom Amount">
             </div>
           </div>
         </div>
@@ -62,15 +62,15 @@
           <label class="block text-sm font-medium text-gray-700 mb-3">Payment Method</label>
           <div class="space-y-3">
             <div class="relative">
-              <input type="text" placeholder="Card Number" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all">
+              <input type="text" placeholder="Card Number" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all" aria-label="Card Number">
               <div class="absolute right-4 top-3.5 flex gap-2">
                 <div class="w-8 h-5 bg-gray-200 rounded"></div>
                 <div class="w-8 h-5 bg-gray-200 rounded"></div>
               </div>
             </div>
             <div class="grid grid-cols-2 gap-4">
-              <input type="text" placeholder="MM / YY" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all">
-              <input type="text" placeholder="CVC" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all">
+              <input type="text" placeholder="MM / YY" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all" aria-label="MM / YY">
+              <input type="text" placeholder="CVC" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all" aria-label="CVC">
             </div>
           </div>
         </div>
@@ -86,5 +86,6 @@
       </form>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

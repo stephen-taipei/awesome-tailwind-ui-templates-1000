@@ -6,12 +6,12 @@
   <meta name="description" content="Real Estate Landing Page - Luxury property listing template with search">
   <title>landing-043: Real Estate Landing | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-900: oklch(0.20 0.05 250);
       --color-primary-800: oklch(0.30 0.05 250);
       --color-gold-500: oklch(0.75 0.15 85);
@@ -280,7 +280,7 @@
       <h2 class="font-serif text-3xl text-primary-900 mb-6" data-i18n="landing.realestate.newsletterTitle">Stay Updated</h2>
       <p class="text-slate-500 mb-8" data-i18n="landing.realestate.newsletterDesc">Sign up to receive alerts for new luxury listings and market insights.</p>
       <form class="flex flex-col sm:flex-row gap-4">
-        <input type="email" placeholder="Your Email Address" class="flex-1 px-6 py-4 bg-white border border-slate-200 outline-none focus:border-primary-900 transition-colors">
+        <input type="email" placeholder="Your Email Address" class="flex-1 px-6 py-4 bg-white border border-slate-200 outline-none focus:border-primary-900 transition-colors" aria-label="Your Email Address">
         <button type="submit" class="bg-primary-900 text-white px-10 py-4 uppercase text-xs tracking-widest font-bold hover:bg-primary-800 transition-colors" data-i18n="landing.realestate.subscribe">Subscribe</button>
       </form>
     </div>
@@ -311,5 +311,6 @@
   </footer>
 
   <script src="../../src/js/i18n.js" type="module"></script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neumorphism Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-200: oklch(0.86 0.08 250);
@@ -41,6 +41,17 @@
       box-shadow: inset 4px 4px 8px #1a1d1e, inset -4px -4px 8px #40494e;
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-[#e0e5ec] p-8 space-y-12">
 
@@ -48,9 +59,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 1: Flat Neumorphic Header</h2>
     <nav class="neu-flat rounded-2xl p-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-gray-700">NeuNav</a>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2" data-mobile-wrap>
           <a href="#" class="px-5 py-3 rounded-xl neu-pressed text-primary-600 font-medium">Home</a>
           <a href="#" class="px-5 py-3 rounded-xl text-gray-600 hover:neu-pressed transition-all">Products</a>
           <a href="#" class="px-5 py-3 rounded-xl text-gray-600 hover:neu-pressed transition-all">Services</a>
@@ -67,7 +78,7 @@
   <section>
     <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 2: Convex Icon Bar</h2>
     <nav class="neu-flat rounded-2xl p-6">
-      <div class="flex items-center justify-around">
+      <div class="flex items-center justify-around" data-mobile-wrap>
         <a href="#" class="flex flex-col items-center gap-2">
           <div class="w-14 h-14 rounded-2xl neu-pressed flex items-center justify-center">
             <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
@@ -99,9 +110,9 @@
   <!-- Style 3: Sidebar Neumorphic -->
   <section>
     <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 3: Sidebar Neumorphic</h2>
-    <div class="flex gap-6">
+    <div class="flex gap-6" data-mobile-wrap>
       <nav class="w-64 neu-flat rounded-2xl p-6">
-        <div class="flex items-center gap-3 mb-8">
+        <div class="flex items-center gap-3 mb-8" data-mobile-wrap>
           <div class="w-12 h-12 rounded-xl neu-convex flex items-center justify-center">
             <span class="text-primary-600 font-bold text-xl">N</span>
           </div>
@@ -122,7 +133,7 @@
           </a>
         </div>
       </nav>
-      <div class="flex-1 neu-pressed rounded-2xl p-6 flex items-center justify-center">
+      <div class="flex-1 neu-pressed rounded-2xl p-6 flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-400">Content Area</span>
       </div>
     </div>
@@ -131,7 +142,7 @@
   <!-- Style 4: Pill Tabs Neumorphic -->
   <section>
     <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 4: Pill Tabs Neumorphic</h2>
-    <nav class="neu-flat rounded-full p-3 inline-flex gap-2">
+    <nav class="neu-flat rounded-full p-3 inline-flex gap-2" data-mobile-wrap>
       <a href="#" class="px-6 py-3 rounded-full neu-pressed text-primary-600 font-medium">All</a>
       <a href="#" class="px-6 py-3 rounded-full text-gray-500 hover:neu-pressed transition-all">Design</a>
       <a href="#" class="px-6 py-3 rounded-full text-gray-500 hover:neu-pressed transition-all">Development</a>
@@ -144,9 +155,9 @@
     <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 5: Dark Neumorphic</h2>
     <div class="bg-[#2d3436] rounded-2xl p-8">
       <nav class="neu-dark rounded-2xl p-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <a href="#" class="text-xl font-bold text-gray-200">DarkNeu</a>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3" data-mobile-wrap>
             <a href="#" class="p-3 rounded-xl neu-dark-pressed text-primary-400">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
             </a>
@@ -219,17 +230,17 @@
   <section>
     <h2 class="text-lg font-semibold mb-4 text-gray-700">Style 8: Search Bar Neumorphic</h2>
     <nav class="neu-flat rounded-2xl p-4">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4" data-mobile-wrap>
         <a href="#" class="flex items-center gap-2">
           <div class="w-10 h-10 rounded-xl neu-convex flex items-center justify-center">
             <span class="text-primary-600 font-bold">S</span>
           </div>
         </a>
         <div class="flex-1 relative">
-          <input type="text" placeholder="Search..." class="w-full pl-12 pr-4 py-4 rounded-xl neu-pressed bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none">
+          <input type="text" placeholder="Search..." class="w-full pl-12 pr-4 py-4 rounded-xl neu-pressed bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none" aria-label="Search...">
           <svg class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2" data-mobile-wrap>
           <button class="p-3 rounded-xl neu-flat text-gray-500 hover:neu-pressed hover:text-primary-500 transition-all">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
           </button>
@@ -245,5 +256,6 @@
     </nav>
   </section>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

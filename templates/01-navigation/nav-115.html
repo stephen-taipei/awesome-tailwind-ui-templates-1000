@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Creative Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-200: oklch(0.86 0.08 250);
@@ -25,6 +25,17 @@
       50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
@@ -32,9 +43,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 1: Blob Navigation</h2>
     <nav class="bg-white rounded-3xl shadow-xl p-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="w-14 h-14 bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white font-bold text-xl" style="animation: morph 8s ease-in-out infinite">B</a>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="px-5 py-3 bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium rounded-full">Home</a>
           <a href="#" class="px-5 py-3 text-gray-600 hover:text-purple-600 transition-colors">Projects</a>
           <a href="#" class="px-5 py-3 text-gray-600 hover:text-purple-600 transition-colors">About</a>
@@ -47,7 +58,7 @@
   <!-- Style 2: Floating Islands -->
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 2: Floating Islands</h2>
-    <div class="flex items-center justify-center gap-6 py-4">
+    <div class="flex items-center justify-center gap-6 py-4" data-mobile-wrap>
       <nav class="bg-white rounded-2xl shadow-lg p-2" style="animation: float 3s ease-in-out infinite">
         <a href="#" class="flex items-center gap-2 px-4 py-2 bg-indigo-500 text-white rounded-xl">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
@@ -82,9 +93,9 @@
       <div class="absolute inset-0 bg-pink-200 rounded-2xl transform rotate-2"></div>
       <div class="absolute inset-0 bg-purple-200 rounded-2xl transform -rotate-1"></div>
       <div class="relative bg-white rounded-2xl shadow-xl p-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <a href="#" class="text-xl font-bold text-gray-900">Creative</a>
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-6" data-mobile-wrap>
             <a href="#" class="text-purple-600 font-medium">Home</a>
             <a href="#" class="text-gray-500 hover:text-purple-600 transition-colors">Portfolio</a>
             <a href="#" class="text-gray-500 hover:text-purple-600 transition-colors">Services</a>
@@ -101,9 +112,9 @@
     <nav class="bg-yellow-300 rounded-2xl p-6 relative overflow-hidden">
       <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-400 rounded-bl-full"></div>
       <div class="absolute bottom-0 left-0 w-16 h-16 bg-yellow-200 rounded-tr-full"></div>
-      <div class="relative flex items-center justify-between">
+      <div class="relative flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-2xl font-black text-gray-900 transform -rotate-2">FUN!</a>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="px-4 py-2 bg-white text-gray-900 font-bold rounded-xl shadow-md transform rotate-1 hover:rotate-0 transition-transform">Home</a>
           <a href="#" class="px-4 py-2 bg-pink-400 text-white font-bold rounded-xl shadow-md transform -rotate-1 hover:rotate-0 transition-transform">Work</a>
           <a href="#" class="px-4 py-2 bg-blue-400 text-white font-bold rounded-xl shadow-md transform rotate-2 hover:rotate-0 transition-transform">About</a>
@@ -118,9 +129,9 @@
     <h2 class="text-lg font-semibold mb-4">Style 5: Retro Wave</h2>
     <nav class="bg-gradient-to-r from-purple-900 via-pink-600 to-orange-500 rounded-2xl p-6 relative overflow-hidden">
       <div class="absolute inset-0 opacity-30" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)"></div>
-      <div class="relative flex items-center justify-between">
+      <div class="relative flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-3xl font-black text-white" style="text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 #00ffff">RETRO</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-white font-bold text-lg" style="text-shadow: 2px 2px 0 #ff00ff">HOME</a>
           <a href="#" class="text-white/70 font-bold text-lg hover:text-white transition-colors">WORK</a>
           <a href="#" class="text-white/70 font-bold text-lg hover:text-white transition-colors">ABOUT</a>
@@ -136,9 +147,9 @@
     <nav class="bg-teal-500 rounded-2xl p-6 relative">
       <div class="absolute -top-2 -left-2 -right-2 h-4 bg-teal-600 rounded-t-2xl"></div>
       <div class="absolute -bottom-2 -left-2 -right-2 h-4 bg-teal-400 rounded-b-2xl"></div>
-      <div class="relative flex items-center justify-between">
+      <div class="relative flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-2xl font-bold text-white">PaperCut</a>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="px-4 py-2 bg-white text-teal-600 font-semibold rounded-lg shadow-[3px_3px_0_0_rgba(0,0,0,0.2)]">Home</a>
           <a href="#" class="px-4 py-2 text-white font-semibold hover:bg-white/10 rounded-lg transition-colors">Projects</a>
           <a href="#" class="px-4 py-2 text-white font-semibold hover:bg-white/10 rounded-lg transition-colors">About</a>
@@ -152,9 +163,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 7: Emoji Navigation</h2>
     <nav class="bg-white rounded-2xl shadow-xl p-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-3xl">🎨</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-600 rounded-xl font-medium">
             <span class="text-xl">🏠</span>
             <span>Home</span>
@@ -179,11 +190,11 @@
   <!-- Style 8: Asymmetric -->
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 8: Asymmetric</h2>
-    <nav class="flex items-stretch gap-4">
+    <nav class="flex items-stretch gap-4" data-mobile-wrap>
       <a href="#" class="bg-gray-900 text-white px-8 py-6 rounded-2xl rounded-br-none flex items-center">
         <span class="text-2xl font-black">ASYM</span>
       </a>
-      <div class="flex-1 bg-white rounded-2xl rounded-tl-none shadow-xl p-4 flex items-center justify-end gap-4">
+      <div class="flex-1 bg-white rounded-2xl rounded-tl-none shadow-xl p-4 flex items-center justify-end gap-4" data-mobile-wrap>
         <a href="#" class="px-4 py-2 bg-gray-900 text-white font-medium rounded-xl rounded-tl-none">Home</a>
         <a href="#" class="px-4 py-2 text-gray-600 hover:text-gray-900 font-medium transition-colors">Work</a>
         <a href="#" class="px-4 py-2 text-gray-600 hover:text-gray-900 font-medium transition-colors">About</a>
@@ -192,5 +203,6 @@
     </nav>
   </section>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

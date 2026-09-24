@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Newsletter Subscription - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Minimal page focused on growing a mailing list.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -32,11 +32,12 @@
          <h1 class="text-3xl font-bold text-gray-900 mb-4">Weekly Wisdom</h1>
          <p class="text-gray-600 mb-8">Get the best tips on productivity, design, and tech delivered straight to your inbox every Monday. Join 10,000+ subscribers.</p>
          <form class="flex flex-col sm:flex-row gap-3">
-             <input type="email" placeholder="john@example.com" class="flex-1 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-3 shadow-sm border">
+             <input type="email" placeholder="john@example.com" class="flex-1 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 p-3 shadow-sm border" aria-label="john@example.com">
              <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Subscribe</button>
          </form>
          <p class="mt-4 text-xs text-gray-400">We respect your privacy. Unsubscribe at any time.</p>
       </div>
     </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

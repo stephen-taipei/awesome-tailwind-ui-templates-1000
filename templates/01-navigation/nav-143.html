@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food & Beverage/Restaurant Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 25);
       --color-primary-100: oklch(0.93 0.04 25);
       --color-primary-200: oklch(0.86 0.08 25);
@@ -136,7 +136,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
             </div>
-            <input type="text" placeholder="Enter delivery address..." class="w-full bg-gray-100 rounded-full pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+            <input type="text" placeholder="Enter delivery address..." class="w-full bg-gray-100 rounded-full pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500" aria-label="Enter delivery address..."/>
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -295,5 +295,6 @@
     <p class="mt-2">Tailwind CSS Navigation Components</p>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

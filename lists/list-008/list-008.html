@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact List - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Alphabetical contact list.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -27,7 +27,7 @@
   <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
     <div class="bg-white rounded-xl shadow-sm border border-gray-200 max-w-sm w-full overflow-hidden h-[500px] flex flex-col">
       <div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
-        <input type="text" placeholder="Search contacts..." class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+        <input type="text" placeholder="Search contacts..." class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" aria-label="Search contacts...">
       </div>
       <div class="flex-1 overflow-y-auto">
         <div class="px-6 py-2 bg-gray-50 text-xs font-bold text-gray-500 uppercase sticky top-0">A</div>
@@ -64,5 +64,6 @@
       </div>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

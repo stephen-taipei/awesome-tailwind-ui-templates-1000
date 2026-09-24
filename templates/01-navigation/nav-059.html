@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation 059 - Settings Navigation - 8 Styles</title>
-    <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-    <style type="text/tailwindcss">
-        @theme {
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+        :root {
             --color-primary-50: oklch(0.97 0.02 260);
             --color-primary-100: oklch(0.93 0.04 260);
             --color-primary-200: oklch(0.86 0.08 260);
@@ -373,7 +373,7 @@
                 <div class="flex items-center justify-between mb-6">
                     <h2 class="text-2xl font-bold text-gray-900">Settings</h2>
                     <div class="relative">
-                        <input type="text" placeholder="Search settings..." class="w-64 pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+                        <input type="text" placeholder="Search settings..." class="w-64 pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Search settings...">
                         <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
@@ -520,5 +520,6 @@
         </section>
 
     </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

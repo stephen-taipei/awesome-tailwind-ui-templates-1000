@@ -6,12 +6,12 @@
   <meta name="description" content="Coming Soon Creative - Artistic launch page with countdown">
   <title>landing-040: Coming Soon Creative | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --font-display: "Space Grotesk", sans-serif;
       --color-primary: oklch(0.60 0.25 20);
       --color-secondary: oklch(0.85 0.10 85);
@@ -41,6 +41,9 @@
       animation-delay: 4s;
     }
   </style>
+<style id="responsive-repair">
+@media(max-width:639px){form .flex{flex-direction:column;border-radius:1.25rem}form input{min-width:0;width:100%}form button{justify-content:center}}
+</style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-display min-h-screen overflow-hidden flex items-center justify-center relative">
 
@@ -91,7 +94,7 @@
     <form class="max-w-md mx-auto relative group">
       <div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
       <div class="relative flex bg-white rounded-full p-2 shadow-xl">
-        <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-3 rounded-full outline-none text-slate-900 placeholder-slate-400" required>
+        <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-3 rounded-full outline-none text-slate-900 placeholder-slate-400" required aria-label="Enter your email address">
         <button type="submit" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:bg-slate-800 transition-colors flex items-center gap-2" data-i18n="landing.soon.notify">
           Notify Me <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
         </button>
@@ -127,21 +130,22 @@
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-      document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-      document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-      document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+      document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+      document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
 
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
       }
     }, 1000);
   </script>
   
   <script src="../../src/js/i18n.js" type="module"></script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

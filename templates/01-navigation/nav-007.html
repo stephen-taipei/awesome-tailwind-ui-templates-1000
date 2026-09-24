@@ -6,12 +6,12 @@
   <meta name="description" content="Sidebar Navigation - Collapsible sidebar navigation for dashboards and admin panels">
   <title>nav-007: Sidebar Navigation | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-500: oklch(0.55 0.20 250);
@@ -180,6 +180,9 @@
       transform: translateY(0);
     }
   </style>
+<style id="responsive-repair">
+#top-header{margin-left:0}@media(min-width:1024px){#top-header.main-content-expanded{left:16rem}#top-header.main-content-collapsed{left:5rem}}
+</style>
 </head>
 <body class="min-h-screen bg-slate-100">
 
@@ -528,7 +531,7 @@
             <input
               type="search"
               placeholder="Search..."
-              class="w-64 pl-10 pr-4 py-2 bg-slate-100 border border-transparent rounded-lg text-sm placeholder-slate-500 focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
+              class="w-64 pl-10 pr-4 py-2 bg-slate-100 border border-transparent rounded-lg text-sm placeholder-slate-500 focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20" aria-label="Search..."
             />
           </div>
         </div>
@@ -901,5 +904,6 @@
       });
     })();
   </script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

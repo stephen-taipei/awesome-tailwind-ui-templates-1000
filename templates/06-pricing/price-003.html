@@ -6,12 +6,12 @@
   <meta name="description" content="Monthly/Yearly toggle">
   <title>price-003: Pricing with Toggle | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-500: oklch(0.55 0.20 250);
       --color-primary-600: oklch(0.48 0.22 250);
       --color-secondary-600: oklch(0.45 0.02 250);
@@ -32,8 +32,8 @@
         <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Simple Pricing</h2>
         <div class="mt-6 flex items-center justify-center gap-4">
           <span class="text-sm font-medium" :class="!annual ? 'text-slate-900' : 'text-slate-500'">Monthly</span>
-          <button type="button" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2" :class="annual ? 'bg-primary-600' : 'bg-slate-200'" @click="annual = !annual">
-            <span class="sr-only">Use setting</span>
+          <button type="button" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2" :class="annual ? 'bg-primary-600' : 'bg-slate-200'" @click="annual = !annual" role="switch" :aria-checked="annual">
+            <span class="sr-only">Yearly billing</span>
             <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out" :class="annual ? 'translate-x-5' : 'translate-x-0'"></span>
           </button>
           <span class="text-sm font-medium" :class="annual ? 'text-slate-900' : 'text-slate-500'">Yearly <span class="text-primary-600 font-bold">(-20%)</span></span>
@@ -41,7 +41,7 @@
       </div>
 
       <!-- Alpine.js is required for interactivity, adding script here for standalone template -->
-      <script src="/vendor/misc/alpine.min.js" defer></script>
+      <script src="../../assets/vendor/alpine.min.js" defer></script>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Plan 1 -->
@@ -78,5 +78,6 @@
     </div>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

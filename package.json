@@ -1,0 +1,24 @@
+{
+  "name": "awesome-tailwind-ui-templates-1000",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "npm run build && python3 -m http.server 4173 --bind 127.0.0.1",
+    "build": "node scripts/build.mjs",
+    "catalog": "python3 scripts/catalog.py",
+    "migrate": "python3 scripts/migrate_legacy.py --apply",
+    "audit": "python3 scripts/audit.py",
+    "test": "node --test tests/*.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:browser": "playwright test",
+    "check": "npm run build && npm test && npm run audit && npm run test:browser"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0",
+    "@tailwindcss/cli": "4.3.3",
+    "alpinejs": "3.15.12",
+    "axe-core": "4.11.0",
+    "tailwindcss": "4.3.3"
+  }
+}

@@ -6,12 +6,12 @@
   <meta name="description" content="Dashboard Sidebar Navigation - Admin panel sidebar layouts">
   <title>nav-026: Dashboard Sidebar Navigation | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-500: oklch(0.55 0.20 250);
@@ -62,6 +62,9 @@
       visibility: visible;
     }
   </style>
+<style id="responsive-repair">
+@media(max-width:767px){body>.flex{flex-direction:column}aside{width:100%!important}main.flex-1{min-width:0;padding:1rem}main .flex{flex-wrap:wrap}.sidebar-tooltip{display:none}}
+</style>
 </head>
 <body class="min-h-screen bg-slate-100">
 
@@ -357,5 +360,6 @@
     </main>
   </div>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -6,12 +6,12 @@
   <meta name="description" content="Navbar with Search Box - Navigation template with integrated search functionality">
   <title>nav-005: Navbar with Search Box | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-500: oklch(0.55 0.20 250);
@@ -522,7 +522,7 @@
             class="block w-full py-2 text-base text-slate-900 placeholder-slate-500 focus:outline-none"
             placeholder="Search..."
             data-i18n-placeholder="nav.searchPlaceholder"
-            autofocus
+            autofocus aria-label="Search..."
           />
         </div>
         <button
@@ -792,5 +792,7 @@
       });
     })();
   </script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
+  <script type="module" src="../../src/js/i18n.js"></script>
 </body>
 </html>

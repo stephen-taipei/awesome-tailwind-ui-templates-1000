@@ -6,12 +6,12 @@
   <meta name="description" content="Footer Navigation - Website footer layouts and link patterns">
   <title>nav-019: Footer Navigation | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-500: oklch(0.55 0.20 250);
@@ -176,7 +176,7 @@
                 <h3 class="text-lg font-semibold text-slate-900 mb-2">Subscribe to our newsletter</h3>
                 <p class="text-slate-600 mb-4">The latest news, articles, and resources, sent to your inbox weekly.</p>
                 <form class="flex gap-2">
-                  <input type="email" placeholder="Enter your email" class="newsletter-input flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                  <input type="email" placeholder="Enter your email" class="newsletter-input flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" aria-label="Enter your email">
                   <button type="submit" class="newsletter-btn px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all">Subscribe</button>
                 </form>
               </div>
@@ -438,5 +438,6 @@
     </div>
   </main>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

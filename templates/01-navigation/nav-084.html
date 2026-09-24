@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quick Action Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 260);
       --color-primary-100: oklch(0.93 0.04 260);
       --color-primary-200: oklch(0.86 0.08 260);
@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.37 0.15 260);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 min-h-screen p-8">
   <div class="max-w-6xl mx-auto space-y-16">
@@ -40,7 +51,7 @@
       <h2 class="text-xl font-semibold text-gray-700">2. Expandable FAB</h2>
       <div class="bg-gray-800 rounded-xl h-64 relative">
         <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-600">Page Content</span>
-        <div class="absolute bottom-6 right-6 flex flex-col-reverse items-center gap-3">
+        <div class="absolute bottom-6 right-6 flex flex-col-reverse items-center gap-3" data-mobile-wrap>
           <!-- Main FAB -->
           <button class="w-14 h-14 bg-primary-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,7 +86,7 @@
         <div class="absolute bottom-6 right-6">
           <!-- Speed dial menu -->
           <div class="absolute bottom-16 right-0 flex flex-col gap-3 items-end">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <span class="px-3 py-1 bg-gray-900 text-white text-sm rounded-lg shadow-lg">New File</span>
               <button class="w-10 h-10 bg-white text-gray-600 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +94,7 @@
                 </svg>
               </button>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <span class="px-3 py-1 bg-gray-900 text-white text-sm rounded-lg shadow-lg">New Folder</span>
               <button class="w-10 h-10 bg-white text-gray-600 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +102,7 @@
                 </svg>
               </button>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <span class="px-3 py-1 bg-gray-900 text-white text-sm rounded-lg shadow-lg">Upload</span>
               <button class="w-10 h-10 bg-white text-gray-600 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +125,7 @@
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">4. Quick Action Bar</h2>
       <div class="bg-white rounded-xl p-4">
-        <div class="flex items-center gap-2 p-2 bg-gray-50 rounded-xl">
+        <div class="flex items-center gap-2 p-2 bg-gray-50 rounded-xl" data-mobile-wrap>
           <button class="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg font-medium text-sm hover:bg-primary-600">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -147,7 +158,7 @@
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">5. Keyboard Shortcuts Panel</h2>
       <div class="bg-gray-900 rounded-xl p-6">
-        <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center justify-between mb-4" data-mobile-wrap>
           <h3 class="text-white font-medium">Quick Actions</h3>
           <button class="text-gray-500 hover:text-white">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,50 +168,50 @@
         </div>
         <div class="grid grid-cols-2 gap-3">
           <button class="flex items-center justify-between px-4 py-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
               </svg>
               <span class="text-white text-sm">New File</span>
             </div>
-            <div class="flex items-center gap-1">
+            <div class="flex items-center gap-1" data-mobile-wrap>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Ctrl</kbd>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">N</kbd>
             </div>
           </button>
           <button class="flex items-center justify-between px-4 py-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
               </svg>
               <span class="text-white text-sm">Save</span>
             </div>
-            <div class="flex items-center gap-1">
+            <div class="flex items-center gap-1" data-mobile-wrap>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Ctrl</kbd>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">S</kbd>
             </div>
           </button>
           <button class="flex items-center justify-between px-4 py-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
               </svg>
               <span class="text-white text-sm">Search</span>
             </div>
-            <div class="flex items-center gap-1">
+            <div class="flex items-center gap-1" data-mobile-wrap>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Ctrl</kbd>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">K</kbd>
             </div>
           </button>
           <button class="flex items-center justify-between px-4 py-3 bg-gray-800 rounded-lg text-left hover:bg-gray-700">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3" data-mobile-wrap>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
               <span class="text-white text-sm">Settings</span>
             </div>
-            <div class="flex items-center gap-1">
+            <div class="flex items-center gap-1" data-mobile-wrap>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Ctrl</kbd>
               <kbd class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">,</kbd>
             </div>
@@ -213,7 +224,7 @@
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">6. Inline Action Chips</h2>
       <div class="bg-white rounded-xl p-6">
-        <div class="flex items-center gap-2 flex-wrap">
+        <div class="flex items-center gap-2 flex-wrap" data-mobile-wrap>
           <button class="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-600 rounded-full hover:bg-primary-100 font-medium text-sm">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -359,5 +370,6 @@
     </section>
 
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Breadcrumb Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-200: oklch(0.86 0.08 250);
@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.35 0.18 250);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-50 p-8 space-y-16">
 
@@ -24,7 +35,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Slash Separator</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-2 text-sm">
+      <ol class="flex items-center gap-2 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="text-gray-500 hover:text-primary-600">Home</a>
         </li>
@@ -46,7 +57,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 2: Chevron Separator</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-2 text-sm">
+      <ol class="flex items-center gap-2 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="text-gray-500 hover:text-primary-600 flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +96,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 3: Pill Style</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-2 text-sm">
+      <ol class="flex items-center gap-2 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full transition-colors">Home</a>
         </li>
@@ -113,7 +124,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 4: Arrow Shape</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <ol class="flex items-center text-sm">
+      <ol class="flex items-center text-sm" data-mobile-wrap>
         <li class="flex items-center">
           <a href="#" class="relative px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-l-lg pr-6">
             Home
@@ -139,7 +150,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 5: With Dropdown</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-2 text-sm">
+      <ol class="flex items-center gap-2 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="text-gray-500 hover:text-primary-600 flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,7 +183,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 6: Dark Theme</h2>
     <nav class="bg-gray-900 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-3 text-sm">
+      <ol class="flex items-center gap-3 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="text-gray-400 hover:text-white flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +222,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 7: With Icons</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-3 text-sm">
+      <ol class="flex items-center gap-3 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-primary-600">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,7 +264,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 8: Contained Background</h2>
     <nav class="bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg px-6 py-4">
-      <ol class="flex items-center gap-2 text-sm">
+      <ol class="flex items-center gap-2 text-sm" data-mobile-wrap>
         <li>
           <a href="#" class="flex items-center gap-1 text-white/70 hover:text-white transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,5 +299,6 @@
     </nav>
   </section>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

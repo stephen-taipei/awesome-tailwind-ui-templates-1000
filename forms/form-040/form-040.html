@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Reservation - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Elegant restaurant table reservation form.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -61,9 +61,9 @@
         </div>
 
         <div class="space-y-4">
-          <input type="text" placeholder="Full Name" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600">
-          <input type="tel" placeholder="Phone Number" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600">
-          <textarea placeholder="Special Requests (Allergies, Occasion)" rows="2" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600 resize-none"></textarea>
+          <input type="text" placeholder="Full Name" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600" aria-label="Full Name">
+          <input type="tel" placeholder="Phone Number" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600" aria-label="Phone Number">
+          <textarea placeholder="Special Requests (Allergies, Occasion)" rows="2" class="w-full bg-transparent border-b border-stone-700 text-stone-200 px-0 py-3 focus:border-amber-500 outline-none transition-all placeholder-stone-600 resize-none" aria-label="Special Requests (Allergies, Occasion)"></textarea>
         </div>
 
         <button class="w-full bg-amber-600 text-black font-bold py-4 rounded-sm hover:bg-amber-500 transition-colors uppercase tracking-wider mt-4">
@@ -72,5 +72,6 @@
       </form>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

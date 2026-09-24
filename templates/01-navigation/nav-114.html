@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bold Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-200: oklch(0.86 0.08 250);
@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.35 0.18 250);
     }
   </style>
+<style id="responsive-repair">
+@media(max-width:767px){.grid.grid-cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}.flex>a.flex-1{flex-basis:50%;padding:1rem}}
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
@@ -24,9 +35,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 1: Heavy Header</h2>
     <nav class="bg-black rounded-2xl p-6">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-4xl font-black text-white tracking-tight">BOLD</a>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-8" data-mobile-wrap>
           <a href="#" class="text-xl font-bold text-white">HOME</a>
           <a href="#" class="text-xl font-bold text-gray-500 hover:text-white transition-colors">WORK</a>
           <a href="#" class="text-xl font-bold text-gray-500 hover:text-white transition-colors">ABOUT</a>
@@ -39,7 +50,7 @@
   <!-- Style 2: Block Color -->
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 2: Block Color</h2>
-    <nav class="flex rounded-2xl overflow-hidden">
+    <nav class="flex rounded-2xl overflow-hidden" data-mobile-wrap>
       <a href="#" class="flex-1 bg-yellow-400 p-6 text-center hover:bg-yellow-300 transition-colors">
         <span class="text-2xl font-black text-black">HOME</span>
       </a>
@@ -59,9 +70,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 3: Oversized Text</h2>
     <nav class="bg-white rounded-2xl shadow-xl p-8">
-      <div class="flex items-end justify-between">
+      <div class="flex items-end justify-between" data-mobile-wrap>
         <a href="#" class="text-6xl font-black text-gray-900 leading-none">STUDIO</a>
-        <div class="flex items-center gap-6 pb-2">
+        <div class="flex items-center gap-6 pb-2" data-mobile-wrap>
           <a href="#" class="text-lg font-bold text-gray-900 border-b-4 border-gray-900 pb-1">Work</a>
           <a href="#" class="text-lg font-bold text-gray-400 hover:text-gray-900 border-b-4 border-transparent hover:border-gray-300 pb-1 transition-all">About</a>
           <a href="#" class="text-lg font-bold text-gray-400 hover:text-gray-900 border-b-4 border-transparent hover:border-gray-300 pb-1 transition-all">Contact</a>
@@ -75,9 +86,9 @@
     <h2 class="text-lg font-semibold mb-4">Style 4: Stripe Accent</h2>
     <nav class="bg-white rounded-2xl shadow-xl overflow-hidden">
       <div class="h-2 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500"></div>
-      <div class="p-6 flex items-center justify-between">
+      <div class="p-6 flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-3xl font-black text-gray-900">BRAND</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="px-6 py-3 bg-gray-900 text-white font-bold rounded-xl">HOME</a>
           <a href="#" class="px-6 py-3 text-gray-700 font-bold hover:bg-gray-100 rounded-xl transition-colors">PRODUCTS</a>
           <a href="#" class="px-6 py-3 text-gray-700 font-bold hover:bg-gray-100 rounded-xl transition-colors">ABOUT</a>
@@ -112,11 +123,11 @@
   <!-- Style 6: Contrast Split -->
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 6: Contrast Split</h2>
-    <nav class="flex rounded-2xl overflow-hidden shadow-xl">
+    <nav class="flex rounded-2xl overflow-hidden shadow-xl" data-mobile-wrap>
       <div class="bg-black p-8 flex-1">
         <a href="#" class="text-4xl font-black text-white">BLACK</a>
       </div>
-      <div class="bg-white p-8 flex-1 flex items-center justify-end gap-8">
+      <div class="bg-white p-8 flex-1 flex items-center justify-end gap-8" data-mobile-wrap>
         <a href="#" class="text-lg font-black text-black">HOME</a>
         <a href="#" class="text-lg font-bold text-gray-400 hover:text-black transition-colors">WORK</a>
         <a href="#" class="text-lg font-bold text-gray-400 hover:text-black transition-colors">INFO</a>
@@ -130,9 +141,9 @@
     <h2 class="text-lg font-semibold mb-4">Style 7: Diagonal Bold</h2>
     <nav class="bg-primary-600 rounded-2xl p-6 relative overflow-hidden">
       <div class="absolute inset-0 bg-primary-700 origin-top-right -skew-x-12 translate-x-1/2"></div>
-      <div class="relative flex items-center justify-between">
+      <div class="relative flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-3xl font-black text-white">DESIGN</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-lg font-bold text-white">HOME</a>
           <a href="#" class="text-lg font-bold text-primary-200 hover:text-white transition-colors">PROJECTS</a>
           <a href="#" class="text-lg font-bold text-primary-200 hover:text-white transition-colors">ABOUT</a>
@@ -146,9 +157,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 8: Thick Border</h2>
     <nav class="bg-white rounded-2xl border-4 border-black p-6">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-3xl font-black text-black">BRUTAL</a>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="px-5 py-3 bg-black text-white font-bold border-4 border-black">HOME</a>
           <a href="#" class="px-5 py-3 text-black font-bold border-4 border-black hover:bg-black hover:text-white transition-colors">WORK</a>
           <a href="#" class="px-5 py-3 text-black font-bold border-4 border-black hover:bg-black hover:text-white transition-colors">ABOUT</a>
@@ -158,5 +169,6 @@
     </nav>
   </section>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

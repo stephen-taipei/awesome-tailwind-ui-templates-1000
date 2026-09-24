@@ -6,12 +6,12 @@
   <meta name="description" content="Language Switcher Navigation - Language and locale selection patterns">
   <title>nav-017: Language Switcher Navigation | Tailwind UI Templates</title>
 
-  <!-- Tailwind CSS v4 via stephen.taipei CDN -->
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
+  <!-- Precompiled Tailwind CSS v4; run npm run build after editing classes. -->
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
 
   <!-- Custom Theme Variables -->
-  <style type="text/tailwindcss">
-    @theme {
+  <style>
+    :root {
       --color-primary-50: oklch(0.97 0.02 250);
       --color-primary-100: oklch(0.93 0.04 250);
       --color-primary-500: oklch(0.55 0.20 250);
@@ -223,7 +223,7 @@
           </button>
           <div class="dropdown-menu absolute left-0 right-0 mt-2 bg-white rounded-lg shadow-lg border border-slate-200 z-50">
             <div class="p-2 border-b border-slate-200">
-              <input type="search" placeholder="Search languages..." class="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <input type="search" placeholder="Search languages..." class="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Search languages...">
             </div>
             <div class="max-h-48 overflow-y-auto py-1">
               <button class="lang-option active w-full flex items-center gap-3 px-4 py-2 text-sm text-left">
@@ -324,5 +324,6 @@
       });
     })();
   </script>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

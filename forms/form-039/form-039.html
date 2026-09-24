@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appointment Booking - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Medical or professional appointment booking form.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -94,10 +94,10 @@
           <div class="space-y-4">
             <h3 class="font-medium text-gray-900 border-t pt-4">Your Details</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="text" placeholder="Name" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition-all">
-              <input type="tel" placeholder="Phone" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition-all">
+              <input type="text" placeholder="Name" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition-all" aria-label="Name">
+              <input type="tel" placeholder="Phone" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition-all" aria-label="Phone">
             </div>
-            <input type="email" placeholder="Email" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition-all">
+            <input type="email" placeholder="Email" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition-all" aria-label="Email">
           </div>
 
           <button class="w-full bg-teal-600 text-white font-bold py-3.5 rounded-lg hover:bg-teal-700 transition-colors shadow-lg shadow-teal-500/30">
@@ -107,5 +107,6 @@
       </div>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

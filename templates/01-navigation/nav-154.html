@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electrical Services Navigation - 8 Styles</title>
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-electric-50: oklch(0.98 0.02 85);
       --color-electric-100: oklch(0.95 0.04 85);
       --color-electric-200: oklch(0.90 0.08 85);
@@ -52,15 +52,26 @@
       --color-solar-900: oklch(0.24 0.08 50);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
   <!-- Style 1: Residential Electrician - Friendly & Trustworthy -->
   <nav class="bg-gradient-to-r from-electric-600 to-electric-500 shadow-xl rounded-lg overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
             <svg class="w-7 h-7 text-electric-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -82,7 +93,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-white text-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -110,8 +121,8 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
-        <div class="flex items-center space-x-4">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-volt-500 rounded flex items-center justify-center">
             <svg class="w-7 h-7 text-volt-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -131,7 +142,7 @@
           <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">Areas</a>
         </div>
 
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden md:flex items-center space-x-2 px-3 py-1.5 bg-green-900/50 rounded-full">
             <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
             <span class="text-green-400 text-sm font-medium">Electricians Ready</span>
@@ -148,8 +159,8 @@
   <nav class="bg-power-800 border-b-4 border-power-500">
     <div class="max-w-7xl mx-auto px-4">
       <!-- Top Bar -->
-      <div class="flex items-center justify-between py-2 border-b border-power-700 text-sm">
-        <div class="flex items-center space-x-6 text-power-400">
+      <div class="flex items-center justify-between py-2 border-b border-power-700 text-sm" data-mobile-wrap>
+        <div class="flex items-center space-x-6 text-power-400" data-mobile-wrap>
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -158,16 +169,16 @@
           </span>
           <span>Licensed & Insured</span>
         </div>
-        <div class="flex items-center space-x-4 text-power-400">
+        <div class="flex items-center space-x-4 text-power-400" data-mobile-wrap>
           <a href="#" class="hover:text-power-300 transition-colors">Careers</a>
           <a href="#" class="hover:text-power-300 transition-colors">Client Portal</a>
         </div>
       </div>
 
       <!-- Main Nav -->
-      <div class="flex items-center justify-between h-18">
-        <div class="flex items-center space-x-4">
-          <div class="flex items-center">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
+        <div class="flex items-center space-x-4" data-mobile-wrap>
+          <div class="flex items-center" data-mobile-wrap>
             <div class="w-2 h-12 bg-volt-500 rounded-l"></div>
             <div class="w-10 h-12 bg-power-600 flex items-center justify-center">
               <svg class="w-6 h-6 text-volt-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,7 +201,7 @@
           <a href="#" class="text-power-400 hover:text-power-300 font-medium transition-colors">About</a>
         </div>
 
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="border-2 border-volt-500 text-volt-400 px-5 py-2.5 font-bold hover:bg-volt-500 hover:text-power-900 transition-all">
             REQUEST QUOTE
           </button>
@@ -202,9 +213,9 @@
   <!-- Style 4: Solar Installation - Green & Innovative -->
   <nav class="bg-gradient-to-r from-solar-600 to-solar-500 shadow-lg">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center border border-white/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
@@ -226,7 +237,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-white/90 text-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -244,9 +255,9 @@
   <!-- Style 5: Home Automation - Smart & Modern -->
   <nav class="bg-gradient-to-r from-gray-900 via-power-900 to-gray-900">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="relative">
             <div class="w-10 h-10 bg-gradient-to-br from-electric-400 to-electric-600 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -270,7 +281,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <a href="#" class="text-gray-400 hover:text-electric-400 font-medium text-sm transition-colors">Support</a>
           <a href="#" class="text-gray-400 hover:text-electric-400 font-medium text-sm transition-colors">Login</a>
           <button class="bg-electric-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-electric-400 transition-colors flex items-center gap-2">
@@ -287,9 +298,9 @@
   <!-- Style 6: Lighting Design - Elegant & Creative -->
   <nav class="bg-white shadow-md border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-lg shadow-amber-200">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
@@ -311,7 +322,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="border-2 border-amber-500 text-amber-600 px-5 py-2 rounded-full font-medium hover:bg-amber-500 hover:text-white transition-all">
             Design Consultation
           </button>
@@ -323,9 +334,9 @@
   <!-- Style 7: Generator Services - Reliable & Strong -->
   <nav class="bg-gray-800 shadow-xl">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-14 h-14 bg-electric-500 rounded flex items-center justify-center">
             <svg class="w-9 h-9 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -347,7 +358,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-gray-400 text-sm">
             <svg class="w-5 h-5 text-electric-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -365,9 +376,9 @@
   <!-- Style 8: EV Charging - Future-Forward & Clean -->
   <nav class="bg-white border-b-4 border-emerald-500 shadow-md">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -391,7 +402,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 px-3 py-1.5 bg-emerald-50 rounded-full">
             <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -412,5 +423,6 @@
     <p class="mt-1">Styles: Residential Electrician, Emergency Electrician, Commercial Electrical, Solar Installation, Home Automation, Lighting Design, Generator Services, EV Charging</p>
   </footer>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

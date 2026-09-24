@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nav-042: Calendar Navigation</title>
-    <link href="/vendor/tailwind/tailwind.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'oklch(55% 0.24 270)',
-                        'primary-light': 'oklch(70% 0.2 270)',
-                        'primary-dark': 'oklch(45% 0.24 270)',
-                        secondary: 'oklch(60% 0.18 150)',
-                        accent: 'oklch(70% 0.22 30)',
-                        surface: 'oklch(98% 0.01 270)',
-                        'surface-dark': 'oklch(20% 0.02 270)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../../assets/css/tailwind.css">
+    <style>
+:root {
+  --color-primary: oklch(55% 0.24 270);
+  --color-primary-light: oklch(70% 0.2 270);
+  --color-primary-dark: oklch(45% 0.24 270);
+  --color-secondary: oklch(60% 0.18 150);
+  --color-accent: oklch(70% 0.22 30);
+  --color-surface: oklch(98% 0.01 270);
+  --color-surface-dark: oklch(20% 0.02 270);
+}
+</style>
+<style id="responsive-repair">
+.calendar-example{max-width:100%;overflow-x:auto}.calendar-example>div{min-width:56rem}.calendar-example h2{position:sticky;left:0}
+</style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     
@@ -36,7 +33,7 @@
     <main class="max-w-6xl mx-auto px-4 pb-16 space-y-16">
 
         <!-- Style 1: Google Calendar Style -->
-        <section>
+        <section class="calendar-example" tabindex="0" role="region" aria-label="Calendar layout example; scroll horizontally on narrow screens">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 1: Google Calendar Style</h2>
             <div class="bg-gray-50 p-6 rounded-xl">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -75,7 +72,7 @@
                         
                         <div class="flex items-center space-x-3">
                             <div class="relative">
-                                <input type="text" placeholder="Search" class="w-48 bg-gray-100 border-0 rounded-lg px-4 py-2 text-sm">
+                                <input type="text" placeholder="Search" class="w-48 bg-gray-100 border-0 rounded-lg px-4 py-2 text-sm" aria-label="Search">
                                 <svg class="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                 </svg>
@@ -222,7 +219,7 @@
         </section>
 
         <!-- Style 2: Apple Calendar Style -->
-        <section>
+        <section class="calendar-example" tabindex="0" role="region" aria-label="Calendar layout example; scroll horizontally on narrow screens">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 2: Apple Calendar Style</h2>
             <div class="bg-gray-50 p-6 rounded-xl">
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -331,7 +328,7 @@
         </section>
 
         <!-- Style 3: Week View Schedule -->
-        <section>
+        <section class="calendar-example" tabindex="0" role="region" aria-label="Calendar layout example; scroll horizontally on narrow screens">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 3: Week View Schedule</h2>
             <div class="bg-gray-50 p-6 rounded-xl">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -487,7 +484,7 @@
         </section>
 
         <!-- Style 4: Date Picker Component -->
-        <section>
+        <section class="calendar-example" tabindex="0" role="region" aria-label="Calendar layout example; scroll horizontally on narrow screens">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 4: Date Picker Component</h2>
             <div class="bg-gray-50 p-6 rounded-xl">
                 <div class="flex items-start space-x-8">
@@ -641,7 +638,7 @@
         </section>
 
         <!-- Style 5: Agenda/List View -->
-        <section>
+        <section class="calendar-example" tabindex="0" role="region" aria-label="Calendar layout example; scroll horizontally on narrow screens">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 5: Agenda/List View</h2>
             <div class="bg-gray-50 p-6 rounded-xl">
                 <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -750,7 +747,7 @@
         </section>
 
         <!-- Style 6: Booking/Scheduling UI -->
-        <section>
+        <section class="calendar-example" tabindex="0" role="region" aria-label="Calendar layout example; scroll horizontally on narrow screens">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Style 6: Booking/Scheduling UI</h2>
             <div class="bg-gray-50 p-6 rounded-xl">
                 <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -872,5 +869,6 @@
 
     </main>
 
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

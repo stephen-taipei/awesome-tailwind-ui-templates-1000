@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In Borderless - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Very clean, minimal sign in.">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -33,11 +33,11 @@
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" action="#" method="POST">
         <div>
-            <input id="email" name="email" type="email" autocomplete="email" required class="block w-full border-0 border-b border-gray-300 py-2 text-gray-900 placeholder:text-gray-400 focus:border-indigo-600 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Email Address">
+            <input id="email" name="email" type="email" autocomplete="email" required class="block w-full border-0 border-b border-gray-300 py-2 text-gray-900 placeholder:text-gray-400 focus:border-indigo-600 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Email Address" aria-label="Email Address">
         </div>
 
         <div>
-            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full border-0 border-b border-gray-300 py-2 text-gray-900 placeholder:text-gray-400 focus:border-indigo-600 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Password">
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full border-0 border-b border-gray-300 py-2 text-gray-900 placeholder:text-gray-400 focus:border-indigo-600 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Password" aria-label="Password">
         </div>
 
         <div class="pt-4">
@@ -46,5 +46,6 @@
       </form>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

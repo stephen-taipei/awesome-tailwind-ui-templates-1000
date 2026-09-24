@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation Form - Awesome Tailwind UI Templates</title>
   <meta name="description" content="Charity donation">
-  <script src="https://stephen.taipei/tailwindcss-browser.js"></script>
-  <style type="text/tailwindcss">
-    @theme {
+  <link rel="stylesheet" href="../../assets/css/tailwind.css">
+  <style>
+    :root {
       --color-primary-50: #eff6ff;
       --color-primary-100: #dbeafe;
       --color-primary-200: #bfdbfe;
@@ -64,7 +64,7 @@
               <label class="block text-sm font-bold text-slate-900 mb-2">Custom Amount</label>
               <div class="relative">
                 <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-500 font-bold">$</span>
-                <input type="number" class="w-full pl-8 pr-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="Enter amount">
+                <input type="number" class="w-full pl-8 pr-4 py-3 rounded-lg border border-slate-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-all" placeholder="Enter amount" aria-label="Enter amount">
               </div>
             </div>
 
@@ -84,5 +84,6 @@
       </div>
     </div>
   </div>
+  <script src="../../assets/js/template-runtime.js" defer></script>
 </body>
 </html>

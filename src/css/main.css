@@ -1,5 +1,10 @@
 /* Tailwind CSS v4 - Main Stylesheet */
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@import "../../.build/theme.css";
+@source "../../templates";
+@source "../../cards";
+@source "../../forms";
+@source "../../lists";
 
 /* ========================================
    CSS Variables (Theme Configuration)
@@ -200,3 +205,6 @@
     border-width: 0;
   }
 }
+
+/* Prevent Alpine-controlled regions flashing before initialization. */
+[x-cloak] { display: none !important; }
