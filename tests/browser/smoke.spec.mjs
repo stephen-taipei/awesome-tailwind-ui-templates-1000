@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const manifest = JSON.parse(await readFile('templates.json', 'utf8'));
+const settle = page => page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
 test('every catalog template boots without JavaScript exceptions or local asset failures', async ({ browser }) => {
   test.setTimeout(600000);
   const results = [];
@@ -21,11 +22,12 @@ test('every catalog template boots without JavaScript exceptions or local asset 
       try {
         await page.setViewportSize({ width: 1440, height: 900 });
         await page.goto(`http://127.0.0.1:4173/${item.path}`, { waitUntil: 'load', timeout: 15000 });
-        await page.waitForTimeout(50);
+        await page.waitForTimeout(50); await settle(page);
         result.title = await page.title();
         result.desktopOverflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
-        await page.setViewportSize({ width: 390, height: 844 });
+        await page.setViewportSize({ width: 390, height: 844 }); await settle(page);
         result.mobileOverflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
+        if (result.mobileOverflow) result.overflowDetails = await page.evaluate(() => ({ width: document.documentElement.scrollWidth, nodes: [...document.querySelectorAll('body *')].filter(e => e.getBoundingClientRect().right > innerWidth + 1).slice(0, 5).map(e => ({ tag: e.tagName, className: e.getAttribute('class'), text: e.textContent.trim().slice(0, 100), width: e.getBoundingClientRect().width })) }));
       } catch (value) { result.errors.push(value.message); }
       finally { page.off('pageerror', error); page.off('response', response); }
       results.push(result);
