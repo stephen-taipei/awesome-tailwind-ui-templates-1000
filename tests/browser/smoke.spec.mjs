@@ -38,5 +38,6 @@ test('every catalog template boots without JavaScript exceptions or local asset 
   await mkdir('audit-results', { recursive: true });
   await writeFile('audit-results/browser-smoke.json', JSON.stringify({ templates: results.length, viewportWidths: [1440, 390], externalMedia: 'blocked', results }, null, 2));
   expect(results.filter(result => result.errors.length || result.missingAssets.length), 'See audit-results/browser-smoke.json for per-template evidence').toEqual([]);
+  expect(results.filter(result => result.desktopOverflow || result.mobileOverflow), 'All templates must keep horizontal overflow inside an intentional scroll region').toEqual([]);
   expect(results.length).toBe(manifest.total);
 });

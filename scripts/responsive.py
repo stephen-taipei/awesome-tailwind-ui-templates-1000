@@ -28,7 +28,9 @@ CUSTOM = {
 'form-029': '@media(max-width:639px){.flex:has(>label){flex-wrap:wrap}}',
 'form-034': '.sr-only{position:absolute}label:has(>.sr-only){position:relative}',
 'landing-033': '@media(max-width:767px){.flex.justify-center.gap-8{flex-wrap:wrap}}',
-'landing-035': '@media(max-width:639px){.flex.justify-center.gap-4{flex-direction:column;align-items:stretch}}',
+'landing-035': '@media(max-width:639px){h1{font-size:clamp(2.25rem,8vw,3rem);overflow-wrap:anywhere}.flex.justify-center.gap-4{flex-direction:column;align-items:stretch}input{max-width:100%}}',
+'hero-048': '@media(max-width:639px){h1{font-size:clamp(3rem,18vw,6rem)}}',
+'nav-114': '@media(max-width:767px){.grid.grid-cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}.flex>a.flex-1{flex-basis:50%;padding:1rem}}',
 'landing-040': '@media(max-width:639px){form .flex{flex-direction:column;border-radius:1.25rem}form input{min-width:0;width:100%}form button{justify-content:center}}',
 'landing-042': '@media(max-width:639px){.absolute.-right-6{right:0}}',
 'landing-045': '@media(max-width:639px){.absolute.-right-6{right:0}}',
@@ -44,7 +46,9 @@ CUSTOM = {
 
 def repair(text: str, path: Path) -> str:
     template_id = path.parent.name if path.stem == 'index' else path.stem
-    if 'id="responsive-repair"' in text: return text
+    # Rebuild only our own marked patch, so future reviewed rule updates stay idempotent.
+    text = re.sub(r'<style id="responsive-repair">.*?</style>\n?', '', text, flags=re.S)
+    text = re.sub(r' data-mobile-(?:wrap|height)(?=[ >])', '', text)
     if template_id == 'nav-096':
         text = text.replace('absolute left-6 top-1/2', 'absolute right-6 top-1/2')
     styles = CUSTOM.get(template_id, '')

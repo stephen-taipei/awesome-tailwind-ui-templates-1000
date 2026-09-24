@@ -1,48 +1,54 @@
 name: Codebase audit
+
 on:
   push:
-    branches: [audit/codebase-remediation-20260924]
+    branches: [main, audit/codebase-remediation-20260924]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
+
 concurrency:
-  group: audit-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
+
 jobs:
-  remediation:
-    if: github.ref == 'refs/heads/audit/codebase-remediation-20260924'
+  verify:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
-      - run: npm ci
-      - name: Apply reviewed responsive fixes
-        run: |
-          python3 scripts/migrate_legacy.py --apply
-          python3 scripts/responsive.py --apply
-      - run: npm run build
-      - run: npm test
-      - run: npm run audit
-      - name: Commit generated migration on the isolated audit branch only
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- templates cards forms lists assets catalog.html templates.json sitemap.xml robots.txt
-          if ! git diff --cached --quiet; then
-            git commit -m 'fix: reflow narrow layouts and preserve scrollable calendar examples'
-            git push origin HEAD:audit/codebase-remediation-20260924
-          fi
-      - run: npm audit --json > audit-results/npm-audit.json
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:browser
-      - name: Capture source and verification identity
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Rebuild the catalog and local assets
+        run: npm run build
+      - name: Unit and migration regression tests
+        run: npm test
+      - name: Audit every published HTML file
+        run: npm run audit
+      - name: Require committed outputs to match the build
+        run: git diff --exit-code
+      - name: Dependency vulnerability report
+        run: npm audit --json > audit-results/npm-audit.json
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser interactions, accessibility and all-template viewport checks
+        run: npm run test:browser
+      - name: Capture verification identity
         if: always()
         run: |
-          git rev-parse HEAD > /tmp/audit-head.txt
-          git archive --format=tar HEAD | gzip > /tmp/audit-reviewed-source.tar.gz
-      - uses: actions/upload-artifact@v4
+          mkdir -p audit-results
+          git rev-parse HEAD > audit-results/commit.txt
+          git status --short > audit-results/worktree-status.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: codebase-audit-evidence
@@ -50,7 +56,5 @@ jobs:
             audit-results/
             playwright-report/
             test-results/
-            /tmp/audit-head.txt
-            /tmp/audit-reviewed-source.tar.gz
           retention-days: 7
           if-no-files-found: error
