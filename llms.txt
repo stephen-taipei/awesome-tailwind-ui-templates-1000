@@ -1,24 +1,14 @@
-# Awesome Tailwind UI Templates 1000
+# Awesome Tailwind UI Templates 1000 / Tailwind Atlas
 
-Last updated: 2026-04-14
+A static collection of HTML UI demos. These are starting points, not finished applications or universally accessibility-certified components.
 
-## Summary (English)
-Awesome Tailwind UI Templates 1000 is a static collection of Tailwind CSS components and page templates. It focuses on reusable frontend patterns, responsive layout ideas, and quick-start UI building blocks.
+- Inventory: ./templates.json (generated from actual HTML files; unique IDs and paths)
+- Browse: ./index.html
+- No-JavaScript directory: ./catalog.html
+- Inspector: ./preview.html?template=nav-001
+- Maintenance: ./README.md
+- Audit and unresolved review items: ./docs/AUDIT.md
+- Contribution contract: ./docs/CONTRIBUTING.md
+- License: ./LICENSE (does not relicense third-party images, fonts or brands)
 
-## Summary (Traditional Chinese)
-Awesome Tailwind UI Templates 1000 是一個靜態前端模板集合，收錄 Tailwind CSS 元件與頁面版型，適合作為 UI 靈感與快速開發起點。
-
-## Summary (Japanese)
-Awesome Tailwind UI Templates 1000 は、Tailwind CSS ベースの UI テンプレート集です。再利用しやすいフロントエンド部品とページレイアウトをまとめています。
-
-## Key Pages
-- / : project landing page
-- /llms.txt : AI-readable summary
-- /sitemap.xml : full crawl map
-- /news-sitemap.xml : recently refreshed pages
-
-## Topics
-- Tailwind CSS templates
-- UI components
-- Responsive frontend layouts
-- AI-friendly UI building blocks
+Keep existing URLs. Do not invent template IDs from numeric ranges. Copy referenced assets with a template, compile Tailwind classes before publishing, and implement application-specific operations. Dictionaries en, zh-TW and zh-CN have partial coverage. Full-template boot checks are not a substitute for interaction, accessibility or visual review.

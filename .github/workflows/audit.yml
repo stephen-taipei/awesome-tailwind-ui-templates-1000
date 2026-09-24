@@ -3,28 +3,73 @@ on:
   push:
     branches: [audit/codebase-remediation-20260924]
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: audit-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  dependencies:
+  remediation:
+    if: github.ref == 'refs/heads/audit/codebase-remediation-20260924'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --ignore-scripts
-      - name: Capture dependency audit
-        run: npm audit --json > /tmp/npm-audit.json || true
-      - name: Package verification dependencies
-        run: tar -czf /tmp/audit-dependencies.tar.gz node_modules package-lock.json
+      - name: Lock dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install --ignore-scripts; fi
+      - name: Apply reviewed source-preserving migration
+        run: |
+          python3 scripts/migrate_legacy.py --apply
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('src/css/main.css')
+          text = p.read_text()
+          text = text.replace('@import "tailwindcss";', '@import "tailwindcss" source(none);\n@import "../../.build/theme.css";\n@source "../../templates";\n@source "../../cards";\n@source "../../forms";\n@source "../../lists";')
+          if '[x-cloak]' not in text:
+              text += '\n/* Prevent Alpine-controlled regions flashing before initialization. */\n[x-cloak] { display: none !important; }\n'
+          p.write_text(text)
+          p = Path('.gitignore')
+          text = p.read_text()
+          if '# Reproducible tooling' not in text:
+              text += '\n# Reproducible tooling and local verification output\nnode_modules/\n.build/\n.generated/\n__pycache__/\n*.pyc\n*.log\nplaywright-report/\ntest-results/\naudit-results/\n'
+          p.write_text(text)
+          PY
+      - run: npm run build
+      - run: npm test
+      - run: npm run audit
+      - name: Commit generated migration on the isolated audit branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- templates cards forms lists assets src/css/main.css .gitignore package-lock.json catalog.html templates.json sitemap.xml robots.txt generate*.py
+          git ls-files -z -- debug.log news-sitemap.xml | xargs -0 -r git add -u --
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix: migrate all templates and publish reproducible local assets'
+            git push origin HEAD:audit/codebase-remediation-20260924
+          fi
+      - name: Dependency vulnerability report
+        run: npm audit --json > audit-results/npm-audit.json
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser regression and all-template smoke
+        run: npm run test:browser
+      - name: Capture source and verification identity
+        if: always()
+        run: |
+          git rev-parse HEAD > /tmp/audit-head.txt
+          git archive --format=tar HEAD | gzip > /tmp/audit-reviewed-source.tar.gz
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: audit-dependencies
+          name: codebase-audit-evidence
           path: |
-            /tmp/audit-dependencies.tar.gz
-            /tmp/npm-audit.json
-          retention-days: 1
+            audit-results/
+            playwright-report/
+            test-results/
+            /tmp/audit-head.txt
+            /tmp/audit-reviewed-source.tar.gz
+          retention-days: 7
           if-no-files-found: error
