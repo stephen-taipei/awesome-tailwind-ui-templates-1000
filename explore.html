@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tailwind Atlas — a library of interface possibilities</title>
+  <meta name="description" content="Explore 1,000+ Tailwind CSS HTML demos. Search 21 categories, save favorites, inspect responsive previews, and read the source. No framework required.">
+  <meta property="og:title" content="Tailwind Atlas — 1,000+ UI templates">
+  <meta property="og:description" content="Find your starting point. A searchable collection of HTML interface demos, from navigation to complete landing pages.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://stephen-taipei.github.io/awesome-tailwind-ui-templates-1000/explore.html">
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="llms.txt">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <script src="assets/js/appearance.js"></script>
+  <script src="assets/js/gallery.mjs" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to templates</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">ta</span><span>Tailwind Atlas<small>THE INTERFACE COLLECTION</small></span></a>
+    <nav class="header-actions" aria-label="Main navigation">
+      <a href="catalog.html" class="quiet-link">Full index</a>
+      <a href="https://github.com/stephen-taipei/awesome-tailwind-ui-templates-1000" target="_blank" rel="noopener noreferrer" class="button button-small">GitHub ↗</a>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Use dark appearance" aria-pressed="false">◐</button>
+    </nav>
+  </div></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="headline">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> OPEN SOURCE. OPEN POSSIBILITIES.</p>
+        <h1 id="headline">Your next interface<br>starts <em>here.</em></h1>
+        <p class="hero-description">A growing atlas of Tailwind CSS building blocks.<br class="desktop-only"> Find a direction, explore the details, make it yours.</p>
+        <div class="hero-facts"><span><strong id="total-count">1,000+</strong> HTML demos</span><span><strong id="category-count">21</strong> categories</span><span>Framework-free</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="art-caption">BUILD SOMETHING DISTINCT.</div>
+        <div class="art-window art-window-back"><div class="art-bar"><i></i><i></i><i></i></div><div class="art-layout"><div class="art-sidebar"></div><div class="art-lines"><b></b><b></b><div class="art-chart"><i></i><i></i><i></i><i></i><i></i></div></div></div></div>
+        <div class="art-window art-window-front"><div class="art-bar"><i></i><i></i><i></i></div><div class="art-editorial"><span>LESS FRICTION.<br>MORE CREATION.</span><b></b><b></b><i>EXPLORE →</i></div></div><span class="art-coordinate">01 — ∞</span>
+      </div>
+    </section>
+    <section id="collection" class="collection" aria-labelledby="collection-title">
+      <div class="collection-heading"><div><p class="eyebrow">THE LIBRARY</p><h2 id="collection-title">Find your starting point.</h2></div><p>Real HTML. Editable by you.</p></div>
+      <form class="search-toolbar" id="search-form" role="search">
+        <div class="search-field"><label class="sr-only" for="search">Search templates</label><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search layouts, patterns, or template IDs…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
+        <div class="sort-field"><label for="sort">Sort</label><select id="sort"><option value="featured">Recommended</option><option value="id">Template ID</option><option value="name">Name A–Z</option></select></div>
+        <button type="button" class="button saved-button" id="saved-toggle" aria-pressed="false">♡ Saved <span id="saved-count">0</span></button>
+      </form>
+      <div class="library-layout"><div class="category-panel"><h3>Browse categories</h3><nav id="categories" aria-label="Template categories"><a href="catalog.html">Browse the complete index</a></nav><p class="category-note">Small components.<br>Complete page ideas.<br>Your own next chapter.</p></div>
+        <div class="results-panel"><div class="results-heading"><p id="results-status" role="status" aria-live="polite">Loading the collection…</p><button type="button" id="reset" class="text-button" hidden>Reset filters</button></div>
+          <div id="load-error" class="empty-state" hidden><h3>The collection could not be loaded.</h3><p>Check your connection or browse the static index.</p><button class="button" type="button" id="retry">Try again</button> <a href="catalog.html">Open full index</a></div>
+          <div id="templates" class="template-grid" aria-label="Templates"></div>
+          <div id="empty" class="empty-state" hidden><h3>No matches. A fresh direction?</h3><p>Try a shorter search, another category, or reset your filters.</p></div>
+          <nav class="pagination" id="pagination" aria-label="Results pages" hidden><button type="button" class="button" id="previous">← Previous</button><span id="page-status"></span><button type="button" class="button" id="next">Next →</button></nav>
+        </div>
+      </div>
+      <noscript><div class="empty-state"><h3>The entire library is still available.</h3><p>Search and favorites need JavaScript. <a href="catalog.html">Browse all templates without JavaScript.</a></p></div></noscript>
+    </section>
+    <section class="usage-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h2>A starting point, not a finished product.</h2><p>These templates demonstrate interfaces. Connect your own data, verify accessibility and interactions, and review third-party images before shipping. Card illustrations are layout sketches; open a preview to see the actual template.</p></div><a href="docs/AUDIT.md">Read the audit</a></section>
+  </main>
+  <footer class="site-footer wrap"><p>Tailwind Atlas <span> / </span> Crafted for the next thing you build.</p><div><a href="catalog.html">All templates</a><a href="LICENSE">License</a><a href="docs/CONTRIBUTING.md">Contribute</a></div></footer>
+</body></html>

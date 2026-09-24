@@ -2,6 +2,8 @@
 
 ## Contract
 
+**Preserve the category homepage design.** The owner permits redesigning individual child templates, not the category landing page. Keep the original `src/home.html` layout, classes, card order, iconography and featured sections. Generated inventory values and functional link corrections may change. Do not modify the design fixtures merely to make a redesign pass. `explore.html` is an optional tool, not a replacement homepage.
+
 Preserve existing public template URLs unless you also ship redirects. Do not infer IDs from ranges: `scripts/catalog.py` scans real files. Every template needs a unique ID, a descriptive title, `lang`, viewport metadata, and relative local asset URLs. If a new logical category is introduced, add its explicit prefix mapping in the catalog script.
 
 Use compiled Tailwind CSS, not the Play CDN or a mutable third-party browser compiler. Keep template-specific theme values in `:root`; add or edit utility classes and run `npm run build`. Alpine-dependent demos must load `assets/vendor/alpine.min.js` at the correct relative depth. Do not introduce analytics, tracking scripts, secrets, or credential-bearing requests into demo pages.
@@ -28,3 +30,7 @@ Commit source and generated outputs together. After rebuilding a second time the
 ## Pull requests
 
 Describe the affected IDs and why the change improves the collection. Include verification commands and screenshots for visual work. Keep dependency updates separately reviewable, refresh the lockfile with npm, retain third-party license notices, and rerun the complete check. Do not claim WCAG compliance or universal responsiveness from a single automated test.
+
+## Authored semantics
+
+Missing input names and broken `label[for]`, `aria-labelledby`, `aria-describedby` or `aria-controls` references fail the static gate. Use visible label associations whenever possible. The `reviewed-*.json` files document this audit's reviewed field names, not generic fallback labels. OTP examples are opt-in local format demos, never real authentication. Never store, log or send their entered codes.
