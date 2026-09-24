@@ -1,0 +1,114 @@
+name: Apply reviewed follow-up (temporary)
+
+on:
+  push:
+    branches: [audit/preserve-category-home-20260924]
+    paths: [.github/workflows/audit-apply-followup.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-followup-transfer
+  cancel-in-progress: false
+
+jobs:
+  apply-and-verify:
+    if: github.repository == 'stephen-taipei/awesome-tailwind-ui-templates-1000' && github.ref == 'refs/heads/audit/preserve-category-home-20260924'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Verify and apply exact reviewed source edits
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, json, lzma, subprocess
+          from pathlib import Path, PurePosixPath
+          root = Path.cwd().resolve()
+          raw = lzma.decompress(base64.b64decode(''.join((root / f'.audit-transfer/{i}.b64').read_text().strip() for i in range(8)), validate=True))
+          digest = lambda value: hashlib.sha256(value.encode('utf-8')).hexdigest()
+          assert hashlib.sha256(raw).hexdigest() == 'be7a9de4854872d900e6cf41e72b2e9493cf6b20ba1d302c95f04c9aee01dca0', 'Source payload checksum mismatch'
+          changes = json.loads(raw)
+          assert len(changes) == 146
+          staged = []
+          for name, change in changes.items():
+              path = PurePosixPath(name)
+              assert not path.is_absolute() and not any(p in ('..', '.git', '.github') for p in path.parts), name
+              target = root / path
+              assert target.resolve().is_relative_to(root) and not target.is_symlink(), name
+              if 'content' in change:
+                  assert not target.exists(), f'New path already exists: {name}'
+                  text = change['content']
+              else:
+                  if 'base' in change:
+                      assert change['base'] in ('3739618724a83b89b7d1843c2e8a5b13a7d08b65:index.html', '43585b2ee68ff3f4590826e3244b26645f2ae5d6:index.html')
+                      assert not target.exists(), f'New derived path already exists: {name}'
+                      text = subprocess.check_output(['git', 'show', change['base']], text=True)
+                  else:
+                      text = target.read_text(encoding='utf-8')
+                  assert digest(text) == change['old'], f'Base changed: {name}'
+                  previous = len(text)
+                  for start, end, replacement in reversed(change['edits']):
+                      assert 0 <= start <= end <= previous, name
+                      text = text[:start] + replacement + text[end:]
+                      previous = start
+              assert digest(text) == change['sha256'], f'Output checksum mismatch: {name}'
+              staged.append((target, text))
+          for target, text in staged:
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_text(text, encoding='utf-8')
+          print(f'Applied {len(staged)} checksum-verified source files')
+          PY
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Build and test reviewed outputs
+        run: |
+          npm run build
+          npm test
+          npm run audit
+          git diff --check
+      - name: Commit only reviewed source and regenerated outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git ls-remote origin refs/heads/audit/preserve-category-home-20260924 | cut -f1)" = "$GITHUB_SHA"
+          rm -r .audit-transfer
+          git add -A
+          test -z "$(git diff --cached --name-only -- .github)"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix: preserve original category home and repair 124 child templates'
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          echo "::add-mask::$AUTH"
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD:refs/heads/audit/preserve-category-home-20260924
+      - name: Dependency audit
+        run: npm audit --json > audit-results/npm-audit.json
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser behavior, design preservation and all-template smoke
+        run: npm run test:browser
+      - name: Capture verification evidence
+        if: always()
+        run: |
+          mkdir -p audit-results
+          git rev-parse HEAD > audit-results/commit.txt
+          git status --short > audit-results/worktree-status.txt
+          git archive --format=tar.gz HEAD > audit-results/verified-source.tar.gz
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: followup-audit-evidence
+          path: |
+            audit-results/
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: error
