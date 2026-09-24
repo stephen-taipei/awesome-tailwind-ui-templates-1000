@@ -30,7 +30,10 @@ for (const width of [390, 1440]) {
   });
 }
 test('original category home and all templates work with JavaScript disabled', async ({ browser }) => {
-  const context = await browser.newContext({ javaScriptEnabled: false });
+  // Test native navigation independently of CSS smooth-scroll animation timing.
+  const context = await browser.newContext({ javaScriptEnabled: false, reducedMotion: 'reduce' });
+  context.setDefaultTimeout(5000);
+  await context.route('https://**/*', route => route.abort());
   const page = await context.newPage();
   try {
     await page.goto('http://127.0.0.1:4173/');
