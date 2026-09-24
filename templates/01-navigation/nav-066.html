@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.38 0.20 250);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8">
   <div class="max-w-4xl mx-auto space-y-12">
@@ -36,7 +47,7 @@
     <!-- Style 2: Search with Button -->
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 2: Search with Button</h2>
-      <div class="flex max-w-lg">
+      <div class="flex max-w-lg" data-mobile-wrap>
         <input type="text" placeholder="What are you looking for?" class="flex-1 px-4 py-2.5 bg-white border border-gray-300 rounded-l-lg text-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100" aria-label="What are you looking for?">
         <button class="px-6 py-2.5 bg-primary-500 text-white font-medium rounded-r-lg hover:bg-primary-600 transition-colors">
           Search
@@ -47,7 +58,7 @@
     <!-- Style 3: Search with Category Filter -->
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 3: Search with Category Filter</h2>
-      <div class="flex max-w-2xl">
+      <div class="flex max-w-2xl" data-mobile-wrap>
         <div class="relative">
           <select class="appearance-none h-full px-4 py-2.5 pr-10 bg-gray-100 border border-gray-300 border-r-0 rounded-l-lg text-sm text-gray-700 focus:outline-none focus:bg-white focus:border-primary-500 cursor-pointer">
             <option>All Categories</option>
@@ -56,7 +67,7 @@
             <option>Home & Garden</option>
             <option>Sports</option>
           </select>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none" data-mobile-wrap>
             <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
@@ -74,7 +85,7 @@
     <!-- Style 4: Expandable Search Icon -->
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 4: Expandable Search Icon</h2>
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-4" data-mobile-wrap>
         <p class="text-sm text-gray-500">Click icon to expand:</p>
         <div class="relative group">
           <input type="text" placeholder="Search..." class="w-0 py-2 px-0 bg-transparent border-b-2 border-transparent text-sm focus:w-64 focus:px-2 focus:border-primary-500 transition-all duration-300 group-hover:w-64 group-hover:px-2 group-hover:border-gray-300" aria-label="Search...">
@@ -135,7 +146,7 @@
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 6: Command Palette Style</h2>
       <div class="max-w-xl mx-auto">
         <div class="relative">
-          <div class="flex items-center px-4 py-3 bg-gray-900 rounded-t-xl border-b border-gray-700">
+          <div class="flex items-center px-4 py-3 bg-gray-900 rounded-t-xl border-b border-gray-700" data-mobile-wrap>
             <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
@@ -191,7 +202,7 @@
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
-        <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-1">
+        <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center space-x-1" data-mobile-wrap>
           <button class="p-2 text-gray-400 hover:text-primary-600 transition-colors" title="Voice search">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
@@ -222,7 +233,7 @@
 
         <!-- Preview of full-screen overlay (scaled down) -->
         <div class="mt-4 p-4 bg-gray-900/95 rounded-xl backdrop-blur-sm max-w-2xl">
-          <div class="flex items-center px-4 py-4 bg-gray-800/50 rounded-xl mb-4">
+          <div class="flex items-center px-4 py-4 bg-gray-800/50 rounded-xl mb-4" data-mobile-wrap>
             <svg class="w-6 h-6 text-gray-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>

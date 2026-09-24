@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.37 0.15 260);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 min-h-screen p-8">
   <div class="max-w-6xl mx-auto space-y-16">
@@ -25,9 +36,9 @@
     <!-- Style 1: Floating Pill Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">1. Floating Pill Navigation</h2>
-      <div class="bg-gray-200 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-gray-200 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-500">Page Content</span>
-        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg px-2 py-2 flex items-center gap-1">
+        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg px-2 py-2 flex items-center gap-1" data-mobile-wrap>
           <a href="#" class="px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-medium">Home</a>
           <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-full text-sm font-medium">Products</a>
           <a href="#" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-full text-sm font-medium">Services</a>
@@ -40,9 +51,9 @@
     <!-- Style 2: Floating Glass Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">2. Floating Glass Navigation</h2>
-      <div class="bg-gradient-to-br from-primary-400 to-purple-500 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-gradient-to-br from-primary-400 to-purple-500 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-white/70">Page Content</span>
-        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-lg rounded-2xl border border-white/30 px-6 py-3 flex items-center gap-6">
+        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-lg rounded-2xl border border-white/30 px-6 py-3 flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-white font-medium text-sm flex items-center gap-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -74,9 +85,9 @@
     <!-- Style 3: Floating Card Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">3. Floating Card Navigation</h2>
-      <div class="bg-gray-800 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-gray-800 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-500">Page Content</span>
-        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-4">
+        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="flex flex-col items-center gap-1 p-3 bg-primary-50 rounded-lg text-primary-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -115,7 +126,7 @@
     <!-- Style 4: Floating Vertical Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">4. Floating Vertical Navigation</h2>
-      <div class="bg-gray-200 rounded-xl h-80 relative flex items-center justify-center">
+      <div class="bg-gray-200 rounded-xl h-80 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-500">Page Content</span>
         <nav class="absolute right-6 top-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-lg p-2 flex flex-col gap-1">
           <a href="#" class="p-3 bg-primary-500 text-white rounded-xl">
@@ -152,9 +163,9 @@
     <!-- Style 5: Floating Bubble Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">5. Floating Bubble Navigation</h2>
-      <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-600">Page Content</span>
-        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3">
+        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3" data-mobile-wrap>
           <a href="#" class="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-primary-500/30 ring-4 ring-primary-500/20">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -187,21 +198,21 @@
     <!-- Style 6: Floating Island Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">6. Floating Island Navigation</h2>
-      <div class="bg-gray-200 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-gray-200 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-500">Page Content</span>
-        <nav class="absolute top-6 left-1/2 -translate-x-1/2 bg-gray-900 rounded-full shadow-xl px-4 py-2 flex items-center gap-4">
-          <div class="flex items-center gap-3 pr-4 border-r border-gray-700">
+        <nav class="absolute top-6 left-1/2 -translate-x-1/2 bg-gray-900 rounded-full shadow-xl px-4 py-2 flex items-center gap-4" data-mobile-wrap>
+          <div class="flex items-center gap-3 pr-4 border-r border-gray-700" data-mobile-wrap>
             <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
               <span class="text-white text-sm font-bold">A</span>
             </div>
             <span class="text-white font-medium text-sm">Acme Inc</span>
           </div>
-          <div class="flex items-center gap-1">
+          <div class="flex items-center gap-1" data-mobile-wrap>
             <a href="#" class="px-3 py-1.5 text-white bg-gray-700 rounded-full text-sm font-medium">Dashboard</a>
             <a href="#" class="px-3 py-1.5 text-gray-400 hover:text-white rounded-full text-sm font-medium">Projects</a>
             <a href="#" class="px-3 py-1.5 text-gray-400 hover:text-white rounded-full text-sm font-medium">Team</a>
           </div>
-          <div class="flex items-center gap-2 pl-4 border-l border-gray-700">
+          <div class="flex items-center gap-2 pl-4 border-l border-gray-700" data-mobile-wrap>
             <button class="p-2 text-gray-400 hover:text-white">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
@@ -216,9 +227,9 @@
     <!-- Style 7: Floating Action Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">7. Floating Action Navigation</h2>
-      <div class="bg-primary-50 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-primary-50 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-primary-300">Page Content</span>
-        <div class="absolute bottom-6 right-6 flex flex-col-reverse items-center gap-3">
+        <div class="absolute bottom-6 right-6 flex flex-col-reverse items-center gap-3" data-mobile-wrap>
           <button class="w-14 h-14 bg-primary-500 text-white rounded-full shadow-lg shadow-primary-500/30 flex items-center justify-center hover:bg-primary-600">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -246,15 +257,15 @@
     <!-- Style 8: Floating Search Navigation -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">8. Floating Search Navigation</h2>
-      <div class="bg-gray-800 rounded-xl h-64 relative flex items-center justify-center">
+      <div class="bg-gray-800 rounded-xl h-64 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-600">Page Content</span>
-        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-2xl p-2 flex items-center gap-2">
+        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-2xl p-2 flex items-center gap-2" data-mobile-wrap>
           <a href="#" class="p-3 bg-primary-500 text-white rounded-xl">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
             </svg>
           </a>
-          <div class="flex items-center bg-gray-100 rounded-xl px-4 py-2 gap-2">
+          <div class="flex items-center bg-gray-100 rounded-xl px-4 py-2 gap-2" data-mobile-wrap>
             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>

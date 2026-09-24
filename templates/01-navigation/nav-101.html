@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.35 0.18 250);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-50 p-8 space-y-16">
 
@@ -25,7 +36,7 @@
     <h2 class="text-xl font-bold text-gray-800">Style 1: Keyboard Shortcuts Help</h2>
     <div class="bg-gray-900/50 rounded-lg p-8">
       <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
-        <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+        <div class="p-4 border-b border-gray-200 flex items-center justify-between" data-mobile-wrap>
           <h3 class="font-semibold text-gray-900">Keyboard Shortcuts</h3>
           <kbd class="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded">?</kbd>
         </div>
@@ -33,15 +44,15 @@
           <div>
             <h4 class="text-xs font-semibold text-gray-500 uppercase mb-2">Navigation</h4>
             <div class="space-y-2">
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between" data-mobile-wrap>
                 <span class="text-sm text-gray-700">Go to Home</span>
                 <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">G H</kbd>
               </div>
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between" data-mobile-wrap>
                 <span class="text-sm text-gray-700">Go to Dashboard</span>
                 <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">G D</kbd>
               </div>
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between" data-mobile-wrap>
                 <span class="text-sm text-gray-700">Go to Settings</span>
                 <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">G S</kbd>
               </div>
@@ -50,23 +61,23 @@
           <div>
             <h4 class="text-xs font-semibold text-gray-500 uppercase mb-2">Actions</h4>
             <div class="space-y-2">
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between" data-mobile-wrap>
                 <span class="text-sm text-gray-700">New Item</span>
-                <div class="flex items-center gap-1">
+                <div class="flex items-center gap-1" data-mobile-wrap>
                   <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">⌘</kbd>
                   <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">N</kbd>
                 </div>
               </div>
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between" data-mobile-wrap>
                 <span class="text-sm text-gray-700">Search</span>
-                <div class="flex items-center gap-1">
+                <div class="flex items-center gap-1" data-mobile-wrap>
                   <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">⌘</kbd>
                   <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">K</kbd>
                 </div>
               </div>
-              <div class="flex items-center justify-between">
+              <div class="flex items-center justify-between" data-mobile-wrap>
                 <span class="text-sm text-gray-700">Save</span>
-                <div class="flex items-center gap-1">
+                <div class="flex items-center gap-1" data-mobile-wrap>
                   <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">⌘</kbd>
                   <kbd class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">S</kbd>
                 </div>
@@ -82,9 +93,9 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 2: Focusable Navigation</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded">Brand</a>
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-1" data-mobile-wrap>
           <a href="#" class="px-4 py-2 text-gray-700 hover:text-primary-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:bg-primary-50">Home</a>
           <a href="#" class="px-4 py-2 text-gray-700 hover:text-primary-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:bg-primary-50">About</a>
           <a href="#" class="px-4 py-2 text-gray-700 hover:text-primary-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:bg-primary-50">Services</a>
@@ -99,9 +110,9 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 3: Arrow Key Navigation</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg p-4 max-w-xs">
-      <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center justify-between mb-3" data-mobile-wrap>
         <h3 class="font-semibold text-gray-900">Menu</h3>
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-1" data-mobile-wrap>
           <kbd class="px-1.5 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">↑</kbd>
           <kbd class="px-1.5 py-0.5 bg-gray-100 text-gray-500 text-xs rounded">↓</kbd>
         </div>
@@ -148,9 +159,9 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 4: Number Key Quick Access</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2" data-mobile-wrap>
           <a href="#" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">
             <kbd class="w-5 h-5 bg-gray-200 text-gray-600 text-xs rounded flex items-center justify-center font-mono">1</kbd>
             Home
@@ -176,7 +187,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 5: Vim-Style Navigation</h2>
     <nav class="bg-gray-900 rounded-lg p-4 max-w-sm">
-      <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center justify-between mb-4" data-mobile-wrap>
         <span class="text-white font-mono text-sm">:nav</span>
         <span class="text-gray-500 text-xs">vim mode</span>
       </div>
@@ -223,9 +234,9 @@
         <span class="mx-2">•</span>
         <a href="#search" class="underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 rounded">Skip to search</a>
       </div>
-      <nav id="nav" class="px-6 py-4 flex items-center justify-between">
+      <nav id="nav" class="px-6 py-4 flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
           <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
           <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
@@ -238,15 +249,15 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 7: Keyboard Indicator Bar</h2>
     <div class="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden">
-      <nav class="px-6 py-4 flex items-center justify-between">
+      <nav class="px-6 py-4 flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
           <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
           <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
         </div>
       </nav>
-      <div class="bg-gray-100 px-6 py-2 flex items-center justify-center gap-6 text-xs text-gray-500">
+      <div class="bg-gray-100 px-6 py-2 flex items-center justify-center gap-6 text-xs text-gray-500" data-mobile-wrap>
         <span class="flex items-center gap-1">
           <kbd class="px-1.5 py-0.5 bg-white border border-gray-300 rounded text-gray-600">Tab</kbd>
           Navigate
@@ -271,9 +282,9 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 8: Floating Keyboard Hint</h2>
     <div class="relative bg-white shadow-sm border border-gray-200 rounded-lg p-6 min-h-[200px]">
-      <nav class="flex items-center justify-between mb-6">
+      <nav class="flex items-center justify-between mb-6" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-primary-600">Brand</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
           <a href="#" class="text-gray-700 hover:text-primary-600">About</a>
           <a href="#" class="text-gray-700 hover:text-primary-600">Contact</a>
@@ -283,12 +294,12 @@
 
       <!-- Floating Hint -->
       <div class="absolute bottom-4 right-4 bg-gray-900 text-white px-4 py-3 rounded-lg shadow-lg">
-        <div class="flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-2">
+        <div class="flex items-center gap-4 text-sm" data-mobile-wrap>
+          <div class="flex items-center gap-2" data-mobile-wrap>
             <kbd class="px-2 py-1 bg-gray-700 rounded text-xs">⌘K</kbd>
             <span class="text-gray-300">Search</span>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2" data-mobile-wrap>
             <kbd class="px-2 py-1 bg-gray-700 rounded text-xs">?</kbd>
             <span class="text-gray-300">Shortcuts</span>
           </div>

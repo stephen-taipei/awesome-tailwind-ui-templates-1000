@@ -52,15 +52,26 @@
       --color-stem-900: oklch(0.20 0.06 180);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
   <!-- Style 1: K-12 Tutoring - Friendly & Encouraging -->
   <nav class="bg-gradient-to-r from-learn-600 to-learn-500 shadow-xl rounded-xl overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
             <svg class="w-7 h-7 text-learn-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -82,7 +93,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <a href="#" class="text-white/90 hover:text-white font-medium transition-colors">Login</a>
           <button class="bg-white text-learn-600 px-5 py-2.5 rounded-lg font-bold hover:bg-learn-50 transition-colors shadow-lg">
             Free Trial Lesson
@@ -96,8 +107,8 @@
   <nav class="bg-gray-900 shadow-xl">
     <div class="max-w-7xl mx-auto px-4">
       <!-- Top Bar -->
-      <div class="flex items-center justify-between py-2 border-b border-gray-700 text-sm">
-        <div class="flex items-center space-x-6 text-gray-400">
+      <div class="flex items-center justify-between py-2 border-b border-gray-700 text-sm" data-mobile-wrap>
+        <div class="flex items-center space-x-6 text-gray-400" data-mobile-wrap>
           <span class="flex items-center gap-2">
             <svg class="w-4 h-4 text-bright-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -105,15 +116,15 @@
             Average 200+ Point Score Increase
           </span>
         </div>
-        <div class="flex items-center space-x-4 text-gray-400">
+        <div class="flex items-center space-x-4 text-gray-400" data-mobile-wrap>
           <a href="#" class="hover:text-bright-400 transition-colors">Free Practice Test</a>
           <a href="#" class="hover:text-bright-400 transition-colors">Student Portal</a>
         </div>
       </div>
 
       <!-- Main Nav -->
-      <div class="flex items-center justify-between h-18">
-        <div class="flex items-center space-x-4">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-bright-500 rounded flex items-center justify-center">
             <svg class="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
@@ -133,7 +144,7 @@
           <a href="#" class="text-gray-300 hover:text-white font-medium transition-colors">About</a>
         </div>
 
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="bg-bright-500 text-gray-900 px-6 py-2.5 font-bold hover:bg-bright-400 transition-colors">
             START PREP
           </button>
@@ -145,9 +156,9 @@
   <!-- Style 3: Online Learning Platform - Modern & Digital -->
   <nav class="bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-10 h-10 bg-gradient-to-br from-academic-500 to-academic-700 rounded-lg flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -166,7 +177,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 bg-gray-100 rounded-lg px-3 py-2">
             <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -185,9 +196,9 @@
   <!-- Style 4: STEM Education - Tech & Innovative -->
   <nav class="bg-gradient-to-r from-gray-900 via-stem-900 to-gray-900">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="relative">
             <div class="w-10 h-10 bg-gradient-to-br from-stem-400 to-stem-600 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,7 +223,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <a href="#" class="text-gray-400 hover:text-stem-400 font-medium text-sm transition-colors">For Parents</a>
           <a href="#" class="text-gray-400 hover:text-stem-400 font-medium text-sm transition-colors">Login</a>
           <button class="bg-stem-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-stem-400 transition-colors flex items-center gap-2">
@@ -229,9 +240,9 @@
   <!-- Style 5: Language Learning - Global & Friendly -->
   <nav class="bg-gradient-to-r from-rose-500 to-pink-500 shadow-lg">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center border border-white/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
@@ -253,7 +264,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <select class="bg-white/20 border border-white/30 rounded-lg px-3 py-1.5 text-white text-sm">
             <option>English</option>
             <option>Spanish</option>
@@ -271,9 +282,9 @@
   <!-- Style 6: College Prep/Counseling - Premium & Academic -->
   <nav class="bg-white border-b border-gray-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-20" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="w-12 h-12 border-2 border-academic-800 rounded flex items-center justify-center">
             <svg class="w-7 h-7 text-academic-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M12 14l9-5-9-5-9 5 9 5z"/>
@@ -297,7 +308,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <button class="border-2 border-academic-700 text-academic-700 px-5 py-2 font-medium hover:bg-academic-700 hover:text-white transition-all">
             Schedule Consultation
           </button>
@@ -309,9 +320,9 @@
   <!-- Style 7: Music/Art Lessons - Creative & Expressive -->
   <nav class="bg-gradient-to-r from-purple-600 to-indigo-600 shadow-xl">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-18" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center border-2 border-white/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
@@ -333,7 +344,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <div class="hidden lg:flex items-center space-x-2 text-white/80 text-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -351,9 +362,9 @@
   <!-- Style 8: Professional Development - Corporate & Modern -->
   <nav class="bg-slate-800 shadow-xl">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16" data-mobile-wrap data-mobile-height>
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3" data-mobile-wrap>
           <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded flex items-center justify-center">
             <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
@@ -375,7 +386,7 @@
         </div>
 
         <!-- Right -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
           <a href="#" class="text-slate-400 hover:text-white font-medium text-sm transition-colors">Login</a>
           <button class="bg-amber-500 text-slate-900 px-5 py-2 rounded font-bold hover:bg-amber-400 transition-colors">
             Start Learning

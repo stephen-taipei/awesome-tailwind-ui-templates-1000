@@ -17,14 +17,25 @@
       --color-primary-700: oklch(0.35 0.12 80);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
   <!-- Style 1: High-End Jewelry House -->
   <nav class="bg-black text-white rounded-none shadow-2xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-8 py-6">
-        <div class="flex items-center gap-3">
+      <div class="flex items-center justify-between px-8 py-6" data-mobile-wrap>
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <span class="text-2xl font-light tracking-[0.4em] uppercase">Cartière</span>
         </div>
         <div class="hidden lg:flex items-center gap-12">
@@ -34,7 +45,7 @@
           <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-widest uppercase text-xs">Collections</a>
           <a href="#" class="text-gray-400 hover:text-white transition font-light tracking-widest uppercase text-xs">Maison</a>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <button class="text-gray-400 hover:text-white transition">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -56,8 +67,8 @@
   <!-- Style 2: Contemporary Diamond Brand -->
   <nav class="bg-white text-gray-900 rounded-none shadow-lg border-b border-gray-100">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-5">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-5" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-10 h-10 flex items-center justify-center">
             <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L2 9l10 13 10-13-10-7zm0 2.5l6.5 4.5H5.5L12 4.5z"/>
@@ -72,7 +83,7 @@
           <a href="#" class="text-gray-500 hover:text-gray-900 transition font-light tracking-wide">Earrings</a>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition font-light tracking-wide">Education</a>
         </div>
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5" data-mobile-wrap>
           <button class="hidden md:flex items-center gap-2 text-gray-600 hover:text-gray-900 text-sm">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -90,8 +101,8 @@
   <!-- Style 3: Luxury Watch Brand -->
   <nav class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white rounded-none shadow-2xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-5">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-5" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 border border-amber-400 rounded-full flex items-center justify-center">
             <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -109,7 +120,7 @@
           <a href="#" class="text-gray-300 hover:text-amber-400 transition font-light tracking-wide">Service</a>
           <a href="#" class="text-gray-300 hover:text-amber-400 transition font-light tracking-wide">Boutiques</a>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <button class="border border-amber-400 text-amber-400 px-5 py-2.5 font-light tracking-wide hover:bg-amber-400 hover:text-slate-900 transition">
             Find a Boutique
           </button>
@@ -121,8 +132,8 @@
   <!-- Style 4: Bridal/Wedding Jewelry -->
   <nav class="bg-gradient-to-r from-rose-50 via-pink-50 to-rose-50 text-gray-900 rounded-2xl shadow-lg border border-rose-100">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-5">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-5" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-gradient-to-br from-rose-300 to-pink-400 rounded-full flex items-center justify-center">
             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -140,7 +151,7 @@
           <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Custom Design</a>
           <a href="#" class="text-rose-700 hover:text-rose-500 transition font-medium">Ring Finder</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="hidden md:block text-sm text-rose-600">
             Free Engraving
           </div>
@@ -155,8 +166,8 @@
   <!-- Style 5: Designer Fashion Accessories -->
   <nav class="bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-10 h-10 bg-black flex items-center justify-center">
             <span class="text-white font-bold text-lg">V</span>
           </div>
@@ -169,7 +180,7 @@
           <a href="#" class="text-gray-600 hover:text-black transition font-medium">New Arrivals</a>
           <a href="#" class="text-gray-600 hover:text-black transition font-medium">Sale</a>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <button class="p-2 hover:bg-gray-100 rounded-full">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -194,8 +205,8 @@
   <!-- Style 6: Artisan Jewelry -->
   <nav class="bg-gradient-to-r from-amber-50 to-orange-50 text-gray-900 rounded-2xl shadow-lg border border-amber-100">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-5">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-5" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
             <span class="text-white text-lg">✧</span>
           </div>
@@ -211,7 +222,7 @@
           <a href="#" class="text-amber-700 hover:text-amber-500 transition font-medium">Our Story</a>
           <a href="#" class="text-amber-700 hover:text-amber-500 transition font-medium">Workshops</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="hidden md:flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -229,8 +240,8 @@
   <!-- Style 7: Estate/Vintage Jewelry -->
   <nav class="bg-gradient-to-r from-slate-800 to-slate-900 text-white rounded-lg shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-5">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-5" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-14 h-14 border-2 border-amber-300 rounded-lg flex items-center justify-center bg-slate-900">
             <span class="text-amber-300 font-serif text-xl">E</span>
           </div>
@@ -246,7 +257,7 @@
           <a href="#" class="text-gray-300 hover:text-amber-300 transition font-medium">Signed Pieces</a>
           <a href="#" class="text-gray-300 hover:text-amber-300 transition font-medium">Consign</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <button class="hidden md:block border border-amber-300 text-amber-300 px-5 py-2.5 font-medium hover:bg-amber-300 hover:text-slate-900 transition">
             Sell Your Jewelry
           </button>
@@ -261,8 +272,8 @@
   <!-- Style 8: Modern Minimalist Jewelry -->
   <nav class="bg-neutral-50 text-gray-900 rounded-2xl shadow-lg border border-neutral-200">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-8 py-6">
-        <div class="flex items-center gap-3">
+      <div class="flex items-center justify-between px-8 py-6" data-mobile-wrap>
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="w-8 h-8 bg-black rounded-full"></div>
           <span class="text-lg font-light tracking-widest uppercase">Minima</span>
         </div>
@@ -272,7 +283,7 @@
           <a href="#" class="text-neutral-500 hover:text-black transition font-light">Sustainability</a>
           <a href="#" class="text-neutral-500 hover:text-black transition font-light">Journal</a>
         </div>
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5" data-mobile-wrap>
           <span class="hidden md:block text-sm text-neutral-400">Free shipping worldwide</span>
           <button class="p-2 hover:bg-neutral-100 rounded-full">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

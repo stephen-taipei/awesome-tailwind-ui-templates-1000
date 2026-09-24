@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.38 0.20 250);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8">
   <div class="max-w-5xl mx-auto space-y-12">
@@ -25,7 +36,7 @@
     <!-- Style 1: Pill Filter Tabs -->
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 1: Pill Filter Tabs</h2>
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2" data-mobile-wrap>
         <button class="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full transition-colors">All</button>
         <button class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">Active</button>
         <button class="px-4 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">Pending</button>
@@ -73,9 +84,9 @@
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 3: Tag Filter with Remove</h2>
       <div class="space-y-3">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2" data-mobile-wrap>
           <span class="text-sm text-gray-500">Active filters:</span>
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2" data-mobile-wrap>
             <span class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary-100 text-primary-700">
               Electronics
               <button class="ml-1.5 hover:text-primary-900">
@@ -109,7 +120,7 @@
     <!-- Style 4: Dropdown Filters -->
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 4: Dropdown Filters</h2>
-      <div class="flex flex-wrap gap-3">
+      <div class="flex flex-wrap gap-3" data-mobile-wrap>
         <div class="relative group">
           <button class="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
             Category
@@ -160,7 +171,7 @@
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 5: Sidebar Filter Panel</h2>
       <div class="w-72 border border-gray-200 rounded-xl overflow-hidden">
-        <div class="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between">
+        <div class="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between" data-mobile-wrap>
           <h3 class="text-sm font-semibold text-gray-900">Filters</h3>
           <button class="text-xs text-primary-600 hover:text-primary-700">Reset all</button>
         </div>
@@ -173,7 +184,7 @@
               </svg>
             </summary>
             <div class="px-4 pb-4">
-              <div class="flex items-center space-x-2">
+              <div class="flex items-center space-x-2" data-mobile-wrap>
                 <input type="number" placeholder="Min" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Min">
                 <span class="text-gray-400">-</span>
                 <input type="number" placeholder="Max" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Max">
@@ -231,25 +242,25 @@
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 6: Toggle Switch Filters</h2>
       <div class="w-72 space-y-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <span class="text-sm text-gray-700">In Stock Only</span>
           <button class="relative w-11 h-6 bg-primary-500 rounded-full transition-colors">
             <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
           </button>
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <span class="text-sm text-gray-700">Free Shipping</span>
           <button class="relative w-11 h-6 bg-gray-300 rounded-full transition-colors">
             <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
           </button>
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <span class="text-sm text-gray-700">On Sale</span>
           <button class="relative w-11 h-6 bg-primary-500 rounded-full transition-colors">
             <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
           </button>
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <span class="text-sm text-gray-700">New Arrivals</span>
           <button class="relative w-11 h-6 bg-gray-300 rounded-full transition-colors">
             <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform"></span>
@@ -261,7 +272,7 @@
     <!-- Style 7: Search with Filter -->
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 7: Search with Filter</h2>
-      <div class="flex items-center space-x-3 max-w-2xl">
+      <div class="flex items-center space-x-3 max-w-2xl" data-mobile-wrap>
         <div class="relative flex-1">
           <input type="text" placeholder="Search products..." class="w-full px-4 py-2.5 pl-10 bg-gray-100 border border-transparent rounded-lg text-sm focus:outline-none focus:bg-white focus:border-primary-500 transition-all" aria-label="Search products...">
           <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,7 +299,7 @@
               </div>
               <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Price Range</label>
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2" data-mobile-wrap>
                   <input type="number" placeholder="Min" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm" aria-label="Min">
                   <span>-</span>
                   <input type="number" placeholder="Max" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm" aria-label="Max">
@@ -305,14 +316,14 @@
     <section class="bg-white rounded-xl shadow-sm p-6">
       <h2 class="text-lg font-semibold text-gray-700 mb-4">Style 8: Segmented Control Filter</h2>
       <div class="space-y-4">
-        <div class="inline-flex p-1 bg-gray-100 rounded-xl">
+        <div class="inline-flex p-1 bg-gray-100 rounded-xl" data-mobile-wrap>
           <button class="px-6 py-2 text-sm font-medium text-white bg-primary-500 rounded-lg shadow-sm transition-all">All</button>
           <button class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-colors">Published</button>
           <button class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-colors">Drafts</button>
           <button class="px-6 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg transition-colors">Archived</button>
         </div>
-        <div class="flex items-center space-x-4">
-          <div class="inline-flex p-1 bg-gray-100 rounded-lg">
+        <div class="flex items-center space-x-4" data-mobile-wrap>
+          <div class="inline-flex p-1 bg-gray-100 rounded-lg" data-mobile-wrap>
             <button class="p-2 text-primary-600 bg-white rounded shadow-sm transition-all" title="Grid View">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>

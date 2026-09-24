@@ -21,6 +21,17 @@
       50% { background-position: 100% 50%; }
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
@@ -28,9 +39,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 1: Sunset Gradient Header</h2>
     <nav class="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 rounded-2xl shadow-lg p-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-white">GradientNav</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-white font-medium">Home</a>
           <a href="#" class="text-white/80 hover:text-white transition-colors">Products</a>
           <a href="#" class="text-white/80 hover:text-white transition-colors">Services</a>
@@ -45,7 +56,7 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 2: Ocean Gradient Tabs</h2>
     <nav class="bg-white rounded-2xl shadow-lg p-2">
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2" data-mobile-wrap>
         <a href="#" class="flex-1 text-center px-6 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium">
           Dashboard
         </a>
@@ -65,9 +76,9 @@
   <!-- Style 3: Aurora Gradient Sidebar -->
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 3: Aurora Gradient Sidebar</h2>
-    <div class="flex h-80 bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div class="flex h-80 bg-white rounded-2xl shadow-lg overflow-hidden" data-mobile-wrap>
       <nav class="w-64 bg-gradient-to-b from-violet-600 via-purple-600 to-indigo-700 p-6">
-        <div class="flex items-center gap-3 mb-8">
+        <div class="flex items-center gap-3 mb-8" data-mobile-wrap>
           <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
             <span class="text-white font-bold">A</span>
           </div>
@@ -88,7 +99,7 @@
           </a>
         </div>
       </nav>
-      <div class="flex-1 p-6 flex items-center justify-center">
+      <div class="flex-1 p-6 flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-400">Content Area</span>
       </div>
     </div>
@@ -98,9 +109,9 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 4: Animated Gradient Bar</h2>
     <nav class="rounded-2xl shadow-lg p-4" style="background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); background-size: 400% 400%; animation: gradient-x 15s ease infinite">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-white">AnimGrad</a>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl text-white font-medium">Home</a>
           <a href="#" class="px-4 py-2 text-white/80 hover:bg-white/10 rounded-xl transition-colors">Features</a>
           <a href="#" class="px-4 py-2 text-white/80 hover:bg-white/10 rounded-xl transition-colors">Pricing</a>
@@ -115,9 +126,9 @@
     <h2 class="text-lg font-semibold mb-4">Style 5: Gradient Border</h2>
     <nav class="relative bg-white rounded-2xl shadow-lg p-[3px]" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
       <div class="bg-white rounded-[13px] p-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">BorderGrad</a>
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-6" data-mobile-wrap>
             <a href="#" class="text-gray-800 font-medium">Home</a>
             <a href="#" class="text-gray-500 hover:text-gray-800 transition-colors">Products</a>
             <a href="#" class="text-gray-500 hover:text-gray-800 transition-colors">Services</a>
@@ -132,7 +143,7 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 6: Multi-Gradient Icons</h2>
     <nav class="bg-gray-900 rounded-2xl shadow-lg p-6">
-      <div class="flex items-center justify-around">
+      <div class="flex items-center justify-around" data-mobile-wrap>
         <a href="#" class="flex flex-col items-center gap-2 group">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shadow-lg shadow-pink-500/30 group-hover:scale-110 transition-transform">
             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
@@ -171,11 +182,11 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 7: Gradient Text Nav</h2>
     <nav class="bg-white rounded-2xl shadow-lg p-4">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 via-pink-600 to-rose-600 bg-clip-text text-transparent">
           GradText
         </a>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-8" data-mobile-wrap>
           <a href="#" class="text-lg font-semibold bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent">Home</a>
           <a href="#" class="text-lg font-medium text-gray-400 hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-pink-600 hover:bg-clip-text hover:text-transparent transition-all">Products</a>
           <a href="#" class="text-lg font-medium text-gray-400 hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-pink-600 hover:bg-clip-text hover:text-transparent transition-all">Services</a>
@@ -199,9 +210,9 @@
       radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
       radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
       radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);">
-      <div class="flex items-center justify-between relative z-10">
+      <div class="flex items-center justify-between relative z-10" data-mobile-wrap>
         <a href="#" class="text-xl font-bold text-white drop-shadow-md">MeshGrad</a>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-white font-medium drop-shadow-md">Home</a>
           <a href="#" class="text-white/80 hover:text-white transition-colors drop-shadow-md">Features</a>
           <a href="#" class="text-white/80 hover:text-white transition-colors drop-shadow-md">Pricing</a>

@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.35 0.18 250);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
@@ -24,20 +35,20 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 1: Classic News Header</h2>
     <nav class="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="bg-red-700 px-6 py-2 flex items-center justify-between">
-        <div class="flex items-center gap-4 text-white text-sm">
+      <div class="bg-red-700 px-6 py-2 flex items-center justify-between" data-mobile-wrap>
+        <div class="flex items-center gap-4 text-white text-sm" data-mobile-wrap>
           <span>Breaking News:</span>
           <span class="font-medium">Latest updates on global events</span>
         </div>
-        <div class="flex items-center gap-4 text-white/80 text-sm">
+        <div class="flex items-center gap-4 text-white/80 text-sm" data-mobile-wrap>
           <span>December 3, 2025</span>
           <a href="#" class="hover:text-white transition-colors">Subscribe</a>
         </div>
       </div>
       <div class="px-6 py-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between" data-mobile-wrap>
           <a href="#" class="text-4xl font-serif font-bold text-gray-900">The Daily News</a>
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-6" data-mobile-wrap>
             <a href="#" class="text-gray-900 font-medium">Home</a>
             <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">World</a>
             <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Politics</a>
@@ -57,10 +68,10 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 2: Modern Digital News</h2>
     <nav class="bg-gray-900 rounded-2xl shadow-lg p-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-6">
+      <div class="flex items-center justify-between" data-mobile-wrap>
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-2xl font-bold text-white">TECH<span class="text-cyan-400">PULSE</span></a>
-          <div class="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
+          <div class="flex items-center gap-1 bg-gray-800 rounded-lg p-1" data-mobile-wrap>
             <a href="#" class="px-4 py-2 bg-cyan-500 text-white text-sm font-medium rounded-md">Latest</a>
             <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">AI</a>
             <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">Crypto</a>
@@ -68,7 +79,7 @@
             <a href="#" class="px-4 py-2 text-gray-400 text-sm font-medium rounded-md hover:text-white transition-colors">Gadgets</a>
           </div>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="p-2 text-gray-400 hover:text-white transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </a>
@@ -83,13 +94,13 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 3: Magazine Style</h2>
     <nav class="bg-white rounded-2xl shadow-lg p-6">
-      <div class="flex items-center justify-between border-b border-gray-200 pb-4 mb-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4 mb-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors text-sm">Newsletter</a>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors text-sm">Podcast</a>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors text-sm">Events</a>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
           </a>
@@ -99,9 +110,9 @@
           <a href="#" class="px-4 py-2 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors">Sign In</a>
         </div>
       </div>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between" data-mobile-wrap>
         <a href="#" class="text-4xl font-serif italic text-gray-900">Lifestyle</a>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-8" data-mobile-wrap>
           <a href="#" class="text-gray-900 font-medium">Fashion</a>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Beauty</a>
           <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Culture</a>
@@ -125,10 +136,10 @@
         <span>EUR/USD <span class="text-green-800">+0.08%</span></span>
       </div>
       <div class="px-6 py-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-6">
+        <div class="flex items-center justify-between" data-mobile-wrap>
+          <div class="flex items-center gap-6" data-mobile-wrap>
             <a href="#" class="text-2xl font-bold text-white">Market<span class="text-amber-500">Watch</span></a>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4" data-mobile-wrap>
               <a href="#" class="text-white font-medium text-sm">Markets</a>
               <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Investing</a>
               <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Economy</a>
@@ -136,7 +147,7 @@
               <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Personal Finance</a>
             </div>
           </div>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4" data-mobile-wrap>
             <a href="#" class="p-2 text-gray-400 hover:text-white transition-colors">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             </a>
@@ -151,10 +162,10 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 5: Sports News</h2>
     <nav class="bg-green-800 rounded-2xl shadow-lg p-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-6">
+      <div class="flex items-center justify-between" data-mobile-wrap>
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-2xl font-black text-white uppercase tracking-tight">SportsZone</a>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2" data-mobile-wrap>
             <a href="#" class="px-4 py-2 bg-white text-green-800 text-sm font-bold rounded-lg">NFL</a>
             <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">NBA</a>
             <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">MLB</a>
@@ -163,7 +174,7 @@
             <a href="#" class="px-4 py-2 text-white text-sm font-bold rounded-lg hover:bg-white/10 transition-colors">Fantasy</a>
           </div>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <a href="#" class="p-2 text-white hover:bg-white/10 rounded-lg transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </a>
@@ -180,10 +191,10 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 6: Weather/Local News</h2>
     <nav class="bg-gradient-to-r from-sky-500 to-blue-600 rounded-2xl shadow-lg p-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-6">
+      <div class="flex items-center justify-between" data-mobile-wrap>
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-2xl font-bold text-white">WeatherNews</a>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4" data-mobile-wrap>
             <a href="#" class="flex items-center gap-2 px-4 py-2 bg-white/20 text-white text-sm font-medium rounded-full">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
               <span>Local</span>
@@ -194,8 +205,8 @@
             <a href="#" class="text-white/80 text-sm font-medium hover:text-white transition-colors">Alerts</a>
           </div>
         </div>
-        <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full">
+        <div class="flex items-center gap-4" data-mobile-wrap>
+          <div class="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full" data-mobile-wrap>
             <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
             <span class="text-white font-bold">72°F</span>
             <span class="text-white/70 text-sm">New York</span>
@@ -213,10 +224,10 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 7: Opinion/Blog Platform</h2>
     <nav class="bg-white rounded-2xl shadow-lg p-6">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-8">
+      <div class="flex items-center justify-between" data-mobile-wrap>
+        <div class="flex items-center gap-8" data-mobile-wrap>
           <a href="#" class="text-3xl font-serif text-gray-900">Perspective</a>
-          <div class="flex items-center gap-6">
+          <div class="flex items-center gap-6" data-mobile-wrap>
             <a href="#" class="text-gray-900 font-medium border-b-2 border-gray-900 pb-1">Featured</a>
             <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Politics</a>
             <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Culture</a>
@@ -224,7 +235,7 @@
             <a href="#" class="text-gray-500 hover:text-gray-900 transition-colors">Ideas</a>
           </div>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <a href="#" class="p-2 text-gray-500 hover:text-gray-900 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </a>
@@ -243,22 +254,22 @@
   <section>
     <h2 class="text-lg font-semibold mb-4">Style 8: News Aggregator</h2>
     <nav class="bg-gray-50 rounded-2xl shadow-lg p-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-6">
+      <div class="flex items-center justify-between" data-mobile-wrap>
+        <div class="flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="flex items-center gap-2">
             <div class="w-10 h-10 bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 rounded-xl flex items-center justify-center">
               <span class="text-white font-bold text-xl">N</span>
             </div>
             <span class="text-xl font-bold text-gray-900">NewsFlow</span>
           </a>
-          <div class="flex items-center gap-2 bg-white rounded-full p-1 shadow-sm">
+          <div class="flex items-center gap-2 bg-white rounded-full p-1 shadow-sm" data-mobile-wrap>
             <a href="#" class="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">For You</a>
             <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Headlines</a>
             <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Following</a>
             <a href="#" class="px-4 py-2 text-gray-600 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">Local</a>
           </div>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="relative">
             <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             <input type="text" placeholder="Search news..." class="w-56 pl-10 pr-4 py-2 bg-white rounded-full text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900" aria-label="Search news...">

@@ -17,14 +17,25 @@
       --color-primary-700: oklch(0.35 0.18 150);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 p-8 space-y-12">
 
   <!-- Style 1: Veterinary Clinic -->
   <nav class="bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-2xl shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
             <svg class="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4.5 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm15 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-12.5 3a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm10 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-5 7.5c3.5 0 6-2.5 6-6 0-2-1.5-3.5-3.5-3.5-.5 0-1 .1-1.5.3-.5-.2-1-.3-1.5-.3s-1 .1-1.5.3c-.5-.2-1-.3-1.5-.3-2 0-3.5 1.5-3.5 3.5 0 3.5 2.5 6 6 6z"/>
@@ -42,7 +53,7 @@
           <a href="#" class="hover:text-teal-100 transition font-medium">Resources</a>
           <a href="#" class="hover:text-teal-100 transition font-medium">Contact</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <a href="tel:555-0123" class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -60,8 +71,8 @@
   <!-- Style 2: Pet Store/E-commerce -->
   <nav class="bg-white text-gray-900 rounded-2xl shadow-xl border border-orange-100">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center">
             <span class="text-2xl">🐕</span>
           </div>
@@ -84,7 +95,7 @@
           <a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">Birds</a>
           <a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">Fish</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <button class="relative p-2 hover:bg-orange-50 rounded-full">
             <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -107,8 +118,8 @@
   <!-- Style 3: Pet Grooming Salon -->
   <nav class="bg-gradient-to-r from-pink-400 via-rose-400 to-pink-400 text-white rounded-3xl shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
             <span class="text-3xl">✂️</span>
           </div>
@@ -124,7 +135,7 @@
           <a href="#" class="hover:text-pink-100 transition font-medium">Groomers</a>
           <a href="#" class="hover:text-pink-100 transition font-medium">Tips</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="hidden md:flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
             <span class="w-2 h-2 bg-green-300 rounded-full animate-pulse"></span>
             Walk-ins Welcome!
@@ -140,8 +151,8 @@
   <!-- Style 4: Pet Adoption Center -->
   <nav class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -159,7 +170,7 @@
           <a href="#" class="hover:text-purple-200 transition font-medium">Donate</a>
           <a href="#" class="hover:text-purple-200 transition font-medium">Events</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="hidden md:flex items-center gap-2 bg-yellow-400 text-purple-900 px-4 py-2 rounded-full text-sm font-bold">
             <span>🐾</span>
             127 Pets Need Homes
@@ -175,8 +186,8 @@
   <!-- Style 5: Pet Training Academy -->
   <nav class="bg-slate-900 text-white rounded-lg shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
@@ -194,7 +205,7 @@
           <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Behavior</a>
           <a href="#" class="text-gray-300 hover:text-amber-400 transition font-medium">Testimonials</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <button class="hidden md:block border border-amber-400 text-amber-400 px-5 py-2.5 rounded font-medium hover:bg-amber-400 hover:text-slate-900 transition">
             Free Evaluation
           </button>
@@ -209,8 +220,8 @@
   <!-- Style 6: Pet Boarding/Daycare -->
   <nav class="bg-gradient-to-r from-sky-400 to-blue-500 text-white rounded-2xl shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
             <span class="text-2xl">🏠</span>
           </div>
@@ -226,7 +237,7 @@
           <a href="#" class="hover:text-sky-100 transition font-medium">Webcams</a>
           <a href="#" class="hover:text-sky-100 transition font-medium">Rates</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="hidden md:flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -244,8 +255,8 @@
   <!-- Style 7: Pet Insurance -->
   <nav class="bg-white text-gray-900 rounded-xl shadow-lg border border-gray-200">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/>
@@ -263,7 +274,7 @@
           <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">Vets</a>
           <a href="#" class="text-gray-600 hover:text-green-600 transition font-medium">FAQ</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <span class="hidden md:block text-sm text-gray-500">Already insured?</span>
           <button class="text-green-600 hover:text-green-700 font-medium">Login</button>
           <button class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2.5 rounded-xl font-bold hover:shadow-lg transition">
@@ -277,8 +288,8 @@
   <!-- Style 8: Exotic Pet Specialty -->
   <nav class="bg-gradient-to-r from-emerald-800 via-teal-800 to-emerald-800 text-white rounded-lg shadow-xl">
     <div class="max-w-7xl mx-auto">
-      <div class="flex items-center justify-between px-6 py-4">
-        <div class="flex items-center gap-4">
+      <div class="flex items-center justify-between px-6 py-4" data-mobile-wrap>
+        <div class="flex items-center gap-4" data-mobile-wrap>
           <div class="w-14 h-14 bg-gradient-to-br from-lime-400 to-green-500 rounded-full flex items-center justify-center">
             <span class="text-2xl">🦎</span>
           </div>
@@ -294,7 +305,7 @@
           <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Supplies</a>
           <a href="#" class="text-emerald-100 hover:text-lime-300 transition font-medium">Care Guides</a>
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3" data-mobile-wrap>
           <div class="hidden md:flex items-center gap-2 text-sm text-emerald-200">
             <span class="w-2 h-2 bg-lime-400 rounded-full animate-pulse"></span>
             Expert Staff On Site

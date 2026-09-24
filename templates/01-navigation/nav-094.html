@@ -17,6 +17,17 @@
       --color-primary-700: oklch(0.35 0.18 250);
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-50 p-8 space-y-16">
 
@@ -24,7 +35,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 1: Simple Numbered Steps</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
-      <ol class="flex items-center justify-between">
+      <ol class="flex items-center justify-between" data-mobile-wrap>
         <li class="flex items-center gap-3">
           <span class="w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center text-sm font-medium">1</span>
           <span class="text-gray-900 font-medium">Account</span>
@@ -52,7 +63,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 2: With Checkmarks</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
-      <ol class="flex items-center justify-between">
+      <ol class="flex items-center justify-between" data-mobile-wrap>
         <li class="flex items-center gap-3">
           <span class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,7 +167,7 @@
         <div class="absolute top-5 left-0 right-0 h-1 bg-gray-200 rounded-full">
           <div class="h-full bg-primary-500 rounded-full" style="width: 60%"></div>
         </div>
-        <ol class="relative flex justify-between">
+        <ol class="relative flex justify-between" data-mobile-wrap>
           <li class="flex flex-col items-center">
             <span class="w-10 h-10 rounded-full bg-primary-500 text-white flex items-center justify-center font-medium z-10">1</span>
             <span class="mt-2 text-sm font-medium text-gray-900">Cart</span>
@@ -186,7 +197,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 5: Arrow Steps</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg overflow-hidden">
-      <ol class="flex">
+      <ol class="flex" data-mobile-wrap>
         <li class="flex-1 relative">
           <div class="px-6 py-4 bg-green-500 text-white">
             <p class="font-medium">1. Account</p>
@@ -222,7 +233,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 6: Icon Steps</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-6">
-      <ol class="flex items-center justify-between">
+      <ol class="flex items-center justify-between" data-mobile-wrap>
         <li class="flex flex-col items-center gap-2">
           <span class="w-14 h-14 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -267,7 +278,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 7: Dark Theme</h2>
     <nav class="bg-gray-900 rounded-lg px-6 py-6">
-      <ol class="flex items-center justify-between">
+      <ol class="flex items-center justify-between" data-mobile-wrap>
         <li class="flex items-center gap-3">
           <span class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,7 +310,7 @@
   <section class="space-y-4">
     <h2 class="text-xl font-bold text-gray-800">Style 8: Compact Pills</h2>
     <nav class="bg-white shadow-sm border border-gray-200 rounded-lg px-6 py-4">
-      <div class="flex items-center justify-center gap-2">
+      <div class="flex items-center justify-center gap-2" data-mobile-wrap>
         <span class="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>

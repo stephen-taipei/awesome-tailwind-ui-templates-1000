@@ -23,6 +23,17 @@
       transition: transform 0.2s ease-out;
     }
   </style>
+<style id="responsive-repair">
+
+@media (max-width: 767px) {
+  body { padding-inline: 1rem; }
+  [data-mobile-wrap] { flex-wrap: wrap; row-gap: .75rem; max-width: 100%; min-width: 0; }
+  [data-mobile-wrap] > * { min-width: 0; max-width: 100%; }
+  [data-mobile-height] { height: auto; min-height: 4rem; padding-block: .75rem; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+</style>
 </head>
 <body class="bg-gray-100 min-h-screen p-8">
   <div class="max-w-6xl mx-auto space-y-16">
@@ -31,9 +42,9 @@
     <!-- Style 1: macOS Style Dock -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">1. macOS Style Dock</h2>
-      <div class="bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-white/50">Desktop</span>
-        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 px-3 py-2 flex items-end gap-1">
+        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 px-3 py-2 flex items-end gap-1" data-mobile-wrap>
           <a href="#" class="dock-item p-2 rounded-xl hover:bg-white/20">
             <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,9 +96,9 @@
     <!-- Style 2: Dark Dock with Labels -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">2. Dark Dock with Labels</h2>
-      <div class="bg-gray-900 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gray-900 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-700">Desktop</span>
-        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gray-800/90 backdrop-blur-xl rounded-2xl border border-gray-700 px-4 py-3 flex items-center gap-2">
+        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gray-800/90 backdrop-blur-xl rounded-2xl border border-gray-700 px-4 py-3 flex items-center gap-2" data-mobile-wrap>
           <a href="#" class="flex flex-col items-center gap-1 p-2 rounded-xl hover:bg-gray-700/50 group">
             <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,9 +147,9 @@
     <!-- Style 3: Windows Taskbar Dock -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">3. Windows Taskbar Dock</h2>
-      <div class="bg-gray-200 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gray-200 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-400">Desktop</span>
-        <nav class="absolute bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur px-4 py-1 flex items-center justify-center gap-1">
+        <nav class="absolute bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur px-4 py-1 flex items-center justify-center gap-1" data-mobile-wrap>
           <button class="p-2 hover:bg-white/10 rounded">
             <svg class="w-6 h-6 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
@@ -187,9 +198,9 @@
     <!-- Style 4: Minimal Icon Dock -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">4. Minimal Icon Dock</h2>
-      <div class="bg-gray-50 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gray-50 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-300">Desktop</span>
-        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg border border-gray-100 px-4 py-3 flex items-center gap-6">
+        <nav class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg border border-gray-100 px-4 py-3 flex items-center gap-6" data-mobile-wrap>
           <a href="#" class="text-primary-500 hover:scale-110 transition-transform">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -223,9 +234,9 @@
     <!-- Style 5: Colorful App Dock -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">5. Colorful App Dock</h2>
-      <div class="bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-white/30">Desktop</span>
-        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 backdrop-blur-xl rounded-3xl px-4 py-3 flex items-center gap-3">
+        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/30 backdrop-blur-xl rounded-3xl px-4 py-3 flex items-center gap-3" data-mobile-wrap>
           <a href="#" class="dock-item">
             <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
               <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -268,7 +279,7 @@
     <!-- Style 6: Side Dock -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">6. Side Dock</h2>
-      <div class="bg-gray-800 rounded-xl h-80 relative flex items-center justify-center">
+      <div class="bg-gray-800 rounded-xl h-80 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-700">Desktop</span>
         <nav class="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-900/90 backdrop-blur rounded-2xl p-2 flex flex-col gap-2">
           <a href="#" class="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary-500/30">
@@ -300,9 +311,9 @@
     <!-- Style 7: Expanding Dock -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">7. Expanding Dock</h2>
-      <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-slate-700">Desktop</span>
-        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-700/50 backdrop-blur-xl rounded-2xl border border-slate-600/50 p-2 flex items-end gap-0.5 group">
+        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-700/50 backdrop-blur-xl rounded-2xl border border-slate-600/50 p-2 flex items-end gap-0.5 group" data-mobile-wrap>
           <a href="#" class="dock-item group-hover:mx-1 transition-all duration-200">
             <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -345,9 +356,9 @@
     <!-- Style 8: Dock with Active Indicator -->
     <section class="space-y-4">
       <h2 class="text-xl font-semibold text-gray-700">8. Dock with Active Indicator</h2>
-      <div class="bg-gray-100 rounded-xl h-72 relative flex items-center justify-center">
+      <div class="bg-gray-100 rounded-xl h-72 relative flex items-center justify-center" data-mobile-wrap>
         <span class="text-gray-300">Desktop</span>
-        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl border border-gray-100 px-3 py-2 flex items-center gap-1">
+        <nav class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl border border-gray-100 px-3 py-2 flex items-center gap-1" data-mobile-wrap>
           <a href="#" class="relative flex flex-col items-center p-2 hover:bg-gray-50 rounded-xl group">
             <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
