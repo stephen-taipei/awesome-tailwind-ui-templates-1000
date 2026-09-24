@@ -1,0 +1,31 @@
+name: Audit source snapshot (temporary)
+
+on:
+  push:
+    branches: [audit/preserve-category-home-20260924]
+    paths: [.github/workflows/audit-source-snapshot.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+          fetch-depth: 3
+      - name: Export only tracked public repository files
+        run: |
+          mkdir -p /tmp/audit-source
+          git archive --format=tar.gz HEAD > /tmp/audit-source/source.tar.gz
+          git show 43585b2ee68ff3f4590826e3244b26645f2ae5d6:index.html > /tmp/audit-source/original-index.html
+          git rev-parse HEAD > /tmp/audit-source/commit.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: audit-source-snapshot
+          path: /tmp/audit-source/
+          retention-days: 1
+          if-no-files-found: error
