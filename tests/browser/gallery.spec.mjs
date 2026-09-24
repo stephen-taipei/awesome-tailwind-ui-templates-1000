@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { readFile, mkdir } from 'node:fs/promises';
 const axe = await readFile('node_modules/axe-core/axe.min.js', 'utf8');
 const prefix = '/awesome-tailwind-ui-templates-1000/';
-async function ready(page, path = '/') { await page.goto(path); await expect(page.locator('.template-card')).toHaveCount(24); }
+async function ready(page, path = '/explore.html') { await page.goto(path); await expect(page.locator('.template-card')).toHaveCount(24); }
 async function noViolations(page, exclude = []) {
   await page.evaluate(axe);
   const violations = await page.evaluate(async exclude => (await axe.run({ exclude }, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa'] } })).violations.map(v => ({ id: v.id, impact: v.impact, nodes: v.nodes.map(n => n.target) })), exclude);
@@ -37,12 +37,12 @@ test('saved state survives a normal reload', async ({ page }) => {
 });
 test('catalog failures offer a working retry and static fallback', async ({ page }) => {
   await page.route('**/templates.json', route => route.fulfill({ status: 503, body: 'temporarily unavailable' }));
-  await page.goto('/'); await expect(page.locator('#load-error')).toBeVisible();
+  await page.goto('/explore.html'); await expect(page.locator('#load-error')).toBeVisible();
   await page.unroute('**/templates.json'); await page.locator('#retry').click();
   await expect(page.locator('.template-card')).toHaveCount(24);
 });
 test('nested hosting, locale preferences and DOM preservation work', async ({ page }) => {
-  await ready(page, prefix);
+  await ready(page, prefix + 'explore.html');
   const failed = []; page.on('response', response => { if (response.status() >= 400 && response.url().includes('/locales/')) failed.push(response.url()); });
   await page.goto(`${prefix}templates/01-navigation/nav-001.html`);
   await page.waitForFunction(() => globalThis.i18n?.getAvailableLocales().includes('en'));

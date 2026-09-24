@@ -11,8 +11,10 @@ from urllib.parse import urlsplit
 from xml.etree.ElementTree import Element, SubElement, tostring
 try:
     from scripts.migrate_legacy import ROOT, template_paths
+    from scripts.home import write_home
 except ModuleNotFoundError:
     from migrate_legacy import ROOT, template_paths
+    from home import write_home
 
 CATEGORIES = {
     'nav': ('navigation', 'Navigation'), 'hero': ('hero', 'Hero sections'),
@@ -46,7 +48,7 @@ class Metadata(HTMLParser):
             self.description = attrs.get('content', '')
         if tag == 'script' and not attrs.get('src', '').endswith('template-runtime.js'):
             if attrs.get('type') != 'application/ld+json': self.interactive = True
-        if 'x-data' in attrs or any(key.startswith('@') or key.startswith('on') for key in attrs):
+        if 'x-data' in attrs or 'data-otp-group' in attrs or any(key.startswith('@') or key.startswith('on') for key in attrs):
             self.interactive = True
         if any(key.startswith('data-i18n') for key in attrs): self.locales = True
 
@@ -102,18 +104,19 @@ def render_catalog(data: dict) -> str:
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>All {data['total']:,} templates — Tailwind Atlas</title><meta name="description" content="Complete static directory of every template. No JavaScript required.">
 <link rel="stylesheet" href="assets/css/gallery.css"><link rel="canonical" href="{escape(site_url(), quote=True)}catalog.html"></head>
-<body><a class="skip-link" href="#catalog-content">Skip to templates</a><header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Tailwind Atlas <span>by Stephen</span></a><a href="index.html">Search the collection ↗</a></div></header>
+<body><a class="skip-link" href="#catalog-content">Skip to templates</a><header class="site-header"><div class="header-inner"><a class="brand" href="index.html">Tailwind Atlas <span>by Stephen</span></a><a href="explore.html">Search the collection ↗</a></div></header>
 <main id="catalog-content" class="directory wrap"><p class="eyebrow">THE COMPLETE INDEX</p><h1>Every template. One place.</h1><p>{data['total']:,} HTML examples across {len(data['categories'])} categories. These are UI demos, not finished applications.</p>
 {''.join(sections)}</main><footer class="site-footer wrap"><a href="index.html">Back to gallery</a></footer></body></html>\n'''
 
 
 def main() -> None:
     data = collect()
+    write_home(ROOT, data)
     (ROOT / 'templates.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
     (ROOT / 'catalog.html').write_text(render_catalog(data), encoding='utf-8')
     namespace = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     xml = Element('urlset', xmlns=namespace)
-    for path in ['', 'catalog.html'] + [item['path'] for item in data['templates']]:
+    for path in ['', 'catalog.html', 'explore.html'] + [item['path'] for item in data['templates']]:
         SubElement(SubElement(xml, 'url'), 'loc').text = site_url() + path
     (ROOT / 'sitemap.xml').write_bytes(b'<?xml version="1.0" encoding="UTF-8"?>\n' + tostring(xml, encoding='utf-8') + b'\n')
     (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {site_url()}sitemap.xml\n', encoding='utf-8')

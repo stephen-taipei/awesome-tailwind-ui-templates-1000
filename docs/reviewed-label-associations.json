@@ -1,0 +1,780 @@
+{
+  "cards/card-017/card-017.html": [
+    {
+      "id": "control-card-017-1",
+      "name": "Password",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-031/form-031.html": [
+    {
+      "id": "control-form-031-1",
+      "name": "Password",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-031-2",
+      "name": "Confirm Password",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-032/form-032.html": [
+    {
+      "id": "control-form-032-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-032-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-032-3",
+      "name": "Phone Number",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-032-4",
+      "name": "Date of Birth",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-035/form-035.html": [
+    {
+      "id": "control-form-035-1",
+      "name": "Which feature are you providing feedback for?",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-036/form-036.html": [
+    {
+      "id": "control-form-036-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-036-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-036-3",
+      "name": "Email Address",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-037/form-037.html": [
+    {
+      "id": "control-form-037-1",
+      "name": "Full Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-037-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-037-3",
+      "name": "Cover Letter (Optional)",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-038/form-038.html": [
+    {
+      "id": "control-form-038-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-3",
+      "name": "Email Address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-4",
+      "name": "Portfolio URL",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-5",
+      "name": "Current Company",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-6",
+      "name": "Role",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-7",
+      "name": "Years of Experience",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-8",
+      "name": "Why do you want to work here?",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-038-9",
+      "name": "What is your salary expectation?",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-039/form-039.html": [
+    {
+      "id": "control-form-039-1",
+      "name": "Date",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-039-2",
+      "name": "Time",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-040/form-040.html": [
+    {
+      "id": "control-form-040-1",
+      "name": "Date",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-040-2",
+      "name": "Time",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-042/form-042.html": [
+    {
+      "name": "Make this a monthly donation",
+      "method": "aria-label"
+    }
+  ],
+  "forms/form-044/form-044.html": [
+    {
+      "id": "control-form-044-1",
+      "name": "Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-044-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-044-3",
+      "name": "Department",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-044-4",
+      "name": "Subject",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-044-5",
+      "name": "Description",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-045/form-045.html": [
+    {
+      "id": "control-form-045-1",
+      "name": "Email Address",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-046/form-046.html": [
+    {
+      "id": "control-form-046-1",
+      "name": "Username",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-046-2",
+      "name": "Display Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-046-3",
+      "name": "Bio",
+      "method": "label-for"
+    }
+  ],
+  "forms/form-047/form-047.html": [
+    {
+      "id": "control-form-047-1",
+      "name": "Email address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-2",
+      "name": "Address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-3",
+      "name": "City",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-4",
+      "name": "Country",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-5",
+      "name": "State / Province",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-6",
+      "name": "Postal code",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-7",
+      "name": "Card number",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-8",
+      "name": "Expiration date (MM/YY)",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-047-9",
+      "name": "CVC",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-011.html": [
+    {
+      "id": "control-nav-011-1",
+      "name": "Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-011-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-011-3",
+      "name": "Message",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-025.html": [
+    {
+      "id": "control-nav-025-1",
+      "name": "Display Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-025-2",
+      "name": "Email",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-034.html": [
+    {
+      "id": "control-nav-034-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-034-2",
+      "name": "Last Name",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-037.html": [
+    {
+      "name": "Currency",
+      "method": "aria-label"
+    }
+  ],
+  "templates/01-navigation/nav-040.html": [
+    {
+      "name": "Airplane Mode",
+      "method": "aria-label"
+    },
+    {
+      "id": "control-nav-040-2",
+      "name": "Display Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-040-3",
+      "name": "Email Address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-040-4",
+      "name": "Language",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-042.html": [
+    {
+      "name": "Calendar view",
+      "method": "aria-label"
+    }
+  ],
+  "templates/01-navigation/nav-043.html": [
+    {
+      "id": "control-nav-043-1",
+      "name": "Highest Degree",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-2",
+      "name": "Start Year",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-3",
+      "name": "End Year",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-4",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-5",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-6",
+      "name": "Display Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-7",
+      "name": "City",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-8",
+      "name": "ZIP Code",
+      "method": "label-for"
+    },
+    {
+      "id": "control-nav-043-9",
+      "name": "Country",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-045.html": [
+    {
+      "name": "Sort products",
+      "method": "aria-label"
+    },
+    {
+      "name": "Sort products",
+      "method": "aria-label"
+    }
+  ],
+  "templates/01-navigation/nav-070.html": [
+    {
+      "id": "control-nav-070-1",
+      "name": "Category",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-083.html": [
+    {
+      "id": "control-nav-083-1",
+      "name": "Email",
+      "method": "label-for"
+    }
+  ],
+  "templates/01-navigation/nav-097.html": [
+    {
+      "name": "Maximum price",
+      "method": "aria-label"
+    },
+    {
+      "name": "Sort products",
+      "method": "aria-label"
+    }
+  ],
+  "templates/10-forms/form-003.html": [
+    {
+      "id": "control-form-003-1",
+      "name": "Password",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-007.html": [
+    {
+      "id": "control-form-007-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-3",
+      "name": "Address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-4",
+      "name": "City",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-5",
+      "name": "State",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-6",
+      "name": "ZIP Code",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-7",
+      "name": "Card Number",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-007-8",
+      "name": "CVC",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-008.html": [
+    {
+      "id": "control-form-008-1",
+      "name": "Username",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-008-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-008-3",
+      "name": "Password",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-008-4",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-008-5",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-008-6",
+      "name": "Phone Number",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-010.html": [
+    {
+      "id": "control-form-010-1",
+      "name": "Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-010-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-010-3",
+      "name": "Department",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-010-4",
+      "name": "Description",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-011.html": [
+    {
+      "id": "control-form-011-1",
+      "name": "Date",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-011-2",
+      "name": "Time",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-011-3",
+      "name": "Guests",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-014.html": [
+    {
+      "id": "control-form-014-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-014-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-014-3",
+      "name": "Email Address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-014-4",
+      "name": "Bio",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-018.html": [
+    {
+      "id": "control-form-018-1",
+      "name": "Role",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-021.html": [
+    {
+      "id": "control-form-021-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-021-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-021-3",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-021-4",
+      "name": "Phone",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-021-5",
+      "name": "Current Role",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-021-6",
+      "name": "Years of Experience",
+      "method": "label-for"
+    },
+    {
+      "name": "Why do you want to join?",
+      "method": "aria-label"
+    }
+  ],
+  "templates/10-forms/form-025.html": [
+    {
+      "id": "control-form-025-1",
+      "name": "Full Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-025-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-025-3",
+      "name": "Will you be attending?",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-028.html": [
+    {
+      "id": "control-form-028-1",
+      "name": "Browser",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-028-2",
+      "name": "Operating System",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-028-3",
+      "name": "Expected Behavior",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-028-4",
+      "name": "Screenshot (Optional)",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-029.html": [
+    {
+      "id": "control-form-029-1",
+      "name": "Feature Name",
+      "method": "label-for"
+    }
+  ],
+  "templates/10-forms/form-030.html": [
+    {
+      "id": "control-form-030-1",
+      "name": "First Name *",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-030-2",
+      "name": "Last Name *",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-030-3",
+      "name": "Email *",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-030-4",
+      "name": "Phone",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-030-5",
+      "name": "LinkedIn URL",
+      "method": "label-for"
+    },
+    {
+      "id": "control-form-030-6",
+      "name": "Portfolio URL",
+      "method": "label-for"
+    }
+  ],
+  "templates/13-modals/modal-046.html": [
+    {
+      "name": "Number of people splitting the bill",
+      "method": "aria-label"
+    }
+  ],
+  "templates/20-landing-pages/landing-041.html": [
+    {
+      "id": "control-landing-041-1",
+      "name": "Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-landing-041-2",
+      "name": "Email",
+      "method": "label-for"
+    },
+    {
+      "id": "control-landing-041-3",
+      "name": "Message",
+      "method": "label-for"
+    }
+  ],
+  "templates/20-landing-pages/landing-042.html": [
+    {
+      "id": "control-landing-042-1",
+      "name": "Date",
+      "method": "label-for"
+    },
+    {
+      "id": "control-landing-042-2",
+      "name": "Time",
+      "method": "label-for"
+    },
+    {
+      "id": "control-landing-042-3",
+      "name": "Guests",
+      "method": "label-for"
+    }
+  ],
+  "templates/20-landing-pages/landing-043.html": [
+    {
+      "id": "control-landing-043-1",
+      "name": "Location",
+      "method": "label-for"
+    },
+    {
+      "id": "control-landing-043-2",
+      "name": "Property Type",
+      "method": "label-for"
+    },
+    {
+      "id": "control-landing-043-3",
+      "name": "Price Range",
+      "method": "label-for"
+    }
+  ],
+  "templates/20-landing-pages/landing-046.html": [
+    {
+      "id": "control-landing-046-1",
+      "name": "Case Type",
+      "method": "label-for"
+    }
+  ],
+  "templates/20-landing-pages/landing-047.html": [
+    {
+      "id": "control-landing-047-1",
+      "name": "Travelers",
+      "method": "label-for"
+    }
+  ],
+  "templates/99-dashboard/dashboard-905.html": [
+    {
+      "id": "control-dashboard-905-1",
+      "name": "First Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-dashboard-905-2",
+      "name": "Last Name",
+      "method": "label-for"
+    },
+    {
+      "id": "control-dashboard-905-3",
+      "name": "Email Address",
+      "method": "label-for"
+    },
+    {
+      "id": "control-dashboard-905-4",
+      "name": "Bio",
+      "method": "label-for"
+    },
+    {
+      "id": "control-dashboard-905-5",
+      "name": "Email Comments",
+      "method": "label-for"
+    },
+    {
+      "id": "control-dashboard-905-6",
+      "name": "Product Updates",
+      "method": "label-for"
+    }
+  ]
+}

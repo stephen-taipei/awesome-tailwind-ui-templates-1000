@@ -1,0 +1,198 @@
+{
+  "forms/form-033/form-033.html": [
+    "I agree to the Terms of Service and Privacy Policy"
+  ],
+  "lists/list-017/list-017.html": [
+    "2 cups all-purpose flour",
+    "1 packet instant yeast",
+    "1 tsp sugar",
+    "1/2 cup tomato sauce",
+    "2 cups mozzarella cheese",
+    "Fresh basil leaves"
+  ],
+  "lists/list-032/list-032.html": [
+    "Review PR #1024",
+    "Update documentation",
+    "Team meeting",
+    "Email client"
+  ],
+  "lists/list-035/list-035.html": [
+    "Order history date range"
+  ],
+  "templates/01-navigation/nav-010.html": [
+    "Go to page"
+  ],
+  "templates/01-navigation/nav-022.html": [
+    "Premium Headphones quantity",
+    "Phone Case quantity"
+  ],
+  "templates/01-navigation/nav-031.html": [
+    "Sort products"
+  ],
+  "templates/01-navigation/nav-033.html": [
+    "Select Document-1.pdf",
+    "Select Image-gallery.zip",
+    "Select Presentation.pptx",
+    "Select Notes.txt"
+  ],
+  "templates/01-navigation/nav-039.html": [
+    "Sort files"
+  ],
+  "templates/01-navigation/nav-041.html": [
+    "Select Design Assets",
+    "Select Client Presentations",
+    "Select Project Proposal.fig",
+    "Select all files",
+    "Select Q4 Campaign Assets",
+    "Select Campaign Budget.xlsx",
+    "Select Marketing Strategy.docx",
+    "Select Q4 Presentation.pptx"
+  ],
+  "templates/01-navigation/nav-046.html": [
+    "Search category"
+  ],
+  "templates/01-navigation/nav-047.html": [
+    "Language"
+  ],
+  "templates/01-navigation/nav-053.html": [
+    "Framework version",
+    "Code example language"
+  ],
+  "templates/01-navigation/nav-058.html": [
+    "Overview date range"
+  ],
+  "templates/01-navigation/nav-061.html": [
+    "Monthly active users",
+    "Currency"
+  ],
+  "templates/01-navigation/nav-062.html": [
+    "Language"
+  ],
+  "templates/01-navigation/nav-064.html": [
+    "Go to page"
+  ],
+  "templates/01-navigation/nav-065.html": [
+    "Language"
+  ],
+  "templates/01-navigation/nav-066.html": [
+    "Search category"
+  ],
+  "templates/01-navigation/nav-067.html": [
+    "Select message from Sarah",
+    "Select payment received notification",
+    "Select weekly report notification"
+  ],
+  "templates/01-navigation/nav-069.html": [
+    "Select all items",
+    "Select all table rows",
+    "Bulk action",
+    "Rows per page"
+  ],
+  "templates/01-navigation/nav-074.html": [
+    "Product category",
+    "Electronics",
+    "Clothing",
+    "Home & Garden"
+  ],
+  "templates/01-navigation/nav-086.html": [
+    "Language",
+    "Country",
+    "Currency"
+  ],
+  "templates/01-navigation/nav-088.html": [
+    "Search category"
+  ],
+  "templates/01-navigation/nav-093.html": [
+    "Page number",
+    "Entries per page"
+  ],
+  "templates/01-navigation/nav-098.html": [
+    "Sort products"
+  ],
+  "templates/01-navigation/nav-099.html": [
+    "Sort files"
+  ],
+  "templates/01-navigation/nav-105.html": [
+    "Search with AI predictions"
+  ],
+  "templates/01-navigation/nav-106.html": [
+    "Environment"
+  ],
+  "templates/01-navigation/nav-117.html": [
+    "Search category"
+  ],
+  "templates/01-navigation/nav-125.html": [
+    "Reservation time"
+  ],
+  "templates/01-navigation/nav-132.html": [
+    "Language"
+  ],
+  "templates/01-navigation/nav-148.html": [
+    "Language"
+  ],
+  "templates/01-navigation/nav-155.html": [
+    "Language"
+  ],
+  "templates/01-navigation/nav-158.html": [
+    "Language"
+  ],
+  "templates/06-pricing/price-008.html": [
+    "Team size"
+  ],
+  "templates/10-footers/footer-019.html": [
+    "Language"
+  ],
+  "templates/10-footers/footer-020.html": [
+    "Currency"
+  ],
+  "templates/10-forms/form-006.html": [
+    "Property location",
+    "Property price range"
+  ],
+  "templates/10-forms/form-013.html": [
+    "Upload files"
+  ],
+  "templates/13-modals/modal-020.html": [
+    "API key"
+  ],
+  "templates/20-landing-pages/landing-045.html": [
+    "Appointment date",
+    "Department"
+  ],
+  "templates/99-dashboard/dashboard-906.html": [
+    "Traffic overview date range"
+  ],
+  "templates/10-forms/form-017.html": [
+    "Security code digit 1 of 4",
+    "Security code digit 2 of 4",
+    "Security code digit 3 of 4",
+    "Security code digit 4 of 4"
+  ],
+  "templates/11-authentication/auth-013.html": [
+    "Security code digit 1 of 6",
+    "Security code digit 2 of 6",
+    "Security code digit 3 of 6",
+    "Security code digit 4 of 6",
+    "Security code digit 5 of 6",
+    "Security code digit 6 of 6"
+  ],
+  "templates/11-authentication/auth-020.html": [
+    "Security code digit 1 of 6",
+    "Security code digit 2 of 6",
+    "Security code digit 3 of 6",
+    "Security code digit 4 of 6",
+    "Security code digit 5 of 6",
+    "Security code digit 6 of 6"
+  ],
+  "templates/13-modals/modal-014.html": [
+    "Security code digit 1 of 6",
+    "Security code digit 2 of 6",
+    "Security code digit 3 of 6",
+    "Security code digit 4 of 6",
+    "Security code digit 5 of 6",
+    "Security code digit 6 of 6"
+  ],
+  "templates/11-authentication/auth-030.html": [
+    "Security code"
+  ]
+}

@@ -1,6 +1,7 @@
 /* Tailwind CSS v4 - Main Stylesheet */
 @import "tailwindcss" source(none);
 @import "../../.build/theme.css";
+@source "../../index.html";
 @source "../../templates";
 @source "../../cards";
 @source "../../forms";
@@ -105,6 +106,7 @@
 
   /* Reduced motion preference */
   @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
     *,
     *::before,
     *::after {

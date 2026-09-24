@@ -34,11 +34,11 @@
       </div>
 
       <form class="space-y-8">
-        <div class="flex justify-center gap-4">
-          <input type="text" maxlength="1" class="w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-0 outline-none transition-all" value="5">
-          <input type="text" maxlength="1" class="w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-0 outline-none transition-all" value="2">
-          <input type="text" maxlength="1" class="w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-primary-500 focus:border-primary-500 focus:ring-0 outline-none transition-all shadow-lg shadow-primary-500/20" autofocus>
-          <input type="text" maxlength="1" class="w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-0 outline-none transition-all">
+        <div class="flex justify-center gap-4" data-otp-group role="group" aria-label="Security code">
+          <input type="text" maxlength="1" class="min-w-0 w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-0 outline-none transition-all" aria-label="Security code digit 1 of 4" inputmode="numeric" pattern="[0-9]{1}" autocomplete="one-time-code">
+          <input type="text" maxlength="1" class="min-w-0 w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-0 outline-none transition-all" aria-label="Security code digit 2 of 4" inputmode="numeric" pattern="[0-9]{1}" autocomplete="off">
+          <input type="text" maxlength="1" class="min-w-0 w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-primary-500 focus:border-primary-500 focus:ring-0 outline-none transition-all shadow-lg shadow-primary-500/20" aria-label="Security code digit 3 of 4" inputmode="numeric" pattern="[0-9]{1}" autocomplete="off">
+          <input type="text" maxlength="1" class="min-w-0 w-14 h-16 text-center text-2xl font-bold rounded-xl border-2 border-slate-200 focus:border-primary-500 focus:ring-0 outline-none transition-all" aria-label="Security code digit 4 of 4" inputmode="numeric" pattern="[0-9]{1}" autocomplete="off">
         </div>
 
         <button class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-colors">Verify Code</button>
@@ -50,5 +50,6 @@
     </div>
   </div>
   <script src="../../assets/js/template-runtime.js" defer></script>
+  <script type="module" src="../../assets/js/otp-input.mjs"></script>
 </body>
 </html>

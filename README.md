@@ -1,12 +1,14 @@
 # Awesome Tailwind UI Templates 1000
 
-**Tailwind Atlas** is the searchable gallery for this collection of **1,043 HTML UI demos across 21 categories**. The repository name is unchanged. Counts below are an audit snapshot; [`templates.json`](templates.json) is generated from the actual files.
+This collection contains **1,043 HTML UI demos across 21 categories**. The original category homepage is preserved. **Tailwind Atlas** remains available as a separate optional [search tool](explore.html). The repository name is unchanged. Counts below are an audit snapshot; [`templates.json`](templates.json) is generated from the actual files.
 
-[Browse the gallery](https://stephen-taipei.github.io/awesome-tailwind-ui-templates-1000/) · [Complete static index](catalog.html) · [Audit report](docs/AUDIT.md) · [Contributing](docs/CONTRIBUTING.md)
+[Category homepage](https://stephen-taipei.github.io/awesome-tailwind-ui-templates-1000/) · [Complete static index](catalog.html) · [Search templates](explore.html) · [Follow-up audit](docs/AUDIT-FOLLOWUP.md) · [Initial audit](docs/AUDIT.md) · [Contributing](docs/CONTRIBUTING.md)
 
 ## What is included
 
-Search by name, description, category, or template ID. Recommended ordering shows different categories instead of hundreds of similar entries. Save favorites locally, share filtered URLs, and inspect real templates in an isolated desktop/tablet/mobile preview. HTML source can be viewed, copied, or downloaded. The complete static index works without JavaScript.
+The homepage keeps the original category cards, styling, order and featured examples. Counts and category links are generated from the real inventory, with a static directory covering all 21 categories. Edit `src/home.html` for nonvisual content fixes. Do not redesign this entry page without explicit owner approval.
+
+At `explore.html`, search by name, description, category, or template ID. Recommended ordering shows different categories instead of hundreds of similar entries. Save favorites locally, share filtered URLs, and inspect real templates in an isolated desktop/tablet/mobile preview. HTML source can be viewed, copied, or downloaded. The complete static index works without JavaScript.
 
 **These are interface examples, not finished applications.** Authentication, checkout, search results, uploads, and other business operations need your own implementation. Placeholder links, accessibility review items, and external stock images remain in the legacy collection. Do not interpret a successful build or automated boot check as certification of every template's interactions or WCAG compliance.
 
